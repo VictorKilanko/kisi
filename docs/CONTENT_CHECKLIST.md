@@ -61,11 +61,16 @@ credible · 🟢 nice to have.
       support can be framed correctly (farm support / sponsorship / gift).
       The Phase 2 `/support` page is a no-payments preview stating exactly
       this.
-- [ ] 🔴 Payment provider choice + account (recommendation: Paystack or
-      Flutterwave for NGN + international cards; see
-      `docs/DONATION_INTEGRATION.md`). Needs a settlement bank account.
-- [ ] 🔴 Refund policy terms the owner agrees to
-- [ ] 🟡 What support tiers should cost (₦ amounts)
+- [ ] 🔴 Paystack account + **test keys** (sk_test_/pk_test_) so the sandbox
+      flow can be exercised end-to-end; later a settlement bank account for
+      launch. (Adapter is built; live mode is code-locked pending the legal
+      item above.)
+- [ ] 🔴 Refund policy terms the owner agrees to (draft placeholder is live
+      at `/support/terms`)
+- [ ] 🟡 What support tiers should cost (₦ amounts — all tiers currently
+      show "Amount set at launch")
+- [ ] 🟡 Newsletter provider choice (endpoint is built and honest about
+      storing nothing until one exists)
 
 ### Media
 - [ ] 🔴 Farm photography: poultry houses, feed storage, water tanks, solar

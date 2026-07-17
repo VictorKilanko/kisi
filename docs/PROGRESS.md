@@ -6,23 +6,69 @@ Read this file at the start of every session, after the project brief.
 
 | Item | State |
 |---|---|
-| Current phase | **Phase 3 — Interactive world: COMPLETE, awaiting owner review** |
-| Next phase | Phase 4 — Community and support (do not start until owner approves Phase 3) |
+| Current phase | **Phase 4 — Community and support: COMPLETE, awaiting owner review** |
+| Next phase | Phase 5 — QA and deployment (do not start until owner approves Phase 4) |
 | Active branch | `feature/kisi-poultry-republic` |
-| Production build | **Passing** — `site/`: 54 static pages incl. `/republic/map`, `npm run build` exit 0 (2026-07-17) |
+| Production build | **Passing** — 56 static pages + 3 API routes, `npm run build` exit 0 (2026-07-17) |
 | Lint / typecheck | Passing — ESLint exit 0, `tsc --noEmit` clean (2026-07-17) |
-| 3D lazy-load | Verified — three.js lives in one separate chunk (~888 KB raw, pre-compression), referenced by NO page HTML; it downloads only when the visitor clicks "Enter the 3D farm" |
-| Tests | None yet — content integrity is enforced at build time; Vitest/Playwright planned |
+| Payments | Structurally complete, **TEST MODE ONLY** — live locked in code (see docs/DONATION_INTEGRATION.md status block); runtime-verified honest 503 without keys |
+| 3D lazy-load | Verified — three.js chunk referenced by no page HTML; on-demand only |
+| Tests | No unit-test runner yet; API endpoints smoke-tested against a real `next start` server this session (results in PROGRESS session 4 log) |
 
 ## Phase checklist
 
 - [x] Phase 1 — Discovery and architecture (session 1)
 - [x] Phase 2 — Core website (session 2)
-- [x] **Phase 3 — Interactive world (3D farm)** (session 3)
-- [ ] Phase 4 — Community and support
+- [x] Phase 3 — Interactive world (3D farm) (session 3)
+- [x] **Phase 4 — Community and support** (session 4)
 - [ ] Phase 5 — QA and deployment
 
 ## Session log
+
+### Session 4 — 2026-07-17 (Phase 4)
+
+**Owner decision at phase start:** Phase 3 approved; build community &
+support with payments in test/sandbox mode only.
+
+**Done:**
+- **Payments**: `lib/payments/` — provider-agnostic `PaymentProvider`
+  interface, Paystack adapter (hosted checkout redirect only; timing-safe
+  HMAC-sha512 webhook verification). **Live-mode lock**: hard-coded
+  `LIVE_PAYMENTS_UNLOCKED = false` (no env var can flip it) + non-test keys
+  additionally require `PAYMENTS_ALLOW_LIVE=true`. Route handlers:
+  `POST /api/support/checkout` (zod-validated, rate-limited,
+  server-resolved amounts) and `POST /api/support/webhook`
+  (signature-verified, logs only, no PII persisted). `.env.example` with
+  placeholder keys committed; real env files git-ignored.
+- **Support page finalized**: 8 tiers (feed, water, vet, housing, solar,
+  senior hens, education, sponsor-a-chicken) with kind labels
+  (farm-support / sponsorship), "not charitable, not tax-deductible"
+  wording, not-ownership clause, amounts deliberately unset ("Amount set
+  at launch"), live checkout closed with the server's honest 503 surfaced
+  in the UI; `/support/terms` draft (payment nature, no-ownership,
+  security, refunds placeholder, privacy, honest reporting); transparency
+  section with zero invented figures ("awaiting real records").
+- **Newsletter**: validated + honeypot + rate-limited endpoint and form
+  (home page); honestly stores nothing until a list provider is chosen.
+- **Polls**: reusable fictional-entertainment Poll component
+  (localStorage-only votes via useSyncExternalStore, no published tallies,
+  non-binding labeling on its face) — presidential approval on
+  /republic/presidency, breakfast-time on /republic/assembly.
+- **Story relationships**: `/republic/stories` — all 5 arcs rendered as
+  serials with cast chips; arc metadata + `storyArcs()` grouping in
+  lib/content (missing arc metadata fails the build). Nav/sitemap wired.
+- **Sports expansion**: 4 more results (incl. the court-ordered replay),
+  upcoming fixtures, top scorers; sports page sections added.
+- **Gates (actual)**: `tsc --noEmit` exit 0; `npm run lint` exit 0;
+  `npm run build` exit 0 (56 static pages + 3 ƒ API routes). Runtime smoke
+  test against `next start -p 3156`: checkout without keys → 503
+  `payments-not-configured`; newsletter valid → 200 `{ok, stored:false}`;
+  invalid email → 400; unsigned webhook → 503; /republic/stories and
+  /support → 200.
+
+**Not done (Phase 5):** sandbox end-to-end with real sk_test_ keys (needs
+owner's Paystack test account), newsletter provider, sponsor wall,
+Prettier + unit tests, a11y/browser/perf review, deployment.
 
 ### Session 3 — 2026-07-17 (Phase 3)
 

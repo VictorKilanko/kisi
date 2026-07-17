@@ -1,4 +1,17 @@
-# DONATION_INTEGRATION.md — Support & Payments Plan (Phase 4 plan, written in Phase 1)
+# DONATION_INTEGRATION.md — Support & Payments
+
+> **STATUS (Phase 4, 2026-07-17): IMPLEMENTED in test-mode-only form.**
+> `site/lib/payments/` holds the abstraction + Paystack adapter;
+> `site/app/api/support/{checkout,webhook}` are the route handlers.
+> **Live mode is locked in code** — `LIVE_PAYMENTS_UNLOCKED = false` in
+> `site/lib/payments/index.ts` cannot be overridden by any environment
+> variable; unlocking requires a reviewed code change after the owner
+> confirms legal registration status. Verified behavior: without keys the
+> checkout API returns an honest 503; with sk_test_ keys the full Paystack
+> sandbox flow runs; non-test keys are refused. Tier amounts are unset
+> (owner decision pending) — the sandbox uses PAYMENTS_TEST_AMOUNT_NGN.
+
+(Original Phase 1 plan follows; still the governing rules.)
 
 ## Legal framing first (blocking)
 
