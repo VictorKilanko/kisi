@@ -10,15 +10,15 @@ node_modules/
 *.pem
 *.key
 
-# --- Project instruction file ---
-# Claude.md currently contains a GitHub personal access token.
+# --- Project instruction file (root only) ---
+# /Claude.md currently contains a GitHub personal access token.
 # It must NOT be committed until that credential is removed and revoked.
 # Once sanitized, remove these two lines and commit it.
-Claude.md
-CLAUDE.md
+/Claude.md
+/CLAUDE.md
 
 # --- Local-only notes (contain private local machine paths) ---
-START_HERE.md
+/START_HERE.md
 
 # --- Private farm records (internal spreadsheets, not for a public repo) ---
 *.xlsx
