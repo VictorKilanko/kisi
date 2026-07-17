@@ -15,6 +15,7 @@ const NAV = [
       { href: "/republic/assembly", label: "Coop Assembly" },
       { href: "/republic/sports", label: "Sports" },
       { href: "/republic/social", label: "Social Life" },
+      { href: "/republic/map", label: "The Farm Map (3D)" },
     ],
   },
   { href: "/news", label: "The Coop Times" },

@@ -48,6 +48,12 @@ const INSTITUTIONS = [
     blurb:
       "The Feather Gala, the First Grain Festival, Sunday storytelling, and the Reconciliation Bench.",
   },
+  {
+    href: "/republic/map",
+    title: "The Farm Map (3D)",
+    blurb:
+      "Walk the Republic in 3D — or on the fast 2D plan. Every coop, ministry, and story, on one map.",
+  },
 ];
 
 export default function RepublicPage() {

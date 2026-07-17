@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/republic/assembly",
     "/republic/sports",
     "/republic/social",
+    "/republic/map",
     "/news",
     "/eggs",
     "/about",

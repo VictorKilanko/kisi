@@ -234,6 +234,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FARM MAP TEASER */}
+      <section className="mx-auto max-w-6xl px-4 pb-8">
+        <div className="grid items-center gap-8 rounded-3xl bg-kisi-indigo-800 p-8 text-kisi-cream-100 lg:grid-cols-[1fr_auto]">
+          <div>
+            <p className="kicker text-kisi-gold-300">New: The Farm Map</p>
+            <h2 className="font-display mt-2 text-3xl font-bold">
+              Walk the Republic
+            </h2>
+            <p className="mt-3 max-w-xl text-kisi-cream-100/85">
+              Explore the farm in interactive 3D — from the foot-bath at the
+              gate to the Presidential Coop, the Assembly, the sports field,
+              and the hazy Agric City horizon. Every building opens its own
+              story. A fast 2D map is built in for slower connections.
+            </p>
+            <Link
+              href="/republic/map"
+              className="mt-5 inline-block rounded-full bg-kisi-gold-500 px-6 py-3 font-semibold text-kisi-charcoal-900 hover:bg-kisi-gold-300"
+            >
+              Open the Farm Map
+            </Link>
+          </div>
+          {/* tiny illustrated plan preview */}
+          <svg
+            viewBox="0 0 100 80"
+            width="220"
+            height="176"
+            aria-hidden="true"
+            className="hidden rounded-2xl lg:block"
+          >
+            <rect width="100" height="80" rx="8" fill="#5c8a4e" />
+            <rect x="47" y="40" width="6" height="36" fill="#b98a5a" rx="2" />
+            <rect x="14" y="48" width="70" height="5" fill="#b98a5a" rx="2" />
+            <rect x="24" y="46" width="16" height="10" fill="#c05621" rx="2" />
+            <rect x="40" y="46" width="14" height="10" fill="#c05621" rx="2" />
+            <rect x="56" y="43" width="13" height="10" fill="#d9a02b" rx="2" />
+            <rect x="21" y="24" width="15" height="11" fill="#23305e" rx="2" />
+            <rect x="64" y="10" width="18" height="12" fill="#7fae6b" rx="2" />
+            <circle cx="46" cy="20" r="7" fill="#3f6b35" />
+            <rect x="80" y="3" width="16" height="8" fill="#d9a02b" opacity="0.4" rx="2" />
+          </svg>
+        </div>
+      </section>
+
       {/* LATEST FROM THE COOP TIMES */}
       <section className="mx-auto max-w-6xl px-4 py-16">
         <SectionHeading
