@@ -110,11 +110,12 @@ docs, passing production build, deployment instructions.
   `feature/kisi-poultry-republic`; no commits exist on main/master. `.xlsx`
   farm workbooks, local instruction/notes files, and local tool settings are
   git-ignored (private data / contains a credential / private machine paths).
-- **D3 — Legacy site**: the Agric City `index.html` is preserved unchanged and
-  committed as a legacy import. Plan: in Phase 2, the new site's `/agric-city`
-  route presents the Agric City *vision* natively (with clear
-  current-vs-future labeling per brief §7.16), and may link to the legacy 3D
-  masterplan as a standalone artifact. The legacy file is never deleted.
+- **D3 — Legacy site (updated per owner, 2026-07-17)**: the Agric City
+  `index.html` is preserved unchanged at repo root as a historical artifact,
+  but the new site is a **separate project** and does not link, embed, or
+  reference it. The `/agric-city` route is built fresh and native with
+  mandatory operating / in-development / proposed labeling (brief §7.16).
+  The legacy file is never deleted.
 - **D4 — App placement (deferred to Phase 2 start)**: because `index.html`
   occupies the repo root, the Next.js app will live in a `site/` subdirectory
   (Vercel supports a root directory setting), keeping the legacy file

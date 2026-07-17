@@ -5,10 +5,11 @@ Three Fiber + drei. It is the bridge between worlds: real infrastructure
 (poultry houses, water, solar) and fictional institutions (Presidential Coop,
 Coop Assembly) share one map, each hotspot labeled fact or fiction.
 
-Note: the legacy Agric City `index.html` already proves a Three.js farm map
-works well for this audience; its zone-panel interaction pattern (click zone →
-side panel with story + stats) is worth carrying forward, reimplemented in R3F
-so hotspots can open real routes (chicken profiles, ministry pages).
+Note: the Phase 3 map is an original build for this project (per the owner,
+the new site is fully separate from the legacy root `index.html`). The
+general interaction pattern of click-a-zone → side panel remains a good UX
+model, implemented fresh in R3F so hotspots open real routes (chicken
+profiles, ministry pages).
 
 ## Locations (hotspots)
 

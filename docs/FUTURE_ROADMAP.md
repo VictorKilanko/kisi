@@ -44,10 +44,10 @@ training/agritourism (booking flows), research partnerships, marketplace,
 investment/franchise pages. Each vertical follows the same fact/fiction
 discipline: real operations get fact pages; the Republic can satirically
 "annex new territories" as the farm actually grows — fiction always trailing
-real, verified expansion, never preceding it. The legacy Agric City 3D
-masterplan remains available as a historical vision artifact, and the
-`/agric-city` masterplan visual is updated to current/in-development/proposed
-status as reality changes.
+real, verified expansion, never preceding it. The `/agric-city` page's
+project statuses are updated to current/in-development/proposed as reality
+changes. (The legacy root `index.html` masterplan is preserved in the repo as
+a historical artifact only — the site does not reference it, per the owner.)
 
 ## Explicit non-goals (v1)
 

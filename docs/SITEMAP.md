@@ -42,7 +42,7 @@ links, mascot link, sitemap.
 | `/support` | Support the Chickens — tiers, sponsor-a-chicken, transparency; sandbox checkout | Fact (real money!) | 4 |
 | `/support/terms` | Support terms, refunds, privacy of payments | Fact | 4 |
 | `/visit` | Visit / Contact — forms (general, partnership, media, schools, future visits), socials, location-at-safe-precision | Fact | 2 |
-| `/agric-city` | Kisi Agric City — long-term vision with strict current / in-development / proposed labeling; masterplan visual; may link legacy 3D masterplan | Fact + declared vision | 2 |
+| `/agric-city` | Kisi Agric City — long-term vision with strict current / in-development / proposed labeling; built fresh and native (no reference to the legacy root `index.html`, per owner) | Fact + declared vision | 2 |
 | `/republic/map` | Interactive 3D farm (R3F, lazy-loaded, 2D fallback) | Both — the bridge between worlds | 3 |
 | `/legal/privacy`, `/legal/terms` | Legal pages (placeholder text flagged for review) | — | 2 |
 | `/disclaimer` | Full fact-vs-fiction disclaimer | — | 2 |

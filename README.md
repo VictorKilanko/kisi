@@ -7,11 +7,12 @@
 > national newspaper, sports leagues, and an ever-growing cast of feathered
 > characters.
 
-**Status: Phase 1 (discovery & architecture) complete — awaiting owner review
-before Phase 2 (core website build).** All work is on the
-`feature/kisi-poultry-republic` branch. No application code exists yet; this
-repo currently contains the architecture documentation and a preserved legacy
-site (below).
+**Status: Phase 2 (core website) complete — awaiting owner review before
+Phase 3 (interactive 3D world).** All work is on the
+`feature/kisi-poultry-republic` branch. The Next.js application lives in
+`site/` (53 statically generated pages, passing production build); this repo
+also contains the project documentation in `docs/` and a preserved,
+unrelated legacy site (below).
 
 ## What this project is
 
@@ -42,12 +43,24 @@ Two clearly separated identities on one site:
 | `docs/PROGRESS.md` | Phase/session tracker — read first when resuming work |
 | `docs/CONTENT_CHECKLIST.md` | Real-world info still needed from the farm owner |
 
-## Planned stack (see PRODUCT_BRIEF.md for the full rationale)
+## Stack (see PRODUCT_BRIEF.md for the full rationale)
 
-Next.js (App Router) · TypeScript · Tailwind CSS · Radix primitives ·
-Framer Motion · React Three Fiber (lazy-loaded 3D with a 2D fallback) ·
-Git-based structured content (TS/JSON + MDX, Zod-validated) · Vercel via
-GitHub.
+Next.js 16 (App Router, static-first) · TypeScript · Tailwind CSS v4 ·
+Git-based typed content (TS records, Zod-validated at build time) ·
+React Three Fiber planned for the Phase 3 3D world (lazy-loaded, 2D
+fallback) · Vercel via GitHub planned for hosting.
+
+### Local development
+
+```bash
+cd site
+npm install
+npm run dev     # dev server
+npm run lint    # ESLint
+npm run build   # production build (also typechecks + validates content)
+```
+
+Requires Node.js 20.9+ (Node 22 LTS recommended).
 
 ## Important content rules
 
@@ -61,14 +74,14 @@ GitHub.
 
 ---
 
-## Legacy: Kilanko Pan-African Agricultural City (preserved)
+## Legacy: Kilanko Pan-African Agricultural City (preserved, separate)
 
 `index.html` at the repo root is the **original, fully self-contained
 interactive 3D masterplan site** that preceded this project — preserved
 unchanged (its original README is in git history at the legacy-import
-commit). It visualizes the long-term 7-acre farm-resort vision in Southwest
-Nigeria and remains the seed of the `/agric-city` vision page planned for the
-new site.
+commit). Per the owner, the new Kisi site is a **separate project** and does
+not link to or reference this file; it remains in the repo purely as a
+historical artifact of the earlier vision.
 
 ### Farm zones (legacy masterplan)
 

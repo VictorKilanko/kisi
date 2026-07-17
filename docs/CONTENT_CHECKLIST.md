@@ -16,8 +16,10 @@ credible · 🟢 nice to have.
       manager or environment variable, never in a committed file.
 
 ### Farm identity & facts (About page, footer, SEO)
-- [ ] 🔴 Official business name and legal form (e.g. "Kisi Farm Ltd"? registered
-      with CAC? business number?)
+- [x] Business/brand name: **"Kisi"** — confirmed by owner (2026-07-17).
+- [ ] 🔴 Legal registration status (CAC registration? legal form? business
+      number?) — still pending; needed only to finalize the support-page
+      payment wording before Phase 4 goes live.
 - [ ] 🔴 Farm location at the precision the owner is comfortable publishing
       (state / LGA / nearest town — NOT exact coordinates; site policy is to
       avoid security-sensitive precision)
@@ -55,8 +57,10 @@ credible · 🟢 nice to have.
 ### Support / sponsorship page (legal — blocks Phase 4 going live)
 - [ ] 🔴 Legal status of payments: the business is presumably **not** a
       registered charity, so nothing may be called a "donation" with charitable
-      or tax-deductible implications. Owner to confirm entity status so support
-      can be framed correctly (farm support / sponsorship / gift).
+      or tax-deductible implications. Owner to confirm registration status so
+      support can be framed correctly (farm support / sponsorship / gift).
+      The Phase 2 `/support` page is a no-payments preview stating exactly
+      this.
 - [ ] 🔴 Payment provider choice + account (recommendation: Paystack or
       Flutterwave for NGN + international cards; see
       `docs/DONATION_INTEGRATION.md`). Needs a settlement bank account.
@@ -71,6 +75,8 @@ credible · 🟢 nice to have.
 - [ ] 🟢 Any drone/aerial imagery
 
 ### Publishing & channels
+- [ ] 🟡 Install Node.js 22 LTS on the development machine (none was present;
+      Phase 2 used a temporary portable copy that will not survive cleanup)
 - [ ] 🔴 Domain name (e.g. kisifarm.com / kisifarm.ng / republicofkisi.com) —
       is one owned already?
 - [ ] 🟡 GitHub repository name + confirmation the site may be public
@@ -91,4 +97,7 @@ credible · 🟢 nice to have.
 
 ## Resolved
 
-(nothing yet)
+- [x] Business/brand name confirmed: **"Kisi"** (owner, 2026-07-17).
+- [x] Legacy relationship confirmed: the new site is a **separate project**
+      from the root `index.html` Agric City masterplan; the new site does not
+      link or reference it (owner, 2026-07-17).
