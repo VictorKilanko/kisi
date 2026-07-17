@@ -54,6 +54,12 @@ const INSTITUTIONS = [
     blurb:
       "Walk the Republic in 3D — or on the fast 2D plan. Every coop, ministry, and story, on one map.",
   },
+  {
+    href: "/republic/stories",
+    title: "Story Arcs",
+    blurb:
+      "The serials: Chi-Chi's first egg, the Grain Affair, the Rain Final — every storyline, beat by beat.",
+  },
 ];
 
 export default function RepublicPage() {

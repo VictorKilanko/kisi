@@ -3,7 +3,15 @@ import Link from "next/link";
 import { DemoBadge, WorldBadge } from "@/components/Badges";
 import { SectionHeading, formatDate } from "@/components/Cards";
 import { FictionDisclaimer } from "@/components/Disclaimer";
-import { getChicken, getTeam, leagueTable, matches, perchChampionship } from "@/lib/content";
+import {
+  fixtures,
+  getChicken,
+  getTeam,
+  leagueTable,
+  matches,
+  perchChampionship,
+  topScorers,
+} from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Sports",
@@ -145,6 +153,62 @@ export default function SportsPage() {
             );
           })}
         </ul>
+      </section>
+
+      {/* Fixtures + top scorers */}
+      <section className="mt-16 grid gap-10 lg:grid-cols-2">
+        <div>
+          <h2 className="font-display text-2xl font-bold text-kisi-green-900">
+            Upcoming fixtures
+          </h2>
+          <ul className="mt-4 space-y-3">
+            {fixtures.map((f) => {
+              const home = getTeam(f.homeId)!;
+              const away = getTeam(f.awayId)!;
+              return (
+                <li key={`${f.date}-${f.homeId}`} className="rounded-2xl border border-kisi-green-900/10 bg-white p-4">
+                  <p className="text-xs text-kisi-charcoal-600">{formatDate(f.date)}</p>
+                  <p className="font-display mt-1 font-bold text-kisi-green-900">
+                    {home.name} <span className="text-kisi-charcoal-600">vs</span> {away.name}
+                  </p>
+                  <p className="mt-1 text-sm text-kisi-charcoal-600">{f.note}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div>
+          <h2 className="font-display text-2xl font-bold text-kisi-green-900">
+            Top scorers
+          </h2>
+          <ol className="mt-4 space-y-3">
+            {topScorers.map((s, i) => {
+              const team = getTeam(s.teamId)!;
+              return (
+                <li key={s.name} className="flex items-center justify-between rounded-2xl border border-kisi-gold-500/30 bg-white p-4">
+                  <div>
+                    <p className="font-semibold text-kisi-green-900">
+                      {i + 1}.{" "}
+                      {s.chickenId ? (
+                        <Link href={`/flock/${s.chickenId}`} className="hover:underline">
+                          {s.name}
+                        </Link>
+                      ) : (
+                        s.name
+                      )}
+                    </p>
+                    <p className="text-xs text-kisi-charcoal-600">{team.name}</p>
+                  </div>
+                  <p className="font-display text-2xl font-black text-kisi-gold-500">{s.goals}</p>
+                </li>
+              );
+            })}
+          </ol>
+          <p className="mt-3 text-xs text-kisi-charcoal-600">
+            Squad players beyond the featured citizens are named for flavour —
+            sample content, like everything in the league.
+          </p>
+        </div>
       </section>
 
       <p className="mt-10 text-sm text-kisi-charcoal-600">

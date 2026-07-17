@@ -105,6 +105,75 @@ export const matches: Match[] = [
     note: "Postponed — rain, then the Perch Jumping Final, then a scheduling dispute now before the Supreme Pecking Council.",
     isDemo: true,
   },
+  {
+    id: "m7",
+    sport: "Chicken football",
+    date: "2026-06-20",
+    homeId: "mango-united",
+    awayId: "solar-queens",
+    homeScore: 1,
+    awayScore: 1,
+    note: "United parked the tree. The champions called it 'anti-football'; the shade called it home advantage.",
+    isDemo: true,
+  },
+  {
+    id: "m8",
+    sport: "Chicken football",
+    date: "2026-06-27",
+    homeId: "harmattan-fc",
+    awayId: "sunrise-rovers",
+    homeScore: 2,
+    awayScore: 3,
+    note: "The rearranged fixture, played at last by order of the Supreme Pecking Council. The Rovers rose earliest, as ever.",
+    isDemo: true,
+  },
+  {
+    id: "m9",
+    sport: "Chicken football",
+    date: "2026-07-04",
+    homeId: "solar-queens",
+    awayId: "sunrise-rovers",
+    homeScore: 3,
+    awayScore: 0,
+    note: "Adaora's 10th of the season. The Bureau of Egg Statistics double-checked, out of habit.",
+    isDemo: true,
+  },
+  {
+    id: "m10",
+    sport: "Chicken football",
+    date: "2026-07-11",
+    homeId: "mango-united",
+    awayId: "harmattan-fc",
+    homeScore: 0,
+    awayScore: 0,
+    note: "A windless day at the shade end. Neither side's excuse was available, so neither side scored.",
+    isDemo: true,
+  },
+];
+
+/** SAMPLE CONTENT — upcoming fixtures. */
+export const fixtures: { date: string; homeId: string; awayId: string; note: string; isDemo: true }[] = [
+  {
+    date: "2026-07-25",
+    homeId: "sunrise-rovers",
+    awayId: "mango-united",
+    note: "Kickoff 'after the afternoon feed, weather and gallery singing permitting.'",
+    isDemo: true,
+  },
+  {
+    date: "2026-08-01",
+    homeId: "harmattan-fc",
+    awayId: "solar-queens",
+    note: "The wind has been formally invited.",
+    isDemo: true,
+  },
+];
+
+/** SAMPLE CONTENT — top scorers, Coop Premier League. */
+export const topScorers: { name: string; chickenId?: string; teamId: string; goals: number; isDemo: true }[] = [
+  { name: "Flash Adaora", chickenId: "flash-adaora", teamId: "solar-queens", goals: 10, isDemo: true },
+  { name: "Early Bird Ekundayo", teamId: "sunrise-rovers", goals: 6, isDemo: true },
+  { name: "Shade Captain Rótìmí", teamId: "mango-united", goals: 4, isDemo: true },
 ];
 
 /** SAMPLE CONTENT — Perch Jumping Championship roll of honour. */

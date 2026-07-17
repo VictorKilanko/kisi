@@ -27,6 +27,7 @@ const FOOTER_LINKS = [
       { href: "/disclaimer", label: "Fact & Fiction Disclaimer" },
       { href: "/legal/privacy", label: "Privacy Policy" },
       { href: "/legal/terms", label: "Terms of Use" },
+      { href: "/support/terms", label: "Support Terms" },
     ],
   },
 ];
