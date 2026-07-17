@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const NAV = [
   { href: "/flock", label: "Meet the Flock" },
@@ -33,11 +33,7 @@ const NAV = [
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-
-  // Close the mobile menu on navigation.
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+  const closeMenu = () => setOpen(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-kisi-green-900/10 bg-kisi-cream-100/95 backdrop-blur">
@@ -144,7 +140,11 @@ export function Header() {
                   <ul>
                     {item.children.map((c) => (
                       <li key={c.href}>
-                        <Link href={c.href} className="block rounded px-4 py-2 hover:bg-kisi-cream-200">
+                        <Link
+                          href={c.href}
+                          onClick={closeMenu}
+                          className="block rounded px-4 py-2 hover:bg-kisi-cream-200"
+                        >
                           {c.label}
                         </Link>
                       </li>
@@ -153,7 +153,11 @@ export function Header() {
                 </li>
               ) : (
                 <li key={item.href}>
-                  <Link href={item.href} className="block rounded px-2 py-2 font-medium hover:bg-kisi-cream-200">
+                  <Link
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="block rounded px-2 py-2 font-medium hover:bg-kisi-cream-200"
+                  >
                     {item.label}
                   </Link>
                 </li>
@@ -162,6 +166,7 @@ export function Header() {
             <li className="pt-2">
               <Link
                 href="/support"
+                onClick={closeMenu}
                 className="block rounded-full bg-kisi-green-700 px-4 py-2 text-center font-semibold text-kisi-cream-100"
               >
                 Support the Chickens
