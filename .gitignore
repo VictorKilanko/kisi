@@ -1,0 +1,50 @@
+# --- Dependencies ---
+node_modules/
+.pnp/
+.pnp.js
+
+# --- Environment & secrets (never commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Project instruction file ---
+# Claude.md currently contains a GitHub personal access token.
+# It must NOT be committed until that credential is removed and revoked.
+# Once sanitized, remove these two lines and commit it.
+Claude.md
+CLAUDE.md
+
+# --- Local-only notes (contain private local machine paths) ---
+START_HERE.md
+
+# --- Private farm records (internal spreadsheets, not for a public repo) ---
+*.xlsx
+
+# --- Local tool settings ---
+.claude/settings.local.json
+
+# --- Build outputs ---
+.next/
+out/
+dist/
+build/
+.vercel/
+.turbo/
+*.tsbuildinfo
+
+# --- Test & coverage ---
+coverage/
+
+# --- Logs ---
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
