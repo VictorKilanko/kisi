@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pan-African Agricultural City | Southwest Nigeria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/renderers/CSS2DRenderer.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C9A227;--gold-lt:#F0D060;--gold-dk:#8B6914;
+  --dg:#1B4332;--mg:#2D6A4F;
+  --earth:#8B4513;--earth-lt:#CD853F;
+  --cream:#FDF6E3;--dark:#0D1B0F;--text:#2C2C2C;--muted:#666;
+  --shadow:0 4px 24px rgba(0,0,0,.12);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--cream);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.85rem 2rem;background:rgba(13,27,15,.93);
+  backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,162,39,.22)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;
+  color:var(--gold);letter-spacing:.04em}
+.nav-logo span{color:var(--cream);font-weight:300}
+.nav-links{display:flex;gap:1.6rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.76rem;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;opacity:.72;transition:opacity .2s,color .2s}
+.nav-links a:hover{opacity:1;color:var(--gold)}
+
+/* HERO */
+.hero{position:relative;height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:flex-end;padding-bottom:3rem;
+  text-align:center;overflow:hidden}
+#farm-canvas{position:absolute;top:0;left:0;width:100%;height:100%}
+.hero-content{position:relative;z-index:10;pointer-events:none}
+.hero-tag{display:inline-block;background:var(--gold);color:var(--dark);
+  font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  padding:.32rem .95rem;border-radius:20px;margin-bottom:1rem}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.3rem,5vw,4.6rem);
+  font-weight:900;line-height:1.08;margin-bottom:.85rem;
+  text-shadow:0 2px 28px rgba(0,0,0,.88)}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero-sub{font-size:clamp(.84rem,1.7vw,1rem);opacity:.82;max-width:480px;
+  margin:0 auto 1.8rem;text-shadow:0 1px 14px rgba(0,0,0,.85);
+  font-weight:300;letter-spacing:.025em;line-height:1.65}
+.scroll-hint{display:flex;flex-direction:column;align-items:center;gap:.38rem;
+  opacity:.5;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;pointer-events:auto}
+.scroll-line{width:1px;height:34px;background:linear-gradient(to bottom,var(--gold),transparent);
+  animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.38;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.18)}}
+.ctrl-hint{position:absolute;bottom:6.5rem;right:1.6rem;z-index:10;
+  background:rgba(13,27,15,.84);border:1px solid rgba(201,162,39,.28);
+  border-radius:8px;padding:.65rem .95rem;font-size:.68rem;
+  color:rgba(253,246,227,.62);pointer-events:none;line-height:1.75}
+
+/* TOOLTIP */
+#tip{position:fixed;background:rgba(13,27,15,.97);border:1px solid var(--gold);
+  color:var(--cream);padding:.4rem .85rem;border-radius:6px;
+  font-size:.76rem;font-weight:500;pointer-events:none;
+  opacity:0;transition:opacity .16s;z-index:500;white-space:nowrap}
+#tip.show{opacity:1}
+
+/* CSS2D LABELS */
+.zlabel{background:rgba(13,27,15,.85);color:var(--gold);
+  font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  padding:.26rem .62rem;border-radius:4px;border:1px solid rgba(201,162,39,.4);
+  pointer-events:none;white-space:nowrap}
+.infra-label{background:rgba(27,68,50,.92);color:#90EE90;
+  font-size:.54rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  padding:.2rem .48rem;border-radius:3px;pointer-events:none;white-space:nowrap}
+
+/* ZONE PANEL */
+.panel{position:fixed;right:-440px;top:0;bottom:0;width:420px;
+  background:var(--dg);z-index:200;overflow-y:auto;
+  transition:right .38s cubic-bezier(.25,.46,.45,.94);
+  border-left:3px solid var(--gold);padding:4.5rem 2rem 2.5rem}
+.panel.open{right:0}
+.panel-close{position:absolute;top:.85rem;right:.9rem;
+  background:transparent;border:none;color:var(--cream);
+  font-size:1.35rem;cursor:pointer;opacity:.62;transition:opacity .18s;padding:.38rem}
+.panel-close:hover{opacity:1}
+.p-tag{display:inline-block;background:var(--gold);color:var(--dark);
+  font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  padding:.26rem .72rem;border-radius:20px;margin-bottom:.65rem}
+.panel h2{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;margin-bottom:.38rem}
+.p-sub{color:var(--gold-lt);font-size:.8rem;margin-bottom:1.3rem;font-weight:300}
+.p-desc{font-size:.84rem;line-height:1.74;opacity:.84;margin-bottom:.8rem}
+.divider{height:1px;background:linear-gradient(to right,var(--gold),transparent);margin:1.2rem 0}
+.p-slabel{font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.7rem}
+.p-stats{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin:1.1rem 0}
+.p-stat{background:rgba(255,255,255,.06);border-radius:8px;padding:.85rem;text-align:center}
+.p-stat .sv{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--gold)}
+.p-stat .sl{font-size:.6rem;opacity:.58;text-transform:uppercase;letter-spacing:.08em}
+.p-features{list-style:none;display:flex;flex-direction:column;gap:.38rem}
+.p-features li{display:flex;align-items:flex-start;gap:.5rem;font-size:.81rem;
+  color:rgba(253,246,227,.83);padding:.32rem 0;
+  border-bottom:1px solid rgba(255,255,255,.05);line-height:1.5}
+.p-features li::before{content:'▸';color:var(--gold);flex-shrink:0;margin-top:.06rem}
+
+/* MAIN / SECTIONS */
+main{background:var(--cream);color:var(--text)}
+.section{padding:5rem 2rem;max-width:1200px;margin:0 auto}
+.s-tag{display:inline-block;background:var(--dg);color:var(--gold);
+  font-size:.66rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  padding:.32rem .88rem;border-radius:20px;margin-bottom:.85rem}
+.s-title{font-family:'Playfair Display',serif;
+  font-size:clamp(1.85rem,3.6vw,2.8rem);font-weight:700;
+  color:var(--dg);margin-bottom:.85rem;line-height:1.18}
+.s-sub{font-size:.97rem;color:var(--muted);max-width:580px;
+  line-height:1.74;font-weight:300;margin-bottom:2.5rem}
+
+/* STATS BAR */
+.stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:2px;background:var(--dg);border-radius:12px;overflow:hidden;margin-bottom:4rem}
+.stat-item{background:#fff;padding:1.3rem 1rem;text-align:center}
+.stat-item:first-child{background:var(--dg)}
+.stat-item:first-child .sv2{color:var(--gold)}
+.stat-item:first-child .sl2{color:rgba(255,255,255,.58)}
+.sv2{font-family:'Playfair Display',serif;font-size:1.85rem;font-weight:900;
+  color:var(--dg);display:block}
+.sl2{font-size:.65rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:500}
+
+/* ZONE CARDS */
+.zones-bg{background:var(--cream);padding:0 0 5rem}
+.zones-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:1.3rem;max-width:1200px;margin:0 auto;padding:0 2rem}
+.zcard{background:#fff;border-radius:12px;overflow:hidden;
+  box-shadow:0 2px 16px rgba(0,0,0,.07);
+  transition:transform .3s,box-shadow .3s;cursor:pointer}
+.zcard:hover{transform:translateY(-5px);box-shadow:0 10px 38px rgba(0,0,0,.14)}
+.zcard-head{height:108px;display:flex;align-items:flex-end;padding:1.2rem;position:relative}
+.zcard-icon{font-size:2.2rem;position:absolute;top:.85rem;right:1.2rem;opacity:.52}
+.zcard-head h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;
+  color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.38)}
+.zcard-body{padding:1.2rem}
+.zcard-body p{font-size:.81rem;color:var(--muted);line-height:1.62;margin-bottom:.95rem}
+.zcard-foot{display:flex;justify-content:space-between;align-items:center}
+.zbadge{font-size:.66rem;font-weight:600;padding:.26rem .7rem;
+  border-radius:20px;letter-spacing:.04em}
+.zmore{font-size:.73rem;color:var(--dg);font-weight:600;
+  letter-spacing:.05em;text-transform:uppercase}
+
+/* INFRASTRUCTURE ACCORDION */
+.infra-section{background:#1B4332;color:var(--cream);padding:5rem 2rem}
+.infra-inner{max-width:1100px;margin:0 auto}
+.infra-section .s-title{color:var(--cream)}
+.infra-section .s-sub{color:rgba(253,246,227,.68)}
+.infra-grid{display:flex;flex-direction:column;gap:.75rem}
+.infra-item{border-radius:10px;overflow:hidden;background:rgba(255,255,255,.06)}
+.infra-hdr{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.4rem;
+  cursor:pointer;user-select:none;transition:background .2s}
+.infra-hdr:hover{background:rgba(255,255,255,.1)}
+.infra-hdr.open{background:rgba(201,162,39,.15)}
+.infra-emoji{font-size:1.5rem;flex-shrink:0}
+.infra-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;flex:1}
+.infra-arrow{color:var(--gold);font-size:.8rem;transition:transform .3s}
+.infra-arrow.open{transform:rotate(180deg)}
+.infra-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.infra-body.open{max-height:800px}
+.infra-content{padding:0 1.4rem 1.4rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.infra-desc{font-size:.85rem;line-height:1.72;opacity:.84;margin-bottom:1rem;grid-column:1/-1}
+.infra-spec-group h4{font-size:.68rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.infra-spec-list{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.infra-spec-list li{font-size:.8rem;opacity:.82;padding-left:1rem;position:relative;line-height:1.5}
+.infra-spec-list li::before{content:'·';position:absolute;left:0;color:var(--gold)}
+
+/* AGRICULTURAL SCIENCE */
+.science-section{background:var(--cream);padding:5rem 2rem}
+.science-inner{max-width:1200px;margin:0 auto}
+.science-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.3rem}
+.sci-card{background:#fff;border-radius:10px;padding:1.5rem;
+  box-shadow:0 2px 14px rgba(0,0,0,.07)}
+.sci-icon{font-size:2rem;margin-bottom:.7rem}
+.sci-card h3{font-family:'Playfair Display',serif;font-size:1.05rem;
+  font-weight:700;color:var(--dg);margin-bottom:.5rem}
+.sci-why{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold-dk);margin-bottom:.6rem}
+.sci-card p{font-size:.81rem;color:var(--muted);line-height:1.65}
+
+/* VISION */
+.vision{background:#0D1B0F;padding:5.5rem 2rem;text-align:center;color:var(--cream)}
+.vision .s-title{color:var(--cream);margin-bottom:.8rem}
+.vision .s-tag{background:rgba(201,162,39,.15);color:var(--gold)}
+blockquote.vis-q{font-family:'Playfair Display',serif;
+  font-size:clamp(1.1rem,2.6vw,1.65rem);font-style:italic;
+  max-width:760px;margin:.8rem auto 3rem;opacity:.9;line-height:1.64;color:var(--gold-lt)}
+.pillars{display:flex;justify-content:center;gap:2.3rem;flex-wrap:wrap;margin-top:2.3rem}
+.pillar{text-align:center;max-width:155px}
+.pillar-ic{font-size:2rem;margin-bottom:.65rem}
+.pillar h4{font-family:'Playfair Display',serif;font-size:.92rem;
+  color:var(--gold);margin-bottom:.32rem}
+.pillar p{font-size:.73rem;opacity:.65;line-height:1.5}
+
+/* FOOTER */
+footer{background:var(--dark);color:rgba(253,246,227,.42);
+  text-align:center;padding:1.8rem 2rem;font-size:.73rem;letter-spacing:.04em}
+footer strong{color:var(--gold)}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--dg)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+
+@media(max-width:900px){.infra-content{grid-template-columns:1fr}}
+@media(max-width:768px){.panel{width:100%;right:-100%}.nav-links{display:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Pan-African <span>Agricultural City</span></div>
+  <ul class="nav-links">
+    <li><a href="#viewer">3D Farm</a></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#zones">Zones</a></li>
+    <li><a href="#infrastructure">Infrastructure</a></li>
+    <li><a href="#vision">Vision</a></li>
+  </ul>
+</nav>
+
+<!-- HERO / 3D VIEWER -->
+<section class="hero" id="viewer">
+  <canvas id="farm-canvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-tag">Southwest Nigeria · 7 Acres · Est. 2027</div>
+    <h1>Pan-African<br><em>Agricultural City</em></h1>
+    <p class="hero-sub">A world-class integrated farm resort — where African agricultural heritage, cutting-edge science, and resort-quality living converge into a landmark for generations.</p>
+    <div class="scroll-hint"><span>Explore</span><div class="scroll-line"></div></div>
+  </div>
+  <div class="ctrl-hint">Drag to rotate &nbsp;·&nbsp; Scroll to zoom<br>Click a zone to explore</div>
+</section>
+
+<div id="tip"></div>
+
+<!-- ZONE PANEL -->
+<div class="panel" id="panel">
+  <button class="panel-close" onclick="closePanel()">✕</button>
+  <div id="panel-body"></div>
+</div>
+
+<main>
+
+<!-- OVERVIEW -->
+<div class="section" id="overview">
+  <div class="s-tag">The Vision</div>
+  <h2 class="s-title">Africa's Premier<br>Agricultural Resort</h2>
+  <p class="s-sub">A masterfully planned 7-acre integrated farm in Southwest Nigeria — combining six commercial-scale production zones, resort-quality living, and fully off-grid infrastructure into a legacy project that will define African agriculture.</p>
+  <div class="stats-bar">
+    <div class="stat-item"><span class="sv2">7</span><span class="sl2">Total Acres</span></div>
+    <div class="stat-item"><span class="sv2">6</span><span class="sl2">Farm Zones</span></div>
+    <div class="stat-item"><span class="sv2">17,000</span><span class="sl2">Poultry Birds</span></div>
+    <div class="stat-item"><span class="sv2">5,000+</span><span class="sl2">Fish Capacity</span></div>
+    <div class="stat-item"><span class="sv2">200+</span><span class="sl2">Livestock Head</span></div>
+    <div class="stat-item"><span class="sv2">40kW</span><span class="sl2">Solar Power</span></div>
+  </div>
+</div>
+
+<!-- ZONE CARDS -->
+<section id="zones" class="zones-bg">
+  <div class="section" style="padding-bottom:2rem">
+    <div class="s-tag">Farm Zones</div>
+    <h2 class="s-title">Six Zones of Excellence</h2>
+    <p class="s-sub">Each zone engineered for maximum yield, animal welfare, and sustainability — calibrated for Southwest Nigeria's tropical climate and proven market demand. Click any zone on the 3D map or below to explore in detail.</p>
+  </div>
+  <div class="zones-grid" id="zones-grid"></div>
+</section>
+
+<!-- INFRASTRUCTURE -->
+<section class="infra-section" id="infrastructure">
+  <div class="infra-inner">
+    <div class="s-tag" style="background:rgba(201,162,39,.18);color:var(--gold)">Built to Last</div>
+    <h2 class="s-title">Infrastructure</h2>
+    <p class="s-sub">Off-grid, self-sufficient, and engineered for Nigeria's tropical conditions. Every system is designed with redundancy, sustainability, and 20-year durability in mind.</p>
+    <div class="infra-grid" id="infra-grid"></div>
+  </div>
+</section>
+
+<!-- AGRICULTURAL SCIENCE -->
+<section class="science-section" id="science">
+  <div class="science-inner">
+    <div class="s-tag">Evidence-Based</div>
+    <h2 class="s-title">Why These Crops & Animals?</h2>
+    <p class="s-sub">Every choice is backed by Nigerian agricultural research (IITA, NIFOR, FMAWR) and decades of farm performance data from Southwest Nigeria's agro-ecological zone.</p>
+    <div class="science-grid" id="science-grid"></div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section class="vision" id="vision">
+  <div class="s-tag">Our Purpose</div>
+  <h2 class="s-title">Built for a Century</h2>
+  <blockquote class="vis-q">"This is not just a farm. It is a declaration — that African land, African hands, and African vision can produce something the world has never seen."</blockquote>
+  <div class="pillars">
+    <div class="pillar"><div class="pillar-ic">🌱</div><h4>Sustainability</h4><p>Solar-powered, biogas energy, water recycling, zero-waste systems throughout</p></div>
+    <div class="pillar"><div class="pillar-ic">🏛️</div><h4>Legacy</h4><p>Pan-African resort architecture honoring heritage while embracing the future</p></div>
+    <div class="pillar"><div class="pillar-ic">💡</div><h4>Innovation</h4><p>Aquaponics, smart poultry, data-driven farm intelligence and precision agriculture</p></div>
+    <div class="pillar"><div class="pillar-ic">🤝</div><h4>Community</h4><p>Employment, skills training, and economic empowerment for Southwest Nigeria</p></div>
+    <div class="pillar"><div class="pillar-ic">🌍</div><h4>Pan-African</h4><p>A replicable model for agricultural excellence across the entire continent</p></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>Pan-African Agricultural City</strong> · Southwest Nigeria · 7 Acres · Est. 2027</p>
+  <p style="margin-top:.4rem;font-size:.66rem">Designed for legacy. Built for Africa.</p>
+</footer>
+
+<script>
+/* ══════════════════════════════════════════════════════════════════════
+   ZONE DATA — scaled for commercial operations
+══════════════════════════════════════════════════════════════════════ */
+const ZONES = {
+  resort:{
+    name:'Resort & Living Quarters', subtitle:'1 Acre · Pan-African Resort Design', tag:'Zone 01',
+    color:'#8B6914', card:'linear-gradient(135deg,#8B6914,#C9A227)', icon:'🏛️',
+    desc:'The crown of the estate — a world-class resort serving as home for ownership, premium accommodation for guests, and dignified quarters for farm staff. Designed as a 5-star African lodge experience.',
+    stats:[{v:'1',l:'Acre'},{v:'20+',l:'Guest Beds'},{v:'1',l:'Infinity Pool'},{v:'100%',l:'Solar Powered'}],
+    features:[
+      '4-bedroom Executive Owner Villa with wraparound veranda & outdoor kitchen',
+      '6 self-contained guest cottages — resort style, A/C, en-suite bathrooms',
+      'Farm Manager 3-bedroom residence with dedicated parking',
+      'Worker dormitories — 20-bed capacity with ablution blocks',
+      'Infinity-edge swimming pool & sun deck overlooking the farm',
+      'Farm HQ & air-conditioned conference room (20-seat capacity)',
+      '30kW rooftop solar + 50,000L elevated concrete water tower',
+      'Main gate, security post & full IP-CCTV surveillance network',
+      'Landscaped gardens: indigenous tropical plants & ornamental fruit trees',
+      'Farm-to-table outdoor dining pavilion & BBQ entertainment terrace',
+    ],
+  },
+  poultry:{
+    name:'Poultry Farm', subtitle:'1 Acre · 17,000 Bird Commercial Scale', tag:'Zone 02',
+    color:'#B8860B', card:'linear-gradient(135deg,#B8860B,#DAA520)', icon:'🐓',
+    desc:'A commercial-scale, fully automated biosecure poultry operation — 15,000 Shika Brown layers producing eggs daily and 2,000 broilers on rolling cycles. Engineered with tunnel ventilation and biogas waste management for Nigeria\'s humid tropics.',
+    stats:[{v:'15,000',l:'Layer Birds'},{v:'2,000',l:'Broilers'},{v:'10',l:'Laying Houses'},{v:'Auto',l:'Feed & Water'}],
+    features:[
+      '10 laying houses — 1,500 Shika Brown hens each = 15,000 total layers',
+      '2 broiler houses — 1,000 birds per cycle, three full cycles per year',
+      'Automated nipple drinker systems & chain feeders throughout (zero spillage)',
+      'Tunnel ventilation: inlet fans + exhaust banks + adjustable side curtains',
+      'Egg grading machine, candling station & automated packaging line',
+      '2 × 30-tonne corrugated steel feed silos + on-site feed mill',
+      'Deep litter management system with scheduled mechanical turning',
+      'Large-scale biogas anaerobic digester — waste → cooking gas + power generation',
+      'Dedicated cold chain veterinary room, vaccine store & biosecurity station',
+      'CCTV inside every house + motion-sensor perimeter lighting',
+    ],
+  },
+  aquaponics:{
+    name:'Aquaponics Center', subtitle:'1 Acre · 5,000+ Fish Integrated System', tag:'Zone 03',
+    color:'#1B6B8A', card:'linear-gradient(135deg,#1B6B8A,#2E9CCA)', icon:'🐟',
+    desc:'A closed-loop recirculating aquaculture system where 5,000+ African catfish and tilapia feed nutrients into a thriving greenhouse vegetable operation — two premium income streams from one shared water source at 95% water reuse.',
+    stats:[{v:'5,000+',l:'Fish'},{v:'8',l:'Rearing Tanks'},{v:'500m²',l:'Grow Beds'},{v:'95%',l:'Water Reuse'}],
+    features:[
+      '8 circular rearing tanks — 625 fish each, total 5,000+ fish capacity',
+      'African catfish (Clarias gariepinus) — primary species, 6-month harvest cycle',
+      'Tilapia (Oreochromis niloticus) — secondary species for premium restaurant market',
+      'Deep water culture greenhouse grow beds (500m² total)',
+      'Crops: premium tomatoes, scotch bonnet, habanero, lettuce, basil, spinach',
+      'Solar-powered recirculating aquaculture system (RAS) — 24/7 operation',
+      'Multi-stage biofilter: drum filter + moving bed biological reactor (MBBR)',
+      'UV sterilization unit for complete water biosecurity',
+      'IoT monitoring: temperature, pH & dissolved oxygen with auto-alerts',
+      'Post-harvest processing shed with cold storage & grading room',
+    ],
+  },
+  livestock:{
+    name:'Livestock Paddock', subtitle:'1 Acre · 200+ Head — Goats, Sheep & Cattle', tag:'Zone 04',
+    color:'#5D4037', card:'linear-gradient(135deg,#5D4037,#8D6E63)', icon:'🐄',
+    desc:'A commercial-scale ruminant unit housing over 200 head of livestock — goats, sheep, and cattle managed on a rotational paddock system with zero-waste biogas integration. Festive-season premium pricing for live animals drives exceptional ROI.',
+    stats:[{v:'100+',l:'Goats'},{v:'80+',l:'Sheep'},{v:'25',l:'Cattle'},{v:'Biogas',l:'Waste → Energy'}],
+    features:[
+      '100+ West African Dwarf goats — hardy, naturally disease-resistant for SW Nigeria',
+      '80+ Yankasa/Uda sheep — dual-purpose meat & wool production',
+      '25 White Fulani / Bunaji cattle — beef, seasonal milk, festive market',
+      'Rotational 4-paddock grazing system with 6-week full recovery cycles',
+      'Multiple steel-framed open barns with mesh sides for SW Nigeria ventilation',
+      'Automatic float-valve watering troughs across all paddocks',
+      'Mineral lick stations & supplemental feed racks in every paddock',
+      'Large-scale biogas plant from manure slurry — powers farm lighting & boiler',
+      'Veterinary bay with livestock crush, weighing scale & dedicated treatment area',
+      'Composting yard: 200+ head produce premium organic fertilizer for all crop zones',
+    ],
+  },
+  oilpalm:{
+    name:'Oil Palm Plantation', subtitle:'2 Acres · High-Yield Tenera Hybrids', tag:'Zone 05',
+    color:'#2D6A4F', card:'linear-gradient(135deg,#1B4332,#2D6A4F)', icon:'🌴',
+    desc:'The backbone of cash crop revenue — 2 acres of NIFOR-certified Tenera hybrid oil palm, the gold standard in West African production, with a full on-site processing unit extracting red palm oil and kernel oil for direct retail and wholesale.',
+    stats:[{v:'200+',l:'Palm Trees'},{v:'9×3m',l:'Row Spacing'},{v:'4–5T',l:'FFB/Acre/Year'},{v:'Yr 4',l:'Full Production'}],
+    features:[
+      '200+ Tenera hybrid palms from NIFOR Institute, Benin City (certified seed stock)',
+      'Triangular 9m × 3m spacing — optimal light capture and maximum yield per acre',
+      'Full commercial production begins Year 4 post-planting (Years 1–3: establishment)',
+      'On-site palm oil mill: 1-tonne FFB/day capacity — hydraulic press + clarifier',
+      'Red palm oil (food-grade) & palm kernel oil for retail + wholesale channels',
+      'Leguminous cover crops (Mucuna pruriens) for soil nitrogen and weed suppression',
+      'Drip irrigation lines during establishment phase (Year 1–2)',
+      'All-weather 4m laterite access road through the full plantation block',
+      'Concrete FFB (Fresh Fruit Bunch) receiving and sorting platform',
+      'Stainless steel food-grade storage drums for processed palm oil',
+    ],
+  },
+  plantain:{
+    name:'Plantain & Yam Farm', subtitle:'1 Acre · Large-Scale Staple Production', tag:'Zone 06',
+    color:'#558B2F', card:'linear-gradient(135deg,#558B2F,#8BC34A)', icon:'🍌',
+    desc:'Premium Agbagba plantain and white yam at commercial scale — the two highest-demand staples in Southwest Nigeria with exceptional price stability and deep market roots. Large planting volumes ensure year-round harvest cycles.',
+    stats:[{v:'800+',l:'Plantain Plants'},{v:'8,000+',l:'Yam Sets'},{v:'3×',l:'Ratoon Cycles'},{v:'Year-Round',l:'Availability'}],
+    features:[
+      'Agbagba plantain variety (Musa paradisiaca) — highest-yielding in SW Nigeria',
+      '800+ suckers at 3m × 3m triangular spacing; 3 productive ratoon cycles each',
+      'White yam (Dioscorea rotundata) — Kemi & TDr varieties from IITA certified program',
+      '8,000+ yam minisetts from high-health certified seed yam multiplication',
+      'Bamboo staking system for climbing yam vines (locally sourced material)',
+      'Organic mulching with palm fronds for moisture retention and weed control',
+      'Drip irrigation for full dry season production (November–March)',
+      'Ventilated yam barn: store fresh yam for up to 6 months post-harvest',
+      'Intercropping: maize & groundnuts between plantain rows (Year 1 income)',
+      'Post-harvest: grading, sizing & branded packaging for premium market',
+    ],
+  },
+};
+
+/* ══════════════════════════════════════════════════════════════════════
+   INFRASTRUCTURE DATA
+══════════════════════════════════════════════════════════════════════ */
+const INFRA = [
+  {id:'water', emoji:'💧', name:'Water System',
+    desc:'A gravity-fed self-sufficient water system starting from an 80m deep borehole, elevated for pressure distribution across all six zones — handling the high-volume demands of 17,000 birds, 5,000+ fish, 200+ livestock, and domestic resort use simultaneously.',
+    specs1:{title:'Primary Supply',items:[
+      '80m deep borehole (standard Ogun/Oyo State aquifer depth)',
+      '15,000L/hr submersible pump (solar-powered, float-switched)',
+      '50,000L elevated concrete water tower at 6m height',
+      'Gravity-fed pressure to all zones — no ongoing pump cost',
+      '4" PVC backbone main line; 2" distribution branches to each zone',
+    ]},
+    specs2:{title:'Zone Distribution',items:[
+      'Aquaponics: 40,000L RAS recirculating system — 95% water reuse rate',
+      'Poultry: nipple drinker lines — est. 300,000L/day for 17,000 birds',
+      'Livestock: automatic troughs — 50L/cattle/day, 8L/goat or sheep/day',
+      'Oil Palm: drip irrigation lines (Years 1–2 establishment only)',
+      'Resort: pressurised domestic supply + pool fill-and-top-up system',
+    ]},
+  },
+  {id:'solar', emoji:'⚡', name:'Solar Energy',
+    desc:'A 40kW off-grid solar system provides 100% of the farm\'s daytime energy needs — powering 10 poultry houses, aquaponics pumps, water circulation, resort facilities, and lighting — with a 200kWh battery bank for overnight operations.',
+    specs1:{title:'Generation System',items:[
+      '100 × 400W monocrystalline panels — 10m × 20m south-facing array',
+      'Tilted at 25° for SW Nigeria latitude (approx. 7°N)',
+      'Estimated daily output: 160kWh (avg. 5.5 peak sun hours)',
+      '3-phase 40kW string inverter + live monitoring dashboard',
+      'PHCN grid connection as backup (net metering where available)',
+    ]},
+    specs2:{title:'Storage & Distribution',items:[
+      '200kWh lithium iron phosphate (LFP) battery bank — 8-hour overnight cover',
+      'Climate-controlled battery & inverter room (6m × 4m structure)',
+      'Biogas from poultry (17,000 birds) & livestock → additional cooking gas + backup genset',
+      '10-year panel performance warranty; 25-year power guarantee',
+      'Farm energy monitoring: real-time dashboard, zone-by-zone metering',
+    ]},
+  },
+  {id:'roads', emoji:'🛤️', name:'Roads & Walkways',
+    desc:'A comprehensive internal road network designed for year-round all-weather access — from the tarred main entrance to the hardened internal loop road and concrete pedestrian pathways linking every zone.',
+    specs1:{title:'Vehicle Roads',items:[
+      '6m wide tarred main entry road: gate to resort parking area',
+      '4m wide compacted laterite internal loop road serving all zones',
+      '4m oil palm access road through the full plantation block',
+      'All road edges: concrete kerbing for positive drainage direction',
+      'Reinforced concrete culverts at every drainage channel crossing',
+    ]},
+    specs2:{title:'Pedestrian Network',items:[
+      '1.5m concrete walkways connecting resort to every production zone',
+      '0.8m gravel paths within resort gardens and leisure areas',
+      'Covered walkway: resort to conference room (shade structure)',
+      'Non-slip surface specification for safe wet-season use',
+      'Solar-powered LED pathway lighting along all main walkways',
+    ]},
+  },
+  {id:'drain', emoji:'🌊', name:'Drainage & Flood Control',
+    desc:'A tiered drainage system designed for Southwest Nigeria\'s intense rainy seasons — preventing waterlogging across all crop zones, protecting buildings, and capturing runoff in a retention pond for dry-season reuse.',
+    specs1:{title:'Primary System',items:[
+      '600mm × 600mm concrete-lined primary drain on north perimeter',
+      'Designed for 1:50-year rainfall event (200mm in 24 hours)',
+      '1:200 longitudinal gradient maintained throughout all channels',
+      'Outfall to retention pond; controlled overflow to natural drainage',
+      'Silt traps and inspection chambers at 50m intervals',
+    ]},
+    specs2:{title:'Secondary & Zone Level',items:[
+      '300mm × 300mm secondary drains running alongside all E-W roads',
+      '150mm × 150mm tertiary channels within each crop zone',
+      '0.4-acre retention pond (NW corner) for sedimentation and storage',
+      'Dry season: pond water pumped back for supplemental irrigation',
+      'Raised planting beds in aquaponics & plantain zones (+300mm)',
+    ]},
+  },
+];
+
+/* ══════════════════════════════════════════════════════════════════════
+   AGRICULTURAL SCIENCE
+══════════════════════════════════════════════════════════════════════ */
+const SCIENCE = [
+  {icon:'🌴', name:'Oil Palm', why:'Native to West Africa',
+    text:'Oil palm (Elaeis guineensis) originated in the Gulf of Guinea — SW Nigeria is literally its native biome. The NIFOR Tenera hybrid delivers 4–5 tonnes FFB/acre/year, 3× the yield of wild palms. With a productive life exceeding 30 years, it offers the highest long-term cash-crop ROI of any tree crop in this agro-ecological zone.'},
+  {icon:'🐟', name:'African Catfish', why:'Nigeria\'s #1 Consumed Fish',
+    text:'Clarias gariepinus is the most consumed fish in Nigeria — a ₦1.2 trillion annual market. It tolerates elevated stocking densities, feeds on low-cost inputs, and reaches 1kg harvest weight in just 5–6 months. In a recirculating aquaponics system, 4 production cycles per year are achievable — far exceeding open-pond productivity per square metre.'},
+  {icon:'🐓', name:'Layer Poultry (Shika Brown)', why:'Fastest Protein Return',
+    text:'Shika Brown layers begin production at 18 weeks and produce 250–280 eggs per bird per year for 14–16 months. At 15,000 birds, this farm produces an estimated 3.75–4.2 million eggs annually. Automated nipple drinkers and chain feeders allow one trained attendant to manage 1,500 birds — the most favourable labour-to-output ratio of any farm enterprise in Nigeria.'},
+  {icon:'🍌', name:'Plantain & Yam', why:'Guaranteed Demand',
+    text:'Plantain is consumed daily by an estimated 70% of SW Nigerian households. The Agbagba variety commands a 15–20% market premium over imported types. White yam (Dioscorea rotundata) fetches ₦800–2,000/kg at peak season. At 8,000 yam sets and 800+ plantain suckers, this zone produces at commercial volumes with zero marketing risk — deepest roots in local food culture.'},
+  {icon:'🐐', name:'Goats, Sheep & Cattle', why:'Festive Season Premium',
+    text:'West African Dwarf goats sell for ₦25,000–80,000 per head at Eid-el-Kabir and Christmas — 200–400% price premiums. At 200+ head of mixed livestock, this paddock generates substantial festive-period revenue. Their manure is the farm\'s primary organic fertilizer — 200 head produce over 100kg of compost daily, replacing all synthetic fertilizer costs across every crop zone.'},
+  {icon:'🌿', name:'Cashew Perimeter', why:'Security & Income Combined',
+    text:'Anacardium occidentale thrives on SW Nigeria\'s laterite-heavy perimeter soils where other crops struggle. Planted as a living boundary, mature trees (Year 4+) produce 4–8kg of raw nuts per tree annually. The 300+ perimeter trees yield 1.2–2.4 tonnes of cashew nuts per season at ₦1,500–2,500/kg farmgate value — the boundary works 365 days as both land security and a productive income crop.'},
+];
+
+/* ══════════════════════════════════════════════════════════════════════
+   UI FUNCTIONS
+══════════════════════════════════════════════════════════════════════ */
+function openPanel(id) {
+  const z = ZONES[id]; if (!z) return;
+  document.getElementById('panel-body').innerHTML = `
+    <div class="p-tag">${z.tag}</div>
+    <h2>${z.name}</h2>
+    <p class="p-sub">${z.subtitle}</p>
+    <p class="p-desc">${z.desc}</p>
+    <div class="divider"></div>
+    <div class="p-stats">${z.stats.map(s => `<div class="p-stat"><div class="sv">${s.v}</div><div class="sl">${s.l}</div></div>`).join('')}</div>
+    <div class="divider"></div>
+    <div class="p-slabel">Key Features</div>
+    <ul class="p-features">${z.features.map(f => `<li>${f}</li>`).join('')}</ul>`;
+  document.getElementById('panel').classList.add('open');
+}
+function closePanel() { document.getElementById('panel').classList.remove('open'); }
+
+function toggleInfra(id) {
+  ['ib-','ih-','ia-'].forEach((pfx, i) => {
+    const el = document.getElementById(pfx + id);
+    if (i === 0 || i === 1) el.classList.toggle('open');
+    else el.classList.toggle('open');
+  });
+}
+
+function renderAll() {
+  // Zone cards
+  const g = document.getElementById('zones-grid');
+  Object.entries(ZONES).forEach(([id, z]) => {
+    const c = document.createElement('div'); c.className = 'zcard';
+    c.innerHTML = `
+      <div class="zcard-head" style="background:${z.card}">
+        <div class="zcard-icon">${z.icon}</div>
+        <h3>${z.name}</h3>
+      </div>
+      <div class="zcard-body">
+        <p>${z.desc.substring(0, 130)}…</p>
+        <div class="zcard-foot">
+          <span class="zbadge" style="background:${z.color}22;color:${z.color}">${z.subtitle.split('·')[0].trim()}</span>
+          <span class="zmore">Explore →</span>
+        </div>
+      </div>`;
+    c.addEventListener('click', () => openPanel(id));
+    g.appendChild(c);
+  });
+
+  // Infrastructure accordion
+  const ig = document.getElementById('infra-grid');
+  INFRA.forEach(inf => {
+    const el = document.createElement('div'); el.className = 'infra-item';
+    el.innerHTML = `
+      <div class="infra-hdr" id="ih-${inf.id}" onclick="toggleInfra('${inf.id}')">
+        <span class="infra-emoji">${inf.emoji}</span>
+        <span class="infra-name">${inf.name}</span>
+        <span class="infra-arrow" id="ia-${inf.id}">▼</span>
+      </div>
+      <div class="infra-body" id="ib-${inf.id}">
+        <div class="infra-content">
+          <p class="infra-desc">${inf.desc}</p>
+          <div class="infra-spec-group"><h4>${inf.specs1.title}</h4>
+            <ul class="infra-spec-list">${inf.specs1.items.map(i => `<li>${i}</li>`).join('')}</ul>
+          </div>
+          <div class="infra-spec-group"><h4>${inf.specs2.title}</h4>
+            <ul class="infra-spec-list">${inf.specs2.items.map(i => `<li>${i}</li>`).join('')}</ul>
+          </div>
+        </div>
+      </div>`;
+    ig.appendChild(el);
+  });
+
+  // Science cards
+  const sg = document.getElementById('science-grid');
+  SCIENCE.forEach(s => {
+    const c = document.createElement('div'); c.className = 'sci-card';
+    c.innerHTML = `<div class="sci-icon">${s.icon}</div><h3>${s.name}</h3>
+      <div class="sci-why">${s.why}</div><p>${s.text}</p>`;
+    sg.appendChild(c);
+  });
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   THREE.JS 3D FARM SCENE
+══════════════════════════════════════════════════════════════════════ */
+(function buildScene() {
+  const canvas = document.getElementById('farm-canvas');
+  const hero   = document.getElementById('viewer');
+
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.12;
+
+  const labelRenderer = new THREE.CSS2DRenderer();
+  labelRenderer.domElement.style.cssText = 'position:absolute;top:0;left:0;pointer-events:none;';
+  hero.appendChild(labelRenderer.domElement);
+
+  const scene  = new THREE.Scene();
+  scene.background = new THREE.Color(0x7EC8E3);
+  scene.fog = new THREE.Fog(0x7EC8E3, 50, 95);
+
+  const camera = new THREE.PerspectiveCamera(47, 1, .1, 200);
+  camera.position.set(6, 32, 42);
+
+  const controls = new THREE.OrbitControls(camera, canvas);
+  controls.enableDamping = true; controls.dampingFactor = .07;
+  controls.minDistance = 14; controls.maxDistance = 72;
+  controls.maxPolarAngle = Math.PI / 2.1; controls.minPolarAngle = .15;
+
+  function resize() {
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    if (canvas.width !== w || canvas.height !== h) {
+      renderer.setSize(w, h, false);
+      labelRenderer.setSize(w, h);
+      camera.aspect = w / h; camera.updateProjectionMatrix();
+    }
+  }
+
+  /* LIGHTING */
+  scene.add(new THREE.AmbientLight(0xFFF8DC, .52));
+  const sun = new THREE.DirectionalLight(0xFFFACD, 1.28);
+  sun.position.set(12, 28, 14); sun.castShadow = true;
+  sun.shadow.mapSize.set(2048, 2048);
+  sun.shadow.camera.left = -30; sun.shadow.camera.right = 30;
+  sun.shadow.camera.top = 24; sun.shadow.camera.bottom = -24;
+  sun.shadow.camera.far = 85; scene.add(sun);
+  scene.add(new THREE.HemisphereLight(0x7EC8E3, 0x8B7355, .3));
+
+  /* HELPERS */
+  function bx(w, h, d, col, x, y, z, ry = 0) {
+    const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d),
+      new THREE.MeshLambertMaterial({ color: col }));
+    m.position.set(x, y, z); m.rotation.y = ry;
+    m.castShadow = true; m.receiveShadow = true; return m;
+  }
+  function cy(rt, rb, h, seg, col, x, y, z) {
+    const m = new THREE.Mesh(new THREE.CylinderGeometry(rt, rb, h, seg),
+      new THREE.MeshLambertMaterial({ color: col }));
+    m.position.set(x, y, z); m.castShadow = true; return m;
+  }
+  function sp(r, col, x, y, z) {
+    const m = new THREE.Mesh(new THREE.SphereGeometry(r, 8, 6),
+      new THREE.MeshLambertMaterial({ color: col }));
+    m.position.set(x, y, z); m.castShadow = true; return m;
+  }
+  function pl(w, d, col, x, y, z, op = 1) {
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(w, d),
+      new THREE.MeshLambertMaterial({ color: col, transparent: op < 1, opacity: op }));
+    m.rotation.x = -Math.PI / 2; m.position.set(x, y, z); m.receiveShadow = true; return m;
+  }
+  function roofCone(w, h, col, x, y, z) {
+    const m = new THREE.Mesh(new THREE.CylinderGeometry(0, w * .72, h, 4),
+      new THREE.MeshLambertMaterial({ color: col }));
+    m.position.set(x, y, z); m.rotation.y = Math.PI / 4; m.castShadow = true; return m;
+  }
+  function add(...items) { items.forEach(i => scene.add(i)); }
+
+  /* GROUND */
+  add(pl(42, 34, 0x7A5C3A, 0, -.02, 0));  // soil perimeter
+  add(pl(38, 30, 0x4A7C3F, 0,  .01, 0));  // green farm
+
+  /* ZONE GROUND PLANES (clickable) */
+  const zMeshes = {}, zColors = {};
+  function mkZone(id, col, cx, cz, w, d) {
+    const m = pl(w, d, col, cx, .03, cz, .88);
+    m.userData.zoneId = id; scene.add(m);
+    zMeshes[id] = m; zColors[id] = col; return m;
+  }
+  // Zone layout: front row z[4.5,12], mid row z[-3.5,4.5], back z[-13,-3.5]
+  mkZone('poultry',   0xC8A230, -9.5,  8.25,  9.0, 7.5);
+  mkZone('resort',    0xD49A5A,  0.0,  8.25, 10.0, 7.5);
+  mkZone('plantain',  0x6BAD50,  9.5,  8.25,  9.0, 7.5);
+  mkZone('aquaponics',0x3D91AA, -7.0,   .5,  14.0, 8.0);
+  mkZone('livestock', 0x9B7040,  7.0,   .5,  14.0, 8.0);
+  mkZone('oilpalm',   0x2D7040,  0.0, -8.25, 28.0, 9.5);
+
+  /* ROADS & PATHS */
+  add(pl(28, 1.4, 0xC4A35A,  0, .04,  4.5));   // E-W road 1 (front/mid boundary)
+  add(pl(28, 1.4, 0xC4A35A,  0, .04, -3.5));   // E-W road 2 (mid/back boundary)
+  add(pl(1.0, 8.0, 0xC4A35A, 0, .04,   .5));   // N-S divider
+  add(pl(1.8, 1.4, 0xC4A35A, 0, .04, 13.25));  // entry at gate
+  add(pl(1.5, 6.0, 0xD8C090, 0, .05, 11.5));   // resort driveway
+  add(pl(26,   .6, 0xC4A35A, 0, .04,  -8.5));  // oil palm internal road
+  add(pl(.5,   6,  0xD0BFA0,-5, .05,    6));   // walkway resort→poultry
+  add(pl(.5,   6,  0xD0BFA0, 5, .05,    6));   // walkway resort→plantain
+
+  /* DRAINAGE CHANNELS */
+  add(pl(28, .35, 0x3A2510, 0, .05,  3.82));   // drain S of road1
+  add(pl(28, .35, 0x3A2510, 0, .05, -4.18));   // drain S of road2
+  add(pl(28, .35, 0x3A2510, 0, .05,-12.5));    // primary perimeter drain
+  add(pl(.3,  28, 0x3A2510, 13.3, .05, 0));    // east drain
+
+  /* RETENTION POND */
+  add(pl(4.2, 3.2, 0x156DA0,-11.5, .04,-11));
+  add(pl(3.8, 2.8, 0x1B88C4,-11.5, .06,-11));
+
+  /* WATER TOWER */
+  [[-11.2,-3.8],[-10.8,-3.8],[-11.2,-3.2],[-10.8,-3.2]].forEach(([lx,lz]) =>
+    add(cy(.04, .04, 2.2, 4, 0x888888, lx, 1.1, lz)));
+  add(cy(.55, .55, .12, 12, 0xAAAAAA, -11, .05, -3.5));
+  add(cy(.62, .62, 1.0, 16, 0xCCCCCC, -11, 1.5, -3.5));
+  add(cy(.7,  .55, .18, 16, 0xBBBBBB, -11, 2.06,-3.5));
+  add(cy(.04, .04, 1.1,  6, 0xAAAAAA,-11.5, .55,-3.5));
+
+  /* BOREHOLE */
+  add(pl(.8, .8, 0xAAAAAA,-12.3, .04,-2.9));
+  add(cy(.08, .1, .75, 8, 0x777777,-12.3, .4, -2.9));
+  add(bx(.4, .2, .4, 0x555555,-12.3, .9, -2.9));
+  add(bx(.08,.08,.08,0xCC2222,-12.3,1.1, -2.9));
+
+  /* SOLAR ARRAY — 12 panels in 3×4 grid */
+  for (let r = 0; r < 3; r++) for (let c = 0; c < 4; c++) {
+    const px = 8.5 + c * 1.4, pz = -10.8 + r * 1.0;
+    const panel = new THREE.Mesh(new THREE.BoxGeometry(1.2, .06, .7),
+      new THREE.MeshLambertMaterial({ color: 0x1A237E }));
+    panel.position.set(px, .45 + r * .05, pz);
+    panel.rotation.x = -.42; panel.castShadow = true; scene.add(panel);
+    add(cy(.03,.03,.4,4,0x888888, px,.2, pz+.28));
+    add(cy(.03,.03,.4,4,0x888888, px,.2, pz-.28));
+  }
+  add(bx(1.5,.6,1, 0x444444, 8.5,.3,-12));  // inverter room
+
+  /* MAIN GATE */
+  add(bx(.35,1.8,.35, 0xF5E6D3,-1.6,.9,13.5));
+  add(bx(.35,1.8,.35, 0xF5E6D3, 1.6,.9,13.5));
+  add(bx(3.6,.25,.3,  0xC9A227,    0,1.88,13.5));
+  add(bx(.5, .8, 1.2, 0xE8D8C0,   -3, .4,13));
+  const gDiv = document.createElement('div'); gDiv.className='infra-label'; gDiv.textContent='MAIN ENTRY GATE';
+  const gObj = new THREE.CSS2DObject(gDiv); gObj.position.set(0,2.6,13.5); scene.add(gObj);
+
+  /* CASHEW PERIMETER */
+  function mkTree(x, z, h=1.15, sp2=.58, tc=0x4E342E, lc=0x388E3C) {
+    const g = new THREE.Group();
+    g.add(cy(.07,.12,h*.5,5,tc, 0,h*.25,0));
+    const c = new THREE.Mesh(new THREE.SphereGeometry(sp2,8,6),
+      new THREE.MeshLambertMaterial({color:lc}));
+    c.position.set(0,h*.67,0); c.scale.y=.8; c.castShadow=true; g.add(c);
+    g.position.set(x,0,z); scene.add(g);
+  }
+  const pX=14.5,pZ=11.5;
+  for (let x=-pX; x<=pX; x+=1.85) { mkTree(x,-pZ); mkTree(x,pZ,.95,.5); }
+  for (let z=-pZ+1.85; z<pZ; z+=1.85) { mkTree(-pX,z); mkTree(pX,z); }
+  for (let x=-pX; x<=pX; x+=1.85) {
+    add(cy(.04,.04,.6,4,0x5D4037,x,.3,-pZ));
+    add(cy(.04,.04,.6,4,0x5D4037,x,.3, pZ));
+  }
+
+  /* ═══════════════════════════════════════════════════
+     RESORT ZONE
+  ═══════════════════════════════════════════════════ */
+  add(bx(4.2,1.45,3.0,0xF5E6D3, 0,.72, 8));
+  add(roofCone(3.5,1.0,0x8B4513, 0,1.72, 8));
+  add(bx(4.4,.1,1.0,0xEEDDCC, 0,.05,9.6));
+  [-3.2,3.2].forEach(xo => {
+    add(bx(1.8,.92,1.4,0xFAEFE0,xo,.46,6.8));
+    add(roofCone(1.5,.62,0xA0522D,xo,1.23,6.8));
+  });
+  add(bx(3.5,.75,1.2,0xE8D8C0, 3.2,.37,10.2));
+  add(bx(2.8,.75,1.2,0xE8D0B0,-3.2,.37,10.2));
+  add(pl(2.4,1.5,0xCEF2FB,-1,.04,9.2));    // pool
+  add(pl(2.8,1.9,0xEDF5F8,-1,.03,9.2,.5)); // pool surround
+  for (let i=0;i<4;i++) {
+    const p=new THREE.Mesh(new THREE.BoxGeometry(.9,.06,.65),
+      new THREE.MeshLambertMaterial({color:0x1A237E}));
+    p.position.set(-1.3+i*.9,1.88,7.8); p.rotation.x=-.28; p.castShadow=true; scene.add(p);
+  }
+  mkTree(-4.5,5,.85,.42,0x4E342E,0x2E7D32);
+  mkTree( 4.5,5,.85,.42,0x4E342E,0x2E7D32);
+
+  /* ═══════════════════════════════════════════════════
+     POULTRY ZONE — 17,000 birds: 10 laying + 2 broiler houses
+  ═══════════════════════════════════════════════════ */
+  // 5 laying sheds in left column (x=-12.5): 1,500 hens each
+  const layZ = [5.2, 6.4, 7.6, 8.8, 10.0];
+  layZ.forEach(z => {
+    add(bx(4.8,.58,.92,0xEEEEEE,-12.5,.29,z));
+    add(bx(4.9,.13,.08,0xCCCCCC,-12.5,.7, z));
+    [-1.5,-.5,.5,1.5].forEach(xv => add(bx(.28,.18,.14,0xDDDDDD,-12.5+xv,.84,z)));
+  });
+  // 5 laying sheds in right column (x=-10): 1,500 hens each
+  layZ.forEach(z => {
+    add(bx(4.8,.58,.92,0xEEEEEE,-10,.29,z));
+    add(bx(4.9,.13,.08,0xCCCCCC,-10,.7, z));
+    [-1.5,-.5,.5,1.5].forEach(xv => add(bx(.28,.18,.14,0xDDDDDD,-10+xv,.84,z)));
+  });
+  // 2 broiler houses (larger, x=-6.5): 1,000 birds each
+  [6.2, 9.2].forEach(z => {
+    add(bx(3.8,.7,1.1,0xDDDDCC,-6.5,.35,z));
+    add(bx(3.9,.16,.08,0xBBBBBB,-6.5,.78,z));
+  });
+  // Feed silos (2 large)
+  add(cy(.42,.5,1.9,10,0xCCCCCC,-7.5,.95,11.2));
+  add(cy(.42,.5,1.9,10,0xCCCCCC,-8.7,.95,11.2));
+  add(cy(.5,.5,.2,10,0xAAAAAA,-7.5,1.95,11.2));
+  add(cy(.5,.5,.2,10,0xAAAAAA,-8.7,1.95,11.2));
+  // Feed mill building
+  add(bx(2,.75,1.4,0xE0D0B0,-6.5,.37,11.2));
+  // Zone office
+  add(bx(1.4,.78,1.1,0xE0D0B0,-13.8,.39,5));
+  add(roofCone(1.2,.55,0x8B4513,-13.8,.97,5));
+
+  /* ═══════════════════════════════════════════════════
+     AQUAPONICS ZONE — 8 tanks = 5,000+ fish
+  ═══════════════════════════════════════════════════ */
+  const tankPos = [
+    [-11,-2],[-8.5,-2],[-6,-2],[-3.5,-2],
+    [-11, 2],[-8.5, 2],[-6,  2],[-3.5, 2],
+  ];
+  tankPos.forEach(([tx,tz]) => {
+    add(cy(.78,.78,.62,16,0x607D8B,tx,.31,tz));
+    add(cy(.72,.72,.14,16,0x0288D1,tx,.58,tz));
+  });
+  const ghBody = new THREE.Mesh(new THREE.BoxGeometry(6,1.4,4.5),
+    new THREE.MeshLambertMaterial({color:0x90EE90,transparent:true,opacity:.32}));
+  ghBody.position.set(-3.5,.7,.2); scene.add(ghBody);
+  const ghWire = new THREE.Mesh(new THREE.BoxGeometry(6.1,1.42,4.6),
+    new THREE.MeshLambertMaterial({color:0x2E8B57,wireframe:true}));
+  ghWire.position.set(-3.5,.71,.2); scene.add(ghWire);
+  add(bx(1.3,.75,1.1,0x8EA0A8,-12.5,.37,-2));
+  add(bx(2.4,.72,1.5,0x9DB0A8,-12.5,.36,2));
+
+  /* ═══════════════════════════════════════════════════
+     LIVESTOCK ZONE — 200+ head
+  ═══════════════════════════════════════════════════ */
+  // 2 barns (larger operation)
+  add(bx(4.5,1.1,3.5,0xCD853F, 4.5,.55, 1.5));
+  add(roofCone(3.8,.9,0x8B4513, 4.5,1.28,1.5));
+  add(bx(3.8,.95,2.8,0xC8804A, 9.5,.48,-1));
+  add(roofCone(3.2,.8,0x7A3B0D, 9.5,1.07,-1));
+  // Biogas dome
+  const bg = sp(.98,0x555555,12.5,.38,1.5); bg.scale.y=.55; scene.add(bg);
+  add(cy(.12,.12,.6,8,0x666666,12.5,.65,1.5));
+  // 4-paddock fence system
+  const fenceX = [0.5,5,9.5,14], fenceZ = [-3.5,0,4.5];
+  fenceX.forEach(fx => fenceZ.forEach(fz => add(cy(.05,.05,.55,4,0x5D4037,fx,.27,fz))));
+  // Rails
+  add(bx(13.5,.06,.07,0x6D5040,7.25,.45,-3.5));
+  add(bx(13.5,.06,.07,0x6D5040,7.25,.45,   0));
+  add(bx(13.5,.06,.07,0x6D5040,7.25,.45, 4.5));
+  add(bx(.07,.06,8.0,0x6D5040,0.5,.45,.5));
+  add(bx(.07,.06,8.0,0x6D5040,5.0,.45,.5));
+  add(bx(.07,.06,8.0,0x6D5040,9.5,.45,.5));
+  add(bx(.07,.06,8.0,0x6D5040,14, .45,.5));
+  // Water troughs
+  add(bx(3,.35,.6,0x8BA0A8, 7,.17,-1.8));
+  add(pl(2.8,.5,0x4A90D9, 7,.37,-1.8,.9));
+  add(bx(3,.35,.6,0x8BA0A8, 7,.17, 3.2));
+  add(pl(2.8,.5,0x4A90D9, 7,.37, 3.2,.9));
+  // Hay storage
+  add(bx(2,.55,1.6,0xD4A850,13,.27,-2.5));
+
+  /* ═══════════════════════════════════════════════════
+     OIL PALM — 200+ trees
+  ═══════════════════════════════════════════════════ */
+  function mkPalm(x, z) {
+    const g = new THREE.Group();
+    const h = 1.9 + Math.random() * .55;
+    g.add(cy(.1,.18,h,6,0x5D4037,0,h/2,0));
+    [0,120,240].forEach(deg => {
+      const rad = deg * Math.PI / 180;
+      const f = new THREE.Mesh(new THREE.ConeGeometry(.17,1.25,4),
+        new THREE.MeshLambertMaterial({color:0x2E7D32}));
+      f.position.set(Math.cos(rad)*.52,h+.12,Math.sin(rad)*.52);
+      f.rotation.z = rad + Math.PI*.23; f.castShadow=true; g.add(f);
+    });
+    g.add(sp(.17,0xE53935,0,h-.12,0));
+    g.position.set(x,0,z); scene.add(g);
+  }
+  for (let r=0;r<3;r++) for (let c=0;c<8;c++)
+    mkPalm(-12 + c*3.4 + (r%2)*1.7, -5.2 + r*2.4);
+  // Processing shed
+  add(bx(2.8,1.0,2,0x5D4037,12,.5,-8));
+  add(roofCone(2.4,.75,0x4A2810,12,1.12,-8));
+
+  /* ═══════════════════════════════════════════════════
+     PLANTAIN & YAM — 800+ plants, 8,000+ sets
+  ═══════════════════════════════════════════════════ */
+  function mkPlantain(x, z) {
+    const g = new THREE.Group();
+    g.add(cy(.15,.2,1.55,6,0x6FAA3C,0,.77,0));
+    const top = sp(.52,0x4CAF50,0,1.55,0);
+    top.scale.set(1.28,.72,1.28); g.add(top);
+    g.add(cy(.03,.03,.9,4,0xA0800C,0,.45,.5));
+    g.position.set(x,0,z); scene.add(g);
+  }
+  // 4 rows × 5 columns of plantain (denser planting)
+  for (let r=0;r<4;r++) for (let c=0;c<5;c++)
+    mkPlantain(5.8+c*1.6, 5+r*1.7);
+  // Yam mounds (2 rows)
+  for (let i=0;i<10;i++) {
+    const ym = sp(.28,0x8B5E3C, 5.8+(i%5)*1.8, .18, i<5?10.8:11.8);
+    ym.scale.y=.55; scene.add(ym);
+  }
+  // Storage shed
+  add(bx(2.2,.7,1.6,0xDEC090,13,.35,10.5));
+  add(roofCone(1.8,.55,0x8B4513,13,.9,10.5));
+
+  /* ═══════════════════════════════════════════════════
+     CSS2D FLOATING LABELS
+  ═══════════════════════════════════════════════════ */
+  [
+    ['RESORT & LIVING',     0,    2.4,  8.25],
+    ['POULTRY — 17,000',  -9.5,  2.4,  8.25],
+    ['PLANTAIN & YAM',     9.5,  2.4,  8.25],
+    ['AQUAPONICS',         -7,   2.4,   .5 ],
+    ['LIVESTOCK — 200+',    7,   2.4,   .5 ],
+    ['OIL PALM (2 ACRES)',  0,   2.4, -8.25],
+  ].forEach(([txt,x,y,z]) => {
+    const div = document.createElement('div'); div.className='zlabel';
+    div.textContent = txt;
+    const obj = new THREE.CSS2DObject(div); obj.position.set(x,y,z); scene.add(obj);
+  });
+
+  [
+    ['WATER TOWER', -11,   2.9,-3.5],
+    ['SOLAR ARRAY',  10.5, 1.7,-9.8],
+    ['BOREHOLE',    -12.3, 1.6,-2.9],
+    ['RETENTION POND',-11.5,1.1,-11 ],
+    ['MAIN GATE',    0,    2.8,13.5 ],
+  ].forEach(([txt,x,y,z]) => {
+    const div = document.createElement('div'); div.className='infra-label';
+    div.textContent = txt;
+    const obj = new THREE.CSS2DObject(div); obj.position.set(x,y,z); scene.add(obj);
+  });
+
+  /* ═══════════════════════════════════════════════════
+     RAYCASTER — CLICK & HOVER
+  ═══════════════════════════════════════════════════ */
+  const ray = new THREE.Raycaster(), mouse = new THREE.Vector2();
+  const tip = document.getElementById('tip');
+  let hovered = null;
+
+  canvas.addEventListener('mousemove', e => {
+    const r = canvas.getBoundingClientRect();
+    mouse.x = ((e.clientX-r.left)/r.width)*2-1;
+    mouse.y = -((e.clientY-r.top)/r.height)*2+1;
+    ray.setFromCamera(mouse, camera);
+    const hits = ray.intersectObjects(Object.values(zMeshes));
+    if (hits.length) {
+      const zid = hits[0].object.userData.zoneId;
+      if (hovered !== zid) {
+        if (hovered && zMeshes[hovered]) {
+          zMeshes[hovered].material.color.setHex(zColors[hovered]);
+          zMeshes[hovered].material.opacity = .88;
+        }
+        hits[0].object.material.color.setHex(0xFFFFFF);
+        hits[0].object.material.opacity = .5; hovered = zid;
+      }
+      tip.textContent = '📍 ' + ZONES[zid].name + ' — click to explore';
+      tip.style.left = (e.clientX+14)+'px'; tip.style.top = (e.clientY-10)+'px';
+      tip.classList.add('show'); canvas.style.cursor = 'pointer';
+    } else {
+      if (hovered && zMeshes[hovered]) {
+        zMeshes[hovered].material.color.setHex(zColors[hovered]);
+        zMeshes[hovered].material.opacity = .88; hovered = null;
+      }
+      tip.classList.remove('show'); canvas.style.cursor = 'default';
+    }
+  });
+
+  canvas.addEventListener('click', e => {
+    const r = canvas.getBoundingClientRect();
+    mouse.x = ((e.clientX-r.left)/r.width)*2-1;
+    mouse.y = -((e.clientY-r.top)/r.height)*2+1;
+    ray.setFromCamera(mouse, camera);
+    const hits = ray.intersectObjects(Object.values(zMeshes));
+    if (hits.length) openPanel(hits[0].object.userData.zoneId);
+  });
+
+  /* ANIMATION LOOP */
+  let frame = 0;
+  function animate() {
+    requestAnimationFrame(animate); frame++;
+    const h = .57 + Math.sin(frame * .0018) * .013;
+    scene.background.setHSL(h, .58, .63);
+    scene.fog.color.setHSL(h, .58, .63);
+    controls.update(); resize();
+    renderer.render(scene, camera);
+    labelRenderer.render(scene, camera);
+  }
+  animate();
+
+  // Intro camera sweep
+  let t = 0;
+  const sweep = setInterval(() => {
+    t = Math.min(t + .011, 1);
+    const e = 1 - Math.pow(1-t, 3);
+    camera.position.set(20+(6-20)*e, 42+(32-42)*e, 55+(42-55)*e);
+    camera.lookAt(0,0,0);
+    if (t >= 1) clearInterval(sweep);
+  }, 16);
+
+})();
+
+/* INIT */
+document.addEventListener('DOMContentLoaded', renderAll);
+</script>
+</body>
+</html>
