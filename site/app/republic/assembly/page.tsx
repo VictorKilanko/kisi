@@ -3,6 +3,7 @@ import Link from "next/link";
 import { DemoBadge, WorldBadge } from "@/components/Badges";
 import { SectionHeading } from "@/components/Cards";
 import { FictionDisclaimer } from "@/components/Disclaimer";
+import { Poll } from "@/components/Poll";
 import { bills, findChicken, parties } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -120,6 +121,25 @@ export default function AssemblyPage() {
             );
           })}
         </ul>
+      </section>
+
+      {/* Public gallery poll */}
+      <section className="mt-16 max-w-xl">
+        <SectionHeading
+          kicker="The Public Gallery"
+          title="Have your (non-binding) say"
+        />
+        <Poll
+          id="breakfast-time"
+          question="Should national breakfast move from 7:00 to 6:45?"
+          options={[
+            "Yes — the early bird is objectively correct",
+            "No — Executive Order No. 1 is sacred",
+            "Only if the Vice President crows later",
+            "Refer it to a committee (and its sub-committee)",
+          ]}
+          resultJoke="Your view has been entered into the record and will be read aloud twice, as is now traditional. The time remains 7:00."
+        />
       </section>
 
       {/* Electoral commission note */}

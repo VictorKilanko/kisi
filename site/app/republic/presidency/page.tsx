@@ -4,6 +4,7 @@ import { DemoBadge, WorldBadge } from "@/components/Badges";
 import { ChickenCard, SectionHeading, formatDate } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
 import { FictionDisclaimer } from "@/components/Disclaimer";
+import { Poll } from "@/components/Poll";
 import { executiveOrders, getChicken, presidentialDiary } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -114,6 +115,26 @@ export default function PresidencyPage() {
             </li>
           ))}
         </ol>
+      </div>
+
+      {/* Approval poll */}
+      <div className="mt-16 max-w-xl">
+        <SectionHeading
+          kicker="The National Mood"
+          title="Presidential approval"
+          lede="The Republic's most scientific instrument, in the sense that it is an instrument."
+        />
+        <Poll
+          id="presidential-approval"
+          question="How is Her Excellency doing?"
+          options={[
+            "Approve — breakfast has never been so punctual",
+            "Disapprove — on principle (NGA voter)",
+            "Undecided until the next recount",
+            "I am here for the sports coverage",
+          ]}
+          resultJoke="The Bureau of Egg Statistics declines to publish exit polls. The Presidency has announced the result anyway: 'favourable.'"
+        />
       </div>
 
       <FictionDisclaimer />

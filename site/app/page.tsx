@@ -8,6 +8,7 @@ import {
 } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
 import { FictionDisclaimer } from "@/components/Disclaimer";
+import { NewsletterForm } from "@/components/NewsletterForm";
 import {
   articles,
   chickens,
@@ -325,6 +326,21 @@ export default function Home() {
               The Agric City vision
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* NEWSLETTER */}
+      <section className="mx-auto max-w-6xl px-4 py-16">
+        <div className="rounded-3xl border border-kisi-gold-500/30 bg-white p-8">
+          <p className="kicker text-kisi-gold-500">This Week in the Republic</p>
+          <h2 className="font-display mt-2 text-2xl font-bold text-kisi-green-900">
+            Get the news before the Assembly does
+          </h2>
+          <p className="mt-2 max-w-xl text-sm text-kisi-charcoal-600">
+            A weekly digest of milestones, matches, and ministerial
+            misadventures — launching soon.
+          </p>
+          <NewsletterForm />
         </div>
       </section>
 
