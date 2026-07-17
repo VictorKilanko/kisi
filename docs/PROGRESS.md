@@ -6,22 +6,69 @@ Read this file at the start of every session, after the project brief.
 
 | Item | State |
 |---|---|
-| Current phase | **Phase 2 — Core website: COMPLETE, awaiting owner review** |
-| Next phase | Phase 3 — Interactive world (do not start until owner approves Phase 2) |
+| Current phase | **Phase 3 — Interactive world: COMPLETE, awaiting owner review** |
+| Next phase | Phase 4 — Community and support (do not start until owner approves Phase 3) |
 | Active branch | `feature/kisi-poultry-republic` |
-| Production build | **Passing** — `site/`: 53 static pages, `npm run build` exit 0 (2026-07-17) |
+| Production build | **Passing** — `site/`: 54 static pages incl. `/republic/map`, `npm run build` exit 0 (2026-07-17) |
 | Lint / typecheck | Passing — ESLint exit 0, `tsc --noEmit` clean (2026-07-17) |
+| 3D lazy-load | Verified — three.js lives in one separate chunk (~888 KB raw, pre-compression), referenced by NO page HTML; it downloads only when the visitor clicks "Enter the 3D farm" |
 | Tests | None yet — content integrity is enforced at build time; Vitest/Playwright planned |
 
 ## Phase checklist
 
 - [x] Phase 1 — Discovery and architecture (session 1)
-- [x] **Phase 2 — Core website** (session 2)
-- [ ] Phase 3 — Interactive world (3D farm)
+- [x] Phase 2 — Core website (session 2)
+- [x] **Phase 3 — Interactive world (3D farm)** (session 3)
 - [ ] Phase 4 — Community and support
 - [ ] Phase 5 — QA and deployment
 
 ## Session log
+
+### Session 3 — 2026-07-17 (Phase 3)
+
+**Owner decision at phase start:** Phase 2 approved; proceed to the
+interactive world; add R3F/motion as real dependencies now that they're
+needed.
+
+**Done:**
+- Deps: `three@0.185`, `@react-three/fiber@9.6`, `@react-three/drei@10.7`
+  (OrbitControls only), `motion@12` (panel transitions, reduced-motion
+  aware), `@types/three`.
+- `site/lib/mapData.ts` — **single source of truth** for 18 hotspots shared
+  by 3D and 2D: id, kind, world label (fact/fiction/mixed/vision), percent
+  coordinates, story description, real-farm practice note, links to real
+  routes, resident chicken ids. SW-Nigeria realism encoded: E–W open-sided
+  coops, foot-bath at the gate, raised feed store, quarantine set apart,
+  drainage, shade trees, solar.
+- `site/components/map/FarmMap3D.tsx` — fully procedural low-poly 3D farm
+  (no external models/textures): 17 building kinds, decorative shade trees,
+  paths, resident chicken figures colored from their content palettes,
+  hover + click selection, gold selection ring. `frameloop="demand"`,
+  capped dpr, low-power GL, no damping loop, canvas `aria-hidden`.
+- `site/components/map/Map2D.tsx` — illustrated 2D plan from the SAME data;
+  every hotspot is a real button (keyboard + screen-reader friendly).
+- `site/components/map/MapExperience.tsx` — orchestrator: starts on 2D,
+  "Enter the 3D farm" lazy-loads the R3F chunk on demand via
+  `next/dynamic` (ssr:false); WebGL capability read via
+  `useSyncExternalStore` (lint-clean, hydration-safe) — when absent the 3D
+  toggle disables with an explanation and 2D carries everything; detail
+  panel (motion, respects `useReducedMotion`) with world badge, story,
+  realism note, resident links, and route links; accessible "All locations"
+  index shared by both modes; `aria-live` panel region.
+- `site/app/republic/map/page.tsx` — server page enriches hotspot residents
+  from the content system (unknown ids fail the build), passes plain data
+  to the client. Wired into Header (Republic menu), Republic landing card,
+  home-page teaser section, and sitemap.
+- Gates: `tsc --noEmit` clean; ESLint exit 0 (after replacing a
+  setState-in-effect WebGL probe with `useSyncExternalStore`); production
+  build exit 0, 54/54 pages. Lazy-load verified by inspecting `.next`:
+  the only chunk containing three.js (~888 KB raw) is referenced by no
+  page HTML — it loads purely on demand. No sound anywhere; no unlicensed
+  assets; the legacy root `index.html` was not touched or referenced.
+
+**Not done (later phases):** day/night toggle and guided tour mode (nice-to-
+haves in the 3D plan — logged for Phase 5 polish); payments/newsletter/polls
+(Phase 4).
 
 ### Session 2 — 2026-07-17 (Phase 2)
 
@@ -110,10 +157,12 @@ begins.
 2. `git status` and `git log --oneline` on `feature/kisi-poultry-republic`.
 3. Node.js is NOT installed system-wide on this machine — install Node 22 LTS
    (or use a portable build) before running anything in `site/`.
-4. If Phase 2 has been approved by the owner, begin **Phase 3 — Interactive
-   world** per `docs/3D_WORLD_PLAN.md`: React Three Fiber map at
-   `/republic/map`, lazy-loaded, with the 2D SVG fallback, hotspots wired to
-   real routes, and performance/a11y budgets from the plan.
+4. If Phase 3 has been approved by the owner, begin **Phase 4 — Community
+   and support** per `docs/DONATION_INTEGRATION.md`: support tiers content +
+   page copy finalization (legal wording still pending owner's registration
+   status — sandbox only), payment abstraction + Paystack adapter in test
+   mode, newsletter, entertainment polls (clearly non-binding), sports data
+   expansion, and transparency reporting.
 5. Keep `index.html` (legacy Agric City masterplan) untouched and
    unreferenced — it is a separate historical artifact (owner decision,
    2026-07-17).
