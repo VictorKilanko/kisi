@@ -10,6 +10,7 @@ import {
   MinistrySchema,
   PartySchema,
   SocialEventSchema,
+  SupportTierSchema,
   TeamSchema,
   TimelineEventSchema,
   type Article,
@@ -37,7 +38,14 @@ import {
 import { ministries as rawMinistries } from "@/content/ministries";
 import { parties as rawParties } from "@/content/parties";
 import { socialEvents as rawSocial } from "@/content/social";
-import { matches as rawMatches, perchChampionship, teams as rawTeams } from "@/content/sports";
+import { supportTiers as rawTiers } from "@/content/support";
+import {
+  fixtures,
+  matches as rawMatches,
+  perchChampionship,
+  teams as rawTeams,
+  topScorers,
+} from "@/content/sports";
 import { timelineEvents as rawTimeline } from "@/content/timeline";
 
 /**
@@ -90,7 +98,67 @@ export const agricCityProjects = validateAll(
   rawProjects,
   "Agric City project",
 );
-export { eggCensus, mascot, perchChampionship, presidentialDiary };
+export const supportTiers = validateAll(SupportTierSchema, rawTiers, "support tier");
+export { eggCensus, fixtures, mascot, perchChampionship, presidentialDiary, topScorers };
+
+const tierById = new Map(supportTiers.map((t) => [t.id, t]));
+export const getSupportTier = (id: string) => tierById.get(id);
+
+/** Story arcs: timeline events grouped by arcId, in date order. */
+export interface StoryArc {
+  id: string;
+  title: string;
+  summary: string;
+  events: TimelineEvent[];
+}
+
+const ARC_META: Record<string, { title: string; summary: string }> = {
+  "chi-chi-first-egg": {
+    title: "Chi-Chi's Road to the First Egg",
+    summary:
+      "A motherless three-week-old arrival, a borrowed wing, a watching " +
+      "nation — and four words that became a national motto.",
+  },
+  "grain-affair": {
+    title: "The Missing Breakfast Grain",
+    summary:
+      "Two hundred grams, five front pages, one Panel of Inquiry, and the " +
+      "most cooperative filing perch in the Republic's history.",
+  },
+  "mama-gold-retirement": {
+    title: "Mama Gold's Long Goodbye (to Laying Only)",
+    summary:
+      "Egg No. 400, a laying break announced from the mango tree, and the " +
+      "law every citizen calls by her name.",
+  },
+  "perch-championship": {
+    title: "The Rain Final",
+    summary:
+      "A record that fell, a rivalry that retired, and a champion who " +
+      "declined to wait for the weather.",
+  },
+  "flu-season": {
+    title: "Flu Season, Handled",
+    summary:
+      "Quarantine, calm, and five words a day — how the Republic (and any " +
+      "good farm) beats an outbreak: welfare first, panic never.",
+  },
+};
+
+export function storyArcs(): StoryArc[] {
+  const byArc = new Map<string, TimelineEvent[]>();
+  for (const e of timelineEvents) {
+    if (!e.arcId) continue;
+    const list = byArc.get(e.arcId) ?? [];
+    list.push(e);
+    byArc.set(e.arcId, list);
+  }
+  return [...byArc.entries()].map(([id, events]) => {
+    const meta = ARC_META[id];
+    if (!meta) throw new Error(`Content integrity: arc ${id} has no ARC_META entry`);
+    return { id, ...meta, events };
+  });
+}
 
 /* ---------------------------------------------------------------- lookups */
 

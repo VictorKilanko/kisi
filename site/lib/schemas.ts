@@ -284,3 +284,22 @@ export const AgricCityProjectSchema = z.object({
   description: z.string(),
 });
 export type AgricCityProject = z.infer<typeof AgricCityProjectSchema>;
+
+/**
+ * Support tier. Legal-wording rules (docs/DONATION_INTEGRATION.md):
+ * `kind` names what the payment IS — never "charitable donation" — and
+ * sponsorships explicitly do not confer ownership of any animal.
+ * `amountNGN: null` = pricing not yet set by the owner (renders as
+ * "amount set at launch"); no figures are invented.
+ */
+export const SupportTierSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  kind: z.enum(["farm-support", "sponsorship"]),
+  cadence: z.enum(["one-time", "monthly"]),
+  amountNGN: z.number().positive().nullable(),
+  whatItFunds: z.string(),
+  note: z.string().optional(),
+  isDemo: z.literal(true),
+});
+export type SupportTier = z.infer<typeof SupportTierSchema>;
