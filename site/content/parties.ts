@@ -1,7 +1,7 @@
 import type { Party } from "@/lib/schemas";
 
 /**
- * SAMPLE CONTENT — entirely fictional political parties of the Republic of
+ * entirely fictional political parties of the Republic of
  * Kisi. Invented for satire; they do not reference, resemble, or borrow the
  * names, logos, colors, or slogans of any real Nigerian political party.
  */
@@ -18,7 +18,6 @@ export const parties: Party[] = [
       "things — nesting boxes, water troughs, committees. Its manifesto, " +
       "'The Agenda for Renewed Pecking,' runs to forty-one pages, of which " +
       "the section on breakfast punctuality is by far the most quoted.",
-    isDemo: true,
   },
   {
     id: "nga",
@@ -32,7 +31,6 @@ export const parties: Party[] = [
       "The NGA has demanded an independent recount of the National Egg " +
       "Census every month since records began, and has been right to at " +
       "least once.",
-    isDemo: true,
   },
   {
     id: "fff",
@@ -45,6 +43,5 @@ export const parties: Party[] = [
       "the FFF holds the balance of votes on the Nesting Box Expansion " +
       "Bill and knows it. Party meetings are held under the mango tree and " +
       "open with one minute of contented scratching.",
-    isDemo: true,
   },
 ];

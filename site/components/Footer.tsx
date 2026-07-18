@@ -16,7 +16,6 @@ const FOOTER_LINKS = [
     links: [
       { href: "/about", label: "About Kisi" },
       { href: "/eggs", label: "Egg Life" },
-      { href: "/agric-city", label: "Agric City Vision" },
       { href: "/visit", label: "Visit & Contact" },
       { href: "/support", label: "Support the Chickens" },
     ],
@@ -24,7 +23,6 @@ const FOOTER_LINKS = [
   {
     heading: "The Small Print",
     links: [
-      { href: "/disclaimer", label: "Fact & Fiction Disclaimer" },
       { href: "/legal/privacy", label: "Privacy Policy" },
       { href: "/legal/terms", label: "Terms of Use" },
       { href: "/support/terms", label: "Support Terms" },
@@ -62,11 +60,9 @@ export function Footer() {
       <div className="border-t border-kisi-cream-100/15">
         <div className="mx-auto max-w-6xl px-4 py-5 text-xs text-kisi-cream-100/70">
           <p>
-            The Republic of Kisi is a fictional storytelling world; its
-            citizens are real chickens at Kisi. Political content is satire.
-            Characters shown are demonstration content pending real flock
-            records. &copy; {new Date().getFullYear()} Kisi. All original
-            characters and designs.
+            The Republic of Kisi &mdash; a nation of chickens at Kisi Farm,
+            southwestern Nigeria. &copy; {new Date().getFullYear()} Kisi. All
+            original characters and designs.
           </p>
         </div>
       </div>

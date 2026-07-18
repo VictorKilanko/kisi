@@ -1,6 +1,6 @@
 import type { Bill, ExecutiveOrder } from "@/lib/schemas";
 
-/** SAMPLE CONTENT — fictional legislation of the Coop Assembly. */
+/** fictional legislation of the Coop Assembly. */
 export const bills: Bill[] = [
   {
     id: "clean-water-act",
@@ -13,7 +13,6 @@ export const bills: Bill[] = [
       "Passed unanimously after Dr. Featherwell's committee testimony, " +
       "which consisted of one glass of before and one glass of after.",
     votes: { ayes: 41, nays: 0, abstentions: 2 },
-    isDemo: true,
   },
   {
     id: "nesting-box-expansion",
@@ -27,7 +26,6 @@ export const bills: Bill[] = [
       "Feathers Front — which holds the deciding votes — has tabled " +
       "seventeen amendments about perch access and is enjoying itself " +
       "enormously.",
-    isDemo: true,
   },
   {
     id: "senior-hen-retirement-act",
@@ -40,7 +38,6 @@ export const bills: Bill[] = [
       "amid singing; third reading scheduled for after the Feather Gala " +
       "'so that everyone is in the right mood.'",
     votes: { ayes: 43, nays: 0, abstentions: 0 },
-    isDemo: true,
   },
   {
     id: "young-chick-representation",
@@ -53,7 +50,6 @@ export const bills: Bill[] = [
       "the Assembly by petition — 118 footprints collected at Chick Sprint " +
       "Saturdays. Elders are said to be 'studying it,' which the sponsor " +
       "has described as 'the place bills go to nap.'",
-    isDemo: true,
   },
   {
     id: "coop-security-modernization",
@@ -65,11 +61,10 @@ export const bills: Bill[] = [
       "second dusk headcount, and a standing consultation with the geese. " +
       "The government supports it in principle, which the sponsor notes " +
       "'is where support goes to cool down.'",
-    isDemo: true,
   },
 ];
 
-/** SAMPLE CONTENT — executive orders of the presidency. */
+/** executive orders of the presidency. */
 export const executiveOrders: ExecutiveOrder[] = [
   {
     number: 1,
@@ -78,7 +73,6 @@ export const executiveOrders: ExecutiveOrder[] = [
     summary:
       "Breakfast shall be served at seven. Not seven-ish. Signed with a " +
       "flourish and read aloud twice.",
-    isDemo: true,
   },
   {
     number: 7,
@@ -88,7 +82,6 @@ export const executiveOrders: ExecutiveOrder[] = [
       "Codifies the trough queue: order of arrival, no wing-barging, " +
       "chicks and senior hens served first. Widely regarded as the " +
       "constitution's better half.",
-    isDemo: true,
   },
   {
     number: 12,
@@ -98,7 +91,6 @@ export const executiveOrders: ExecutiveOrder[] = [
       "Designates the three best dust-bathing spots as protected national " +
       "commons. 'Some things,' the preamble notes, 'belong to everyone or " +
       "to no one.'",
-    isDemo: true,
   },
   {
     number: 15,
@@ -108,40 +100,35 @@ export const executiveOrders: ExecutiveOrder[] = [
       "Declares a public holiday effective immediately and retroactively, " +
       "so that no one is marked absent. The presidency's most popular " +
       "order to date.",
-    isDemo: true,
   },
 ];
 
-/** SAMPLE CONTENT — the weekly presidential diary. */
-export const presidentialDiary: { day: string; entry: string; isDemo: true }[] =
+/** the weekly presidential diary. */
+export const presidentialDiary: { day: string; entry: string }[] =
   [
     {
       day: "Monday",
       entry:
         "06:58 — trough-side inspection, two minutes early, because leadership. " +
         "Cabinet meeting: the Feed Budget defended, the Stadium Project 'progressing.'",
-      isDemo: true,
     },
     {
       day: "Tuesday",
       entry:
         "Audience with the Bureau of Egg Statistics. Received the weekly " +
         "figures; forwarded them, unopened, to the opposition 'to save time.'",
-      isDemo: true,
     },
     {
       day: "Wednesday",
       entry:
         "State visit to Coop Three (childhood home). Unveiled a small plaque " +
         "at the ordinary nest. Wept briefly; denied it briefly.",
-      isDemo: true,
     },
     {
       day: "Thursday",
       entry:
         "Coop Assembly — observed the Nesting Box debate from the gallery. " +
         "The Free Feathers Front tabled amendment eighteen. Admirable stamina.",
-      isDemo: true,
     },
     {
       day: "Friday",
@@ -149,20 +136,17 @@ export const presidentialDiary: { day: string; entry: string; isDemo: true }[] =
         "Signed no orders. 'A quiet Friday is also governance.' Evening " +
         "scratch at the fence line with the Leader of the Opposition, " +
         "officially unconfirmed.",
-      isDemo: true,
     },
     {
       day: "Saturday",
       entry:
         "Chick Sprint Saturdays — flagged off the junior 20-metre. Photo " +
         "opportunity with the sprint clinic; outran nobody; claimed otherwise.",
-      isDemo: true,
     },
     {
       day: "Sunday",
       entry:
         "Mango tree, low branch, listening. Mama Gold told the week better " +
         "than my press secretary does. Rested.",
-      isDemo: true,
     },
   ];

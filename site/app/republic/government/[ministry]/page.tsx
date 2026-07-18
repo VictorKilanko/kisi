@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { DemoBadge, WorldBadge } from "@/components/Badges";
 import { ArticleCard } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
-import { FictionDisclaimer } from "@/components/Disclaimer";
 import { articlesForMinistry, getMinistry, ministries, ministerOf } from "@/lib/content";
 
 export function generateStaticParams() {
@@ -55,8 +53,6 @@ export default async function MinistryPage({
         </Link>
       </p>
       <div className="mt-4 flex flex-wrap items-center gap-2">
-        <WorldBadge world="fiction" />
-        <DemoBadge />
       </div>
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-indigo-900">
         {ministry.name}
@@ -138,7 +134,6 @@ export default async function MinistryPage({
         </section>
       )}
 
-      <FictionDisclaimer />
     </div>
   );
 }

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DemoBadge, WorldBadge } from "@/components/Badges";
 import { SectionHeading, formatDate } from "@/components/Cards";
-import { FictionDisclaimer } from "@/components/Disclaimer";
 import {
   fixtures,
   getChicken,
@@ -27,10 +25,6 @@ export default function SportsPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <div className="flex flex-wrap items-center gap-2">
-        <WorldBadge world="fiction" />
-        <DemoBadge />
-      </div>
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-green-900">
         Sports &amp; Recreation
       </h1>
@@ -53,7 +47,7 @@ export default function SportsPage() {
           <div className="mt-4 overflow-x-auto rounded-2xl bg-white p-4 shadow-sm">
             <table className="w-full min-w-[420px] text-sm">
               <caption className="sr-only">
-                Coop Premier League standings (sample data)
+                Coop Premier League standings
               </caption>
               <thead>
                 <tr className="text-left text-xs text-kisi-charcoal-600">
@@ -205,8 +199,8 @@ export default function SportsPage() {
             })}
           </ol>
           <p className="mt-3 text-xs text-kisi-charcoal-600">
-            Squad players beyond the featured citizens are named for flavour —
-            sample content, like everything in the league.
+            Squad lists are updated after every match day by the Ministry of
+            Sports, usually late, always loudly.
           </p>
         </div>
       </section>
@@ -217,7 +211,6 @@ export default function SportsPage() {
         Harmattan FC home games.
       </p>
 
-      <FictionDisclaimer />
     </div>
   );
 }

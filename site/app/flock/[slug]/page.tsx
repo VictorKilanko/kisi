@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { DemoBadge, StatusBadge, WorldBadge } from "@/components/Badges";
+import { StatusBadge } from "@/components/Badges";
 import { ArticleCard, MilestoneCard, Timeline, SectionHeading } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
-import { FictionDisclaimer } from "@/components/Disclaimer";
 import {
   articlesForChicken,
   chickens,
@@ -67,9 +66,7 @@ export default async function ChickenProfile({
         <ChickenPortrait chicken={chicken} size={220} framed={chicken.branch !== "none"} />
         <div>
           <div className="flex flex-wrap items-center gap-2">
-            <WorldBadge world="fiction" />
             <StatusBadge status={chicken.status} />
-            {chicken.isDemo && <DemoBadge />}
           </div>
           {chicken.honorific && (
             <p className="kicker mt-4 text-kisi-gold-700">{chicken.honorific}</p>
@@ -92,10 +89,12 @@ export default async function ChickenProfile({
           <p className="mt-4 max-w-2xl text-kisi-charcoal-600">{chicken.shortBio}</p>
 
           <dl className="mt-6 grid grid-cols-2 gap-x-8 gap-y-3 text-sm sm:grid-cols-3">
-            <div>
-              <dt className="kicker text-kisi-charcoal-600">Breed</dt>
-              <dd className="mt-0.5">{chicken.breed}</dd>
-            </div>
+            {chicken.breed && (
+              <div>
+                <dt className="kicker text-kisi-charcoal-600">Breed</dt>
+                <dd className="mt-0.5">{chicken.breed}</dd>
+              </div>
+            )}
             <div>
               <dt className="kicker text-kisi-charcoal-600">Age</dt>
               <dd className="mt-0.5">{chicken.ageNote}</dd>
@@ -315,7 +314,6 @@ export default async function ChickenProfile({
         </p>
       </div>
 
-      <FictionDisclaimer />
     </div>
   );
 }

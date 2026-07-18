@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
-import { DemoBadge, StatusBadge, WorldBadge } from "@/components/Badges";
+import { StatusBadge } from "@/components/Badges";
 import type { Article, Chicken, EggMilestone, TimelineEvent } from "@/lib/schemas";
 import { findChicken } from "@/lib/content";
 
@@ -11,7 +11,6 @@ export function ChickenCard({ chicken }: { chicken: Chicken }) {
         <ChickenPortrait chicken={chicken} size={96} framed={chicken.branch !== "none"} />
         <div className="flex flex-col items-end gap-2">
           <StatusBadge status={chicken.status} />
-          {chicken.isDemo && <DemoBadge />}
         </div>
       </div>
       <h3 className="font-display mt-4 text-xl font-bold text-kisi-green-900">
@@ -53,9 +52,7 @@ export function ArticleCard({ article, compact = false }: { article: Article; co
   return (
     <article className="rounded-2xl border border-kisi-indigo-800/15 bg-white p-5 shadow-sm">
       <div className="flex flex-wrap items-center gap-2">
-        <WorldBadge world={article.world} />
         <span className="kicker text-kisi-charcoal-600">{article.category.replace("-", " ")}</span>
-        {article.isDemo && <DemoBadge />}
       </div>
       <h3 className="font-display mt-3 text-lg font-bold leading-snug text-kisi-indigo-900">
         <Link href={`/news/${article.id}`} className="hover:underline">
@@ -100,11 +97,6 @@ export function MilestoneCard({ milestone }: { milestone: EggMilestone }) {
         </div>
       </div>
       <p className="mt-3 text-sm text-kisi-charcoal-600">{milestone.story}</p>
-      {milestone.isDemo && (
-        <p className="mt-3">
-          <DemoBadge />
-        </p>
-      )}
     </article>
   );
 }

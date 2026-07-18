@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DemoBadge, WorldBadge } from "@/components/Badges";
 import { SectionHeading } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
-import { FictionDisclaimer } from "@/components/Disclaimer";
 import { getChicken, ministries, ministerOf } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -21,10 +19,6 @@ export default function GovernmentPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <div className="flex flex-wrap items-center gap-2">
-        <WorldBadge world="fiction" />
-        <DemoBadge />
-      </div>
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-green-900">
         Government &amp; Cabinet
       </h1>
@@ -137,8 +131,8 @@ export default function GovernmentPage() {
         <p className="mt-3 max-w-2xl text-sm text-kisi-cream-100/85">
           The Republic&apos;s single largest expenditure, defended annually by
           the government, audited monthly by the opposition, and consumed
-          daily by everyone regardless of party. Figures are sample content;
-          the real farm&apos;s feeding practices will be documented on the{" "}
+          daily by everyone regardless of party. How the farm actually feeds
+          the flock is described on the{" "}
           <Link href="/about" className="underline hover:text-kisi-gold-300">
             farm pages
           </Link>
@@ -146,7 +140,6 @@ export default function GovernmentPage() {
         </p>
       </section>
 
-      <FictionDisclaimer />
     </div>
   );
 }

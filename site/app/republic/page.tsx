@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { WorldBadge } from "@/components/Badges";
 import { SectionHeading } from "@/components/Cards";
-import { FictionDisclaimer } from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
   title: "The Republic of Kisi",
@@ -67,7 +65,6 @@ export default function RepublicPage() {
     <div className="mx-auto max-w-6xl px-4 py-12">
       <div className="rounded-3xl bg-kisi-indigo-800 p-10 text-kisi-cream-100">
         <div className="flex flex-wrap gap-2">
-          <WorldBadge world="fiction" />
         </div>
         <h1 className="font-display mt-4 text-4xl font-black sm:text-5xl">
           The Republic of Kisi
@@ -113,7 +110,6 @@ export default function RepublicPage() {
         </ul>
       </div>
 
-      <FictionDisclaimer />
     </div>
   );
 }

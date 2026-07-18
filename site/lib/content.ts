@@ -1,5 +1,4 @@
 import {
-  AgricCityProjectSchema,
   ArticleSchema,
   BillSchema,
   ChickenSchema,
@@ -25,11 +24,7 @@ import {
 import { articles as rawArticles } from "@/content/articles";
 import { chickens as rawChickens } from "@/content/chickens";
 import { eggCensus, eggMilestones as rawMilestones } from "@/content/eggs";
-import {
-  agricCityProjects as rawProjects,
-  farmStats as rawStats,
-  mascot,
-} from "@/content/farm";
+import { farmStats as rawStats, mascot } from "@/content/farm";
 import {
   bills as rawBills,
   executiveOrders as rawOrders,
@@ -93,11 +88,6 @@ export const socialEvents = validateAll(SocialEventSchema, rawSocial, "social ev
   .slice()
   .sort((a, b) => a.date.localeCompare(b.date));
 export const farmStats = validateAll(FarmStatSchema, rawStats, "farm stat");
-export const agricCityProjects = validateAll(
-  AgricCityProjectSchema,
-  rawProjects,
-  "Agric City project",
-);
 export const supportTiers = validateAll(SupportTierSchema, rawTiers, "support tier");
 export { eggCensus, fixtures, mascot, perchChampionship, presidentialDiary, topScorers };
 

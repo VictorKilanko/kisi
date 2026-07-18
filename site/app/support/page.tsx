@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DemoBadge, WorldBadge } from "@/components/Badges";
 import { SectionHeading } from "@/components/Cards";
 import { PlaceholderNotice } from "@/components/Disclaimer";
 import { SupportCheckout } from "@/components/SupportCheckout";
@@ -21,9 +20,6 @@ const KIND_LABEL = {
 export default function SupportPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <div className="flex flex-wrap items-center gap-2">
-        <WorldBadge world="fact" />
-      </div>
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-green-900">
         Support the Chickens
       </h1>
@@ -107,11 +103,6 @@ export default function SupportPage() {
               <div className="mt-auto">
                 <SupportCheckout tier={t} />
               </div>
-              {t.isDemo && (
-                <p className="mt-3">
-                  <DemoBadge />
-                </p>
-              )}
             </li>
           ))}
         </ul>

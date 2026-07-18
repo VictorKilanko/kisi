@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { WorldBadge } from "@/components/Badges";
 import { PlaceholderNotice } from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
@@ -20,9 +19,6 @@ const INQUIRY_TYPES = [
 export default function VisitPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
-      <div className="flex flex-wrap items-center gap-2">
-        <WorldBadge world="fact" />
-      </div>
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-green-900">
         Visit &amp; Contact
       </h1>

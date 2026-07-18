@@ -61,7 +61,7 @@ export function Map2D({
         <circle cx="80" cy="58" r="4" fill="#3f6b35" opacity="0.35" />
         {/* sports field patch */}
         <rect x="64" y="10" width="16" height="11" fill="#7fae6b" rx="1.5" />
-        {/* agric city horizon */}
+        {/* far horizon */}
         <rect x="78" y="2" width="17" height="9" fill="#d9a02b" opacity="0.25" rx="1.5" />
       </svg>
 

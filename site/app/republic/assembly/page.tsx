@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DemoBadge, WorldBadge } from "@/components/Badges";
 import { SectionHeading } from "@/components/Cards";
-import { FictionDisclaimer } from "@/components/Disclaimer";
 import { Poll } from "@/components/Poll";
 import { bills, findChicken, parties } from "@/lib/content";
 
@@ -23,10 +21,6 @@ const BILL_STATUS: Record<string, { label: string; cls: string }> = {
 export default function AssemblyPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <div className="flex flex-wrap items-center gap-2">
-        <WorldBadge world="fiction" />
-        <DemoBadge />
-      </div>
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-green-900">
         The Coop Assembly
       </h1>
@@ -155,7 +149,6 @@ export default function AssemblyPage() {
         </p>
       </section>
 
-      <FictionDisclaimer />
     </div>
   );
 }

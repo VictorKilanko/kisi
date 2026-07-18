@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DemoBadge, WorldBadge } from "@/components/Badges";
 import { ChickenCard, SectionHeading, formatDate } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
-import { FictionDisclaimer } from "@/components/Disclaimer";
 import { Poll } from "@/components/Poll";
 import { executiveOrders, getChicken, presidentialDiary } from "@/lib/content";
 
@@ -20,10 +18,6 @@ export default function PresidencyPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <div className="flex flex-wrap items-center gap-2">
-        <WorldBadge world="fiction" />
-        <DemoBadge />
-      </div>
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-green-900">
         The Presidency
       </h1>
@@ -137,7 +131,6 @@ export default function PresidencyPage() {
         />
       </div>
 
-      <FictionDisclaimer />
     </div>
   );
 }

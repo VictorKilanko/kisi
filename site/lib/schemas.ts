@@ -2,8 +2,6 @@ import { z } from "zod";
 
 /**
  * Content schemas — the typed contract from docs/CONTENT_MODEL.md.
- * All demo/sample records carry `isDemo: true` and render a visible
- * "Sample content" badge until the owner supplies real flock data.
  * Validation runs at module load in lib/content.ts, so invalid content
  * fails the build — never the visitor.
  */
@@ -46,7 +44,6 @@ export const PartySchema = z.object({
   color: z.string(),
   leaderId: z.string().optional(),
   description: z.string(),
-  isDemo: z.literal(true),
 });
 export type Party = z.infer<typeof PartySchema>;
 
@@ -65,7 +62,6 @@ export const MinistrySchema = z.object({
       blurb: z.string(),
     }),
   ),
-  isDemo: z.literal(true),
 });
 export type Ministry = z.infer<typeof MinistrySchema>;
 
@@ -90,7 +86,8 @@ export const ChickenSchema = z.object({
   /** Yoruba-style praise line with English translation, where fitting. */
   oriki: z.object({ line: z.string(), meaning: z.string() }).optional(),
   sex: z.enum(["hen", "rooster"]),
-  breed: z.string(),
+  /** Only set where the farm has confirmed it; omitted otherwise. */
+  breed: z.string().optional(),
   ageNote: z.string(),
   status: ChickenStatus,
   layingStatus: LayingStatus,
@@ -112,7 +109,6 @@ export const ChickenSchema = z.object({
   achievements: z.array(z.string()),
   colors: PortraitColors,
   sponsorable: z.boolean(),
-  isDemo: z.literal(true),
 });
 export type Chicken = z.infer<typeof ChickenSchema>;
 
@@ -141,7 +137,6 @@ export const ArticleSchema = z.object({
   body: z.array(z.string()).min(2),
   relatedChickenIds: z.array(z.string()),
   relatedMinistryIds: z.array(z.string()),
-  isDemo: z.literal(true),
 });
 export type Article = z.infer<typeof ArticleSchema>;
 
@@ -154,7 +149,6 @@ export const BillSchema = z.object({
   votes: z
     .object({ ayes: z.number(), nays: z.number(), abstentions: z.number() })
     .optional(),
-  isDemo: z.literal(true),
 });
 export type Bill = z.infer<typeof BillSchema>;
 
@@ -163,7 +157,6 @@ export const ExecutiveOrderSchema = z.object({
   title: z.string(),
   date: z.string(),
   summary: z.string(),
-  isDemo: z.literal(true),
 });
 export type ExecutiveOrder = z.infer<typeof ExecutiveOrderSchema>;
 
@@ -180,7 +173,6 @@ export const EggMilestoneSchema = z.object({
   ]),
   count: z.number().optional(),
   story: z.string(),
-  isDemo: z.literal(true),
 });
 export type EggMilestone = z.infer<typeof EggMilestoneSchema>;
 
@@ -211,7 +203,6 @@ export const TimelineEventSchema = z.object({
   title: z.string(),
   body: z.string(),
   articleId: z.string().optional(),
-  isDemo: z.literal(true),
 });
 export type TimelineEvent = z.infer<typeof TimelineEventSchema>;
 
@@ -221,7 +212,6 @@ export const TeamSchema = z.object({
   home: z.string(),
   motto: z.string(),
   color: z.string(),
-  isDemo: z.literal(true),
 });
 export type Team = z.infer<typeof TeamSchema>;
 
@@ -234,7 +224,6 @@ export const MatchSchema = z.object({
   homeScore: z.number().optional(),
   awayScore: z.number().optional(),
   note: z.string().optional(),
-  isDemo: z.literal(true),
 });
 export type Match = z.infer<typeof MatchSchema>;
 
@@ -252,7 +241,6 @@ export const SocialEventSchema = z.object({
   ]),
   description: z.string(),
   attendeeIds: z.array(z.string()),
-  isDemo: z.literal(true),
 });
 export type SocialEvent = z.infer<typeof SocialEventSchema>;
 
@@ -270,21 +258,6 @@ export const FarmStatSchema = z
   });
 export type FarmStat = z.infer<typeof FarmStatSchema>;
 
-export const AgricCityStatus = z.enum([
-  "operating",
-  "in-development",
-  "proposed",
-]);
-export type AgricCityStatus = z.infer<typeof AgricCityStatus>;
-
-export const AgricCityProjectSchema = z.object({
-  id: z.string(),
-  name: z.string(),
-  status: AgricCityStatus,
-  description: z.string(),
-});
-export type AgricCityProject = z.infer<typeof AgricCityProjectSchema>;
-
 /**
  * Support tier. Legal-wording rules (docs/DONATION_INTEGRATION.md):
  * `kind` names what the payment IS — never "charitable donation" — and
@@ -300,6 +273,5 @@ export const SupportTierSchema = z.object({
   amountNGN: z.number().positive().nullable(),
   whatItFunds: z.string(),
   note: z.string().optional(),
-  isDemo: z.literal(true),
 });
 export type SupportTier = z.infer<typeof SupportTierSchema>;

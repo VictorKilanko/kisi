@@ -20,10 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/eggs",
     "/about",
     "/mascot",
-    "/agric-city",
     "/support",
     "/visit",
-    "/disclaimer",
     "/legal/privacy",
     "/legal/terms",
   ].map((path) => ({ url: `${BASE}${path}` }));

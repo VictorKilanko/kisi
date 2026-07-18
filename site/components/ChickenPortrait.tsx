@@ -25,7 +25,7 @@ export function ChickenPortrait({
       role="img"
       aria-label={`Illustrated placeholder portrait of ${chicken.name}${
         chicken.roleTitle ? `, ${chicken.roleTitle}` : ""
-      } (demonstration character — real photo pending)`}
+      } (illustrated portrait — photograph coming soon)`}
       className="rounded-2xl"
     >
       <rect width="120" height="120" rx="16" fill={bg} />

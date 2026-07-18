@@ -26,7 +26,6 @@ const NAV = [
     children: [
       { href: "/about", label: "About Kisi" },
       { href: "/mascot", label: "The Mascot" },
-      { href: "/agric-city", label: "Agric City Vision" },
       { href: "/visit", label: "Visit & Contact" },
     ],
   },

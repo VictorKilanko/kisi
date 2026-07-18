@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { DemoBadge } from "@/components/Badges";
 import { ArticleCard } from "@/components/Cards";
-import { FictionDisclaimer } from "@/components/Disclaimer";
 import { articles } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -28,7 +26,6 @@ export default function NewsPage() {
           “All the news that&apos;s fit to peck.”
         </p>
         <div className="mt-3 flex justify-center">
-          <DemoBadge />
         </div>
       </header>
 
@@ -46,7 +43,6 @@ export default function NewsPage() {
         ))}
       </section>
 
-      <FictionDisclaimer />
     </div>
   );
 }

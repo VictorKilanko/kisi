@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { DemoBadge, WorldBadge } from "@/components/Badges";
-import { FictionDisclaimer } from "@/components/Disclaimer";
 import { MapExperience } from "@/components/map/MapExperience";
 import { getChicken } from "@/lib/content";
 import { MAP_HOTSPOTS, type EnrichedHotspot } from "@/lib/mapData";
@@ -33,10 +31,6 @@ export default function MapPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <div className="flex flex-wrap items-center gap-2">
-        <WorldBadge world="mixed" />
-        <DemoBadge />
-      </div>
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-green-900">
         The Farm Map
       </h1>
@@ -57,7 +51,6 @@ export default function MapPage() {
         <MapExperience hotspots={hotspots} />
       </div>
 
-      <FictionDisclaimer />
     </div>
   );
 }

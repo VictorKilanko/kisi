@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { DemoBadge, WorldBadge } from "@/components/Badges";
 import { MilestoneCard, SectionHeading } from "@/components/Cards";
-import { DemoContentNotice, FictionDisclaimer } from "@/components/Disclaimer";
 import { eggCensus, eggMilestones } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -14,10 +12,6 @@ export const metadata: Metadata = {
 export default function EggsPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <div className="flex flex-wrap items-center gap-2">
-        <WorldBadge world="mixed" />
-        <DemoBadge />
-      </div>
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-green-900">
         Egg Life
       </h1>
@@ -28,14 +22,13 @@ export default function EggsPage() {
         not machines here — that&apos;s policy, welfare practice, and (in the
         Republic) constitutional law.
       </p>
-      <DemoContentNotice />
 
       {/* Census */}
       <section className="mt-12">
         <SectionHeading
           kicker="The Bureau of Egg Statistics"
           title="National Egg Census"
-          lede="Monthly totals, audited by the opposition at her own insistence. Figures shown are demonstration data until real farm records are published."
+          lede="Monthly totals, audited by the opposition at her own insistence."
         />
         <div className="grid gap-6 sm:grid-cols-3">
           {eggCensus.map((c) => (
@@ -64,7 +57,6 @@ export default function EggsPage() {
       {/* Education */}
       <section className="mt-16 rounded-3xl bg-kisi-green-900 p-8 text-kisi-cream-100">
         <div className="flex flex-wrap gap-2">
-          <WorldBadge world="fact" />
         </div>
         <h2 className="font-display mt-3 text-2xl font-bold">
           How laying actually works
@@ -91,7 +83,6 @@ export default function EggsPage() {
         </div>
       </section>
 
-      <FictionDisclaimer />
     </div>
   );
 }

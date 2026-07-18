@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { WorldBadge } from "@/components/Badges";
 import { SectionHeading } from "@/components/Cards";
 import { PlaceholderNotice } from "@/components/Disclaimer";
 import { farmStats } from "@/lib/content";
@@ -15,9 +14,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <div className="flex flex-wrap items-center gap-2">
-        <WorldBadge world="fact" />
-      </div>
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-green-900">
         About Kisi Farm
       </h1>

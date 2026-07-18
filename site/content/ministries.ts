@@ -1,7 +1,7 @@
 import type { Ministry } from "@/lib/schemas";
 
 /**
- * SAMPLE CONTENT — the fictional cabinet ministries of the Republic of Kisi.
+ * the fictional cabinet ministries of the Republic of Kisi.
  * The satire is affectionate: the paperwork is Nigerian-bureaucracy-shaped
  * (circulars, white papers, things happening "with immediate effect"), but
  * no real office, agency, or official is referenced or imitated.
@@ -35,7 +35,6 @@ export const ministries: Ministry[] = [
           "sub-committee set up to review the committee's terms of reference.",
       },
     ],
-    isDemo: true,
   },
   {
     id: "feed-agriculture",
@@ -63,7 +62,6 @@ export const ministries: Ministry[] = [
           "national morale.'",
       },
     ],
-    isDemo: true,
   },
   {
     id: "health-vet",
@@ -93,7 +91,6 @@ export const ministries: Ministry[] = [
           "storytelling that runs well over the allotted time.",
       },
     ],
-    isDemo: true,
   },
   {
     id: "coop-security",
@@ -119,7 +116,6 @@ export const ministries: Ministry[] = [
           "legislation, including a feasibility study on louder alarm calls.",
       },
     ],
-    isDemo: true,
   },
   {
     id: "sports",
@@ -148,7 +144,6 @@ export const ministries: Ministry[] = [
         blurb: "Youth athletics every week. Wildly popular; frequently muddy.",
       },
     ],
-    isDemo: true,
   },
   {
     id: "social-affairs",
@@ -175,7 +170,6 @@ export const ministries: Ministry[] = [
           "remarkable.",
       },
     ],
-    isDemo: true,
   },
   {
     id: "energy-solar",
@@ -198,7 +192,6 @@ export const ministries: Ministry[] = [
           "follow the sun or the Speaker's bedtime.",
       },
     ],
-    isDemo: true,
   },
   {
     id: "water-environment",
@@ -222,7 +215,6 @@ export const ministries: Ministry[] = [
           "The Republic's proudest legislation, implemented trough by trough.",
       },
     ],
-    isDemo: true,
   },
   {
     id: "youth-chick",
@@ -247,7 +239,6 @@ export const ministries: Ministry[] = [
           "water tank before your instructor does.",
       },
     ],
-    isDemo: true,
   },
   {
     id: "culture",
@@ -273,6 +264,5 @@ export const ministries: Ministry[] = [
           "Vice President's celebrated 4:45 a.m. arrangement.",
       },
     ],
-    isDemo: true,
   },
 ];

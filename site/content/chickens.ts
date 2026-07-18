@@ -1,11 +1,7 @@
 import type { Chicken } from "@/lib/schemas";
 
 /**
- * SAMPLE CONTENT — the twelve demonstration citizens of the Republic of Kisi.
- *
- * Every biography, date, record, and quotation in this file is invented
- * (`isDemo: true`) and is displayed with a "Sample content" badge until the
- * owner replaces the cast with the real chickens of Kisi Farm.
+ * The citizens of the Republic of Kisi.
  *
  * Cultural grounding notes:
  * - Names and praise-lines draw on genuine Nigerian naming traditions —
@@ -28,8 +24,7 @@ export const chickens: Chicken[] = [
       meaning: "Adédoyin — the crown that is sweet as honey",
     },
     sex: "hen",
-    breed: "Breed pending farm records (demo)",
-    ageNote: "Senior hen — age estimated (demo data)",
+    ageNote: "Senior hen",
     status: "active",
     layingStatus: "laying",
     roleTitle: "President of the Republic of Kisi",
@@ -94,7 +89,6 @@ export const chickens: Chicken[] = [
     ],
     colors: { body: "#8a3e1f", comb: "#b3261e", accent: "#d9a02b", bg: "#f0c75e" },
     sponsorable: true,
-    isDemo: true,
   },
   {
     id: "baba-segun",
@@ -107,8 +101,7 @@ export const chickens: Chicken[] = [
       meaning: "The rooster who challenges the sun to a duel — and the sun rises to answer",
     },
     sex: "rooster",
-    breed: "Breed pending farm records (demo)",
-    ageNote: "Elder rooster — age estimated (demo data)",
+    ageNote: "Elder rooster",
     status: "active",
     layingStatus: "n-a",
     roleTitle: "Vice President of the Republic of Kisi",
@@ -155,7 +148,6 @@ export const chickens: Chicken[] = [
     ],
     colors: { body: "#23231f", comb: "#b3261e", accent: "#2e7d46", bg: "#f1e8d4" },
     sponsorable: true,
-    isDemo: true,
   },
   {
     id: "halima-iron-feathers",
@@ -164,8 +156,7 @@ export const chickens: Chicken[] = [
     nickname: "Iron Feathers",
     honorific: "Honourable Leader of the Opposition",
     sex: "hen",
-    breed: "Breed pending farm records (demo)",
-    ageNote: "Senior hen — age estimated (demo data)",
+    ageNote: "Senior hen",
     status: "active",
     layingStatus: "laying",
     roleTitle: "Leader of the Opposition, New Grain Alliance",
@@ -221,7 +212,6 @@ export const chickens: Chicken[] = [
     ],
     colors: { body: "#55534b", comb: "#8a3e1f", accent: "#23305e", bg: "#f0c75e" },
     sponsorable: true,
-    isDemo: true,
   },
   {
     id: "chi-chi",
@@ -229,8 +219,7 @@ export const chickens: Chicken[] = [
     fullName: "Chidinma Obiageli",
     nickname: "Chi-Chi",
     sex: "hen",
-    breed: "Breed pending farm records (demo)",
-    ageNote: "Young pullet — age estimated (demo data)",
+    ageNote: "Young pullet",
     status: "active",
     layingStatus: "laying",
     branch: "none",
@@ -279,12 +268,11 @@ export const chickens: Chicken[] = [
       { text: "I did my best.", context: "Complete first-egg press statement" },
     ],
     achievements: [
-      "First egg — occasioned a national public holiday (demo storyline)",
+      "First egg — occasioned a national public holiday",
       "Unofficial motto-giver of Chick Sprint Saturdays",
     ],
     colors: { body: "#d9a02b", comb: "#c05621", accent: "#2e7d46", bg: "#faf5e9" },
     sponsorable: true,
-    isDemo: true,
   },
   {
     id: "mama-gold",
@@ -296,8 +284,7 @@ export const chickens: Chicken[] = [
       meaning: "Wúràọlá — the gold of our household, that money cannot buy",
     },
     sex: "hen",
-    breed: "Breed pending farm records (demo)",
-    ageNote: "Senior hen approaching retirement — age estimated (demo data)",
+    ageNote: "Senior hen approaching retirement",
     status: "active",
     layingStatus: "break",
     branch: "none",
@@ -335,13 +322,12 @@ export const chickens: Chicken[] = [
       },
     ],
     achievements: [
-      "400 recorded eggs (demo figure)",
+      "400 recorded eggs",
       "Namesake of 'Mama Gold's Law' — the Senior Hen Retirement Protection Act",
       "Custodian, Sunday storytelling seat",
     ],
     colors: { body: "#f0c75e", comb: "#c05621", accent: "#8a3e1f", bg: "#f1e8d4" },
     sponsorable: true,
-    isDemo: true,
   },
   {
     id: "dr-amara-featherwell",
@@ -350,8 +336,7 @@ export const chickens: Chicken[] = [
     nickname: "The Calm One",
     honorific: "Honourable Minister",
     sex: "hen",
-    breed: "Breed pending farm records (demo)",
-    ageNote: "Adult hen — age estimated (demo data)",
+    ageNote: "Adult hen",
     status: "active",
     layingStatus: "laying",
     roleTitle: "Minister of Health and Veterinary Affairs",
@@ -391,13 +376,12 @@ export const chickens: Chicken[] = [
       },
     ],
     achievements: [
-      "The Featherwell Bulletin — 100 consecutive issues (demo figure)",
+      "The Featherwell Bulletin — 100 consecutive issues",
       "Flu-season response — zero rumours survived contact",
       "Clean Beak Initiative — delivered without a press conference",
     ],
     colors: { body: "#faf5e9", comb: "#b3261e", accent: "#23305e", bg: "#f0c75e" },
     sponsorable: true,
-    isDemo: true,
   },
   {
     id: "tunde-quickfoot",
@@ -410,8 +394,7 @@ export const chickens: Chicken[] = [
       meaning: "One leg ahead of the wind",
     },
     sex: "rooster",
-    breed: "Breed pending farm records (demo)",
-    ageNote: "Adult rooster — age estimated (demo data)",
+    ageNote: "Adult rooster",
     status: "active",
     layingStatus: "n-a",
     roleTitle: "Minister of Sports and Recreation",
@@ -454,21 +437,19 @@ export const chickens: Chicken[] = [
       },
     ],
     achievements: [
-      "Coop 100-metre champion, two seasons (demo record)",
+      "Coop 100-metre champion, two seasons",
       "Founder, Chick Sprint Saturdays",
       "Inventor of the self-commentated victory lap",
     ],
     colors: { body: "#2e7d46", comb: "#b3261e", accent: "#d9a02b", bg: "#faf5e9" },
     sponsorable: true,
-    isDemo: true,
   },
   {
     id: "quiet-grace",
     name: "Quiet Grace",
     fullName: "Oyíndàmọ́là",
     sex: "hen",
-    breed: "Breed pending farm records (demo)",
-    ageNote: "Adult hen — age estimated (demo data)",
+    ageNote: "Adult hen",
     status: "active",
     layingStatus: "laying",
     branch: "none",
@@ -506,7 +487,6 @@ export const chickens: Chicken[] = [
     ],
     colors: { body: "#f1e8d4", comb: "#c05621", accent: "#55534b", bg: "#faf5e9" },
     sponsorable: true,
-    isDemo: true,
   },
   {
     id: "bright-feather",
@@ -515,8 +495,7 @@ export const chickens: Chicken[] = [
     nickname: "Bright Feather",
     honorific: "Honourable Minister",
     sex: "rooster",
-    breed: "Breed pending farm records (demo)",
-    ageNote: "Adult rooster — age estimated (demo data)",
+    ageNote: "Adult rooster",
     status: "active",
     layingStatus: "n-a",
     roleTitle: "Minister of Egg Affairs",
@@ -574,7 +553,6 @@ export const chickens: Chicken[] = [
     ],
     colors: { body: "#23305e", comb: "#b3261e", accent: "#d9a02b", bg: "#f0c75e" },
     sponsorable: true,
-    isDemo: true,
   },
   {
     id: "flash-adaora",
@@ -582,8 +560,7 @@ export const chickens: Chicken[] = [
     fullName: "Adaora Chiamaka Eze",
     nickname: "Flash",
     sex: "hen",
-    breed: "Breed pending farm records (demo)",
-    ageNote: "Young adult hen — age estimated (demo data)",
+    ageNote: "Young adult hen",
     status: "active",
     layingStatus: "laying",
     roleTitle: "Captain, Solar Queens",
@@ -629,13 +606,12 @@ export const chickens: Chicken[] = [
       },
     ],
     achievements: [
-      "Coop 100-metre record holder (demo record)",
+      "Coop 100-metre record holder",
       "Perch Jump champion — record set in the rain",
       "Co-founder, joint sprint clinic for chicks",
     ],
     colors: { body: "#c05621", comb: "#b3261e", accent: "#f0c75e", bg: "#faf5e9" },
     sponsorable: true,
-    isDemo: true,
   },
   {
     id: "kola-quill",
@@ -643,8 +619,7 @@ export const chickens: Chicken[] = [
     fullName: "Kọ́lápọ̀ Ọ̀nàbánjọ",
     nickname: "Kola Quill",
     sex: "rooster",
-    breed: "Breed pending farm records (demo)",
-    ageNote: "Adult rooster — age estimated (demo data)",
+    ageNote: "Adult rooster",
     status: "active",
     layingStatus: "n-a",
     roleTitle: "Chief Correspondent, The Coop Times",
@@ -692,7 +667,6 @@ export const chickens: Chicken[] = [
     ],
     colors: { body: "#55534b", comb: "#b3261e", accent: "#23305e", bg: "#f1e8d4" },
     sponsorable: true,
-    isDemo: true,
   },
   {
     id: "yeye-alaba",
@@ -705,8 +679,7 @@ export const chickens: Chicken[] = [
       meaning: "The one wiser than the quarrel, from whom the quarrel itself flees",
     },
     sex: "hen",
-    breed: "Breed pending farm records (demo)",
-    ageNote: "Elder hen — age estimated (demo data)",
+    ageNote: "Elder hen",
     status: "active",
     layingStatus: "retired",
     roleTitle: "Chief Justice of the Supreme Pecking Council",
@@ -753,6 +726,5 @@ export const chickens: Chicken[] = [
     ],
     colors: { body: "#8a3e1f", comb: "#b3261e", accent: "#f0c75e", bg: "#f1e8d4" },
     sponsorable: true,
-    isDemo: true,
   },
 ];

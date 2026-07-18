@@ -1,7 +1,7 @@
 import type { SocialEvent } from "@/lib/schemas";
 
 /**
- * SAMPLE CONTENT — the Republic's social calendar. The tone borrows the
+ * the Republic's social calendar. The tone borrows the
  * warmth of southwestern Nigerian social life — the owambe spirit, the
  * storytelling circle, the festival calendar — with original, fictional
  * events. All ceremonies are clearly fictional storytelling.
@@ -23,7 +23,6 @@ export const socialEvents: SocialEvent[] = [
       "adedoyin-mama-decree",
       "bright-feather",
     ],
-    isDemo: true,
   },
   {
     id: "first-grain-festival",
@@ -35,7 +34,6 @@ export const socialEvents: SocialEvent[] = [
       "grain is opened by the eldest citizen and tasted, by law and by " +
       "love, chicks first. Followed by the year's most relaxed queue.",
     attendeeIds: ["mama-gold", "yeye-alaba", "chi-chi"],
-    isDemo: true,
   },
   {
     id: "gold-hatchday",
@@ -47,7 +45,6 @@ export const socialEvents: SocialEvent[] = [
       "the mango tree, three rounds of the shade-tree song, and a " +
       "presidential proclamation read aloud twice, as is now traditional.",
     attendeeIds: ["mama-gold", "adedoyin-mama-decree", "yeye-alaba", "dr-amara-featherwell"],
-    isDemo: true,
   },
   {
     id: "sunday-storytelling",
@@ -59,7 +56,6 @@ export const socialEvents: SocialEvent[] = [
       "history 'from the time before the water tank,' with corrections " +
       "from Yèyé Àlàbá and heckling from nobody, twice.",
     attendeeIds: ["mama-gold", "yeye-alaba", "chi-chi", "quiet-grace"],
-    isDemo: true,
   },
   {
     id: "reconciliation-bench-day",
@@ -71,7 +67,6 @@ export const socialEvents: SocialEvent[] = [
       "parties share one handful of grain in the designated shade until " +
       "the quarrel gets bored and leaves. Walk-ins welcome.",
     attendeeIds: ["yeye-alaba"],
-    isDemo: true,
   },
   {
     id: "sprint-clinic-open",
@@ -83,6 +78,5 @@ export const socialEvents: SocialEvent[] = [
       "Free. Loud. Muddy. The unofficial motto is borrowed from a certain " +
       "first-time layer: 'I did my best.'",
     attendeeIds: ["flash-adaora", "tunde-quickfoot", "chi-chi"],
-    isDemo: true,
   },
 ];

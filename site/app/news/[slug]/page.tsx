@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { DemoBadge, WorldBadge } from "@/components/Badges";
 import { ArticleCard, formatDate } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
-import { FictionDisclaimer } from "@/components/Disclaimer";
 import { articles, findChicken, getArticle, getMinistry } from "@/lib/content";
 
 export function generateStaticParams() {
@@ -70,11 +68,9 @@ export default async function ArticlePage({
       <article className="mt-6">
         <header className="border-b-2 border-kisi-indigo-800/20 pb-6">
           <div className="flex flex-wrap items-center gap-2">
-            <WorldBadge world={article.world} />
             <span className="kicker text-kisi-charcoal-600">
               {article.category.replace("-", " ")}
             </span>
-            {article.isDemo && <DemoBadge />}
           </div>
           <h1 className="font-display mt-4 text-3xl font-black leading-tight text-kisi-indigo-900 sm:text-4xl">
             {article.headline}
@@ -147,7 +143,6 @@ export default async function ArticlePage({
         </section>
       )}
 
-      {article.world !== "fact" && <FictionDisclaimer />}
     </div>
   );
 }

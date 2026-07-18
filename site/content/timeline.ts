@@ -1,7 +1,7 @@
 import type { TimelineEvent } from "@/lib/schemas";
 
 /**
- * SAMPLE CONTENT — demonstration timeline events.
+ * Timeline events across the Republic.
  * Events sharing an `arcId` form a story arc that can be read as a serial.
  * Launch arcs: chi-chi-first-egg · grain-affair · mama-gold-retirement ·
  * perch-championship · flu-season.
@@ -21,7 +21,6 @@ export const timelineEvents: TimelineEvent[] = [
       "separated from her mother and smaller than the forecast allowed. " +
       "She spends her first week under the heat lamp, against a wing that " +
       "moved slightly left to make room.",
-    isDemo: true,
   },
   {
     id: "chi-chi-grace",
@@ -35,7 +34,6 @@ export const timelineEvents: TimelineEvent[] = [
       "Quiet Grace, herself once the frail new arrival, becomes Chi-Chi's " +
       "unofficial guardian. The spot against her wing acquires a name, and " +
       "then, over the months, a queue.",
-    isDemo: true,
   },
   {
     id: "chi-chi-front-page",
@@ -50,7 +48,6 @@ export const timelineEvents: TimelineEvent[] = [
       "the dust bath, and the fast trough line each correctly on the first " +
       "attempt. The Coop Times front page follows; so do two days behind " +
       "the water tank.",
-    isDemo: true,
   },
   {
     id: "chi-chi-egg",
@@ -65,7 +62,6 @@ export const timelineEvents: TimelineEvent[] = [
       "statement in full: 'I did my best.' Quiet Grace makes no comment, " +
       "magnificently.",
     articleId: "chi-chi-first-egg",
-    isDemo: true,
   },
   {
     id: "chi-chi-squad",
@@ -79,7 +75,6 @@ export const timelineEvents: TimelineEvent[] = [
       "Chi-Chi quietly joins the Solar Queens' junior sprint squad at " +
       "Flash Adaora's invitation. She has told no one. The Republic is " +
       "politely pretending not to know.",
-    isDemo: true,
   },
 
   // ARC: The Missing Breakfast Grain
@@ -95,7 +90,6 @@ export const timelineEvents: TimelineEvent[] = [
       "Premium cracked maize leaves the national store on ministry " +
       "authority. The return column of the feed ledger begins its long, " +
       "eloquent silence.",
-    isDemo: true,
   },
   {
     id: "grain-expose",
@@ -110,7 +104,6 @@ export const timelineEvents: TimelineEvent[] = [
       "for five issues. The ministry's response — 'insufficiently found' — " +
       "enters the national phrasebook immediately.",
     articleId: "missing-breakfast-grain",
-    isDemo: true,
   },
   {
     id: "grain-panel",
@@ -124,7 +117,6 @@ export const timelineEvents: TimelineEvent[] = [
       "Eight members, three sittings, one adjournment for the afternoon " +
       "feed. The opposition attends with pre-printed placards and a " +
       "weighing scale of its own.",
-    isDemo: true,
   },
   {
     id: "grain-found",
@@ -139,7 +131,6 @@ export const timelineEvents: TimelineEvent[] = [
       "weighed twice at NGA insistence, and returns to the store. The " +
       "apology tour is announced; the editorial thanks the filing perch.",
     articleId: "grain-white-paper",
-    isDemo: true,
   },
 
   // ARC: Mama Gold's retirement
@@ -154,7 +145,6 @@ export const timelineEvents: TimelineEvent[] = [
     body:
       "A national ceremony under the mango tree for the 400th recorded " +
       "egg. Review, in full: 'The first one was harder.'",
-    isDemo: true,
   },
   {
     id: "gold-break",
@@ -168,7 +158,6 @@ export const timelineEvents: TimelineEvent[] = [
       "Mama Gold announces a well-earned laying break — 'I am not " +
       "retiring. I am delegating' — and increases her Sunday storytelling " +
       "schedule by popular demand.",
-    isDemo: true,
   },
   {
     id: "gold-law",
@@ -183,7 +172,6 @@ export const timelineEvents: TimelineEvent[] = [
       "membership for every retired layer. The gallery sings; the Speaker " +
       "conducts, eventually.",
     articleId: "senior-hen-act-second-reading",
-    isDemo: true,
   },
 
   // ARC: Perch Jumping Championship
@@ -199,7 +187,6 @@ export const timelineEvents: TimelineEvent[] = [
       "Flash Adaora breaks Minister Quickfoot's two-season 100-metre " +
       "record. A Day of National Speed is declared; solitary dusk start " +
       "practice by the fence is officially denied.",
-    isDemo: true,
   },
   {
     id: "adaora-rain-final",
@@ -214,7 +201,6 @@ export const timelineEvents: TimelineEvent[] = [
       "the rain. 'The perch is already wet. So am I.' The gatepost has " +
       "been engraved.",
     articleId: "perch-final-rain",
-    isDemo: true,
   },
   {
     id: "sprint-clinic",
@@ -227,7 +213,6 @@ export const timelineEvents: TimelineEvent[] = [
     body:
       "Champion and minister launch a joint sprint clinic for chicks. The " +
       "rivalry is declared 'officially retired and unofficially eternal.'",
-    isDemo: true,
   },
 
   // ARC: Flu season (welfare-forward; dignified)
@@ -244,7 +229,6 @@ export const timelineEvents: TimelineEvent[] = [
       "calmly, publishes facts daily, and answers every rumour with the " +
       "same five words. (On the real farm, biosecurity and vet care are " +
       "exactly this unglamorous and exactly this important.)",
-    isDemo: true,
   },
   {
     id: "flu-recovery",
@@ -258,6 +242,5 @@ export const timelineEvents: TimelineEvent[] = [
       "Coop Two returns to full health. The recovery ceremony is the " +
       "loudest event in national memory; the minister misses it, doing " +
       "rounds. Her bulletin that week: 'Resume normal life. Wash your feet.'",
-    isDemo: true,
   },
 ];

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { DemoBadge, WorldBadge } from "@/components/Badges";
 import {
   ArticleCard,
   ChickenCard,
@@ -7,7 +6,6 @@ import {
   SectionHeading,
 } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
-import { FictionDisclaimer } from "@/components/Disclaimer";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import {
   articles,
@@ -102,10 +100,6 @@ export default function Home() {
         <div className="grid items-center gap-8 rounded-3xl border border-kisi-gold-500/30 bg-white p-8 lg:grid-cols-[auto_1fr]">
           <ChickenPortrait chicken={president} size={180} framed />
           <div>
-            <div className="flex flex-wrap items-center gap-2">
-              <WorldBadge world="fiction" />
-              <DemoBadge />
-            </div>
             <h2 className="font-display mt-3 text-2xl font-bold text-kisi-green-900">
               A Word from Her Excellency
             </h2>
@@ -166,7 +160,6 @@ export default function Home() {
               </p>
               <p className="mt-3 text-sm text-kisi-charcoal-600">{census.note}</p>
               <p className="mt-3">
-                <DemoBadge />
               </p>
             </div>
             {/* Cabinet strip */}
@@ -205,7 +198,7 @@ export default function Home() {
               <p className="kicker text-kisi-gold-700">Coop Premier League</p>
               <table className="mt-3 w-full text-sm">
                 <caption className="sr-only">
-                  Coop Premier League top four (sample data)
+                  Coop Premier League top four
                 </caption>
                 <thead>
                   <tr className="text-left text-xs text-kisi-charcoal-600">
@@ -299,9 +292,6 @@ export default function Home() {
       {/* THE REAL FARM */}
       <section className="bg-kisi-green-900 py-16 text-kisi-cream-100">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="flex flex-wrap items-center gap-2">
-            <WorldBadge world="fact" />
-          </div>
           <h2 className="font-display mt-3 text-3xl font-bold sm:text-4xl">
             Behind the Republic: a real farm
           </h2>
@@ -345,7 +335,6 @@ export default function Home() {
       </section>
 
       <div className="mx-auto max-w-6xl px-4">
-        <FictionDisclaimer />
       </div>
     </>
   );

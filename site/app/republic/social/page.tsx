@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DemoBadge, WorldBadge } from "@/components/Badges";
 import { SectionHeading, formatDate } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
-import { FictionDisclaimer } from "@/components/Disclaimer";
 import { findChicken, socialEvents } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -25,10 +23,6 @@ const TYPE_LABEL: Record<string, string> = {
 export default function SocialPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <div className="flex flex-wrap items-center gap-2">
-        <WorldBadge world="fiction" />
-        <DemoBadge />
-      </div>
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-green-900">
         Social Life
       </h1>
@@ -80,7 +74,6 @@ export default function SocialPage() {
         </ul>
       </div>
 
-      <FictionDisclaimer />
     </div>
   );
 }

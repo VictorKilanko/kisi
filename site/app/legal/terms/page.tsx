@@ -23,11 +23,10 @@ export default function TermsPage() {
       <section className="mt-8 space-y-4 text-sm text-kisi-charcoal-600">
         <ul className="list-inside list-disc space-y-1.5">
           <li>
-            The Republic of Kisi is a fictional storytelling world; see the{" "}
-            <Link href="/disclaimer" className="underline">
-              full disclaimer
-            </Link>
-            . Fictional content is not factual reporting.
+            The Republic of Kisi is a work of original storytelling built
+            around the real chickens of Kisi Farm. Its news, politics, and
+            sport are entertainment, not factual reporting, and refer to no
+            real person or organisation.
           </li>
           <li>
             All characters, names, artwork, and text on this site are

@@ -1,10 +1,12 @@
 import type { Article } from "@/lib/schemas";
 
 /**
- * SAMPLE CONTENT — demonstration issues of The Coop Times.
- * All stories are fictional satire about the chickens of the Republic of
- * Kisi, except items in the "farm-announcement" category, which speak for
- * the real farm and say so.
+ * The Coop Times — the newspaper of the Republic of Kisi.
+ *
+ * Editorial rule: the paper writes from inside the Republic, in its own
+ * voice, without breaking character. Items in the "farm-announcement"
+ * category speak for Kisi Farm itself (orders, visits, practical notices)
+ * and are the one place we use plain outside-world language.
  */
 export const articles: Article[] = [
   {
@@ -34,13 +36,9 @@ export const articles: Article[] = [
       "Quiet Grace, the rescue hen who sheltered Chi-Chi through her first " +
         "week at Kisi, made no comment, in the way that only she can make " +
         "no comment.",
-      "DISCLAIMER: The Republic of Kisi is a fictional storytelling world. " +
-        "Chi-Chi is a demonstration character; this milestone is sample " +
-        "content awaiting the real flock's real stories.",
     ],
     relatedChickenIds: ["chi-chi", "adedoyin-mama-decree", "quiet-grace"],
     relatedMinistryIds: ["egg-affairs"],
-    isDemo: true,
   },
   {
     id: "missing-breakfast-grain",
@@ -72,13 +70,9 @@ export const articles: Article[] = [
         "on time, 'which is the main thing.'",
       "This newspaper does not allege wrongdoing. This newspaper alleges " +
         "arithmetic. The ledger has two columns, and one of them is empty.",
-      "DISCLAIMER: Fictional satire. The Republic of Kisi, its ministers, " +
-        "and its missing grain are invented characters and events at a real " +
-        "poultry farm's storytelling world.",
     ],
     relatedChickenIds: ["bright-feather", "kola-quill", "halima-iron-feathers"],
     relatedMinistryIds: ["egg-affairs", "feed-agriculture"],
-    isDemo: true,
   },
   {
     id: "grain-white-paper",
@@ -111,12 +105,9 @@ export const articles: Article[] = [
         "work for everyone than a reshuffle.'",
       "Our editorial position appears on the back page in its entirety: " +
         "'We thank the filing perch for its cooperation.'",
-      "DISCLAIMER: Fictional satire; sample content of the Republic of " +
-        "Kisi storytelling world.",
     ],
     relatedChickenIds: ["bright-feather", "kola-quill", "halima-iron-feathers"],
     relatedMinistryIds: ["egg-affairs"],
-    isDemo: true,
   },
   {
     id: "senior-hen-act-second-reading",
@@ -145,12 +136,9 @@ export const articles: Article[] = [
         "conducting.",
       "Mama Gold, the law's namesake, followed events from the low branch " +
         "of the mango tree. Her statement: 'The first reading was harder.'",
-      "DISCLAIMER: Fictional satire; sample content of the Republic of " +
-        "Kisi storytelling world.",
     ],
     relatedChickenIds: ["mama-gold", "halima-iron-feathers", "baba-segun"],
     relatedMinistryIds: ["social-affairs"],
-    isDemo: true,
   },
   {
     id: "perch-final-rain",
@@ -179,12 +167,9 @@ export const articles: Article[] = [
         "Speed and congratulated the champion 'on behalf of the government, " +
         "the league, and, reluctantly, myself.' The pair's joint sprint " +
         "clinic for chicks resumes this Saturday, weather ignored.",
-      "DISCLAIMER: Fictional satire; sample content of the Republic of " +
-        "Kisi storytelling world.",
     ],
     relatedChickenIds: ["flash-adaora", "tunde-quickfoot"],
     relatedMinistryIds: ["sports"],
-    isDemo: true,
   },
   {
     id: "punctual-breakfast-address",
@@ -214,12 +199,9 @@ export const articles: Article[] = [
         "regard 'as a form of national exercise.'",
       "Breakfast was served at 7:00 exactly. The opposition confirmed the " +
         "time independently.",
-      "DISCLAIMER: Fictional satire; sample content of the Republic of " +
-        "Kisi storytelling world.",
     ],
     relatedChickenIds: ["adedoyin-mama-decree", "halima-iron-feathers", "baba-segun"],
     relatedMinistryIds: ["feed-agriculture", "energy-solar"],
-    isDemo: true,
   },
   {
     id: "three-minutes-quiet-grace",
@@ -250,45 +232,37 @@ export const articles: Article[] = [
         "pack up my questions, all of them unasked, and inclined her head " +
         "once — a courtesy, or a verdict. I have covered four governments. " +
         "I have never left an interview better informed.",
-      "DISCLAIMER: Fictional satire; sample content of the Republic of " +
-        "Kisi storytelling world.",
     ],
     relatedChickenIds: ["quiet-grace", "kola-quill", "chi-chi"],
     relatedMinistryIds: [],
-    isDemo: true,
   },
   {
-    id: "farm-note-what-is-real",
-    headline: "A note from Kisi: what's real here, and what's story",
+    id: "eggs-now-available",
+    headline: "KISI EGGS: NOW TAKING ORDERS",
     standfirst:
-      "From the real farm behind the Republic — how to read this website.",
+      "Fresh eggs from the hens of the Republic, collected daily and packed " +
+      "the same morning. Here is how to order a crate.",
     category: "farm-announcement",
     world: "fact",
-    publishedAt: "2026-07-01",
-    author: { name: "Kisi Farm", title: "The team" },
+    publishedAt: "2026-07-16",
+    author: { name: "Kisi Farm", title: "Farm office" },
     body: [
-      "Kisi is a real poultry farm in southwestern Nigeria. Our chickens, " +
-        "their care, their feed, their housing, and the eggs they lay are " +
-        "real, and the farming information on our fact-labeled pages is " +
-        "meant to be accurate and honest. Where we don't yet have a " +
-        "verified number or photo on this new website, you'll see a clear " +
-        "placeholder instead of a made-up figure.",
-      "The Republic of Kisi — the president, the ministries, the " +
-        "newspaper, the sports league, and the political drama — is " +
-        "fiction: an affectionate, satirical storytelling world we built " +
-        "so you can get to know our birds as the individuals they are. " +
-        "Fiction pages are marked with a gold Republic badge and a " +
-        "disclaimer like this one.",
-      "The characters currently on the site are demonstration characters, " +
-        "clearly labeled as sample content. As we photograph and record " +
-        "our real flock, the real birds will take over the Republic — " +
-        "their real milestones, their real personalities, their real " +
-        "stories. That's the whole point: every chicken has one.",
-      "Nothing in our satire refers to any real person, living or " +
-        "feathered elsewhere. Any resemblance is coincidental.",
+      "Kisi Farm is now taking egg orders directly from this website. Our " +
+        "hens lay through the morning, the eggs are collected by hand the " +
+        "same day, and nothing sits in a warehouse waiting for you.",
+      "Every egg you receive was laid by a hen with a name. Many of them " +
+        "have a profile on this site — you can look up who has been busy " +
+        "lately on the Egg Life page, which the Ministry of Egg Affairs " +
+        "updates with more ceremony than strictly necessary.",
+      "To order, visit the Shop and send us your details. We will confirm " +
+        "availability, price, and delivery for your area before you pay " +
+        "anything. We would rather tell you honestly what we have than " +
+        "take an order we cannot fill.",
+      "The Republic wishes it noted that this arrangement was debated in " +
+        "the Assembly and approved, and that the hens consider the whole " +
+        "thing an export achievement.",
     ],
     relatedChickenIds: [],
-    relatedMinistryIds: [],
-    isDemo: true,
+    relatedMinistryIds: ["egg-affairs"],
   },
 ];

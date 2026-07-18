@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { SectionHeading } from "@/components/Cards";
-import { DemoContentNotice, FictionDisclaimer } from "@/components/Disclaimer";
 import { FlockDirectory } from "@/components/FlockDirectory";
 import { chickens } from "@/lib/content";
 
@@ -19,11 +18,9 @@ export default function FlockPage() {
         title="Meet the Flock"
         lede="Every bird at Kisi is an individual — with a name, a history, allies, rivals, and (in several documented cases) a political agenda. Search the registry."
       />
-      <DemoContentNotice />
       <div className="mt-8">
         <FlockDirectory chickens={chickens} />
       </div>
-      <FictionDisclaimer />
     </div>
   );
 }

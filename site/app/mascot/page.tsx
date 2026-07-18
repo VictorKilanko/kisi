@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { WorldBadge } from "@/components/Badges";
 import { PlaceholderNotice } from "@/components/Disclaimer";
 import { mascot } from "@/lib/content";
 
@@ -13,9 +12,6 @@ export const metadata: Metadata = {
 export default function MascotPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
-      <div className="flex flex-wrap items-center gap-2">
-        <WorldBadge world="mixed" />
-      </div>
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-green-900">
         The Mascot
       </h1>
