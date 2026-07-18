@@ -137,6 +137,36 @@ runs client-side, and each form says plainly that it isn't collecting yet.
   and fine-grained tokens need explicit Pages permission to enable Pages via API.
   Both steps were left for the owner to do through the web UI.
 
+### Vercel migration — Phase 1 done (2026-07-18, later the same day)
+
+The owner moved the project's ambition up a level: Kisi stays a working poultry farm,
+but the Republic becomes an entertainment brand around it with the **chickens as
+influencers**. Hosting moved back to Vercel to get a server. See `docs/PLAN.md` —
+that file is now the living guide and should be read first every session.
+
+**CI passed on the first attempt** — lint, typecheck, tests and the full server build.
+
+Lessons from this pass:
+
+- **A "success" message for an undelivered order is a lie that costs a sale.** The
+  mail layer therefore returns 503 when unconfigured and the Shop routes the customer
+  to the contact page. Contrast with the Bantu memorial, where a delivery failure
+  still thanks the visitor — you do not show a grieving person an error screen. Same
+  infrastructure, deliberately different failure behaviour.
+- **The rate limiter fails *open*.** A Redis outage must not close the egg shop.
+  Blocking real customers is worse than briefly tolerating abuse.
+- **My Python brace-balance checker is unreliable on any file containing a URL.** It
+  strips `//` as a line comment *before* stripping strings, so `https://...` inside a
+  string truncates the line and unbalances everything after it. That produced three
+  false failures. Do not trust it as a substitute for a compiler — it flagged
+  `lib/mail.ts`, `app/layout.tsx` and `tests/api.test.ts`, all of which were fine.
+- **Removing static export breaks the Pages deploy immediately.** The live site stays
+  up at its last successful deploy, but stops updating. Expected, and worth saying out
+  loud rather than letting the owner discover it.
+- `/execute` (`.claude/commands/execute.md`) now reads `docs/PLAN.md`, `LESSONS.md`
+  and `git status`, then resumes work. Keep the plan's status markers current — a
+  stale plan makes the next session start blind.
+
 ### Still to do
 
 - [ ] **Install Node 20+ and run the gates.** Everything below is downstream of this.

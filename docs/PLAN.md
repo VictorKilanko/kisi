@@ -61,15 +61,22 @@ Restores the server. Without it, egg orders reach nobody.
 - [x] Restore the five API routes from git (`git show 821af70^:site/app/api/...`)
 - [x] `lib/mail.ts` — Resend abstraction so submissions actually reach the farm
 - [x] Wire `/api/orders` and `/api/wellwishes` to deliver email
-- [ ] Rewire the four forms back to `fetch` (`OrderForm`, `WellWishesForm`, `NewsletterForm`, `SupportCheckout`)
-- [ ] Swap `lib/rateLimit.ts` to Upstash Redis — the in-memory version does not work on serverless
-- [ ] Update `.github/workflows/deploy.yml` → lint/typecheck/test only; drop Pages artifact + `.nojekyll`
-- [ ] `.env.example` documenting every variable
+- [x] Rewire the four forms back to `fetch` (`OrderForm`, `WellWishesForm`, `NewsletterForm`, `SupportCheckout`)
+- [x] Swap `lib/rateLimit.ts` to Upstash Redis — the in-memory version does not work on serverless
+- [x] Replace the Pages deploy workflow with `.github/workflows/ci.yml` (lint/typecheck/test/build)
+- [x] `.env.example` documenting every variable
+- [x] **CI green** — lint, typecheck, tests and the full server build all pass
 - [ ] Connect the repo to Vercel, set env vars, verify preview deploy
 - [ ] Buy the domain, point at Vercel, redirect `victorkilanko.com/kisi`
 
-**Owner actions:** create Vercel account and import repo · create Resend account for
-`RESEND_API_KEY` + `FARM_INBOX` · create Upstash database · buy domain.
+**Owner actions to finish Phase 1:**
+1. Create a Vercel account, import `VictorKilanko/kisi`, **set Root Directory to `site`**
+2. Sign up at resend.com → `RESEND_API_KEY`, and set `FARM_INBOX` to the farm's email
+3. Create an Upstash Redis database → `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN`
+4. Buy the domain and point it at Vercel; set `NEXT_PUBLIC_SITE_URL` to match
+
+Until Vercel is connected, the GitHub Pages site stays live at its **last** deploy but
+no longer updates — the static-export config it needed is gone.
 
 ## Phase 2 — CMS, follow loop, PWA (Week 3–6) `[ ]`
 
