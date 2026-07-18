@@ -9,6 +9,25 @@ credible · 🟢 nice to have.
 
 ## Needs owner input
 
+### Shop — egg orders (added 2026-07-18)
+- [ ] 🔴 **Where do egg order enquiries go?** `/api/orders` currently validates
+      and discards — no inbox, no store. The Shop is not usable until this is
+      answered. An email address or a form provider is enough to start.
+- [ ] 🔴 Egg prices, crate/pack sizes, and the delivery areas served. Until
+      these exist the Shop quotes per-enquiry rather than publishing a price.
+- [ ] 🟡 Minimum order, lead time, and whether collection from the farm is an
+      option.
+
+### The Bantu memorial (added 2026-07-18)
+- [ ] 🔴 **Where do well-wishes go?** `/api/wellwishes` also validates and
+      discards. Decide between a private inbox and a moderated public wall.
+- [ ] 🟡 Bantu's real details — hatch/arrival date, personality notes, and a
+      photograph — so the memorial reflects the real bird as well as the
+      written character.
+- [ ] 🟢 Confirm the real-world facts behind the monitor lizard storyline (was
+      there an actual predator incident, and how closely should the story
+      track it?).
+
 ### Security (act immediately)
 - [ ] 🔴 **Revoke/rotate the GitHub personal access token** currently stored in
       plaintext in the local project instruction file. It has been exposed and

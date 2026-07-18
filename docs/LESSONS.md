@@ -6,7 +6,27 @@ Newest session at the top.
 
 ---
 
-## Session — 2026-07-18 (in progress)
+## Session — 2026-07-18
+
+### The big directional shift: stop labeling the world
+
+Mid-session the owner reframed the whole project:
+
+> "We are building this world — no need to say fictional; people know already.
+> It is like tagging a WWE website and event as fake fighting every time. People
+> know, but don't spoil the fun."
+
+The goal is an **animated-series-style world** people want to live in and follow
+across YouTube and social media — not a farm brochure with a satire annex. So the
+fact/fiction badging, the per-page disclaimers, and the "sample content" labels all
+came out. The site now speaks from inside the Republic.
+
+**The one carve-out kept:** plain language about money on the Shop and Support pages
+(what a payment buys, that sponsorship isn't ownership, that we never take card
+details on-site). That's how real entertainment properties handle merch and
+memberships — immersive everywhere, straight-talking at the till. `SatiricalArticle`
+JSON-LD also stays on news articles: it's invisible to readers and only helps search
+engines classify the stories correctly.
 
 ### Owner direction received this session
 
@@ -49,61 +69,86 @@ Newest session at the top.
 
 ### Done this session
 
-- Deleted `app/agric-city/` route entirely.
-- Removed `AgricCityStatus` / `AgricCityProjectSchema` types from `lib/schemas.ts`,
-  the `agricCityProjects` export from `lib/content.ts`, and `ProjectStatusBadge`
-  from `components/Badges.tsx`.
-- Removed the Agric City link from `components/Header.tsx`, `components/Footer.tsx`,
-  and `app/sitemap.ts`.
-- Removed the `isDemo` flag from every content schema and every content record.
-- Deleted the `DemoBadge` component, the `DemoContentNotice` component, and all their
-  usages across ~25 pages.
-- Stripped "sample content" / "(demo)" / "(demo data)" / "(sample data)" hedges from
-  content prose, comments, and portrait alt text.
+**Commit `892f351` — removed the labeling layer and Agric City**
 
-### Still to do (this session's remaining work)
+- Deleted the `app/agric-city/` and `app/disclaimer/` routes entirely.
+- Removed `AgricCityStatus` / `AgricCityProjectSchema`, the `agricCityProjects`
+  content and export, `ProjectStatusBadge`, and the `agric-city-zone` map hotspot.
+- Removed the `isDemo` flag from every schema and record; deleted `DemoBadge`,
+  `DemoContentNotice`, `WorldBadge`, and `FictionDisclaimer` plus all usages
+  (~25 pages), and every in-story `DISCLAIMER:` paragraph.
+- Made `Chicken.breed` optional rather than rendering a placeholder string.
 
-- [ ] Finish removing Agric City: `content/farm.ts` (`agricCityProjects` array),
-      `lib/mapData.ts` (`agric-city-zone` hotspot), `app/page.tsx` (two mentions +
-      CTA button), `app/about/page.tsx` (link block), `app/disclaimer/page.tsx` (mention).
-- [ ] Rewrite remaining "sample content" prose in `app/disclaimer/page.tsx`,
-      `content/articles.ts` (the "what's real here" note), `content/chickens.ts` header
-      comment, `app/eggs/page.tsx` lede, `app/republic/sports/page.tsx`,
-      `app/republic/government/page.tsx`, `components/Footer.tsx`.
-- [ ] Update `tests/content.test.ts` and `e2e/smoke.spec.ts` — they still assert on
-      `isDemo` and on a visible "Sample content" badge, so they will fail as written.
-- [ ] **New citizens**, including Minister of Security **Pete Okpara**, plus **Bantu**
-      (status: `memorial` — note the schema already forbids `sponsorable` on memorial
-      records) and additional flock members.
-- [ ] **Monitor lizard arc**: original illustrated SVG portrait, `MostWantedPoster`
-      component, bounty notice, placement on home / news / a dedicated route.
-- [ ] **Bantu memorial page** with a well-wishes form (reuse the newsletter/contact
-      form pattern and its rate limiting).
-- [ ] **Shop page** for egg orders, wired into the main menu.
-- [ ] Simplify navigation and reading level throughout (5th-grade target).
-- [ ] Update `docs/SITEMAP.md`, `docs/CONTENT_MODEL.md`, `docs/PROGRESS.md`,
-      `docs/CONTENT_CHECKLIST.md` to match all of the above.
-- [ ] Run format, lint, typecheck, tests, and production build — **blocked on Node install.**
+**Commit `8479f4f` — the monitor lizard arc and the Shop**
+
+- **Five new citizens** (17 total): Pete Okpara (Minister of Security), Bantu
+  (memorial, not sponsorable), Sergeant Danladi, Sisi Ngozi, Small Femi.
+- Ministry of Coop Security became the **Ministry of Security** under Okpara, with
+  the Bantu Protocol (nightly roll call by name) and the bounty as live projects.
+- `content/wanted.ts`, `MonitorLizard.tsx` (original procedural SVG — no photograph
+  needed), and `WantedPoster.tsx`, shown on the home page, the memorial, and a
+  dedicated `/most-wanted`.
+- `/bantu` memorial with a well-wishes form backed by `/api/wellwishes`.
+- `/shop` egg-order enquiries backed by `/api/orders`. Both endpoints reuse the
+  existing rate-limit + honeypot pattern, persist nothing yet, and say so.
+- Two Coop Times reports and a five-event `the-drain` story arc.
+- Navigation simplified to plainer words; Shop and Most Wanted surfaced.
+
+### Verification status — IMPORTANT
+
+**No gates were run. Node.js is not installed on this machine** (see the lesson
+above). As partial substitutes only, these were checked by hand:
+
+- a Python brace/bracket balance pass over every edited file — all balanced. Two
+  files flag identically on the *committed baseline*, so those are checker false
+  positives, not damage.
+- a Python pass confirming all 17 citizens' friendships resolve and are symmetric —
+  this is the exact constraint `lib/content.ts` asserts at build time.
+- a grep sweep confirming no dangling references remain to the removed
+  `agric-city` / `disclaimer` routes or the removed badge components.
+
+**None of this substitutes for `npm run lint && npm run typecheck && npm test &&
+npm run build`.** Treat the branch as unverified until those pass.
+
+### Still to do
+
+- [ ] **Install Node 20+ and run the gates.** Everything below is downstream of this.
+- [ ] Update `docs/SITEMAP.md`, `docs/CONTENT_MODEL.md`, and `docs/PROGRESS.md` for
+      the new routes, the removed Agric City, and the dropped `isDemo` field.
+- [ ] Reading-level pass over the older page copy — the new pages aim at ~5th grade,
+      but the earlier Republic pages are still written for adults.
+- [ ] Persist well-wishes and egg orders once a store or mail provider is chosen; a
+      moderated public message wall for Bantu is the obvious follow-up.
+- [ ] Social/YouTube pipeline: the `arcId` serials are the natural source for episode
+      scripts — worth designing an export for.
 
 ### Open questions for the owner
 
-- **Egg pricing and delivery area for the Shop page** — no prices, pack sizes, or
-  delivery zones have been supplied, so the shop cannot quote real figures yet.
-- **The bounty amount** on the monitor lizard — is this a fictional in-Republic bounty
-  (e.g. paid in grain) or a real cash reward? Currently planned as fictional.
-- **Bantu's real details** — hatch/arrival date, breed, personality, and a photograph,
-  so the memorial reflects the real bird.
-- Real farm figures (flock size, egg production, breeds) remain unsupplied; the site
-  still shows honest "awaiting farm records" placeholders for genuine farm facts
-  rather than inventing numbers.
+- **Egg pricing, crate sizes, and delivery areas** — the Shop takes an enquiry and
+  promises a quote, because there are no real prices to publish yet.
+- **Where should egg orders and well-wishes actually go?** No inbox or store is
+  connected, so both endpoints validate and then discard. The UI says so plainly,
+  but neither is usable in production until this is answered.
+- **Bantu's real details** — hatch/arrival date, personality, and a photograph, so
+  the memorial reflects the real bird as well as the written character.
+- Real farm figures (flock size, production, breeds) remain unsupplied. Genuine farm
+  facts still use honest "awaiting records" wording rather than invented numbers —
+  deliberate, and distinct from the storytelling content.
 
 ---
 
 ## Standing lessons (carry forward every session)
 
+- **Stay in the world.** The Republic is written from the inside, like an animated
+  series — no "fictional" labels, no badges, no per-page disclaimers. The audience
+  understands storytelling without being told.
+- **Except where money or safety is involved.** Shop and Support pages say plainly
+  what a payment buys, that sponsorship is not ownership, and that we never take card
+  details on-site. Immersive everywhere; straight-talking at the till.
 - Never fabricate a real-world farm fact (certifications, production numbers,
-  veterinary outcomes, partnerships). Fiction about the Republic is fine and is the
-  point; invented *farm* facts are not.
+  veterinary outcomes, partnerships). Storytelling about the Republic is the point;
+  invented *farm* facts are not — those still use honest "awaiting records" wording.
+- Never claim gates passed without running them. If Node is missing, say so.
 - Work on `feature/kisi-poultry-republic`, never directly on `main`.
 - Never write the private local path (`C:\Users\victo\...`) into any committed file.
 - Never commit secrets or `.env` files.
