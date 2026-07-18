@@ -10,30 +10,57 @@ type State =
   | { status: "error"; message: string };
 
 /**
- * Support checkout — currently closed, and says so.
+ * Support checkout, wired end-to-end and honest about its real state.
  *
- * The provider-agnostic payment layer lives in lib/payments and is ready to
- * wire up, but this build is a static export with no server to hold secret
- * keys, and the programme stays closed until the farm's legal status is
- * confirmed. Rather than fake a flow, the button states the real position.
- * Card data has never touched this site and never will — when payments open
- * they run on the provider's hosted checkout.
+ * The server resolves the tier and price — the client can never set an
+ * amount. `/api/support/checkout` returns 503 with a plain reason while the
+ * live-payments lock in lib/payments/index.ts is engaged, so the "not open
+ * yet" message comes from the server rather than being faked here.
+ *
+ * With sandbox keys it redirects to the provider's hosted checkout. Card
+ * data never touches this site.
  */
 export function SupportCheckout({ tier }: { tier: SupportTier }) {
   const [state, setState] = useState<State>({ status: "idle" });
   const [email, setEmail] = useState("");
 
-  function begin() {
+  async function begin() {
     if (!email.includes("@")) {
       setState({ status: "error", message: "Enter an email first — receipts need a home." });
       return;
     }
-    setState({
-      status: "unavailable",
-      reason:
-        `“${tier.name}” isn't open yet — the programme starts after the ` +
-        "legal review is complete. Nothing was charged or stored.",
-    });
+    setState({ status: "working" });
+
+    try {
+      const res = await fetch("/api/support/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tierId: tier.id, email }),
+      });
+      const json = (await res.json()) as { url?: string; reason?: string };
+
+      if (res.ok && json.url) {
+        window.location.assign(json.url); // hosted checkout — off-site by design
+        return;
+      }
+      if (res.status === 503) {
+        setState({
+          status: "unavailable",
+          reason:
+            json.reason ??
+            `“${tier.name}” isn't open yet. Nothing was charged or stored.`,
+        });
+      } else if (res.status === 429) {
+        setState({ status: "error", message: "Too many attempts — please wait a minute." });
+      } else {
+        setState({
+          status: "error",
+          message: "That didn't work — please check the email and try again.",
+        });
+      }
+    } catch {
+      setState({ status: "error", message: "Network hiccup — please try again." });
+    }
   }
 
   return (

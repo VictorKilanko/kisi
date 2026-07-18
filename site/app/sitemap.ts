@@ -1,12 +1,6 @@
 import type { MetadataRoute } from "next";
 import { articles, chickens, ministries } from "@/lib/content";
-
-// Served as a GitHub Pages project site under the owner's custom domain.
-const BASE = "https://victorkilanko.com/kisi";
-
-// Required by Next 16 under `output: "export"` — metadata routes must opt in
-// to static generation explicitly or the build refuses to collect them.
-export const dynamic = "force-static";
+import { SITE_URL as BASE } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [

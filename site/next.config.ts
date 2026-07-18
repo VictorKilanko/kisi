@@ -1,24 +1,15 @@
 import type { NextConfig } from "next";
 
 /**
- * Static export for GitHub Pages.
+ * Vercel deployment — full Next.js with a server.
  *
- * The site is served as a project site under the victorkilanko.com custom
- * domain, so every route lives beneath /kisi — hence `basePath`. GitHub
- * Pages has no Node server, which means:
- *   - no route handlers (app/api/*) — forms are client-side only
- *   - no next/image optimizer — images must be unoptimized
- *   - trailingSlash keeps directory-style URLs resolving without a server
+ * This replaced a GitHub Pages static export (`output: "export"` + a `/kisi`
+ * basePath), which could not run route handlers. Egg orders, well-wishes and
+ * the payment layer all need a server, so the export settings are gone.
  *
- * If server behaviour is needed later (real order delivery, payments), the
- * host has to change — Cloudflare Pages or a Node host — and `output`,
- * `basePath`, and `images` come back out.
+ * The canonical origin now comes from NEXT_PUBLIC_SITE_URL so a domain change
+ * is a Vercel environment variable rather than a code change.
  */
-const nextConfig: NextConfig = {
-  output: "export",
-  basePath: "/kisi",
-  trailingSlash: true,
-  images: { unoptimized: true },
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;

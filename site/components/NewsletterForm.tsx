@@ -16,33 +16,45 @@ type State =
 export function NewsletterForm() {
   const [state, setState] = useState<State>({ status: "idle" });
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
+    setState({ status: "sending" });
 
-    // Honeypot: humans never fill this.
-    if (String(data.get("company") ?? "")) {
-      form.reset();
-      setState({ status: "done", note: "Thank you." });
-      return;
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: String(data.get("email") ?? ""),
+          company: String(data.get("company") ?? ""),
+        }),
+      });
+      const json = (await res.json()) as {
+        ok?: boolean;
+        note?: string;
+        error?: string;
+      };
+
+      if (res.ok && json.ok) {
+        form.reset();
+        setState({
+          status: "done",
+          note: json.note ?? "Signed up — we'll be in touch.",
+        });
+        return;
+      }
+      setState({
+        status: "error",
+        message:
+          json.error === "rate-limited"
+            ? "Too many attempts — please wait a minute."
+            : "That email didn't look right. Try again?",
+      });
+    } catch {
+      setState({ status: "error", message: "Network hiccup — please try again." });
     }
-
-    const email = String(data.get("email") ?? "").trim();
-    if (!email.includes("@")) {
-      setState({ status: "error", message: "That email didn't look right. Try again?" });
-      return;
-    }
-
-    // No mailing-list provider is connected and this is a static site, so
-    // the address goes nowhere. Say so plainly rather than faking a signup.
-    form.reset();
-    setState({
-      status: "done",
-      note:
-        "The newsletter isn't live yet — your address was NOT stored. " +
-        "Check back after launch.",
-    });
   }
 
   return (

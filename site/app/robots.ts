@@ -1,7 +1,5 @@
 import type { MetadataRoute } from "next";
-
-// Required by Next 16 under `output: "export"` — see app/sitemap.ts.
-export const dynamic = "force-static";
+import { SITE_URL } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -9,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://victorkilanko.com/kisi/sitemap.xml",
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

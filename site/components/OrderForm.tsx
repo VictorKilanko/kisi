@@ -7,6 +7,8 @@ type State =
   | { status: "idle" }
   | { status: "sending" }
   | { status: "done"; note: string }
+  /** Validated fine, but delivery failed — send them to the contact page. */
+  | { status: "undelivered"; note: string }
   | { status: "error"; message: string };
 
 const FIELD =
@@ -16,38 +18,58 @@ const FIELD =
 export function OrderForm() {
   const [state, setState] = useState<State>({ status: "idle" });
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const d = new FormData(form);
+    setState({ status: "sending" });
 
-    // Honeypot: humans never fill this.
-    if (String(d.get("company") ?? "")) {
-      form.reset();
-      setState({ status: "done", note: "Thank you." });
-      return;
-    }
+    try {
+      const res = await fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: String(d.get("name") ?? ""),
+          contact: String(d.get("contact") ?? ""),
+          area: String(d.get("area") ?? ""),
+          crates: String(d.get("crates") ?? ""),
+          notes: String(d.get("notes") ?? ""),
+          company: String(d.get("company") ?? ""),
+        }),
+      });
+      const json = (await res.json()) as {
+        ok?: boolean;
+        note?: string;
+        error?: string;
+      };
 
-    const required = ["name", "contact", "area", "crates"] as const;
-    if (required.some((k) => !String(d.get(k) ?? "").trim())) {
+      if (res.ok && json.ok) {
+        form.reset();
+        setState({ status: "done", note: json.note ?? "Thank you — we'll be in touch." });
+        return;
+      }
+
+      // An undelivered order is a lost sale, so route the customer somewhere
+      // that actually reaches the farm rather than just showing an error.
+      if (json.error === "mail-unconfigured" || json.error === "delivery-failed") {
+        setState({ status: "undelivered", note: json.note ?? "" });
+        return;
+      }
       setState({
         status: "error",
-        message: "Please fill in your name, contact, area, and how many crates.",
+        message:
+          json.error === "rate-limited"
+            ? "That's a lot of orders at once — please wait a minute."
+            : "Please check your name, contact, area, and crate count.",
       });
-      return;
+    } catch {
+      setState({
+        status: "undelivered",
+        note:
+          "We couldn't reach the farm's order inbox just now. Please use the " +
+          "contact page so your order doesn't get lost.",
+      });
     }
-
-    // Static site: there is no order inbox connected yet, so we point the
-    // customer at a route that actually reaches the farm instead of
-    // swallowing their order.
-    form.reset();
-    setState({
-      status: "done",
-      note:
-        "Our online order inbox isn't connected yet, so this enquiry " +
-        "wasn't delivered. Please reach us through the contact page and " +
-        "we'll sort your eggs out directly — sorry for the extra step.",
-    });
   }
 
   if (state.status === "done") {
@@ -58,6 +80,27 @@ export function OrderForm() {
       >
         <p className="font-display text-xl font-bold text-kisi-green-900">
           Enquiry sent
+        </p>
+        <p className="mt-2 text-sm text-kisi-charcoal-600">{state.note}</p>
+        <button
+          type="button"
+          onClick={() => setState({ status: "idle" })}
+          className="mt-4 text-sm font-semibold text-kisi-green-700 underline"
+        >
+          Send another
+        </button>
+      </div>
+    );
+  }
+
+  if (state.status === "undelivered") {
+    return (
+      <div
+        aria-live="polite"
+        className="rounded-2xl border-2 border-kisi-earth-500 bg-white p-6"
+      >
+        <p className="font-display text-xl font-bold text-kisi-earth-700">
+          We couldn&apos;t send that
         </p>
         <p className="mt-2 text-sm text-kisi-charcoal-600">{state.note}</p>
         <Link
@@ -143,8 +186,6 @@ export function OrderForm() {
           <span className="opacity-70">
             This is an enquiry, not an order — we confirm price and delivery
             before you pay anything, and we never ask for card details here.
-            Our online inbox isn&apos;t connected yet, so you&apos;ll be
-            pointed to the contact page.
           </span>
         )}
       </p>
