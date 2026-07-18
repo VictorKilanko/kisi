@@ -105,7 +105,7 @@ export default function SportsPage() {
           <ol className="mt-4 space-y-3">
             {perchChampionship.map((c) => (
               <li key={c.year} className="rounded-2xl border border-kisi-gold-500/30 bg-white p-4">
-                <p className="kicker text-kisi-gold-500">{c.year}</p>
+                <p className="kicker text-kisi-gold-700">{c.year}</p>
                 <p className="font-semibold text-kisi-green-900">{c.champion}</p>
                 <p className="mt-1 text-sm text-kisi-charcoal-600">{c.note}</p>
               </li>
@@ -138,7 +138,7 @@ export default function SportsPage() {
                 <p className="font-display mt-1 text-lg font-bold text-kisi-green-900">
                   {home.name}{" "}
                   {played ? (
-                    <span className="text-kisi-gold-500">
+                    <span className="text-kisi-gold-700">
                       {m.homeScore} – {m.awayScore}
                     </span>
                   ) : (
@@ -199,7 +199,7 @@ export default function SportsPage() {
                     </p>
                     <p className="text-xs text-kisi-charcoal-600">{team.name}</p>
                   </div>
-                  <p className="font-display text-2xl font-black text-kisi-gold-500">{s.goals}</p>
+                  <p className="font-display text-2xl font-black text-kisi-gold-700">{s.goals}</p>
                 </li>
               );
             })}

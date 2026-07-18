@@ -34,8 +34,12 @@ const NAV = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const pathname = usePathname();
-  const closeMenu = () => setOpen(false);
+  const closeMenu = () => {
+    setOpen(false);
+    setOpenMenu(null);
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-kisi-green-900/10 bg-kisi-cream-100/95 backdrop-blur">
@@ -68,14 +72,23 @@ export function Header() {
                     type="button"
                     className="rounded px-3 py-2 text-sm font-medium text-kisi-charcoal-900 hover:bg-kisi-cream-200"
                     aria-haspopup="true"
+                    aria-expanded={openMenu === item.label}
+                    onClick={() =>
+                      setOpenMenu((v) => (v === item.label ? null : item.label))
+                    }
                   >
                     {item.label} <span aria-hidden="true">▾</span>
                   </button>
-                  <ul className="invisible absolute left-0 top-full z-50 min-w-52 rounded-lg border border-kisi-green-900/10 bg-kisi-cream-100 p-1 opacity-0 shadow-lg transition-opacity group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
+                  <ul
+                    className={`absolute left-0 top-full z-50 min-w-52 rounded-lg border border-kisi-green-900/10 bg-kisi-cream-100 p-1 shadow-lg transition-opacity group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100 ${
+                      openMenu === item.label ? "visible opacity-100" : "invisible opacity-0"
+                    }`}
+                  >
                     {item.children.map((c) => (
                       <li key={c.href}>
                         <Link
                           href={c.href}
+                          onClick={closeMenu}
                           className="block rounded px-3 py-2 text-sm text-kisi-charcoal-900 hover:bg-kisi-cream-200"
                         >
                           {c.label}

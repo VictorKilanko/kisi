@@ -39,7 +39,7 @@ export function DemoBadge() {
 }
 
 const STATUS_LABELS: Record<ChickenStatus, { label: string; cls: string }> = {
-  active: { label: "Active citizen", cls: "bg-kisi-green-500 text-white" },
+  active: { label: "Active citizen", cls: "bg-kisi-green-700 text-white" },
   recovering: { label: "Recovering", cls: "bg-kisi-gold-300 text-kisi-charcoal-900" },
   retired: { label: "Retired", cls: "bg-kisi-indigo-800 text-kisi-cream-100" },
   memorial: { label: "In loving memory", cls: "bg-kisi-charcoal-600 text-kisi-cream-100" },

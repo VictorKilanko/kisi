@@ -72,7 +72,7 @@ export default async function ChickenProfile({
             {chicken.isDemo && <DemoBadge />}
           </div>
           {chicken.honorific && (
-            <p className="kicker mt-4 text-kisi-gold-500">{chicken.honorific}</p>
+            <p className="kicker mt-4 text-kisi-gold-700">{chicken.honorific}</p>
           )}
           <h1 className="font-display mt-1 text-4xl font-black text-kisi-green-900">
             {chicken.name}
@@ -276,7 +276,7 @@ export default async function ChickenProfile({
 
           {chicken.achievements.length > 0 && (
             <section className="rounded-2xl border border-kisi-gold-500/40 bg-white p-6">
-              <h2 className="kicker text-kisi-gold-500">Achievements</h2>
+              <h2 className="kicker text-kisi-gold-700">Achievements</h2>
               <ul className="mt-3 list-inside list-disc space-y-1.5 text-sm">
                 {chicken.achievements.map((a, i) => (
                   <li key={i}>{a}</li>

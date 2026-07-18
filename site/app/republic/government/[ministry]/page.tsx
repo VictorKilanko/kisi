@@ -61,7 +61,7 @@ export default async function MinistryPage({
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-indigo-900">
         {ministry.name}
       </h1>
-      <p className="kicker mt-2 text-kisi-gold-500">“{ministry.motto}”</p>
+      <p className="kicker mt-2 text-kisi-gold-700">“{ministry.motto}”</p>
 
       {/* Minister */}
       <section className="mt-8 rounded-2xl border border-kisi-indigo-800/15 bg-white p-6">
@@ -95,7 +95,7 @@ export default async function MinistryPage({
         <ul className="mt-4 space-y-2">
           {ministry.responsibilities.map((r, i) => (
             <li key={i} className="flex gap-3 text-kisi-charcoal-600">
-              <span aria-hidden="true" className="text-kisi-gold-500">
+              <span aria-hidden="true" className="text-kisi-gold-700">
                 ▸
               </span>
               {r}

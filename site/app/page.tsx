@@ -157,7 +157,7 @@ export default function Home() {
           <div className="grid gap-6 lg:grid-cols-3">
             {/* Egg census */}
             <div className="rounded-2xl bg-white p-6 shadow-sm">
-              <p className="kicker text-kisi-gold-500">National Egg Census</p>
+              <p className="kicker text-kisi-gold-700">National Egg Census</p>
               <p className="font-display mt-2 text-5xl font-black text-kisi-green-900">
                 {census.total}
               </p>
@@ -171,7 +171,7 @@ export default function Home() {
             </div>
             {/* Cabinet strip */}
             <div className="rounded-2xl bg-white p-6 shadow-sm">
-              <p className="kicker text-kisi-gold-500">The Cabinet</p>
+              <p className="kicker text-kisi-gold-700">The Cabinet</p>
               <ul className="mt-3 space-y-3">
                 {cabinet.map((m) => {
                   const minister = m.ministerId ? getChicken(m.ministerId) : undefined;
@@ -202,7 +202,7 @@ export default function Home() {
             </div>
             {/* League table */}
             <div className="rounded-2xl bg-white p-6 shadow-sm">
-              <p className="kicker text-kisi-gold-500">Coop Premier League</p>
+              <p className="kicker text-kisi-gold-700">Coop Premier League</p>
               <table className="mt-3 w-full text-sm">
                 <caption className="sr-only">
                   Coop Premier League top four (sample data)
@@ -332,7 +332,7 @@ export default function Home() {
       {/* NEWSLETTER */}
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="rounded-3xl border border-kisi-gold-500/30 bg-white p-8">
-          <p className="kicker text-kisi-gold-500">This Week in the Republic</p>
+          <p className="kicker text-kisi-gold-700">This Week in the Republic</p>
           <h2 className="font-display mt-2 text-2xl font-bold text-kisi-green-900">
             Get the news before the Assembly does
           </h2>

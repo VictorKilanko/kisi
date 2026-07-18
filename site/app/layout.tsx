@@ -14,8 +14,14 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+// PLACEHOLDER DOMAIN — deliberately obvious and non-registrable (.example).
+// Replace in ONE place per file when the owner chooses the real domain:
+// here, app/sitemap.ts, and app/robots.ts (tracked in docs/CONTENT_CHECKLIST.md).
+export const SITE_URL = "https://kisi-farm-placeholder.example";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kisi-farm-placeholder.example"), // TODO: real domain pending owner decision (CONTENT_CHECKLIST)
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: "./" },
   title: {
     default: "Kisi — Where Every Chicken Has a Story",
     template: "%s · Kisi",
@@ -36,9 +42,34 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#org`,
+        name: "Kisi",
+        description:
+          "A poultry farm in southwestern Nigeria — home of the fictional Republic of Kisi storytelling world.",
+        url: SITE_URL,
+        knowsAbout: ["poultry farming", "egg production", "agriculture in Nigeria"],
+      },
+      {
+        "@type": "WebSite",
+        name: "Kisi — The Republic of Kisi",
+        url: SITE_URL,
+        publisher: { "@id": `${SITE_URL}/#org` },
+      },
+    ],
+  };
+
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Header />
         <main id="main" className="flex-1">
           {children}

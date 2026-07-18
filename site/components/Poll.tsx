@@ -56,7 +56,7 @@ export function Poll({
       aria-label={`Entertainment poll: ${question}`}
       className="rounded-2xl border border-kisi-gold-500/40 bg-white p-6"
     >
-      <p className="kicker text-kisi-gold-500">
+      <p className="kicker text-kisi-gold-700">
         Entertainment poll · fictional · non-binding
       </p>
       <h3 className="font-display mt-2 text-xl font-bold text-kisi-green-900">

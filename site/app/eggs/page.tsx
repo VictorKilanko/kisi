@@ -40,7 +40,7 @@ export default function EggsPage() {
         <div className="grid gap-6 sm:grid-cols-3">
           {eggCensus.map((c) => (
             <div key={c.period} className="rounded-2xl bg-white p-6 text-center shadow-sm">
-              <p className="kicker text-kisi-gold-500">{c.label}</p>
+              <p className="kicker text-kisi-gold-700">{c.label}</p>
               <p className="font-display mt-2 text-5xl font-black text-kisi-green-900">
                 {c.total}
               </p>

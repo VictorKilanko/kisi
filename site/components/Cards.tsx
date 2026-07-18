@@ -23,7 +23,7 @@ export function ChickenCard({ chicken }: { chicken: Chicken }) {
         </Link>
       </h3>
       {chicken.roleTitle && (
-        <p className="kicker mt-1 text-kisi-gold-500">{chicken.roleTitle}</p>
+        <p className="kicker mt-1 text-kisi-gold-700">{chicken.roleTitle}</p>
       )}
       <p className="mt-2 line-clamp-3 text-sm text-kisi-charcoal-600">
         {chicken.shortBio}
@@ -86,7 +86,7 @@ export function MilestoneCard({ milestone }: { milestone: EggMilestone }) {
       <div className="flex items-center gap-3">
         {chicken && <ChickenPortrait chicken={chicken} size={56} />}
         <div>
-          <p className="kicker text-kisi-gold-500">{TYPE_LABEL[milestone.type]}</p>
+          <p className="kicker text-kisi-gold-700">{TYPE_LABEL[milestone.type]}</p>
           <h3 className="font-display text-lg font-bold text-kisi-green-900">
             {chicken ? (
               <Link href={`/flock/${chicken.id}`} className="hover:underline">
@@ -147,7 +147,7 @@ export function SectionHeading({
 }) {
   return (
     <div className="mb-8">
-      <p className="kicker text-kisi-gold-500">{kicker}</p>
+      <p className="kicker text-kisi-gold-700">{kicker}</p>
       <h2 className="font-display mt-1 text-3xl font-bold text-kisi-green-900 sm:text-4xl">
         {title}
       </h2>

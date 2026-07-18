@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-24 text-center">
-      <p className="kicker text-kisi-gold-500">Error 404</p>
+      <p className="kicker text-kisi-gold-700">Error 404</p>
       <h1 className="font-display mt-3 text-4xl font-black text-kisi-green-900">
         This page has wandered off to dust-bathe
       </h1>

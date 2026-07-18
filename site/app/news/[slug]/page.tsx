@@ -43,8 +43,24 @@ export default async function ArticlePage({
     )
     .slice(0, 2);
 
+  // Fiction gets schema.org's SatiricalArticle type — machine-readable
+  // honesty; real farm announcements are plain Articles.
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": article.world === "fact" ? "Article" : "SatiricalArticle",
+    headline: article.headline,
+    description: article.standfirst,
+    datePublished: article.publishedAt,
+    author: { "@type": "Organization", name: `The Coop Times (${article.author.name})` },
+    isPartOf: { "@type": "CreativeWork", name: "The Republic of Kisi (fictional storytelling world)" },
+  };
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <p>
         <Link href="/news" className="text-sm font-semibold text-kisi-indigo-800 hover:underline">
           ← The Coop Times front page

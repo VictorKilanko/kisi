@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const BILL_STATUS: Record<string, { label: string; cls: string }> = {
   proposed: { label: "Proposed", cls: "bg-kisi-cream-200 text-kisi-charcoal-600" },
   "in-debate": { label: "In debate", cls: "bg-kisi-gold-300 text-kisi-charcoal-900" },
-  passed: { label: "Passed", cls: "bg-kisi-green-500 text-white" },
+  passed: { label: "Passed", cls: "bg-kisi-green-700 text-white" },
   rejected: { label: "Rejected", cls: "bg-kisi-earth-500 text-white" },
 };
 

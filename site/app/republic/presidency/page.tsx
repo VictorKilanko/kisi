@@ -37,7 +37,7 @@ export default function PresidencyPage() {
       <div className="mt-10 grid items-center gap-8 rounded-3xl border-2 border-kisi-gold-500 bg-white p-8 lg:grid-cols-[auto_1fr]">
         <ChickenPortrait chicken={president} size={220} framed />
         <div>
-          <p className="kicker text-kisi-gold-500">{president.honorific}</p>
+          <p className="kicker text-kisi-gold-700">{president.honorific}</p>
           <h2 className="font-display mt-1 text-3xl font-black text-kisi-green-900">
             {president.name} “{president.nickname}”
           </h2>
@@ -110,7 +110,7 @@ export default function PresidencyPage() {
         <ol className="grid gap-4 md:grid-cols-2">
           {presidentialDiary.map((d) => (
             <li key={d.day} className="rounded-2xl border border-kisi-green-900/10 bg-white p-5">
-              <h3 className="kicker text-kisi-gold-500">{d.day}</h3>
+              <h3 className="kicker text-kisi-gold-700">{d.day}</h3>
               <p className="mt-2 text-sm text-kisi-charcoal-600">{d.entry}</p>
             </li>
           ))}

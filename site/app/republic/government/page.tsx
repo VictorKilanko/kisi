@@ -37,7 +37,7 @@ export default function GovernmentPage() {
 
       {/* Org chart */}
       <section aria-labelledby="org-heading" className="mt-12">
-        <h2 id="org-heading" className="kicker text-kisi-gold-500">
+        <h2 id="org-heading" className="kicker text-kisi-gold-700">
           The Organisational Chart
         </h2>
         <div className="mt-4 overflow-x-auto rounded-2xl border border-kisi-indigo-800/15 bg-white p-6">
@@ -112,7 +112,7 @@ export default function GovernmentPage() {
                       <h3 className="font-display text-lg font-bold text-kisi-indigo-900">
                         {m.name}
                       </h3>
-                      <p className="kicker mt-1 text-kisi-gold-500">“{m.motto}”</p>
+                      <p className="kicker mt-1 text-kisi-gold-700">“{m.motto}”</p>
                     </div>
                     {minister && <ChickenPortrait chicken={minister} size={56} framed />}
                   </div>
