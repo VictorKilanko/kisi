@@ -10,53 +10,30 @@ type State =
   | { status: "error"; message: string };
 
 /**
- * The checkout flow, wired end-to-end but honest: the API refuses to create
- * sessions until payments are configured (and live keys are code-blocked
- * until the owner's legal status is confirmed), so this surfaces the real
- * "not yet accepting payments" state from the server rather than faking one.
- * With sandbox keys in .env.local it redirects to Paystack's hosted test
- * checkout — card data never touches this site.
+ * Support checkout — currently closed, and says so.
+ *
+ * The provider-agnostic payment layer lives in lib/payments and is ready to
+ * wire up, but this build is a static export with no server to hold secret
+ * keys, and the programme stays closed until the farm's legal status is
+ * confirmed. Rather than fake a flow, the button states the real position.
+ * Card data has never touched this site and never will — when payments open
+ * they run on the provider's hosted checkout.
  */
 export function SupportCheckout({ tier }: { tier: SupportTier }) {
   const [state, setState] = useState<State>({ status: "idle" });
   const [email, setEmail] = useState("");
 
-  async function begin() {
-    if (!email) {
+  function begin() {
+    if (!email.includes("@")) {
       setState({ status: "error", message: "Enter an email first — receipts need a home." });
       return;
     }
-    setState({ status: "working" });
-    try {
-      const res = await fetch("/api/support/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ tierId: tier.id, email }),
-      });
-      const json = (await res.json()) as {
-        url?: string;
-        error?: string;
-        reason?: string;
-      };
-      if (res.ok && json.url) {
-        window.location.assign(json.url); // hosted checkout — off-site by design
-        return;
-      }
-      if (res.status === 503) {
-        setState({
-          status: "unavailable",
-          reason:
-            "Not accepting payments yet — the programme opens after the " +
-            "legal review is complete. Nothing was charged or stored.",
-        });
-      } else if (res.status === 429) {
-        setState({ status: "error", message: "Too many attempts — please wait a minute." });
-      } else {
-        setState({ status: "error", message: "That didn't work — please check the email and try again." });
-      }
-    } catch {
-      setState({ status: "error", message: "Network hiccup — please try again." });
-    }
+    setState({
+      status: "unavailable",
+      reason:
+        `“${tier.name}” isn't open yet — the programme starts after the ` +
+        "legal review is complete. Nothing was charged or stored.",
+    });
   }
 
   return (

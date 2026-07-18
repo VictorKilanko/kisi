@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 type State =
@@ -15,40 +16,38 @@ const FIELD =
 export function OrderForm() {
   const [state, setState] = useState<State>({ status: "idle" });
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const d = new FormData(form);
-    setState({ status: "sending" });
-    try {
-      const res = await fetch("/api/orders", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: String(d.get("name") ?? ""),
-          contact: String(d.get("contact") ?? ""),
-          area: String(d.get("area") ?? ""),
-          crates: String(d.get("crates") ?? ""),
-          notes: String(d.get("notes") ?? ""),
-          company: String(d.get("company") ?? ""),
-        }),
-      });
-      const json = (await res.json()) as { ok?: boolean; note?: string; error?: string };
-      if (res.ok && json.ok) {
-        form.reset();
-        setState({ status: "done", note: json.note ?? "Thank you — we'll be in touch." });
-      } else {
-        setState({
-          status: "error",
-          message:
-            json.error === "rate-limited"
-              ? "That's a lot of orders at once — please wait a minute."
-              : "Something in the form didn't look right. Try again?",
-        });
-      }
-    } catch {
-      setState({ status: "error", message: "Network hiccup — please try again." });
+
+    // Honeypot: humans never fill this.
+    if (String(d.get("company") ?? "")) {
+      form.reset();
+      setState({ status: "done", note: "Thank you." });
+      return;
     }
+
+    const required = ["name", "contact", "area", "crates"] as const;
+    if (required.some((k) => !String(d.get(k) ?? "").trim())) {
+      setState({
+        status: "error",
+        message: "Please fill in your name, contact, area, and how many crates.",
+      });
+      return;
+    }
+
+    // Static site: there is no order inbox connected yet, so we point the
+    // customer at a route that actually reaches the farm instead of
+    // swallowing their order.
+    form.reset();
+    setState({
+      status: "done",
+      note:
+        "Our online order inbox isn't connected yet, so this enquiry " +
+        "wasn't delivered. Please reach us through the contact page and " +
+        "we'll sort your eggs out directly — sorry for the extra step.",
+    });
   }
 
   if (state.status === "done") {
@@ -61,13 +60,12 @@ export function OrderForm() {
           Enquiry sent
         </p>
         <p className="mt-2 text-sm text-kisi-charcoal-600">{state.note}</p>
-        <button
-          type="button"
-          onClick={() => setState({ status: "idle" })}
-          className="mt-4 text-sm font-semibold text-kisi-green-700 underline"
+        <Link
+          href="/visit"
+          className="mt-4 inline-block rounded-full bg-kisi-green-700 px-5 py-2.5 text-sm font-semibold text-kisi-cream-100 hover:bg-kisi-green-900"
         >
-          Send another
-        </button>
+          Contact the farm →
+        </Link>
       </div>
     );
   }
@@ -143,8 +141,10 @@ export function OrderForm() {
         )}
         {state.status === "idle" && (
           <span className="opacity-70">
-            This sends an enquiry, not an order. We confirm price and delivery
-            before you pay anything — and we never ask for card details here.
+            This is an enquiry, not an order — we confirm price and delivery
+            before you pay anything, and we never ask for card details here.
+            Our online inbox isn&apos;t connected yet, so you&apos;ll be
+            pointed to the contact page.
           </span>
         )}
       </p>

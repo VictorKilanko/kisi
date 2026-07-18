@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { articles, chickens, ministries } from "@/lib/content";
 
-const BASE = "https://kisi-farm-placeholder.example"; // TODO: real domain pending owner decision
+// Served as a GitHub Pages project site under the owner's custom domain.
+const BASE = "https://victorkilanko.com/kisi";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [

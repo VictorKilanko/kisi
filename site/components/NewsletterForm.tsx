@@ -16,40 +16,33 @@ type State =
 export function NewsletterForm() {
   const [state, setState] = useState<State>({ status: "idle" });
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    const email = String(data.get("email") ?? "");
-    const company = String(data.get("company") ?? "");
-    setState({ status: "sending" });
-    try {
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, company }),
-      });
-      const json = (await res.json()) as { ok?: boolean; note?: string; error?: string };
-      if (res.ok && json.ok) {
-        form.reset();
-        setState({
-          status: "done",
-          note:
-            json.note ??
-            "Signed up. (Preview mode: the list isn't live yet and nothing was stored.)",
-        });
-      } else {
-        setState({
-          status: "error",
-          message:
-            json.error === "rate-limited"
-              ? "Too many attempts — please wait a minute."
-              : "That email didn't look right. Try again?",
-        });
-      }
-    } catch {
-      setState({ status: "error", message: "Network hiccup — please try again." });
+
+    // Honeypot: humans never fill this.
+    if (String(data.get("company") ?? "")) {
+      form.reset();
+      setState({ status: "done", note: "Thank you." });
+      return;
     }
+
+    const email = String(data.get("email") ?? "").trim();
+    if (!email.includes("@")) {
+      setState({ status: "error", message: "That email didn't look right. Try again?" });
+      return;
+    }
+
+    // No mailing-list provider is connected and this is a static site, so
+    // the address goes nowhere. Say so plainly rather than faking a signup.
+    form.reset();
+    setState({
+      status: "done",
+      note:
+        "The newsletter isn't live yet — your address was NOT stored. " +
+        "Check back after launch.",
+    });
   }
 
   return (

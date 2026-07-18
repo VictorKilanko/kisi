@@ -12,40 +12,38 @@ type State =
 export function WellWishesForm() {
   const [state, setState] = useState<State>({ status: "idle" });
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    setState({ status: "sending" });
-    try {
-      const res = await fetch("/api/wellwishes", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: String(data.get("name") ?? ""),
-          message: String(data.get("message") ?? ""),
-          company: String(data.get("company") ?? ""),
-        }),
-      });
-      const json = (await res.json()) as { ok?: boolean; note?: string; error?: string };
-      if (res.ok && json.ok) {
-        form.reset();
-        setState({
-          status: "done",
-          note: json.note ?? "Thank you. The flock is glad you stopped.",
-        });
-      } else {
-        setState({
-          status: "error",
-          message:
-            json.error === "rate-limited"
-              ? "That's a lot of messages at once — please wait a minute."
-              : "Something in the form didn't look right. Try again?",
-        });
-      }
-    } catch {
-      setState({ status: "error", message: "Network hiccup — please try again." });
+
+    // Honeypot: humans never fill this. Bots get a success screen and nothing else.
+    if (String(data.get("company") ?? "")) {
+      form.reset();
+      setState({ status: "done", note: "Thank you." });
+      return;
     }
+
+    const name = String(data.get("name") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
+    if (!name || !message) {
+      setState({
+        status: "error",
+        message: "Please add your name and a message.",
+      });
+      return;
+    }
+
+    // The site is a static export with no server, so there is nowhere to
+    // deliver this yet. We say so rather than pretending it was sent.
+    form.reset();
+    setState({
+      status: "done",
+      note:
+        "The memorial wall isn't collecting messages yet, so this one " +
+        "wasn't saved — but the flock is glad you stopped. Come back when " +
+        "the wall opens.",
+    });
   }
 
   if (state.status === "done") {
@@ -121,8 +119,8 @@ export function WellWishesForm() {
         )}
         {state.status === "idle" && (
           <span className="opacity-70">
-            Messages are read by the farm before anything is added to the
-            memorial. Nothing appears on the site automatically.
+            The memorial wall isn&apos;t open yet — messages aren&apos;t being
+            collected or stored. Nothing appears on the site automatically.
           </span>
         )}
       </p>

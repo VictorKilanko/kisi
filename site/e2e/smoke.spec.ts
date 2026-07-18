@@ -63,7 +63,7 @@ test("support checkout refuses honestly while payments are unconfigured", async 
   await firstTier.getByPlaceholder("you@example.com").fill("visitor@example.com");
   await firstTier.getByRole("button", { name: /Begin support/ }).click();
   await expect(
-    firstTier.getByText(/Not accepting payments yet — the programme opens/),
+    firstTier.getByText(/isn't open yet — the programme starts/),
   ).toBeVisible();
 });
 

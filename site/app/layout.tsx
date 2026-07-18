@@ -17,7 +17,7 @@ const inter = Inter({
 // PLACEHOLDER DOMAIN — deliberately obvious and non-registrable (.example).
 // Replace in ONE place per file when the owner chooses the real domain:
 // here, app/sitemap.ts, and app/robots.ts (tracked in docs/CONTENT_CHECKLIST.md).
-export const SITE_URL = "https://kisi-farm-placeholder.example";
+export const SITE_URL = "https://victorkilanko.com/kisi";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
