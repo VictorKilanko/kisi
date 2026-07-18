@@ -110,6 +110,33 @@ above). As partial substitutes only, these were checked by hand:
 **None of this substitutes for `npm run lint && npm run typecheck && npm test &&
 npm run build`.** Treat the branch as unverified until those pass.
 
+### Hosting decision (2026-07-18)
+
+The owner chose **GitHub Pages**, not Vercel, served at **victorkilanko.com/kisi**.
+
+This works because `victorkilanko.com` is *already* a GitHub Pages site (confirmed by
+the `X-GitHub-Request-Id` header on its responses) attached to the
+`victorkilanko.github.io` repo. A **project repo** with Pages enabled automatically
+serves under that custom domain at `/<repo-name>` — the owner already runs
+`/Ini`, `/joseph`, and `/solacecare` this way.
+
+**The cost of that choice:** GitHub Pages is static-only. All five route handlers
+(`app/api/*`) had to be deleted, because `output: "export"` fails the build if any
+exist. In practice nothing was lost — none of them were connected to a store or
+inbox, so they validated input and threw it away. The same honest behaviour now
+runs client-side, and each form says plainly that it isn't collecting yet.
+
+**Gotchas worth remembering:**
+
+- `basePath: "/kisi"` is required, and it only auto-prefixes Next `<Link>` — a raw
+  `<a href>` needs the prefix written by hand. Prefer `<Link>`.
+- GitHub Pages runs Jekyll by default, which **silently drops directories starting
+  with an underscore** — including Next's `_next/`, i.e. every stylesheet and script.
+  The build must `touch out/.nojekyll` or the site deploys looking completely broken.
+- A **classic PAT cannot push `.github/workflows/*` without the `workflow` scope**,
+  and fine-grained tokens need explicit Pages permission to enable Pages via API.
+  Both steps were left for the owner to do through the web UI.
+
 ### Still to do
 
 - [ ] **Install Node 20+ and run the gates.** Everything below is downstream of this.
