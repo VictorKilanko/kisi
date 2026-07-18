@@ -312,7 +312,7 @@ export const chickens: Chicken[] = [
         "are considered more reliable than the official record, including by " +
         "the officials.",
     ],
-    friends: ["yeye-alaba", "dr-amara-featherwell"],
+    friends: ["yeye-alaba", "dr-amara-featherwell", "sisi-ngozi"],
     rivals: [],
     quotes: [
       { text: "The first one was harder.", context: "On egg No. 400" },
@@ -366,7 +366,7 @@ export const chickens: Chicken[] = [
         "rescue hen nobody expected to thrive — and became the ministry's " +
         "quiet proof of principle: 'welfare first, and the rest follows.'",
     ],
-    friends: ["quiet-grace", "mama-gold"],
+    friends: ["quiet-grace", "mama-gold", "pete-okpara"],
     rivals: [],
     quotes: [
       { text: "Here is what we know.", context: "Every flu-season briefing, without exception" },
@@ -477,7 +477,7 @@ export const chickens: Chicken[] = [
         "— 'Three Minutes with Quiet Grace,' text: a description of the " +
         "shade — and is the most reprinted article in the paper's history.",
     ],
-    friends: ["chi-chi", "dr-amara-featherwell"],
+    friends: ["chi-chi", "dr-amara-featherwell", "small-femi"],
     rivals: [],
     quotes: [],
     achievements: [
@@ -725,6 +725,284 @@ export const chickens: Chicken[] = [
       "Keeper of the rotation formula (contents undisclosed)",
     ],
     colors: { body: "#8a3e1f", comb: "#b3261e", accent: "#f0c75e", bg: "#f1e8d4" },
+    sponsorable: true,
+  },
+  {
+    id: "pete-okpara",
+    name: "Pete Okpara",
+    fullName: "Peter Chukwuemeka Okpara",
+    nickname: "The Fence Walker",
+    honorific: "Honourable Minister",
+    sex: "rooster",
+    ageNote: "Adult rooster",
+    status: "active",
+    layingStatus: "n-a",
+    roleTitle: "Minister of Security",
+    branch: "cabinet",
+    ministryId: "coop-security",
+    partyId: "ppp",
+    personality: ["blunt", "watchful", "protective", "allergic to excuses"],
+    favoriteFood: "Whatever is left after everyone else has eaten",
+    shortBio:
+      "The Republic's Minister of Security, appointed the week after Bantu " +
+      "died. He walks the fence line twice a night, counts every bird by " +
+      "name, and has promised the flock he will not lose another one.",
+    bio: [
+      "Pete Okpara spent years as an ordinary citizen with an unusual " +
+        "habit: he could not sleep until he had walked the whole perimeter " +
+        "and looked at it himself. Neighbours found this funny. The night " +
+        "the monitor lizard came through the drainage channel, Okpara was " +
+        "the one already awake, already outside, already shouting.",
+      "He was too late for Bantu. He has never once said otherwise, and he " +
+        "refuses the word 'blameless' when it is offered to him. When the " +
+        "President appointed him Minister of Security four days later, his " +
+        "acceptance speech was two sentences long: 'I know what the job " +
+        "is. Ask me again in a year.'",
+      "Since then the ministry has changed shape around him. The nightly " +
+        "headcount is now read aloud, by name, at the door of every coop — " +
+        "his idea, and unpopular for about three days until the flock " +
+        "realised what it felt like to hear your own name confirmed safe. " +
+        "The drainage channel is barred. The fence line is patrolled in " +
+        "two shifts. Sergeant Danladi runs the second one.",
+      "He keeps Bantu's whistle-feather in his office. He does not discuss " +
+        "it. Everyone knows it is there.",
+    ],
+    friends: ["sergeant-danladi", "dr-amara-featherwell"],
+    rivals: [],
+    quotes: [
+      {
+        text: "I know what the job is. Ask me again in a year.",
+        context: "Complete acceptance speech on appointment as Minister of Security",
+      },
+      {
+        text: "Count them by name. A number can be wrong quietly. A name cannot.",
+        context: "Instituting the nightly roll call",
+      },
+      {
+        text: "It is still out there. That is the whole briefing.",
+        context: "Weekly security update to the Assembly",
+      },
+    ],
+    achievements: [
+      "Instituted the nightly roll call by name",
+      "Barred the drainage channel and the east fence gap",
+      "Two-shift perimeter patrol, running since the week of the attack",
+    ],
+    colors: { body: "#23305e", comb: "#b3261e", accent: "#55534b", bg: "#f1e8d4" },
+    sponsorable: true,
+  },
+  {
+    id: "bantu",
+    name: "Bantu",
+    fullName: "Bantu",
+    nickname: "The Night Whistle",
+    sex: "rooster",
+    ageNote: "Adult rooster",
+    status: "memorial",
+    layingStatus: "n-a",
+    roleTitle: "Night Watchman of Coop Two",
+    branch: "none",
+    personality: ["steady", "gentle", "funny", "brave when it counted"],
+    favoriteFood: "Palm kernel pieces, cracked slowly, always shared",
+    shortBio:
+      "Night watchman of Coop Two, who woke the whole flock the night the " +
+      "monitor lizard came through the drainage channel — and stood between " +
+      "it and the chicks until they were clear. The Republic has not been " +
+      "the same since.",
+    bio: [
+      "Bantu was not a minister, an athlete, or a member of any party. He " +
+        "was the bird who checked the door. Every night for as long as " +
+        "anyone can remember, he made the last round of Coop Two, looked " +
+        "at the latch, and settled on the low rail nearest the entrance — " +
+        "the coldest spot in the building, and the closest one to the " +
+        "outside.",
+      "He had a whistle in his call, a soft two-note thing he used to " +
+        "settle nervous chicks. Parents used it as a lullaby. Half the " +
+        "young birds in the Republic learned to sleep to that sound.",
+      "On the night of the attack he heard the drainage grate move before " +
+        "anyone else did. He gave the alarm — not the soft whistle, the " +
+        "other call, the one nobody had ever heard him use — and he did " +
+        "not leave the doorway of Coop Two while the chicks went out the " +
+        "far side. Every one of them got out. Sergeant Danladi and Pete " +
+        "Okpara reached him within a minute. A minute was not enough.",
+      "He is buried under the mango tree, at the shady end, by unanimous " +
+        "resolution of the Coop Assembly — the only vote in the Republic's " +
+        "history taken without debate. Mama Gold spoke. The Chief Justice " +
+        "closed with the words she uses for every session, and for once " +
+        "nobody moved when she said them: 'Go and share something.'",
+      "The Republic marks his rest with a whistle at dusk. If you are " +
+        "visiting this page, the flock would be glad of a word from you.",
+    ],
+    friends: ["sergeant-danladi"],
+    rivals: [],
+    family: [
+      {
+        relation: "The chicks of Coop Two",
+        note: "All twelve of them, who got out the far side. They are why.",
+      },
+    ],
+    quotes: [
+      {
+        text: "Door's good. Go to sleep.",
+        context: "Every night, to anyone still awake in Coop Two",
+      },
+    ],
+    achievements: [
+      "Night Watchman of Coop Two — every night, without being asked",
+      "Twelve chicks out the far side",
+      "The whistle at dusk, now a national custom",
+    ],
+    colors: { body: "#55534b", comb: "#8a3e1f", accent: "#f0c75e", bg: "#f1e8d4" },
+    sponsorable: false,
+  },
+  {
+    id: "sergeant-danladi",
+    name: "Sergeant Danladi",
+    fullName: "Danladi Sulaiman",
+    nickname: "Second Shift",
+    sex: "rooster",
+    ageNote: "Young adult rooster",
+    status: "recovering",
+    layingStatus: "n-a",
+    roleTitle: "Coop Guard, Second Shift",
+    branch: "agency",
+    personality: ["dutiful", "quiet", "stubborn", "carrying something"],
+    favoriteFood: "Dry maize, eaten standing up, on duty",
+    shortBio:
+      "The guard who reached Coop Two first and has walked the same fence " +
+      "line every night since — including the nights the Ministry of Health " +
+      "formally ordered him to rest.",
+    bio: [
+      "Danladi was Bantu's shift partner. The younger bird took the far " +
+        "end of the perimeter, the older one took the coops, and they met " +
+        "at the water tank halfway through the night to complain about the " +
+        "cold. This arrangement lasted a long time and suited them both.",
+      "He was at the water tank when the alarm went up. He got a wing " +
+        "injury going through the gap in the fence rather than around it, " +
+        "which Dr. Amara has described in her bulletin as 'the sort of " +
+        "decision I would like never to have to treat again, and would " +
+        "expect him to make again.'",
+      "He is on light duties and ignores this roughly twice a week. The " +
+        "Minister of Security has stopped pretending to be surprised and " +
+        "has instead simply shortened his patrol route, which Danladi has " +
+        "noticed and has chosen, for now, not to mention.",
+      "He does the whistle at dusk. He has not missed one.",
+    ],
+    friends: ["bantu", "pete-okpara"],
+    rivals: [],
+    quotes: [
+      {
+        text: "We met at the water tank. Every night. That was the arrangement.",
+        context: "To The Coop Times, on his shift partner",
+      },
+      { text: "I am fine. The fence is not.", context: "Declining light duties, repeatedly" },
+    ],
+    achievements: [
+      "First responder on the night of the attack",
+      "Keeper of the whistle at dusk",
+      "Second Shift, unbroken",
+    ],
+    colors: { body: "#8a3e1f", comb: "#b3261e", accent: "#2e7d46", bg: "#faf5e9" },
+    sponsorable: true,
+  },
+  {
+    id: "sisi-ngozi",
+    name: "Sisi Ngozi",
+    fullName: "Ngozi Adaeze Okonkwo",
+    nickname: "The Mango Tree Keeper",
+    sex: "hen",
+    ageNote: "Adult hen",
+    status: "active",
+    layingStatus: "laying",
+    branch: "none",
+    personality: ["warm", "practical", "unsentimental in public", "the first to arrive"],
+    favoriteFood: "Groundnut pieces",
+    shortBio:
+      "Keeper of the mango tree ground where Bantu rests, organiser of the " +
+      "dusk whistle, and the bird who quietly makes sure no grieving chick " +
+      "in the Republic sits by themselves.",
+    bio: [
+      "Sisi Ngozi organised the burial in under an afternoon, which anyone " +
+        "who has tried to organise anything in the Republic will recognise " +
+        "as a miracle of administration. She did it by not asking " +
+        "permission from a single committee.",
+      "She keeps the ground under the mango tree — clears it, marks it, " +
+        "and sits there most evenings, which means that anyone who wants " +
+        "to sit there and say nothing has company available and no " +
+        "obligation to use it. Several of the Coop Two chicks have taken " +
+        "this up as a habit.",
+      "She is brisk about all of it in public and will change the subject " +
+        "if thanked. Her one concession to ceremony is the dusk whistle, " +
+        "which she and Sergeant Danladi hold together, and which she has " +
+        "described, once, as 'the flock saying goodnight to him back.'",
+    ],
+    friends: ["mama-gold"],
+    rivals: [],
+    quotes: [
+      {
+        text: "Nobody sits under that tree alone unless they want to. That is the only rule.",
+        context: "On the mango tree ground",
+      },
+      {
+        text: "The flock says goodnight to him back. That is all it is.",
+        context: "On the dusk whistle",
+      },
+    ],
+    achievements: [
+      "Organised the burial under the mango tree in a single afternoon",
+      "Keeper of the mango tree ground",
+      "Co-founder of the dusk whistle",
+    ],
+    colors: { body: "#c05621", comb: "#b3261e", accent: "#2e7d46", bg: "#f1e8d4" },
+    sponsorable: true,
+  },
+  {
+    id: "small-femi",
+    name: "Small Fẹ́mi",
+    fullName: "Olúfẹ́mi",
+    nickname: "The Far Side",
+    sex: "rooster",
+    ageNote: "Chick",
+    status: "active",
+    layingStatus: "not-yet",
+    branch: "none",
+    personality: ["small", "watchful", "braver than he thinks", "asks hard questions"],
+    favoriteFood: "Crumbled maize, softened",
+    shortBio:
+      "One of the twelve chicks who went out the far side of Coop Two. He " +
+      "was the last one through, and he is the one who asks the questions " +
+      "the adults are avoiding.",
+    bio: [
+      "Small Fẹ́mi was the last of the twelve out of Coop Two, because he " +
+        "went back for a smaller chick who had frozen. He does not think " +
+        "this is worth mentioning and becomes irritable when it is " +
+        "mentioned, which is often.",
+      "He sleeps badly and has been given a spot at Grace's side, which he " +
+        "accepted on the condition that everyone stop making a fuss. He has " +
+        "asked Minister Okpara three separate times, in public, whether the " +
+        "lizard is still out there. He has received the same answer each " +
+        "time, and he has said each time that he prefers a true answer to a " +
+        "kind one.",
+      "He has announced that he intends to be a coop guard. Sergeant " +
+        "Danladi has told him to finish growing first. He has agreed to " +
+        "this in principle and is already walking the fence line on " +
+        "Saturdays, at a distance, where he thinks nobody can see him.",
+    ],
+    friends: ["quiet-grace"],
+    rivals: [],
+    quotes: [
+      {
+        text: "I would rather have a true answer than a kind one.",
+        context: "To the Minister of Security, in the Assembly gallery",
+      },
+      { text: "I'm not small. I'm the far side.", context: "On his nickname" },
+    ],
+    achievements: [
+      "Went back for the chick who froze",
+      "Last of the twelve out the far side",
+      "Saturday fence walker (unofficial, and everybody can see him)",
+    ],
+    colors: { body: "#d9a02b", comb: "#c05621", accent: "#23305e", bg: "#faf5e9" },
     sponsorable: true,
   },
 ];

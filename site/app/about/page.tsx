@@ -106,16 +106,16 @@ export default function AboutPage() {
       {/* Pointers */}
       <section className="mt-16 grid gap-6 md:grid-cols-2">
         <Link
-          href="/agric-city"
+          href="/shop"
           className="rounded-2xl border border-kisi-green-900/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
         >
           <h2 className="font-display text-xl font-bold text-kisi-green-900">
-            The bigger dream: Kisi Agric City →
+            Order our eggs →
           </h2>
           <p className="mt-2 text-sm text-kisi-charcoal-600">
-            The long-term vision for a diversified agricultural city — with
-            every plan honestly labeled as operating, in development, or
-            proposed.
+            Collected by hand every morning and packed the same day. Tell us
+            what you need and we&apos;ll confirm price and delivery for your
+            area.
           </p>
         </Link>
         <Link

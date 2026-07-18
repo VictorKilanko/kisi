@@ -4,11 +4,13 @@ const FOOTER_LINKS = [
   {
     heading: "The Republic",
     links: [
-      { href: "/flock", label: "Meet the Flock" },
-      { href: "/republic/presidency", label: "The Presidency" },
+      { href: "/flock", label: "Meet the Chickens" },
+      { href: "/republic/presidency", label: "The President" },
       { href: "/republic/assembly", label: "Coop Assembly" },
       { href: "/news", label: "The Coop Times" },
       { href: "/republic/sports", label: "Sports" },
+      { href: "/most-wanted", label: "Most Wanted" },
+      { href: "/bantu", label: "Remembering Bantu" },
     ],
   },
   {
@@ -16,6 +18,7 @@ const FOOTER_LINKS = [
     links: [
       { href: "/about", label: "About Kisi" },
       { href: "/eggs", label: "Egg Life" },
+      { href: "/shop", label: "Order Eggs" },
       { href: "/visit", label: "Visit & Contact" },
       { href: "/support", label: "Support the Chickens" },
     ],

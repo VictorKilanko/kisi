@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     template: "%s · Kisi",
   },
   description:
-    "Kisi is a real poultry farm in southwestern Nigeria — home of the " +
-    "Republic of Kisi, a fictional chicken nation with a President, a Coop " +
-    "Assembly, a national newspaper, and a flock of unforgettable citizens.",
+    "Kisi is a poultry farm in southwestern Nigeria — and home of the " +
+    "Republic of Kisi, a chicken nation with a President, a Coop Assembly, " +
+    "a national newspaper, and a flock of unforgettable citizens.",
   openGraph: {
     siteName: "Kisi — The Republic of Kisi",
     type: "website",
@@ -50,7 +50,7 @@ export default function RootLayout({
         "@id": `${SITE_URL}/#org`,
         name: "Kisi",
         description:
-          "A poultry farm in southwestern Nigeria — home of the fictional Republic of Kisi storytelling world.",
+          "A poultry farm in southwestern Nigeria — home of the Republic of Kisi.",
         url: SITE_URL,
         knowsAbout: ["poultry farming", "egg production", "agriculture in Nigeria"],
       },

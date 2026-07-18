@@ -94,26 +94,39 @@ export const ministries: Ministry[] = [
   },
   {
     id: "coop-security",
-    name: "Ministry of Coop Security",
-    shortName: "Coop Security",
-    ministerId: null,
-    actingNote:
-      "Led by the National Security Adviser in an acting capacity. The " +
-      "ministry declines to confirm or deny the existence of the hawk.",
-    motto: "Vigilance at Dusk",
+    name: "Ministry of Security",
+    shortName: "Security",
+    ministerId: "pete-okpara",
+    motto: "Every Bird Counted, By Name",
     responsibilities: [
-      "Perimeter integrity and the nightly headcount",
-      "Predator early-warning (the geese have been consulted)",
-      "Door-closing ceremonies at sunset",
-      "Classified matters, which is to say, the hawk",
+      "Perimeter integrity and the nightly roll call",
+      "The hunt for the monitor lizard",
+      "Predator early-warning and the alarm call network",
+      "Drainage grates, fence gaps, and door-closing at sunset",
+      "Escort and cover for the chicks of Coop Two",
     ],
     projects: [
       {
-        name: "Coop Security Modernization Bill (support)",
-        status: "announced",
+        name: "The Bantu Protocol",
+        status: "ongoing",
         blurb:
-          "Technical support for the Assembly's flagship security " +
-          "legislation, including a feasibility study on louder alarm calls.",
+          "Every bird counted aloud, by name, at the door of every coop, " +
+          "every night. Named for the watchman of Coop Two. Unpopular for " +
+          "three days; now the sound the Republic sleeps to.",
+      },
+      {
+        name: "Drainage and fence hardening",
+        status: "completed",
+        blurb:
+          "The channel the lizard used is barred and the east fence gap is " +
+          "closed. The ministry considers this necessary and insufficient.",
+      },
+      {
+        name: "The bounty",
+        status: "ongoing",
+        blurb:
+          "A standing reward for information leading to the capture of the " +
+          "monitor lizard, posted at every coop and on this website.",
       },
     ],
   },

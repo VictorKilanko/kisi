@@ -5,22 +5,24 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const NAV = [
-  { href: "/flock", label: "Meet the Flock" },
+  { href: "/flock", label: "Meet the Chickens" },
   {
     label: "The Republic",
     children: [
-      { href: "/republic", label: "About the Republic" },
-      { href: "/republic/presidency", label: "The Presidency" },
-      { href: "/republic/government", label: "Government & Cabinet" },
-      { href: "/republic/assembly", label: "Coop Assembly" },
+      { href: "/republic", label: "What is the Republic?" },
+      { href: "/republic/presidency", label: "The President" },
+      { href: "/republic/government", label: "The Government" },
+      { href: "/republic/assembly", label: "The Coop Assembly" },
       { href: "/republic/sports", label: "Sports" },
-      { href: "/republic/social", label: "Social Life" },
-      { href: "/republic/stories", label: "Story Arcs" },
-      { href: "/republic/map", label: "The Farm Map (3D)" },
+      { href: "/republic/social", label: "Life & Parties" },
+      { href: "/republic/stories", label: "Big Stories" },
+      { href: "/republic/map", label: "Walk the Farm (3D)" },
     ],
   },
-  { href: "/news", label: "The Coop Times" },
-  { href: "/eggs", label: "Egg Life" },
+  { href: "/news", label: "News" },
+  { href: "/most-wanted", label: "Most Wanted" },
+  { href: "/eggs", label: "Eggs" },
+  { href: "/shop", label: "Shop" },
   {
     label: "The Farm",
     children: [

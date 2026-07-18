@@ -10,11 +10,10 @@ test("home page renders the hero, ticker, and dashboard", async ({ page }) => {
   await expect(page.getByText("National Egg Census").first()).toBeVisible();
 });
 
-test("a chicken profile shows story, badges, and relationships", async ({ page }) => {
+test("a chicken profile shows story, status, and relationships", async ({ page }) => {
   await page.goto("/flock/chi-chi");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Chidinma");
-  await expect(page.getByText("Sample content").first()).toBeVisible();
-  await expect(page.getByText("Republic fiction").first()).toBeVisible();
+  await expect(page.getByText("Active citizen").first()).toBeVisible();
   await expect(page.getByRole("heading", { name: "The story so far" })).toBeVisible();
   // relationship link to Quiet Grace resolves
   await expect(
@@ -24,10 +23,35 @@ test("a chicken profile shows story, badges, and relationships", async ({ page }
 
 test("flock directory filters by search", async ({ page }) => {
   await page.goto("/flock");
-  await expect(page.getByText("All 12 citizens")).toBeVisible();
+  await expect(page.getByText("All 17 citizens")).toBeVisible();
   await page.getByRole("searchbox").fill("iron feathers");
-  await expect(page.getByText("1 of 12 citizens")).toBeVisible();
+  await expect(page.getByText("1 of 17 citizens")).toBeVisible();
   await expect(page.getByRole("link", { name: /Full profile of Halima/ })).toBeVisible();
+});
+
+test("the most wanted notice carries the bounty and a safety warning", async ({ page }) => {
+  await page.goto("/most-wanted");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Most Wanted");
+  await expect(page.getByText("500,000 grains").first()).toBeVisible();
+  await expect(page.getByText("Do not approach it").first()).toBeVisible();
+});
+
+test("visitors can leave a message for Bantu", async ({ page }) => {
+  await page.goto("/bantu");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Bantu");
+  const form = page.getByRole("form", { name: "Leave a message for Bantu" });
+  await form.getByLabel("Your name").fill("A visitor");
+  await form.getByLabel("Your message").fill("Thank you for the twelve.");
+  await form.getByRole("button", { name: /Leave your message/ }).click();
+  await expect(page.getByText("Message received")).toBeVisible();
+});
+
+test("the shop takes an enquiry rather than a payment", async ({ page }) => {
+  await page.goto("/shop");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Order our eggs");
+  await expect(
+    page.getByText(/sends an enquiry, not an order/).first(),
+  ).toBeVisible();
 });
 
 test("support checkout refuses honestly while payments are unconfigured", async ({

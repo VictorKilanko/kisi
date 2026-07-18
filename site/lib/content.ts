@@ -127,6 +127,13 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "A record that fell, a rivalry that retired, and a champion who " +
       "declined to wait for the weather.",
   },
+  "the-drain": {
+    title: "The Drain",
+    summary:
+      "A track in the soft ground, a grate that moved at midnight, twelve " +
+      "chicks out the far side — and the watchman who did not follow them. " +
+      "The Republic's ongoing story, still without an ending.",
+  },
   "flu-season": {
     title: "Flu Season, Handled",
     summary:

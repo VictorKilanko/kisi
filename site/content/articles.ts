@@ -10,6 +10,84 @@ import type { Article } from "@/lib/schemas";
  */
 export const articles: Article[] = [
   {
+    id: "bantu-coop-two",
+    headline: "BANTU IS GONE. TWELVE CHICKS ARE NOT.",
+    standfirst:
+      "The night watchman of Coop Two heard the drainage grate move, gave " +
+      "the alarm, and did not leave the doorway. The Republic is counting " +
+      "what he saved.",
+    category: "society",
+    world: "fiction",
+    publishedAt: "2026-07-10",
+    author: { name: "Kọ́lápọ̀ Ọ̀nàbánjọ", title: "Chief Correspondent" },
+    body: [
+      "There is a way to write this story that makes it bearable, and this " +
+        "newspaper is not going to look for it. Bantu, night watchman of " +
+        "Coop Two, was killed shortly after midnight by the monitor lizard " +
+        "that has been testing our fence line since the start of the wet " +
+        "season. He was doing his job. He had always been doing his job, " +
+        "every night, for years, and most of the Republic never thought " +
+        "about it once.",
+      "He heard the grate move before anyone. He gave the alarm — the loud " +
+        "one, the one none of us had ever heard from him — and then he " +
+        "stood in the doorway of Coop Two and stayed there while the chicks " +
+        "went out the far side. All twelve of them got out. The last one " +
+        "out was Small Fẹ́mi, who had gone back for a smaller chick that " +
+        "had frozen, and who does not wish to discuss it.",
+      "Sergeant Danladi reached him within a minute, through the gap in the " +
+        "fence rather than around it, which is why he is now on light " +
+        "duties and ignoring them. Pete Okpara arrived seconds later. " +
+        "Neither bird has said very much since.",
+      "The Assembly voted to bury him under the mango tree without debate — " +
+        "the only such vote in our history. Sisi Ngozi organised the whole " +
+        "thing in an afternoon by not asking a single committee. Mama Gold " +
+        "spoke. The Chief Justice closed as she always closes: 'Go and " +
+        "share something.' Nobody moved.",
+      "The flock now whistles at dusk, which is the sound he used to settle " +
+        "frightened chicks. Half the young birds in this Republic learned " +
+        "to sleep to it. They are teaching it to each other.",
+    ],
+    relatedChickenIds: ["bantu", "sergeant-danladi", "pete-okpara", "small-femi", "sisi-ngozi"],
+    relatedMinistryIds: ["coop-security"],
+  },
+  {
+    id: "bounty-on-the-drain",
+    headline: "500,000 GRAINS: ASSEMBLY PUTS A BOUNTY ON THE DRAIN",
+    standfirst:
+      "A unanimous vote, seconded by the Leader of the Opposition herself, " +
+      "and a new Minister of Security with a two-sentence acceptance speech.",
+    category: "politics",
+    world: "fiction",
+    publishedAt: "2026-07-15",
+    author: { name: "Assembly Desk", title: "The Coop Times" },
+    body: [
+      "The Coop Assembly has voted a standing bounty of 500,000 grains, " +
+        "drawn from the National Feed Budget, for information leading to " +
+        "the capture of the monitor lizard the Republic has taken to " +
+        "calling the Drain. The vote was unanimous. The Leader of the " +
+        "Opposition seconded the motion herself and declined to demand a " +
+        "recount, which those present described as the most unsettling " +
+        "moment of the session.",
+      "Pete Okpara was sworn in as Minister of Security four days after the " +
+        "attack. His acceptance speech, in its entirety: 'I know what the " +
+        "job is. Ask me again in a year.' He then left the chamber to walk " +
+        "the fence line, which observers noted was either a statement of " +
+        "intent or simply the time of day he does that.",
+      "The ministry has barred the drainage channel, closed the east fence " +
+        "gap, and instituted what is formally called the Bantu Protocol: " +
+        "every bird counted aloud, by name, at the door of every coop, " +
+        "every night. It was unpopular for three days. It is now the sound " +
+        "the Republic goes to sleep to.",
+      "Minister Okpara's weekly briefing to the Assembly has so far " +
+        "consisted of one sentence each week. 'It is still out there. That " +
+        "is the whole briefing.' Asked by Small Fẹ́mi from the public " +
+        "gallery whether that was the truth or a kindness, the Minister " +
+        "said it was the truth, and that the chick was right to ask.",
+    ],
+    relatedChickenIds: ["pete-okpara", "halima-iron-feathers", "small-femi", "bantu"],
+    relatedMinistryIds: ["coop-security", "feed-agriculture"],
+  },
+  {
     id: "chi-chi-first-egg",
     headline: "CHI-CHI LAYS FIRST EGG; REPUBLIC DECLARES PUBLIC HOLIDAY",
     standfirst:

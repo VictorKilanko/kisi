@@ -243,4 +243,73 @@ export const timelineEvents: TimelineEvent[] = [
       "loudest event in national memory; the minister misses it, doing " +
       "rounds. Her bulletin that week: 'Resume normal life. Wash your feet.'",
   },
+
+  /* ------------------------------------------------ the monitor lizard */
+  {
+    id: "lizard-first-sighting",
+    chickenIds: ["sergeant-danladi"],
+    date: "2026-06-22",
+    arcId: "the-drain",
+    world: "fiction",
+    type: "custom",
+    title: "Something in the drainage channel",
+    body:
+      "Second shift reports a track in the soft ground by the east fence: " +
+      "clawmarks with a drag between them. It is driven off twice more " +
+      "over the following fortnight. Nobody yet calls it anything.",
+  },
+  {
+    id: "lizard-attack",
+    chickenIds: ["bantu", "sergeant-danladi", "pete-okpara", "small-femi"],
+    date: "2026-07-09",
+    arcId: "the-drain",
+    world: "fiction",
+    type: "custom",
+    title: "The night of Coop Two",
+    body:
+      "The grate moves shortly after midnight. Bantu gives the alarm and " +
+      "holds the doorway while twelve chicks go out the far side. Every " +
+      "one of them gets out. Danladi reaches him in under a minute.",
+    articleId: "bantu-coop-two",
+  },
+  {
+    id: "lizard-burial",
+    chickenIds: ["bantu", "sisi-ngozi", "mama-gold", "yeye-alaba"],
+    date: "2026-07-11",
+    arcId: "the-drain",
+    world: "fiction",
+    type: "social",
+    title: "Under the mango tree, without debate",
+    body:
+      "The Assembly votes his resting place without a single speech against " +
+      "— the only such vote in the Republic's history. Sisi Ngozi organises " +
+      "it in an afternoon. The dusk whistle begins that evening.",
+  },
+  {
+    id: "okpara-appointed",
+    chickenIds: ["pete-okpara", "adedoyin-mama-decree"],
+    date: "2026-07-13",
+    arcId: "the-drain",
+    world: "fiction",
+    type: "appointment",
+    title: "A two-sentence acceptance speech",
+    body:
+      "Pete Okpara is sworn in as Minister of Security. 'I know what the " +
+      "job is. Ask me again in a year.' He institutes the Bantu Protocol " +
+      "the same night: every bird counted aloud, by name.",
+  },
+  {
+    id: "the-bounty",
+    chickenIds: ["pete-okpara", "halima-iron-feathers"],
+    date: "2026-07-15",
+    arcId: "the-drain",
+    world: "fiction",
+    type: "custom",
+    title: "500,000 grains",
+    body:
+      "The Assembly posts a standing bounty for information leading to the " +
+      "lizard's capture. Unanimous; seconded by the Leader of the " +
+      "Opposition, who declines to demand a recount.",
+    articleId: "bounty-on-the-drain",
+  },
 ];

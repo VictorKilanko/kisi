@@ -345,18 +345,25 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     residentIds: [],
   },
   {
-    id: "agric-city-zone",
-    name: "Agric City Expansion Zone",
+    id: "drainage-channel",
+    name: "The Drainage Channel",
     kind: "zone",
-    world: "vision",
+    world: "mixed",
     x: 86,
     y: 6,
     description:
-      "The hazy northern horizon where the long-term dream lives: feed " +
-      "mill, crops, processing, training, agritourism. Clearly labeled " +
-      "vision — nothing here exists yet.",
-    links: [{ href: "/agric-city", label: "The Agric City vision" }],
-    residentIds: [],
+      "Where the monitor lizard came through on the night of 9 July. The " +
+      "grate is barred now and the second-shift patrol passes it twice an " +
+      "hour, but no bird lingers here after dark.",
+    realism:
+      "Heavy wet-season rainfall needs somewhere to go. Open channels keep " +
+      "coops dry — and are exactly the soft, covered route a predator uses, " +
+      "which is why they get barred and patrolled.",
+    links: [
+      { href: "/most-wanted", label: "The Most Wanted notice" },
+      { href: "/republic/government/coop-security", label: "Ministry of Security" },
+    ],
+    residentIds: ["pete-okpara", "sergeant-danladi"],
   },
 ];
 

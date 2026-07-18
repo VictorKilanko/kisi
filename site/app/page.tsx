@@ -7,6 +7,7 @@ import {
 } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { WantedPoster } from "@/components/WantedPoster";
 import {
   articles,
   chickens,
@@ -20,6 +21,7 @@ import {
 export default function Home() {
   const president = getChicken("adedoyin-mama-decree");
   const featured = getChicken("chi-chi");
+  const bantu = getChicken("bantu");
   const latestNews = articles.slice(0, 3);
   const latestMilestones = eggMilestones.slice(0, 3);
   const census = eggCensus[eggCensus.length - 1];
@@ -228,6 +230,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* MOST WANTED + BANTU */}
+      <section className="mx-auto max-w-6xl px-4 py-12">
+        <div className="grid items-start gap-8 lg:grid-cols-[1.1fr_1fr]">
+          <WantedPoster />
+
+          <div className="rounded-3xl border-2 border-kisi-gold-500 bg-white p-8">
+            <p className="kicker text-kisi-charcoal-600">In loving memory</p>
+            <div className="mt-4 flex flex-wrap items-center gap-5">
+              <ChickenPortrait chicken={bantu} size={110} framed />
+              <div>
+                <h2 className="font-display text-2xl font-black text-kisi-green-900">
+                  Bantu
+                </h2>
+                <p className="kicker mt-0.5 text-kisi-gold-700">
+                  Night Watchman of Coop Two
+                </p>
+              </div>
+            </div>
+            <p className="mt-5 text-kisi-charcoal-600">
+              He heard the grate move first. He gave the alarm, then stood in
+              the doorway until every one of the twelve chicks was out the far
+              side. All twelve got out. The flock whistles at dusk for him now.
+            </p>
+            <p className="mt-4 text-kisi-charcoal-600">
+              If you would like to say something to Bantu — or to the chicks he
+              saved — there is a place for it.
+            </p>
+            <Link
+              href="/bantu"
+              className="mt-6 inline-block rounded-full bg-kisi-green-700 px-6 py-3 font-semibold text-kisi-cream-100 hover:bg-kisi-green-900"
+            >
+              Send your well-wishes →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FARM MAP TEASER */}
       <section className="mx-auto max-w-6xl px-4 pb-8">
         <div className="grid items-center gap-8 rounded-3xl bg-kisi-indigo-800 p-8 text-kisi-cream-100 lg:grid-cols-[1fr_auto]">
@@ -239,8 +278,9 @@ export default function Home() {
             <p className="mt-3 max-w-xl text-kisi-cream-100/85">
               Explore the farm in interactive 3D — from the foot-bath at the
               gate to the Presidential Coop, the Assembly, the sports field,
-              and the hazy Agric City horizon. Every building opens its own
-              story. A fast 2D map is built in for slower connections.
+              and the drainage channel the Ministry of Security would rather
+              you didn&apos;t linger by. Every building opens its own story. A
+              fast 2D map is built in for slower connections.
             </p>
             <Link
               href="/republic/map"
@@ -293,14 +333,12 @@ export default function Home() {
       <section className="bg-kisi-green-900 py-16 text-kisi-cream-100">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="font-display mt-3 text-3xl font-bold sm:text-4xl">
-            Behind the Republic: a real farm
+            Behind the Republic: a working farm
           </h2>
           <p className="mt-4 max-w-2xl text-kisi-cream-100/85">
-            The satire is fiction; the birds, their care, and their eggs are
-            real. Kisi is a working poultry farm in southwestern Nigeria,
-            welfare-first and honestly documented — where a fact isn&apos;t
-            verified yet, you&apos;ll see a placeholder, never an invention.
-            And the long-term dream is bigger still: the Kisi Agric City.
+            Kisi is a poultry farm in southwestern Nigeria. The hens are real,
+            their care is real, and so are the eggs — which you can order and
+            eat, having first read about the bird who laid them.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
@@ -310,10 +348,10 @@ export default function Home() {
               About Kisi Farm
             </Link>
             <Link
-              href="/agric-city"
+              href="/shop"
               className="rounded-full border border-kisi-cream-100/40 px-6 py-3 font-semibold hover:bg-kisi-cream-100/10"
             >
-              The Agric City vision
+              Order our eggs
             </Link>
           </div>
         </div>

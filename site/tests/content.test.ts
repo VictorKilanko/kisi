@@ -22,9 +22,8 @@ import { ChickenSchema, FarmStatSchema, PartySchema } from "@/lib/schemas";
  */
 
 describe("content loads and validates", () => {
-  it("has the 12 demo citizens, all flagged as demo", () => {
-    expect(chickens).toHaveLength(12);
-    expect(chickens.every((c) => c.isDemo)).toBe(true);
+  it("has the full cast of citizens", () => {
+    expect(chickens).toHaveLength(17);
   });
 
   it("has articles, ministries, parties, tiers", () => {
@@ -32,6 +31,34 @@ describe("content loads and validates", () => {
     expect(ministries).toHaveLength(10);
     expect(parties).toHaveLength(3);
     expect(supportTiers).toHaveLength(8);
+  });
+
+  it("every ministry has a minister or an acting note", () => {
+    for (const m of ministries) {
+      expect(m.ministerId ?? m.actingNote, `ministry ${m.id}`).toBeTruthy();
+    }
+  });
+});
+
+describe("the monitor lizard arc", () => {
+  it("Bantu is a memorial citizen and cannot be sponsored", () => {
+    const bantu = getChicken("bantu");
+    expect(bantu.status).toBe("memorial");
+    expect(bantu.sponsorable).toBe(false);
+  });
+
+  it("Pete Okpara holds the security portfolio", () => {
+    const pete = getChicken("pete-okpara");
+    expect(pete.ministryId).toBe("coop-security");
+    expect(ministries.find((m) => m.id === "coop-security")?.ministerId).toBe(
+      "pete-okpara",
+    );
+  });
+
+  it("the attack is covered by the paper", () => {
+    const ids = articles.map((a) => a.id);
+    expect(ids).toContain("bantu-coop-two");
+    expect(ids).toContain("bounty-on-the-drain");
   });
 });
 
@@ -100,7 +127,7 @@ describe("guardrails", () => {
   });
 
   it("rejects a chicken record missing required narrative fields", () => {
-    const bad = { id: "x", name: "X", isDemo: true };
+    const bad = { id: "x", name: "X" };
     expect(ChickenSchema.safeParse(bad).success).toBe(false);
   });
 
@@ -114,8 +141,8 @@ describe("guardrails", () => {
     expect(FarmStatSchema.safeParse(bad).success).toBe(false);
   });
 
-  it("rejects a party not flagged as demo", () => {
-    const bad = { ...parties[0], isDemo: false };
+  it("rejects a party missing its required fields", () => {
+    const { name: _name, ...bad } = parties[0];
     expect(PartySchema.safeParse(bad).success).toBe(false);
   });
 });
