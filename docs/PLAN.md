@@ -69,11 +69,12 @@ Restores the server. Without it, egg orders reach nobody.
 - [ ] Connect the repo to Vercel, set env vars, verify preview deploy
 - [ ] Buy the domain, point at Vercel, redirect `victorkilanko.com/kisi`
 
-**Owner actions to finish Phase 1:**
+**Owner actions to finish Phase 1 — full walkthrough in `docs/VERCEL_SETUP.md`:**
 1. Create a Vercel account, import `VictorKilanko/kisi`, **set Root Directory to `site`**
 2. Sign up at resend.com → `RESEND_API_KEY`, and set `FARM_INBOX` to the farm's email
 3. Create an Upstash Redis database → `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN`
 4. Buy the domain and point it at Vercel; set `NEXT_PUBLIC_SITE_URL` to match
+5. Place a real egg order and confirm the email arrives — that is the real test
 
 Until Vercel is connected, the GitHub Pages site stays live at its **last** deploy but
 no longer updates — the static-export config it needed is gone.
