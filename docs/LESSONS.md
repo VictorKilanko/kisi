@@ -76,6 +76,18 @@ identity, in the brand greens/gold.
   Back the Farm; the primary header/hero CTA is now **Order Eggs** → `/shop`.
 - **Memory + LESSONS** updated with the trademark ban and the real-not-fictional
   framing.
+- **New Economy hub (`/economy`).** The commercial spine, framed in-world as the
+  nation's economy: egg sales lead, the hatchery is presented honestly ("opens as
+  the flock grows", enquiries → contact). Pulls real content — latest egg census +
+  recent months as accessible `<table>` bars, recent milestones via `MilestoneCard`,
+  and the "economic cabinet" (egg-affairs / feed-agriculture / youth-chick). Wired
+  into the Economy menu (+ a `#hatchery` anchor) and the sitemap. *Field-name gotcha:
+  `EggMilestone` has `story`/`type`/`count` (no `label`/`summary`); `Ministry` has
+  `motto`/`responsibilities` (no `mandate`) — verify against `lib/schemas.ts` before
+  referencing fields, since tsc can't run here.*
+- **Committed** in five logical commits (826731f logo · 747f245 nav · 6c90f7f voice ·
+  8c80ee1 docs · 7ab020b economy). Owner picked logo **Direction A (the crest)**,
+  already live.
 
 ### Verification status — IMPORTANT
 
