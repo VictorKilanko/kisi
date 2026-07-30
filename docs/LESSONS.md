@@ -88,6 +88,28 @@ identity, in the brand greens/gold.
 - **Committed** in five logical commits (826731f logo · 747f245 nav · 6c90f7f voice ·
   8c80ee1 docs · 7ab020b economy). Owner picked logo **Direction A (the crest)**,
   already live.
+- **Republic flag + hub wiring.** `components/RepublicFlag.tsx` — the crest as the
+  national seal on three national-colour bands (green/gold/indigo), responsive 3:2;
+  flown on the `/republic` hero. `LogoMark` gained a `className` prop so the seal
+  scales inside it. Added an **Economy** door to the Republic hub and repointed the
+  home page's closing section at `/economy` + the shop.
+- **Interior-voice review (owner task 3):** read the presidency, government and sports
+  pages — they already read confidently in-world; the "annex" feel was the *fictional*
+  tagging, now removed. So no forced rewrites; effort went to wiring the hub/economy
+  and the flag instead. Older pages worth a future copy pass if desired: none urgent.
+
+### Deploy / visibility state (owner asked "where can I see it?")
+
+- **Nothing today is live anywhere.** The branch `feature/kisi-poultry-republic` has
+  **no upstream** — all commits are local, not on GitHub (`origin` =
+  github.com/VictorKilanko/kisi.git).
+- **`victorkilanko.com/kisi` is stale.** It was the old GitHub Pages address; since
+  `output: "export"` was removed for the Vercel server build, Pages can no longer be
+  produced and (per the 2026-07-18 note) sits frozen at its last static deploy — old
+  logo, old "fictional" copy, no Economy hub.
+- **To see the current work:** install Node 20+ and `npm run dev` locally, **or** push
+  the branch and open a Vercel preview (setup guide already committed). Installing Node
+  also unblocks the unrun gates. Nothing has been built or verified this session.
 
 ### Verification status — IMPORTANT
 
