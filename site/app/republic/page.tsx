@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
+import { RepublicFlag } from "@/components/RepublicFlag";
 
 export const metadata: Metadata = {
   title: "The Republic of Kisi",
@@ -10,6 +11,12 @@ export const metadata: Metadata = {
 };
 
 const INSTITUTIONS = [
+  {
+    href: "/economy",
+    title: "The Economy",
+    blurb:
+      "Eggs and the hatchery — the business the whole Republic runs on. Order a crate; meet the ministers who keep the feed budget straight.",
+  },
   {
     href: "/republic/presidency",
     title: "The Presidency",
@@ -63,27 +70,33 @@ const INSTITUTIONS = [
 export default function RepublicPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <div className="rounded-3xl bg-kisi-indigo-800 p-10 text-kisi-cream-100">
-        <div className="flex flex-wrap gap-2">
+      <div className="grid items-center gap-8 rounded-3xl bg-kisi-indigo-800 p-10 text-kisi-cream-100 lg:grid-cols-[1fr_auto]">
+        <div>
+          <h1 className="font-display text-4xl font-black sm:text-5xl">
+            The Republic of Kisi
+          </h1>
+          <p className="mt-4 max-w-2xl text-kisi-cream-100/85">
+            A proud nation, population: the chickens of Kisi Farm in
+            southwestern Nigeria — who, having looked at the alternatives,
+            decided to run the place themselves. The Republic has a constitution
+            (the queue), a treasury (the feed store), an anthem (4:45 a.m.,
+            daily, whether you like it or not), and a national philosophy:{" "}
+            <em className="text-kisi-gold-300">
+              every chicken has a story, and most of them have opinions.
+            </em>
+          </p>
+          <p className="mt-4 max-w-2xl text-sm text-kisi-cream-100/70">
+            Motto: <strong>Unity · Feed · Progress</strong>. National colours:
+            green for the farm, gold for the morning sun, indigo for official
+            paperwork, of which there is a great deal.
+          </p>
         </div>
-        <h1 className="font-display mt-4 text-4xl font-black sm:text-5xl">
-          The Republic of Kisi
-        </h1>
-        <p className="mt-4 max-w-2xl text-kisi-cream-100/85">
-          A proud nation, population: the chickens of Kisi Farm in southwestern
-          Nigeria — who, having looked at the alternatives, decided to run the
-          place themselves. The Republic has a constitution (the queue), a
-          treasury (the feed store), an anthem (4:45 a.m., daily, whether you
-          like it or not), and a national philosophy:{" "}
-          <em className="text-kisi-gold-300">
-            every chicken has a story, and most of them have opinions.
-          </em>
-        </p>
-        <p className="mt-4 max-w-2xl text-sm text-kisi-cream-100/70">
-          Motto: <strong>Unity · Feed · Progress</strong>. National colours:
-          green for the farm, gold for the morning sun, indigo for official
-          paperwork, of which there is a great deal.
-        </p>
+        <figure className="mx-auto w-48 sm:w-60">
+          <RepublicFlag />
+          <figcaption className="mt-2 text-center text-xs text-kisi-cream-100/60">
+            The flag of the Republic
+          </figcaption>
+        </figure>
       </div>
 
       <div className="mt-12">

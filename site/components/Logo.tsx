@@ -21,9 +21,11 @@ const TEETH = 12;
 export function LogoMark({
   size = 40,
   title,
+  className,
 }: {
   size?: number;
   title?: string;
+  className?: string;
 }) {
   const cx = 32;
   const cy = 32;
@@ -32,6 +34,7 @@ export function LogoMark({
       viewBox="0 0 64 64"
       width={size}
       height={size}
+      className={className}
       role={title ? "img" : undefined}
       aria-label={title}
       aria-hidden={title ? undefined : true}
