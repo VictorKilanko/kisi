@@ -19,8 +19,10 @@ const NAV = [
   {
     label: "Economy",
     children: [
+      { href: "/economy", label: "The Economy" },
       { href: "/shop", label: "The Egg Shop" },
       { href: "/eggs", label: "Egg Production" },
+      { href: "/economy#hatchery", label: "The Hatchery" },
       { href: "/support", label: "Back the Farm" },
     ],
   },

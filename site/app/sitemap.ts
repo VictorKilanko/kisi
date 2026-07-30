@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/news",
     "/most-wanted",
     "/bantu",
+    "/economy",
     "/eggs",
     "/shop",
     "/about",
