@@ -334,25 +334,33 @@ export default function Home() {
       <section className="bg-kisi-green-900 py-16 text-kisi-cream-100">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="font-display mt-3 text-3xl font-bold sm:text-4xl">
-            Behind the Republic: a working farm
+            A working farm you can buy from
           </h2>
           <p className="mt-4 max-w-2xl text-kisi-cream-100/85">
-            Kisi is a poultry farm in southwestern Nigeria. The hens are real,
-            their care is real, and so are the eggs — which you can order and
-            eat, having first read about the bird who laid them.
+            The stories are the fun part, but the eggs are the point. Kisi is a
+            poultry farm in southwestern Nigeria: the hens are real, their care
+            is real, and so are the eggs — which you can order and eat, having
+            first read about the bird who laid them. That whole business — eggs,
+            hatchery, feed budget and all — is the Republic&apos;s economy.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              href="/about"
-              className="rounded-full bg-kisi-cream-100 px-6 py-3 font-semibold text-kisi-green-900 hover:bg-kisi-cream-200"
-            >
-              About Kisi Farm
-            </Link>
-            <Link
               href="/shop"
-              className="rounded-full border border-kisi-cream-100/40 px-6 py-3 font-semibold hover:bg-kisi-cream-100/10"
+              className="rounded-full bg-kisi-gold-500 px-6 py-3 font-semibold text-kisi-charcoal-900 hover:bg-kisi-gold-300"
             >
               Order our eggs
+            </Link>
+            <Link
+              href="/economy"
+              className="rounded-full bg-kisi-cream-100 px-6 py-3 font-semibold text-kisi-green-900 hover:bg-kisi-cream-200"
+            >
+              Explore the economy
+            </Link>
+            <Link
+              href="/about"
+              className="rounded-full border border-kisi-cream-100/40 px-6 py-3 font-semibold hover:bg-kisi-cream-100/10"
+            >
+              About Kisi Farm
             </Link>
           </div>
         </div>
