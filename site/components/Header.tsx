@@ -3,26 +3,43 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Logo } from "@/components/Logo";
 
 const NAV = [
   { href: "/flock", label: "Meet the Chickens" },
   {
-    label: "The Republic",
+    label: "Politics",
     children: [
-      { href: "/republic", label: "What is the Republic?" },
-      { href: "/republic/presidency", label: "The President" },
+      { href: "/republic/presidency", label: "The Presidency" },
       { href: "/republic/government", label: "The Government" },
       { href: "/republic/assembly", label: "The Coop Assembly" },
-      { href: "/republic/sports", label: "Sports" },
+      { href: "/republic", label: "About the Republic" },
+    ],
+  },
+  {
+    label: "Economy",
+    children: [
+      { href: "/shop", label: "The Egg Shop" },
+      { href: "/eggs", label: "Egg Production" },
+      { href: "/support", label: "Back the Farm" },
+    ],
+  },
+  { href: "/republic/sports", label: "Sports" },
+  {
+    label: "Entertainment",
+    children: [
       { href: "/republic/social", label: "Life & Parties" },
       { href: "/republic/stories", label: "Big Stories" },
       { href: "/republic/map", label: "Walk the Farm (3D)" },
     ],
   },
-  { href: "/news", label: "News" },
-  { href: "/most-wanted", label: "Most Wanted" },
-  { href: "/eggs", label: "Eggs" },
-  { href: "/shop", label: "Shop" },
+  {
+    label: "Media",
+    children: [
+      { href: "/news", label: "The Coop Times" },
+      { href: "/most-wanted", label: "Most Wanted" },
+    ],
+  },
   {
     label: "The Farm",
     children: [
@@ -48,19 +65,8 @@ export function Header() {
         Skip to main content
       </a>
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-        <Link href="/" className="flex items-center gap-2" aria-label="Kisi — home">
-          {/* Simple original egg-and-leaf mark (placeholder for the designed logo) */}
-          <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-            <ellipse cx="16" cy="18" rx="10" ry="12" fill="#1f5130" />
-            <ellipse cx="16" cy="18" rx="6.5" ry="8.5" fill="#faf5e9" />
-            <path d="M16 4c3 2 4 5 3 7-3-1-4-4-3-7z" fill="#d9a02b" />
-          </svg>
-          <span className="font-display text-xl font-bold text-kisi-green-900">
-            Kisi
-          </span>
-          <span className="kicker hidden text-kisi-charcoal-600 sm:inline">
-            The Republic of Kisi
-          </span>
+        <Link href="/" aria-label="Kisi — home">
+          <Logo size={40} tagline />
         </Link>
 
         {/* Desktop nav */}
@@ -115,10 +121,10 @@ export function Header() {
             )}
             <li>
               <Link
-                href="/support"
+                href="/shop"
                 className="ml-2 rounded-full bg-kisi-green-700 px-4 py-2 text-sm font-semibold text-kisi-cream-100 hover:bg-kisi-green-900"
               >
-                Support the Chickens
+                Order Eggs
               </Link>
             </li>
           </ul>
@@ -181,11 +187,11 @@ export function Header() {
             )}
             <li className="pt-2">
               <Link
-                href="/support"
+                href="/shop"
                 onClick={closeMenu}
                 className="block rounded-full bg-kisi-green-700 px-4 py-2 text-center font-semibold text-kisi-cream-100"
               >
-                Support the Chickens
+                Order Eggs
               </Link>
             </li>
           </ul>
