@@ -6,6 +6,89 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-07-29
+
+### CRITICAL trademark constraint (carry forward forever)
+
+**The exact phrase "Chicken Republic" is a registered trademark in Nigeria** (a
+fast-food chain). It must **never** appear anywhere — copy, metadata, alt text,
+headings, marketing, code comments a reader could see. Our world is *"The Republic
+of Kisi"* / *"Kisi"* / *"a farm run by its chickens."* Grep `-i "chicken republic"`
+before every commit.
+
+### The framing lands its final form: the Republic is REAL
+
+The owner sharpened the earlier "stop labeling as fictional" shift into a clear rule:
+
+> "The website should have no mention of fictional. Treat the republic as real — the
+> farm where the chickens run it. State it point-blank: this is a farm run by
+> chickens, it is our republic, so expect everything to be clucking eggxellent and
+> everyone in good health and perfect condition."
+
+So **no visitor-facing "fictional," "satire," "sample," or "demo" anywhere.** We
+still present as a **farm business** — selling services and products (egg sales,
+hatchery). The chicken world is the hook; the sale is the goal.
+
+- **Priority:** sell products/services first; engagement/brand-building second.
+- **The chickens' "economy" = egg production + hatchery.** That's how we frame the
+  commercial pages inside the world.
+- **Menu reorganized in-world:** Meet the Chickens · Politics · Economy · Sports ·
+  Entertainment · Media, plus the real-farm Visit/About info.
+- Keep "Meet the Chickens" — the owner likes it; it just needed reframing toward the
+  sales priority and the returnable-brand goal.
+- **Money/safety carve-out still holds:** Shop and Support pages still say plainly
+  what a payment buys and that sponsorship isn't ownership. Immersive everywhere,
+  straight-talking at the till.
+- **Judgment call flagged for owner:** the invisible `SatiricalArticle` JSON-LD on
+  news articles was kept (it's a machine-only legal/SEO safety net a reader never
+  sees) but its human-readable label string had "(fictional storytelling world)"
+  removed. Owner can tell us to drop the type entirely if preferred.
+
+### Logo direction
+
+Owner: current egg-and-leaf mark is underwhelming; wants an **iconic** logo that
+speaks to agriculture *broadly* (animal, crops, agric engineering), taking cues from
+top agtech brands (Netherlands: Lely, Koppert, Connecterra, Hendrix Genetics; global:
+John Deere, Pioneer, Corteva, Bayer).
+
+**Lesson from that research:** the strongest agri brands are built on **one iconic,
+meaningful symbol**, not literal clip-art — John Deere's leaping deer, Pioneer's sun,
+Bayer's cross-in-circle. Kisi's mark should do the same: a single confident emblem
+that marries the chicken hero + broad-agriculture symbolism + the "Republic" (seal)
+identity, in the brand greens/gold.
+
+### Done this session
+
+- **New logo.** `components/Logo.tsx` (`<Logo>` + `<LogoMark>`) — an original
+  emblem: a green cog/sunburst seal (engineering + energy), crossed wheat (crops),
+  and a golden egg wearing a comb (poultry + economy). Wired into Header and Footer,
+  replacing the old egg-and-leaf placeholder; added `app/icon.svg` as the favicon.
+  Presented three directions to the owner in an artifact (A the crest = live,
+  B the cockerel, C the sunrise) — awaiting the owner's pick.
+- **Reframe: the Republic is real.** Removed every visitor-facing "fictional /
+  entirely fictional / satire / sample data" line — home hero + dashboard, footer,
+  `/republic`, assembly parties lede, the Poll label, about, the farm-map intro and
+  the map `WORLD_LABEL` badges ("The working farm" / "Republic life" instead of
+  "farm fact" / "Republic fiction"), and the globals.css colour-role comment. Kept
+  the invisible `SatiricalArticle` JSON-LD (label string de-fictionalised).
+- **Menu reorganised in-world:** Meet the Chickens · Politics · Economy · Sports ·
+  Entertainment · Media · The Farm. Economy groups the Egg Shop, Egg Production and
+  Back the Farm; the primary header/hero CTA is now **Order Eggs** → `/shop`.
+- **Memory + LESSONS** updated with the trademark ban and the real-not-fictional
+  framing.
+
+### Verification status — IMPORTANT
+
+**No gates were run — Node.js is still not installed on this machine** (see the
+standing lesson). All edits are string/JSX-level and were made with the Edit tool;
+a grep sweep confirms no visitor-facing "fictional"/"satire" text remains (only the
+intended machine-only JSON-LD, dev comments, and a test name) and no "chicken
+republic" anywhere but the LESSONS ban itself. Treat the branch as **unverified**
+until `npm run lint && npm run typecheck && npm test && npm run build` pass. Nothing
+was committed this session.
+
+---
+
 ## Session — 2026-07-18
 
 ### The big directional shift: stop labeling the world
@@ -196,9 +279,14 @@ Lessons from this pass:
 
 ## Standing lessons (carry forward every session)
 
-- **Stay in the world.** The Republic is written from the inside, like an animated
-  series — no "fictional" labels, no badges, no per-page disclaimers. The audience
-  understands storytelling without being told.
+- **NEVER use the exact phrase "Chicken Republic"** — it is trademarked in Nigeria.
+  Grep `-i "chicken republic"` before every commit.
+- **The Republic is REAL: a farm run by its chickens.** No visitor-facing
+  "fictional," "satire," "sample," or "demo" — anywhere. State the premise
+  point-blank and stay inside it.
+- **Sell first, entertain second.** It's a farm business; the chicken world is the
+  hook. The chickens' economy = egg production + hatchery. Keep commercial paths
+  (Shop / Economy / Support) prominent.
 - **Except where money or safety is involved.** Shop and Support pages say plainly
   what a payment buys, that sponsorship is not ownership, and that we never take card
   details on-site. Immersive everywhere; straight-talking at the till.
