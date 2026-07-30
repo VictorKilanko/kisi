@@ -35,7 +35,7 @@ export default function AssemblyPage() {
         <SectionHeading
           kicker="The Parties"
           title="Registered political parties"
-          lede="All parties are entirely fictional inventions of the Republic — none references any real political party."
+          lede="The parties of the Republic, every one of them home-grown at Kisi — and, we promise, sharing a name with no party you could vote for outside the coop."
         />
         <ul className="grid gap-6 md:grid-cols-3">
           {parties.map((p) => {

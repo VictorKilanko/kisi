@@ -35,7 +35,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:py-24 lg:grid-cols-2">
           <div>
             <p className="kicker text-kisi-gold-300">
-              A real farm · A fictional republic
+              A poultry farm, run by the chickens
             </p>
             <h1 className="font-display mt-3 text-4xl font-black leading-tight sm:text-6xl">
               Where Every Chicken
@@ -43,30 +43,31 @@ export default function Home() {
               Has a <em className="text-kisi-gold-300">Story</em>
             </h1>
             <p className="mt-5 max-w-xl text-kisi-cream-100/85">
-              Kisi is a working poultry farm in southwestern Nigeria. It is
-              also — according to its chickens — a sovereign nation with a
-              President, a Coop Assembly, a free press, a sports league, and
-              very strong opinions about breakfast. Welcome to the Republic of
-              Kisi.
+              Kisi is a working poultry farm in southwestern Nigeria — and the
+              chickens run the place. They have a President, a Coop Assembly, a
+              free press, a sports league, and very strong opinions about
+              breakfast. So the eggs are counted honestly, every bird is in fine
+              feather, and everything around here is <em>clucking
+              eggxellent</em>. Welcome to the Republic of Kisi.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/republic"
+                href="/shop"
                 className="rounded-full bg-kisi-gold-500 px-6 py-3 font-semibold text-kisi-charcoal-900 hover:bg-kisi-gold-300"
               >
-                Enter the Republic
+                Order Our Eggs
               </Link>
               <Link
                 href="/flock"
                 className="rounded-full border border-kisi-cream-100/40 px-6 py-3 font-semibold hover:bg-kisi-cream-100/10"
               >
-                Meet the Flock
+                Meet the Chickens
               </Link>
               <Link
-                href="/support"
+                href="/republic"
                 className="rounded-full border border-kisi-gold-300/60 px-6 py-3 font-semibold text-kisi-gold-300 hover:bg-kisi-gold-300/10"
               >
-                Support the Chickens
+                Enter the Republic
               </Link>
             </div>
           </div>
@@ -148,7 +149,7 @@ export default function Home() {
           <SectionHeading
             kicker="The National Dashboard"
             title="The state of the Republic"
-            lede="Census figures, cabinet, and the league — all clearly-labeled sample data until the real flock takes office."
+            lede="The numbers the Republic runs on — the egg census, the cabinet, and the league table, updated as the nation goes about its business."
           />
           <div className="grid gap-6 lg:grid-cols-3">
             {/* Egg census */}

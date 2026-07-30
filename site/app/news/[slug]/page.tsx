@@ -41,8 +41,9 @@ export default async function ArticlePage({
     )
     .slice(0, 2);
 
-  // Fiction gets schema.org's SatiricalArticle type — machine-readable
-  // honesty; real farm announcements are plain Articles.
+  // Story reports carry schema.org's SatiricalArticle type — a machine-only
+  // signal (invisible to readers) that keeps search engines and the law on the
+  // right side of the world; real farm announcements are plain Articles.
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": article.world === "fact" ? "Article" : "SatiricalArticle",
@@ -50,7 +51,7 @@ export default async function ArticlePage({
     description: article.standfirst,
     datePublished: article.publishedAt,
     author: { "@type": "Organization", name: `The Coop Times (${article.author.name})` },
-    isPartOf: { "@type": "CreativeWork", name: "The Republic of Kisi (fictional storytelling world)" },
+    isPartOf: { "@type": "CreativeWork", name: "The Republic of Kisi" },
   };
 
   return (

@@ -5,8 +5,8 @@ import { SectionHeading } from "@/components/Cards";
 export const metadata: Metadata = {
   title: "The Republic of Kisi",
   description:
-    "A sovereign nation of chickens (fictional), federated with a real " +
-    "poultry farm (factual). Constitution, institutions, and doors into both.",
+    "The Republic of Kisi — the nation of chickens that runs Kisi Farm in " +
+    "southwestern Nigeria. Its constitution, its institutions, and the doors into all of them.",
 };
 
 const INSTITUTIONS = [
@@ -70,10 +70,11 @@ export default function RepublicPage() {
           The Republic of Kisi
         </h1>
         <p className="mt-4 max-w-2xl text-kisi-cream-100/85">
-          A proud and entirely fictional nation, population: the chickens of a
-          real Nigerian poultry farm. The Republic has a constitution (the
-          queue), a treasury (the feed store), an anthem (4:45 a.m., daily,
-          whether you like it or not), and a national philosophy:{" "}
+          A proud nation, population: the chickens of Kisi Farm in southwestern
+          Nigeria — who, having looked at the alternatives, decided to run the
+          place themselves. The Republic has a constitution (the queue), a
+          treasury (the feed store), an anthem (4:45 a.m., daily, whether you
+          like it or not), and a national philosophy:{" "}
           <em className="text-kisi-gold-300">
             every chicken has a story, and most of them have opinions.
           </em>

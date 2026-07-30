@@ -35,11 +35,11 @@ export default function MapPage() {
         The Farm Map
       </h1>
       <p className="mt-3 max-w-2xl text-kisi-charcoal-600">
-        One map, two worlds: the real farm&apos;s working parts (labeled{" "}
-        <strong>farm fact</strong>) and the Republic&apos;s institutions
-        (labeled <strong>Republic fiction</strong>) share the same ground —
-        because they do. Explore in 3D, or use the fast 2D plan; both know
-        all the same stories.
+        One map, one place: the coops, the feed store and the water tanks
+        (labeled <strong>the working farm</strong>) and the Republic&apos;s
+        institutions (labeled <strong>Republic life</strong>) stand on the same
+        ground — because they do. Explore in 3D, or use the fast 2D plan; both
+        know all the same stories.
       </p>
       <p className="mt-2 max-w-2xl text-sm text-kisi-charcoal-600">
         The layout is a stylized impression drawn from good hot-climate

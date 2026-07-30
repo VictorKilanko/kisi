@@ -3,7 +3,7 @@
 import { useCallback, useSyncExternalStore } from "react";
 
 /**
- * Entertainment poll — fictional and non-binding, and it says so on its
+ * Reader poll — just for fun and non-binding, and it says so on its
  * face. Votes live in the visitor's own browser (localStorage) only: we
  * publish no tallies because we have none, and we fabricate none.
  *
@@ -53,11 +53,11 @@ export function Poll({
 
   return (
     <section
-      aria-label={`Entertainment poll: ${question}`}
+      aria-label={`Reader poll: ${question}`}
       className="rounded-2xl border border-kisi-gold-500/40 bg-white p-6"
     >
       <p className="kicker text-kisi-gold-700">
-        Entertainment poll · fictional · non-binding
+        Reader poll · just for fun · non-binding
       </p>
       <h3 className="font-display mt-2 text-xl font-bold text-kisi-green-900">
         {question}

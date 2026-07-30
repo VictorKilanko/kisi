@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     template: "%s · Kisi",
   },
   description:
-    "Kisi is a poultry farm in southwestern Nigeria — and home of the " +
-    "Republic of Kisi, a chicken nation with a President, a Coop Assembly, " +
-    "a national newspaper, and a flock of unforgettable citizens.",
+    "Kisi is a working poultry farm in southwestern Nigeria — run by the " +
+    "chickens themselves. Order farm-fresh eggs, follow the Republic's " +
+    "politics, sport and news, and meet a flock of unforgettable citizens.",
   openGraph: {
     siteName: "Kisi — The Republic of Kisi",
     type: "website",

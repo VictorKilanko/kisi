@@ -373,10 +373,10 @@ export function toWorld(h: { x: number; y: number }): [number, number] {
 }
 
 export const WORLD_LABEL: Record<MapWorld, string> = {
-  fact: "Farm fact",
-  fiction: "Republic fiction",
-  mixed: "Fact & fiction",
-  vision: "Future vision",
+  fact: "The working farm",
+  fiction: "Republic life",
+  mixed: "Farm & Republic",
+  vision: "Coming soon",
 };
 
 /** A hotspot resident, enriched server-side from the content system. */

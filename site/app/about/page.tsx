@@ -38,8 +38,8 @@ export default function AboutPage() {
           <p>
             We built this website on one belief: farm animals are
             individuals. Giving our hens names, stories, and a gloriously
-            self-important fictional government is our way of inviting you to
-            care about them the way we do — and of showing, honestly, how a
+            self-important government of their own is our way of inviting you
+            to care about them the way we do — and of showing, honestly, how a
             small Nigerian farm works.
           </p>
         </div>
