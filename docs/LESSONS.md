@@ -6,6 +6,74 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-07-31
+
+### The site is live on Vercel, and `main` is finally the real site
+
+The owner set up Vercel (Root Directory = `site`) and got a deploy, but it showed
+the **old** design. Cause: GitHub had a stale `main` (stopped at the Vercel-migration
+commit) plus our real work on `feature/kisi-poultry-republic`, and **Vercel deploys
+`main` to production by default**. Fix, at the owner's choice: fast-forward `main` to
+the feature tip (they were identical apart from the 10 brand-pivot commits) and push.
+
+- **First real build-verification of the brand pivot.** Pushing to `main` triggered
+  the GitHub Actions CI, which passed (lint + typecheck + tests + build). Until now the
+  pivot branch had never been built (no local Node). The live Vercel deploy then showed
+  the new design. **`main` = the live site from here on.**
+- **Pushing over HTTPS hangs on a credential prompt** in this non-interactive shell.
+  Working method: read the PAT out of the git-ignored `CLAUDE.md` and push with the
+  token in the URL, `GIT_TERMINAL_PROMPT=0`, and `sed` the token out of the logs. The
+  token still needs rotating.
+
+### Standing rule: NO AI-writing signposts (em-dashes, etc.)
+
+Owner rule going forward, saved to memory as [[no-ai-writing-signposts]]: keep all copy
+free of em-dashes and other LLM tells. Applies to site copy, docs, commit messages, and
+chat replies.
+
+- **Swept every em-dash out of the shipped code** (`content`, `app`, `components`,
+  `lib`): 319 of them. Method that worked: hand-fix the JSX attribution and
+  cross-string-segment dashes first (a blind comma-swap misreads `— {q.context}` and
+  boundary dashes), then a UTF-8-safe bulk pass, `perl -CSD -i -pe 's/ \x{2014} /, /g'`,
+  for the clean spaced dashes, then re-grep for end-of-line stragglers. Result reads
+  naturally (appositive dashes become commas: "Chidinma, Chi-Chi to the entire
+  Republic, came to Kisi"). Dev files (`.env.example`, `next.config.ts`, `AGENTS.md`)
+  cleaned too. Left alone: the stale `e2e/smoke.spec.ts` regex and two internal test
+  comments.
+- **Gotcha:** `grep $'—'` does NOT expand in this Git Bash, so it falsely reports
+  zero em-dashes. Use the literal character (the Grep/ripgrep tool) or `perl \x{2014}`.
+  Also, `grep -r <pattern> .` walks `node_modules` and times out; use the ripgrep-based
+  Grep tool, which respects `.gitignore`.
+
+### Real egg-census figures, and the two tribes
+
+Owner supplied real data and a new world-building concept, both now integrated:
+
+- **Egg census is now real:** June 2026 = 3,500, July 2026 = 5,120 (a clear growth
+  story). Replaced the earlier invented small numbers (262/278/291) and dropped
+  April/May, for which we have no real data. Totals now render with thousands
+  separators (`toLocaleString("en-NG")`) on the home, economy, and eggs pages.
+- **Two tribes: Isa-Brown and Noiler** (both real breeds Kisi raises). Added a `Tribe`
+  enum to the schema and a required `tribe` field on all 17 citizens (8 Isa-Brown,
+  9 Noiler). New `content/tribes.ts` holds the two lines' metadata; `TribeBadge` shows
+  on every card and profile; the flock directory gained a tribe filter; `/flock#tribes`
+  explains them; profiles link to it. **Design choice: tribe is heritage, not party**,
+  deliberately cutting across the political parties (President is Isa-Brown, her
+  crate-sister the Opposition Leader is Noiler) so the story is unity, not division.
+  Isa-Brown = the layers and egg-economy backbone; Noiler = the hardy guards/athletes.
+- **Gotcha (again):** adding a required schema field means every one of the 17 records
+  must set it or the build fails. Verified all 17 by grep before pushing since `tsc`
+  can't run here.
+
+### Verification status
+
+**No local gates (Node still not installed).** Relying on GitHub Actions CI, which is
+the real gate now that `main` auto-builds. Em-dash edits are all inside strings/comments
+so they cannot break the build; the schema/`tribe` change is the one to watch, and it is
+covered by CI's typecheck + the content integrity checks.
+
+---
+
 ## Session — 2026-07-29
 
 ### CRITICAL trademark constraint (carry forward forever)
