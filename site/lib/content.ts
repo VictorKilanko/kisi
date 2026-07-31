@@ -33,6 +33,7 @@ import {
 import { ministries as rawMinistries } from "@/content/ministries";
 import { parties as rawParties } from "@/content/parties";
 import { socialEvents as rawSocial } from "@/content/social";
+import { tribes as rawTribes } from "@/content/tribes";
 import { supportTiers as rawTiers } from "@/content/support";
 import {
   fixtures,
@@ -91,6 +92,11 @@ export const farmStats = validateAll(FarmStatSchema, rawStats, "farm stat");
 export const supportTiers = validateAll(SupportTierSchema, rawTiers, "support tier");
 export { eggCensus, fixtures, mascot, perchChampionship, presidentialDiary, topScorers };
 
+export const tribes = rawTribes;
+const tribeById = new Map(tribes.map((t) => [t.id, t]));
+export const getTribe = (id: string) => tribeById.get(id);
+export const chickensOfTribe = (id: string) => chickens.filter((c) => c.tribe === id);
+
 const tierById = new Map(supportTiers.map((t) => [t.id, t]));
 export const getSupportTier = (id: string) => tierById.get(id);
 
@@ -107,7 +113,7 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
     title: "Chi-Chi's Road to the First Egg",
     summary:
       "A motherless three-week-old arrival, a borrowed wing, a watching " +
-      "nation — and four words that became a national motto.",
+      "nation, and four words that became a national motto.",
   },
   "grain-affair": {
     title: "The Missing Breakfast Grain",
@@ -131,13 +137,13 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
     title: "The Drain",
     summary:
       "A track in the soft ground, a grate that moved at midnight, twelve " +
-      "chicks out the far side — and the watchman who did not follow them. " +
+      "chicks out the far side, and the watchman who did not follow them. " +
       "The Republic's ongoing story, still without an ending.",
   },
   "flu-season": {
     title: "Flu Season, Handled",
     summary:
-      "Quarantine, calm, and five words a day — how the Republic (and any " +
+      "Quarantine, calm, and five words a day, how the Republic (and any " +
       "good farm) beats an outbreak: welfare first, panic never.",
   },
 };

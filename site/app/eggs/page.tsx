@@ -5,7 +5,7 @@ import { eggCensus, eggMilestones } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Egg Life",
   description:
-    "First eggs, landmark counts, laying breaks, and honoured retirements — " +
+    "First eggs, landmark counts, laying breaks, and honoured retirements, " +
     "the egg-laying life of the Kisi flock, told with respect.",
 };
 
@@ -19,7 +19,7 @@ export default function EggsPage() {
         Every egg at Kisi belongs to a hen with a name, and we mark her
         milestones the way you&apos;d mark a friend&apos;s: first eggs
         celebrated, laying breaks respected, retirements honoured. Hens are
-        not machines here — that&apos;s policy, welfare practice, and (in the
+        not machines here, that&apos;s policy, welfare practice, and (in the
         Republic) constitutional law.
       </p>
 
@@ -35,7 +35,7 @@ export default function EggsPage() {
             <div key={c.period} className="rounded-2xl bg-white p-6 text-center shadow-sm">
               <p className="kicker text-kisi-gold-700">{c.label}</p>
               <p className="font-display mt-2 text-5xl font-black text-kisi-green-900">
-                {c.total}
+                {c.total.toLocaleString("en-NG")}
               </p>
               <p className="mt-1 text-sm text-kisi-charcoal-600">eggs recorded</p>
               <p className="mt-3 text-xs text-kisi-charcoal-600">{c.note}</p>
@@ -63,7 +63,7 @@ export default function EggsPage() {
         </h2>
         <div className="mt-4 grid gap-6 text-sm text-kisi-cream-100/85 md:grid-cols-3">
           <p>
-            A healthy hen lays in natural cycles — more in her first laying
+            A healthy hen lays in natural cycles, more in her first laying
             years, gradually fewer as she matures. Pauses for moulting, rest,
             weather, or broodiness are normal and healthy, not a problem to
             be fixed.

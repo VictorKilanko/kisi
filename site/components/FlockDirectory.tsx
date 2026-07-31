@@ -32,9 +32,16 @@ const STATUS_LABELS: Record<string, string> = {
   memorial: "Memorial",
 };
 
+const TRIBE_LABELS: Record<string, string> = {
+  all: "Both tribes",
+  "isa-brown": "Isa-Brown",
+  noiler: "Noiler",
+};
+
 export function FlockDirectory({ chickens }: { chickens: Chicken[] }) {
   const [query, setQuery] = useState("");
   const [sex, setSex] = useState("all");
+  const [tribe, setTribe] = useState("all");
   const [branch, setBranch] = useState("all");
   const [laying, setLaying] = useState("all");
   const [status, setStatus] = useState("all");
@@ -43,6 +50,7 @@ export function FlockDirectory({ chickens }: { chickens: Chicken[] }) {
     const q = query.trim().toLowerCase();
     return chickens.filter((c) => {
       if (sex !== "all" && c.sex !== sex) return false;
+      if (tribe !== "all" && c.tribe !== tribe) return false;
       if (branch !== "all" && c.branch !== branch) return false;
       if (laying !== "all" && c.layingStatus !== laying) return false;
       if (status !== "all" && c.status !== status) return false;
@@ -60,7 +68,7 @@ export function FlockDirectory({ chickens }: { chickens: Chicken[] }) {
       }
       return true;
     });
-  }, [chickens, query, sex, branch, laying, status]);
+  }, [chickens, query, sex, tribe, branch, laying, status]);
 
   const selectCls =
     "rounded-lg border border-kisi-green-900/20 bg-white px-3 py-2 text-sm";
@@ -70,7 +78,7 @@ export function FlockDirectory({ chickens }: { chickens: Chicken[] }) {
       <form
         role="search"
         aria-label="Search and filter the flock"
-        className="mb-8 grid gap-3 rounded-2xl border border-kisi-green-900/10 bg-kisi-cream-200 p-4 sm:grid-cols-2 lg:grid-cols-5"
+        className="mb-8 grid gap-3 rounded-2xl border border-kisi-green-900/10 bg-kisi-cream-200 p-4 sm:grid-cols-2 lg:grid-cols-6"
         onSubmit={(e) => e.preventDefault()}
       >
         <label className="sm:col-span-2 lg:col-span-1">
@@ -89,6 +97,16 @@ export function FlockDirectory({ chickens }: { chickens: Chicken[] }) {
             <option value="all">Hens & roosters</option>
             <option value="hen">Hens</option>
             <option value="rooster">Roosters</option>
+          </select>
+        </label>
+        <label>
+          <span className="sr-only">Filter by tribe</span>
+          <select value={tribe} onChange={(e) => setTribe(e.target.value)} className={selectCls}>
+            {Object.entries(TRIBE_LABELS).map(([v, l]) => (
+              <option key={v} value={v}>
+                {l}
+              </option>
+            ))}
           </select>
         </label>
         <label>

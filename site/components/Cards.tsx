@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
-import { StatusBadge } from "@/components/Badges";
+import { StatusBadge, TribeBadge } from "@/components/Badges";
 import type { Article, Chicken, EggMilestone, TimelineEvent } from "@/lib/schemas";
 import { findChicken } from "@/lib/content";
 
@@ -11,6 +11,7 @@ export function ChickenCard({ chicken }: { chicken: Chicken }) {
         <ChickenPortrait chicken={chicken} size={96} framed={chicken.branch !== "none"} />
         <div className="flex flex-col items-end gap-2">
           <StatusBadge status={chicken.status} />
+          <TribeBadge tribe={chicken.tribe} />
         </div>
       </div>
       <h3 className="font-display mt-4 text-xl font-bold text-kisi-green-900">
@@ -73,7 +74,7 @@ export function MilestoneCard({ milestone }: { milestone: EggMilestone }) {
   const chicken = findChicken(milestone.chickenId);
   const TYPE_LABEL: Record<EggMilestone["type"], string> = {
     "first-egg": "First egg",
-    count: `Egg No. ${milestone.count ?? "—"}`,
+    count: milestone.count ? `Egg No. ${milestone.count}` : "Egg milestone",
     "laying-break": "Laying break",
     "return-to-lay": "Return to lay",
     retirement: "Retirement",
@@ -90,7 +91,7 @@ export function MilestoneCard({ milestone }: { milestone: EggMilestone }) {
                 {chicken.name}
               </Link>
             ) : (
-              "—"
+              "Unknown"
             )}
           </h3>
           <p className="text-xs text-kisi-charcoal-600">{formatDate(milestone.date)}</p>

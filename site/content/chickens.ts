@@ -4,8 +4,8 @@ import type { Chicken } from "@/lib/schemas";
  * The citizens of the Republic of Kisi.
  *
  * Cultural grounding notes:
- * - Names and praise-lines draw on genuine Nigerian naming traditions —
- *   Yoruba (the farm's southwestern home), Igbo, and Hausa — because the
+ * - Names and praise-lines draw on genuine Nigerian naming traditions:
+ *   Yoruba (the farm's southwestern home), Igbo, and Hausa, because the
  *   Republic, like Nigeria, is proudly plural.
  * - Orikì (Yoruba praise lines) are written respectfully and translated.
  * - The satire imitates the *shape* of Nigerian public life (press
@@ -15,13 +15,14 @@ import type { Chicken } from "@/lib/schemas";
 export const chickens: Chicken[] = [
   {
     id: "adedoyin-mama-decree",
+    tribe: "isa-brown",
     name: "Adédoyin",
     fullName: "Adédoyin Fọlásadé Ọlásunkànmí",
     nickname: "Mama Decree",
     honorific: "Her Excellency, President of the Republic",
     oriki: {
       line: "Adédoyin, adé tí ó dùn bí oyin",
-      meaning: "Adédoyin — the crown that is sweet as honey",
+      meaning: "Adédoyin, the crown that is sweet as honey",
     },
     sex: "hen",
     ageNote: "Senior hen",
@@ -34,7 +35,7 @@ export const chickens: Chicken[] = [
     favoriteFood: "Cracked maize, taken precisely at 7:00 a.m.",
     shortBio:
       "The Republic's first citizen, who rose from an ordinary nest in Coop " +
-      "Three to the highest perch in the land — and never lets anyone forget " +
+      "Three to the highest perch in the land, and never lets anyone forget " +
       "that breakfast waits for no bird.",
     bio: [
       "Adédoyin hatched, by her own account, 'without connections, without " +
@@ -47,7 +48,7 @@ export const chickens: Chicken[] = [
       "Her rise was steady: convener of the Trough Queue Committee, Speaker " +
         "of the Coop Assembly, and finally President, elected on the slogan " +
         "'Forward with Feed.' Her first act in office was Executive Order " +
-        "No. 1 — breakfast at seven, 'not seven-ish' — and her nickname, " +
+        "No. 1, breakfast at seven, 'not seven-ish', and her nickname, " +
         "Mama Decree, followed within the hour. She signs orders with a " +
         "flourish and reads them aloud twice: 'once for the record, once for " +
         "the hard of hearing.'",
@@ -58,14 +59,14 @@ export const chickens: Chicken[] = [
         "whatever they shout across the Assembly floor by day is reliably " +
         "settled over a quiet scratch by the fence at dusk.",
       "She remains a working layer and insists her eggs join the National " +
-        "Egg Census 'like everyone else's — the Republic has no royal eggs.'",
+        "Egg Census 'like everyone else's, the Republic has no royal eggs.'",
     ],
     friends: ["halima-iron-feathers", "yeye-alaba"],
     rivals: [],
     family: [
       {
         relation: "Crate-sister",
-        note: "Arrived at Kisi in the same chick crate as Halima 'Iron Feathers' — a bond older than politics.",
+        note: "Arrived at Kisi in the same chick crate as Halima 'Iron Feathers', a bond older than politics.",
       },
     ],
     quotes: [
@@ -78,7 +79,7 @@ export const chickens: Chicken[] = [
         context: "Inauguration speech",
       },
       {
-        text: "Àgbà kì í wà lọ́jà kí orí ọmọ tuntun wọ́ — the elder does not stand by in the market and let the baby's head hang. That is my entire policy.",
+        text: "Àgbà kì í wà lọ́jà kí orí ọmọ tuntun wọ́, the elder does not stand by in the market and let the baby's head hang. That is my entire policy.",
         context: "On senior hen welfare",
       },
     ],
@@ -92,13 +93,14 @@ export const chickens: Chicken[] = [
   },
   {
     id: "baba-segun",
+    tribe: "noiler",
     name: "Baba Ṣẹ́gun",
     fullName: "Olúṣẹ́gun Adébáyọ̀",
     nickname: "The Dawn Himself",
     honorific: "His Excellency, Vice President of the Republic",
     oriki: {
       line: "Akọ tí ń pe oòrùn ní ìjà, tí oòrùn sì ń dìde",
-      meaning: "The rooster who challenges the sun to a duel — and the sun rises to answer",
+      meaning: "The rooster who challenges the sun to a duel, and the sun rises to answer",
     },
     sex: "rooster",
     ageNote: "Elder rooster",
@@ -122,7 +124,7 @@ export const chickens: Chicken[] = [
         "President, knows he believes he would crow even better from the top " +
         "perch. He has never once said so aloud. Instead he opens agricultural " +
         "shows, chairs the Kisi Songbook committee, and delivers eulogies, " +
-        "welcomes, and toasts of legendary length — his 'brief remarks' at " +
+        "welcomes, and toasts of legendary length, his 'brief remarks' at " +
         "the last Feather Gala ran to forty minutes and received a standing " +
         "ovation, largely because standing was the only way to stay awake.",
       "Off duty he mentors young roosters in what he calls 'the three " +
@@ -142,7 +144,7 @@ export const chickens: Chicken[] = [
       },
     ],
     achievements: [
-      "The 4:45 a.m. First Alarm — unbroken service record",
+      "The 4:45 a.m. First Alarm, unbroken service record",
       "Artistic director, National Dawn Chorus",
       "Chair, Kisi Songbook Committee",
     ],
@@ -151,6 +153,7 @@ export const chickens: Chicken[] = [
   },
   {
     id: "halima-iron-feathers",
+    tribe: "noiler",
     name: "Halima",
     fullName: "Halima Yusuf Danbaki",
     nickname: "Iron Feathers",
@@ -170,7 +173,7 @@ export const chickens: Chicken[] = [
       "Census since records began. Was right once. Never lets anyone forget.",
     bio: [
       "Halima arrived at Kisi in the same chick crate as the future " +
-        "President — a fact both of them deploy in debates, with opposite " +
+        "President, a fact both of them deploy in debates, with opposite " +
         "conclusions. Where Adédoyin saw a queue, Halima saw a ledger. By her " +
         "first moult she was keeping unofficial records of trough servings " +
         "'for reference purposes,' and by her second she had founded the New " +
@@ -207,7 +210,7 @@ export const chickens: Chicken[] = [
     ],
     achievements: [
       "Founder, New Grain Alliance",
-      "The Wet Season Recount — vindicated",
+      "The Wet Season Recount, vindicated",
       "Holder of the national record for shortest press statement",
     ],
     colors: { body: "#55534b", comb: "#8a3e1f", accent: "#23305e", bg: "#f0c75e" },
@@ -215,6 +218,7 @@ export const chickens: Chicken[] = [
   },
   {
     id: "chi-chi",
+    tribe: "isa-brown",
     name: "Chidinma",
     fullName: "Chidinma Obiageli",
     nickname: "Chi-Chi",
@@ -228,10 +232,10 @@ export const chickens: Chicken[] = [
     favoriteFood: "Soaked garri crumbs from the morning scraps",
     shortBio:
       "The Republic's sweetheart. Separated from her mother at three weeks " +
-      "old, she arrived at Kisi small and silent — and grew, egg by egg, " +
+      "old, she arrived at Kisi small and silent, and grew, egg by egg, " +
       "into the most-followed young citizen in the nation.",
     bio: [
-      "Chidinma — Chi-Chi to the entire Republic — came to Kisi in a " +
+      "Chidinma, Chi-Chi to the entire Republic, came to Kisi in a " +
         "hatchery crate at three weeks old, too young to remember her " +
         "mother's face and too small, the handlers thought, to make the " +
         "journey well. She spent her first week under the heat lamp beside " +
@@ -239,14 +243,14 @@ export const chickens: Chicken[] = [
         "nothing, and moved her own wing slightly to the left every night so " +
         "the chick could sleep against something warm.",
       "She grew up careful. She watched the older hens for months before " +
-        "trying anything — the dust bath, the high perch, the fast line at " +
-        "the trough — and then did each one correctly on the first attempt, " +
+        "trying anything, the dust bath, the high perch, the fast line at " +
+        "the trough, and then did each one correctly on the first attempt, " +
         "to national astonishment. The Coop Times put her on its front page " +
         "('THE QUIET ONE LEARNS FAST') and she hid behind the water tank " +
         "for two days.",
       "When she laid her first egg, the Republic declared a public holiday. " +
         "The President attended personally. Chi-Chi's entire statement to " +
-        "the press was four words — 'I did my best' — and it has since been " +
+        "the press was four words, 'I did my best', and it has since been " +
         "embroidered, quoted in two Assembly debates, and adopted as the " +
         "unofficial motto of the youth athletics programme.",
       "She has recently, very quietly, joined the Solar Queens' junior " +
@@ -261,14 +265,14 @@ export const chickens: Chicken[] = [
       },
       {
         relation: "Guardian",
-        note: "Quiet Grace — the hen whose wing she slept against her first week.",
+        note: "Quiet Grace, the hen whose wing she slept against her first week.",
       },
     ],
     quotes: [
       { text: "I did my best.", context: "Complete first-egg press statement" },
     ],
     achievements: [
-      "First egg — occasioned a national public holiday",
+      "First egg, occasioned a national public holiday",
       "Unofficial motto-giver of Chick Sprint Saturdays",
     ],
     colors: { body: "#d9a02b", comb: "#c05621", accent: "#2e7d46", bg: "#faf5e9" },
@@ -276,12 +280,13 @@ export const chickens: Chicken[] = [
   },
   {
     id: "mama-gold",
+    tribe: "isa-brown",
     name: "Mama Gold",
     fullName: "Àbíkẹ́ Wúràọlá",
     nickname: "The National Grandmother",
     oriki: {
       line: "Wúràọlá, wúrà ilé wa, tí kò ṣe é fi owó rà",
-      meaning: "Wúràọlá — the gold of our household, that money cannot buy",
+      meaning: "Wúràọlá, the gold of our household, that money cannot buy",
     },
     sex: "hen",
     ageNote: "Senior hen approaching retirement",
@@ -295,7 +300,7 @@ export const chickens: Chicken[] = [
       "under the mango tree, and the calm center of every storm the Republic " +
       "has ever had. Approaching retirement on her own unhurried terms.",
     bio: [
-      "Àbíkẹ́ Wúràọlá — Mama Gold since before anyone can remember why — is " +
+      "Àbíkẹ́ Wúràọlá, Mama Gold since before anyone can remember why, is " +
         "the Republic's living archive. She has outlasted four Speakers, two " +
         "reshuffles, one hawk scare, and every attempt to move her from the " +
         "shady end of Coop One, which she holds 'by right of sitting here " +
@@ -303,9 +308,9 @@ export const chickens: Chicken[] = [
       "Her four hundredth recorded egg was marked with a national ceremony " +
         "at which she observed that 'the first one was harder.' She has " +
         "since entered a well-earned laying break, and the Senior Hen " +
-        "Retirement Protection Act — guaranteeing shade, priority at the " +
+        "Retirement Protection Act, guaranteeing shade, priority at the " +
         "trough, and 'freedom from sudden committee membership' to every " +
-        "retired layer — is universally known as Mama Gold's Law.",
+        "retired layer, is universally known as Mama Gold's Law.",
       "On Sunday mornings she takes the low branch seat under the mango " +
         "tree and tells the week's history to whoever gathers, which is " +
         "everyone. Her stories begin 'in the time before the water tank' and " +
@@ -323,7 +328,7 @@ export const chickens: Chicken[] = [
     ],
     achievements: [
       "400 recorded eggs",
-      "Namesake of 'Mama Gold's Law' — the Senior Hen Retirement Protection Act",
+      "Namesake of 'Mama Gold's Law', the Senior Hen Retirement Protection Act",
       "Custodian, Sunday storytelling seat",
     ],
     colors: { body: "#f0c75e", comb: "#c05621", accent: "#8a3e1f", bg: "#f1e8d4" },
@@ -331,6 +336,7 @@ export const chickens: Chicken[] = [
   },
   {
     id: "dr-amara-featherwell",
+    tribe: "noiler",
     name: "Dr. Amara",
     fullName: "Dr. Amarachi Nwachukwu-Featherwell",
     nickname: "The Calm One",
@@ -344,14 +350,14 @@ export const chickens: Chicken[] = [
     ministryId: "health-vet",
     partyId: "ppp",
     personality: ["methodical", "kind", "immune to panic", "quietly funny"],
-    favoriteFood: "Crushed eggshell supplement — 'lead by example'",
+    favoriteFood: "Crushed eggshell supplement, 'lead by example'",
     shortBio:
       "The minister who ended the flu-season panic with a weekly bulletin, " +
       "a foot-bath, and a complete refusal to be alarmed. The Republic's " +
       "most trusted voice, by audited margin.",
     bio: [
       "Dr. Amara served her National Yolk Service Corps year in the far " +
-        "coop — the posting nobody requests — and turned it into a model " +
+        "coop, the posting nobody requests, and turned it into a model " +
         "clinic with a waiting line, a triage perch, and the Republic's " +
         "first suggestion box (suggestions were pecked into a soft board; " +
         "most said 'more of this').",
@@ -362,8 +368,8 @@ export const chickens: Chicken[] = [
         "'Here is what we know.' The recovery ceremony, when it came, was " +
         "the loudest event in national memory. She did not attend. She was " +
         "doing rounds.",
-      "Her long friendship with Quiet Grace began as a case file — a frail " +
-        "rescue hen nobody expected to thrive — and became the ministry's " +
+      "Her long friendship with Quiet Grace began as a case file, a frail " +
+        "rescue hen nobody expected to thrive, and became the ministry's " +
         "quiet proof of principle: 'welfare first, and the rest follows.'",
     ],
     friends: ["quiet-grace", "mama-gold", "pete-okpara"],
@@ -376,15 +382,16 @@ export const chickens: Chicken[] = [
       },
     ],
     achievements: [
-      "The Featherwell Bulletin — 100 consecutive issues",
-      "Flu-season response — zero rumours survived contact",
-      "Clean Beak Initiative — delivered without a press conference",
+      "The Featherwell Bulletin, 100 consecutive issues",
+      "Flu-season response, zero rumours survived contact",
+      "Clean Beak Initiative, delivered without a press conference",
     ],
     colors: { body: "#faf5e9", comb: "#b3261e", accent: "#23305e", bg: "#f0c75e" },
     sponsorable: true,
   },
   {
     id: "tunde-quickfoot",
+    tribe: "noiler",
     name: "Túndé",
     fullName: "Babátúndé Balógun",
     nickname: "Quickfoot",
@@ -402,20 +409,20 @@ export const chickens: Chicken[] = [
     ministryId: "sports",
     partyId: "ppp",
     personality: ["exuberant", "theatrical", "generous", "allergic to understatement"],
-    favoriteFood: "Corn — 'the champion's carbohydrate'",
+    favoriteFood: "Corn, 'the champion's carbohydrate'",
     shortBio:
       "Former Coop 100-metre champion turned Minister of Sports, who " +
       "announces Tuesday fixtures with the ceremony of a cup final and has " +
       "been building a second sports field for three manifestos running.",
     bio: [
       "Before politics, Túndé 'Quickfoot' Balógun held the Coop 100-metre " +
-        "record for two unbroken seasons, and his victory lap — both wings " +
-        "out, full commentary on himself, in the third person — remains the " +
+        "record for two unbroken seasons, and his victory lap, both wings " +
+        "out, full commentary on himself, in the third person, remains the " +
         "most requested item at national celebrations.",
       "As minister he has brought the same energy to administration. " +
         "Fixture announcements involve a drum. League tables are unveiled " +
         "from behind a cloth. The annual sports budget speech is ticketed. " +
-        "His flagship promise, The Stadium Project — a second sports field — " +
+        "His flagship promise, The Stadium Project, a second sports field, " +
         "has been '90 percent complete' for so long that the phrase is now " +
         "used nationally to mean 'not yet.'",
       "His record was finally broken by Flash Adaora of the Solar Queens, " +
@@ -428,7 +435,7 @@ export const chickens: Chicken[] = [
     rivals: ["flash-adaora"],
     quotes: [
       {
-        text: "This Tuesday. The sports field. History. Bring your own expectations — mine are already there.",
+        text: "This Tuesday. The sports field. History. Bring your own expectations, mine are already there.",
         context: "Fixture announcement, week 4",
       },
       {
@@ -446,6 +453,7 @@ export const chickens: Chicken[] = [
   },
   {
     id: "quiet-grace",
+    tribe: "isa-brown",
     name: "Quiet Grace",
     fullName: "Oyíndàmọ́là",
     sex: "hen",
@@ -464,25 +472,25 @@ export const chickens: Chicken[] = [
         "it. She arrived at Kisi thin, half-feathered, and silent, and the " +
         "kindest forecast was 'weeks.' Dr. Amara's case notes from that " +
         "first month record, in order: 'eating a little,' 'standing,' " +
-        "'perching — low bar,' and finally 'moved her wing for the new " +
+        "'perching, low bar,' and finally 'moved her wing for the new " +
         "chick.' That last line is now framed in the ministry.",
       "The new chick was Chi-Chi, three weeks old and motherless. Grace " +
         "kept her warm through her first week, and has kept a corner of her " +
-        "wing available ever since — for Chi-Chi, and then for every " +
+        "wing available ever since, for Chi-Chi, and then for every " +
         "frightened new arrival after her. The chicks call the spot " +
         "'Grace's side.' There is sometimes a queue.",
       "When The Coop Times finally secured its long-requested exclusive " +
         "interview, Grace sat with the correspondent in the shade for three " +
-        "minutes, said nothing, and shared his grain. The piece ran in full " +
-        "— 'Three Minutes with Quiet Grace,' text: a description of the " +
-        "shade — and is the most reprinted article in the paper's history.",
+        "minutes, said nothing, and shared his grain. The piece ran in full" +
+        ", 'Three Minutes with Quiet Grace,' text: a description of the " +
+        "shade, and is the most reprinted article in the paper's history.",
     ],
     friends: ["chi-chi", "dr-amara-featherwell", "small-femi"],
     rivals: [],
     quotes: [],
     achievements: [
       "Survived the forecast",
-      "Guardian of 'Grace's side' — every new arrival's first safe place",
+      "Guardian of 'Grace's side', every new arrival's first safe place",
       "Subject of the most reprinted article in Coop Times history",
     ],
     colors: { body: "#f1e8d4", comb: "#c05621", accent: "#55534b", bg: "#faf5e9" },
@@ -490,6 +498,7 @@ export const chickens: Chicken[] = [
   },
   {
     id: "bright-feather",
+    tribe: "isa-brown",
     name: "Ọlánrewájú",
     fullName: "Ọlánrewájú Adéwálé",
     nickname: "Bright Feather",
@@ -506,7 +515,7 @@ export const chickens: Chicken[] = [
     favoriteFood: "Declined to state, pending the committee's findings",
     shortBio:
       "The impeccably groomed Minister of Egg Affairs, survivor of the " +
-      "Missing Breakfast Grain Affair — two hundred grams, one panel of " +
+      "Missing Breakfast Grain Affair, two hundred grams, one panel of " +
       "inquiry, one white paper, and the most watched apology tour in " +
       "national history.",
     bio: [
@@ -521,8 +530,8 @@ export const chickens: Chicken[] = [
         "never signed back in. Kola Quill's investigation ran for five " +
         "front pages. An eight-member Panel of Inquiry was constituted. It " +
         "produced a white paper. The white paper produced a sub-committee. " +
-        "The grain, at last, was located — 'behind the minister's second " +
-        "filing perch, where it had been placed for safekeeping' — and " +
+        "The grain, at last, was located, 'behind the minister's second " +
+        "filing perch, where it had been placed for safekeeping', and " +
         "returned to the national store with immediate effect.",
       "The apology tour that followed was a masterclass: contrite but " +
         "well-lit, remorseful but punctual, and closing at every stop with " +
@@ -549,13 +558,14 @@ export const chickens: Chicken[] = [
     achievements: [
       "Redesigned the State of the Shell address (universally praised)",
       "Survived the Missing Breakfast Grain Affair with improved ratings",
-      "Operation Gentle Hands — respectful egg collection standards",
+      "Operation Gentle Hands, respectful egg collection standards",
     ],
     colors: { body: "#23305e", comb: "#b3261e", accent: "#d9a02b", bg: "#f0c75e" },
     sponsorable: true,
   },
   {
     id: "flash-adaora",
+    tribe: "noiler",
     name: "Adaora",
     fullName: "Adaora Chiamaka Eze",
     nickname: "Flash",
@@ -567,11 +577,11 @@ export const chickens: Chicken[] = [
     branch: "none",
     teamId: "solar-queens",
     personality: ["explosive", "disciplined", "gracious in victory", "terrible at losing"],
-    favoriteFood: "Sprouted grain — 'race fuel'",
+    favoriteFood: "Sprouted grain, 'race fuel'",
     shortBio:
       "Captain of the Solar Queens, holder of the Coop 100-metre and Perch " +
-      "Jump records, breaker of Quickfoot's legend, and — she will tell you " +
-      "herself — future Minister of Sports.",
+      "Jump records, breaker of Quickfoot's legend, and, she will tell you " +
+      "herself, future Minister of Sports.",
     bio: [
       "Adaora Eze announced herself the way she does everything: at full " +
         "speed. In her first junior sprint she false-started twice, won " +
@@ -581,8 +591,8 @@ export const chickens: Chicken[] = [
       "Her defining afternoon came at the Perch Jumping Final, when rain " +
         "stopped play with the bar at a record height and the whole " +
         "Republic sheltering under the eaves. When the rain eased she " +
-        "declined the offered postponement — 'the perch is already wet; so " +
-        "am I' — cleared it on the first attempt, and broke her own record " +
+        "declined the offered postponement, 'the perch is already wet; so " +
+        "am I', cleared it on the first attempt, and broke her own record " +
         "for good measure. The roar was heard in the farmhouse.",
       "Breaking Minister Quickfoot's 100-metre record made their rivalry " +
         "official; running a joint sprint clinic for chicks made it " +
@@ -607,7 +617,7 @@ export const chickens: Chicken[] = [
     ],
     achievements: [
       "Coop 100-metre record holder",
-      "Perch Jump champion — record set in the rain",
+      "Perch Jump champion, record set in the rain",
       "Co-founder, joint sprint clinic for chicks",
     ],
     colors: { body: "#c05621", comb: "#b3261e", accent: "#f0c75e", bg: "#faf5e9" },
@@ -615,6 +625,7 @@ export const chickens: Chicken[] = [
   },
   {
     id: "kola-quill",
+    tribe: "isa-brown",
     name: "Kọ́lápọ̀",
     fullName: "Kọ́lápọ̀ Ọ̀nàbánjọ",
     nickname: "Kola Quill",
@@ -625,7 +636,7 @@ export const chickens: Chicken[] = [
     roleTitle: "Chief Correspondent, The Coop Times",
     branch: "press",
     personality: ["dogged", "skeptical", "scrupulous", "secretly sentimental"],
-    favoriteFood: "Cold rice from the kitchen scraps — 'a journalist's dinner'",
+    favoriteFood: "Cold rice from the kitchen scraps, 'a journalist's dinner'",
     shortBio:
       "Chief correspondent of The Coop Times, author of the five-front-page " +
       "Missing Breakfast Grain investigation, and keeper of the Republic's " +
@@ -636,8 +647,8 @@ export const chickens: Chicken[] = [
         "of Assembly procedure, where he discovered that everything " +
         "important in the Republic happens in the minutes nobody reads. He " +
         "has read all of them.",
-      "His investigation into the Missing Breakfast Grain — 'WHERE DID 200 " +
-        "GRAMS GO?' — ran for five consecutive front pages, survived two " +
+      "His investigation into the Missing Breakfast Grain, 'WHERE DID 200 " +
+        "GRAMS GO?', ran for five consecutive front pages, survived two " +
         "denials and one 'insufficiently found,' and forced the " +
         "constitution of the Panel of Inquiry. When the grain surfaced " +
         "behind the minister's second filing perch, Quill's editorial was " +
@@ -661,7 +672,7 @@ export const chickens: Chicken[] = [
       },
     ],
     achievements: [
-      "The Missing Breakfast Grain investigation — five front pages",
+      "The Missing Breakfast Grain investigation, five front pages",
       "Author, 'Three Minutes with Quiet Grace'",
       "Columnist, The Pecking Order",
     ],
@@ -670,6 +681,7 @@ export const chickens: Chicken[] = [
   },
   {
     id: "yeye-alaba",
+    tribe: "isa-brown",
     name: "Yèyé Àlàbá",
     fullName: "Àlàbá Ọmọ́tọ́lá",
     nickname: "The Settler of Perches",
@@ -695,8 +707,8 @@ export const chickens: Chicken[] = [
         "relief, to the judiciary. The Supreme Pecking Council under her " +
         "leadership hears every case in the shade after the afternoon " +
         "feed, on the principle that 'no bird is reasonable while hungry.'",
-      "Her most demanding docket is the annual Best Perch dispute — the " +
-        "high rail with the evening sun — contested every dry season since " +
+      "Her most demanding docket is the annual Best Perch dispute, the " +
+        "high rail with the evening sun, contested every dry season since " +
         "before the water tank. Her rulings rotate the perch by a formula " +
         "she has never fully disclosed and no one has ever successfully " +
         "challenged, partly because it appears to be fair and partly " +
@@ -711,7 +723,7 @@ export const chickens: Chicken[] = [
     rivals: [],
     quotes: [
       {
-        text: "Bí ọmọdé bá ṣubú, á wo iwájú; bí àgbà bá ṣubú, á wo ẹ̀yìn — when the child falls she looks forward; when the elder falls she looks back. Both of you, look both ways. Case dismissed.",
+        text: "Bí ọmọdé bá ṣubú, á wo iwájú; bí àgbà bá ṣubú, á wo ẹ̀yìn, when the child falls she looks forward; when the elder falls she looks back. Both of you, look both ways. Case dismissed.",
         context: "Ruling, the hatch-day scheduling dispute",
       },
       {
@@ -729,6 +741,7 @@ export const chickens: Chicken[] = [
   },
   {
     id: "pete-okpara",
+    tribe: "noiler",
     name: "Pete Okpara",
     fullName: "Peter Chukwuemeka Okpara",
     nickname: "The Fence Walker",
@@ -759,7 +772,7 @@ export const chickens: Chicken[] = [
         "acceptance speech was two sentences long: 'I know what the job " +
         "is. Ask me again in a year.'",
       "Since then the ministry has changed shape around him. The nightly " +
-        "headcount is now read aloud, by name, at the door of every coop — " +
+        "headcount is now read aloud, by name, at the door of every coop, " +
         "his idea, and unpopular for about three days until the flock " +
         "realised what it felt like to hear your own name confirmed safe. " +
         "The drainage channel is barred. The fence line is patrolled in " +
@@ -793,6 +806,7 @@ export const chickens: Chicken[] = [
   },
   {
     id: "bantu",
+    tribe: "noiler",
     name: "Bantu",
     fullName: "Bantu",
     nickname: "The Night Whistle",
@@ -806,27 +820,27 @@ export const chickens: Chicken[] = [
     favoriteFood: "Palm kernel pieces, cracked slowly, always shared",
     shortBio:
       "Night watchman of Coop Two, who woke the whole flock the night the " +
-      "monitor lizard came through the drainage channel — and stood between " +
+      "monitor lizard came through the drainage channel, and stood between " +
       "it and the chicks until they were clear. The Republic has not been " +
       "the same since.",
     bio: [
       "Bantu was not a minister, an athlete, or a member of any party. He " +
         "was the bird who checked the door. Every night for as long as " +
         "anyone can remember, he made the last round of Coop Two, looked " +
-        "at the latch, and settled on the low rail nearest the entrance — " +
+        "at the latch, and settled on the low rail nearest the entrance, " +
         "the coldest spot in the building, and the closest one to the " +
         "outside.",
       "He had a whistle in his call, a soft two-note thing he used to " +
         "settle nervous chicks. Parents used it as a lullaby. Half the " +
         "young birds in the Republic learned to sleep to that sound.",
       "On the night of the attack he heard the drainage grate move before " +
-        "anyone else did. He gave the alarm — not the soft whistle, the " +
-        "other call, the one nobody had ever heard him use — and he did " +
+        "anyone else did. He gave the alarm, not the soft whistle, the " +
+        "other call, the one nobody had ever heard him use, and he did " +
         "not leave the doorway of Coop Two while the chicks went out the " +
         "far side. Every one of them got out. Sergeant Danladi and Pete " +
         "Okpara reached him within a minute. A minute was not enough.",
       "He is buried under the mango tree, at the shady end, by unanimous " +
-        "resolution of the Coop Assembly — the only vote in the Republic's " +
+        "resolution of the Coop Assembly, the only vote in the Republic's " +
         "history taken without debate. Mama Gold spoke. The Chief Justice " +
         "closed with the words she uses for every session, and for once " +
         "nobody moved when she said them: 'Go and share something.'",
@@ -848,7 +862,7 @@ export const chickens: Chicken[] = [
       },
     ],
     achievements: [
-      "Night Watchman of Coop Two — every night, without being asked",
+      "Night Watchman of Coop Two, every night, without being asked",
       "Twelve chicks out the far side",
       "The whistle at dusk, now a national custom",
     ],
@@ -857,6 +871,7 @@ export const chickens: Chicken[] = [
   },
   {
     id: "sergeant-danladi",
+    tribe: "noiler",
     name: "Sergeant Danladi",
     fullName: "Danladi Sulaiman",
     nickname: "Second Shift",
@@ -870,7 +885,7 @@ export const chickens: Chicken[] = [
     favoriteFood: "Dry maize, eaten standing up, on duty",
     shortBio:
       "The guard who reached Coop Two first and has walked the same fence " +
-      "line every night since — including the nights the Ministry of Health " +
+      "line every night since, including the nights the Ministry of Health " +
       "formally ordered him to rest.",
     bio: [
       "Danladi was Bantu's shift partner. The younger bird took the far " +
@@ -907,6 +922,7 @@ export const chickens: Chicken[] = [
   },
   {
     id: "sisi-ngozi",
+    tribe: "isa-brown",
     name: "Sisi Ngozi",
     fullName: "Ngozi Adaeze Okonkwo",
     nickname: "The Mango Tree Keeper",
@@ -926,7 +942,7 @@ export const chickens: Chicken[] = [
         "who has tried to organise anything in the Republic will recognise " +
         "as a miracle of administration. She did it by not asking " +
         "permission from a single committee.",
-      "She keeps the ground under the mango tree — clears it, marks it, " +
+      "She keeps the ground under the mango tree, clears it, marks it, " +
         "and sits there most evenings, which means that anyone who wants " +
         "to sit there and say nothing has company available and no " +
         "obligation to use it. Several of the Coop Two chicks have taken " +
@@ -958,6 +974,7 @@ export const chickens: Chicken[] = [
   },
   {
     id: "small-femi",
+    tribe: "noiler",
     name: "Small Fẹ́mi",
     fullName: "Olúfẹ́mi",
     nickname: "The Far Side",

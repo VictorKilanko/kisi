@@ -1,9 +1,9 @@
 import { z } from "zod";
 
 /**
- * Content schemas — the typed contract from docs/CONTENT_MODEL.md.
+ * Content schemas, the typed contract from docs/CONTENT_MODEL.md.
  * Validation runs at module load in lib/content.ts, so invalid content
- * fails the build — never the visitor.
+ * fails the build, never the visitor.
  */
 
 export const World = z.enum(["fact", "fiction", "mixed"]);
@@ -16,6 +16,13 @@ export const ChickenStatus = z.enum([
   "memorial",
 ]);
 export type ChickenStatus = z.infer<typeof ChickenStatus>;
+
+/**
+ * The two founding lines (breeds) of the Republic. Heritage, not party:
+ * citizens of both tribes serve across the whole of public life.
+ */
+export const Tribe = z.enum(["isa-brown", "noiler"]);
+export type Tribe = z.infer<typeof Tribe>;
 
 export const LayingStatus = z.enum([
   "not-yet",
@@ -86,6 +93,8 @@ export const ChickenSchema = z.object({
   /** Yoruba-style praise line with English translation, where fitting. */
   oriki: z.object({ line: z.string(), meaning: z.string() }).optional(),
   sex: z.enum(["hen", "rooster"]),
+  /** Founding line. Every citizen belongs to one of the Republic's two tribes. */
+  tribe: Tribe,
   /** Only set where the farm has confirmed it; omitted otherwise. */
   breed: z.string().optional(),
   ageNote: z.string(),
@@ -260,7 +269,7 @@ export type FarmStat = z.infer<typeof FarmStatSchema>;
 
 /**
  * Support tier. Legal-wording rules (docs/DONATION_INTEGRATION.md):
- * `kind` names what the payment IS — never "charitable donation" — and
+ * `kind` names what the payment IS, never "charitable donation", and
  * sponsorships explicitly do not confer ownership of any animal.
  * `amountNGN: null` = pricing not yet set by the owner (renders as
  * "amount set at launch"); no figures are invented.

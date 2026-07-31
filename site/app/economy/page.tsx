@@ -11,14 +11,14 @@ import {
 } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "The Economy — Eggs, the Hatchery & the Feed Budget",
+  title: "The Economy, Eggs, the Hatchery & the Feed Budget",
   description:
     "The economy of the Republic of Kisi runs on one thing: good eggs, laid by " +
     "named hens and counted honestly. Order a crate, ask about day-old chicks, " +
     "and meet the ministers who keep the feed budget straight.",
 };
 
-// The economic cabinet — the ministries that run the nation's business.
+// The economic cabinet, the ministries that run the nation's business.
 const ECON_MINISTRIES = ["egg-affairs", "feed-agriculture", "youth-chick"] as const;
 
 export default function EconomyPage() {
@@ -38,7 +38,7 @@ export default function EconomyPage() {
         <p className="mt-4 max-w-2xl text-kisi-cream-100/85">
           Every economy needs an export. Ours has feathers. The hens of Kisi
           lay, the Bureau of Egg Statistics counts, and the Feed &amp; Agriculture
-          ministry makes sure the grain arrives — so the crate that reaches your
+          ministry makes sure the grain arrives, so the crate that reaches your
           kitchen was laid by a hen with a name, a page, and, frankly, opinions.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
@@ -57,7 +57,7 @@ export default function EconomyPage() {
         </div>
       </div>
 
-      {/* ECONOMIC INDICATOR — the census */}
+      {/* ECONOMIC INDICATOR, the census */}
       <section className="mt-12">
         <SectionHeading
           kicker="The National Egg Census"
@@ -67,7 +67,7 @@ export default function EconomyPage() {
         <div className="grid gap-6 lg:grid-cols-[auto_1fr]">
           <div className="rounded-2xl bg-kisi-cream-200 p-6">
             <p className="font-display text-6xl font-black text-kisi-green-900">
-              {latest.total}
+              {latest.total.toLocaleString("en-NG")}
             </p>
             <p className="text-sm text-kisi-charcoal-600">
               eggs recorded · {latest.label}
@@ -102,7 +102,7 @@ export default function EconomyPage() {
                       />
                     </td>
                     <td className="py-2 pl-4 text-right text-sm font-bold tabular-nums text-kisi-green-900">
-                      {c.total}
+                      {c.total.toLocaleString("en-NG")}
                     </td>
                   </tr>
                 ))}
@@ -112,7 +112,7 @@ export default function EconomyPage() {
         </div>
       </section>
 
-      {/* THE SALES FLOOR — eggs + hatchery */}
+      {/* THE SALES FLOOR, eggs + hatchery */}
       <section className="mt-16">
         <SectionHeading
           kicker="Open for business"
@@ -149,7 +149,7 @@ export default function EconomyPage() {
               The Hatchery
             </h3>
             <p className="mt-3 flex-1 text-kisi-charcoal-600">
-              How the Republic grows its citizens — and how a new keeper starts
+              How the Republic grows its citizens, and how a new keeper starts
               a flock. Day-old chicks and point-of-lay pullets are the next arm
               of the economy. Tell us what you&apos;re looking for and we&apos;ll
               tell you honestly what&apos;s available and when.
@@ -157,7 +157,7 @@ export default function EconomyPage() {
             <div className="mt-4">
               <PlaceholderNotice>
                 <strong>Hatchery ordering opens as the flock grows.</strong> No
-                chick numbers or prices are posted yet — we quote each enquiry
+                chick numbers or prices are posted yet, we quote each enquiry
                 directly rather than publish a figure that isn&apos;t real.
               </PlaceholderNotice>
             </div>
@@ -178,7 +178,7 @@ export default function EconomyPage() {
         <SectionHeading
           kicker="On the production line"
           title="Latest from the laying houses"
-          lede="Milestones as they happen — because behind every economic figure is a hen having a very big day."
+          lede="Milestones as they happen, because behind every economic figure is a hen having a very big day."
         />
         <div className="grid gap-4 sm:grid-cols-3">
           {recentMilestones.map((m) => (
@@ -241,9 +241,9 @@ export default function EconomyPage() {
           Rather back the whole enterprise?
         </h2>
         <p className="mt-3 max-w-2xl text-kisi-cream-100/85">
-          Buying eggs keeps the Republic solvent. If you&apos;d like to do more —
+          Buying eggs keeps the Republic solvent. If you&apos;d like to do more,
           feed, clean water, veterinary care, or a comfortable retirement for a
-          senior hen — there&apos;s a straight-talking way to help, with no
+          senior hen, there&apos;s a straight-talking way to help, with no
           confusion about where the money goes.
         </p>
         <Link

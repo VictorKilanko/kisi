@@ -41,6 +41,11 @@ const LAYING_LABEL: Record<string, string> = {
   "n-a": "Not applicable",
 };
 
+const TRIBE_LABEL: Record<string, string> = {
+  "isa-brown": "Isa-Brown",
+  noiler: "Noiler",
+};
+
 export default async function ChickenProfile({
   params,
 }: {
@@ -83,7 +88,7 @@ export default async function ChickenProfile({
           {chicken.oriki && (
             <p className="mt-3 border-l-4 border-kisi-gold-500 pl-3 italic text-kisi-charcoal-600">
               {chicken.oriki.line}
-              <span className="block text-sm not-italic">— {chicken.oriki.meaning}</span>
+              <span className="block text-sm not-italic">({chicken.oriki.meaning})</span>
             </p>
           )}
           <p className="mt-4 max-w-2xl text-kisi-charcoal-600">{chicken.shortBio}</p>
@@ -95,6 +100,14 @@ export default async function ChickenProfile({
                 <dd className="mt-0.5">{chicken.breed}</dd>
               </div>
             )}
+            <div>
+              <dt className="kicker text-kisi-charcoal-600">Tribe</dt>
+              <dd className="mt-0.5">
+                <Link href="/flock#tribes" className="text-kisi-green-700 hover:underline">
+                  {TRIBE_LABEL[chicken.tribe]}
+                </Link>
+              </dd>
+            </div>
             <div>
               <dt className="kicker text-kisi-charcoal-600">Age</dt>
               <dd className="mt-0.5">{chicken.ageNote}</dd>
@@ -211,7 +224,7 @@ export default async function ChickenProfile({
                       <p>“{q.text}”</p>
                       {q.context && (
                         <footer className="mt-1 text-xs text-kisi-cream-100/70">
-                          — {q.context}
+                          {q.context}
                         </footer>
                       )}
                     </blockquote>
@@ -291,7 +304,7 @@ export default async function ChickenProfile({
               </h2>
               <p className="mt-2 text-sm text-kisi-cream-100/85">
                 Sponsorship helps fund feed, veterinary care, and clean water
-                for the real birds at Kisi. Coming in a later phase — the
+                for the real birds at Kisi. Coming in a later phase, the
                 Republic is drafting the paperwork properly first.
               </p>
               <Link

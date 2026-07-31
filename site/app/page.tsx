@@ -43,7 +43,7 @@ export default function Home() {
               Has a <em className="text-kisi-gold-300">Story</em>
             </h1>
             <p className="mt-5 max-w-xl text-kisi-cream-100/85">
-              Kisi is a working poultry farm in southwestern Nigeria — and the
+              Kisi is a working poultry farm in southwestern Nigeria, and the
               chickens run the place. They have a President, a Coop Assembly, a
               free press, a sports league, and very strong opinions about
               breakfast. So the eggs are counted honestly, every bird is in fine
@@ -110,13 +110,13 @@ export default function Home() {
               <p>
                 “Visitor, you are welcome. You will find here a nation of
                 industry and dignity, where the eggs are counted honestly, the
-                queue is straight, and breakfast is at seven —{" "}
+                queue is straight, and breakfast is at seven,{" "}
                 <em>not seven-ish</em>. Walk among us. Learn our stories. And
                 if the opposition offers you her figures, take them; they are,
                 irritatingly, correct.”
               </p>
               <footer className="mt-2 text-sm font-semibold text-kisi-green-700">
-                — President Adédoyin “Mama Decree” Ọlásunkànmí
+               , President Adédoyin “Mama Decree” Ọlásunkànmí
               </footer>
             </blockquote>
           </div>
@@ -128,7 +128,7 @@ export default function Home() {
         <SectionHeading
           kicker="Citizen of the Week"
           title="The Republic is watching Chi-Chi"
-          lede="Followed by the whole nation from heat lamp to first egg — and now, very quietly, to the junior sprint squad."
+          lede="Followed by the whole nation from heat lamp to first egg, and now, very quietly, to the junior sprint squad."
         />
         <div className="grid gap-6 lg:grid-cols-3">
           <ChickenCard chicken={featured} />
@@ -149,14 +149,14 @@ export default function Home() {
           <SectionHeading
             kicker="The National Dashboard"
             title="The state of the Republic"
-            lede="The numbers the Republic runs on — the egg census, the cabinet, and the league table, updated as the nation goes about its business."
+            lede="The numbers the Republic runs on, the egg census, the cabinet, and the league table, updated as the nation goes about its business."
           />
           <div className="grid gap-6 lg:grid-cols-3">
             {/* Egg census */}
             <div className="rounded-2xl bg-white p-6 shadow-sm">
               <p className="kicker text-kisi-gold-700">National Egg Census</p>
               <p className="font-display mt-2 text-5xl font-black text-kisi-green-900">
-                {census.total}
+                {census.total.toLocaleString("en-NG")}
               </p>
               <p className="text-sm text-kisi-charcoal-600">
                 eggs recorded · {census.label}
@@ -255,8 +255,8 @@ export default function Home() {
               side. All twelve got out. The flock whistles at dusk for him now.
             </p>
             <p className="mt-4 text-kisi-charcoal-600">
-              If you would like to say something to Bantu — or to the chicks he
-              saved — there is a place for it.
+              If you would like to say something to Bantu, or to the chicks he
+              saved, there is a place for it.
             </p>
             <Link
               href="/bantu"
@@ -277,7 +277,7 @@ export default function Home() {
               Walk the Republic
             </h2>
             <p className="mt-3 max-w-xl text-kisi-cream-100/85">
-              Explore the farm in interactive 3D — from the foot-bath at the
+              Explore the farm in interactive 3D, from the foot-bath at the
               gate to the Presidential Coop, the Assembly, the sports field,
               and the drainage channel the Ministry of Security would rather
               you didn&apos;t linger by. Every building opens its own story. A
@@ -339,9 +339,9 @@ export default function Home() {
           <p className="mt-4 max-w-2xl text-kisi-cream-100/85">
             The stories are the fun part, but the eggs are the point. Kisi is a
             poultry farm in southwestern Nigeria: the hens are real, their care
-            is real, and so are the eggs — which you can order and eat, having
-            first read about the bird who laid them. That whole business — eggs,
-            hatchery, feed budget and all — is the Republic&apos;s economy.
+            is real, and so are the eggs, which you can order and eat, having
+            first read about the bird who laid them. That whole business, eggs,
+            hatchery, feed budget and all, is the Republic&apos;s economy.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
@@ -375,7 +375,7 @@ export default function Home() {
           </h2>
           <p className="mt-2 max-w-xl text-sm text-kisi-charcoal-600">
             A weekly digest of milestones, matches, and ministerial
-            misadventures — launching soon.
+            misadventures, launching soon.
           </p>
           <NewsletterForm />
         </div>

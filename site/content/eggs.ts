@@ -66,12 +66,12 @@ export const eggMilestones: EggMilestone[] = [
     type: "count",
     count: 210,
     story:
-      "Two hundred and ten eggs, counted — obviously — twice. The only " +
+      "Two hundred and ten eggs, counted, obviously, twice. The only " +
       "citizen who files her own returns in duplicate.",
   },
 ];
 
-/** National Egg Census — monthly recorded totals. */
+/** National Egg Census, monthly recorded totals. */
 export const eggCensus: {
   period: string;
   label: string;
@@ -79,21 +79,15 @@ export const eggCensus: {
   note: string;
 }[] = [
   {
-    period: "2026-04",
-    label: "April 2026",
-    total: 262,
-    note: "Recount demanded by the NGA; totals confirmed. 'Suspicious,' said the opposition.",
-  },
-  {
-    period: "2026-05",
-    label: "May 2026",
-    total: 278,
-    note: "Includes the fully audited presidential contribution.",
-  },
-  {
     period: "2026-06",
     label: "June 2026",
-    total: 291,
-    note: "Chi-Chi's first egg counted with ceremony; the Bureau added a small star to the ledger, against regulations, unanimously.",
+    total: 3500,
+    note: "The Republic's recorded harvest for the month. Chi-Chi's first egg was counted with ceremony, and the Bureau of Egg Statistics added a small star to the ledger, against regulations, unanimously.",
+  },
+  {
+    period: "2026-07",
+    label: "July 2026",
+    total: 5120,
+    note: "A record month as the flock grew and the young layers found their rhythm. The opposition demanded a recount. The recount agreed. The opposition found that suspicious.",
   },
 ];
