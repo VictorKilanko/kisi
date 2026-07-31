@@ -160,9 +160,10 @@ describe("derived data", () => {
   it("story arcs all have metadata and ordered events", () => {
     const arcs = storyArcs();
     // chi-chi-first-egg, grain-affair, mama-gold-retirement,
-    // perch-championship, flu-season, the-drain
-    expect(arcs.length).toBe(6);
+    // perch-championship, flu-season, the-drain, the-full-cabinet
+    expect(arcs.length).toBe(7);
     expect(arcs.map((a) => a.id)).toContain("the-drain");
+    expect(arcs.map((a) => a.id)).toContain("the-full-cabinet");
     for (const arc of arcs) {
       expect(arc.title).toBeTruthy();
       const dates = arc.events.map((e) => e.date);

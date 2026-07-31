@@ -87,6 +87,29 @@ Owner supplied the real flock composition and named the mascot:
 - **Open, owner floated it:** more leaders / building the Republic out further.
   Proposed but not built this pass, awaiting direction on which roles to add.
 
+### Taco corrected, and the cabinet filled out
+
+Owner follow-ups, all shipped:
+
+- **Taco is she/her**, and every "orange comb" reference is gone (the owner did not want
+  a real-world read). Scrubbed the tagline, the "signature" fact, the bio, the page
+  metadata, and the map hotspot; recoloured the MascotPortrait comb from orange to the
+  normal red, beak and legs to gold. New tagline: "No office, all heart. Taco greets you
+  first."
+- **Filled all six vacant ministries** with six new ministers (4 Noiler, 2 Isa-Brown,
+  which answers "add Noiler leaders"): Musa the Grainkeeper (Feed), Emeka the Drain
+  Marshal (Water), Amina Daybreak (Energy & Solar), Sadé the Griot (Culture), Tadé the
+  Foraging Master (Youth), Rọ́nkẹ́ Mama Owambe (Social). The cabinet has no empty seats
+  now. Named flock is 23 citizens (10 Isa-Brown, 13 Noiler).
+- **New story arc "A Full Cabinet"** (5 timeline events) ties the appointments together,
+  with the Opposition auditing every budget. Registered in ARC_META and the arc-count
+  test bumped 6 to 7.
+- **Discipline that avoided a build break:** new minister friendships were kept symmetric
+  *within the new group only* (musa↔emeka, amina↔sadé, tadé↔rọ́nkẹ́), so no existing
+  character's `friends` array had to change. The build-time symmetric-friendship assert
+  is the easiest way to break the build when adding characters. IDs stay ASCII
+  (`sade-griot`) while display names carry diacritics (Sadé).
+
 ### Verification status
 
 **No local gates (Node still not installed), so GitHub Actions CI is the real gate now

@@ -6,8 +6,8 @@ import { mascot } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Taco, the Mascot",
   description:
-    "Meet Taco, the mascot of the Republic of Kisi. No office, an orange " +
-    "comb, and a morning greeting for every visitor.",
+    "Meet Taco, the mascot of the Republic of Kisi. No office, a warm " +
+    "welcome for every visitor, and time for every new chick.",
 };
 
 export default function MascotPage() {

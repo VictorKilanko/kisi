@@ -40,11 +40,7 @@ export const ministries: Ministry[] = [
     id: "feed-agriculture",
     name: "Ministry of Feed and Agriculture",
     shortName: "Feed & Agriculture",
-    ministerId: null,
-    actingNote:
-      "Portfolio held in acting capacity by the Presidency since the last " +
-      "reshuffle. A substantive appointment is expected 'very soon,' and has " +
-      "been for some time.",
+    ministerId: "musa-grainkeeper",
     motto: "By Grain We Stand",
     responsibilities: [
       "The National Feed Budget and its many defenders",
@@ -162,10 +158,7 @@ export const ministries: Ministry[] = [
     id: "social-affairs",
     name: "Ministry of Social Affairs and Flock Relations",
     shortName: "Social Affairs",
-    ministerId: null,
-    actingNote:
-      "Currently coordinated by Elder Yeye Alaba in a strictly advisory, " +
-      "strictly indispensable capacity.",
+    ministerId: "ronke-owambe",
     motto: "One Flock, Many Feathers",
     responsibilities: [
       "The national social calendar and hatch-day registry",
@@ -188,8 +181,7 @@ export const ministries: Ministry[] = [
     id: "energy-solar",
     name: "Ministry of Energy and Solar Affairs",
     shortName: "Energy & Solar",
-    ministerId: null,
-    actingNote: "Vacant. Applications are reviewed at sunrise, naturally.",
+    ministerId: "amina-daybreak",
     motto: "Light When It Matters",
     responsibilities: [
       "The solar-light schedule and its passionate public consultations",
@@ -210,9 +202,7 @@ export const ministries: Ministry[] = [
     id: "water-environment",
     name: "Ministry of Water and Environmental Affairs",
     shortName: "Water & Environment",
-    ministerId: null,
-    actingNote:
-      "Administered jointly with Health & Veterinary Affairs pending appointment.",
+    ministerId: "emeka-drainmaster",
     motto: "Clean Water, Clear Conscience",
     responsibilities: [
       "Trough standards and refill schedules",
@@ -233,10 +223,7 @@ export const ministries: Ministry[] = [
     id: "youth-chick",
     name: "Ministry of Youth and Chick Development",
     shortName: "Youth & Chick Development",
-    ministerId: null,
-    actingNote:
-      "The Young Chick Representation Bill proposes that this ministry be " +
-      "led, for the first time, by an actual young chicken. Debate continues.",
+    ministerId: "tade-foraging",
     motto: "Every Chick Counts",
     responsibilities: [
       "Chick education and foraging apprenticeships",
@@ -257,10 +244,7 @@ export const ministries: Ministry[] = [
     id: "culture",
     name: "Ministry of Culture and Entertainment",
     shortName: "Culture",
-    ministerId: null,
-    actingNote:
-      "Run by an enthusiastic committee of volunteers pending appointment; " +
-      "the committee's minutes are performed rather than read.",
+    ministerId: "sade-griot",
     motto: "The Republic Sings",
     responsibilities: [
       "The dawn chorus (artistic direction: the Vice President)",

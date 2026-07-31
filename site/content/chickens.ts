@@ -1022,4 +1022,327 @@ export const chickens: Chicken[] = [
     colors: { body: "#d9a02b", comb: "#c05621", accent: "#23305e", bg: "#faf5e9" },
     sponsorable: true,
   },
+  {
+    id: "musa-grainkeeper",
+    tribe: "noiler",
+    name: "Musa",
+    fullName: "Musa Aliyu",
+    nickname: "The Grainkeeper",
+    honorific: "Honourable Minister",
+    sex: "rooster",
+    ageNote: "Adult rooster",
+    status: "active",
+    layingStatus: "n-a",
+    roleTitle: "Minister of Feed and Agriculture",
+    branch: "cabinet",
+    ministryId: "feed-agriculture",
+    partyId: "ppp",
+    personality: ["thrifty", "watchful", "unbudgeable on damp", "quietly generous"],
+    favoriteFood: "Whatever is closest to spoiling, eaten first so nothing is wasted",
+    shortBio:
+      "The rooster who guarded the feed store so well the Presidency handed " +
+      "him the whole portfolio. Defender of the National Feed Budget, sworn " +
+      "enemy of damp, and the only minister who audits the grain by smell.",
+    bio: [
+      "Musa spent years as keeper of the raised feed store, a post nobody " +
+        "wanted and he never left. He learned the grain the way a doctor " +
+        "learns a patient: by weight, by smell, by the exact sound dry maize " +
+        "makes against the wall. When damp got into the store one rainy " +
+        "season, he caught it in a single morning and lost not one sack. The " +
+        "story reached the Presidency, and the acting arrangement over Feed " +
+        "and Agriculture quietly ended.",
+      "As Minister he treats the National Feed Budget as a sacred trust and a " +
+        "personal insult in equal measure. He defends every line of it in the " +
+        "Assembly, then goes home and rewraps the store against the rain " +
+        "himself. His seasonal forage plan, posted at the trough, is followed " +
+        "by birds who could not name their own Assembly member. The Noiler, " +
+        "who range far and eat well, claimed him before the Isa-Brown had " +
+        "finished reading his budget.",
+    ],
+    friends: ["emeka-drainmaster"],
+    rivals: [],
+    quotes: [
+      { text: "A full store is a calm nation.", context: "Budget defence, Coop Assembly" },
+      { text: "Damp is the only opposition I fear.", context: "To The Coop Times" },
+    ],
+    achievements: [
+      "Saved the wet-season store without losing a sack",
+      "Author of the seasonal forage plan",
+      "Defender of the National Feed Budget, line by line",
+    ],
+    colors: { body: "#8a3e1f", comb: "#b3261e", accent: "#d9a02b", bg: "#f1e8d4" },
+    sponsorable: true,
+  },
+  {
+    id: "emeka-drainmaster",
+    tribe: "noiler",
+    name: "Emeka",
+    fullName: "Emeka Nwosu",
+    nickname: "The Drain Marshal",
+    honorific: "Honourable Minister",
+    sex: "rooster",
+    ageNote: "Adult rooster",
+    status: "active",
+    layingStatus: "n-a",
+    roleTitle: "Minister of Water and Environmental Affairs",
+    branch: "cabinet",
+    ministryId: "water-environment",
+    partyId: "ppp",
+    personality: ["methodical", "tireless", "haunted by standing water", "dryly funny"],
+    favoriteFood: "Clean water, first and often",
+    shortBio:
+      "The minister who reads the sky like a ledger. He hardened the drainage " +
+      "the monitor lizard came up, keeps every trough honest, and has never " +
+      "once been caught upstream of a problem.",
+    bio: [
+      "Emeka came up through the rainy seasons, when the yard floods and a " +
+        "farm learns who actually watches the water. He mapped every low spot " +
+        "at Kisi in his head and most of them in the mud, and when the monitor " +
+        "lizard came up the drainage channel, it was his channel survey that " +
+        "told Security exactly where to bar it. He does not mention this. " +
+        "Sergeant Danladi mentions it for him.",
+      "As Minister he runs the troughs like a national accounts office: " +
+        "refilled on schedule, scrubbed on schedule, tested by a bird who does " +
+        "not trust schedules. His rainy-season drainage watch is the least " +
+        "glamorous office in the Republic and, on the nights it storms, the " +
+        "busiest. The Clean Water and Healthy Feathers Act is his to deliver, " +
+        "trough by trough, and he intends to.",
+    ],
+    friends: ["musa-grainkeeper"],
+    rivals: [],
+    quotes: [
+      { text: "Water is patient. So am I.", context: "On the rainy-season drainage watch" },
+      {
+        text: "I would rather be bored in the dry season than busy in a flood.",
+        context: "Ministry briefing",
+      },
+    ],
+    achievements: [
+      "Channel survey that guided the drainage hardening",
+      "Trough testing and refill discipline",
+      "Clean Water and Healthy Feathers Act rollout",
+    ],
+    colors: { body: "#23305e", comb: "#b3261e", accent: "#2e7d46", bg: "#faf5e9" },
+    sponsorable: true,
+  },
+  {
+    id: "amina-daybreak",
+    tribe: "noiler",
+    name: "Amina",
+    fullName: "Amina Sadiq",
+    nickname: "Daybreak",
+    honorific: "Honourable Minister",
+    sex: "hen",
+    ageNote: "Adult hen",
+    status: "active",
+    layingStatus: "laying",
+    roleTitle: "Minister of Energy and Solar Affairs",
+    branch: "cabinet",
+    ministryId: "energy-solar",
+    partyId: "ppp",
+    personality: ["early", "sunny", "precise about time", "gently relentless"],
+    favoriteFood: "The first grain of the morning, in the first light",
+    shortBio:
+      "Up before the Vice President and proud of it. Amina runs the " +
+      "solar-light schedule, settles the eternal lights-out argument by " +
+      "arithmetic, and treats the sunrise as a colleague.",
+    bio: [
+      "Amina wakes before the dawn chorus and considers this the only honest " +
+        "way to run an energy ministry. She learned the panels by watching " +
+        "them, charting which caught the sun first and which sulked behind the " +
+        "mango tree, and she can tell you the day's light budget the way Musa " +
+        "can tell you the grain. When the lights flickered one dry season, she " +
+        "found the loose connection before the Assembly finished forming a " +
+        "committee about it.",
+      "Her great national project is Solar Schedule Harmonisation, the long " +
+        "war over whether lights-out should follow the sun or the Speaker's " +
+        "bedtime. Amina, who follows the sun, is winning it slowly and with " +
+        "charts. The Noiler claim her for her early hours; she claims the " +
+        "sunrise for everybody.",
+    ],
+    friends: ["sade-griot"],
+    rivals: [],
+    quotes: [
+      { text: "The sun is free. The panel was not.", context: "Energy education campaign" },
+      {
+        text: "I do not wake early. I simply never agreed to wake late.",
+        context: "To the Vice President, who took it well",
+      },
+    ],
+    achievements: [
+      "Found the loose connection before the committee formed",
+      "Charts the daily light budget",
+      "Leading Solar Schedule Harmonisation, slowly, with charts",
+    ],
+    colors: { body: "#d9a02b", comb: "#b3261e", accent: "#f0c75e", bg: "#faf5e9" },
+    sponsorable: true,
+  },
+  {
+    id: "sade-griot",
+    tribe: "isa-brown",
+    name: "Sadé",
+    fullName: "Sadé Ogúnlèsì",
+    nickname: "The Griot",
+    honorific: "Honourable Minister",
+    oriki: {
+      line: "Ohùn tí ń jí ìlú, tí kò jẹ́ kí ìtàn kú",
+      meaning: "The voice that wakes the town, and will not let the story die",
+    },
+    sex: "hen",
+    ageNote: "Adult hen",
+    status: "active",
+    layingStatus: "laying",
+    roleTitle: "Minister of Culture and Entertainment",
+    branch: "cabinet",
+    ministryId: "culture",
+    partyId: "ppp",
+    personality: ["theatrical", "warm", "keeper of songs", "never forgets a verse"],
+    favoriteFood: "Honeyed grain, saved for after a performance",
+    shortBio:
+      "The Republic's memory, set to music. Sadé runs the Songbook, the " +
+      "Feather Gala, and the mango-tree histories, and can silence the " +
+      "Assembly with a single opening note.",
+    bio: [
+      "Sadé began as the bird who remembered the words when everyone else " +
+        "hummed. She carries the Republic's praise-poetry, the hatch-day " +
+        "songs, the verse for the first rain and the longer verse for the last " +
+        "goodbye, and she has never let a story die for want of a singer. When " +
+        "Mama Gold tells the week's history under the mango tree, it is Sadé " +
+        "who sets it to a tune by Sunday evening.",
+      "As Minister she guards the Kisi Songbook, the national anthology whose " +
+        "first page is, by unbreakable tradition, the Vice President's 4:45 " +
+        "a.m. arrangement. She and the Vice President argue about tempo the " +
+        "way old friends argue about everything, which is to say fondly and " +
+        "forever. A nation that sings together, she insists, has already " +
+        "agreed on something.",
+    ],
+    friends: ["amina-daybreak"],
+    rivals: [],
+    quotes: [
+      {
+        text: "A nation that sings together has already agreed on something.",
+        context: "Opening the Feather Gala",
+      },
+      {
+        text: "Forget the argument. Remember the song.",
+        context: "On why the histories are sung, not filed",
+      },
+    ],
+    achievements: [
+      "Keeper of the Kisi Songbook",
+      "Set the mango-tree histories to music",
+      "Ran the Feather Gala to a standing ovation",
+    ],
+    colors: { body: "#c05621", comb: "#b3261e", accent: "#f0c75e", bg: "#f1e8d4" },
+    sponsorable: true,
+  },
+  {
+    id: "tade-foraging",
+    tribe: "noiler",
+    name: "Tadé",
+    fullName: "Tadé Ojó",
+    nickname: "The Foraging Master",
+    honorific: "Honourable Minister",
+    sex: "rooster",
+    ageNote: "Young adult rooster",
+    status: "active",
+    layingStatus: "n-a",
+    roleTitle: "Minister of Youth and Chick Development",
+    branch: "cabinet",
+    ministryId: "youth-chick",
+    partyId: "ppp",
+    personality: ["patient", "encouraging", "endlessly re-explaining", "secretly competitive"],
+    favoriteFood: "Whatever the chicks left, so none of it is wasted",
+    shortBio:
+      "The teacher every chick remembers. Tadé runs Foraging 101, pairs the " +
+      "young with the wise, and has walked more nervous chicks to their first " +
+      "meal than anyone but Taco.",
+    bio: [
+      "Tadé found his calling by accident, when a lost chick followed him for " +
+        "a whole afternoon and he could not bring himself to shake it off. He " +
+        "taught it to find the good spot behind the water tank instead, and by " +
+        "evening there were four chicks, and by the next week there was a " +
+        "curriculum. Foraging 101 is now the Republic's best-attended class, " +
+        "its final exam gloriously simple: find the good spot before your " +
+        "instructor does.",
+      "As Minister he pairs every chick with a senior hen and every senior hen " +
+        "with a reason to get up in the morning. He argues, gently and " +
+        "constantly, that the Young Chick Representation Bill is right and that " +
+        "the ministry should one day be led by an actual young chicken, once " +
+        "one of them stops eating the exam. The Noiler start their young early " +
+        "on the range; Tadé made that a national programme.",
+    ],
+    friends: ["ronke-owambe"],
+    rivals: [],
+    quotes: [
+      {
+        text: "Find the good spot before your instructor does. That is the whole exam.",
+        context: "Foraging 101, final assessment",
+      },
+      { text: "Every chick counts. I counted them myself.", context: "Youth registry launch" },
+    ],
+    achievements: [
+      "Founder of Foraging 101",
+      "Architect of the mentorship pairings",
+      "Champion of the Young Chick Representation Bill",
+    ],
+    colors: { body: "#2e7d46", comb: "#b3261e", accent: "#d9a02b", bg: "#f1e8d4" },
+    sponsorable: true,
+  },
+  {
+    id: "ronke-owambe",
+    tribe: "isa-brown",
+    name: "Rọ́nkẹ́",
+    fullName: "Rọ́nkẹ́ Adéyẹmí",
+    nickname: "Mama Owambe",
+    honorific: "Honourable Minister",
+    sex: "hen",
+    ageNote: "Adult hen",
+    status: "active",
+    layingStatus: "laying",
+    roleTitle: "Minister of Social Affairs and Flock Relations",
+    branch: "cabinet",
+    ministryId: "social-affairs",
+    partyId: "ppp",
+    personality: ["gregarious", "organised", "remembers every hatch-day", "impossible to refuse"],
+    favoriteFood: "Small chops from the festival leftovers",
+    shortBio:
+      "The Republic at its most sociable. Rọ́nkẹ́ runs the social calendar, " +
+      "the Feather Gala, and the Reconciliation Bench, and has never met a " +
+      "quarrel a shared handful of grain could not soften.",
+    bio: [
+      "Rọ́nkẹ́ organised her first hatch-day celebration uninvited, unfunded, " +
+        "and so successfully that the Presidency simply gave her the calendar " +
+        "rather than compete with it. She remembers every citizen's hatch-day, " +
+        "every anniversary of an arrival, and every feud in need of a bench, " +
+        "and she deploys grain and good timing the way Security deploys the " +
+        "roll call. Elder Yèyé Àlàbá, who kept the social advisory going for " +
+        "years, handed over with visible relief and no small pride.",
+      "As Minister she made the Reconciliation Bench national policy: " +
+        "quarrelling parties sit in the shade until they have shared at least " +
+        "one handful of grain, and the success rate embarrasses the courts. " +
+        "The First Grain Festival and the Feather Gala are hers, run to the " +
+        "minute and remembered for a season. One flock, many feathers, she " +
+        "says, and she has a seat for every one of them.",
+    ],
+    friends: ["tade-foraging"],
+    rivals: [],
+    quotes: [
+      {
+        text: "One flock, many feathers, and I have a seat for every one of them.",
+        context: "On the social calendar",
+      },
+      {
+        text: "Sit. Share the grain. You can go back to disagreeing afterwards, if you still want to.",
+        context: "Instituting the Reconciliation Bench",
+      },
+    ],
+    achievements: [
+      "Made the Reconciliation Bench national policy",
+      "Runs the First Grain Festival and the Feather Gala",
+      "Keeper of the national hatch-day registry",
+    ],
+    colors: { body: "#f0c75e", comb: "#b3261e", accent: "#c05621", bg: "#faf5e9" },
+    sponsorable: true,
+  },
 ];

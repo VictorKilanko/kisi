@@ -288,9 +288,9 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     x: 84,
     y: 64,
     description:
-      "Home of Taco, the Republic's mascot: no office, an orange comb, and a " +
-      "morning greeting for every visitor. Holds no title and outranks " +
-      "everybody anyway.",
+      "Home of Taco, the Republic's mascot: no office, a morning greeting for " +
+      "every visitor, and time for every new chick. Holds no title and " +
+      "outranks everybody anyway.",
     links: [{ href: "/mascot", label: "Meet Taco" }],
     residentIds: [],
   },

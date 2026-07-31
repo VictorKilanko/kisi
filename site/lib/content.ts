@@ -148,6 +148,13 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "Quarantine, calm, and five words a day, how the Republic (and any " +
       "good farm) beats an outbreak: welfare first, panic never.",
   },
+  "the-full-cabinet": {
+    title: "A Full Cabinet",
+    summary:
+      "Six empty ministries, six new ministers, and one Opposition promise " +
+      "to audit every budget by Friday. The week the Republic finally filled " +
+      "every chair.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {

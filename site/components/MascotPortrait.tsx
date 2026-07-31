@@ -1,11 +1,11 @@
 /**
- * Taco, the Republic's mascot. An original procedural portrait, license-free,
- * with the one feature everyone knows Taco by: a blazing orange comb. A small
- * gold star marks the national-figure status. No sex is asserted in the art.
+ * Taco, the Republic's mascot. An original procedural portrait, license-free.
+ * A small gold star marks her national-figure status.
  */
 export function MascotPortrait({ size = 220 }: { size?: number }) {
   const body = "#c9752e";
-  const orange = "#ea7a1e";
+  const comb = "#b3261e";
+  const gold = "#e0a13a";
   const green = "#2e7d46";
   const bg = "#f6ead0";
   return (
@@ -14,7 +14,7 @@ export function MascotPortrait({ size = 220 }: { size?: number }) {
       width={size}
       height={size}
       role="img"
-      aria-label="Illustrated portrait of Taco, the Republic of Kisi mascot, with a bright orange comb"
+      aria-label="Illustrated portrait of Taco, the mascot of the Republic of Kisi"
       className="rounded-2xl"
     >
       <rect width="120" height="120" rx="16" fill={bg} />
@@ -36,22 +36,22 @@ export function MascotPortrait({ size = 220 }: { size?: number }) {
       {/* neck + head */}
       <rect x="72" y="36" width="17" height="32" rx="8.5" fill={body} />
       <circle cx="82" cy="35" r="14" fill={body} />
-      {/* the orange comb, big and unmistakable */}
-      <g fill={orange}>
+      {/* comb */}
+      <g fill={comb}>
         <circle cx="74" cy="20" r="6" />
         <circle cx="82" cy="15" r="7" />
         <circle cx="90" cy="20" r="6.5" />
         <circle cx="86" cy="23" r="5" />
       </g>
       {/* beak */}
-      <polygon points="95,33 106,37 95,41" fill={orange} />
+      <polygon points="95,33 106,37 95,41" fill={gold} />
       {/* wattle */}
-      <ellipse cx="92" cy="45" rx="4" ry="6" fill={orange} />
+      <ellipse cx="92" cy="45" rx="4" ry="6" fill={comb} />
       {/* eye */}
       <circle cx="86" cy="32" r="2.8" fill="#23231f" />
       <circle cx="87.1" cy="31.1" r="1" fill="#ffffff" />
       {/* legs */}
-      <g stroke={orange} strokeWidth="3.2" strokeLinecap="round">
+      <g stroke={gold} strokeWidth="3.2" strokeLinecap="round">
         <line x1="56" y1="97" x2="56" y2="109" />
         <line x1="70" y1="97" x2="70" y2="109" />
         <line x1="56" y1="109" x2="49" y2="113" />

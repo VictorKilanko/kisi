@@ -312,4 +312,75 @@ export const timelineEvents: TimelineEvent[] = [
       "Opposition, who declines to demand a recount.",
     articleId: "bounty-on-the-drain",
   },
+  // ARC: The Full Cabinet
+  {
+    id: "cabinet-announced",
+    chickenIds: ["adedoyin-mama-decree", "halima-iron-feathers"],
+    date: "2026-07-20",
+    arcId: "the-full-cabinet",
+    world: "fiction",
+    type: "custom",
+    title: "Six empty chairs",
+    body:
+      "The President announces that every acting arrangement ends this week: " +
+      "six vacant ministries, six substantive appointments, and no more " +
+      "chairs kept warm by the Presidency. The Opposition welcomes it and " +
+      "promises to audit all six budgets by Friday.",
+  },
+  {
+    id: "cabinet-feed-water",
+    chickenIds: ["musa-grainkeeper", "emeka-drainmaster", "adedoyin-mama-decree"],
+    date: "2026-07-21",
+    arcId: "the-full-cabinet",
+    world: "fiction",
+    type: "appointment",
+    title: "Grain and water",
+    body:
+      "Musa the Grainkeeper takes Feed and Agriculture; Emeka the Drain " +
+      "Marshal takes Water and Environment. Two Noiler infrastructure hands " +
+      "who already ran the store and the drains, now with the titles to " +
+      "match. Musa's first act: an inspection of the store, by smell.",
+  },
+  {
+    id: "cabinet-energy-culture",
+    chickenIds: ["amina-daybreak", "sade-griot"],
+    date: "2026-07-22",
+    arcId: "the-full-cabinet",
+    world: "fiction",
+    type: "appointment",
+    title: "Sunrise and song",
+    body:
+      "Amina Daybreak takes Energy and Solar; Sadé the Griot takes Culture " +
+      "and Entertainment. The swearing-in runs late because the new Culture " +
+      "Minister set the oath to music and the Assembly asked for a second " +
+      "verse.",
+  },
+  {
+    id: "cabinet-youth-social",
+    chickenIds: ["tade-foraging", "ronke-owambe", "yeye-alaba"],
+    date: "2026-07-23",
+    arcId: "the-full-cabinet",
+    world: "fiction",
+    type: "appointment",
+    title: "The teacher and the convener",
+    body:
+      "Tadé the Foraging Master takes Youth and Chick Development; Rọ́nkẹ́ " +
+      "Mama Owambe takes Social Affairs. Elder Yèyé Àlàbá hands over the " +
+      "social advisory she held for years with relief and pride, and books " +
+      "the Reconciliation Bench for the afternoon, just in case.",
+  },
+  {
+    id: "cabinet-full",
+    chickenIds: ["adedoyin-mama-decree", "halima-iron-feathers"],
+    date: "2026-07-24",
+    arcId: "the-full-cabinet",
+    world: "fiction",
+    type: "custom",
+    title: "A full cabinet, at last",
+    body:
+      "For the first time in the Republic's memory, no ministry is vacant. " +
+      "The Opposition delivers its promised audit of all six budgets, finds " +
+      "them suspiciously reasonable, and demands a recount of the recount. " +
+      "The President calls it a good week.",
+  },
 ];

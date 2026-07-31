@@ -60,38 +60,35 @@ export const farmStats: FarmStat[] = [
   },
 ];
 
-/**
- * The Republic's mascot: Taco. Referred to as they/them, since Taco's sex is
- * not fixed; the owner can set he or she and it flows from here.
- */
+/** The Republic's mascot: Taco. She/her. */
 export const mascot = {
   name: "Taco",
   title: "Mascot of the Republic of Kisi",
-  tagline: "You will know Taco by the orange comb.",
+  tagline: "No office, all heart. Taco greets you first.",
   facts: [
     { label: "Office", value: "None. Outranks everybody anyway." },
     { label: "Tribe", value: "Both, by belonging to neither" },
-    { label: "Signature", value: "The orange comb" },
+    { label: "Known for", value: "Greeting every visitor first" },
   ],
   intro:
     "Every great republic has a beloved national figure who holds no office, " +
     "answers no questions, and outranks everybody. At Kisi, that figure is " +
-    "Taco. You will know them at a glance by the blazing orange comb, the " +
-    "only one like it on the whole farm.",
+    "Taco. She is first to every gathering, first to the gate, and first to " +
+    "welcome a face she has never seen before.",
   bio: [
-    "Nobody appointed Taco. Taco simply turned up one morning at the front of " +
-      "every gathering, orange comb catching the sun, and has been there ever " +
-      "since. When the flock lines up for the dawn chorus, Taco is at the end " +
-      "of the row. When a hatch-day is celebrated, Taco is already there. When " +
-      "a nervous new chick arrives, Taco walks it to the feed line personally.",
-    "Taco belongs to no tribe, which is exactly why both claim them. The " +
-      "Isa-Brown say Taco has the patience of a good layer; the Noiler say " +
-      "Taco has the nerve of a range bird. Taco lets both be right and eats at " +
+    "Nobody appointed Taco. She simply turned up one morning at the front of " +
+      "every gathering and has been there ever since. When the flock lines up " +
+      "for the dawn chorus, Taco is at the end of the row. When a hatch-day is " +
+      "celebrated, she is already there. When a nervous new chick arrives, she " +
+      "walks it to the feed line personally.",
+    "Taco belongs to no tribe, which is exactly why both claim her. The " +
+      "Isa-Brown say she has the patience of a good layer; the Noiler say she " +
+      "has the nerve of a range bird. Taco lets both be right and eats at " +
       "whichever trough is closest.",
-    "The orange comb is the Republic's most recognisable feature. Chicks are " +
-      "told they will grow a fine comb of their own if they are kind, brave, " +
-      "and finish their feed. Very few things at Kisi are non-negotiable. " +
-      "Taco's morning greeting to every visitor is one of them.",
+    "Her morning round is the Republic's most reliable clock. Chicks are told " +
+      "that if they are kind, brave, and finish their feed, they too might grow " +
+      "up to greet the whole nation by name. Very few things at Kisi are " +
+      "non-negotiable. Taco's morning welcome to every visitor is one of them.",
   ],
   duties: [
     "Greeting every visitor at the gate, whether or not the visitor asked.",
