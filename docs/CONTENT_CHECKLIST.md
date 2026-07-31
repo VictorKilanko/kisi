@@ -9,6 +9,14 @@ credible · 🟢 nice to have.
 
 ## Needs owner input
 
+### Social media kit (added 2026-07-31)
+- [ ] 🟡 **Confirm the Instagram @handle.** The `social/` post images show the real
+      site address `kisi.africa` but do not bake in an @handle. Suggested
+      `@kisi.africa`; confirm it is available and set it at the top of
+      `social/captions.md`.
+- [ ] 🟢 Real bird photographs to replace the drawn portrait medallions in the
+      leader posts (posts 04 to 06) when available.
+
 ### Shop — egg orders (added 2026-07-18)
 - [ ] 🔴 **Where do egg order enquiries go?** `/api/orders` currently validates
       and discards — no inbox, no store. The Shop is not usable until this is

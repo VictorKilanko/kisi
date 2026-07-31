@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Taco the mascot">
+<circle cx="32" cy="32" r="31" fill="#1f5130"/>
+<circle cx="32" cy="32" r="27.5" fill="#faf5e9"/>
+<g fill="#b3261e"><circle cx="24" cy="20" r="4.5"/><circle cx="31" cy="16.5" r="5"/><circle cx="38" cy="20" r="4.5"/></g>
+<circle cx="31" cy="34" r="15" fill="#c9752e"/>
+<polygon points="45,32 55,35.5 45,39" fill="#e0a13a"/>
+<ellipse cx="43" cy="43" rx="3.2" ry="5" fill="#b3261e"/>
+<circle cx="35" cy="31" r="3.4" fill="#23231f"/>
+<circle cx="36.2" cy="29.9" r="1.1" fill="#ffffff"/>
+</svg>

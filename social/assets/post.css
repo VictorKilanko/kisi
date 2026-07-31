@@ -1,0 +1,179 @@
+/* ============================================================
+   Kisi social posts · shared stylesheet
+   One .post = one 1080x1080 Instagram image.
+   Themes: .t-state (green), .t-portrait (cream), .t-times (news).
+   Fonts are Windows system fonts only, so rendering never needs
+   the network. Georgia = editorial display; Segoe UI = support.
+   ============================================================ */
+
+:root {
+  --green: #1f5130;
+  --green-deep: #16371f;
+  --gold: #d9a02b;
+  --gold-soft: #f0c14b;
+  --cream: #faf5e9;
+  --cream-2: #f1e8d4;
+  --ink: #23231f;
+  --terra: #8a3e1f;
+  --indigo: #23305e;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+.post {
+  position: relative;
+  width: 1080px;
+  height: 1080px;
+  overflow: hidden;
+  padding: 72px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- shared marks ---------------------------------------- */
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand { display: flex; align-items: center; gap: 20px; }
+.crest { width: 84px; height: 84px; flex: none; }
+.wordmark {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: 0.5px;
+}
+.wordmark small {
+  display: block;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-top: 4px;
+}
+.wordmark b { font-size: 30px; display: block; }
+
+.postno {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 2px;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  padding: 10px 20px;
+  white-space: nowrap;
+  opacity: 0.85;
+}
+
+.body-area { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+.kicker {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0 0 26px;
+}
+
+.headline {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 92px;
+  line-height: 1.02;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+.headline.sm { font-size: 74px; }
+.headline.xs { font-size: 62px; }
+
+.lede {
+  font-size: 33px;
+  line-height: 1.42;
+  margin: 34px 0 0;
+  max-width: 20ch;
+}
+.lede.wide { max-width: none; }
+
+.pull {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 40px;
+  line-height: 1.3;
+  margin: 30px 0 0;
+}
+.pull .attr {
+  display: block;
+  font-style: normal;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-top: 22px;
+  opacity: 0.8;
+}
+
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.foot .site { font-weight: 700; }
+.rule { height: 3px; width: 100%; margin: 0 0 22px; opacity: 0.5; }
+
+/* medallion (leader / mascot portrait mark) */
+.medallion { width: 260px; height: 260px; flex: none; }
+
+/* =========================================================
+   THEME: state (welcome / intro) · deep green field
+   ========================================================= */
+.t-state { background: radial-gradient(120% 120% at 50% 0%, #245c37 0%, var(--green) 55%, var(--green-deep) 100%); color: var(--cream); }
+.t-state .kicker { color: var(--gold-soft); }
+.t-state .wordmark { color: var(--cream); }
+.t-state .rule { background: var(--gold); }
+.t-state .foot { color: var(--gold-soft); }
+.t-state .pull { color: #fff; }
+
+/* =========================================================
+   THEME: portrait (leaders) · eggshell, editorial
+   ========================================================= */
+.t-portrait { background: var(--cream); color: var(--ink); }
+.t-portrait .kicker { color: var(--terra); }
+.t-portrait .wordmark { color: var(--green); }
+.t-portrait .headline { color: var(--green); }
+.t-portrait .rule { background: var(--gold); }
+.t-portrait .foot { color: var(--green); }
+.t-portrait .row { display: flex; gap: 48px; align-items: center; }
+.t-portrait .row .col { flex: 1; }
+.t-portrait .oriki {
+  font-family: Georgia, serif; font-style: italic;
+  font-size: 27px; line-height: 1.4; color: var(--terra); margin: 20px 0 0;
+}
+.t-portrait .oriki span { display:block; font-style: normal; font-size: 20px; opacity: 0.75; margin-top: 6px; }
+
+/* =========================================================
+   THEME: times (story arcs / Coop Times) · newspaper
+   ========================================================= */
+.t-times { background: var(--cream-2); color: var(--ink); }
+.t-times .masthead { border-bottom: 5px double var(--ink); padding-bottom: 22px; }
+.t-times .wordmark { color: var(--ink); }
+.t-times .wordmark b { letter-spacing: 1px; }
+.t-times .kicker { color: #7a1f14; }
+.t-times .headline { color: var(--ink); }
+.t-times .episode {
+  font-family: Georgia, serif; font-weight: 700; font-size: 20px;
+  letter-spacing: 2px; text-transform: uppercase;
+  border: 2px solid var(--ink); border-radius: 4px; padding: 9px 16px;
+}
+.t-times .lede { border-left: 5px solid var(--gold); padding-left: 26px; max-width: 30ch; font-size: 36px; }
+.t-times .rule { background: var(--ink); height: 2px; }
+.t-times .foot { color: var(--ink); }
+.t-times .byline { font-style: italic; font-family: Georgia, serif; font-size: 24px; opacity: 0.8; margin-top: 18px; }
