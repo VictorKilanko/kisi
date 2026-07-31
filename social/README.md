@@ -45,6 +45,26 @@ Every image is a **1080 x 1080 PNG** in `images/`, built from the same look as t
 Captions for all 12 are in `captions.md`. Post them in order; 04 to 06 work as one
 carousel, and 08 to 12 are a 5-slide carousel (or post one every day or two).
 
+## Story arc carousels (batch 2, 7 arcs, 27 slides)
+
+Each arc is one **carousel** (multi-slide post). Files are `images/arc-<name>-N.png`;
+post them in order (`-1` first). One caption per carousel, all in `captions.md`.
+
+| Arc | Slides | Files | Tone |
+|---|---|---|---|
+| Chi-Chi's First Egg | 5 | `arc-chichi-1..5` | warm, the ingénue |
+| The Missing Breakfast Grain | 4 | `arc-grain-1..4` | scandal, gossip |
+| Mama Gold's Long Goodbye | 3 | `arc-mamagold-1..3` | emotional |
+| The Rain Final | 3 | `arc-rainfinal-1..3` | sports drama |
+| Flu Season, Handled | 2 | `arc-flu-1..2` | welfare |
+| The Drain | 5 | `arc-drain-1..5` | the villain (monitor lizard) |
+| A Full Cabinet | 5 | `arc-cabinet-1..5` | politics |
+
+These are generated from the site's own timeline content by `generate-arcs.mjs`
+(`node social/generate-arcs.mjs`), then rendered with `render.ps1`. Every arc's last
+slide routes to Support (the funnel rule below). To add or edit an arc, change the data
+at the top of `generate-arcs.mjs` and re-run both scripts.
+
 ## How to post
 
 1. Pick the numbered PNG in `images/`.

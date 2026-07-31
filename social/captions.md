@@ -87,6 +87,55 @@ at kisi.africa/shop. 🤝
 
 ---
 
+## Story arc carousels
+
+Each arc is one Instagram **carousel** (multi-slide post). Post the slides in order
+(`arc-<name>-1` first); the "Part N of M" badge on each slide keeps them ordered. One
+caption per carousel.
+
+### Arc · Chi-Chi's First Egg (5 slides: `arc-chichi-1` to `-5`)
+CHI-CHI'S FIRST EGG, a story in 5 parts. She arrived motherless at three weeks old,
+smaller than the forecast allowed, and spent her first week against a borrowed wing.
+Months of quiet watching later, a whole nation waited on one small hen. Statement in full:
+"I did my best." Swipe through all 5. 🥚 Meet the flock at kisi.africa, order farm-fresh
+eggs at kisi.africa/shop.
+
+### Arc · The Missing Breakfast Grain (4 slides: `arc-grain-1` to `-4`)
+SCANDAL. Two hundred grams of premium maize signed out of the national store, and the
+return column of the feed ledger went very, very quiet. Kola Quill investigated. A Panel of
+Inquiry sat, with its own weighing scale. The grain turned up behind a filing perch. A
+4-part story, swipe through all of it. 📊 kisi.africa/support.
+
+### Arc · Mama Gold's Long Goodbye (3 slides: `arc-mamagold-1` to `-3`)
+MAMA GOLD'S LONG GOODBYE, in 3 parts. Egg No. 400, celebrated under the mango tree. Her
+review: "The first one was harder." The National Grandmother isn't retiring, she's
+delegating, and there's now a law that every citizen calls by her name. Swipe through all 3.
+🧡 Support the senior hens at kisi.africa/support.
+
+### Arc · The Rain Final (3 slides: `arc-rainfinal-1` to `-3`)
+THE RAIN FINAL, in 3 parts. Flash Adaora broke the record, then cleared the Perch Jumping
+Final's record height first attempt, in the rain. "The perch is already wet. So am I." It is
+engraved on the gatepost now. Swipe through all 3. 🏆 kisi.africa/shop.
+
+### Arc · Flu Season, Handled (2 slides: `arc-flu-1` to `-2`)
+FLU SEASON, HANDLED, in 2 parts. A bug reached Coop Two. Dr. Featherwell quarantined
+calmly, published the facts daily, and answered every rumour with the same five words. Then
+Coop Two recovered. Welfare first, panic never, exactly how a real farm does it. Swipe
+through both. 🩺 kisi.africa/support.
+
+### Arc · The Drain (5 slides: `arc-drain-1` to `-5`)
+THE DRAIN, a story in 5 parts. It started with a track in the mud by the east fence. It
+ended with a resting place voted under the mango tree without a single speech against, and a
+500,000-grain bounty. This is the night Bantu held the doorway of Coop Two so twelve chicks
+could get out the far side. Every one of them made it. Swipe through all 5. 🌿 Keep the
+flock safe, lit and housed: kisi.africa/support.
+
+### Arc · A Full Cabinet (5 slides: `arc-cabinet-1` to `-5`)
+A FULL CABINET, in 5 parts. In a single week the President filled six empty ministries and
+retired the word "acting" from the national vocabulary. The Opposition welcomed all six new
+ministers warmly, and promised to audit every budget by Friday. Swipe through all 5. 🗞️
+Follow the Republic at kisi.africa.
+
 ## Reusable hashtag block
 
 ```

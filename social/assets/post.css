@@ -91,6 +91,7 @@ html, body { margin: 0; padding: 0; }
 }
 .headline.sm { font-size: 74px; }
 .headline.xs { font-size: 62px; }
+.headline.xxs { font-size: 50px; }
 
 .lede {
   font-size: 33px;
@@ -176,6 +177,7 @@ html, body { margin: 0; padding: 0; }
   border: 2px solid var(--ink); border-radius: 4px; padding: 9px 16px;
 }
 .t-times .lede { border-left: 5px solid var(--gold); padding-left: 26px; max-width: 30ch; font-size: 36px; }
+.t-times .lede.sm { font-size: 30px; max-width: 36ch; line-height: 1.38; }
 .t-times .rule { background: var(--ink); height: 2px; }
 .t-times .foot { color: var(--ink); }
 .t-times .byline { font-style: italic; font-family: Georgia, serif; font-size: 24px; opacity: 0.8; margin-top: 18px; }
