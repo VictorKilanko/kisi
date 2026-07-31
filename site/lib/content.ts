@@ -155,6 +155,13 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "to audit every budget by Friday. The week the Republic finally filled " +
       "every chair.",
   },
+  "the-nesting-box-election": {
+    title: "The Nesting Box Election",
+    summary:
+      "Two big parties, one small kingmaker under the mango tree, and a " +
+      "recount demanded before the first count finished. How the Republic " +
+      "votes: hungry birds not allowed.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {

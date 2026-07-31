@@ -382,5 +382,76 @@ export const timelineEvents: TimelineEvent[] = [
       "The Opposition delivers its promised audit of all six budgets, finds " +
       "them suspiciously reasonable, and demands a recount of the recount. " +
       "The President calls it a good week.",
+    articleId: "full-cabinet-reshuffle",
+  },
+  // ARC: The Nesting Box Election
+  {
+    id: "election-campaigns",
+    chickenIds: ["adedoyin-mama-decree", "halima-iron-feathers"],
+    date: "2026-06-05",
+    arcId: "the-nesting-box-election",
+    world: "fiction",
+    type: "election",
+    title: "The campaigns begin",
+    body:
+      "Campaign season opens for the Coop Assembly. The Progressive Peckers " +
+      "Party runs on 'Forward with Feed'; the New Grain Alliance runs on " +
+      "'Count Every Egg. Twice.' Posters go up on every post. Someone draws a " +
+      "moustache on the President's poster. It is, inevitably, investigated.",
+  },
+  {
+    id: "election-fff",
+    chickenIds: ["halima-iron-feathers"],
+    date: "2026-06-08",
+    arcId: "the-nesting-box-election",
+    world: "fiction",
+    type: "election",
+    title: "The Front holds the balance",
+    body:
+      "Neither big party can pass the Nesting Box Expansion Bill without the " +
+      "Free Feathers Front, the small party that meets under the mango tree " +
+      "and opens with one minute of contented scratching. Overnight, the " +
+      "least hurried birds in the Republic become the most courted.",
+  },
+  {
+    id: "election-day",
+    chickenIds: ["yeye-alaba"],
+    date: "2026-06-11",
+    arcId: "the-nesting-box-election",
+    world: "fiction",
+    type: "election",
+    title: "Voting under the mango tree",
+    body:
+      "Chief Justice Yèyé Àlàbá presides over polling with a single rule: no " +
+      "bird votes hungry. Voting closes at the afternoon feed. Turnout is " +
+      "declared total, because she counted everyone on the way in.",
+  },
+  {
+    id: "election-recount",
+    chickenIds: ["halima-iron-feathers"],
+    date: "2026-06-12",
+    arcId: "the-nesting-box-election",
+    world: "fiction",
+    type: "election",
+    title: "The count, and the recount",
+    body:
+      "The New Grain Alliance demands a recount before the first count has " +
+      "finished, on principle. The Bureau of Egg Statistics obliges. The " +
+      "totals agree, which the Alliance finds deeply suspicious and says so.",
+  },
+  {
+    id: "election-result",
+    chickenIds: ["adedoyin-mama-decree", "halima-iron-feathers"],
+    date: "2026-06-14",
+    arcId: "the-nesting-box-election",
+    world: "fiction",
+    type: "election",
+    title: "A result, and a handshake at the fence",
+    body:
+      "The Progressive Peckers keep their majority; the Free Feathers Front " +
+      "trades its support for a real expansion of nesting boxes and calls it " +
+      "a good day's scratching. That evening the President and the Opposition " +
+      "Leader are seen at the fence line, arguing about everything except the " +
+      "result, which is already settled between them.",
   },
 ];

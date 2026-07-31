@@ -343,4 +343,63 @@ export const articles: Article[] = [
     relatedChickenIds: [],
     relatedMinistryIds: ["egg-affairs"],
   },
+  {
+    id: "full-cabinet-reshuffle",
+    headline: "EVERY CHAIR FILLED: PRESIDENT NAMES SIX NEW MINISTERS",
+    standfirst:
+      "In a single week the President ended every acting arrangement in " +
+      "government. The Opposition welcomed it and promised to audit all six " +
+      "budgets by Friday.",
+    category: "politics",
+    world: "fiction",
+    publishedAt: "2026-07-24",
+    author: { name: "Kola Quill", title: "Chief Correspondent, The Coop Times" },
+    body: [
+      "For the first time in living memory, the Republic of Kisi has no vacant " +
+        "ministry. In a week of swearing-in ceremonies that ran, on average, " +
+        "eleven minutes over schedule, President Adédoyin filled six empty " +
+        "cabinet seats and retired the word 'acting' from the national " +
+        "vocabulary.",
+      "Feed and Agriculture goes to Musa the Grainkeeper, whose first official " +
+        "act was to inspect the national store by smell and pronounce it " +
+        "acceptable, for now. Water and Environment goes to Emeka the Drain " +
+        "Marshal, the bird whose channel survey guided the hardening of the " +
+        "drain the monitor lizard came up. Both are Noiler, both were already " +
+        "doing the job, and both received their titles with the expression of " +
+        "citizens who suspect a trick.",
+      "Energy and Solar goes to Amina Daybreak, who is reliably awake before " +
+        "the Vice President and intends to legislate accordingly. Culture goes " +
+        "to Sadé the Griot, whose swearing-in ran longest because she set the " +
+        "oath to music and the Assembly demanded a second verse. Youth and " +
+        "Chick Development goes to Tadé the Foraging Master, and Social Affairs " +
+        "to Rọ́nkẹ́ Mama Owambe, who booked the Reconciliation Bench for the " +
+        "afternoon of her own appointment, on principle.",
+      "The Leader of the Opposition, Halima 'Iron Feathers,' welcomed the " +
+        "appointments with characteristic warmth: 'Six new budgets. Six new " +
+        "opportunities to count.' She has promised a full audit by Friday and " +
+        "a recount of the audit by Monday.",
+      "This correspondent asked the President whether a full cabinet was, at " +
+        "last, a finished cabinet. She smiled. 'A cabinet is never finished,' " +
+        "she said. 'It is only, occasionally, complete.' The distinction was " +
+        "not explained, and did not need to be.",
+    ],
+    relatedChickenIds: [
+      "adedoyin-mama-decree",
+      "halima-iron-feathers",
+      "musa-grainkeeper",
+      "emeka-drainmaster",
+      "amina-daybreak",
+      "sade-griot",
+      "tade-foraging",
+      "ronke-owambe",
+    ],
+    relatedMinistryIds: [
+      "feed-agriculture",
+      "water-environment",
+      "energy-solar",
+      "culture",
+      "youth-chick",
+      "social-affairs",
+    ],
+  },
 ];
