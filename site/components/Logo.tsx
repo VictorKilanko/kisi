@@ -1,5 +1,5 @@
 /**
- * The Kisi emblem — one iconic mark that carries the whole enterprise, the way
+ * The Kisi emblem, one iconic mark that carries the whole enterprise, the way
  * John Deere's deer or Pioneer's sun carry theirs.
  *
  *   • the cog / sunburst ring  → agricultural engineering + energy + the dawn a
@@ -41,7 +41,7 @@ export function LogoMark({
     >
       {title ? <title>{title}</title> : null}
 
-      {/* cog / sunburst teeth — engineering + energy + sunrise */}
+      {/* cog / sunburst teeth, engineering + energy + sunrise */}
       <g fill={GREEN}>
         {Array.from({ length: TEETH }).map((_, i) => (
           <rect
@@ -60,7 +60,7 @@ export function LogoMark({
       <circle cx={cx} cy={cy} r={26} fill={GREEN} />
       <circle cx={cx} cy={cy} r={22.5} fill={CREAM} />
 
-      {/* crossed wheat ears behind the egg — crops */}
+      {/* crossed wheat ears behind the egg, crops */}
       <g
         stroke={GREEN}
         strokeWidth={1.6}
@@ -80,7 +80,7 @@ export function LogoMark({
         <path d="M38.5 37 q4 -1 6 -4" />
       </g>
 
-      {/* the egg — the poultry heart + the economy */}
+      {/* the egg, the poultry heart + the economy */}
       <path
         d="M32 22 C25 22 23 32 23 38 C23 45 27 49 32 49 C37 49 41 45 41 38 C41 32 39 22 32 22 Z"
         fill={GOLD}
@@ -90,7 +90,7 @@ export function LogoMark({
         fill={GOLD_LIGHT}
       />
 
-      {/* the comb — unmistakably poultry, a proud little crown */}
+      {/* the comb, unmistakably poultry, a proud little crown */}
       <path
         d="M27 22 q1.5 -4 3 0 q1.5 -4 3 0 q1.5 -4 3 0 q0.5 1.5 -1 2 h-8 q-1.5 -0.5 0 -2 Z"
         fill={GREEN}

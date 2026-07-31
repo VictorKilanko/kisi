@@ -4,7 +4,7 @@ import { PlaceholderNotice } from "@/components/Disclaimer";
 export const metadata: Metadata = {
   title: "Visit & Contact",
   description:
-    "Contact Kisi Farm — general, partnership, media, and school inquiries, " +
+    "Contact Kisi Farm, general, partnership, media, and school inquiries, " +
     "and future farm-visit requests.",
 };
 
@@ -40,7 +40,7 @@ export default function VisitPage() {
 
       <form
         className="mt-8 space-y-5 rounded-2xl border border-kisi-green-900/10 bg-white p-6"
-        aria-label="Contact form (preview — not yet active)"
+        aria-label="Contact form (preview, not yet active)"
       >
         <div className="grid gap-5 sm:grid-cols-2">
           <label className="block">

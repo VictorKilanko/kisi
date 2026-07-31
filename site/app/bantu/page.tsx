@@ -6,7 +6,7 @@ import { WellWishesForm } from "@/components/WellWishesForm";
 import { getChicken } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Bantu — Night Watchman of Coop Two",
+  title: "Bantu, Night Watchman of Coop Two",
   description:
     "Bantu stood in the doorway of Coop Two until twelve chicks were out. " +
     "The Republic of Kisi remembers him. Leave a message for the flock.",
@@ -66,9 +66,9 @@ export default function BantuPage() {
           Send your well-wishes
         </h2>
         <p className="mt-3 text-kisi-charcoal-600">
-          The flock has been quiet since. If you would like to say something —
+          The flock has been quiet since. If you would like to say something,
           to Bantu, to Sergeant Danladi who reached him, or to the twelve
-          chicks who got out the far side — leave it here. The farm reads
+          chicks who got out the far side, leave it here. The farm reads
           every one.
         </p>
         <div className="mt-6">
@@ -110,7 +110,7 @@ export default function BantuPage() {
         </h2>
         <p className="mt-3 text-kisi-charcoal-600">
           The Ministry of Security has posted a bounty. If you see it, do not
-          approach it — raise the alarm and find a guard.
+          approach it, raise the alarm and find a guard.
         </p>
         <div className="mt-6">
           <WantedPoster />

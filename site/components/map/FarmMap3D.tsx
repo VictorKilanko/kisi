@@ -5,7 +5,7 @@ import { OrbitControls } from "@react-three/drei";
 import { toWorld, type EnrichedHotspot, type MapResident } from "@/lib/mapData";
 
 /**
- * The 3D farm — a stylized, fully procedural low-poly world.
+ * The 3D farm, a stylized, fully procedural low-poly world.
  * No external models or textures (original geometry only), `frameloop="demand"`
  * so idle cost is near zero, and the canvas is aria-hidden: the accessible
  * interface is the DOM hotspot list rendered by MapExperience.

@@ -10,7 +10,7 @@ import type { PaymentProvider } from "@/lib/payments/types";
  * documentation:
  *
  * 1. `LIVE_PAYMENTS_UNLOCKED` is a hard-coded `false`. No environment
- *    variable can flip it — going live requires a deliberate, reviewed
+ *    variable can flip it, going live requires a deliberate, reviewed
  *    code change after the owner confirms legal status and the wording
  *    review is done.
  * 2. Even then, a non-test Paystack key also requires
@@ -49,7 +49,7 @@ export function getPayments(): PaymentsStatus {
         reason:
           "Live payment keys are BLOCKED: the business's legal registration " +
           "status is unconfirmed. Use a sk_test_ key. (Unlocking live mode " +
-          "requires a reviewed code change — see lib/payments/index.ts.)",
+          "requires a reviewed code change, see lib/payments/index.ts.)",
       };
     }
     if (process.env.PAYMENTS_ALLOW_LIVE !== "true") {

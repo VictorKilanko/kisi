@@ -23,7 +23,7 @@ export const bills: Bill[] = [
       "Proposes six additional nesting boxes and the retirement of the " +
       "creaky one everyone avoids. Deadlocked: the government cites " +
       "national dignity, the opposition cites the budget, and the Free " +
-      "Feathers Front — which holds the deciding votes — has tabled " +
+      "Feathers Front, which holds the deciding votes, has tabled " +
       "seventeen amendments about perch access and is enjoying itself " +
       "enormously.",
   },
@@ -47,7 +47,7 @@ export const bills: Bill[] = [
     summary:
       "Would reserve one Assembly seat and the Youth & Chick Development " +
       "portfolio for a citizen under one year old. Sponsored from outside " +
-      "the Assembly by petition — 118 footprints collected at Chick Sprint " +
+      "the Assembly by petition, 118 footprints collected at Chick Sprint " +
       "Saturdays. Elders are said to be 'studying it,' which the sponsor " +
       "has described as 'the place bills go to nap.'",
   },
@@ -109,7 +109,7 @@ export const presidentialDiary: { day: string; entry: string }[] =
     {
       day: "Monday",
       entry:
-        "06:58 — trough-side inspection, two minutes early, because leadership. " +
+        "06:58, trough-side inspection, two minutes early, because leadership. " +
         "Cabinet meeting: the Feed Budget defended, the Stadium Project 'progressing.'",
     },
     {
@@ -127,7 +127,7 @@ export const presidentialDiary: { day: string; entry: string }[] =
     {
       day: "Thursday",
       entry:
-        "Coop Assembly — observed the Nesting Box debate from the gallery. " +
+        "Coop Assembly, observed the Nesting Box debate from the gallery. " +
         "The Free Feathers Front tabled amendment eighteen. Admirable stamina.",
     },
     {
@@ -140,7 +140,7 @@ export const presidentialDiary: { day: string; entry: string }[] =
     {
       day: "Saturday",
       entry:
-        "Chick Sprint Saturdays — flagged off the junior 20-metre. Photo " +
+        "Chick Sprint Saturdays, flagged off the junior 20-metre. Photo " +
         "opportunity with the sprint clinic; outran nobody; claimed otherwise.",
     },
     {

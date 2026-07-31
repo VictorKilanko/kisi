@@ -58,7 +58,7 @@ export const monitorLizard: WantedNotice = {
   issuedBy: "Ministry of Security · Office of the Minister, Pete Okpara",
   approach:
     "DO NOT APPROACH IT. Raise the alarm call, get the chicks inside, and " +
-    "find a guard. No citizen is to confront it alone — this is a standing " +
+    "find a guard. No citizen is to confront it alone, this is a standing " +
     "order of the Ministry and the Minister has said he will enforce it " +
     "personally.",
 };

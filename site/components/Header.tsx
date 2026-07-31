@@ -67,7 +67,7 @@ export function Header() {
         Skip to main content
       </a>
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-        <Link href="/" aria-label="Kisi — home">
+        <Link href="/" aria-label="Kisi, home">
           <Logo size={40} tagline />
         </Link>
 

@@ -58,11 +58,11 @@ export const farmStats: FarmStat[] = [
   },
 ];
 
-/** Mascot section — entirely pending owner input. */
+/** Mascot section, entirely pending owner input. */
 export const mascot = {
   name: null as string | null,
   placeholderNote:
-    "Kisi Farm has a mascot — and we're saving the introduction until we " +
+    "Kisi Farm has a mascot, and we're saving the introduction until we " +
     "can do it properly, with real photographs and the real story. Name, " +
     "species, biography, and portrait gallery are awaiting the owner's " +
     "records. Watch this space.",

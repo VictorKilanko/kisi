@@ -1,14 +1,14 @@
 /**
  * Provider-agnostic payment abstraction (docs/DONATION_INTEGRATION.md).
  * Hard rules:
- * - Hosted checkout redirect ONLY — this site never sees or stores card data.
+ * - Hosted checkout redirect ONLY, this site never sees or stores card data.
  * - All credentials come from environment variables.
  * - TEST/SANDBOX mode only until the owner's legal registration status is
  *   confirmed (enforced in lib/payments/index.ts, not just documented).
  */
 
 export interface CheckoutInput {
-  /** Server-resolved tier — amounts are never trusted from the client. */
+  /** Server-resolved tier, amounts are never trusted from the client. */
   tierId: string;
   amountKobo: number;
   currency: "NGN";

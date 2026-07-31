@@ -5,7 +5,7 @@ import { PlaceholderNotice } from "@/components/Disclaimer";
 export const metadata: Metadata = {
   title: "Support Terms",
   description:
-    "Terms for Kisi's farm support and sponsorship programme — payment " +
+    "Terms for Kisi's farm support and sponsorship programme, payment " +
     "nature, refunds, privacy, and security.",
 };
 
@@ -17,7 +17,7 @@ export default function SupportTermsPage() {
       </h1>
       <div className="mt-6">
         <PlaceholderNotice>
-          <strong>Draft — pending legal review.</strong> These terms take
+          <strong>Draft, pending legal review.</strong> These terms take
           effect only when the programme opens; the final version will be
           reviewed once the business&apos;s registration status is
           confirmed. No payments are accepted until then.
@@ -65,7 +65,7 @@ export default function SupportTermsPage() {
             4. Refunds
           </h2>
           <p className="mt-2">
-            [Draft placeholder — refund policy to be confirmed by the owner
+            [Draft placeholder, refund policy to be confirmed by the owner
             before launch.] Intended policy: mistaken or duplicate payments
             refunded on request within a stated window; monthly sponsorships
             cancellable at any time, stopping future charges.

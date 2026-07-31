@@ -31,7 +31,7 @@ export default function SportsPage() {
       <p className="mt-3 max-w-2xl text-kisi-charcoal-600">
         Sanctioned by the Ministry of Sports, timed by the Bureau of Egg
         Statistics, and played under league law that puts bird safety above
-        glory — though nobody has explained that to{" "}
+        glory, though nobody has explained that to{" "}
         <Link href={`/flock/${captain.id}`} className="font-semibold text-kisi-green-700 hover:underline">
           Flash Adaora
         </Link>
@@ -42,7 +42,7 @@ export default function SportsPage() {
         {/* League table */}
         <section aria-labelledby="table-heading">
           <h2 id="table-heading" className="font-display text-2xl font-bold text-kisi-green-900">
-            Coop Premier League — table
+            Coop Premier League, table
           </h2>
           <div className="mt-4 overflow-x-auto rounded-2xl bg-white p-4 shadow-sm">
             <table className="w-full min-w-[420px] text-sm">
@@ -106,8 +106,8 @@ export default function SportsPage() {
             ))}
           </ol>
           <p className="mt-4 text-sm text-kisi-charcoal-600">
-            The gatepost inscription — <em>“The perch is already wet. So am I.”</em>{" "}
-            — is maintained by the ministry with public funds, a line item{" "}
+            The gatepost inscription: <em>“The perch is already wet. So am I.”</em>{" "}
+           , is maintained by the ministry with public funds, a line item{" "}
             <Link href={`/flock/${minister.id}`} className="font-semibold text-kisi-green-700 hover:underline">
               Minister Quickfoot
             </Link>{" "}

@@ -3,7 +3,7 @@
  *
  * Backed by Upstash Redis when configured, with an in-memory fallback.
  *
- * The fallback exists so local dev and preview builds work without secrets —
+ * The fallback exists so local dev and preview builds work without secrets,
  * but it is genuinely weak on Vercel, where each serverless instance holds
  * its own Map and an attacker simply lands on a different instance. Set
  * UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN in production.

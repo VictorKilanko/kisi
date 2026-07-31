@@ -7,7 +7,7 @@ import { monitorLizard } from "@/content/wanted";
 import { getChicken } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Most Wanted — The Monitor Lizard",
+  title: "Most Wanted, The Monitor Lizard",
   description:
     "The Republic of Kisi has posted a bounty for the monitor lizard that " +
     "killed Bantu, night watchman of Coop Two. Full notice, description, " +
@@ -118,7 +118,7 @@ export default function MostWantedPage() {
             </h2>
             <p className="mt-2 max-w-xl text-kisi-charcoal-600">
               Twelve chicks went out the far side. Every one of them got out.
-              The flock marks his rest with a whistle at dusk — and the
+              The flock marks his rest with a whistle at dusk, and the
               Republic would be glad of a word from you.
             </p>
             <Link

@@ -5,9 +5,9 @@ import { clientKey, rateLimit } from "@/lib/rateLimit";
 
 /**
  * POST /api/support/checkout
- * Creates a hosted-checkout session (TEST MODE ONLY — live keys are blocked
+ * Creates a hosted-checkout session (TEST MODE ONLY, live keys are blocked
  * in lib/payments/index.ts until legal status is confirmed) and returns the
- * provider's redirect URL. Amounts are resolved server-side from the tier —
+ * provider's redirect URL. Amounts are resolved server-side from the tier,
  * the client can never set a price.
  */
 

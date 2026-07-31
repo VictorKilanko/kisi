@@ -2,8 +2,8 @@ import type { SocialEvent } from "@/lib/schemas";
 
 /**
  * the Republic's social calendar. The tone borrows the
- * warmth of southwestern Nigerian social life — the owambe spirit, the
- * storytelling circle, the festival calendar — with original, fictional
+ * warmth of southwestern Nigerian social life, the owambe spirit, the
+ * storytelling circle, the festival calendar, with original, fictional
  * events. All ceremonies are clearly fictional storytelling.
  */
 export const socialEvents: SocialEvent[] = [
@@ -13,7 +13,7 @@ export const socialEvents: SocialEvent[] = [
     title: "The Feather Gala",
     type: "festival",
     description:
-      "The Republic's grandest evening — feather displays judged by Elder " +
+      "The Republic's grandest evening, feather displays judged by Elder " +
       "Yeye Alaba, music directed by the Vice President, and 'brief " +
       "remarks' that are neither. Aso-ebi rules apply in spirit: this " +
       "year's colour is sunlight gold, and everyone somehow already knew.",
@@ -71,7 +71,7 @@ export const socialEvents: SocialEvent[] = [
   {
     id: "sprint-clinic-open",
     date: "2026-06-21",
-    title: "Joint Sprint Clinic — Open Session",
+    title: "Joint Sprint Clinic, Open Session",
     type: "club",
     description:
       "Champion and minister, side by side, teaching starts to chicks. " +

@@ -5,7 +5,7 @@ import { articles } from "@/lib/content";
 export const metadata: Metadata = {
   title: "The Coop Times",
   description:
-    "The Republic of Kisi's national newspaper — politics, society, sports, " +
+    "The Republic of Kisi's national newspaper, politics, society, sports, " +
     "the egg economy, and the investigations that keep the cabinet punctual.",
 };
 

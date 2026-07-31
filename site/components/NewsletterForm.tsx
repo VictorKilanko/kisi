@@ -9,7 +9,7 @@ type State =
   | { status: "error"; message: string };
 
 /**
- * Newsletter signup — validated and honeypot-protected. Honest by design:
+ * Newsletter signup, validated and honeypot-protected. Honest by design:
  * no mailing-list provider is connected yet, the endpoint stores nothing,
  * and the success message says so.
  */
@@ -41,7 +41,7 @@ export function NewsletterForm() {
         form.reset();
         setState({
           status: "done",
-          note: json.note ?? "Signed up — we'll be in touch.",
+          note: json.note ?? "Signed up, we'll be in touch.",
         });
         return;
       }
@@ -49,11 +49,11 @@ export function NewsletterForm() {
         status: "error",
         message:
           json.error === "rate-limited"
-            ? "Too many attempts — please wait a minute."
+            ? "Too many attempts, please wait a minute."
             : "That email didn't look right. Try again?",
       });
     } catch {
-      setState({ status: "error", message: "Network hiccup — please try again." });
+      setState({ status: "error", message: "Network hiccup, please try again." });
     }
   }
 
@@ -91,7 +91,7 @@ export function NewsletterForm() {
         {state.status === "error" && <span className="text-kisi-earth-700">{state.message}</span>}
         {state.status === "idle" && (
           <span className="opacity-70">
-            Preview: the list launches later — addresses aren&apos;t stored yet.
+            Preview: the list launches later, addresses aren&apos;t stored yet.
           </span>
         )}
       </p>

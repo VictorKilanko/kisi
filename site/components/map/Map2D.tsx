@@ -3,7 +3,7 @@
 import type { EnrichedHotspot, HotspotKind } from "@/lib/mapData";
 
 /**
- * The lightweight 2D farm map — an illustrated plan built from the SAME
+ * The lightweight 2D farm map, an illustrated plan built from the SAME
  * hotspot data as the 3D world. Every hotspot is a real <button>: keyboard
  * focusable, screen-reader labeled, zero WebGL required.
  */
@@ -42,7 +42,7 @@ export function Map2D({
       className="relative w-full overflow-hidden rounded-2xl border border-kisi-green-900/15"
       style={{ aspectRatio: "5 / 4", background: "linear-gradient(180deg, #6f9c5c 0%, #5c8a4e 60%, #557f47 100%)" }}
     >
-      {/* decorative plan features (paths, shade) — not interactive */}
+      {/* decorative plan features (paths, shade), not interactive */}
       <svg
         viewBox="0 0 100 80"
         className="absolute inset-0 h-full w-full"
@@ -73,7 +73,7 @@ export function Map2D({
             type="button"
             onClick={() => onSelect(h.id)}
             aria-pressed={selected}
-            aria-label={`${h.name} — open details`}
+            aria-label={`${h.name}: open details`}
             className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-full border px-1.5 py-0.5 text-[10px] font-semibold leading-tight shadow-sm transition-transform hover:scale-105 sm:px-2 sm:py-1 sm:text-xs ${
               selected
                 ? "z-10 border-kisi-gold-500 bg-kisi-charcoal-900 text-kisi-cream-100"

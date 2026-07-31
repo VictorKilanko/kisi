@@ -17,7 +17,7 @@ export function MonitorLizard({ size = 260 }: { size?: number }) {
       <rect width="200" height="140" fill="#1a1a17" />
       <ellipse cx="100" cy="126" rx="92" ry="12" fill="#0f0f0d" />
 
-      {/* tail — long, tapering, with the identifying notch */}
+      {/* tail, long, tapering, with the identifying notch */}
       <path
         d="M156 96 C176 92 188 84 192 74 C186 80 176 84 168 85 C178 78 184 70 184 62 C178 72 166 80 154 84 Z"
         fill="#3d4a33"
@@ -49,7 +49,7 @@ export function MonitorLizard({ size = 260 }: { size?: number }) {
         <circle key={i} cx={x} cy={y} r="2.6" fill="#c9b558" opacity="0.7" />
       ))}
 
-      {/* legs — splayed, low */}
+      {/* legs, splayed, low */}
       <path d="M70 100 L62 116 L52 120" stroke="#3d4a33" strokeWidth="7" strokeLinecap="round" fill="none" />
       <path d="M126 98 L134 114 L146 118" stroke="#3d4a33" strokeWidth="7" strokeLinecap="round" fill="none" />
       <path d="M52 120 L44 124 M52 120 L50 126 M52 120 L58 126" stroke="#2a3324" strokeWidth="2.5" strokeLinecap="round" />
@@ -62,7 +62,7 @@ export function MonitorLizard({ size = 260 }: { size?: number }) {
       />
       {/* jaw line */}
       <path d="M12 80 C22 84 34 87 46 88" stroke="#2a3324" strokeWidth="2" fill="none" />
-      {/* eye — the part everyone remembers */}
+      {/* eye, the part everyone remembers */}
       <ellipse cx="38" cy="73" rx="6" ry="5.5" fill="#e8c84a" />
       <ellipse cx="38" cy="73" rx="2" ry="5" fill="#12120f" />
       <circle cx="36" cy="71" r="1.4" fill="#fff" opacity="0.75" />

@@ -7,7 +7,7 @@ import { bills, findChicken, parties } from "@/lib/content";
 export const metadata: Metadata = {
   title: "The Coop Assembly",
   description:
-    "The legislature of the Republic of Kisi — parties, bills, votes, and " +
+    "The legislature of the Republic of Kisi, parties, bills, votes, and " +
     "the Free Feathers Front's seventeen amendments.",
 };
 
@@ -35,7 +35,7 @@ export default function AssemblyPage() {
         <SectionHeading
           kicker="The Parties"
           title="Registered political parties"
-          lede="The parties of the Republic, every one of them home-grown at Kisi — and, we promise, sharing a name with no party you could vote for outside the coop."
+          lede="The parties of the Republic, every one of them home-grown at Kisi, and, we promise, sharing a name with no party you could vote for outside the coop."
         />
         <ul className="grid gap-6 md:grid-cols-3">
           {parties.map((p) => {
@@ -127,8 +127,8 @@ export default function AssemblyPage() {
           id="breakfast-time"
           question="Should national breakfast move from 7:00 to 6:45?"
           options={[
-            "Yes — the early bird is objectively correct",
-            "No — Executive Order No. 1 is sacred",
+            "Yes, the early bird is objectively correct",
+            "No, Executive Order No. 1 is sacred",
             "Only if the Vice President crows later",
             "Refer it to a committee (and its sub-committee)",
           ]}

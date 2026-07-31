@@ -7,8 +7,8 @@ import { findChicken, storyArcs } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Story Arcs",
   description:
-    "The Republic's running storylines — first eggs, grain scandals, " +
-    "retirements, rain finals, and recoveries — told beat by beat.",
+    "The Republic's running storylines, first eggs, grain scandals, " +
+    "retirements, rain finals, and recoveries, told beat by beat.",
 };
 
 export default function StoriesPage() {
@@ -20,7 +20,7 @@ export default function StoriesPage() {
         Story Arcs
       </h1>
       <p className="mt-3 max-w-2xl text-kisi-charcoal-600">
-        The Republic doesn&apos;t just have news — it has serials. Follow
+        The Republic doesn&apos;t just have news, it has serials. Follow
         each storyline from its first beat, and jump to the citizens living
         it. New chapters appear as the flock writes them.
       </p>

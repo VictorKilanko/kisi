@@ -7,7 +7,7 @@ import type {
 } from "@/lib/payments/types";
 
 /**
- * Paystack adapter — hosted checkout only.
+ * Paystack adapter, hosted checkout only.
  * The visitor is redirected to Paystack's own payment page; card details
  * never touch this application. Server-side secret key only; webhook
  * signatures verified with a timing-safe HMAC comparison.

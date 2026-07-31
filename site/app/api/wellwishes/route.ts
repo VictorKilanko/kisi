@@ -6,7 +6,7 @@ import { clientKey, rateLimit } from "@/lib/rateLimit";
  * POST /api/wellwishes
  * Messages left for Bantu on the memorial page.
  *
- * These are read by the farm and added to the memorial by hand — there is
+ * These are read by the farm and added to the memorial by hand, there is
  * no public message wall yet, so nothing is published automatically and
  * nothing goes live without a person reading it first. A moderated wall is
  * the obvious next step once a store is chosen (see docs/CONTENT_CHECKLIST.md).
@@ -15,7 +15,7 @@ import { clientKey, rateLimit } from "@/lib/rateLimit";
 const BodySchema = z.object({
   name: z.string().min(1).max(80),
   message: z.string().min(1).max(1000),
-  /** Honeypot — humans never see or fill this field; bots often do. */
+  /** Honeypot, humans never see or fill this field; bots often do. */
   company: z.string().max(200).optional(),
 });
 
@@ -51,13 +51,13 @@ export async function POST(req: Request) {
       delivered: false,
       note:
         "Thank you. The memorial wall isn't collecting messages yet, so " +
-        "this one wasn't saved — but the flock is glad you stopped.",
+        "this one wasn't saved, but the flock is glad you stopped.",
     });
   }
 
   try {
     await mailer.send({
-      subject: `Well-wishes for Bantu — from ${body.name}`,
+      subject: `Well-wishes for Bantu, from ${body.name}`,
       body: formatSubmission({ From: body.name, Message: body.message }),
     });
   } catch (err) {
@@ -74,7 +74,7 @@ export async function POST(req: Request) {
     ok: true,
     delivered: true,
     note:
-      "Thank you — your message reached the farm. The flock is glad you " +
+      "Thank you, your message reached the farm. The flock is glad you " +
       "stopped.",
   });
 }

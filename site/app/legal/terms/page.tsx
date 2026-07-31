@@ -15,7 +15,7 @@ export default function TermsPage() {
       </h1>
       <div className="mt-6">
         <PlaceholderNotice>
-          <strong>Placeholder — pending review.</strong> A finalized version
+          <strong>Placeholder, pending review.</strong> A finalized version
           will be published before launch; support/sponsorship terms will be
           added before any payments are accepted.
         </PlaceholderNotice>

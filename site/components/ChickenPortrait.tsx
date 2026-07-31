@@ -1,7 +1,7 @@
 import type { Chicken } from "@/lib/schemas";
 
 /**
- * Procedural SVG portrait — an original, license-free stand-in until real
+ * Procedural SVG portrait, an original, license-free stand-in until real
  * photographs arrive. Each citizen's palette comes from their content
  * record, so every portrait is distinct. Roosters get a taller comb and
  * tail flourish; office-holders get a subtle frame.
@@ -25,7 +25,7 @@ export function ChickenPortrait({
       role="img"
       aria-label={`Illustrated placeholder portrait of ${chicken.name}${
         chicken.roleTitle ? `, ${chicken.roleTitle}` : ""
-      } (illustrated portrait — photograph coming soon)`}
+      } (illustrated portrait, photograph coming soon)`}
       className="rounded-2xl"
     >
       <rect width="120" height="120" rx="16" fill={bg} />

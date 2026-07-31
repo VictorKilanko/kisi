@@ -7,7 +7,7 @@ import { farmStats } from "@/lib/content";
 export const metadata: Metadata = {
   title: "About Kisi Farm",
   description:
-    "The real poultry farm behind the Republic — our story, our welfare " +
+    "The real poultry farm behind the Republic, our story, our welfare " +
     "commitment, and how we run the farm in southwestern Nigeria.",
 };
 
@@ -20,7 +20,7 @@ export default function AboutPage() {
       <p className="mt-3 max-w-2xl text-kisi-charcoal-600">
         This page is the factual heart of the website. Everything here is
         either verified information from the farm, or a clearly marked
-        placeholder waiting for it — never an invention.
+        placeholder waiting for it, never an invention.
       </p>
 
       {/* Story */}
@@ -39,7 +39,7 @@ export default function AboutPage() {
             We built this website on one belief: farm animals are
             individuals. Giving our hens names, stories, and a gloriously
             self-important government of their own is our way of inviting you
-            to care about them the way we do — and of showing, honestly, how a
+            to care about them the way we do, and of showing, honestly, how a
             small Nigerian farm works.
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function AboutPage() {
             <strong>Awaiting farm records:</strong> the founding story,
             mission and vision in the owner&apos;s words, and team
             introductions will appear here once supplied. Tracked in the
-            project&apos;s content checklist — nothing will be invented in
+            project&apos;s content checklist, nothing will be invented in
             the meantime.
           </PlaceholderNotice>
         </div>
@@ -89,14 +89,14 @@ export default function AboutPage() {
         <h2 className="font-display text-2xl font-bold">Our welfare commitment</h2>
         <div className="mt-4 grid gap-6 text-sm text-kisi-cream-100/85 md:grid-cols-2">
           <ul className="list-inside list-disc space-y-2">
-            <li>Birds are individuals, not inventory — every featured hen has a name.</li>
+            <li>Birds are individuals, not inventory, every featured hen has a name.</li>
             <li>Clean water and quality feed come before production targets.</li>
             <li>Natural laying cycles are respected; laying breaks are normal.</li>
             <li>Senior hens keep their place on the farm as they slow down.</li>
           </ul>
           <ul className="list-inside list-disc space-y-2">
             <li>Illness is treated promptly and privately, and reported with dignity.</li>
-            <li>Biosecurity protects the flock — visits are managed carefully.</li>
+            <li>Biosecurity protects the flock, visits are managed carefully.</li>
             <li>We never fabricate certifications, numbers, or claims.</li>
             <li>Where practice details aren&apos;t published yet, we say &ldquo;awaiting records,&rdquo; not guesses.</li>
           </ul>
@@ -126,7 +126,7 @@ export default function AboutPage() {
             Get in touch →
           </h2>
           <p className="mt-2 text-sm text-kisi-charcoal-600">
-            Questions, partnerships, media, schools, or future visits — the
+            Questions, partnerships, media, schools, or future visits, the
             contact page routes them all.
           </p>
         </Link>

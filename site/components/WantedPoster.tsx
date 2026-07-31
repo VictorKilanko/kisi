@@ -5,7 +5,7 @@ import { monitorLizard } from "@/content/wanted";
 /**
  * The Most Wanted poster. `full` renders the complete notice (the dedicated
  * page); the default renders the pasted-up version that appears around the
- * site — home, news, security ministry, Bantu's memorial.
+ * site, home, news, security ministry, Bantu's memorial.
  */
 export function WantedPoster({ full = false }: { full?: boolean }) {
   const w = monitorLizard;

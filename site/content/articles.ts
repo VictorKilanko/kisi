@@ -1,7 +1,7 @@
 import type { Article } from "@/lib/schemas";
 
 /**
- * The Coop Times — the newspaper of the Republic of Kisi.
+ * The Coop Times, the newspaper of the Republic of Kisi.
  *
  * Editorial rule: the paper writes from inside the Republic, in its own
  * voice, without breaking character. Items in the "farm-announcement"
@@ -28,8 +28,8 @@ export const articles: Article[] = [
         "season. He was doing his job. He had always been doing his job, " +
         "every night, for years, and most of the Republic never thought " +
         "about it once.",
-      "He heard the grate move before anyone. He gave the alarm — the loud " +
-        "one, the one none of us had ever heard from him — and then he " +
+      "He heard the grate move before anyone. He gave the alarm, the loud " +
+        "one, the one none of us had ever heard from him, and then he " +
         "stood in the doorway of Coop Two and stayed there while the chicks " +
         "went out the far side. All twelve of them got out. The last one " +
         "out was Small Fẹ́mi, who had gone back for a smaller chick that " +
@@ -38,7 +38,7 @@ export const articles: Article[] = [
         "fence rather than around it, which is why he is now on light " +
         "duties and ignoring them. Pete Okpara arrived seconds later. " +
         "Neither bird has said very much since.",
-      "The Assembly voted to bury him under the mango tree without debate — " +
+      "The Assembly voted to bury him under the mango tree without debate, " +
         "the only such vote in our history. Sisi Ngozi organised the whole " +
         "thing in an afternoon by not asking a single committee. Mama Gold " +
         "spoke. The Chief Justice closed as she always closes: 'Go and " +
@@ -91,7 +91,7 @@ export const articles: Article[] = [
     id: "chi-chi-first-egg",
     headline: "CHI-CHI LAYS FIRST EGG; REPUBLIC DECLARES PUBLIC HOLIDAY",
     standfirst:
-      "The nation's most-followed pullet delivers at last — and delivers a " +
+      "The nation's most-followed pullet delivers at last, and delivers a " +
       "four-word address that instantly enters the national vocabulary.",
     category: "society",
     world: "fiction",
@@ -102,8 +102,8 @@ export const articles: Article[] = [
         "refreshing the nesting boxes for: Chidinma 'Chi-Chi' Obiageli, the " +
         "quiet pullet who arrived at three weeks old with no mother and no " +
         "expectations, has laid her first egg.",
-      "The egg — described by the Ministry of Egg Affairs as 'well-formed, " +
-        "correctly deposited, and frankly moving' — was certified within the " +
+      "The egg, described by the Ministry of Egg Affairs as 'well-formed, " +
+        "correctly deposited, and frankly moving', was certified within the " +
         "hour. President Adédoyin, attending in person, ordered flags to " +
         "the top of the perch and declared a public holiday 'effective " +
         "immediately, and retroactively, so that no one is marked absent.'",
@@ -132,7 +132,7 @@ export const articles: Article[] = [
     body: [
       "Documents pecked into the margin of the national feed ledger, and " +
         "reviewed exclusively by The Coop Times, show that 200 grams of " +
-        "premium cracked maize — breakfast grade, dry-season reserve — left " +
+        "premium cracked maize, breakfast grade, dry-season reserve, left " +
         "the national store on the authority of the Ministry of Egg Affairs " +
         "eleven days ago. The return column is blank. It has stayed blank " +
         "through two audits, one denial, and a ministry statement that the " +
@@ -164,8 +164,8 @@ export const articles: Article[] = [
     publishedAt: "2026-05-28",
     author: { name: "Kọ́lápọ̀ Ọ̀nàbánjọ", title: "Chief Correspondent" },
     body: [
-      "The Panel of Inquiry into the Missing Breakfast Grain — eight " +
-        "members, three sittings, one adjournment for the afternoon feed — " +
+      "The Panel of Inquiry into the Missing Breakfast Grain, eight " +
+        "members, three sittings, one adjournment for the afternoon feed, " +
         "has submitted its white paper, and the Republic's longest-running " +
         "mystery has ended where these mysteries so often end: behind the " +
         "furniture.",
@@ -175,7 +175,7 @@ export const articles: Article[] = [
         "parties acting from an abundance of caution.' The grain has been " +
         "returned to the national store with immediate effect, weighed " +
         "twice at the insistence of the New Grain Alliance, and found not " +
-        "merely complete but — owing to settling — arguably improved.",
+        "merely complete but, owing to settling, arguably improved.",
       "Minister Adéwálé will undertake a national apology tour beginning " +
         "Monday, with stops at all four coops and, 'schedule permitting,' " +
         "the mango tree. Asked whether he would resign, the minister said " +
@@ -199,17 +199,17 @@ export const articles: Article[] = [
     author: { name: "Assembly Desk", title: "The Coop Times" },
     body: [
       "The Coop Assembly on Thursday passed the second reading of the " +
-        "Senior Hen Retirement Protection Act — known to every citizen as " +
-        "Mama Gold's Law — guaranteeing retired layers shade, priority at " +
+        "Senior Hen Retirement Protection Act, known to every citizen as " +
+        "Mama Gold's Law, guaranteeing retired layers shade, priority at " +
         "the trough, and freedom from sudden committee membership.",
       "Debate was brief, which is unusual, and unanimous, which is " +
         "unprecedented. The Leader of the Opposition rose to oppose 'on " +
         "principle, the principle being that we oppose,' reviewed the " +
         "bill's arithmetic, found it correct, and sat down again, visibly " +
         "annoyed at having nothing to add.",
-      "Proceedings were then suspended when the public gallery — led, " +
+      "Proceedings were then suspended when the public gallery, led, " +
         "witnesses insist, by the Vice President, who denies it while " +
-        "beaming — began the old shade-tree song. The Speaker ruled the " +
+        "beaming, began the old shade-tree song. The Speaker ruled the " +
         "singing out of order, was ignored, and was later observed " +
         "conducting.",
       "Mama Gold, the law's namesake, followed events from the low branch " +
@@ -223,7 +223,7 @@ export const articles: Article[] = [
     headline: "RAIN STOPS PLAY; ADAORA DOESN'T",
     standfirst:
       "The Perch Jumping Final produces the Republic's new signature " +
-      "sporting moment — and a soaked, roaring, entirely satisfied nation.",
+      "sporting moment, and a soaked, roaring, entirely satisfied nation.",
     category: "sports",
     world: "fiction",
     publishedAt: "2026-06-14",
@@ -251,7 +251,7 @@ export const articles: Article[] = [
   },
   {
     id: "punctual-breakfast-address",
-    headline: "'A NATION THAT EATS LATE, LAYS LATE' — THE PRESIDENT'S ADDRESS",
+    headline: "'A NATION THAT EATS LATE, LAYS LATE', THE PRESIDENT'S ADDRESS",
     standfirst:
       "On the anniversary of Executive Order No. 1, President Adédoyin " +
       "restates the doctrine that built her career, her government, and " +
@@ -261,8 +261,8 @@ export const articles: Article[] = [
     publishedAt: "2026-05-02",
     author: { name: "Presidency Desk", title: "The Coop Times" },
     body: [
-      "Standing at the trough-side podium at precisely 6:58 a.m. — 'two " +
-        "minutes early, because leadership' — President Adédoyin 'Mama " +
+      "Standing at the trough-side podium at precisely 6:58 a.m., 'two " +
+        "minutes early, because leadership', President Adédoyin 'Mama " +
         "Decree' Ọlásunkànmí marked the anniversary of Executive Order " +
         "No. 1 with an address the presidency had billed as 'brief' and " +
         "the Vice President had asked to extend.",
@@ -301,14 +301,14 @@ export const articles: Article[] = [
         "rest toward me with one foot. Somewhere behind the coop the " +
         "junior sprint squad argued about lane assignments. She listened " +
         "the way other birds speak.",
-      "Minute two. A very small chick — new this week, still uncertain on " +
-        "its legs — emerged from behind the water tank, considered the " +
+      "Minute two. A very small chick, new this week, still uncertain on " +
+        "its legs, emerged from behind the water tank, considered the " +
         "wide dangerous world, and settled against her wing without " +
         "asking. She adjusted the wing. This is, I understand now, the " +
         "entire interview.",
       "Minute three. The breeze moved the mango leaves. She watched me " +
         "pack up my questions, all of them unasked, and inclined her head " +
-        "once — a courtesy, or a verdict. I have covered four governments. " +
+        "once, a courtesy, or a verdict. I have covered four governments. " +
         "I have never left an interview better informed.",
     ],
     relatedChickenIds: ["quiet-grace", "kola-quill", "chi-chi"],
@@ -329,7 +329,7 @@ export const articles: Article[] = [
         "hens lay through the morning, the eggs are collected by hand the " +
         "same day, and nothing sits in a warehouse waiting for you.",
       "Every egg you receive was laid by a hen with a name. Many of them " +
-        "have a profile on this site — you can look up who has been busy " +
+        "have a profile on this site, you can look up who has been busy " +
         "lately on the Egg Life page, which the Ministry of Egg Affairs " +
         "updates with more ceremony than strictly necessary.",
       "To order, visit the Shop and send us your details. We will confirm " +

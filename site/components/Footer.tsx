@@ -45,7 +45,7 @@ export function Footer() {
           </div>
           <p className="mt-3 text-sm text-kisi-cream-100/80">
             Where every chicken has a story. A working poultry farm in
-            southwestern Nigeria — run, top to tail, by the chickens themselves.
+            southwestern Nigeria, run, top to tail, by the chickens themselves.
             Welcome to the Republic of Kisi.
           </p>
         </div>

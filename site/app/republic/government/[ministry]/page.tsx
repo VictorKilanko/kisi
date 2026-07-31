@@ -19,7 +19,7 @@ export async function generateMetadata({
   if (!ministry) return { title: "Ministry not found" };
   return {
     title: ministry.name,
-    description: `${ministry.name} of the Republic of Kisi — “${ministry.motto}.”`,
+    description: `${ministry.name} of the Republic of Kisi, “${ministry.motto}.”`,
   };
 }
 

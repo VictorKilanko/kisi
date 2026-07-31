@@ -5,7 +5,7 @@ import { mascot } from "@/lib/content";
 export const metadata: Metadata = {
   title: "The Farm Mascot",
   description:
-    "Kisi Farm's mascot — a proper introduction is coming, with real " +
+    "Kisi Farm's mascot, a proper introduction is coming, with real " +
     "photographs and the real story.",
 };
 
@@ -17,7 +17,7 @@ export default function MascotPage() {
       </h1>
       <p className="mt-3 text-kisi-charcoal-600">
         Every great republic has a beloved national figure who holds no
-        office, answers no questions, and outranks everybody. Ours is real —
+        office, answers no questions, and outranks everybody. Ours is real,
         and deserves a real introduction.
       </p>
 
@@ -28,7 +28,7 @@ export default function MascotPage() {
           width="180"
           height="180"
           role="img"
-          aria-label="Mystery silhouette — the mascot's portrait is coming soon"
+          aria-label="Mystery silhouette, the mascot's portrait is coming soon"
           className="mx-auto rounded-2xl"
         >
           <rect width="120" height="120" rx="16" fill="#f1e8d4" />

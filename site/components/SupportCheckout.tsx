@@ -12,7 +12,7 @@ type State =
 /**
  * Support checkout, wired end-to-end and honest about its real state.
  *
- * The server resolves the tier and price — the client can never set an
+ * The server resolves the tier and price, the client can never set an
  * amount. `/api/support/checkout` returns 503 with a plain reason while the
  * live-payments lock in lib/payments/index.ts is engaged, so the "not open
  * yet" message comes from the server rather than being faked here.
@@ -26,7 +26,7 @@ export function SupportCheckout({ tier }: { tier: SupportTier }) {
 
   async function begin() {
     if (!email.includes("@")) {
-      setState({ status: "error", message: "Enter an email first — receipts need a home." });
+      setState({ status: "error", message: "Enter an email first, receipts need a home." });
       return;
     }
     setState({ status: "working" });
@@ -40,7 +40,7 @@ export function SupportCheckout({ tier }: { tier: SupportTier }) {
       const json = (await res.json()) as { url?: string; reason?: string };
 
       if (res.ok && json.url) {
-        window.location.assign(json.url); // hosted checkout — off-site by design
+        window.location.assign(json.url); // hosted checkout, off-site by design
         return;
       }
       if (res.status === 503) {
@@ -51,15 +51,15 @@ export function SupportCheckout({ tier }: { tier: SupportTier }) {
             `“${tier.name}” isn't open yet. Nothing was charged or stored.`,
         });
       } else if (res.status === 429) {
-        setState({ status: "error", message: "Too many attempts — please wait a minute." });
+        setState({ status: "error", message: "Too many attempts, please wait a minute." });
       } else {
         setState({
           status: "error",
-          message: "That didn't work — please check the email and try again.",
+          message: "That didn't work, please check the email and try again.",
         });
       }
     } catch {
-      setState({ status: "error", message: "Network hiccup — please try again." });
+      setState({ status: "error", message: "Network hiccup, please try again." });
     }
   }
 

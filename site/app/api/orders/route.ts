@@ -4,11 +4,11 @@ import { clientKey, rateLimit } from "@/lib/rateLimit";
 
 /**
  * POST /api/orders
- * Egg order enquiries from the Shop — the farm's actual sales channel.
+ * Egg order enquiries from the Shop, the farm's actual sales channel.
  *
  * This takes an enquiry, not a payment. The farm confirms availability,
  * price, and delivery for the customer's area before any money changes
- * hands — no card details are collected here or anywhere on this site.
+ * hands, no card details are collected here or anywhere on this site.
  *
  * Delivery goes to FARM_INBOX via lib/mail. If mail is unconfigured the
  * response says so plainly rather than implying the order was received:
@@ -21,7 +21,7 @@ const BodySchema = z.object({
   area: z.string().min(1).max(120),
   crates: z.string().min(1).max(40),
   notes: z.string().max(1000).optional(),
-  /** Honeypot — humans never see or fill this field; bots often do. */
+  /** Honeypot, humans never see or fill this field; bots often do. */
   company: z.string().max(200).optional(),
 });
 
@@ -67,7 +67,7 @@ export async function POST(req: Request) {
 
   try {
     await mailer.send({
-      subject: `Egg order enquiry — ${body.name} (${body.area})`,
+      subject: `Egg order enquiry, ${body.name} (${body.area})`,
       replyTo: body.contact.includes("@") ? body.contact : undefined,
       body: formatSubmission({
         Name: body.name,
@@ -96,7 +96,7 @@ export async function POST(req: Request) {
     ok: true,
     delivered: true,
     note:
-      "Thank you — your enquiry is with the farm. We'll come back to you " +
+      "Thank you, your enquiry is with the farm. We'll come back to you " +
       "with what we have, the price, and delivery for your area.",
   });
 }

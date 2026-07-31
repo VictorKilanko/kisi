@@ -10,7 +10,7 @@ export default function NotFound() {
       <p className="mt-4 text-kisi-charcoal-600">
         The Ministry of Coop Security has been notified and has, as usual,
         declined to confirm or deny anything. The page you&apos;re looking for
-        doesn&apos;t exist — or has been placed somewhere for safekeeping.
+        doesn&apos;t exist, or has been placed somewhere for safekeeping.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3">
         <Link

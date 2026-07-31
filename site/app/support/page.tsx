@@ -8,7 +8,7 @@ import { supportTiers } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Support the Chickens",
   description:
-    "Farm support and chicken sponsorship for the real birds of Kisi — " +
+    "Farm support and chicken sponsorship for the real birds of Kisi, " +
     "tiers, terms, and a programme that opens only after its legal review.",
 };
 
@@ -25,7 +25,7 @@ export default function SupportPage() {
       </h1>
       <p className="mt-3 max-w-2xl text-kisi-charcoal-600">
         Real birds, real feed, real care. Support Kisi&apos;s flock through
-        the categories below — each one names plainly what your payment is
+        the categories below, each one names plainly what your payment is
         and what it funds.
       </p>
 
@@ -35,7 +35,7 @@ export default function SupportPage() {
           built and tested in sandbox mode, but it stays closed until the
           business&apos;s legal registration status is confirmed and the
           wording review is complete. Until then, buttons below will tell
-          you — honestly — that the programme hasn&apos;t opened. Amounts
+          you, honestly, that the programme hasn&apos;t opened. Amounts
           are also still to be set by the farm.
         </PlaceholderNotice>
       </div>
@@ -48,7 +48,7 @@ export default function SupportPage() {
         <ul className="mt-3 list-inside list-disc space-y-1.5">
           <li>
             These are <strong>farm support payments and sponsorships</strong>{" "}
-            to a working farm — <strong>not</strong> charitable donations,
+            to a working farm, <strong>not</strong> charitable donations,
             and <strong>not tax-deductible</strong>.
           </li>
           <li>
@@ -58,7 +58,7 @@ export default function SupportPage() {
           </li>
           <li>
             Payment happens on our provider&apos;s <strong>secure hosted
-            checkout</strong> — card details never touch this website and
+            checkout</strong>. Card details never touch this website and
             are never stored by us.
           </li>
           <li>
@@ -108,18 +108,18 @@ export default function SupportPage() {
         </ul>
       </section>
 
-      {/* Transparency — no invented figures */}
+      {/* Transparency, no invented figures */}
       <section className="mt-16 rounded-3xl bg-kisi-green-900 p-8 text-kisi-cream-100">
         <h2 className="kicker text-kisi-gold-300">Transparency</h2>
         <p className="font-display mt-2 text-2xl font-bold">
-          Where support goes — reported honestly, or not at all
+          Where support goes, reported honestly, or not at all
         </p>
         <div className="mt-4 grid gap-6 text-sm text-kisi-cream-100/85 md:grid-cols-2">
           <div>
             <p>
               When the programme opens, this section will report what came in
-              and what it funded — feed bought, vet visits covered, repairs
-              made — using the farm&apos;s real records.
+              and what it funded, feed bought, vet visits covered, repairs
+              made, using the farm&apos;s real records.
             </p>
             <p className="mt-3">
               Until those records exist, it stays empty on purpose.{" "}

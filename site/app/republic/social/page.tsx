@@ -27,7 +27,7 @@ export default function SocialPage() {
         Social Life
       </h1>
       <p className="mt-3 max-w-2xl text-kisi-charcoal-600">
-        The Republic takes its celebrations seriously — the owambe spirit
+        The Republic takes its celebrations seriously, the owambe spirit
         with feathers. There is a colour of the year (everyone somehow
         already knows it), a storytelling seat under the mango tree, and a
         national institution for ending quarrels with shared grain.

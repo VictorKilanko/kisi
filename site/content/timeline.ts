@@ -101,7 +101,7 @@ export const timelineEvents: TimelineEvent[] = [
     title: "'WHERE DID 200 GRAMS GO?'",
     body:
       "Kola Quill's investigation opens on the front page and stays there " +
-      "for five issues. The ministry's response — 'insufficiently found' — " +
+      "for five issues. The ministry's response, 'insufficiently found', " +
       "enters the national phrasebook immediately.",
     articleId: "missing-breakfast-grain",
   },
@@ -125,7 +125,7 @@ export const timelineEvents: TimelineEvent[] = [
     arcId: "grain-affair",
     world: "fiction",
     type: "reconciliation",
-    title: "Found, weighed, returned — with immediate effect",
+    title: "Found, weighed, returned, with immediate effect",
     body:
       "The grain surfaces behind the minister's second filing perch, is " +
       "weighed twice at NGA insistence, and returns to the store. The " +
@@ -155,8 +155,8 @@ export const timelineEvents: TimelineEvent[] = [
     type: "custom",
     title: "The delegation begins",
     body:
-      "Mama Gold announces a well-earned laying break — 'I am not " +
-      "retiring. I am delegating' — and increases her Sunday storytelling " +
+      "Mama Gold announces a well-earned laying break, 'I am not " +
+      "retiring. I am delegating', and increases her Sunday storytelling " +
       "schedule by popular demand.",
   },
   {
@@ -281,8 +281,8 @@ export const timelineEvents: TimelineEvent[] = [
     type: "social",
     title: "Under the mango tree, without debate",
     body:
-      "The Assembly votes his resting place without a single speech against " +
-      "— the only such vote in the Republic's history. Sisi Ngozi organises " +
+      "The Assembly votes his resting place without a single speech against" +
+      ", the only such vote in the Republic's history. Sisi Ngozi organises " +
       "it in an afternoon. The dusk whistle begins that evening.",
   },
   {

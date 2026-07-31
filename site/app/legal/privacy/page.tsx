@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       </h1>
       <div className="mt-6">
         <PlaceholderNotice>
-          <strong>Placeholder — pending review.</strong> This draft states our
+          <strong>Placeholder, pending review.</strong> This draft states our
           working principles; a finalized policy will be published before
           forms, newsletter, analytics, or payments go live.
         </PlaceholderNotice>

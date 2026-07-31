@@ -7,14 +7,14 @@ type State =
   | { status: "idle" }
   | { status: "sending" }
   | { status: "done"; note: string }
-  /** Validated fine, but delivery failed — send them to the contact page. */
+  /** Validated fine, but delivery failed, send them to the contact page. */
   | { status: "undelivered"; note: string }
   | { status: "error"; message: string };
 
 const FIELD =
   "mt-1 w-full rounded-lg border border-kisi-green-900/20 px-4 py-3 text-sm";
 
-/** Egg order enquiry form. Takes no payment — the farm confirms first. */
+/** Egg order enquiry form. Takes no payment, the farm confirms first. */
 export function OrderForm() {
   const [state, setState] = useState<State>({ status: "idle" });
 
@@ -45,7 +45,7 @@ export function OrderForm() {
 
       if (res.ok && json.ok) {
         form.reset();
-        setState({ status: "done", note: json.note ?? "Thank you — we'll be in touch." });
+        setState({ status: "done", note: json.note ?? "Thank you, we'll be in touch." });
         return;
       }
 
@@ -59,7 +59,7 @@ export function OrderForm() {
         status: "error",
         message:
           json.error === "rate-limited"
-            ? "That's a lot of orders at once — please wait a minute."
+            ? "That's a lot of orders at once, please wait a minute."
             : "Please check your name, contact, area, and crate count.",
       });
     } catch {
@@ -184,7 +184,7 @@ export function OrderForm() {
         )}
         {state.status === "idle" && (
           <span className="opacity-70">
-            This is an enquiry, not an order — we confirm price and delivery
+            This is an enquiry, not an order, we confirm price and delivery
             before you pay anything, and we never ask for card details here.
           </span>
         )}

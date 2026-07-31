@@ -72,7 +72,7 @@ export default function PresidencyPage() {
         <SectionHeading
           kicker="The Gazette"
           title="Executive Orders"
-          lede="Signed with a flourish and read aloud twice — once for the record, once for the hard of hearing."
+          lede="Signed with a flourish and read aloud twice, once for the record, once for the hard of hearing."
         />
         <ol className="space-y-4">
           {executiveOrders.map((o) => (
@@ -82,7 +82,7 @@ export default function PresidencyPage() {
             >
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="font-display text-lg font-bold text-kisi-indigo-900">
-                  Executive Order No. {o.number} — {o.title}
+                  Executive Order No. {o.number}: {o.title}
                 </h3>
                 <span className="text-xs text-kisi-charcoal-600">
                   {formatDate(o.date)}
@@ -122,8 +122,8 @@ export default function PresidencyPage() {
           id="presidential-approval"
           question="How is Her Excellency doing?"
           options={[
-            "Approve — breakfast has never been so punctual",
-            "Disapprove — on principle (NGA voter)",
+            "Approve, breakfast has never been so punctual",
+            "Disapprove, on principle (NGA voter)",
             "Undecided until the next recount",
             "I am here for the sports coverage",
           ]}

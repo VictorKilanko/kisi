@@ -4,7 +4,7 @@ import { OrderForm } from "@/components/OrderForm";
 import { PlaceholderNotice } from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
-  title: "Shop — Order Kisi Eggs",
+  title: "Shop, Order Kisi Eggs",
   description:
     "Fresh eggs from Kisi Farm, collected by hand every morning. Ask about " +
     "ordering a crate and we'll confirm price and delivery for your area.",
@@ -19,7 +19,7 @@ const STEPS = [
   {
     n: "2",
     title: "We reply with the details",
-    body: "We confirm what we have, the price, and whether we can deliver to your area — before you pay anything.",
+    body: "We confirm what we have, the price, and whether we can deliver to your area, before you pay anything.",
   },
   {
     n: "3",
@@ -37,7 +37,7 @@ export default function ShopPage() {
       </h1>
       <p className="mt-4 max-w-2xl text-lg text-kisi-charcoal-600">
         Every egg we sell was laid by a hen with a name. Many of them have a
-        page on this site — you can read about the hens whose eggs you are
+        page on this site, you can read about the hens whose eggs you are
         eating, which is not something most shops can offer.
       </p>
 

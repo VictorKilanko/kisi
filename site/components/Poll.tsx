@@ -3,7 +3,7 @@
 import { useCallback, useSyncExternalStore } from "react";
 
 /**
- * Reader poll — just for fun and non-binding, and it says so on its
+ * Reader poll, just for fun and non-binding, and it says so on its
  * face. Votes live in the visitor's own browser (localStorage) only: we
  * publish no tallies because we have none, and we fabricate none.
  *
@@ -31,7 +31,7 @@ function writeVote(key: string, value: string | null) {
     if (value === null) localStorage.removeItem(key);
     else localStorage.setItem(key, value);
   } catch {
-    /* private mode etc. — the poll simply won't remember */
+    /* private mode etc., the poll simply won't remember */
   }
   emit();
 }
@@ -93,7 +93,7 @@ export function Poll({
         </ul>
       )}
       <p className="mt-4 text-xs text-kisi-charcoal-600">
-        No tallies are collected or published — this poll is part of the
+        No tallies are collected or published, this poll is part of the
         Republic&apos;s fiction, and no chicken is bound by its result.
       </p>
     </section>

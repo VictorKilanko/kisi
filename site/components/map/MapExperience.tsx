@@ -10,7 +10,7 @@ import { WORLD_LABEL, type EnrichedHotspot, type MapWorld } from "@/lib/mapData"
 /**
  * Orchestrates the farm map experience.
  * - Starts on the lightweight 2D map (kind to slow connections).
- * - "Enter the 3D farm" lazy-loads the React Three Fiber chunk on demand —
+ * - "Enter the 3D farm" lazy-loads the React Three Fiber chunk on demand,
  *   the 3D libraries are never downloaded unless the visitor asks for them.
  * - Detects WebGL; when unavailable, the 3D option is disabled and the 2D
  *   map carries the full experience.
@@ -33,7 +33,7 @@ const FarmMap3D = dynamic(() => import("@/components/map/FarmMap3D"), {
   ),
 });
 
-/* WebGL capability is an external, immutable fact about the device — read it
+/* WebGL capability is an external, immutable fact about the device, read it
  * via useSyncExternalStore (server snapshot: null → "unknown"). */
 let webglCache: boolean | null = null;
 function detectWebgl(): boolean {
@@ -105,7 +105,7 @@ export function MapExperience({ hotspots }: { hotspots: EnrichedHotspot[] }) {
         </div>
         {webgl === false && (
           <p className="text-sm text-kisi-charcoal-600">
-            3D isn&apos;t available on this device/browser — the 2D map has
+            3D isn&apos;t available on this device/browser, the 2D map has
             everything.
           </p>
         )}
@@ -210,7 +210,7 @@ export function MapExperience({ hotspots }: { hotspots: EnrichedHotspot[] }) {
                 className="flex h-full min-h-40 items-center justify-center rounded-2xl border border-dashed border-kisi-charcoal-600/30 p-6 text-center text-sm text-kisi-charcoal-600"
               >
                 <p>
-                  Select any location — on the map or from the list below — to
+                  Select any location, on the map or from the list below, to
                   read its story and jump to the people involved.
                 </p>
               </motion.div>

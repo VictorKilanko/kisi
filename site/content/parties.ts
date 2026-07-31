@@ -15,7 +15,7 @@ export const parties: Party[] = [
     leaderId: "adedoyin-mama-decree",
     description:
       "The governing party. Broad, confident, and fond of commissioning " +
-      "things — nesting boxes, water troughs, committees. Its manifesto, " +
+      "things, nesting boxes, water troughs, committees. Its manifesto, " +
       "'The Agenda for Renewed Pecking,' runs to forty-one pages, of which " +
       "the section on breakfast punctuality is by far the most quoted.",
   },
@@ -39,7 +39,7 @@ export const parties: Party[] = [
     slogan: "Perches for All!",
     color: "#c05621",
     description:
-      "Small, idealistic, and decisive out of all proportion to its size — " +
+      "Small, idealistic, and decisive out of all proportion to its size, " +
       "the FFF holds the balance of votes on the Nesting Box Expansion " +
       "Bill and knows it. Party meetings are held under the mango tree and " +
       "open with one minute of contented scratching.",

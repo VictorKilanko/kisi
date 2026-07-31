@@ -93,7 +93,7 @@ export const matches: Match[] = [
     date: "2026-06-13",
     homeId: "sunrise-rovers",
     awayId: "harmattan-fc",
-    note: "Postponed — rain, then the Perch Jumping Final, then a scheduling dispute now before the Supreme Pecking Council.",
+    note: "Postponed, rain, then the Perch Jumping Final, then a scheduling dispute now before the Supreme Pecking Council.",
   },
   {
     id: "m7",

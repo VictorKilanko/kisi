@@ -1,5 +1,5 @@
 /**
- * The Farm Map — shared hotspot data.
+ * The Farm Map, shared hotspot data.
  *
  * Single source of truth for BOTH the 3D world (React Three Fiber) and the
  * lightweight 2D fallback: same ids, same positions, same stories. Positions
@@ -58,7 +58,7 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     x: 50,
     y: 74,
     description:
-      "Every visit to Kisi starts here — at the gate, the visitor book, " +
+      "Every visit to Kisi starts here, at the gate, the visitor book, " +
       "and the humble foot-bath, the single most underrated hero of poultry " +
       "farming.",
     realism:
@@ -75,7 +75,7 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     x: 32,
     y: 52,
     description:
-      "The oldest laying house, and — by right of sitting there first — " +
+      "The oldest laying house, and, by right of sitting there first, " +
       "home of Mama Gold's shady end. Open-sided, breezy, and set " +
       "east–west so the sun crosses the roof, not the birds.",
     realism:
@@ -95,7 +95,7 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     x: 46,
     y: 52,
     description:
-      "The busy house — young layers, strong opinions, and the site of the " +
+      "The busy house, young layers, strong opinions, and the site of the " +
       "famous flu-season quarantine that Dr. Featherwell managed with five " +
       "calm words a day.",
     realism:
@@ -147,7 +147,7 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     y: 40,
     description:
       "Ten ministries, one row of perches, several acting appointments, " +
-      "and the second filing perch of national fame — now a minor " +
+      "and the second filing perch of national fame, now a minor " +
       "monument.",
     links: [{ href: "/republic/government", label: "Government & Cabinet" }],
     residentIds: ["bright-feather", "dr-amara-featherwell"],
@@ -181,7 +181,7 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
       "damp, rats, and unauthorized snacking. Site of the Missing " +
       "Breakfast Grain Affair.",
     realism:
-      "Feed is a laying farm's biggest cost — raised, dry, sealed storage " +
+      "Feed is a laying farm's biggest cost, raised, dry, sealed storage " +
       "protects both money and bird health.",
     links: [
       { href: "/republic/government/feed-agriculture", label: "Ministry of Feed" },
@@ -197,7 +197,7 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     x: 68,
     y: 34,
     description:
-      "Clean water, all day, every day — the Clean Water and Healthy " +
+      "Clean water, all day, every day, the Clean Water and Healthy " +
       "Feathers Act made it law in the Republic; good practice made it " +
       "policy on the farm first.",
     realism:
@@ -216,8 +216,8 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     x: 78,
     y: 46,
     description:
-      "Panels tilted at the sun, powering lights on the national schedule " +
-      "— a schedule debated more passionately than any budget.",
+      "Panels tilted at the sun, powering lights on the national schedule" +
+      ", a schedule debated more passionately than any budget.",
     realism:
       "Reliable, gentle lighting supports laying cycles; solar beats " +
       "generator noise, fumes, and fuel costs.",
@@ -235,7 +235,7 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     y: 14,
     description:
       "Dr. Featherwell's calm domain, set deliberately apart from the " +
-      "coops. New arrivals and recovering birds stay here first — " +
+      "coops. New arrivals and recovering birds stay here first, " +
       "distance is the medicine that costs nothing.",
     realism:
       "Quarantining new or sick birds away from the flock, downwind and " +
@@ -275,7 +275,7 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
       "the Reconciliation Bench in the shade, and the eldest citizens " +
       "gently correcting each other's history.",
     realism:
-      "Shade trees do real work on a hot farm — cooler birds, calmer " +
+      "Shade trees do real work on a hot farm, cooler birds, calmer " +
       "birds, better ground.",
     links: [{ href: "/republic/social", label: "Social Life" }],
     residentIds: ["mama-gold", "yeye-alaba"],
@@ -302,7 +302,7 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     x: 38,
     y: 68,
     description:
-      "Records, ledgers, and the kettle. Where the real farm is run — and " +
+      "Records, ledgers, and the kettle. Where the real farm is run, and " +
       "where the Republic's census figures are, allegedly, 'reviewed for " +
       "tone.'",
     links: [{ href: "/visit", label: "Visit & Contact" }],
@@ -320,7 +320,7 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
       "perimeter watch, and a standing consultation with the geese. The " +
       "hawk remains classified.",
     realism:
-      "Predator-proofing — fencing, covered runs, secure doors at dusk — " +
+      "Predator-proofing, fencing, covered runs, secure doors at dusk, " +
       "is everyday reality for Nigerian poultry farms.",
     links: [
       { href: "/republic/government/coop-security", label: "Ministry of Coop Security" },
@@ -335,8 +335,8 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     x: 8,
     y: 52,
     description:
-      "Unglamorous, essential. When the wet season arrives all at once — " +
-      "and it does — these channels are the difference between a farm and " +
+      "Unglamorous, essential. When the wet season arrives all at once, " +
+      "and it does, these channels are the difference between a farm and " +
       "a pond.",
     realism:
       "Sloped ground and clear drainage keep litter dry; dry litter means " +
@@ -357,7 +357,7 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
       "hour, but no bird lingers here after dark.",
     realism:
       "Heavy wet-season rainfall needs somewhere to go. Open channels keep " +
-      "coops dry — and are exactly the soft, covered route a predator uses, " +
+      "coops dry, and are exactly the soft, covered route a predator uses, " +
       "which is why they get barred and patrolled.",
     links: [
       { href: "/most-wanted", label: "The Most Wanted notice" },

@@ -1,6 +1,6 @@
 /**
  * A quiet notice for things the farm genuinely hasn't published yet
- * (real figures, real records). Used sparingly — never on story pages.
+ * (real figures, real records). Used sparingly, never on story pages.
  */
 export function PlaceholderNotice({ children }: { children: React.ReactNode }) {
   return (

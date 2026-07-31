@@ -4,7 +4,7 @@ import { getChicken } from "@/lib/content";
 import { MAP_HOTSPOTS, type EnrichedHotspot } from "@/lib/mapData";
 
 export const metadata: Metadata = {
-  title: "The Farm Map — Explore the Republic",
+  title: "The Farm Map, Explore the Republic",
   description:
     "Walk the Republic of Kisi: an interactive 3D farm map (with a " +
     "lightweight 2D version) linking every coop, ministry, and story to " +
@@ -38,13 +38,13 @@ export default function MapPage() {
         One map, one place: the coops, the feed store and the water tanks
         (labeled <strong>the working farm</strong>) and the Republic&apos;s
         institutions (labeled <strong>Republic life</strong>) stand on the same
-        ground — because they do. Explore in 3D, or use the fast 2D plan; both
+        ground, because they do. Explore in 3D, or use the fast 2D plan; both
         know all the same stories.
       </p>
       <p className="mt-2 max-w-2xl text-sm text-kisi-charcoal-600">
         The layout is a stylized impression drawn from good hot-climate
         poultry practice (shade, ventilation, drainage, quarantine
-        separation) — not a security plan of the real farm.
+        separation), not a security plan of the real farm.
       </p>
 
       <div className="mt-8">

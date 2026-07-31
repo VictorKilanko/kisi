@@ -46,13 +46,13 @@ export function WellWishesForm() {
         status: "error",
         message:
           json.error === "rate-limited"
-            ? "That's a lot of messages at once — please wait a minute."
+            ? "That's a lot of messages at once, please wait a minute."
             : "Please add your name and a message.",
       });
     } catch {
       setState({
         status: "error",
-        message: "Network hiccup — please try again.",
+        message: "Network hiccup, please try again.",
       });
     }
   }

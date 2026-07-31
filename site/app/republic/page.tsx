@@ -6,7 +6,7 @@ import { RepublicFlag } from "@/components/RepublicFlag";
 export const metadata: Metadata = {
   title: "The Republic of Kisi",
   description:
-    "The Republic of Kisi — the nation of chickens that runs Kisi Farm in " +
+    "The Republic of Kisi, the nation of chickens that runs Kisi Farm in " +
     "southwestern Nigeria. Its constitution, its institutions, and the doors into all of them.",
 };
 
@@ -15,13 +15,13 @@ const INSTITUTIONS = [
     href: "/economy",
     title: "The Economy",
     blurb:
-      "Eggs and the hatchery — the business the whole Republic runs on. Order a crate; meet the ministers who keep the feed budget straight.",
+      "Eggs and the hatchery, the business the whole Republic runs on. Order a crate; meet the ministers who keep the feed budget straight.",
   },
   {
     href: "/republic/presidency",
     title: "The Presidency",
     blurb:
-      "Her Excellency, the executive orders, the weekly diary, and breakfast at seven — not seven-ish.",
+      "Her Excellency, the executive orders, the weekly diary, and breakfast at seven, not seven-ish.",
   },
   {
     href: "/republic/government",
@@ -57,13 +57,13 @@ const INSTITUTIONS = [
     href: "/republic/map",
     title: "The Farm Map (3D)",
     blurb:
-      "Walk the Republic in 3D — or on the fast 2D plan. Every coop, ministry, and story, on one map.",
+      "Walk the Republic in 3D, or on the fast 2D plan. Every coop, ministry, and story, on one map.",
   },
   {
     href: "/republic/stories",
     title: "Story Arcs",
     blurb:
-      "The serials: Chi-Chi's first egg, the Grain Affair, the Rain Final — every storyline, beat by beat.",
+      "The serials: Chi-Chi's first egg, the Grain Affair, the Rain Final, every storyline, beat by beat.",
   },
 ];
 
@@ -77,7 +77,7 @@ export default function RepublicPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-kisi-cream-100/85">
             A proud nation, population: the chickens of Kisi Farm in
-            southwestern Nigeria — who, having looked at the alternatives,
+            southwestern Nigeria, who, having looked at the alternatives,
             decided to run the place themselves. The Republic has a constitution
             (the queue), a treasury (the feed store), an anthem (4:45 a.m.,
             daily, whether you like it or not), and a national philosophy:{" "}

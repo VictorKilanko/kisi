@@ -4,7 +4,7 @@ import type { SupportTier } from "@/lib/schemas";
  * planned support tiers.
  * All amounts are deliberately unset (null): pricing is the owner's call
  * and is tracked in docs/CONTENT_CHECKLIST.md. Wording rules: these are
- * farm-support payments and sponsorships — NOT charitable or
+ * farm-support payments and sponsorships, NOT charitable or
  * tax-deductible donations; sponsoring a chicken never confers ownership.
  */
 export const supportTiers: SupportTier[] = [
@@ -15,7 +15,7 @@ export const supportTiers: SupportTier[] = [
     cadence: "one-time",
     amountNGN: null,
     whatItFunds:
-      "Quality feed for the flock — the Republic's largest and most " +
+      "Quality feed for the flock, the Republic's largest and most " +
       "cheerfully consumed budget line.",
   },
   {
@@ -25,7 +25,7 @@ export const supportTiers: SupportTier[] = [
     cadence: "one-time",
     amountNGN: null,
     whatItFunds:
-      "Water-point upkeep and clean troughs — the everyday work behind the " +
+      "Water-point upkeep and clean troughs, the everyday work behind the " +
       "Clean Water and Healthy Feathers Act.",
   },
   {
@@ -35,7 +35,7 @@ export const supportTiers: SupportTier[] = [
     cadence: "one-time",
     amountNGN: null,
     whatItFunds:
-      "Vaccinations, check-ups, and recovery care — Dr. Featherwell's " +
+      "Vaccinations, check-ups, and recovery care, Dr. Featherwell's " +
       "real-world counterpart's department.",
   },
   {
@@ -65,7 +65,7 @@ export const supportTiers: SupportTier[] = [
     cadence: "monthly",
     amountNGN: null,
     whatItFunds:
-      "Comfortable retirement for the hens who've earned it — shade, " +
+      "Comfortable retirement for the hens who've earned it, shade, " +
       "space, and unhurried afternoons under Mama Gold's Law.",
   },
   {

@@ -22,15 +22,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   alternates: { canonical: "./" },
   title: {
-    default: "Kisi — Where Every Chicken Has a Story",
+    default: "Kisi, Where Every Chicken Has a Story",
     template: "%s · Kisi",
   },
   description:
-    "Kisi is a working poultry farm in southwestern Nigeria — run by the " +
+    "Kisi is a working poultry farm in southwestern Nigeria, run by the " +
     "chickens themselves. Order farm-fresh eggs, follow the Republic's " +
     "politics, sport and news, and meet a flock of unforgettable citizens.",
   openGraph: {
-    siteName: "Kisi — The Republic of Kisi",
+    siteName: "Kisi, The Republic of Kisi",
     type: "website",
     locale: "en_NG",
   },
@@ -49,13 +49,13 @@ export default function RootLayout({
         "@id": `${SITE_URL}/#org`,
         name: "Kisi",
         description:
-          "A poultry farm in southwestern Nigeria — home of the Republic of Kisi.",
+          "A poultry farm in southwestern Nigeria, home of the Republic of Kisi.",
         url: SITE_URL,
         knowsAbout: ["poultry farming", "egg production", "agriculture in Nigeria"],
       },
       {
         "@type": "WebSite",
-        name: "Kisi — The Republic of Kisi",
+        name: "Kisi, The Republic of Kisi",
         url: SITE_URL,
         publisher: { "@id": `${SITE_URL}/#org` },
       },

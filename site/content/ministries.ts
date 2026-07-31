@@ -70,7 +70,7 @@ export const ministries: Ministry[] = [
     ministerId: "dr-amara-featherwell",
     motto: "Prevention Before Panic",
     responsibilities: [
-      "The Featherwell Bulletin — calm, weekly, evidence-based",
+      "The Featherwell Bulletin, calm, weekly, evidence-based",
       "Vaccination days and the national cold chain (a cool box)",
       "Quarantine protocol and visitor foot-baths",
       "Dignified care for recovering and senior citizens",
@@ -81,7 +81,7 @@ export const ministries: Ministry[] = [
         status: "completed",
         blurb:
           "Water-point hygiene overhaul. Delivered on time, under budget, and " +
-          "without a single press conference — a national first.",
+          "without a single press conference, a national first.",
       },
       {
         name: "Senior Hen Wellness Rounds",

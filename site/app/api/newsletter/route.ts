@@ -3,7 +3,7 @@ import { clientKey, rateLimit } from "@/lib/rateLimit";
 
 /**
  * POST /api/newsletter
- * Validated, spam-checked signup endpoint — honestly NOT yet connected to
+ * Validated, spam-checked signup endpoint, honestly NOT yet connected to
  * a mailing-list provider (none chosen; see docs/CONTENT_CHECKLIST.md).
  * Nothing is stored; the response says so and the UI repeats it. The
  * provider integration slots in behind this same endpoint in Phase 5.
@@ -11,7 +11,7 @@ import { clientKey, rateLimit } from "@/lib/rateLimit";
 
 const BodySchema = z.object({
   email: z.email().max(254),
-  /** Honeypot — humans never see or fill this field; bots often do. */
+  /** Honeypot, humans never see or fill this field; bots often do. */
   company: z.string().max(200).optional(),
 });
 
@@ -46,7 +46,7 @@ export async function POST(req: Request) {
     ok: true,
     stored: false,
     note:
-      "The Coop Times newsletter isn't live yet — your address was NOT " +
+      "The Coop Times newsletter isn't live yet, your address was NOT " +
       "stored. Check back after launch.",
   });
 }

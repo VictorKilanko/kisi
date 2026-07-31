@@ -1,19 +1,19 @@
 /**
- * Outbound mail — how anything a visitor submits actually reaches the farm.
+ * Outbound mail, how anything a visitor submits actually reaches the farm.
  *
  * Deliberately smaller than lib/payments (which is split across three files
  * for provider swapping): there is one transport, and swapping it means
  * replacing one `send` function. The status union is the same shape as
  * PaymentsStatus so routes handle "not configured" identically.
  *
- * Not configured is a normal, honest state — the route still validates the
+ * Not configured is a normal, honest state, the route still validates the
  * submission and tells the visitor the truth rather than pretending it was
  * delivered. Set RESEND_API_KEY and FARM_INBOX to switch delivery on.
  */
 
 export interface MailMessage {
   subject: string;
-  /** Plain text only — these are internal notifications, not marketing. */
+  /** Plain text only, these are internal notifications, not marketing. */
   body: string;
   /** Visitor's address, so the farm can just hit reply. */
   replyTo?: string;
@@ -41,7 +41,7 @@ export function getMailer(): MailStatus {
   if (!inbox) {
     return {
       configured: false,
-      reason: "FARM_INBOX is not set — there is no address to deliver to.",
+      reason: "FARM_INBOX is not set, there is no address to deliver to.",
     };
   }
 

@@ -41,7 +41,7 @@ export default async function ArticlePage({
     )
     .slice(0, 2);
 
-  // Story reports carry schema.org's SatiricalArticle type — a machine-only
+  // Story reports carry schema.org's SatiricalArticle type, a machine-only
   // signal (invisible to readers) that keeps search engines and the law on the
   // right side of the world; real farm announcements are plain Articles.
   const jsonLd = {

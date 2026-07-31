@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 /**
- * Vercel deployment — full Next.js with a server.
+ * Vercel deployment, full Next.js with a server.
  *
  * This replaced a GitHub Pages static export (`output: "export"` + a `/kisi`
  * basePath), which could not run route handlers. Egg orders, well-wishes and
