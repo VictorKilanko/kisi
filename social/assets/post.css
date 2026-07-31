@@ -141,6 +141,8 @@ html, body { margin: 0; padding: 0; }
 .t-state .rule { background: var(--gold); }
 .t-state .foot { color: var(--gold-soft); }
 .t-state .pull { color: #fff; }
+/* Taco's seal ring is green, so on the green field it needs a crisp edge */
+.t-state .crest { border-radius: 50%; box-shadow: 0 0 0 3px var(--gold-soft); }
 
 /* =========================================================
    THEME: portrait (leaders) · eggshell, editorial
