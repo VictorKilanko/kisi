@@ -23,7 +23,7 @@ import { ChickenSchema, FarmStatSchema, PartySchema } from "@/lib/schemas";
 
 describe("content loads and validates", () => {
   it("has the full cast of citizens", () => {
-    expect(chickens).toHaveLength(17);
+    expect(chickens).toHaveLength(23);
   });
 
   it("has articles, ministries, parties, tiers", () => {
