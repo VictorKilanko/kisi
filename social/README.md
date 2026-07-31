@@ -21,6 +21,13 @@ Every image is a **1080 x 1080 PNG** in `images/`, built from the same look as t
   the image.)
 - **House style:** humorous, warm, dignified. No em-dashes. Real animals, so no cruelty,
   distress or death played for shock.
+- **STANDING RULE, the funnel: every arc ends on a sell.** The entertainment exists to
+  drive two money paths, and the posts must route to them. The last slide of every story
+  arc closes with **kisi.africa/support** (keep the flock laying, lit and housed) or
+  **kisi.africa/shop** (order eggs). Cast intros send people to meet the flock; arcs and
+  finales send them to support and order. The two biggest support campaigns are **Solar &
+  Light** and **Better Housing**, $25,000 each, so name them when an arc touches light,
+  power, coops or housing.
 
 ## What is built (batch 1, 12 posts)
 

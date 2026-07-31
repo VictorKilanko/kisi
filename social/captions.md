@@ -81,8 +81,9 @@ Alliance finds deeply suspicious, and says so. 📊
 Part 5 of 5, the finale. The Progressive Peckers keep their majority; the Free Feathers
 Front trades its support for a real expansion of nesting boxes. That evening the President
 and the Opposition Leader are seen at the fence line, arguing about everything except the
-result, which is already settled between them. Read the whole arc at
-kisi.africa/republic/stories. 🤝
+result, which is already settled between them. The nesting boxes get built because the
+farm is real: keep the flock laying, lit and housed at kisi.africa/support, or order eggs
+at kisi.africa/shop. 🤝
 
 ---
 
