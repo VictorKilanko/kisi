@@ -34,6 +34,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NG",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kisi, Where Every Chicken Has a Story",
+    description:
+      "A working poultry farm in southwestern Nigeria, run by the chickens " +
+      "themselves. Order farm-fresh eggs and meet the Republic.",
+  },
 };
 
 export default function RootLayout({
