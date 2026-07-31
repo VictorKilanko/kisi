@@ -288,10 +288,10 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     x: 84,
     y: 64,
     description:
-      "Residence of a national figure who holds no office, answers no " +
-      "questions, and outranks everybody. Identity: pending the official " +
-      "unveiling.",
-    links: [{ href: "/mascot", label: "The Mascot (coming soon)" }],
+      "Home of Taco, the Republic's mascot: no office, an orange comb, and a " +
+      "morning greeting for every visitor. Holds no title and outranks " +
+      "everybody anyway.",
+    links: [{ href: "/mascot", label: "Meet Taco" }],
     residentIds: [],
   },
   {

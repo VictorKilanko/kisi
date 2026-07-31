@@ -65,6 +65,28 @@ Owner supplied real data and a new world-building concept, both now integrated:
   must set it or the build fails. Verified all 17 by grep before pushing since `tsc`
   can't run here.
 
+### Real flock census, and the mascot Taco
+
+Owner supplied the real flock composition and named the mascot:
+
+- **Flock census (real farm fact):** Isa-Brown 350 (200 active layers); Noiler 300
+  (270 cockerels, 30 hens); 650 birds total. Added a `flock` field to each tribe in
+  `content/tribes.ts` and surfaced it on the `/flock` tribes explainer (population +
+  breakdown, plus "N profiled" so it is clear the named characters are a subset).
+  Also filled the previously-placeholder `flock-size` and `breeds` FarmStats with the
+  real values and a source, so the About page shows them. **Two distinct censuses:**
+  the National Egg Census is monthly egg output (3,500 / 5,120); this is the flock
+  headcount. Don't conflate them.
+- **Mascot: Taco.** Rebuilt the placeholder `/mascot` page into a full profile:
+  `content/farm.ts` `mascot` object (name, title, tagline, facts, intro, bio, duties,
+  quote), a new original `MascotPortrait` SVG with the signature orange comb and a
+  gold national-figure star, and the map hotspot label changed from "coming soon" to
+  "Meet Taco". Framed as belonging to no tribe, so both claim them (a small unity beat).
+- **Pronouns:** the owner wrote both "him" and "her" for Taco, so I used **they/them**
+  and asserted no sex. Flagged for the owner to lock he or she if they want.
+- **Open, owner floated it:** more leaders / building the Republic out further.
+  Proposed but not built this pass, awaiting direction on which roles to add.
+
 ### Verification status
 
 **No local gates (Node still not installed), so GitHub Actions CI is the real gate now

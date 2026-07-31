@@ -35,8 +35,8 @@ export default function FlockPage() {
           Every citizen is born into one of two lines. Tribe here means
           heritage, not party: birds of both lines sit in the cabinet, lead the
           opposition, keep goal for rival teams, and share the mango tree at
-          dusk. The Republic&rsquo;s whole story is the two of them raised side
-          by side.
+          dusk. Today the Republic counts 650 citizens across the two lines. A
+          few tell their stories here; the rest keep the nation running.
         </p>
         <div className="mt-6 grid gap-5 sm:grid-cols-2">
           {tribes.map((t) => (
@@ -53,14 +53,26 @@ export default function FlockPage() {
                 <h3 className="font-display text-xl font-bold text-kisi-green-900">
                   {t.name}
                 </h3>
-                <span className="kicker ml-auto text-kisi-charcoal-600">
-                  {chickensOfTribe(t.id).length} citizens
-                </span>
               </div>
               <p className="kicker mt-1 text-kisi-gold-700">{t.tagline}</p>
               <p className="mt-3 text-sm text-kisi-charcoal-600">
                 {t.description}
               </p>
+              <dl className="mt-4 flex flex-wrap items-baseline gap-x-6 gap-y-1 border-t border-kisi-green-900/10 pt-3">
+                <div>
+                  <dt className="sr-only">Population</dt>
+                  <dd>
+                    <span className="font-display text-2xl font-black text-kisi-green-900">
+                      {t.flock.total.toLocaleString("en-NG")}
+                    </span>{" "}
+                    <span className="text-sm text-kisi-charcoal-600">birds</span>
+                  </dd>
+                </div>
+                <p className="text-sm text-kisi-charcoal-600">{t.flock.note}</p>
+                <p className="kicker ml-auto text-kisi-charcoal-600">
+                  {chickensOfTribe(t.id).length} profiled
+                </p>
+              </dl>
             </article>
           ))}
         </div>

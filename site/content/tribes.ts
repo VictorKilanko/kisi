@@ -16,6 +16,8 @@ export interface TribeInfo {
   description: string;
   /** Colour used for the tribe's identity dot. */
   accent: string;
+  /** Real flock figures from Kisi Farm records (July 2026). */
+  flock: { total: number; note: string };
 }
 
 export const tribes: TribeInfo[] = [
@@ -30,6 +32,7 @@ export const tribes: TribeInfo[] = [
       "Where you find a calm hand on the ledger or a record-setting nest, you " +
       "will usually find an Isa-Brown.",
     accent: "#8a3e1f",
+    flock: { total: 350, note: "200 active layers" },
   },
   {
     id: "noiler",
@@ -41,5 +44,6 @@ export const tribes: TribeInfo[] = [
       "at night, and fill the sports field by day. When the Republic needs " +
       "grit, a guard, or a sprinter, it calls a Noiler.",
     accent: "#2e7d46",
+    flock: { total: 300, note: "270 cockerels, 30 hens" },
   },
 ];
