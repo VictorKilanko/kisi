@@ -8,6 +8,32 @@ Newest session at the top.
 
 ## Session — 2026-07-31 (continuation)
 
+### Brand direction: one name, Taco logo, the sell funnel, numbering rule
+
+Owner steer, saved to memory as [[kisi-brand-soap-opera]] and applied:
+- **One name: Kisi Farm / kisi.africa.** Stop using "The Republic of Kisi" as a brand-name
+  lockup; it stays the narrated premise. Social posts updated; the **website still leans on
+  "Republic of Kisi"** (header wordmark, `/republic/` routes) and is the open follow-up.
+- **Logo is Taco's headshot** (crest retired). Site header already uses it; removed the
+  crest from the social kit.
+- **The funnel:** entertainment sells eggs and donations. Homepage banner now has **Support
+  the Chickens** beside Order Our Eggs; the stories page ends with an Order/Support block;
+  every social arc finale routes to `/support` or `/shop`. Standing rule left in
+  `social/README.md`.
+- **Numbering is for multi-slide posts only** (arcs show "Part N of 5"); single posts carry
+  no number.
+- **Two priority appeals on `/support`:** Solar & Light and Better Housing, $25,000 goal
+  each (owner-set). Shown as goals, never an invented "raised" figure.
+
+### Content audit: stray punctuation from the em-dash sweep
+
+The owner spotted a stray comma before the President's name in her homepage quote. Root
+cause: the earlier bulk em-dash removal left orphaned punctuation. Found and fixed the
+same class site-wide: a leading `, ` on the sports gatepost sentence, and en-dashes in the
+map ("east–west") and the sports score separator. **Lesson: after any bulk punctuation
+sweep, grep for `^\s*[,.]` and stray ` ,` / en-dashes to catch the orphans it leaves.**
+Shipped code (app/components/content/lib) is now free of em/en dashes.
+
 ### Recovered a frozen parallel session without its transcript
 
 A second Claude Code terminal froze mid-task. You cannot read another session's
