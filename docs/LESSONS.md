@@ -67,10 +67,17 @@ Owner supplied real data and a new world-building concept, both now integrated:
 
 ### Verification status
 
-**No local gates (Node still not installed).** Relying on GitHub Actions CI, which is
-the real gate now that `main` auto-builds. Em-dash edits are all inside strings/comments
-so they cannot break the build; the schema/`tribe` change is the one to watch, and it is
-covered by CI's typecheck + the content integrity checks.
+**No local gates (Node still not installed), so GitHub Actions CI is the real gate now
+that `main` auto-builds.** First push of this work (`1f8a371`) **failed typecheck**: the
+new `getTribe` helper built a `Map` whose key type inferred to the `Tribe` literal union
+(because `tribes[].id` is `Tribe`), so `.get(id: string)` was rejected (TS2345). Fixed in
+`44d83a6` by pinning the map key to `string`; CI then passed all four steps (lint,
+typecheck, unit tests, build).
+
+**Process lesson:** read the actual CI *step* conclusions, not a glance at the job, before
+calling anything verified. I misread the step order once and wrongly reported typecheck as
+passing when it was the failing step. When a build fails, Vercel keeps the last good deploy
+serving, so the live site never broke.
 
 ---
 
