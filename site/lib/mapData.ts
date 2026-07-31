@@ -7,7 +7,7 @@
  * derives world coordinates from them.
  *
  * The layout reflects practical SW-Nigeria poultry realism (see
- * docs/3D_WORLD_PLAN.md): open-sided houses set east–west for heat and
+ * docs/3D_WORLD_PLAN.md): open-sided houses set east-west for heat and
  * ventilation, generous roof overhangs for rain, shade trees, a raised feed
  * store, water tanks, solar, drainage, a foot-bath at the entrance, and a
  * quarantine area deliberately separated from the flock. It is a stylized
@@ -77,9 +77,9 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     description:
       "The oldest laying house, and, by right of sitting there first, " +
       "home of Mama Gold's shady end. Open-sided, breezy, and set " +
-      "east–west so the sun crosses the roof, not the birds.",
+      "east-west so the sun crosses the roof, not the birds.",
     realism:
-      "In hot climates, open-sided houses aligned east–west with big roof " +
+      "In hot climates, open-sided houses aligned east-west with big roof " +
       "overhangs keep birds cool and dry through heat and heavy rain.",
     links: [
       { href: "/eggs", label: "Egg Life" },

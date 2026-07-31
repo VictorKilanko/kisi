@@ -58,6 +58,12 @@ export default function Home() {
                 Order Our Eggs
               </Link>
               <Link
+                href="/support"
+                className="rounded-full bg-kisi-cream-100 px-6 py-3 font-semibold text-kisi-green-900 hover:bg-white"
+              >
+                Support the Chickens
+              </Link>
+              <Link
                 href="/flock"
                 className="rounded-full border border-kisi-cream-100/40 px-6 py-3 font-semibold hover:bg-kisi-cream-100/10"
               >
@@ -116,7 +122,7 @@ export default function Home() {
                 irritatingly, correct.”
               </p>
               <footer className="mt-2 text-sm font-semibold text-kisi-green-700">
-               , President Adédoyin “Mama Decree” Ọlásunkànmí
+                President Adédoyin “Mama Decree” Ọlásunkànmí
               </footer>
             </blockquote>
           </div>

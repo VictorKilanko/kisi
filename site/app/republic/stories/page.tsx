@@ -52,6 +52,30 @@ export default function StoriesPage() {
         })}
       </div>
 
+      {/* Funnel: every story leads back to the two ways to keep it going */}
+      <section className="mt-16 rounded-3xl bg-kisi-green-900 p-8 text-center text-kisi-cream-100">
+        <h2 className="font-display text-2xl font-bold">
+          Every story here runs on real feed.
+        </h2>
+        <p className="mx-auto mt-2 max-w-xl text-kisi-cream-100/85">
+          The Republic is a working farm. You can keep the flock laying,
+          lit, and housed, and take home the eggs while you are at it.
+        </p>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <Link
+            href="/shop"
+            className="rounded-full bg-kisi-gold-500 px-6 py-3 font-semibold text-kisi-charcoal-900 hover:bg-kisi-gold-300"
+          >
+            Order Our Eggs
+          </Link>
+          <Link
+            href="/support"
+            className="rounded-full bg-kisi-cream-100 px-6 py-3 font-semibold text-kisi-green-900 hover:bg-white"
+          >
+            Support the Chickens
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }

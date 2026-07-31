@@ -106,8 +106,8 @@ export default function SportsPage() {
             ))}
           </ol>
           <p className="mt-4 text-sm text-kisi-charcoal-600">
-            The gatepost inscription: <em>“The perch is already wet. So am I.”</em>{" "}
-           , is maintained by the ministry with public funds, a line item{" "}
+            The gatepost inscription reads <em>“The perch is already wet. So am I.”</em>{" "}
+            It is maintained by the ministry with public funds, a line item{" "}
             <Link href={`/flock/${minister.id}`} className="font-semibold text-kisi-green-700 hover:underline">
               Minister Quickfoot
             </Link>{" "}
@@ -133,7 +133,7 @@ export default function SportsPage() {
                   {home.name}{" "}
                   {played ? (
                     <span className="text-kisi-gold-700">
-                      {m.homeScore} – {m.awayScore}
+                      {m.homeScore}-{m.awayScore}
                     </span>
                   ) : (
                     <span className="text-kisi-charcoal-600">vs</span>

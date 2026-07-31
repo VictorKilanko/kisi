@@ -40,6 +40,60 @@ export default function SupportPage() {
         </PlaceholderNotice>
       </div>
 
+      {/* Priority appeals: the two biggest needs */}
+      <section className="mt-10">
+        <SectionHeading
+          kicker="Our biggest needs right now"
+          title="Two campaigns, $25,000 each"
+          lede="Everything below helps. These two come first: they change daily life for every bird on the farm."
+        />
+        <div className="grid gap-6 md:grid-cols-2">
+          {[
+            {
+              name: "Solar & Light",
+              funds:
+                "Solar power and reliable lighting: steady lay cycles, safe nights, and a coop that runs when the grid does not.",
+              href: "#solar",
+            },
+            {
+              name: "Better Housing",
+              funds:
+                "Stronger coops, more nesting boxes, real ventilation for the heat, and repairs that hold through the rainy season.",
+              href: "#housing",
+            },
+          ].map((c) => (
+            <div
+              key={c.name}
+              className="flex flex-col rounded-3xl border border-kisi-gold-500/40 bg-white p-6 shadow-sm"
+            >
+              <p className="kicker text-kisi-earth-700">Priority appeal</p>
+              <h3 className="font-display mt-1 text-2xl font-bold text-kisi-green-900">
+                {c.name}
+              </h3>
+              <p className="mt-2 text-sm text-kisi-charcoal-600">{c.funds}</p>
+              <div className="mt-4 flex items-baseline gap-2">
+                <span className="font-display text-3xl font-black text-kisi-green-900">
+                  $25,000
+                </span>
+                <span className="text-sm text-kisi-charcoal-600">goal</span>
+              </div>
+              <p className="mt-1 text-xs italic text-kisi-charcoal-600">
+                Progress will be reported from the farm&apos;s real records once
+                the programme opens. We publish no invented figures.
+              </p>
+              <div className="mt-auto pt-4">
+                <Link
+                  href={c.href}
+                  className="inline-block rounded-full bg-kisi-green-900 px-5 py-2.5 font-semibold text-kisi-cream-100 hover:bg-kisi-green-700"
+                >
+                  Support {c.name}
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* What these payments are (and aren't) */}
       <section className="mt-10 rounded-2xl border-l-4 border-kisi-gold-500 bg-kisi-cream-200 p-5 text-sm text-kisi-charcoal-600">
         <h2 className="font-display text-lg font-bold text-kisi-charcoal-900">
@@ -80,7 +134,7 @@ export default function SupportPage() {
         />
         <ul className="grid gap-6 md:grid-cols-2">
           {supportTiers.map((t) => (
-            <li key={t.id} className="flex flex-col rounded-2xl border border-kisi-green-900/10 bg-white p-6 shadow-sm">
+            <li key={t.id} id={t.id} className="flex scroll-mt-24 flex-col rounded-2xl border border-kisi-green-900/10 bg-white p-6 shadow-sm">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <h3 className="font-display text-xl font-bold text-kisi-green-900">
                   {t.name}
