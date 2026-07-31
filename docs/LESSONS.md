@@ -109,6 +109,13 @@ Owner follow-ups, all shipped:
   character's `friends` array had to change. The build-time symmetric-friendship assert
   is the easiest way to break the build when adding characters. IDs stay ASCII
   (`sade-griot`) while display names carry diacritics (Sadé).
+- **Adding characters breaks the hardcoded count test.** `content.test.ts` asserts
+  `chickens` has an exact length; bumped 17 to 23. CI caught it (typecheck passed, unit
+  test failed), which is the system working as intended.
+- **Logo swap (temporary):** at the owner's request the header/footer logo and the
+  favicon now use **Taco's face** (`TacoMark` in `Logo.tsx` plus `app/icon.svg`), to
+  push the mascot out front. The crest is retained as `LogoMark` and still carries the
+  national flag seal, so reverting is a one-line change.
 
 ### Verification status
 

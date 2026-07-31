@@ -99,6 +99,56 @@ export function LogoMark({
   );
 }
 
+/**
+ * Taco's face, used as the wordmark lockup for now, to push the mascot's
+ * face out. A compact profile head in the seal badge; reads down to favicon
+ * size. The crest LogoMark above is unchanged and still carries the flag seal.
+ */
+export function TacoMark({
+  size = 40,
+  title,
+  className,
+}: {
+  size?: number;
+  title?: string;
+  className?: string;
+}) {
+  const BODY = "#c9752e";
+  const COMB = "#b3261e";
+  const BEAK = "#e0a13a";
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      width={size}
+      height={size}
+      className={className}
+      role={title ? "img" : undefined}
+      aria-label={title}
+      aria-hidden={title ? undefined : true}
+    >
+      {title ? <title>{title}</title> : null}
+      {/* seal badge */}
+      <circle cx="32" cy="32" r="31" fill={GREEN} />
+      <circle cx="32" cy="32" r="27.5" fill={CREAM} />
+      {/* comb */}
+      <g fill={COMB}>
+        <circle cx="24" cy="20" r="4.5" />
+        <circle cx="31" cy="16.5" r="5" />
+        <circle cx="38" cy="20" r="4.5" />
+      </g>
+      {/* head */}
+      <circle cx="31" cy="34" r="15" fill={BODY} />
+      {/* beak */}
+      <polygon points="45,32 55,35.5 45,39" fill={BEAK} />
+      {/* wattle */}
+      <ellipse cx="43" cy="43" rx="3.2" ry="5" fill={COMB} />
+      {/* eye */}
+      <circle cx="35" cy="31" r="3.4" fill="#23231f" />
+      <circle cx="36.2" cy="29.9" r="1.1" fill="#ffffff" />
+    </svg>
+  );
+}
+
 export function Logo({
   size = 36,
   showWordmark = true,
@@ -112,7 +162,7 @@ export function Logo({
 }) {
   return (
     <span className={`flex items-center gap-2.5 ${className}`}>
-      <LogoMark size={size} />
+      <TacoMark size={size} />
       {showWordmark && (
         <span className="flex flex-col leading-none">
           <span className="font-display text-xl font-black tracking-tight text-kisi-green-900">
