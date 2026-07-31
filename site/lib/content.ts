@@ -93,7 +93,9 @@ export const supportTiers = validateAll(SupportTierSchema, rawTiers, "support ti
 export { eggCensus, fixtures, mascot, perchChampionship, presidentialDiary, topScorers };
 
 export const tribes = rawTribes;
-const tribeById = new Map(tribes.map((t) => [t.id, t]));
+const tribeById = new Map<string, (typeof tribes)[number]>(
+  tribes.map((t) => [t.id, t] as const),
+);
 export const getTribe = (id: string) => tribeById.get(id);
 export const chickensOfTribe = (id: string) => chickens.filter((c) => c.tribe === id);
 
