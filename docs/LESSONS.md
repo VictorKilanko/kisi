@@ -6,6 +6,53 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-07-31 (continuation)
+
+### Recovered a frozen parallel session without its transcript
+
+A second Claude Code terminal froze mid-task. You cannot read another session's
+conversation, but the **filesystem and process list tell the story**: two `claude`
+PIDs (one two days old with 87 min CPU = the frozen one), **no `node` process** (so it
+was not mid-build), no stale `.git/index.lock`, and file mtimes showing its last writes
+clustered at 3:46 to 3:51 pm. It had written The Nesting Box Election arc + a dynamic
+OG share card, then stalled before committing. After the owner killed it, I verified the
+referenced ids resolve and committed its work as two clean units.
+
+- **Lesson: to find where a stalled agent stopped, read mtimes, not tea leaves.**
+  `Get-Process`, the last-modified file list, and `git status` reconstruct the state
+  precisely.
+
+### Node is installed now — gates run locally for the first time
+
+Owner installed Node (`v24.18.1`, npm 11.16.0). Every gate now runs from `site/`:
+`tsc --noEmit` (0), `eslint .` (0 errors, 2 old warnings), `vitest run` (31/31),
+`next build` (0). Memory [[farm-node-not-installed]] updated to say so.
+
+- **Stale `.next` breaks the typecheck.** `.next/types/validator.ts` is regenerated per
+  build and still referenced the removed `agric-city`/`disclaimer` routes, so `tsc`
+  failed with TS2307. Fix: `rm -rf site/.next`, re-run. Not a source error.
+- **The build fetches Inter from `fonts.gstatic.com` at build time** (`next/font/google`
+  in `app/layout.tsx`). On a flaky connection it fails intermittently ("Error while
+  requesting resource"), a different count of failed weights each run; retrying clears
+  it, and Vercel's network is fine. Durable fix if it ever bites: self-host via
+  `next/font/local` so the build never touches the network.
+- The Bash tool does not inherit Node on PATH; prefix `export PATH="/c/Program Files/nodejs:$PATH"`.
+
+### Built the Instagram post kit in `social/`
+
+12 branded 1080x1080 posts (Welcome/Taco, Meet the Leaders, The Nesting Box Election),
+leader copy pulled straight from the real character content so nothing is invented.
+
+- **Rendering images with no Node: screenshot HTML with headless Chrome.** Windows ships
+  Chrome/Edge; `chrome --headless=new --window-size=1080,1080 --force-device-scale-factor=1
+  --allow-file-access-from-files --screenshot=out.png file:///post.html` gives an exact
+  1080x1080 PNG. The `--allow-file-access-from-files` flag is what lets a `file://` page
+  load `../assets/crest.svg` and the shared CSS. `social/render.ps1` re-runs the batch.
+- One design system (`social/assets/post.css`) with three themes (green state / eggshell
+  portrait / Coop Times newspaper) keeps the set coherent and easy to extend.
+
+---
+
 ## Session — 2026-07-31
 
 ### The site is live on Vercel, and `main` is finally the real site

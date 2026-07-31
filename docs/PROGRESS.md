@@ -6,14 +6,16 @@ Read this file at the start of every session, after the project brief.
 
 | Item | State |
 |---|---|
-| Current phase | **Phase 4 — Community and support: COMPLETE, awaiting owner review** |
-| Next phase | Phase 5 — QA and deployment (do not start until owner approves Phase 4) |
-| Active branch | `feature/kisi-poultry-republic` |
-| Production build | **Passing** — 56 static pages + 3 API routes, `npm run build` exit 0 (2026-07-17) |
-| Lint / typecheck | Passing — ESLint exit 0, `tsc --noEmit` clean (2026-07-17) |
-| Payments | Structurally complete, **TEST MODE ONLY** — live locked in code (see docs/DONATION_INTEGRATION.md status block); runtime-verified honest 503 without keys |
-| 3D lazy-load | Verified — three.js chunk referenced by no page HTML; on-demand only |
-| Tests | No unit-test runner yet; API endpoints smoke-tested against a real `next start` server this session (results in PROGRESS session 4 log) |
+| Current phase | **Live on Vercel at kisi.africa**; brand pivot shipped to `main`. Post-Phase-4, ongoing content + growth work |
+| Active branch | `feature/kisi-poultry-republic` (fast-forwarded into `main`, which is the live site) |
+| Node / gates | **Node v24.18.1 installed 2026-07-31.** All gates run locally from `site/`: `tsc` 0, `eslint` 0 errors, `vitest` 31/31, `next build` 0. See [[farm-node-not-installed]] gotchas (clear stale `.next`; build fetches Google Fonts) |
+| Latest content | The Nesting Box Election story arc (arcs now 8), full-cabinet article, dynamic OG + Twitter share cards |
+| Social kit | **New `social/` folder** — 12 Instagram-ready 1080x1080 posts, `render.ps1`, `captions.md`, `README.md` |
+| Payments | Structurally complete, **TEST MODE ONLY** — live locked in code; honest 503 without keys |
+| Tests | vitest suite, 31 passing (content integrity + API) |
+
+> Note: the session log below (sessions 1 to 4) predates the brand pivot and the
+> Vercel launch. `docs/LESSONS.md` is the current running log; read it first.
 
 ## Phase checklist
 
