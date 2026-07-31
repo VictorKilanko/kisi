@@ -14,11 +14,11 @@ day or two, or release them together as one carousel titled "The Nesting Box Ele
 
 ---
 
-## 01 · Welcome to the Republic
-Welcome to the Republic of Kisi: a working poultry farm in southwestern Nigeria, run by
-the chickens themselves. They hold the offices. They keep the records. They run the whole
-place. Taco greets you first, so come in. This is where every chicken has a story, and
-we are just getting started. Follow along. 🐔🇳🇬
+## 01 · Welcome to Kisi Farm
+Welcome to Kisi Farm: a working poultry farm in southwestern Nigeria, run by the chickens
+themselves. They hold the offices. They keep the records. They run the whole place like
+their own little republic. Taco greets you first, so come in. This is where every chicken
+has a story, and we are just getting started. Follow along. 🐔🇳🇬
 
 ## 02 · Where every chicken has a story
 Every hen here has a name, a history, and a job. Some run ministries. One runs the whole
