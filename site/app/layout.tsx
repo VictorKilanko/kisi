@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -41,6 +42,15 @@ export const metadata: Metadata = {
       "A working poultry farm in southwestern Nigeria, run by the chickens " +
       "themselves. Order farm-fresh eggs and meet the Republic.",
   },
+  appleWebApp: {
+    capable: true,
+    title: "Kisi",
+    statusBarStyle: "default",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#1f5130",
 };
 
 export default function RootLayout({
@@ -81,6 +91,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <ServiceWorkerRegister />
       </body>
     </html>
   );

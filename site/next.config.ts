@@ -10,6 +10,21 @@ import type { NextConfig } from "next";
  * The canonical origin now comes from NEXT_PUBLIC_SITE_URL so a domain change
  * is a Vercel environment variable rather than a code change.
  */
-const nextConfig: NextConfig = {};
+const nextConfig: NextConfig = {
+  async headers() {
+    return [
+      {
+        // The service worker must never be cached and must be allowed to
+        // control the whole origin.
+        source: "/sw.js",
+        headers: [
+          { key: "Content-Type", value: "application/javascript; charset=utf-8" },
+          { key: "Cache-Control", value: "no-cache, no-store, must-revalidate" },
+          { key: "Service-Worker-Allowed", value: "/" },
+        ],
+      },
+    ];
+  },
+};
 
 export default nextConfig;

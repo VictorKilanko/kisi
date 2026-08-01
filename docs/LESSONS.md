@@ -25,6 +25,28 @@ Owner steer, saved to memory as [[kisi-brand-soap-opera]] and applied:
 - **Two priority appeals on `/support`:** Solar & Light and Better Housing, $25,000 goal
   each (owner-set). Shown as goals, never an invented "raised" figure.
 
+### Made the site an installable PWA
+
+Owner wants Kisi installable as an app. Done, dependency-free (the site builds with
+Turbopack, and Serwist, the usual offline plugin, needs webpack, so no plugin):
+- `app/manifest.ts` (Next serves it at `/manifest.webmanifest`): standalone, theme
+  `#1f5130`, background `#faf5e9`, Taco-face icons (192, 512, and a green full-bleed
+  512 maskable), plus app shortcuts to Order / Support / Flock.
+- Icons generated from the Taco mark with the same headless-Chrome screenshot trick as
+  the social cards (`public/icon-*.png`, `app/apple-icon.png` which Next auto-links).
+- `public/sw.js`: a small service worker (network-first for navigations, cache-first for
+  assets, `/offline` fallback). `next.config.ts` gives `/sw.js` a no-cache + correct
+  content-type + `Service-Worker-Allowed: /` header. Registered via a tiny client
+  component on `load`.
+- `app/offline/page.tsx` styled inline so it reads even before the CSS is cached.
+- Verified against `next start`: manifest JSON, sw headers, `/offline` 200, icons 200,
+  and the injected `<link rel=manifest>` / theme-color / apple-touch-icon tags.
+
+**Lesson: obey `site/AGENTS.md` and read the bundled Next docs first.** The PWA guide at
+`node_modules/next/dist/docs/01-app/02-guides/progressive-web-apps.md` gave the exact
+Next 16 conventions (`app/manifest.ts`, the sw.js headers), which differ from older
+`next-pwa` habits.
+
 ### Story-arc carousels + first push of the day's work
 
 - **Turned the 7 remaining written arcs into Coop Times slide carousels** (27 numbered
