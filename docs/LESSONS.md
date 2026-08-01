@@ -25,6 +25,20 @@ Owner steer, saved to memory as [[kisi-brand-soap-opera]] and applied:
 - **Two priority appeals on `/support`:** Solar & Light and Better Housing, $25,000 goal
   each (owner-set). Shown as goals, never an invented "raised" figure.
 
+### Story-arc carousels + first push of the day's work
+
+- **Turned the 7 remaining written arcs into Coop Times slide carousels** (27 numbered
+  slides) with `social/generate-arcs.mjs`, driven off the site's own `timeline.ts` so the
+  posts never drift from canon. Node makes this easy now: a data array + a template
+  function + `render.ps1`. Each arc's last slide routes to Support (funnel rule).
+- **Fixed a name on card 07:** the byline read "Kọ́lá Quill"; canonical is "Kola Quill"
+  (full name Kọ́lápọ̀, byline Kola Quill). Lesson: check card proper names against the
+  content, not memory.
+- **Pushed the day's 11 commits to `main`** (fast-forward from the Taco-logo commit),
+  which is the Vercel production branch, so it deploys to kisi.africa. Method per
+  [[kisi-domain-and-hosting]]: token inline in the push URL, `GIT_TERMINAL_PROMPT=0`,
+  `sed` the token out of logs. **The PAT in the project instructions still needs rotating.**
+
 ### Content audit: stray punctuation from the em-dash sweep
 
 The owner spotted a stray comma before the President's name in her homepage quote. Root
