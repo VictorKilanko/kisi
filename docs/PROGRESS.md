@@ -7,10 +7,12 @@ Read this file at the start of every session, after the project brief.
 | Item | State |
 |---|---|
 | Current phase | **Live on Vercel at kisi.africa**; brand pivot shipped to `main`. Post-Phase-4, ongoing content + growth work |
-| Active branch | `feature/kisi-poultry-republic` (fast-forwarded into `main`, which is the live site) |
+| Active branch | `feature/kisi-poultry-republic` == `main` == `origin` (all at the same commit; 0 unpushed as of 2026-07-31) |
 | Node / gates | **Node v24.18.1 installed 2026-07-31.** All gates run locally from `site/`: `tsc` 0, `eslint` 0 errors, `vitest` 31/31, `next build` 0. See [[farm-node-not-installed]] gotchas (clear stale `.next`; build fetches Google Fonts) |
-| Latest content | The Nesting Box Election story arc (arcs now 8), full-cabinet article, dynamic OG + Twitter share cards |
-| Social kit | **New `social/` folder** — 12 Instagram-ready 1080x1080 posts, `render.ps1`, `captions.md`, `README.md` |
+| PWA | **Installable PWA (2026-07-31):** `app/manifest.ts`, `public/sw.js` (offline), Taco-face icons, `/offline`. See [[LESSONS]] |
+| Monetisation funnel | Homepage banner has **Support the Chickens** beside Order; `/support` leads with the two $25k appeals (Solar & Light, Better Housing); About page and story pages route to Order/Support |
+| Latest content | Story arcs now 8; full-cabinet article; dynamic OG (Taco-only) + Twitter share cards |
+| Social kit | **`social/` folder** — 12 intro/cast/leader cards + **7 arc carousels (27 slides)** + a WANTED poster; `render.ps1`, `generate-arcs.mjs`, `captions.md`, `README.md`. Logo = Taco headshot; name = Kisi Farm |
 | Payments | Structurally complete, **TEST MODE ONLY** — live locked in code; honest 503 without keys |
 | Tests | vitest suite, 31 passing (content integrity + API) |
 
