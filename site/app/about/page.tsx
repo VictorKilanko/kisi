@@ -104,7 +104,7 @@ export default function AboutPage() {
       </section>
 
       {/* Pointers */}
-      <section className="mt-16 grid gap-6 md:grid-cols-2">
+      <section className="mt-16 grid gap-6 md:grid-cols-3">
         <Link
           href="/shop"
           className="rounded-2xl border border-kisi-green-900/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
@@ -116,6 +116,18 @@ export default function AboutPage() {
             Collected by hand every morning and packed the same day. Tell us
             what you need and we&apos;ll confirm price and delivery for your
             area.
+          </p>
+        </Link>
+        <Link
+          href="/support"
+          className="rounded-2xl bg-kisi-green-900 p-6 text-kisi-cream-100 shadow-sm transition-shadow hover:shadow-md"
+        >
+          <h2 className="font-display text-xl font-bold text-kisi-gold-300">
+            Support the Chickens →
+          </h2>
+          <p className="mt-2 text-sm text-kisi-cream-100/85">
+            Keep the flock laying, lit, and housed. Our two biggest campaigns
+            are Solar &amp; Light and Better Housing, a $25,000 goal each.
           </p>
         </Link>
         <Link

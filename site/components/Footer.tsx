@@ -67,7 +67,7 @@ export function Footer() {
       <div className="border-t border-kisi-cream-100/15">
         <div className="mx-auto max-w-6xl px-4 py-5 text-xs text-kisi-cream-100/70">
           <p>
-            The Republic of Kisi &mdash; a nation of chickens at Kisi Farm,
+            The Republic of Kisi, a nation of chickens at Kisi Farm,
             southwestern Nigeria. &copy; {new Date().getFullYear()} Kisi. All
             characters, stories, and designs are original to Kisi Farm.
           </p>
