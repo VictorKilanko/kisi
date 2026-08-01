@@ -60,6 +60,10 @@ post them in order (`-1` first). One caption per carousel, all in `captions.md`.
 | The Drain | 5 | `arc-drain-1..5` | the villain (monitor lizard) |
 | A Full Cabinet | 5 | `arc-cabinet-1..5` | politics |
 
+**Companion single post:** `wanted-monitor-lizard.png` is a standalone WANTED poster for
+the villain of The Drain (the monitor lizard, "The Drain", 500,000-grain bounty), using the
+site's own illustration. Post it alongside that carousel. No slide number (it stands alone).
+
 These are generated from the site's own timeline content by `generate-arcs.mjs`
 (`node social/generate-arcs.mjs`), then rendered with `render.ps1`. Every arc's last
 slide routes to Support (the funnel rule below). To add or edit an arc, change the data

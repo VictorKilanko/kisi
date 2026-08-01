@@ -130,6 +130,13 @@ ended with a resting place voted under the mango tree without a single speech ag
 could get out the far side. Every one of them made it. Swipe through all 5. 🌿 Keep the
 flock safe, lit and housed: kisi.africa/support.
 
+### Companion · WANTED: The Drain (single post: `wanted-monitor-lizard`)
+WANTED, by order of the Ministry of Security. This is the monitor lizard that came up the
+drainage channel and killed Bantu, night watchman of Coop Two, who held the doorway until
+twelve chicks were out the far side. Every one of them made it. Reward: 500,000 grains for
+information leading to its capture. Do not approach it. Full notice at kisi.africa/most-wanted.
+🦎 Post it alongside The Drain carousel.
+
 ### Arc · A Full Cabinet (5 slides: `arc-cabinet-1` to `-5`)
 A FULL CABINET, in 5 parts. In a single week the President filled six empty ministries and
 retired the word "acting" from the national vocabulary. The Opposition welcomed all six new
