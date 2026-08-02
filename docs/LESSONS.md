@@ -6,6 +6,28 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-02 (scheduling: posts drain automatically every 12h)
+
+- **`.github/workflows/ig-schedule.yml`** — a GitHub Actions cron that publishes the next
+  queued arc every 12 hours (06:00 and 18:00 UTC; 06:00 = 2 AM Eastern in EDT), via
+  `ig-publish.mjs --next --publish`, then commits the manifest back so it dedupes. Chosen
+  over a local Windows task so posting does not depend on the PC being awake. `workflow_dispatch`
+  posts on demand. Secrets `IG_PAGE_TOKEN` + `IG_BUSINESS_ACCOUNT_ID` are GitHub Actions repo
+  secrets (`gh secret set`), separate from the local `.env`.
+- **Validated live:** dispatched one run; it posted **The Drain** carousel to @kisi.africa
+  (instagram.com/p/DbhuHKoGrVC/) and committed the manifest. Queue: chichi ✓, drain ✓, then
+  mamagold, grain, rainfinal, flu, cabinet draining at each 12h slot (done by ~Aug 4).
+- **Env quirk:** `git push` to origin hangs here. Moved the `main` ref with
+  `gh api -X PATCH .../git/refs/heads/main -f sha=<sha>` and created the workflow via the
+  Contents API. Feature pushes worked; only ref-moves to main were needed server-side.
+- **Host:** canonical is **www.kisi.africa** (apex 308-redirects); manifest URLs and
+  `NEXT_PUBLIC_SITE_URL` now use `www` so the IG image fetch does not hit a redirect.
+- Going forward: story.md Stage 7 stages a new arc into the same queue; the 2 AM Eastern
+  cron posts it, or dispatch/local `--publish` posts ad hoc. Switch cron to `0 6 * * *` for
+  daily-only once backlogs are clear.
+
+---
+
 ## Session — 2026-08-02 (Stage 7 wired: live Instagram publishing)
 
 Owner supplied Meta credentials, so Stage 7 got built and validated against the live
