@@ -138,10 +138,10 @@ const man = JSON.parse(readFileSync(manifestPath, "utf8"));
 
 let targets = man.posts.filter((p) => p.status !== "posted");
 if (only) targets = targets.filter((p) => p.name === only);
-if (!has("--all") && !only && DRY) {
-  // default: consider all staged, but dry
-}
-if (!targets.length) { console.log("Nothing to publish (all posted, or --only matched nothing)."); process.exit(0); }
+// --next: publish exactly one post per run (the oldest staged with a caption). This is
+// what each scheduled tick calls, so a cron drains the queue one arc at a time.
+if (has("--next")) targets = targets.filter((p) => p.caption).slice(0, 1);
+if (!targets.length) { console.log("Nothing to publish (queue empty, all posted, or filter matched nothing)."); process.exit(0); }
 
 console.log(DRY ? "DRY RUN — nothing will be posted. Add --publish to go live.\n" : "PUBLISHING to @kisi.africa...\n");
 for (const post of targets) {
