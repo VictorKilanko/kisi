@@ -1,0 +1,55 @@
+name: Instagram scheduler
+
+# Posts the next queued Kisi arc to Instagram on a schedule. The Instagram Graph API has
+# no native scheduling, so this cron IS the schedule: each run publishes exactly one
+# oldest-staged arc from site/public/s/<token>/manifest.json (via `ig-publish.mjs --next`)
+# and commits the manifest back so the next run does not repeat it. Images must already be
+# deployed (they live under site/public/ and ship with the site), which they are.
+#
+# Cadence: every 12 hours, at 06:00 and 18:00 UTC. 06:00 UTC = 02:00 America/New_York while
+# EDT is in effect (2 AM Eastern, the standing daily slot). GitHub cron is fixed UTC and does
+# not follow daylight saving. Once the backlog is drained, change the cron to `0 6 * * *`
+# for the daily-only 2 AM cadence.
+
+on:
+  schedule:
+    - cron: "0 6,18 * * *"
+  workflow_dispatch: {}   # lets you post the next arc on demand from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ig-scheduler
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Publish the next queued arc
+        env:
+          IG_PAGE_TOKEN: ${{ secrets.IG_PAGE_TOKEN }}
+          IG_BUSINESS_ACCOUNT_ID: ${{ secrets.IG_BUSINESS_ACCOUNT_ID }}
+          NEXT_PUBLIC_SITE_URL: https://www.kisi.africa
+        run: node social/ig-publish.mjs --next --publish
+
+      - name: Record the post (commit updated manifest)
+        run: |
+          if git diff --quiet -- site/public/s; then
+            echo "Queue empty or nothing published; no manifest change."
+          else
+            git config user.name "kisi-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add site/public/s
+            git commit -m "chore(social): mark next arc posted [skip ci]"
+            git push origin HEAD:main
+          fi
