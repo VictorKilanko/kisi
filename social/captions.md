@@ -5,8 +5,8 @@ the matching PNG, post. A reusable hashtag block is at the bottom; paste it unde
 caption (Instagram allows up to 30 hashtags, but 10 to 15 relevant ones perform best).
 
 **Before you post:** the images show the website address `kisi.africa`. Your Instagram
-**@handle** is not baked into the images, so set it once here. Suggested: **@kisi.africa**
-(confirm it is available and yours). Replace it below if you use a different handle.
+**@handle** is **@kisi.africa**. It is not baked into the images, so it is set here once
+for reference. If the handle ever changes, update it here.
 
 Recommended order: post 01 to 12 in sequence. The three leader posts (04 to 06) work
 as a single carousel. The five election posts (08 to 12) are a serial: post one every

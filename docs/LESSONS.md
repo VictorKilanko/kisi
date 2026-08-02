@@ -6,6 +6,86 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-02 (Stage 7 wired: live Instagram publishing)
+
+Owner supplied Meta credentials, so Stage 7 got built and validated against the live
+@kisi.africa account.
+- **`social/ig-publish.mjs`** — the publisher. Reads the staged `manifest.json`, builds
+  single or carousel media containers via the Graph API, and publishes. **Dry-run by
+  default**; `--publish` goes live; `--list` shows account + post history + manifest;
+  `--only <name>` targets one post. Skips anything already `posted`; refuses empty captions.
+  Run with `node --env-file=social/.env social/ig-publish.mjs ...`.
+- **`social/.env`** — all IG secrets, **gitignored** (confirmed via `git check-ignore`).
+  Scrubbed the app secret + tokens the owner had pasted into `IG_SETUP.md` (a tracked
+  file); verified no secret material remains in any committable file.
+- **`social/IG_SETUP.md`** — rewritten as the clean operating guide (no secrets).
+- Validated: token authenticates as @kisi.africa; account already had 4 manually-posted
+  items; a full stage → caption → dry-run of the Chi-Chi arc (5-slide carousel) printed the
+  exact payload. Left `arc-chichi` staged in `site/public/s/<token>/` as the first
+  ready-to-publish automated post.
+
+### Lessons (Instagram Graph API)
+- **No native scheduling.** `media_publish` posts immediately; timed posting means running
+  the publisher on a cron / the `/schedule` skill at the target time. Rate limit ~25/24h.
+- **Images must be public HTTPS URLs.** The staged PNGs must be committed + **deployed**
+  before `--publish`, or Instagram 404s on the image fetch. Dry-run needs no deploy.
+- Carousel = one child container per slide (wait for FINISHED) → parent CAROUSEL container →
+  publish. Max 10 slides.
+
+### Left open (Stage 7)
+- To make the first automated post live: commit `site/public/s/**` + deploy, then
+  `node --env-file=social/.env social/ig-publish.mjs --only arc-chichi --publish`.
+- Optional: schedule a recurring publish via the `/schedule` skill.
+- User-supplied credentials were pasted in chat once; owner may rotate the app secret if
+  concerned.
+
+---
+
+## Session — 2026-08-01 (the content factory + IG automation)
+
+### Owner set the Instagram handle
+- **@kisi.africa** is confirmed. Written into `social/captions.md` header and the
+  `docs/CONTENT_CHECKLIST.md` item closed.
+
+### Built the "content factory": one command → drama → website → IG-ready images
+Owner wants to point Claude at a file, run it, and have new character drama get written at
+a professional level, audited, published to the site, turned into Instagram slides,
+audited again, and staged to a public path for scheduling. Chose the **Direct Graph API**
+route and **"decide the IG handoff later"** (build stages 1 to 6 now, wire scheduling
+after the Meta token exists). Built:
+- **`social/story.md`** — the executable runbook (point Claude at it, say "execute"). Seven
+  stages: write → showrunner audit → publish to `timeline.ts`/`articles.ts`/`social.ts`/
+  `chickens.ts` → generate slides via the existing `generate-arcs.mjs` + `render.ps1` →
+  art-director audit → stage to public path → (deferred) schedule to IG. Includes a
+  "writers' room" slate of open threads so cycles escalate.
+- **`.claude/agents/kisi-showrunner.md`** — story-audit subagent (continuity, voice, drama,
+  house style, funnel rule). Read-only, returns SHIP/REVISE/BLOCK + fix list.
+- **`.claude/agents/kisi-art-director.md`** — image-audit subagent; reads the rendered PNGs
+  and returns PASS/FAIL per slide (render, text fit, template, order, legibility, the sell).
+- **`social/stage-to-public.mjs`** — copies approved PNGs into `site/public/s/<token>/`
+  (unguessable web path, served by Vercel), groups carousels, writes `manifest.json` with
+  live URLs + caption slots + status. Tested on 2 posts, works; test artifacts cleaned.
+- **`social/IG_SETUP.md`** — the one-time Meta setup (Business account, linked Page, app,
+  long-lived token) that turns on Stage 7. Owner must do this; token stays in env, never
+  committed.
+
+### Lessons
+- **Instagram has no personal-account API.** Any automation (custom script, Postiz, Buffer)
+  needs a Business/Creator account + linked Facebook Page + Meta app + long-lived token.
+  That setup is the one gate Claude cannot cross for the owner.
+- **Graph API cannot upload local files.** Images must sit at public HTTPS URLs, which is
+  why staging into `site/public/` and deploying comes before scheduling.
+- The image pipeline is data-driven: new arcs go in the `arcs` array of
+  `generate-arcs.mjs` (mirroring `timeline.ts`), not hand-built HTML.
+
+### Left open
+- Owner to run `social/IG_SETUP.md` (5 steps) to get a token; then "wire up Stage 7" builds
+  `social/ig-publish.mjs`.
+- First real `execute` run of `social/story.md` to produce a new arc end to end.
+- Website still leans on "Republic of Kisi" wordmark/routes (older open follow-up).
+
+---
+
 ## Session — 2026-07-31 (continuation)
 
 ### Brand direction: one name, Taco logo, the sell funnel, numbering rule

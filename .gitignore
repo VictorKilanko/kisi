@@ -20,8 +20,9 @@ node_modules/
 # --- Local-only notes (contain private local machine paths) ---
 /START_HERE.md
 
-# --- Private farm records (internal spreadsheets, not for a public repo) ---
+# --- Private farm records (internal spreadsheets & documents, not for a public repo) ---
 *.xlsx
+*.docx
 
 # --- Local tool settings ---
 .claude/settings.local.json
@@ -48,3 +49,4 @@ pnpm-debug.log*
 Thumbs.db
 Desktop.ini
 *.swp
+~$*         # Word/Excel lock files (e.g. ~$nking_kisi.docx)
