@@ -6,6 +6,38 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-03 (standing content rules + The Fence Line, Ep 1: Cindy)
+
+Owner set three standing rules and directed a new season around a real loss.
+
+- **Standing rules (now in memory + repo):** (1) always include `#kisiafrica #runbychickens
+  #taco` in captions (added to the reusable block, set now 17 tags); (2) every slide must be
+  followable by a 6-year-old — clarity over cleverness, the owner could not tell what earlier
+  slides were about; (3) alternate green and cream backgrounds *between* arcs. Built a
+  `.t-times.green` variant in `post.css` and a `theme:"green"` switch in `generate-arcs.mjs`;
+  existing arcs stay cream.
+- **The Fence Line season (owner-directed):** a real hen, **Cindy**, was lost in a fight at
+  the roost. Plotted a 7-episode courtroom-and-society season in story.md's writers' room,
+  released scene by scene. Reason for the fight = dry-season heat + a crowded roost (a REAL
+  welfare cause), so every arc routes to **Better Housing**. Villain = **Eseosa** (tried and
+  exiled across later episodes). Death handled off-page with dignity, like Bantu.
+- **Ep 1 built and staged (Goodnight, Cindy):** Cindy added to `chickens.ts` as a memorial
+  character; `the-fence-line` arc in `timeline.ts` (renders at /republic/stories) + ARC_META;
+  5 green slides rendered and audited by eye (all pass); caption tees up Ep 2 and sells Better
+  Housing. Staged into the manifest **ahead of arc-cabinet** so the memorial posts next, not
+  after a comedy arc.
+- **Gotchas hit:** content tests enforce (a) symmetric friendships — had to add Cindy back to
+  Rọ́nkẹ́/Sisi Ngozi/Sadé; (b) ARC_META for every arcId; (c) hardcoded counts (cast 23→24,
+  arcs 8→9). Also synced the manifest from `origin/main` before staging so the bot's 6
+  "posted" statuses were not clobbered (the scheduler commits manifest updates to main).
+- **LEFT / to publish Cindy:** the scheduler runs off **main**. Cindy is on
+  `feature/kisi-poultry-republic`. For her to lead the queue she must reach main **and** Vercel
+  must redeploy so `www.kisi.africa/s/ay0qME54UVBg/arc-cindy-*.png` is live *before* the next
+  cron (else main's current manifest posts arc-cabinet at ~Aug 4 06:00 UTC). Then build Eps
+  2–7 (start: Ep 2, Minister Okpara's press conference introducing Eseosa).
+
+---
+
 ## Session — 2026-08-02 (scheduling: posts drain automatically every 12h)
 
 - **`.github/workflows/ig-schedule.yml`** — a GitHub Actions cron that publishes the next
