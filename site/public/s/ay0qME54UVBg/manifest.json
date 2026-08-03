@@ -1,6 +1,6 @@
 {
   "base": "https://www.kisi.africa/s/ay0qME54UVBg",
-  "updated": "2026-08-02T05:45:42.730Z",
+  "updated": "2026-08-03T23:47:16.370Z",
   "posts": [
     {
       "name": "arc-chichi",
@@ -46,8 +46,10 @@
       ],
       "finalRoute": "https://kisi.africa/republic/stories",
       "caption": "MAMA GOLD'S LONG GOODBYE, in 3 parts. Egg No. 400, celebrated under the mango tree. Her review: \"The first one was harder.\" The National Grandmother isn't retiring, she's delegating, and there's now a law that every citizen calls by her name. Swipe through all 3. 🧡 Support the senior hens at kisi.africa/support.\n\n#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #PoultryFarm #PoultryNigeria #NigerianAgriculture #Agribusiness #FarmLife #Chickens #Naija #SouthwestNigeria #FarmStories #EggFarm #MadeInNigeria",
-      "status": "staged",
-      "scheduledFor": null
+      "status": "posted",
+      "scheduledFor": null,
+      "mediaId": "18370017592239950",
+      "postedAt": "2026-08-02T08:34:50.186Z"
     },
     {
       "name": "arc-grain",
@@ -60,8 +62,10 @@
       ],
       "finalRoute": "https://kisi.africa/republic/stories",
       "caption": "SCANDAL. Two hundred grams of premium maize signed out of the national store, and the return column of the feed ledger went very, very quiet. Kola Quill investigated. A Panel of Inquiry sat, with its own weighing scale. The grain turned up behind a filing perch. A 4-part story, swipe through all of it. 📊 kisi.africa/support.\n\n#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #PoultryFarm #PoultryNigeria #NigerianAgriculture #Agribusiness #FarmLife #Chickens #Naija #SouthwestNigeria #FarmStories #EggFarm #MadeInNigeria",
-      "status": "staged",
-      "scheduledFor": null
+      "status": "posted",
+      "scheduledFor": null,
+      "mediaId": "18159691039478958",
+      "postedAt": "2026-08-02T19:06:40.929Z"
     },
     {
       "name": "arc-rainfinal",
@@ -73,8 +77,10 @@
       ],
       "finalRoute": "https://kisi.africa/republic/stories",
       "caption": "THE RAIN FINAL, in 3 parts. Flash Adaora broke the record, then cleared the Perch Jumping Final's record height first attempt, in the rain. \"The perch is already wet. So am I.\" It is engraved on the gatepost now. Swipe through all 3. 🏆 kisi.africa/shop.\n\n#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #PoultryFarm #PoultryNigeria #NigerianAgriculture #Agribusiness #FarmLife #Chickens #Naija #SouthwestNigeria #FarmStories #EggFarm #MadeInNigeria",
-      "status": "staged",
-      "scheduledFor": null
+      "status": "posted",
+      "scheduledFor": null,
+      "mediaId": "18094112684288921",
+      "postedAt": "2026-08-03T09:40:11.456Z"
     },
     {
       "name": "arc-flu",
@@ -85,6 +91,23 @@
       ],
       "finalRoute": "https://kisi.africa/republic/stories",
       "caption": "FLU SEASON, HANDLED, in 2 parts. A bug reached Coop Two. Dr. Featherwell quarantined calmly, published the facts daily, and answered every rumour with the same five words. Then Coop Two recovered. Welfare first, panic never, exactly how a real farm does it. Swipe through both. 🩺 kisi.africa/support.\n\n#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #PoultryFarm #PoultryNigeria #NigerianAgriculture #Agribusiness #FarmLife #Chickens #Naija #SouthwestNigeria #FarmStories #EggFarm #MadeInNigeria",
+      "status": "posted",
+      "scheduledFor": null,
+      "mediaId": "18097402613102042",
+      "postedAt": "2026-08-03T19:27:49.955Z"
+    },
+    {
+      "name": "arc-cindy",
+      "type": "carousel",
+      "slides": [
+        "https://www.kisi.africa/s/ay0qME54UVBg/arc-cindy-1.png",
+        "https://www.kisi.africa/s/ay0qME54UVBg/arc-cindy-2.png",
+        "https://www.kisi.africa/s/ay0qME54UVBg/arc-cindy-3.png",
+        "https://www.kisi.africa/s/ay0qME54UVBg/arc-cindy-4.png",
+        "https://www.kisi.africa/s/ay0qME54UVBg/arc-cindy-5.png"
+      ],
+      "finalRoute": "https://kisi.africa/republic/stories",
+      "caption": "GOODNIGHT, CINDY. This week the Republic lost one of its own. Cindy had the brightest feathers on the farm and a kind word for everybody she passed. In a hard, hot week, the coop grew crowded and a fight broke out over the one cool high perch. Cindy was hurt, and she did not recover. We carried her to the shady ground under the mango tree, where Bantu rests. Mama Gold spoke. Sadé sang. Nobody grieved alone. Heat and crowding took her, and heat and crowding are things a real farm can fix: more space, more shade, more perches for every bird. That is why the Better Housing campaign matters more today than it did yesterday. Next, the Republic asks how this was allowed to happen, and what becomes of the bird who did it. Swipe through all 5. 🕯️ Help us build safer coops at kisi.africa/support.\n\n#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #kisiafrica #runbychickens #taco #PoultryFarm #PoultryNigeria #NigerianAgriculture #Agribusiness #FarmLife #Chickens #Naija #SouthwestNigeria #FarmStories #EggFarm #MadeInNigeria",
       "status": "staged",
       "scheduledFor": null
     },

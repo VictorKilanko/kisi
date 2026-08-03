@@ -73,6 +73,18 @@ const arcs = [
     ],
   },
   {
+    slug: "cindy",
+    title: "Goodnight, Cindy",
+    theme: "green", // memorial arc runs on the green field (solemn, ceremonial)
+    slides: [
+      ["Everybody knew Cindy", "Cindy had the brightest feathers on the farm and a hello for every bird she passed. She did her work, kept the peace, and made friends everywhere she went."],
+      ["A hard, hot week", "The dry-season heat left the coop hot and crowded. Every bird wanted the cool high perch. Tempers grew short, and one night a fight broke out."],
+      ["We lost her", "Cindy was hurt in the fight, and she did not recover. The Republic woke to the news it dreads most. One of its own was gone."],
+      ["Under the mango tree", "They carried her to the shady ground where Bantu rests. Mama Gold spoke. Sadé sang. No grieving bird was left to stand alone."],
+      ["So it never happens again", "Heat and a crowded roost cost us Cindy. Space, shade, and enough perches keep birds safe. Help us build Better Housing."],
+    ],
+  },
+  {
     slug: "cabinet",
     title: "A Full Cabinet",
     slides: [

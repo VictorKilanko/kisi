@@ -23,7 +23,7 @@ import { ChickenSchema, FarmStatSchema, PartySchema } from "@/lib/schemas";
 
 describe("content loads and validates", () => {
   it("has the full cast of citizens", () => {
-    expect(chickens).toHaveLength(23);
+    expect(chickens).toHaveLength(24);
   });
 
   it("has articles, ministries, parties, tiers", () => {
@@ -161,10 +161,11 @@ describe("derived data", () => {
     const arcs = storyArcs();
     // chi-chi-first-egg, grain-affair, mama-gold-retirement, perch-championship,
     // flu-season, the-drain, the-full-cabinet, the-nesting-box-election
-    expect(arcs.length).toBe(8);
+    expect(arcs.length).toBe(9);
     expect(arcs.map((a) => a.id)).toContain("the-drain");
     expect(arcs.map((a) => a.id)).toContain("the-full-cabinet");
     expect(arcs.map((a) => a.id)).toContain("the-nesting-box-election");
+    expect(arcs.map((a) => a.id)).toContain("the-fence-line");
     for (const arc of arcs) {
       expect(arc.title).toBeTruthy();
       const dates = arc.events.map((e) => e.date);

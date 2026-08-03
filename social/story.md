@@ -158,31 +158,32 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
 - **THE SEASON: "The Fence Line Trial" (owner-directed, in production).** A real hen was
   lost on the farm in a fight. This is the Republic's first death *from inside the flock*,
   and it becomes a full courtroom-and-society season, released scene by scene (never dump
-  the whole story at once). Ground rules the owner set: honor the real bird (VICTIM = the
-  real hen's name, swap the placeholder token «VICTIM» everywhere once known); dignified
-  loss handled off-page like Bantu, satire lives in the aftermath; a 6-year-old must be
-  able to follow every slide. **The reason for the fight:** a dry-season heat wave plus a
+  the whole story at once). Ground rules the owner set: honor the real bird (the victim is
+  **Cindy** — personable, fashionable, easy-going, dutiful — memorialized in chickens.ts);
+  dignified loss handled off-page like Bantu, satire lives in the aftermath; a 6-year-old
+  must be able to follow every slide. **The reason for the fight:** a dry-season heat wave plus a
   crowded roost turned the pecking order violent over the prime perch. That is a REAL
   welfare failure (heat + overcrowding cause fatal aggression), so every arc can route to
   **Better Housing ($25,000)**: more space, more perches, shade, and separating aggressive
-  birds is exactly how a real farm prevents this. The killer is a dominant hen, «KILLER»,
+  birds is exactly how a real farm prevents this. The killer is a dominant hen, Eseosa,
   who is tried and exiled. Planned episode order (build one per cycle, alternate green/cream):
   1. **The Loss** (green, memorial) — the death and the burial under the mango tree. Grief,
      dignity, no gore. Sell: Better Housing.
-  2. **"Not Again"** (cream) — Minister of Security Pete Okpara's press conference; «KILLER»
+  2. **"Not Again"** (cream) — Minister of Security Pete Okpara's press conference; Eseosa
      is separated from the flock (the Republic's word for it, handled humanely). Sell: Better Housing.
   3. **The Charge** (green) — the Supreme Pecking Council decides on a full trial, not a
      panel of inquiry. Chief Justice Yèyé Àlàbá presides.
-  4. **The Defense Team** (cream) — «KILLER» retains a flamboyant defense counsel (new cast
+  4. **The Defense Team** (cream) — Eseosa retains a flamboyant defense counsel (new cast
      member); a media circus begins; Kola Quill covers it.
   5. **The Trial** (green; may split into 2 scenes) — the courtroom circus: witnesses, the
      prosecution, the heat-and-crowding evidence, comedy and tension.
   6. **The Judgement** (cream) — verdict and exile, dignified but final; the Chief Justice
      rules in proverbs.
-  7. **The Law** (green) — aftermath: «VICTIM»'s Law and the Better Housing expansion pass;
+  7. **The Law** (green) — aftermath: Cindy's Law and the Better Housing expansion pass;
      the season lands its meaning and its sell.
-  New cast this season (add properly to chickens.ts as they appear): «VICTIM» (memorial),
-  «KILLER» (exiled at season end), and a defense-counsel character in Ep 4.
+  New cast this season (add properly to chickens.ts as they appear): Cindy (memorial, done),
+  Eseosa (cantankerous, aggressive, dominant; introduced in Ep 2, exiled at season end),
+  and a flamboyant defense-counsel character in Ep 4.
 - **Standing engines of drama:** the punctual-breakfast crusade; the President vs Halima
   rivalry (and their secret friendship); the feed budget and the National Feed Budget;
   nesting-box expansion; coop security and the Bantu Protocol; solar-light schedules;

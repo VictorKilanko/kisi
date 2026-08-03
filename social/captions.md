@@ -143,6 +143,17 @@ retired the word "acting" from the national vocabulary. The Opposition welcomed 
 ministers warmly, and promised to audit every budget by Friday. Swipe through all 5. 🗞️
 Follow the Republic at kisi.africa.
 
+### Arc · Goodnight, Cindy (5 slides: `arc-cindy-1` to `-5`) — The Fence Line, Ep 1
+GOODNIGHT, CINDY. This week the Republic lost one of its own. Cindy had the brightest
+feathers on the farm and a kind word for everybody she passed. In a hard, hot week, the
+coop grew crowded and a fight broke out over the one cool high perch. Cindy was hurt, and
+she did not recover. We carried her to the shady ground under the mango tree, where Bantu
+rests. Mama Gold spoke. Sadé sang. Nobody grieved alone. Heat and crowding took her, and
+heat and crowding are things a real farm can fix: more space, more shade, more perches for
+every bird. That is why the Better Housing campaign matters more today than it did
+yesterday. Next, the Republic asks how this was allowed to happen, and what becomes of the
+bird who did it. Swipe through all 5. 🕯️ Help us build safer coops at kisi.africa/support.
+
 ## Reusable hashtag block
 
 ```

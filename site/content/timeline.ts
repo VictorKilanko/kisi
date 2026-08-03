@@ -454,4 +454,64 @@ export const timelineEvents: TimelineEvent[] = [
       "Leader are seen at the fence line, arguing about everything except the " +
       "result, which is already settled between them.",
   },
+
+  /* --------------------------------------- ARC: The Fence Line (Cindy)
+     The Republic's first loss from inside the flock. Released scene by
+     scene; this is Episode 1 (the loss and the burial). Grounded in a
+     real welfare cause, dry-season heat plus a crowded roost, so the arc
+     routes to the Better Housing campaign. */
+  {
+    id: "cindy-who",
+    chickenIds: ["cindy"],
+    date: "2026-07-30",
+    arcId: "the-fence-line",
+    world: "fiction",
+    type: "custom",
+    title: "Everybody knew Cindy",
+    body:
+      "Cindy kept the brightest feathers on the farm and a hello for every " +
+      "bird she passed. She did her work, kept the peace, and welcomed the " +
+      "new hens of Coop Three as if she had been waiting for them.",
+  },
+  {
+    id: "cindy-heat",
+    chickenIds: ["cindy"],
+    date: "2026-08-01",
+    arcId: "the-fence-line",
+    world: "fiction",
+    type: "custom",
+    title: "A hard, hot week",
+    body:
+      "The dry-season heat left Coop Three hot and crowded, and every bird " +
+      "wanted the one cool high perch. Tempers grew short over long days. On " +
+      "the worst night, a fight broke out at the roost.",
+  },
+  {
+    id: "cindy-loss",
+    chickenIds: ["cindy"],
+    date: "2026-08-02",
+    arcId: "the-fence-line",
+    world: "fiction",
+    type: "custom",
+    title: "We lost her",
+    body:
+      "Cindy was hurt in the fight and did not recover. The Republic woke to " +
+      "the news it dreads most: one of its own was gone, and this time it " +
+      "was another bird that did it.",
+  },
+  {
+    id: "cindy-burial",
+    chickenIds: ["cindy", "mama-gold", "sade-griot", "sisi-ngozi"],
+    date: "2026-08-03",
+    arcId: "the-fence-line",
+    world: "fiction",
+    type: "social",
+    title: "Under the mango tree, again",
+    body:
+      "They carried her to the shady ground where Bantu rests. Mama Gold " +
+      "spoke; Sadé sang; no grieving bird stood alone. Heat and a crowded " +
+      "roost took her, and the flock resolved to fix both, with space, " +
+      "shade, and enough perches for every bird. That is the Better Housing " +
+      "campaign now, and it matters more today than yesterday.",
+  },
 ];

@@ -162,6 +162,13 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "recount demanded before the first count finished. How the Republic " +
       "votes: hungry birds not allowed.",
   },
+  "the-fence-line": {
+    title: "The Fence Line",
+    summary:
+      "The Republic's first loss from inside the flock. A hot, crowded week, " +
+      "a fight at the roost, and a farewell for Cindy under the mango tree. " +
+      "An unfinished story about the housing that keeps a flock safe.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {

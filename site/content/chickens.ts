@@ -952,7 +952,7 @@ export const chickens: Chicken[] = [
         "which she and Sergeant Danladi hold together, and which she has " +
         "described, once, as 'the flock saying goodnight to him back.'",
     ],
-    friends: ["mama-gold"],
+    friends: ["mama-gold", "cindy"],
     rivals: [],
     quotes: [
       {
@@ -1216,7 +1216,7 @@ export const chickens: Chicken[] = [
         "forever. A nation that sings together, she insists, has already " +
         "agreed on something.",
     ],
-    friends: ["amina-daybreak"],
+    friends: ["amina-daybreak", "cindy"],
     rivals: [],
     quotes: [
       {
@@ -1325,7 +1325,7 @@ export const chickens: Chicken[] = [
         "minute and remembered for a season. One flock, many feathers, she " +
         "says, and she has a seat for every one of them.",
     ],
-    friends: ["tade-foraging"],
+    friends: ["tade-foraging", "cindy"],
     rivals: [],
     quotes: [
       {
@@ -1344,5 +1344,62 @@ export const chickens: Chicken[] = [
     ],
     colors: { body: "#f0c75e", comb: "#b3261e", accent: "#c05621", bg: "#faf5e9" },
     sponsorable: true,
+  },
+  {
+    id: "cindy",
+    tribe: "isa-brown",
+    name: "Cindy",
+    nickname: "The Best-Dressed Hen in the Republic",
+    sex: "hen",
+    ageNote: "Adult hen",
+    status: "memorial",
+    layingStatus: "n-a",
+    branch: "none",
+    personality: ["personable", "fashionable", "easy-going", "dutiful"],
+    favoriteFood: "A dust bath first, groundnut second, in that order",
+    shortBio:
+      "The most sociable, best-turned-out hen in Coop Three, who greeted " +
+      "every bird by name and kept the brightest feathers on the farm. She " +
+      "was lost in a fight at the roost during the dry-season heat. The " +
+      "Republic grieves her, and has resolved that it will mean something.",
+    bio: [
+      "Cindy was the bird everybody knew. She kept her feathers immaculate, " +
+        "took her dust bath like an appointment, and stepped out each " +
+        "morning looking, as Sadé the Griot once put it, 'ready for a " +
+        "photograph she was not expecting.' She wore it lightly. The " +
+        "grooming was for the joy of it, and the greeting that followed was " +
+        "for you.",
+      "She was easy-going where the Republic is loud, and dutiful where it " +
+        "is distracted. She laid her eggs without fuss, welcomed nervous new " +
+        "hens to Coop Three, and showed them, without being asked, where the " +
+        "good dust was and how to keep the heat off their feathers. Half of " +
+        "Coop Three learned to look after themselves because Cindy made it " +
+        "look easy.",
+      "She was lost during a hard, hot week, when the coop grew crowded and " +
+        "a fight broke out over the one cool high perch. She was hurt and " +
+        "did not recover. She rests under the mango tree, at the shady end, " +
+        "near Bantu. Mama Gold spoke for her; Sadé sang; and Sisi Ngozi kept " +
+        "a place so that no bird who loved her had to grieve alone.",
+      "The Republic has resolved that her loss will not be wasted. Heat and " +
+        "crowding are things a real farm can fix, with space, shade, and " +
+        "enough perches for every bird, and the flock has taken up her " +
+        "memory as the reason to build them. If you are visiting this page, " +
+        "the flock would be glad of a word from you.",
+    ],
+    friends: ["ronke-owambe", "sisi-ngozi", "sade-griot"],
+    rivals: [],
+    quotes: [
+      {
+        text: "Look your best, greet everybody, do your work. The day takes care of itself.",
+        context: "Cindy's morning, as her Coop Three neighbours remember it",
+      },
+    ],
+    achievements: [
+      "Kept the brightest plumage in the Republic",
+      "Welcomed and mentored the new hens of Coop Three",
+      "Never missed a morning's greeting or a neighbour's hatch-day",
+    ],
+    colors: { body: "#d98a2b", comb: "#b3261e", accent: "#8a3e1f", bg: "#f1e8d4" },
+    sponsorable: false,
   },
 ];
