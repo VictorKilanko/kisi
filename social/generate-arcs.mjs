@@ -101,11 +101,14 @@ function headlineClass(title) {
   return "xxs";
 }
 
-function page({ arcTitle, part, total, title, body, isFinal }) {
+function page({ arcTitle, part, total, title, body, isFinal, theme }) {
   const foot = isFinal
     ? `<span>Keep the flock laying, lit &amp; housed</span><span class="site">kisi.africa/support</span>`
     : `<span>The story continues at</span><span class="site">kisi.africa/republic/stories</span>`;
   const ledeClass = body.length > 170 ? "lede sm" : "lede";
+  // Each arc runs on the cream newspaper field by default; theme:"green" puts the
+  // same Coop Times layout on the deep-green field, so stories alternate on brand.
+  const themeClass = theme === "green" ? " green" : "";
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -113,7 +116,7 @@ function page({ arcTitle, part, total, title, body, isFinal }) {
 <link rel="stylesheet" href="../assets/post.css">
 </head>
 <body>
-<div class="post t-times">
+<div class="post t-times${themeClass}">
   <div class="masthead">
     <div class="brand">
       <img class="crest" src="../assets/taco.svg" alt="Kisi Farm">
@@ -150,6 +153,7 @@ for (const arc of arcs) {
       title,
       body,
       isFinal: part === total,
+      theme: arc.theme, // "green" | undefined(=cream newspaper)
     });
     const file = join(postsDir, `arc-${arc.slug}-${part}.html`);
     writeFileSync(file, html, "utf8");

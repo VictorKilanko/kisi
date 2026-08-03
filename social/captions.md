@@ -146,7 +146,7 @@ Follow the Republic at kisi.africa.
 ## Reusable hashtag block
 
 ```
-#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #PoultryFarm #PoultryNigeria
-#NigerianAgriculture #Agribusiness #FarmLife #Chickens #Naija #SouthwestNigeria
-#FarmStories #EggFarm #MadeInNigeria
+#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #kisiafrica #runbychickens #taco
+#PoultryFarm #PoultryNigeria #NigerianAgriculture #Agribusiness #FarmLife #Chickens
+#Naija #SouthwestNigeria #FarmStories #EggFarm #MadeInNigeria
 ```

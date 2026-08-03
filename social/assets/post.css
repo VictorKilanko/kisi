@@ -181,3 +181,25 @@ html, body { margin: 0; padding: 0; }
 .t-times .rule { background: var(--ink); height: 2px; }
 .t-times .foot { color: var(--ink); }
 .t-times .byline { font-style: italic; font-family: Georgia, serif; font-size: 24px; opacity: 0.8; margin-top: 18px; }
+
+/* ---- green variant of the arc template ------------------
+   Same Coop Times structure on the deep-green field, so a story
+   can alternate green<->cream between arcs while staying on brand.
+   Use by adding class "green" to a .t-times post. Solemn/ceremonial
+   stories (a memorial, a state occasion) read best here.
+   -------------------------------------------------------- */
+.t-times.green {
+  background: radial-gradient(120% 120% at 50% 0%, #245c37 0%, var(--green) 55%, var(--green-deep) 100%);
+  color: var(--cream);
+}
+.t-times.green .masthead { border-bottom-color: var(--gold-soft); }
+.t-times.green .wordmark { color: var(--cream); }
+.t-times.green .kicker { color: var(--gold-soft); }
+.t-times.green .headline { color: var(--cream); }
+.t-times.green .episode { border-color: var(--gold-soft); color: var(--gold-soft); }
+.t-times.green .lede { border-left-color: var(--gold); color: var(--cream); }
+.t-times.green .rule { background: var(--gold); }
+.t-times.green .foot { color: var(--gold-soft); }
+.t-times.green .byline { color: var(--cream); }
+/* Taco's seal ring is green, so give the crest a crisp edge on the green field */
+.t-times.green .crest { border-radius: 50%; box-shadow: 0 0 0 3px var(--gold-soft); }
