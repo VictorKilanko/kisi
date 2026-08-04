@@ -21,20 +21,32 @@ Owner set three standing rules and directed a new season around a real loss.
   released scene by scene. Reason for the fight = dry-season heat + a crowded roost (a REAL
   welfare cause), so every arc routes to **Better Housing**. Villain = **Eseosa** (tried and
   exiled across later episodes). Death handled off-page with dignity, like Bantu.
-- **Ep 1 built and staged (Goodnight, Cindy):** Cindy added to `chickens.ts` as a memorial
-  character; `the-fence-line` arc in `timeline.ts` (renders at /republic/stories) + ARC_META;
-  5 green slides rendered and audited by eye (all pass); caption tees up Ep 2 and sells Better
-  Housing. Staged into the manifest **ahead of arc-cabinet** so the memorial posts next, not
-  after a comedy arc.
-- **Gotchas hit:** content tests enforce (a) symmetric friendships — had to add Cindy back to
-  Rọ́nkẹ́/Sisi Ngozi/Sadé; (b) ARC_META for every arcId; (c) hardcoded counts (cast 23→24,
-  arcs 8→9). Also synced the manifest from `origin/main` before staging so the bot's 6
-  "posted" statuses were not clobbered (the scheduler commits manifest updates to main).
-- **LEFT / to publish Cindy:** the scheduler runs off **main**. Cindy is on
-  `feature/kisi-poultry-republic`. For her to lead the queue she must reach main **and** Vercel
-  must redeploy so `www.kisi.africa/s/ay0qME54UVBg/arc-cindy-*.png` is live *before* the next
-  cron (else main's current manifest posts arc-cabinet at ~Aug 4 06:00 UTC). Then build Eps
-  2–7 (start: Ep 2, Minister Okpara's press conference introducing Eseosa).
+- **Whole season built and queued (all 7 episodes).** Owner then said "queue everything," so
+  Eps 1–7 are live in `timeline.ts` (one serial, `arcId: the-fence-line`, /republic/stories),
+  `chickens.ts` (Cindy=memorial, **Eseosa**=exiled villain, **Barrister Silk**=flamboyant
+  counsel), rendered to 27 slides, and staged into `manifest.json` in publish order:
+  cindy → notagain → charge → defense → trial → judgement → law, with `arc-cabinet` trailing.
+  Alternating green/cream between arcs (green: cindy/charge/trial/law; cream: notagain/defense/
+  judgement). All slides audited by eye; all pass.
+- **New status `exiled`.** Added to `ChickenStatus` (schemas.ts) → required an exhaustive
+  `STATUS_LABELS` entry in `Badges.tsx` (bg-kisi-earth-700; the terra token is *earth* not
+  *terra*) and an option in `FlockDirectory.tsx`. TS Record exhaustiveness catches the badge;
+  the directory map is `Record<string,string>` so it does not, add it by hand.
+- **Gotchas hit:** content tests enforce (a) symmetric friends AND rivals — kept Eseosa/Silk
+  as loners (empty arrays) to avoid edits; Cindy's friends needed the reciprocal add to
+  Rọ́nkẹ́/Sisi Ngozi/Sadé; (b) ARC_META per arcId (only one needed, the whole season shares
+  `the-fence-line`, so arc count stays 9); (c) hardcoded counts (cast 23→**26**, arcs 8→9);
+  (d) arc events must be date-ascending — dated the episodes 08-05…08-16. Synced the manifest
+  from `origin/main` before staging so the bot's 6 "posted" statuses were not clobbered.
+- **story.md is now a living tracker.** The writers' room has a **▶ RESUME HERE** marker with
+  a season-status table and the exact next arc; the top-of-file "execute" instruction points
+  to it, so pointing the terminal at story.md continues the story instead of resetting.
+- **LEFT / to publish the season:** the scheduler runs off **main**; all of this is on
+  `feature/kisi-poultry-republic`. For the season to post in order it must reach main **and**
+  Vercel must redeploy so the staged `www.kisi.africa/s/ay0qME54UVBg/arc-*.png` URLs are live
+  *before* the next cron (else main's current manifest posts arc-cabinet at ~Aug 4 06:00 UTC).
+  Next story work: Season 2 (see RESUME HERE): "After the Fence Line" rebuild arc, CREAM
+  (last queued arc-law is green).
 
 ---
 

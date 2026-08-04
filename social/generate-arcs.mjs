@@ -85,6 +85,68 @@ const arcs = [
     ],
   },
   {
+    slug: "notagain",
+    title: "Not Again",
+    slides: [
+      ["A hard question", "After we lost Cindy, the Republic asked one thing. How could a bird die inside her own coop? Minister Okpara called everyone together to answer it."],
+      ["He said it plainly", "Okpara did not soften it. 'A fight broke out over the perch. One bird went too far. Her name is Eseosa.' The whole room went silent."],
+      ["Kept apart, safely", "Eseosa was moved to her own pen, away from the flock. Not to punish her yet, but to keep every other bird safe while the Republic decides what is fair."],
+      ["The real cause", "Okpara was honest about why. Too many birds, one cool perch, too much heat. 'We fix the coop, or this happens again.' Help us build Better Housing."],
+    ],
+  },
+  {
+    slug: "charge",
+    title: "The Charge",
+    theme: "green",
+    slides: [
+      ["How do you judge this?", "The Republic had never put a bird on trial for the death of another. Some wanted it settled quietly. Chief Justice Yèyé Àlàbá said no."],
+      ["The whole flock will see", "She called a full trial, out in the open, in the shade after the feed. Eseosa would answer for it. 'We do not peck in the dark,' she said."],
+      ["Fair, and in the light", "A date was set. Justice is one half of Cindy's answer. Safe housing is the other half. Help us build it."],
+    ],
+  },
+  {
+    slug: "defense",
+    title: "The Defence Team",
+    slides: [
+      ["Every bird deserves a defence", "Even Eseosa. And she got a famous one: Barrister Silk, the flashiest lawyer in the Republic, with a fan, a title, and a long word for everything."],
+      ["The circus begins", "Silk called it 'the trial of the century.' There had only ever been one trial, but nobody corrected him. The newspapers sold out for a week."],
+      ["His clever argument", "Silk's point, dressed up long, was sharp. The heat did it. The crowding did it. The coop did it. 'My client,' he cried, 'is a victim of the perch.'"],
+      ["One flock, watching", "Was it Eseosa's fault, the coop's, or both? The court would decide. But the coop is ours to fix right now. Help us build Better Housing."],
+    ],
+  },
+  {
+    slug: "trial",
+    title: "The Trial",
+    theme: "green",
+    slides: [
+      ["Court is in session", "The whole flock gathered in the shade. The Chief Justice sat. Eseosa sat. Barrister Silk fanned himself. The Republic's first trial began."],
+      ["The witnesses speak", "Cindy's neighbours told of a hot week, a crowded roost, and a fight that went too far. And of Cindy, who only ever kept the peace."],
+      ["The evidence", "Dr. Featherwell brought the facts. Too many birds, one cool perch, heat that made tempers snap. 'This coop was a fight waiting to happen.'"],
+      ["Silk's last stand", "Barrister Silk spoke so long the court broke for feed twice. His point, in the end, was short. 'Blame the coop, not only my client.'"],
+      ["Three words", "Then Eseosa spoke, for the first time in weeks. Three words: 'I am sorry.' The shade went very quiet. The Chief Justice would rule the next day."],
+    ],
+  },
+  {
+    slug: "judgement",
+    title: "The Judgement",
+    slides: [
+      ["The ruling", "The next day the whole Republic came. Chief Justice Yèyé Àlàbá did not rush. 'A bird is gone, and no ruling brings her back. But we can still be just.'"],
+      ["Two truths", "'The coop failed Eseosa. And Eseosa failed Cindy. Both are true. We will fix the first. We must answer the second.'"],
+      ["The sentence", "Eseosa would leave the flock. Not harmed, but rehomed far away, where she can do no more damage. The Republic calls it exile."],
+      ["And a promise", "'We will build coops where this cannot happen. That is Cindy's justice too.' Court rose. Help us keep the promise at kisi.africa/support."],
+    ],
+  },
+  {
+    slug: "law",
+    title: "Cindy's Law",
+    theme: "green",
+    slides: [
+      ["Cindy's Law", "The Assembly did not wait. It passed Cindy's Law: enough space, enough perches, and shade for every bird, so no coop is ever a fight waiting to happen."],
+      ["Named for her", "They named it for the best-dressed hen in the Republic, who kept the peace her whole life. Now the whole flock keeps it in her name."],
+      ["Build it with us", "A law is a promise, and perches, space, and shade cost real grain. This is the Better Housing campaign, and it is Cindy's now. Help us finish it."],
+    ],
+  },
+  {
     slug: "cabinet",
     title: "A Full Cabinet",
     slides: [

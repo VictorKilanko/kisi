@@ -26,9 +26,10 @@ Meta access token exists (see `social/IG_SETUP.md`).
 3. Work on branch `feature/kisi-poultry-republic`. Commit in small logical units.
 
 If the human gave a brief ("do a sports scandal", "retire a minister", "the lizard is
-back"), use it. If they just said "execute", pick the next beat from **The writers' room**
-at the bottom of this file, or invent a fresh one that fits the cast and escalates an open
-thread.
+back"), use it. If they just said "execute", go to **The writers' room** at the bottom of
+this file and start at the **▶ RESUME HERE** marker — it always names the current season
+status and the exact next arc to build, so the story continues instead of resetting. Update
+that marker at the end of every cycle (mark the arc built/queued, set the next one).
 
 ---
 
@@ -155,35 +156,44 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   Halima's later heel turn that pays off the secret crate-sisters friendship. Escalate in
   this order.
 
-- **THE SEASON: "The Fence Line Trial" (owner-directed, in production).** A real hen was
-  lost on the farm in a fight. This is the Republic's first death *from inside the flock*,
-  and it becomes a full courtroom-and-society season, released scene by scene (never dump
-  the whole story at once). Ground rules the owner set: honor the real bird (the victim is
-  **Cindy** — personable, fashionable, easy-going, dutiful — memorialized in chickens.ts);
-  dignified loss handled off-page like Bantu, satire lives in the aftermath; a 6-year-old
-  must be able to follow every slide. **The reason for the fight:** a dry-season heat wave plus a
-  crowded roost turned the pecking order violent over the prime perch. That is a REAL
-  welfare failure (heat + overcrowding cause fatal aggression), so every arc can route to
-  **Better Housing ($25,000)**: more space, more perches, shade, and separating aggressive
-  birds is exactly how a real farm prevents this. The killer is a dominant hen, Eseosa,
-  who is tried and exiled. Planned episode order (build one per cycle, alternate green/cream):
-  1. **The Loss** (green, memorial) — the death and the burial under the mango tree. Grief,
-     dignity, no gore. Sell: Better Housing.
-  2. **"Not Again"** (cream) — Minister of Security Pete Okpara's press conference; Eseosa
-     is separated from the flock (the Republic's word for it, handled humanely). Sell: Better Housing.
-  3. **The Charge** (green) — the Supreme Pecking Council decides on a full trial, not a
-     panel of inquiry. Chief Justice Yèyé Àlàbá presides.
-  4. **The Defense Team** (cream) — Eseosa retains a flamboyant defense counsel (new cast
-     member); a media circus begins; Kola Quill covers it.
-  5. **The Trial** (green; may split into 2 scenes) — the courtroom circus: witnesses, the
-     prosecution, the heat-and-crowding evidence, comedy and tension.
-  6. **The Judgement** (cream) — verdict and exile, dignified but final; the Chief Justice
-     rules in proverbs.
-  7. **The Law** (green) — aftermath: Cindy's Law and the Better Housing expansion pass;
-     the season lands its meaning and its sell.
-  New cast this season (add properly to chickens.ts as they appear): Cindy (memorial, done),
-  Eseosa (cantankerous, aggressive, dominant; introduced in Ep 2, exiled at season end),
-  and a flamboyant defense-counsel character in Ep 4.
+- **SEASON 1: "The Fence Line" — BUILT AND QUEUED (all 7 episodes).** A real hen, **Cindy**,
+  was lost on the farm in a fight: the Republic's first death *from inside the flock*, told
+  as a courtroom-and-society season. Ground rules the owner set: honor the real bird (Cindy,
+  personable/fashionable/easy-going/dutiful, memorialized in chickens.ts); dignified loss
+  handled off-page like Bantu, satire in the aftermath; every slide followable by a
+  6-year-old. **Reason for the fight:** dry-season heat + a crowded roost turned the pecking
+  order fatal over the prime perch — a REAL welfare cause, so every episode routes to
+  **Better Housing ($25,000)**. Villain **Eseosa** (dominant hen) is tried and exiled;
+  **Barrister Silk** is her flamboyant counsel. All content is live in `timeline.ts`
+  (one serial, `arcId: the-fence-line`, /republic/stories), `chickens.ts` (Cindy=memorial,
+  Eseosa=exiled, Barrister Silk=active), rendered to slides, and staged into `manifest.json`
+  in publish order. **Publish queue (each 12h cron slot):**
+
+  | # | Episode | Slug | Field | Slides | Status |
+  |---|---------|------|-------|--------|--------|
+  | 1 | The Loss / Goodnight, Cindy | `arc-cindy` | green | 5 | queued (posts next) |
+  | 2 | Not Again (Okpara names Eseosa) | `arc-notagain` | cream | 4 | queued |
+  | 3 | The Charge (full trial ordered) | `arc-charge` | green | 3 | queued |
+  | 4 | The Defence Team (Barrister Silk) | `arc-defense` | cream | 4 | queued |
+  | 5 | The Trial ("I am sorry") | `arc-trial` | green | 5 | queued |
+  | 6 | The Judgement (exile) | `arc-judgement` | cream | 4 | queued |
+  | 7 | Cindy's Law (finale, Better Housing) | `arc-law` | green | 3 | queued |
+
+  (`arc-cabinet`, a leftover comedy arc, trails after the season as a tonal reset.)
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 1 is fully queued,
+  so a plain "execute" should open **Season 2**. Best next threads, in priority order:
+  1. **"After the Fence Line" — the rebuild.** Coop Three is rebuilt to Cindy's Law: more
+     space, perches, shade. A hopeful, welfare-forward arc showing the Better Housing money
+     at work (route hard to Better Housing / the shop). Good palate-cleanser after the trial.
+  2. **Eseosa in exile (later, careful).** A restrained check-in on the exiled hen: not
+     redemption-by-return, but dignity at a distance. Only if the owner wants it; keep it
+     un-sentimental.
+  3. **Resume the standing villain rollout:** the scheming insider hen (comic), then Halima's
+     heel turn. See the rollout bullet above.
+  Whatever is chosen: one arc per cycle, alternate green/cream against the last posted arc
+  (last queued = `arc-law` GREEN, so the next new arc should default to CREAM), keep the
+  6-year-old clarity rule, add the 3 standing hashtags, and end on a sell.
 - **Standing engines of drama:** the punctual-breakfast crusade; the President vs Halima
   rivalry (and their secret friendship); the feed budget and the National Feed Budget;
   nesting-box expansion; coop security and the Bantu Protocol; solar-light schedules;

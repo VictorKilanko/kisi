@@ -30,6 +30,7 @@ const STATUS_LABELS: Record<string, string> = {
   recovering: "Recovering",
   retired: "Retired",
   memorial: "Memorial",
+  exiled: "Exiled",
 };
 
 const TRIBE_LABELS: Record<string, string> = {

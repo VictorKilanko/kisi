@@ -7,6 +7,7 @@ const STATUS_LABELS: Record<ChickenStatus, { label: string; cls: string }> = {
   recovering: { label: "Recovering", cls: "bg-kisi-gold-300 text-kisi-charcoal-900" },
   retired: { label: "Retired", cls: "bg-kisi-indigo-800 text-kisi-cream-100" },
   memorial: { label: "In loving memory", cls: "bg-kisi-charcoal-600 text-kisi-cream-100" },
+  exiled: { label: "Exiled from the flock", cls: "bg-kisi-earth-700 text-kisi-cream-100" },
 };
 
 export function StatusBadge({ status }: { status: ChickenStatus }) {

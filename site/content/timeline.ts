@@ -514,4 +514,131 @@ export const timelineEvents: TimelineEvent[] = [
       "shade, and enough perches for every bird. That is the Better Housing " +
       "campaign now, and it matters more today than yesterday.",
   },
+  // Ep 2 — "Not Again": the security press conference; Eseosa named and separated
+  {
+    id: "fence-presser",
+    chickenIds: ["pete-okpara"],
+    date: "2026-08-05",
+    arcId: "the-fence-line",
+    world: "fiction",
+    type: "custom",
+    title: "The Republic's hardest question",
+    body:
+      "After Cindy, the flock asked one thing: how does a bird die inside " +
+      "her own coop? Minister Okpara called a press conference and refused " +
+      "to dress up the answer.",
+  },
+  {
+    id: "fence-named",
+    chickenIds: ["pete-okpara", "eseosa"],
+    date: "2026-08-05",
+    arcId: "the-fence-line",
+    world: "fiction",
+    type: "controversy",
+    title: "A name, said plainly",
+    body:
+      "'A fight broke out over the perch. One bird went too far. Her name is " +
+      "Eseosa.' She was moved to a pen of her own, not yet to punish her, but " +
+      "to keep the flock safe while the Republic decided what was fair.",
+  },
+  // Ep 3 — "The Charge": the court chooses a full, open trial
+  {
+    id: "fence-charge",
+    chickenIds: ["yeye-alaba", "eseosa"],
+    date: "2026-08-07",
+    arcId: "the-fence-line",
+    world: "fiction",
+    type: "custom",
+    title: "The whole flock must see",
+    body:
+      "Some wanted it settled quietly. Chief Justice Yèyé Àlàbá said no: the " +
+      "Republic's first trial for the death of a citizen would be heard in " +
+      "the open, in the shade, after the afternoon feed. 'We do not peck in " +
+      "the dark.'",
+  },
+  // Ep 4 — "The Defense Team": Barrister Silk and the media circus
+  {
+    id: "fence-silk",
+    chickenIds: ["barrister-silk", "eseosa"],
+    date: "2026-08-09",
+    arcId: "the-fence-line",
+    world: "fiction",
+    type: "custom",
+    title: "Enter the Silk",
+    body:
+      "Every bird deserves a defence, and Eseosa got a famous one: Barrister " +
+      "Silk, the flashiest advocate in the Republic, who arrived with a fan, " +
+      "a title, and a very long word for everything.",
+  },
+  {
+    id: "fence-circus",
+    chickenIds: ["barrister-silk", "kola-quill"],
+    date: "2026-08-09",
+    arcId: "the-fence-line",
+    world: "fiction",
+    type: "controversy",
+    title: "The trial of the (only) century",
+    body:
+      "Silk called it the trial of the century. There had only ever been " +
+      "one, but nobody corrected him. Kola Quill filled five front pages " +
+      "before a single witness spoke.",
+  },
+  // Ep 5 — "The Trial": witnesses, the welfare evidence, and Eseosa's three words
+  {
+    id: "fence-witnesses",
+    chickenIds: ["yeye-alaba", "dr-amara-featherwell"],
+    date: "2026-08-12",
+    arcId: "the-fence-line",
+    world: "fiction",
+    type: "custom",
+    title: "The witnesses, and the evidence",
+    body:
+      "Cindy's neighbours told of a hot week and a crowded roost. Then Dr. " +
+      "Featherwell brought the facts: too many birds, one cool perch, heat " +
+      "that made tempers snap. 'This coop was a fight waiting to happen.' " +
+      "Nobody argued.",
+  },
+  {
+    id: "fence-sorry",
+    chickenIds: ["eseosa", "barrister-silk"],
+    date: "2026-08-12",
+    arcId: "the-fence-line",
+    world: "fiction",
+    type: "custom",
+    title: "Three words",
+    body:
+      "Barrister Silk argued, at enormous length, that the coop was as guilty " +
+      "as his client. Then Eseosa spoke for the first time in weeks. Three " +
+      "words: 'I am sorry.' The shade went very quiet.",
+  },
+  // Ep 6 — "The Judgement": the ruling and the exile
+  {
+    id: "fence-ruling",
+    chickenIds: ["yeye-alaba", "eseosa"],
+    date: "2026-08-14",
+    arcId: "the-fence-line",
+    world: "fiction",
+    type: "custom",
+    title: "Two truths, one sentence",
+    body:
+      "'The coop failed Eseosa, and Eseosa failed Cindy. Both are true.' The " +
+      "Chief Justice ruled that Eseosa must leave the flock: not harmed, but " +
+      "rehomed far from Coop Three, where she can do no more damage. The " +
+      "Republic calls it exile.",
+  },
+  // Ep 7 — "The Law": Cindy's Law and the Better Housing promise
+  {
+    id: "fence-law",
+    chickenIds: ["adedoyin-mama-decree", "cindy"],
+    date: "2026-08-16",
+    arcId: "the-fence-line",
+    world: "fiction",
+    type: "custom",
+    title: "Cindy's Law",
+    body:
+      "The Assembly passed Cindy's Law: enough space, enough perches, and " +
+      "shade for every bird, so no coop is ever a fight waiting to happen " +
+      "again. They named it for the best-dressed hen in the Republic, who " +
+      "kept the peace her whole life. Now the whole flock keeps it in her name.",
+  },
 ];

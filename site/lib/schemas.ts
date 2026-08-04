@@ -14,6 +14,7 @@ export const ChickenStatus = z.enum([
   "recovering",
   "retired",
   "memorial",
+  "exiled",
 ]);
 export type ChickenStatus = z.infer<typeof ChickenStatus>;
 

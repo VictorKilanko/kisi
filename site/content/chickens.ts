@@ -1402,4 +1402,105 @@ export const chickens: Chicken[] = [
     colors: { body: "#d98a2b", comb: "#b3261e", accent: "#8a3e1f", bg: "#f1e8d4" },
     sponsorable: false,
   },
+  {
+    id: "eseosa",
+    tribe: "noiler",
+    name: "Eseosa",
+    nickname: "The Roost Boss",
+    sex: "hen",
+    ageNote: "Adult hen",
+    status: "exiled",
+    layingStatus: "n-a",
+    branch: "none",
+    personality: ["cantankerous", "aggressive", "dominant", "unrepentant, until she was not"],
+    favoriteFood: "The best of whatever the others were about to eat",
+    shortBio:
+      "The strongest, hardest-tempered hen in Coop Three, who ruled the one " +
+      "cool high perch by force and, in a fight during the dry-season heat, " +
+      "cost the Republic Cindy. Tried, found responsible, and exiled from the " +
+      "flock, without cruelty and without excuse.",
+    bio: [
+      "Eseosa was trouble long before the worst night, and the flock knew " +
+        "it. She was bigger than most, quick to shove, slow to share, and she " +
+        "had claimed the coolest high perch in Coop Three as her own for a " +
+        "whole hot season. The warnings were there. The Republic, busy and " +
+        "hopeful, kept deciding to deal with it later.",
+      "On the worst night of the heat, in a coop too crowded and too hot, a " +
+        "shove over the perch became a fight, and the fight took Cindy. " +
+        "Eseosa did not deny it. She was moved to a pen of her own while the " +
+        "Republic decided what was fair, and for a long time she said nothing " +
+        "at all.",
+      "At her trial she was defended, loudly and at great length, by " +
+        "Barrister Silk, whose argument, that the heat and the crowding were " +
+        "as guilty as his client, the court accepted by half. When at last " +
+        "Eseosa spoke, she said three words: 'I am sorry.' The Chief Justice " +
+        "ruled that both things were true, the coop had failed her and she " +
+        "had failed Cindy, and that she must leave the flock.",
+      "She was not harmed. She was rehomed far from Coop Three, where she " +
+        "can do no more damage, which the Republic calls exile. Her story is " +
+        "kept here plainly, because a flock that remembers why it lost a " +
+        "friend is a flock that builds better coops.",
+    ],
+    friends: [],
+    rivals: [],
+    quotes: [
+      {
+        text: "I am sorry.",
+        context: "Her complete statement at trial, and her first words in weeks",
+      },
+    ],
+    achievements: [],
+    colors: { body: "#55534b", comb: "#8a3e1f", accent: "#23231f", bg: "#4a4842" },
+    sponsorable: false,
+  },
+  {
+    id: "barrister-silk",
+    tribe: "isa-brown",
+    name: "Barrister Silk",
+    fullName: "Ládipọ̀ Ògúndèjì",
+    nickname: "The Silk",
+    honorific: "Learned Counsel",
+    sex: "rooster",
+    ageNote: "Adult rooster",
+    status: "active",
+    layingStatus: "n-a",
+    branch: "none",
+    personality: ["theatrical", "verbose", "unshakeably confident", "in love with a long word"],
+    favoriteFood: "Whatever is served at another bird's expense",
+    shortBio:
+      "The most flamboyant advocate in the Republic, who never uses one word " +
+      "where nine will do. Defended Eseosa in the trial of the (only) " +
+      "century, won half his argument, lost his client, and calls it a triumph.",
+    bio: [
+      "Ládipọ̀ 'Silk' Ògúndèjì arrived at the Fence Line trial with a fan, a " +
+        "flourish, and an opening address so long the court broke for feed " +
+        "before he reached his first point. He is the Republic's most famous " +
+        "lawyer chiefly because he says so, loudly, at every opportunity, and " +
+        "because no one else has wanted the title badly enough to argue.",
+      "His defence of Eseosa became the great show of the season. Buried " +
+        "under a great many long words was a sharp point: that the heat and " +
+        "the crowded roost were as much to blame as his client, and that a " +
+        "coop built to fail should share the verdict. The court agreed with " +
+        "half of it, which he has since called 'a complete and historic " +
+        "vindication.'",
+      "He lost his client to exile and gained a reputation, which by his own " +
+        "accounting is the better trade. He is available, at length, for your " +
+        "next dispute over a perch.",
+    ],
+    friends: [],
+    rivals: [],
+    quotes: [
+      {
+        text: "My client is a victim of the perch.",
+        context: "Closing argument, The Fence Line trial",
+      },
+      { text: "I shall be brief.", context: "Opening the defence. He was not." },
+    ],
+    achievements: [
+      "Defended the accused in the Republic's first trial",
+      "Longest recorded closing argument (two feed breaks)",
+    ],
+    colors: { body: "#23305e", comb: "#b3261e", accent: "#d9a02b", bg: "#f0c75e" },
+    sponsorable: true,
+  },
 ];
