@@ -8,6 +8,14 @@ import { Logo } from "@/components/Logo";
 const NAV = [
   { href: "/flock", label: "Meet the Chickens" },
   {
+    label: "Farm Stories",
+    children: [
+      { href: "/republic/stories", label: "Big Stories" },
+      { href: "/republic/social", label: "Life & Parties" },
+      { href: "/republic/map", label: "Walk the Farm (3D)" },
+    ],
+  },
+  {
     label: "Politics",
     children: [
       { href: "/republic/presidency", label: "The Presidency" },
@@ -27,14 +35,6 @@ const NAV = [
     ],
   },
   { href: "/republic/sports", label: "Sports" },
-  {
-    label: "Entertainment",
-    children: [
-      { href: "/republic/social", label: "Life & Parties" },
-      { href: "/republic/stories", label: "Big Stories" },
-      { href: "/republic/map", label: "Walk the Farm (3D)" },
-    ],
-  },
   {
     label: "Media",
     children: [
@@ -155,6 +155,16 @@ export function Header() {
       {open && (
         <nav id="mobile-nav" aria-label="Mobile navigation" className="border-t border-kisi-green-900/10 bg-kisi-cream-100 lg:hidden">
           <ul className="mx-auto max-w-6xl space-y-1 px-4 py-3">
+            {/* Stories front and centre on phones */}
+            <li className="pb-2">
+              <Link
+                href="/republic/stories"
+                onClick={closeMenu}
+                className="flex items-center justify-center gap-2 rounded-full bg-kisi-gold-500 px-4 py-3 text-center font-semibold text-kisi-charcoal-900 hover:bg-kisi-gold-300"
+              >
+                <span aria-hidden="true">📖</span> Read the Farm Stories
+              </Link>
+            </li>
             {NAV.map((item) =>
               "children" in item ? (
                 <li key={item.label}>

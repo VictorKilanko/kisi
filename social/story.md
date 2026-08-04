@@ -75,7 +75,13 @@ voice, drama quality, house style, and the funnel rule.
 Write the approved content into the real data model so it renders on the live routes.
 Match each file's existing TypeScript shape exactly; run the gates after (Stage 6a).
 
-- **Arcs** → `site/content/timeline.ts` → renders at **/republic/stories**.
+- **Arcs** → `site/content/timeline.ts` → renders at **/republic/stories** (the "Big
+  Stories"). **Give these more juice than the slides.** The website bodies are decoupled from
+  the Instagram slide copy on purpose: write each beat as a richer, warmer, 3 to 6 sentence
+  passage in conversational English with real flow, while the slides stay tight. Still clear
+  enough for a 6-year-old, just fuller. The Fence Line arc is the reference for length and
+  voice. The nav item for these is **Farm Stories** (top-level), and /flock links straight
+  in, so this page carries real traffic; make it worth the click.
 - **Social beats, friendships, events** → `site/content/social.ts` → **/republic/social**.
 - **Reported news, gossip, quotes** → `site/content/articles.ts` → **/news** (and
   `/news/[slug]`).

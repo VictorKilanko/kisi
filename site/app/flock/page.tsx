@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
 import { FlockDirectory } from "@/components/FlockDirectory";
 import { chickens, chickensOfTribe, tribes } from "@/lib/content";
@@ -18,6 +19,26 @@ export default function FlockPage() {
         title="Meet the Flock"
         lede="Every bird at Kisi is an individual, with a name, a history, allies, rivals, and (in several documented cases) a political agenda. Search the registry."
       />
+
+      {/* Straight to the stories: the flock's main draw, front and centre */}
+      <Link
+        href="/republic/stories"
+        className="group mt-8 flex flex-col items-start gap-4 rounded-3xl bg-kisi-green-900 p-6 text-kisi-cream-100 sm:flex-row sm:items-center sm:justify-between sm:p-8"
+      >
+        <div>
+          <p className="kicker text-kisi-gold-300">Farm Stories</p>
+          <p className="font-display mt-1 text-2xl font-bold sm:text-3xl">
+            Every chicken has a story. Read the big ones.
+          </p>
+          <p className="mt-2 max-w-xl text-kisi-cream-100/85">
+            First eggs, elections, a night at the drain, and the Republic&apos;s
+            first trial. Follow each storyline beat by beat.
+          </p>
+        </div>
+        <span className="shrink-0 rounded-full bg-kisi-gold-500 px-6 py-3 font-semibold text-kisi-charcoal-900 group-hover:bg-kisi-gold-300">
+          Read the Big Stories →
+        </span>
+      </Link>
 
       <section
         id="tribes"

@@ -469,9 +469,13 @@ export const timelineEvents: TimelineEvent[] = [
     type: "custom",
     title: "Everybody knew Cindy",
     body:
-      "Cindy kept the brightest feathers on the farm and a hello for every " +
-      "bird she passed. She did her work, kept the peace, and welcomed the " +
-      "new hens of Coop Three as if she had been waiting for them.",
+      "If you ever visited Coop Three, you met Cindy, whether you meant to " +
+      "or not. She kept the brightest, best-tended feathers on the whole " +
+      "farm, and she wore them like it was the easiest thing in the world. " +
+      "She greeted every bird by name, showed the nervous new hens where " +
+      "the good dust was, and never once made a fuss about any of it. She " +
+      "did her work, she kept the peace, and she made the place feel like " +
+      "somewhere you wanted to be.",
   },
   {
     id: "cindy-heat",
@@ -482,9 +486,13 @@ export const timelineEvents: TimelineEvent[] = [
     type: "custom",
     title: "A hard, hot week",
     body:
-      "The dry-season heat left Coop Three hot and crowded, and every bird " +
-      "wanted the one cool high perch. Tempers grew short over long days. On " +
-      "the worst night, a fight broke out at the roost.",
+      "Then the dry season turned cruel. The heat pressed down on Coop " +
+      "Three until the air itself felt crowded, and there were simply too " +
+      "many birds and not enough of the one thing everyone wanted: the cool " +
+      "high perch by the vent. Tempers that stay folded away on an ordinary " +
+      "day began to show. You could feel it coming, the way you feel a " +
+      "storm before the first drop. On the worst night of that week, over " +
+      "that one perch, a fight broke out.",
   },
   {
     id: "cindy-loss",
@@ -495,9 +503,12 @@ export const timelineEvents: TimelineEvent[] = [
     type: "custom",
     title: "We lost her",
     body:
-      "Cindy was hurt in the fight and did not recover. The Republic woke to " +
-      "the news it dreads most: one of its own was gone, and this time it " +
-      "was another bird that did it.",
+      "Cindy was caught in it. She was hurt, and she did not recover. There " +
+      "is no gentle way to write the next part, so here it is plainly: the " +
+      "Republic woke to the news it dreads most, that one of its own was " +
+      "gone. And this time it was not the drain, or the dark, or anything " +
+      "from outside the fence. This time it was another bird that did it, " +
+      "and the whole flock had to sit with what that meant.",
   },
   {
     id: "cindy-burial",
@@ -508,11 +519,15 @@ export const timelineEvents: TimelineEvent[] = [
     type: "social",
     title: "Under the mango tree, again",
     body:
-      "They carried her to the shady ground where Bantu rests. Mama Gold " +
-      "spoke; Sadé sang; no grieving bird stood alone. Heat and a crowded " +
-      "roost took her, and the flock resolved to fix both, with space, " +
-      "shade, and enough perches for every bird. That is the Better Housing " +
-      "campaign now, and it matters more today than yesterday.",
+      "They carried her to the shady ground under the mango tree, to the " +
+      "same quiet corner where Bantu rests. Mama Gold spoke, in the plain " +
+      "words that somehow hold the most. Sadé sang. Sisi Ngozi kept a place " +
+      "at her side so nobody who loved Cindy had to grieve alone, and a " +
+      "good many birds took it. Before the flock rose, it made itself a " +
+      "promise: heat and a crowded roost took her, and both are things a " +
+      "real farm can fix, with space, with shade, and with enough perches " +
+      "for every bird. That promise has a name now, the Better Housing " +
+      "campaign, and it matters more today than it did yesterday.",
   },
   // Ep 2 — "Not Again": the security press conference; Eseosa named and separated
   {
@@ -524,9 +539,12 @@ export const timelineEvents: TimelineEvent[] = [
     type: "custom",
     title: "The Republic's hardest question",
     body:
-      "After Cindy, the flock asked one thing: how does a bird die inside " +
-      "her own coop? Minister Okpara called a press conference and refused " +
-      "to dress up the answer.",
+      "Grief has a way of turning, after a few days, into a question, and " +
+      "the Republic's question was a hard one: how does a bird die inside " +
+      "her own coop, on her own farm, among her own flock? Nobody wanted to " +
+      "ask it out loud. Minister of Security Pete Okpara asked it for them, " +
+      "called a press conference, and made it clear from the first word " +
+      "that he would not be dressing the answer up.",
   },
   {
     id: "fence-named",
@@ -537,9 +555,13 @@ export const timelineEvents: TimelineEvent[] = [
     type: "controversy",
     title: "A name, said plainly",
     body:
-      "'A fight broke out over the perch. One bird went too far. Her name is " +
-      "Eseosa.' She was moved to a pen of her own, not yet to punish her, but " +
-      "to keep the flock safe while the Republic decided what was fair.",
+      "'A fight broke out over the perch,' Okpara said. 'One bird went too " +
+      "far. Her name is Eseosa.' He did not raise his voice and he did not " +
+      "soften it, and the room went quiet the way a room does when everyone " +
+      "already half-knew. Eseosa was moved to a pen of her own, apart from " +
+      "the flock. Not to punish her, he was careful to say, not yet, but to " +
+      "keep every other bird safe while the Republic worked out what would " +
+      "truly be fair.",
   },
   // Ep 3 — "The Charge": the court chooses a full, open trial
   {
@@ -551,10 +573,12 @@ export const timelineEvents: TimelineEvent[] = [
     type: "custom",
     title: "The whole flock must see",
     body:
-      "Some wanted it settled quietly. Chief Justice Yèyé Àlàbá said no: the " +
-      "Republic's first trial for the death of a citizen would be heard in " +
-      "the open, in the shade, after the afternoon feed. 'We do not peck in " +
-      "the dark.'",
+      "There is always a temptation, after something terrible, to settle it " +
+      "quietly and move on, and some in the Republic felt it now. Chief " +
+      "Justice Yèyé Àlàbá did not. The flock's first trial for the death of " +
+      "a citizen, she ruled, would be heard in the open, in the shade, " +
+      "after the afternoon feed, where anyone who wished could watch. 'We " +
+      "do not peck in the dark,' she said. She set a date, and that was that.",
   },
   // Ep 4 — "The Defense Team": Barrister Silk and the media circus
   {
@@ -566,9 +590,14 @@ export const timelineEvents: TimelineEvent[] = [
     type: "custom",
     title: "Enter the Silk",
     body:
-      "Every bird deserves a defence, and Eseosa got a famous one: Barrister " +
-      "Silk, the flashiest advocate in the Republic, who arrived with a fan, " +
-      "a title, and a very long word for everything.",
+      "Every bird deserves a defence, even this one, and Eseosa got a " +
+      "famous one. Barrister Silk swept in with a fan under one wing and a " +
+      "title in front of his name, the flashiest advocate the Republic has " +
+      "ever produced, a rooster who has never in his life used one word " +
+      "where nine would do. He looked around the little shade court, " +
+      "decided it was beneath him, and announced he would take the case " +
+      "anyway. Whatever else this trial was going to be, it was not going " +
+      "to be boring.",
   },
   {
     id: "fence-circus",
@@ -579,9 +608,13 @@ export const timelineEvents: TimelineEvent[] = [
     type: "controversy",
     title: "The trial of the (only) century",
     body:
-      "Silk called it the trial of the century. There had only ever been " +
-      "one, but nobody corrected him. Kola Quill filled five front pages " +
-      "before a single witness spoke.",
+      "Silk called it 'the trial of the century.' There had, in fact, only " +
+      "ever been the one trial, but nobody felt like correcting him while " +
+      "he was enjoying himself so much. Kola Quill filled five straight " +
+      "front pages before a single witness had said a single word, and the " +
+      "Coop Times sold out at the trough each morning. Underneath all the " +
+      "spectacle a real question was waiting, but for a whole week the " +
+      "spectacle was winning.",
   },
   // Ep 5 — "The Trial": witnesses, the welfare evidence, and Eseosa's three words
   {
@@ -593,10 +626,13 @@ export const timelineEvents: TimelineEvent[] = [
     type: "custom",
     title: "The witnesses, and the evidence",
     body:
-      "Cindy's neighbours told of a hot week and a crowded roost. Then Dr. " +
-      "Featherwell brought the facts: too many birds, one cool perch, heat " +
-      "that made tempers snap. 'This coop was a fight waiting to happen.' " +
-      "Nobody argued.",
+      "When the trial began, Cindy's neighbours from Coop Three spoke " +
+      "first, quietly and clearly. They told of a hot week, a crowded " +
+      "roost, a fight that went too far, and a hen who had only ever kept " +
+      "the peace. Then Dr. Featherwell stood up with the facts, and the " +
+      "facts were not kind to anybody. Too many birds. One cool perch. Heat " +
+      "that made short tempers shorter. 'This coop,' she said, 'was a fight " +
+      "waiting to happen.' Nobody in the shade argued, because nobody could.",
   },
   {
     id: "fence-sorry",
@@ -607,9 +643,14 @@ export const timelineEvents: TimelineEvent[] = [
     type: "custom",
     title: "Three words",
     body:
-      "Barrister Silk argued, at enormous length, that the coop was as guilty " +
-      "as his client. Then Eseosa spoke for the first time in weeks. Three " +
-      "words: 'I am sorry.' The shade went very quiet.",
+      "Barrister Silk gave the performance of his life, an argument so long " +
+      "the court broke for feed not once but twice, and buried inside all " +
+      "those words was a point sharp enough to land: the heat and the " +
+      "crowding were as guilty as his client. The court was still turning " +
+      "that over when Eseosa, who had not spoken in weeks, asked to speak. " +
+      "She said three words. 'I am sorry.' The shade went very, very quiet. " +
+      "The Chief Justice said she would rule the next day, and for once " +
+      "nobody rushed her.",
   },
   // Ep 6 — "The Judgement": the ruling and the exile
   {
@@ -621,10 +662,15 @@ export const timelineEvents: TimelineEvent[] = [
     type: "custom",
     title: "Two truths, one sentence",
     body:
-      "'The coop failed Eseosa, and Eseosa failed Cindy. Both are true.' The " +
-      "Chief Justice ruled that Eseosa must leave the flock: not harmed, but " +
-      "rehomed far from Coop Three, where she can do no more damage. The " +
-      "Republic calls it exile.",
+      "The whole Republic came the next day, and Yèyé Àlàbá did not hurry a " +
+      "word of it. 'A bird is gone,' she began, 'and no ruling I give will " +
+      "bring her back. But we can still be just.' Her judgement held two " +
+      "truths at once and refused to drop either: the coop had failed " +
+      "Eseosa, and Eseosa had failed Cindy. Eseosa would leave the flock, " +
+      "not harmed, never harmed, but rehomed far from Coop Three where she " +
+      "could do no more damage. The Republic calls it exile. Then the Chief " +
+      "Justice looked up and made the rest a promise: 'We will build coops " +
+      "where this cannot happen. That is Cindy's justice too.'",
   },
   // Ep 7 — "The Law": Cindy's Law and the Better Housing promise
   {
@@ -636,9 +682,14 @@ export const timelineEvents: TimelineEvent[] = [
     type: "custom",
     title: "Cindy's Law",
     body:
-      "The Assembly passed Cindy's Law: enough space, enough perches, and " +
-      "shade for every bird, so no coop is ever a fight waiting to happen " +
-      "again. They named it for the best-dressed hen in the Republic, who " +
-      "kept the peace her whole life. Now the whole flock keeps it in her name.",
+      "The Assembly, which can argue for a whole season about the price of " +
+      "grain, did not argue about this. It passed Cindy's Law within the " +
+      "week: enough space, enough perches, and shade for every bird, so " +
+      "that no coop is ever again a fight waiting to happen. They named it " +
+      "for the best-dressed hen in the Republic, the one who greeted " +
+      "everybody, troubled nobody, and kept the peace her whole life. A law " +
+      "is a promise, and this one costs real grain to keep, real timber and " +
+      "real shade cloth. So the flock keeps it in her name, and asks you to " +
+      "help finish it.",
   },
 ];
