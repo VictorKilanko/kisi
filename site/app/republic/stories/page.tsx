@@ -12,7 +12,15 @@ export const metadata: Metadata = {
 };
 
 export default function StoriesPage() {
-  const arcs = storyArcs();
+  // Newest storyline first: sort by each arc's latest (last, since events are
+  // date-ascending) revealed beat, so the freshest drama leads the page.
+  const arcs = storyArcs()
+    .slice()
+    .sort((a, b) => {
+      const aLatest = a.events[a.events.length - 1]?.date ?? "";
+      const bLatest = b.events[b.events.length - 1]?.date ?? "";
+      return bLatest.localeCompare(aLatest);
+    });
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12">

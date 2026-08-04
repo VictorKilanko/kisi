@@ -143,7 +143,7 @@ retired the word "acting" from the national vocabulary. The Opposition welcomed 
 ministers warmly, and promised to audit every budget by Friday. Swipe through all 5. 🗞️
 Follow the Republic at kisi.africa.
 
-### Arc · Goodnight, Cindy (5 slides: `arc-cindy-1` to `-5`) — The Fence Line, Ep 1
+### Arc · Goodnight, Cindy (5 slides: `arc-cindy-1` to `-5`) · The Fence Line, Ep 1
 GOODNIGHT, CINDY. This week the Republic lost one of its own. Cindy had the brightest
 feathers on the farm and a kind word for everybody she passed. In a hard, hot week, the
 coop grew crowded and a fight broke out over the one cool high perch. Cindy was hurt, and
@@ -154,7 +154,7 @@ every bird. That is why the Better Housing campaign matters more today than it d
 yesterday. Next, the Republic asks how this was allowed to happen, and what becomes of the
 bird who did it. Swipe through all 5. 🕯️ Help us build safer coops at kisi.africa/support.
 
-### Arc · Not Again (4 slides: `arc-notagain-1` to `-4`) — The Fence Line, Ep 2
+### Arc · Not Again (4 slides: `arc-notagain-1` to `-4`) · The Fence Line, Ep 2
 NOT AGAIN. After we lost Cindy, the Republic asked one question: how does a bird die inside
 her own coop? Minister of Security Pete Okpara called a press conference and refused to
 soften the answer. "A fight broke out over the perch. One bird went too far. Her name is
@@ -163,14 +163,14 @@ while the Republic decides what is fair. And Okpara was honest about the real ca
 birds, one cool perch, too much heat. Fix the coop, or it happens again. Swipe through all 4.
 🕯️ Help us build safer coops at kisi.africa/support.
 
-### Arc · The Charge (3 slides: `arc-charge-1` to `-3`) — The Fence Line, Ep 3
+### Arc · The Charge (3 slides: `arc-charge-1` to `-3`) · The Fence Line, Ep 3
 THE CHARGE. The Republic had never put a bird on trial for the death of another. Some wanted
 it settled quietly. Chief Justice Yèyé Àlàbá said no: the flock's first trial would be heard
 in the open, in the shade, after the afternoon feed. "We do not peck in the dark." Justice is
 one half of Cindy's answer. Safe housing is the other half. Swipe through all 3. ⚖️ Help us
 build it at kisi.africa/support.
 
-### Arc · The Defence Team (4 slides: `arc-defense-1` to `-4`) — The Fence Line, Ep 4
+### Arc · The Defence Team (4 slides: `arc-defense-1` to `-4`) · The Fence Line, Ep 4
 THE DEFENCE TEAM. Every bird deserves a defence, even Eseosa, and she got a famous one:
 Barrister Silk, the flashiest lawyer in the Republic, all fan and flourish and long words. He
 called it "the trial of the century" (there had only ever been one). His argument, buried
@@ -179,7 +179,7 @@ it. "My client is a victim of the perch." Was it her fault, the coop's, or both?
 would decide, but the coop is ours to fix now. Swipe through all 4. 🪶 Help us build Better
 Housing at kisi.africa/support.
 
-### Arc · The Trial (5 slides: `arc-trial-1` to `-5`) — The Fence Line, Ep 5
+### Arc · The Trial (5 slides: `arc-trial-1` to `-5`) · The Fence Line, Ep 5
 THE TRIAL. The whole flock gathered in the shade for the Republic's first trial. Cindy's
 neighbours spoke of a hot week and a crowded roost. Dr. Featherwell brought the facts: too
 many birds, one cool perch, heat that made tempers snap. "This coop was a fight waiting to
@@ -188,7 +188,7 @@ client. Then Eseosa spoke, for the first time in weeks. Three words: "I am sorry
 Justice would rule the next day. Swipe through all 5. 🌿 Stand with the flock at
 kisi.africa/support.
 
-### Arc · The Judgement (4 slides: `arc-judgement-1` to `-4`) — The Fence Line, Ep 6
+### Arc · The Judgement (4 slides: `arc-judgement-1` to `-4`) · The Fence Line, Ep 6
 THE JUDGEMENT. The whole Republic came to hear it. Chief Justice Yèyé Àlàbá did not rush. "A
 bird is gone, and no ruling brings her back. But we can still be just." Her ruling held two
 truths at once: the coop failed Eseosa, and Eseosa failed Cindy. Eseosa would leave the
@@ -196,7 +196,7 @@ flock, not harmed, but rehomed far from Coop Three, where she can do no more dam
 Republic calls it exile. "We will build coops where this cannot happen. That is Cindy's
 justice too." Swipe through all 4. ⚖️ Help us keep the promise at kisi.africa/support.
 
-### Arc · Cindy's Law (3 slides: `arc-law-1` to `-3`) — The Fence Line, Ep 7 (finale)
+### Arc · Cindy's Law (3 slides: `arc-law-1` to `-3`) · The Fence Line, Ep 7 (finale)
 CINDY'S LAW. The Assembly did not wait. It passed Cindy's Law: enough space, enough perches,
 and shade for every bird, so no coop is ever a fight waiting to happen again. They named it
 for the best-dressed hen in the Republic, who kept the peace her whole life. A law is a

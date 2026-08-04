@@ -83,6 +83,18 @@ export const timelineEvents: TimelineEvent[] = validateAll(
 )
   .slice()
   .sort((a, b) => a.date.localeCompare(b.date));
+
+/**
+ * The Republic tells its stories scene by scene. A beat only appears on the
+ * site once its date has arrived, so the website unfolds in step with the
+ * Instagram drip and never shows a future-dated scene. Evaluated at build
+ * time, so each deploy reveals whatever has since come due. Integrity checks
+ * below still run against the full `timelineEvents`, not this view.
+ */
+const TODAY_ISO = new Date().toISOString().slice(0, 10);
+export const revealedTimeline: TimelineEvent[] = timelineEvents.filter(
+  (e) => e.date <= TODAY_ISO,
+);
 export const teams: Team[] = validateAll(TeamSchema, rawTeams, "team");
 export const matches: Match[] = validateAll(MatchSchema, rawMatches, "match");
 export const socialEvents = validateAll(SocialEventSchema, rawSocial, "social event")
@@ -173,7 +185,7 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
 
 export function storyArcs(): StoryArc[] {
   const byArc = new Map<string, TimelineEvent[]>();
-  for (const e of timelineEvents) {
+  for (const e of revealedTimeline) {
     if (!e.arcId) continue;
     const list = byArc.get(e.arcId) ?? [];
     list.push(e);
@@ -212,7 +224,7 @@ export function articlesForMinistry(ministryId: string): Article[] {
   return articles.filter((a) => a.relatedMinistryIds.includes(ministryId));
 }
 export function timelineForChicken(chickenId: string): TimelineEvent[] {
-  return timelineEvents.filter((e) => e.chickenIds.includes(chickenId));
+  return revealedTimeline.filter((e) => e.chickenIds.includes(chickenId));
 }
 export function milestonesForChicken(chickenId: string): EggMilestone[] {
   return eggMilestones.filter((m) => m.chickenId === chickenId);

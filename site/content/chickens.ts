@@ -1412,7 +1412,7 @@ export const chickens: Chicken[] = [
     status: "exiled",
     layingStatus: "n-a",
     branch: "none",
-    personality: ["cantankerous", "aggressive", "dominant", "unrepentant, until she was not"],
+    personality: ["cantankerous", "aggressive", "dominant", "unrepentant"],
     favoriteFood: "The best of whatever the others were about to eat",
     shortBio:
       "The strongest, hardest-tempered hen in Coop Three, who ruled the one " +
@@ -1465,7 +1465,7 @@ export const chickens: Chicken[] = [
     status: "active",
     layingStatus: "n-a",
     branch: "none",
-    personality: ["theatrical", "verbose", "unshakeably confident", "in love with a long word"],
+    personality: ["theatrical", "verbose", "unshakeably confident", "grandiloquent"],
     favoriteFood: "Whatever is served at another bird's expense",
     shortBio:
       "The most flamboyant advocate in the Republic, who never uses one word " +

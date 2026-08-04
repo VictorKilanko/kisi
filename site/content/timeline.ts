@@ -529,7 +529,7 @@ export const timelineEvents: TimelineEvent[] = [
       "for every bird. That promise has a name now, the Better Housing " +
       "campaign, and it matters more today than it did yesterday.",
   },
-  // Ep 2 — "Not Again": the security press conference; Eseosa named and separated
+  // Ep 2, "Not Again": the security press conference; Eseosa named and separated
   {
     id: "fence-presser",
     chickenIds: ["pete-okpara"],
@@ -563,7 +563,7 @@ export const timelineEvents: TimelineEvent[] = [
       "keep every other bird safe while the Republic worked out what would " +
       "truly be fair.",
   },
-  // Ep 3 — "The Charge": the court chooses a full, open trial
+  // Ep 3, "The Charge": the court chooses a full, open trial
   {
     id: "fence-charge",
     chickenIds: ["yeye-alaba", "eseosa"],
@@ -580,7 +580,7 @@ export const timelineEvents: TimelineEvent[] = [
       "after the afternoon feed, where anyone who wished could watch. 'We " +
       "do not peck in the dark,' she said. She set a date, and that was that.",
   },
-  // Ep 4 — "The Defense Team": Barrister Silk and the media circus
+  // Ep 4, "The Defense Team": Barrister Silk and the media circus
   {
     id: "fence-silk",
     chickenIds: ["barrister-silk", "eseosa"],
@@ -616,7 +616,7 @@ export const timelineEvents: TimelineEvent[] = [
       "spectacle a real question was waiting, but for a whole week the " +
       "spectacle was winning.",
   },
-  // Ep 5 — "The Trial": witnesses, the welfare evidence, and Eseosa's three words
+  // Ep 5, "The Trial": witnesses, the welfare evidence, and Eseosa's three words
   {
     id: "fence-witnesses",
     chickenIds: ["yeye-alaba", "dr-amara-featherwell"],
@@ -652,7 +652,7 @@ export const timelineEvents: TimelineEvent[] = [
       "The Chief Justice said she would rule the next day, and for once " +
       "nobody rushed her.",
   },
-  // Ep 6 — "The Judgement": the ruling and the exile
+  // Ep 6, "The Judgement": the ruling and the exile
   {
     id: "fence-ruling",
     chickenIds: ["yeye-alaba", "eseosa"],
@@ -672,7 +672,7 @@ export const timelineEvents: TimelineEvent[] = [
       "Justice looked up and made the rest a promise: 'We will build coops " +
       "where this cannot happen. That is Cindy's justice too.'",
   },
-  // Ep 7 — "The Law": Cindy's Law and the Better Housing promise
+  // Ep 7, "The Law": Cindy's Law and the Better Housing promise
   {
     id: "fence-law",
     chickenIds: ["adedoyin-mama-decree", "cindy"],
