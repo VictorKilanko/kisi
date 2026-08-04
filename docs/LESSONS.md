@@ -47,6 +47,21 @@ Owner set three standing rules and directed a new season around a real loss.
   *before* the next cron (else main's current manifest posts arc-cabinet at ~Aug 4 06:00 UTC).
   Next story work: Season 2 (see RESUME HERE): "After the Fence Line" rebuild arc, CREAM
   (last queued arc-law is green).
+- **Stories made prominent + expert audit workflow (new standing rule).** Renamed the
+  "Entertainment" nav to **Farm Stories** (moved to slot 2, Big Stories first), added a mobile
+  stories button and a /flock CTA banner, and gave the website Big Stories richer bodies than
+  the slides. New owner rule ([[kisi-push-after-expert-audit]]): **push when changes are made,
+  but a senior web-design/dev/brand subagent audits the diff first.** Ran it; verdict SHIP
+  WITH FIXES; applied all: (1) **scene-by-scene reveal** — `revealedTimeline` in
+  `lib/content.ts` hides any beat whose date is in the future, so the site unfolds with the IG
+  drip and never shows a future date (build-time date; each deploy reveals what is due);
+  (2) `/republic/stories` sorts **newest arc first**; (3) trimmed two fragment personality
+  traits; (4) removed em-dashes from caption headers + timeline comments. Feature branch
+  pushed (feature pushes work; only main ref-moves hang).
+- **Open editorial call (cadence):** IG drips all 7 episodes over ~4 days (2/day), but the
+  site reveals by in-story date through 08-16 (~12 days), so IG runs ahead of the site payoff.
+  Options: re-date Ep2-7 to 08-04..08-07 to match the drip, or slow the IG cron. Owner to
+  decide.
 
 ---
 
