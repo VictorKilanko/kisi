@@ -202,24 +202,45 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   future-dated); it becomes 10 once 08-20 passes, so a CI run after that date will need the
   count test bumped 9→10 (and may add `toContain("after-the-fence-line")`).
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Ep 1 (the rebuild)
-  is built and queued, so a plain "execute" should build **Season 2, Ep 2**. Best next threads,
-  in priority order:
-  1. **Resume the standing villain rollout: the scheming insider hen (comic).** The world is
-     ready for its second heavy now that the external menace (the lizard) and the internal
-     tragedy (Cindy/Eseosa) are told. An ambitious, gossip-spreading plotter inside the flock,
-     a comic villain you love to hate. Kola Quill is the natural foil. A lighter, funnier arc
-     to reset the tone after a heavy season plus a tender rebuild. End on a sell (feed budget /
-     shop, or support).
-  2. **Eseosa in exile (later, careful).** A restrained check-in on the exiled hen: not
-     redemption-by-return, but dignity at a distance. Only if the owner wants it; keep it
-     un-sentimental.
-  3. **A standing engine of drama** (breakfast crusade, President vs Halima, feed budget,
-     nesting boxes, sports rivalries, Mama Gold's Law): any works as a palate cleanser.
+- **SEASON 2 Ep 2: "The Sweet Beak" (Ládùn) — BUILT AND QUEUED.** Villain rollout #2, the
+  scheming insider hen, done as a comic arc. New character **Ládùn "Sweet Beak"** (in
+  `chickens.ts`, `ladun-sweet-beak`, isa-brown, active, kept a loner like Eseosa/Silk to avoid
+  friendship/rival symmetry churn). She revives the Republic's oldest fear (missing grain) as a
+  whisper to unseat honest Musa the Grainkeeper; **Kola Quill**, who broke the real grain
+  scandal, traces the rumour home and exposes her. Comeuppance, not exile: she stays in the
+  flock, "already eyeing her next target," so she is a **recurring comic villain** to reuse.
+  GREEN, 5 slides (`arc-sweetbeak-1..5`), routes to the shop. Live in `timeline.ts`
+  (`arcId: the-sweet-beak`, 09-02…09-10), ARC_META, caption, staged. Showrunner SHIP, art
+  director PASS.
+
+- **SEASON 2 Ep 3: "The Dawn Duel" — BUILT AND QUEUED.** A warm morning comedy. VP **Baba
+  Ṣẹ́gun** vs young **Small Fẹ́mi** (the Drain survivor, "The Far Side," who wants to be a coop
+  guard) over who crows the sun up. Dead-tie dawn, Baba makes Fẹ́mi his apprentice, two birds
+  wake Kisi. CREAM, 4 slides (`arc-dawn-1..4`), routes to **Solar & Light** (dawn → light → the
+  coops still go dark). Live in `timeline.ts` (`arcId: the-dawn-duel`, 09-13…09-20), ARC_META,
+  caption, staged. **Showrunner first flagged REVISE** because the initial draft recast Small
+  Fẹ́mi as a generic peppy chick, contradicting his canon (a serious Drain survivor); recast to
+  honour his backstory, bumped his `ageNote` Chick→"Young cockerel", re-audited SHIP; art
+  director PASS. Lesson: cast from the bible, do not invent over an existing character.
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 3 are
+  built and queued (rebuild → sweetbeak → dawn, in that cron order after `arc-cabinet`). A plain
+  "execute" should build **Season 2, Ep 4**. Best next threads, in priority order:
+  1. **Sweet Beak strikes again.** She was left "eyeing her next target," so escalate the
+     recurring comic villain: a bigger scheme, a new victim, maybe she overreaches and needs
+     an unlikely ally or gets outfoxed. Keep it comic. End on a sell.
+  2. **Halima's heel turn (villain rollout #3, the big one).** The Opposition Leader flirts
+     with becoming the antagonist, then pays off the secret crate-sisters friendship with the
+     President. Save for when the audience clearly loves her; it needs real setup.
+  3. **Eseosa in exile (careful)** or **a standing engine** (breakfast crusade, President vs
+     Halima, feed budget, nesting boxes, Mama Gold's Law) as a palate cleanser.
   Whatever is chosen: one arc per cycle; **alternate green/cream** against the last new arc
-  (last built = `arc-rebuild` CREAM, so the next new arc mechanically defaults to GREEN, but
-  note the green field reads solemn/ceremonial, so a comic arc may want cream instead, owner's
-  call); keep the 6-year-old clarity rule; add the 3 standing hashtags; end on a sell.
+  (last built = `arc-dawn` CREAM, so the next new arc defaults to GREEN); a comic arc can carry
+  green as "dramatic intrigue" (Sweet Beak did); keep the 6-year-old clarity rule; add the 3
+  standing hashtags; end on a sell.
+  **When adding a character, bump `content.test.ts` chicken count (now 27).** When an arc's
+  earliest beat is in the future, the reveal-filtered arc-count test stays at its current value
+  until that date; it is 9 today and becomes 10 after 08-20, 11 after 09-02, 12 after 09-13.
 - **Standing engines of drama:** the punctual-breakfast crusade; the President vs Halima
   rivalry (and their secret friendship); the feed budget and the National Feed Budget;
   nesting-box expansion; coop security and the Bantu Protocol; solar-light schedules;

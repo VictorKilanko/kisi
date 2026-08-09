@@ -46,10 +46,33 @@ named.
   first); `npm run lint` 0 errors (2 old warnings); `vitest` **31/31**; `npm run build`
   succeeded, all routes generated. Rendered only the 4 new slides (targeted PowerShell loop)
   rather than re-screenshotting all 68.
-- **LEFT / to go live:** all of this is on `feature/kisi-poultry-republic`. For `arc-rebuild`
-  to post, the branch must reach `main` **and** Vercel must redeploy so the new
-  `arc-rebuild-*.png` URLs are live before the next cron slot. The website Big Story
-  (`/republic/stories`) will not show this arc until 08-20 by design (reveal dates).
+- **PUSHED LIVE + two more arcs queued (owner: "push it live and write more stories").**
+  Moved everything to `main` and built two more Season 2 arcs so the IG/website queue has a
+  backlog. Go-live method (main pushes hang on a credential prompt here, feature pushes are
+  fine): `gh auth setup-git` once, then `git push origin feature/...` worked; `main` had
+  diverged (cron "mark next arc posted [skip ci]" commits), so I merged `origin/main` into the
+  feature branch, resolved the manifest by rebuilding it from `origin/main` (authoritative for
+  posted statuses) plus my staged additions, pushed the feature branch, then fast-forwarded the
+  `main` ref with `gh api -X PATCH repos/VictorKilanko/kisi/git/refs/heads/main -f sha=<sha>`.
+  CI ran green; Vercel redeploys `main` so the staged PNG URLs go live; the 12h cron
+  (06:00/18:00 UTC) posts `arc-rebuild`, then `arc-sweetbeak`, then `arc-dawn` in that order.
+- **Two new arcs this batch:** **Ep 2 "The Sweet Beak"** (villain rollout #2, the scheming
+  insider hen Ládùn; GREEN; revives the missing-grain fear as a whisper vs Musa, Kola Quill
+  exposes her; comeuppance not exile so she recurs; routes to shop) and **Ep 3 "The Dawn Duel"**
+  (Baba Ṣẹ́gun vs the Drain-survivor Small Fẹ́mi over the first crow; CREAM; routes to Solar &
+  Light). New character Ládùn added → **chicken count test 26→27**. Both showruner SHIP / art
+  director PASS. Alternation restored: rebuild cream → sweetbeak green → dawn cream.
+- **Showrunner caught a canon violation worth remembering:** the first Dawn draft recast Small
+  Fẹ́mi (an established, serious Drain survivor who wants to be a coop guard) as a generic peppy
+  chick. Fixed by casting from his bible: his challenge grew from "a guard is up before dawn
+  anyway," and his `ageNote` went Chick→"Young cockerel, still growing". **Cast from
+  `chickens.ts`; never invent over an existing character.**
+- **Reveal-filtered arc count keeps drifting by date:** 9 today, 10 after 08-20 (rebuild), 11
+  after 09-02 (sweet-beak), 12 after 09-13 (dawn). A CI run past each date needs the count test
+  bumped. Left at 9 (passes today). The chicken count (27) is NOT date-gated and was bumped now.
+- **LEFT:** website Big Stories reveal by in-story date (rebuild 08-20, sweet-beak 09-02, dawn
+  09-13), so the IG drip runs ahead of the site payoff again (same open cadence question as the
+  Fence Line). Owner may want the cron slowed or the dates pulled in.
 
 ---
 

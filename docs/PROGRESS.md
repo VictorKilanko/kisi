@@ -11,8 +11,8 @@ Read this file at the start of every session, after the project brief.
 | Node / gates | **Node v24.18.1 installed 2026-07-31.** All gates run locally from `site/`: `tsc` 0, `eslint` 0 errors, `vitest` 31/31, `next build` 0. See [[farm-node-not-installed]] gotchas (clear stale `.next`; build fetches Google Fonts) |
 | PWA | **Installable PWA (2026-07-31):** `app/manifest.ts`, `public/sw.js` (offline), Taco-face icons, `/offline`. See [[LESSONS]] |
 | Monetisation funnel | Homepage banner has **Support the Chickens** beside Order; `/support` leads with the two $25k appeals (Solar & Light, Better Housing); About page and story pages route to Order/Support |
-| Latest content | Season 1 "The Fence Line" (7 eps) done + posted via cron; **Season 2 Ep 1 "After the Fence Line" (the rebuild) built + queued 2026-08-08** (arcId `after-the-fence-line`, reveals 08-20). Arcs: 9 revealed today, 10 after 08-20 |
-| Social kit | **`social/` folder** — 12 intro/cast/leader cards + arc carousels through Season 2 Ep 1 (`arc-rebuild`, 4 CREAM slides) + a WANTED poster; `render.ps1`, `generate-arcs.mjs`, `captions.md`, `README.md`. Logo = Taco headshot; name = Kisi Farm. Manifest drained on `main` via 12h cron; `arc-rebuild` staged next |
+| Latest content | Season 1 "The Fence Line" (7 eps) done + posted via cron; **Season 2 Eps 1 to 3 built + queued + pushed to `main` 2026-08-08**: "After the Fence Line" (rebuild, reveals 08-20), "The Sweet Beak" (Ládùn, villain #2, reveals 09-02), "The Dawn Duel" (reveals 09-13). Reveal-filtered arc count: 9 today → 12 by 09-13. Named cast now 27 |
+| Social kit | **`social/` folder** — 12 intro/cast/leader cards + arc carousels through Season 2 Ep 3 (`arc-rebuild` cream, `arc-sweetbeak` green, `arc-dawn` cream) + a WANTED poster; `render.ps1`, `generate-arcs.mjs`, `captions.md`, `README.md`. Logo = Taco headshot; name = Kisi Farm. Manifest on `main`; 12h cron posts rebuild → sweetbeak → dawn in order |
 | Payments | Structurally complete, **TEST MODE ONLY** — live locked in code; honest 503 without keys |
 | Tests | vitest suite, 31 passing (content integrity + API) |
 
