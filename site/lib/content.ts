@@ -181,6 +181,14 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "a fight at the roost, and a farewell for Cindy under the mango tree. " +
       "An unfinished story about the housing that keeps a flock safe.",
   },
+  "after-the-fence-line": {
+    title: "After the Fence Line",
+    summary:
+      "The rebuild. Coop Three is torn down and raised again to Cindy's Law, " +
+      "with the Better Housing money at work: more space, more perches, wide " +
+      "vents, and shade. The birds come home to a coop that cannot become a " +
+      "fight waiting to happen. One coop down, and many still to go.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {

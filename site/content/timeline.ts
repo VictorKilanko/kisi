@@ -692,4 +692,83 @@ export const timelineEvents: TimelineEvent[] = [
       "real shade cloth. So the flock keeps it in her name, and asks you to " +
       "help finish it.",
   },
+
+  /* ------------------------------- ARC: After the Fence Line (the rebuild)
+     Season 2 opens on hope. Coop Three is rebuilt to Cindy's Law with the
+     Better Housing money at work: more space, more perches, wide vents, and
+     shade. Dated after the Fence Line finale so it reveals once the season
+     has run. Routes hard to Better Housing. */
+  {
+    id: "after-first-plank",
+    chickenIds: ["emeka-drainmaster", "adedoyin-mama-decree"],
+    date: "2026-08-20",
+    arcId: "after-the-fence-line",
+    world: "fiction",
+    type: "custom",
+    title: "The first plank",
+    body:
+      "A promise is only a promise until somebody picks up a plank, and this " +
+      "week somebody did. The first grain of the Better Housing fund became " +
+      "the first load of timber, and Emeka the Drain Marshal walked out to " +
+      "Coop Three with a length of string and marked a footprint wider than " +
+      "the old one. The new Coop Three would hold fewer birds in far more " +
+      "room. It is a strange, hopeful thing to build something good out of " +
+      "something this sad. The whole flock lined the fence to watch the " +
+      "string go down, and for the first time in weeks the mood lifted.",
+  },
+  {
+    id: "after-built-to-law",
+    chickenIds: ["dr-amara-featherwell", "amina-daybreak"],
+    date: "2026-08-23",
+    arcId: "after-the-fence-line",
+    world: "fiction",
+    type: "custom",
+    title: "Built to the law",
+    body:
+      "Cindy's Law is easy to say and harder to build, so they built it " +
+      "carefully. Dr. Featherwell measured the spacing herself. One cool " +
+      "perch was the old trouble, so the new roost has many, high and low, " +
+      "enough that no bird ever has to fight for the good one. Amina " +
+      "Daybreak cut wide vents for the dry-season heat and hung a shade wing " +
+      "over the run, while Emeka set the floor to drain clean when the rains " +
+      "come. Every plank answered a reason the trial had spelled out. This " +
+      "is what welfare looks like once it stops being a word and becomes a " +
+      "building.",
+  },
+  {
+    id: "after-home",
+    chickenIds: ["sisi-ngozi", "pete-okpara", "chi-chi"],
+    date: "2026-08-27",
+    arcId: "after-the-fence-line",
+    world: "fiction",
+    type: "social",
+    title: "The birds come home",
+    body:
+      "Then came the day everyone had waited for: the birds went home. Sisi " +
+      "Ngozi organised the move the way she organises everything, quietly " +
+      "and completely, so not one bird was left standing about wondering " +
+      "where to go. That first night the air moved cool through the new " +
+      "vents, and there was high perch enough for every single bird, with " +
+      "room to spare. When Okpara called the roll in the dark, every name " +
+      "answered, and the count came back whole. Somebody said it out loud: " +
+      "this is the coop Cindy should have had. Nobody disagreed.",
+  },
+  {
+    id: "after-plaque",
+    chickenIds: ["adedoyin-mama-decree", "cindy"],
+    date: "2026-08-30",
+    arcId: "after-the-fence-line",
+    world: "fiction",
+    type: "custom",
+    title: "Built to Cindy's Law",
+    body:
+      "By the new door they fixed a small wooden plaque, and it says only " +
+      "this: Built to Cindy's Law. The President did not make a long speech, " +
+      "which everyone agreed was the right speech. 'One coop is done,' she " +
+      "said. 'We have many.' That is the honest part. Coop Three is safe " +
+      "now, but the flock still has coops built the old, crowded way, and " +
+      "every one of them needs the same fixing. The Better Housing campaign " +
+      "paid for these planks, and it is not finished until every bird sleeps " +
+      "this safe. Help us build the next one.",
+  },
 ];
