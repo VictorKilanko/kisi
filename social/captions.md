@@ -203,6 +203,17 @@ for the best-dressed hen in the Republic, who kept the peace her whole life. A l
 promise, and perches, space, and shade cost real grain. This is the Better Housing campaign,
 and it is Cindy's now. Swipe through all 3, and help us finish it. 🧡 kisi.africa/support.
 
+### Arc · After the Fence Line (4 slides: `arc-rebuild-1` to `-4`) · Season 2, Ep 1
+AFTER THE FENCE LINE. A promise is only a promise until somebody lifts a plank, so this week
+somebody did. The first grain of the Better Housing fund became the first load of timber, and
+Coop Three came down and went back up to Cindy's Law: fewer birds, far more room, many perches
+so no bird ever has to fight for the cool one, wide vents for the heat, and a shade wing over
+the run. Dr. Featherwell measured every space herself. Then the birds went home, and that
+first cool night there was high perch enough for every single bird, with room to spare. Okpara
+called the roll in the dark and every name answered. By the new door there is a small plaque
+now: Built to Cindy's Law. But one coop is done and the flock has many, so we are not finished.
+Swipe through all 4. 🧡 Help us build the next one at kisi.africa/support.
+
 ## Reusable hashtag block
 
 ```

@@ -157,6 +157,16 @@ const arcs = [
       ["A full cabinet, at last", "For the first time in the Republic's memory, no ministry is vacant. The Opposition delivers its promised audit, finds the budgets suspiciously reasonable, and demands a recount of the recount. The President calls it a good week."],
     ],
   },
+  {
+    slug: "rebuild",
+    title: "After the Fence Line",
+    slides: [
+      ["The first plank", "A promise is only a promise until someone lifts a plank. The first Better Housing grain bought timber. Emeka marked a wider Coop Three: fewer birds, far more room."],
+      ["What the law looks like", "Cindy's Law, in timber. Many perches, so no bird fights for the cool one. Wide vents for the heat. A shade wing. Dr. Featherwell measured every space herself."],
+      ["The birds come home", "Moving day. Cool air through new vents, high perch for everyone, room to spare. Okpara called the roll, and every name answered. Somebody said it: this is the coop Cindy should have had."],
+      ["Built to Cindy's Law", "A small plaque by the new door. 'One coop is done. We have many,' the President said. Every coop needs the same fixing. Help us build the next one."],
+    ],
+  },
 ];
 
 function smart(s) {
