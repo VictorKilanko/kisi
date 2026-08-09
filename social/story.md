@@ -187,19 +187,39 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
 
   (`arc-cabinet`, a leftover comedy arc, trails after the season as a tonal reset.)
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 1 is fully queued,
-  so a plain "execute" should open **Season 2**. Best next threads, in priority order:
-  1. **"After the Fence Line" — the rebuild.** Coop Three is rebuilt to Cindy's Law: more
-     space, perches, shade. A hopeful, welfare-forward arc showing the Better Housing money
-     at work (route hard to Better Housing / the shop). Good palate-cleanser after the trial.
+- **SEASON 2 opens: "After the Fence Line" — the rebuild — BUILT AND QUEUED (Ep 1).** The
+  hopeful follow-up to the Fence Line. Coop Three is torn down and raised again to Cindy's
+  Law with the **Better Housing** money at work: fewer birds, more room, many perches (so no
+  bird fights for the cool one), wide vents, a shade wing, a clean-draining floor. Emeka marks
+  the footprint, Dr. Featherwell measures the spacing, Amina Daybreak cuts the vents/shade,
+  Okpara reads the roll and it comes back whole, the President unveils a "Built to Cindy's Law"
+  plaque and names the honest catch: one coop is done, the flock has many. Routes hard to
+  Better Housing. Showrunner SHIP (light revise applied), art director PASS. Live in
+  `timeline.ts` (`arcId: after-the-fence-line`, 4 events dated 08-20…08-30 so it reveals after
+  the season), `lib/content.ts` (ARC_META), 4 CREAM slides (`arc-rebuild-1..4`), caption in
+  `captions.md`, and staged into `manifest.json` as `arc-rebuild` (status `staged`, next in the
+  cron queue after `arc-cabinet`). Arc count in the reveal window stays 9 today (all 4 beats are
+  future-dated); it becomes 10 once 08-20 passes, so a CI run after that date will need the
+  count test bumped 9→10 (and may add `toContain("after-the-fence-line")`).
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Ep 1 (the rebuild)
+  is built and queued, so a plain "execute" should build **Season 2, Ep 2**. Best next threads,
+  in priority order:
+  1. **Resume the standing villain rollout: the scheming insider hen (comic).** The world is
+     ready for its second heavy now that the external menace (the lizard) and the internal
+     tragedy (Cindy/Eseosa) are told. An ambitious, gossip-spreading plotter inside the flock,
+     a comic villain you love to hate. Kola Quill is the natural foil. A lighter, funnier arc
+     to reset the tone after a heavy season plus a tender rebuild. End on a sell (feed budget /
+     shop, or support).
   2. **Eseosa in exile (later, careful).** A restrained check-in on the exiled hen: not
      redemption-by-return, but dignity at a distance. Only if the owner wants it; keep it
      un-sentimental.
-  3. **Resume the standing villain rollout:** the scheming insider hen (comic), then Halima's
-     heel turn. See the rollout bullet above.
-  Whatever is chosen: one arc per cycle, alternate green/cream against the last posted arc
-  (last queued = `arc-law` GREEN, so the next new arc should default to CREAM), keep the
-  6-year-old clarity rule, add the 3 standing hashtags, and end on a sell.
+  3. **A standing engine of drama** (breakfast crusade, President vs Halima, feed budget,
+     nesting boxes, sports rivalries, Mama Gold's Law): any works as a palate cleanser.
+  Whatever is chosen: one arc per cycle; **alternate green/cream** against the last new arc
+  (last built = `arc-rebuild` CREAM, so the next new arc mechanically defaults to GREEN, but
+  note the green field reads solemn/ceremonial, so a comic arc may want cream instead, owner's
+  call); keep the 6-year-old clarity rule; add the 3 standing hashtags; end on a sell.
 - **Standing engines of drama:** the punctual-breakfast crusade; the President vs Halima
   rivalry (and their secret friendship); the feed budget and the National Feed Budget;
   nesting-box expansion; coop security and the Bantu Protocol; solar-light schedules;

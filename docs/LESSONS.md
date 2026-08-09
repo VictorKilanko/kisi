@@ -6,6 +6,53 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-08 (Season 2, Ep 1: "After the Fence Line" — the rebuild)
+
+Ran one full `story.md` cycle ("execute story.md"). Season 1 (The Fence Line) is done: the
+whole season plus `arc-cabinet` shows **posted** on `origin/main` (the 12h cron drained the
+queue through 08-07). So this cycle opened **Season 2** with the rebuild arc the RESUME marker
+named.
+
+- **New arc "After the Fence Line" (arcId `after-the-fence-line`), CREAM, 4 beats.** Coop
+  Three rebuilt to Cindy's Law with the Better Housing money at work: the first plank → built
+  to the law (perches, vents, shade, Featherwell measuring) → the birds come home (roll comes
+  back whole) → a "Built to Cindy's Law" plaque and the honest sell (one coop done, many to
+  go). Cast in voice: Emeka (footprint/drainage), Featherwell (spacing), Amina Daybreak
+  (vents/shade), Okpara (roll call), the President (terse plaque line). Hopeful tone after a
+  heavy season.
+- **Full pipeline run.** Showrunner: REVISE (light) → applied all fixes (wired the `rebuild`
+  arc into `generate-arcs.mjs` as CREAM/last; landed slide 3 on "this is the coop Cindy should
+  have had"; retitled slide 2 to "What the law looks like" to avoid a double "Built to").
+  Art director: PASS on all 4 rendered PNGs (cream confirmed, fit, numbering, the finale sells).
+- **Reveal-date design (important continuity mechanic).** Dated the 4 beats **08-20…08-30**,
+  after the Fence Line finale (08-16), so `revealedTimeline` in `lib/content.ts` keeps the arc
+  hidden on the live site until the story date arrives (scene-by-scene reveal, matches the IG
+  drip). Consequence: `storyArcs()` is reveal-filtered, so the hardcoded arc-count test
+  (`content.test.ts`, `expect(arcs.length).toBe(9)`) **still reads 9 today** and passes. It
+  will become **10 after 08-20**, so the next CI run past that date must bump 9→10. Left the
+  test at 9 on purpose (bumping it now would fail today's gate).
+- **Manifest sync before staging (repeat of the 08-03 lesson, and it mattered).** The local
+  feature-branch manifest still had the whole Fence Line season as `staged`, but `origin/main`
+  had them all `posted` (cron commits back to main). Synced the manifest from
+  `git show origin/main:site/public/s/ay0qME54UVBg/manifest.json` **before** running the stager,
+  so the 14 posted statuses were preserved and only `arc-rebuild` was appended as `staged`.
+  Without this, merging the branch would revert posted→staged and the bot would re-post
+  duplicates.
+- **stage-to-public name = image prefix, not arc slug.** First tried `stage-to-public.mjs
+  rebuild` → "no images found"; the files are `arc-rebuild-*.png`, so the name is `arc-rebuild`
+  (matches how every other arc is staged). Filled the manifest caption by hand from
+  `captions.md` + the 17-tag block.
+- **Gates (actual, local, Node v24.18.1):** `tsc --noEmit` exit 0 (cleared stale `.next`
+  first); `npm run lint` 0 errors (2 old warnings); `vitest` **31/31**; `npm run build`
+  succeeded, all routes generated. Rendered only the 4 new slides (targeted PowerShell loop)
+  rather than re-screenshotting all 68.
+- **LEFT / to go live:** all of this is on `feature/kisi-poultry-republic`. For `arc-rebuild`
+  to post, the branch must reach `main` **and** Vercel must redeploy so the new
+  `arc-rebuild-*.png` URLs are live before the next cron slot. The website Big Story
+  (`/republic/stories`) will not show this arc until 08-20 by design (reveal dates).
+
+---
+
 ## Session — 2026-08-03 (standing content rules + The Fence Line, Ep 1: Cindy)
 
 Owner set three standing rules and directed a new season around a real loss.
