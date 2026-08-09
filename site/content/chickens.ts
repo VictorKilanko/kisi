@@ -979,7 +979,7 @@ export const chickens: Chicken[] = [
     fullName: "Olúfẹ́mi",
     nickname: "The Far Side",
     sex: "rooster",
-    ageNote: "Chick",
+    ageNote: "Young cockerel, still growing",
     status: "active",
     layingStatus: "not-yet",
     branch: "none",
@@ -1501,6 +1501,50 @@ export const chickens: Chicken[] = [
       "Longest recorded closing argument (two feed breaks)",
     ],
     colors: { body: "#23305e", comb: "#b3261e", accent: "#d9a02b", bg: "#f0c75e" },
+    sponsorable: true,
+  },
+  {
+    id: "ladun-sweet-beak",
+    tribe: "isa-brown",
+    name: "Ládùn",
+    nickname: "Sweet Beak",
+    sex: "hen",
+    ageNote: "Adult hen",
+    status: "active",
+    layingStatus: "laying",
+    branch: "none",
+    personality: ["silver-tongued", "ambitious", "gossipy", "scheming"],
+    favoriteFood: "Whatever a rival was saving for later",
+    shortBio:
+      "The sweetest-talking hen in the Republic, whose compliments always " +
+      "arrive carrying a small, quiet doubt. She wants a ministry, and she is " +
+      "not particular about how the seat comes free. Kola Quill is watching her.",
+    bio: [
+      "Ládùn greets you like the best day of your life has just arrived, and " +
+        "by the time she has finished you are somehow worried about something " +
+        "you were perfectly happy about a minute ago. That is the whole trick. " +
+        "She never says the cruel thing. She simply wonders it, out loud, so " +
+        "sweetly that the doubt feels like your own idea.",
+      "Her ambition is plain to everyone except the birds she is flattering. " +
+        "She would like a ministry, any ministry, and she has decided the " +
+        "fastest route to a seat is to make sure the bird in it looks unsteady. " +
+        "She runs her operation from the Coop Three dust bath, where the day's " +
+        "rumours are washed, dried, and sent out fresh by the afternoon feed.",
+      "So far the Republic finds her mostly funny, which annoys her more than " +
+        "any insult could. But a whisper is a small thing that can knock over " +
+        "a big one, and Kola Quill, who knows the difference between a leak and " +
+        "a lie, has started keeping notes. Sweet Beak is one to watch.",
+    ],
+    friends: [],
+    rivals: [],
+    quotes: [
+      {
+        text: "I would never say a word against her. I only worry. Someone has to.",
+        context: "Ládùn, about a minister she is trying to unseat",
+      },
+    ],
+    achievements: [],
+    colors: { body: "#e0a53a", comb: "#c0392b", accent: "#7a4a12", bg: "#f6e2a8" },
     sponsorable: true,
   },
 ];

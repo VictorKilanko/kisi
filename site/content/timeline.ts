@@ -771,4 +771,176 @@ export const timelineEvents: TimelineEvent[] = [
       "paid for these planks, and it is not finished until every bird sleeps " +
       "this safe. Help us build the next one.",
   },
+
+  /* ------------------------------------ ARC: The Sweet Beak (Ládùn)
+     Villain rollout #2: the scheming insider hen. A comic arc. She revives
+     the Republic's oldest fear, missing grain, as a whisper to unseat Musa,
+     and Kola Quill (who broke the real grain scandal) traces it home.
+     Dated after the rebuild so it reveals in sequence. Routes to the shop. */
+  {
+    id: "sweetbeak-arrives",
+    chickenIds: ["ladun-sweet-beak"],
+    date: "2026-09-02",
+    arcId: "the-sweet-beak",
+    world: "fiction",
+    type: "custom",
+    title: "A sweet new voice",
+    body:
+      "There is a hen in Coop Three named Ládùn, and everyone calls her Sweet " +
+      "Beak, because she greets you like the best day of your life has just " +
+      "arrived. What most birds are only starting to notice is that you always " +
+      "walk away from a chat with Sweet Beak feeling a little worried about " +
+      "something you were perfectly happy about a minute before. That is the " +
+      "whole trick, and she is very, very good at it. What she wants is a " +
+      "ministry, any ministry, and she has decided the fastest way to a seat " +
+      "is to make sure the bird already in it starts to look unsteady.",
+  },
+  {
+    id: "sweetbeak-whisper",
+    chickenIds: ["ladun-sweet-beak", "musa-grainkeeper"],
+    date: "2026-09-04",
+    arcId: "the-sweet-beak",
+    world: "fiction",
+    type: "controversy",
+    title: "The oldest fear in the Republic",
+    body:
+      "Sweet Beak picked her target and her weapon with care. The target was " +
+      "Musa the Grainkeeper, the honest, unglamorous minister who runs the " +
+      "feed store by smell. The weapon was the oldest fear the Republic owns: " +
+      "that the grain is going missing again. She never once said it outright. " +
+      "She only worried, sweetly, at the dust bath. 'I am sure the store is " +
+      "fine,' she would sigh, in a way that made you sure it was not. By " +
+      "sundown the sigh had legs.",
+  },
+  {
+    id: "sweetbeak-spreads",
+    chickenIds: ["ladun-sweet-beak", "musa-grainkeeper"],
+    date: "2026-09-06",
+    arcId: "the-sweet-beak",
+    world: "fiction",
+    type: "controversy",
+    title: "By the third day",
+    body:
+      "By the third day half of Coop Three was counting grains under its " +
+      "breath and giving poor Musa the side-eye at the trough. Nobody had " +
+      "seen anything missing, because nothing was, but a whisper does not need " +
+      "evidence, only a quiet afternoon and a willing ear. Musa, who is as " +
+      "honest as a sunrise and about as exciting, could not understand why the " +
+      "whole coop suddenly wanted to audit his shelves. He offered to open the " +
+      "store to anyone. Somehow that only made the whisper louder.",
+  },
+  {
+    id: "sweetbeak-traced",
+    chickenIds: ["kola-quill", "ladun-sweet-beak"],
+    date: "2026-09-08",
+    arcId: "the-sweet-beak",
+    world: "fiction",
+    type: "custom",
+    title: "Kola Quill smells it",
+    body:
+      "Now, Kola Quill broke the real grain scandal two seasons ago, the one " +
+      "where two hundred grams truly did vanish behind a filing perch, so she " +
+      "knows exactly what a missing-grain story smells like. This one smelled " +
+      "wrong. There was fear everywhere and evidence nowhere, which is the " +
+      "signature of a rumour, not a robbery. So she did the thing rumours " +
+      "cannot survive: she followed it upstream, ear by ear, asking each bird " +
+      "who told them. Every single trail dried up at the same dust bath.",
+  },
+  {
+    id: "sweetbeak-exposed",
+    chickenIds: ["kola-quill", "ladun-sweet-beak", "musa-grainkeeper"],
+    date: "2026-09-10",
+    arcId: "the-sweet-beak",
+    world: "fiction",
+    type: "reconciliation",
+    title: "Sweet Beak, exposed",
+    body:
+      "Kola Quill laid it out on the front page and again at the afternoon " +
+      "feed, plainly, the way she does. Not one grain was missing. One hen was " +
+      "stirring. Musa was cleared before he had finished being confused about " +
+      "why he needed clearing, and the Republic, which loves nothing more than " +
+      "a caught schemer, laughed until it had to sit down. Sweet Beak accepted " +
+      "the moment with a gracious smile and, everyone noticed, was already " +
+      "eyeing her next target on the way out. The grain, meanwhile, was never " +
+      "lost. It went where good grain goes: into the best eggs in the country. " +
+      "Order a crate at kisi.africa/shop.",
+  },
+
+  /* ------------------------------------ ARC: The Dawn Duel
+     A warm, funny standing-engine arc. VP Baba Ṣẹ́gun, who crows the sun up
+     every morning, is challenged by young Small Fẹ́mi. Ends on two roosters
+     waking the farm and a Solar & Light sell (dawn, light, the dark coops). */
+  {
+    id: "dawn-challenge",
+    chickenIds: ["baba-segun", "small-femi"],
+    date: "2026-09-13",
+    arcId: "the-dawn-duel",
+    world: "fiction",
+    type: "custom",
+    title: "Who owns the dawn?",
+    body:
+      "Small Fẹ́mi does not do anything loudly. He was the last of the twelve " +
+      "out of Coop Two the night of the drain, he wants to be a coop guard " +
+      "more than he lets on, and he had worked out something simple: a guard " +
+      "is awake before everyone else anyway. So one grey morning, with no " +
+      "cheek about it at all, he told Vice President Baba Ṣẹ́gun that this year " +
+      "he meant to be the bird who called the dawn. Baba, The Dawn Himself, " +
+      "has crowed the sun up over Kisi for years and takes full personal " +
+      "credit for its arrival. The Republic, which will take a side on " +
+      "absolutely anything, took sides at once.",
+  },
+  {
+    id: "dawn-training",
+    chickenIds: ["small-femi", "baba-segun"],
+    date: "2026-09-16",
+    arcId: "the-dawn-duel",
+    world: "fiction",
+    type: "sports",
+    title: "The training camp",
+    body:
+      "Small Fẹ́mi trained the way he does everything, quietly and stubbornly. " +
+      "He was already up before the light, walking the fence line on his " +
+      "rounds where he thinks nobody can see him, so he simply added the crow " +
+      "to the patrol. Baba Ṣẹ́gun, magnificently, trained not at all. He slept " +
+      "in, took a long dust bath, held court about mornings he had crowed up " +
+      "decades ago, and still, out of sheer habit, beat the youngster to the " +
+      "warm-up crow twice. 'The dawn is not a race you can train for,' he told " +
+      "the newspapers. 'It is a calling.'",
+  },
+  {
+    id: "dawn-duel",
+    chickenIds: ["baba-segun", "small-femi"],
+    date: "2026-09-18",
+    arcId: "the-dawn-duel",
+    world: "fiction",
+    type: "sports",
+    title: "The duel at first light",
+    body:
+      "The whole flock gathered in the dark to watch, which is a strange thing " +
+      "to do and everyone did it anyway. The grey came. Both roosters filled " +
+      "their chests. And they crowed at the very same instant, so exactly " +
+      "together that not one bird, not even Chief Justice Yèyé Àlàbá, who was " +
+      "asked to rule, could say who was first. The sun came up on the two of " +
+      "them, old and young, crowing their hearts out side by side, and it was, " +
+      "everyone agreed, the best dawn in years.",
+  },
+  {
+    id: "dawn-apprentice",
+    chickenIds: ["baba-segun", "small-femi"],
+    date: "2026-09-20",
+    arcId: "the-dawn-duel",
+    world: "fiction",
+    type: "reconciliation",
+    title: "The dawn belongs to everyone",
+    body:
+      "Instead of a rematch, Baba Ṣẹ́gun did something better. He made Small " +
+      "Fẹ́mi his apprentice, which is as close as the old rooster comes to " +
+      "admitting he was impressed. Two birds wake Kisi now, one from the tall " +
+      "perch and one from the water tank on his way round the fence, so the " +
+      "sun has never once been late since, and a coop woken and watched by the " +
+      "same serious young bird sleeps a little easier. But here is the honest " +
+      "part Baba will tell you himself: he can wake the farm, he cannot light " +
+      "it, and when the sun goes down the coops still go dark. Help us change " +
+      "that. This is the Solar & Light campaign, at kisi.africa/support.",
+  },
 ];

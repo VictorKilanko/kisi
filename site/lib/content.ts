@@ -189,6 +189,22 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "vents, and shade. The birds come home to a coop that cannot become a " +
       "fight waiting to happen. One coop down, and many still to go.",
   },
+  "the-sweet-beak": {
+    title: "The Sweet Beak",
+    summary:
+      "A schemer in the flock. Ládùn, all honey and quiet doubt, revives the " +
+      "Republic's oldest fear, that the grain is going missing, as a whisper " +
+      "to unseat honest Musa the Grainkeeper. Kola Quill, who broke the real " +
+      "grain scandal, follows the rumour home. A comic downfall, sweetly told.",
+  },
+  "the-dawn-duel": {
+    title: "The Dawn Duel",
+    summary:
+      "Who owns the dawn? Vice President Baba Ṣẹ́gun has crowed the sun up for " +
+      "years, until young Small Fẹ́mi challenges him to beat it. A warm morning " +
+      "comedy that ends with two roosters waking the farm, and a reminder that " +
+      "waking the coops is not the same as lighting them.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {
