@@ -167,6 +167,28 @@ const arcs = [
       ["Built to Cindy's Law", "A small plaque by the new door. 'One coop is done. We have many,' the President said. Every coop needs the same fixing. Help us build the next one."],
     ],
   },
+  {
+    slug: "sweetbeak",
+    title: "The Sweet Beak",
+    theme: "green", // a schemer's arc: dramatic intrigue on the green field
+    slides: [
+      ["A sweet new voice", "Meet Ládùn, 'Sweet Beak.' She greets you like your best day just arrived, then leaves you worried about something you were happy about a minute ago. What she wants is a ministry."],
+      ["The oldest fear", "Her target: honest Musa the Grainkeeper. Her weapon: the Republic's oldest fear, that the grain is going missing. She never says it. She only worries, sweetly, at the dust bath."],
+      ["By the third day", "Half the coop was counting grains and side-eyeing Musa. Nothing was missing. But a whisper needs no evidence, only a quiet afternoon and a willing ear. Musa was baffled."],
+      ["Kola Quill smells it", "Kola broke the real grain scandal, so she knows the smell. Fear everywhere, evidence nowhere: that is a rumour, not a robbery. She followed it upstream. Every trail ended at one dust bath."],
+      ["Sweet Beak, exposed", "Not one grain missing. One hen stirring. Musa cleared, the Republic laughing, Sweet Beak already eyeing her next target. The grain? It became the best eggs in the country. Order a crate."],
+    ],
+  },
+  {
+    slug: "dawn",
+    title: "The Dawn Duel",
+    slides: [
+      ["Who owns the dawn?", "Small Fẹ́mi, the boy who went out the far side the night of the drain, wants to be a coop guard. A guard is up before dawn anyway. So, quietly, he told VP Baba Ṣẹ́gun he would call the morning this year."],
+      ["The training camp", "Fẹ́mi was already walking the fence at first light, so he added the crow to his rounds. Baba trained not at all: slept in, took a dust bath, still beat him to the warm-up twice. 'The dawn is a calling,' he said."],
+      ["The duel at first light", "The whole flock gathered in the dark to watch. The grey came. Both roosters crowed at the very same instant, so exactly together that not even the Chief Justice could call it. Best dawn in years."],
+      ["The dawn belongs to everyone", "No rematch. Baba made Fẹ́mi his apprentice, so two birds wake Kisi now and the sun is never late. But he can wake the farm, not light it. When the sun sets, the coops go dark. Help us: Solar & Light, kisi.africa/support."],
+    ],
+  },
 ];
 
 function smart(s) {

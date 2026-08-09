@@ -214,6 +214,30 @@ called the roll in the dark and every name answered. By the new door there is a 
 now: Built to Cindy's Law. But one coop is done and the flock has many, so we are not finished.
 Swipe through all 4. 🧡 Help us build the next one at kisi.africa/support.
 
+### Arc · The Sweet Beak (5 slides: `arc-sweetbeak-1` to `-5`) · Season 2, Ep 2
+THE SWEET BEAK. Meet Ládùn. She greets you like your best day just arrived, then leaves you
+worried about something you were happy about a minute ago. That is the whole trick, and what
+she wants is a ministry. So she picked honest Musa the Grainkeeper and revived the oldest fear
+in the Republic: that the grain is going missing. She never said it. She only worried, sweetly,
+at the dust bath, until half the coop was counting grains and side-eyeing poor Musa. Nothing
+was missing. But Kola Quill broke the real grain scandal two seasons ago, so she knows a rumour
+from a robbery, and she followed this one upstream until every trail ended at the same dust bath.
+Not one grain missing. One hen stirring. Musa cleared, the Republic laughing, Sweet Beak already
+eyeing her next target. The grain? It became the best eggs in the country. Swipe through all 5.
+🥚 Order a crate at kisi.africa/shop.
+
+### Arc · The Dawn Duel (4 slides: `arc-dawn-1` to `-4`) · Season 2, Ep 3
+THE DAWN DUEL. Small Fẹ́mi, the young cockerel who went out the far side of Coop Two the night
+of the drain, wants to be a coop guard, and a guard is up before dawn anyway. So, quietly, he
+told Vice President Baba Ṣẹ́gun, The Dawn Himself, that this year he would be the one to call
+the morning. Baba, who has crowed the sun up for years and takes full credit for it arriving,
+trained not at all. Fẹ́mi added the crow to his fence rounds. At first light the whole flock
+gathered in the dark, and the two roosters crowed at the very same instant, so exactly together
+that not even the Chief Justice could call it. So Baba did something better than a rematch: he
+made Fẹ́mi his apprentice. Two birds wake Kisi now, and the sun is never late. But he can wake
+the farm, not light it, and when the sun sets the coops still go dark. Swipe through all 4.
+🌅 Help us light them: Solar & Light at kisi.africa/support.
+
 ## Reusable hashtag block
 
 ```
