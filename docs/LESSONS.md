@@ -87,6 +87,14 @@ this cycle built the RESUME-marked **Ep 4**: the recurring comic villain's escal
   on the feature branch (the gh-auth git creds carry `workflow` scope here), then `main` moved via the
   usual `gh api` ref PATCH. GitHub reads the cron from the workflow on `main`, so the daily cadence is
   live.
+- **Cool-down still active at ~5.5h; owner chose to wait for the daily cron.** A `workflow_dispatch`
+  retry at 12:40 UTC hit the **identical** block (code 4 / subcode 2207051, "action is blocked"), so
+  this is the longer integrity-style throttle, not a 1h rate cap. Manifest stayed `staged` again (no
+  post, no duplicate risk). **Decision: stop manual retries** (each blocked attempt can reinforce the
+  block) and let the once-daily cron retry at **08-15 06:00 UTC** (~17h cool-down). **Standing lesson:
+  on an Instagram "action is blocked" response, back off hard, do not keep dispatching; let the daily
+  cron be the low-frequency retry.** `arc-sweetbeak2` remains the only staged post, so it is what the
+  cron posts next once the throttle clears.
 
 ---
 
