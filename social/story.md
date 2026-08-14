@@ -223,24 +223,44 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   honour his backstory, bumped his `ageNote` Chick→"Young cockerel", re-audited SHIP; art
   director PASS. Lesson: cast from the bible, do not invent over an existing character.
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 3 are
-  built and queued (rebuild → sweetbeak → dawn, in that cron order after `arc-cabinet`). A plain
-  "execute" should build **Season 2, Ep 4**. Best next threads, in priority order:
-  1. **Sweet Beak strikes again.** She was left "eyeing her next target," so escalate the
-     recurring comic villain: a bigger scheme, a new victim, maybe she overreaches and needs
-     an unlikely ally or gets outfoxed. Keep it comic. End on a sell.
-  2. **Halima's heel turn (villain rollout #3, the big one).** The Opposition Leader flirts
-     with becoming the antagonist, then pays off the secret crate-sisters friendship with the
-     President. Save for when the audience clearly loves her; it needs real setup.
-  3. **Eseosa in exile (careful)** or **a standing engine** (breakfast crusade, President vs
-     Halima, feed budget, nesting boxes, Mama Gold's Law) as a palate cleanser.
+- **SEASON 2 Ep 4: "Sweet Beak Strikes Again" — BUILT AND QUEUED.** Villain rollout #2,
+  escalation. The recurring comic schemer **Ládùn "Sweet Beak"** overreaches: cleared but
+  unashamed after the grain whisper, she trades the whisper for **envy** and tries to turn coop
+  against coop over the newly rebuilt Coop Three (Cindy's Law: many perches, a shade wing). She
+  calls a "grievance meeting" to aim the waiting coops like a slingshot at the housing programme,
+  but **Halima "Iron Feathers"** refuses to play politics with Cindy's Law ("Coop Three is the
+  promise, and every coop gets one"), the crowd flips to chanting "build ours next," and her
+  grievance meeting becomes the biggest **Better Housing** rally the Republic has held. She slinks
+  off eyeing her next target (still recurring). GREEN, 5 slides (`arc-sweetbeak2-1..5`), routes to
+  Better Housing / support. Live in `timeline.ts` (`arcId: the-sweet-beak-returns`, 09-23…09-30),
+  ARC_META, caption, staged. **Showrunner REVISE→SHIP** (President was tagged in the finale but
+  absent; added a one-line decree cameo echoing the rebuild plaque, plus an irony clause that she
+  roosts in the very Coop Three she stokes envy against; retagged the finale `reconciliation`→
+  `custom`). Art director PASS on all 5. Note: Halima is played **straight/principled** here, not
+  turned heel; this deepens audience love for her as setup for the eventual rollout #3.
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 4 are built
+  and queued (rebuild → sweetbeak → dawn → sweetbeak2, in that cron order after `arc-cabinet`). A
+  plain "execute" should build **Season 2, Ep 5**. Two Sweet Beak arcs have now run, so vary the
+  engine. Best next threads, in priority order:
+  1. **A standing-engine palate cleanser (CREAM).** After two schemer arcs, run a lighter,
+     warmer beat: the punctual-breakfast crusade, a sports rivalry (Túndé Quickfoot vs Flash
+     Adaora), Kola Quill's next scoop, or a Mama Gold / senior-hen beat. End on a sell (shop for
+     an egg/warm arc; Solar/Better Housing if light or coops appear).
+  2. **Seed Halima's heel turn (villain rollout #3, the big one).** Ep 4 just gave Halima a
+     principled hero beat, good setup. A follow-up could show the audience loving her, then a
+     later arc flirts with recasting her as the antagonist before paying off the secret
+     crate-sisters friendship with the President. Still needs a beat or two more of setup.
+  3. **Sweet Beak's next target (only if a fresh victim/angle appears)** or **Eseosa in exile
+     (careful).**
   Whatever is chosen: one arc per cycle; **alternate green/cream** against the last new arc
-  (last built = `arc-dawn` CREAM, so the next new arc defaults to GREEN); a comic arc can carry
-  green as "dramatic intrigue" (Sweet Beak did); keep the 6-year-old clarity rule; add the 3
-  standing hashtags; end on a sell.
+  (last built = `arc-sweetbeak2` GREEN, so the next new arc defaults to CREAM); a comic arc can
+  carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3 standing
+  hashtags; end on a sell.
   **When adding a character, bump `content.test.ts` chicken count (now 27).** When an arc's
   earliest beat is in the future, the reveal-filtered arc-count test stays at its current value
-  until that date; it is 9 today and becomes 10 after 08-20, 11 after 09-02, 12 after 09-13.
+  until that date; it is 9 today and becomes 10 after 08-20, 11 after 09-02, 12 after 09-13, and
+  **13 after 09-23** (Sweet Beak Strikes Again).
 - **Standing engines of drama:** the punctual-breakfast crusade; the President vs Halima
   rivalry (and their secret friendship); the feed budget and the National Feed Budget;
   nesting-box expansion; coop security and the Bantu Protocol; solar-light schedules;

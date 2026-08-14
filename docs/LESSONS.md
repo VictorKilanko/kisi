@@ -6,6 +6,56 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-13 (Season 2, Ep 4: "Sweet Beak Strikes Again")
+
+Ran one full `story.md` cycle ("execute /social/story.md"). Season 2 Eps 1 to 3 have all
+**posted** on `origin/main` (the 12h cron drained rebuild → sweetbeak → dawn since 08-08), so
+this cycle built the RESUME-marked **Ep 4**: the recurring comic villain's escalation.
+
+- **New arc "Sweet Beak Strikes Again" (arcId `the-sweet-beak-returns`), GREEN, 5 beats.**
+  Villain rollout #2 escalation. Ládùn overreaches: cleared but unashamed after the grain
+  whisper, she trades the whisper for **envy** and tries to turn coop against coop over the newly
+  rebuilt Coop Three (Cindy's Law). She calls a grievance meeting to weaponize the waiting coops,
+  but **Halima Iron Feathers** refuses to play politics with Cindy's Law, the crowd flips to
+  "build ours next," and the grievance meeting becomes the biggest Better Housing rally the
+  Republic has held, organised by the schemer herself. Routes to Better Housing.
+- **Two deliberate craft choices worth keeping:** (1) after two Sweet Beak arcs in a row (Ep 2 and
+  Ep 4), the RESUME marker now steers Ep 5 to a lighter standing-engine palate cleanser to vary
+  tone; (2) Halima is played **straight/principled** here (not the heel turn) precisely to build
+  audience love before her eventual rollout #3, per the villain plan.
+- **Showrunner REVISE→SHIP.** The one real catch: the finale tagged `adedoyin-mama-decree` in
+  `chickenIds` but the President never appeared in the beat, which would cross-link the event onto
+  her profile for a scene she is absent from. Fix: a one-line decree cameo echoing the rebuild
+  plaque ("One coop is done. We have many."), placed **after** Halima's turn so it buttons the arc
+  without stealing her beat. Also applied the optional irony sharpener (Sweet Beak roosts in the
+  very Coop Three she stokes envy against) and retagged the finale `reconciliation`→`custom`
+  (it is a comic reversal, not a reconciliation). **Lesson: every id in `chickenIds` must actually
+  appear in the beat, or it pollutes that character's profile timeline.** Art director PASS on all 5.
+- **Manifest sync before staging (the recurring lesson, and it mattered again).** The local
+  feature-branch manifest still had `arc-rebuild`/`arc-sweetbeak`/`arc-dawn` as `staged`, but
+  `origin/main` had them all `posted` (cron commits back to main). Overwrote the local manifest
+  with `git show origin/main:.../manifest.json` **before** running the stager, so the 17 posted
+  statuses were preserved and only `arc-sweetbeak2` was appended as `staged`. Without this, merging
+  the branch would revert posted→staged and the bot would re-post duplicates. Filled the caption by
+  hand (UTF-8 Python; the default cp1252 console encoding chokes on "Ládùn", so wrap stdout in a
+  UTF-8 TextIOWrapper or write with `ensure_ascii=False`).
+- **`finalRoute` in the manifest is always `/republic/stories` by convention**, regardless of the
+  arc's sell. The actual sell (support/shop/Better Housing) lives in the caption text and the final
+  slide's footer, not in `finalRoute`. Left it at the default.
+- **Gates (actual, local, Node v24.18.1):** cleared stale `.next` first; `tsc --noEmit` exit 0;
+  `npm run lint` 0 errors (2 old warnings); `vitest` **31/31**; `npm run build` exit 0 (all routes).
+  Rendered only the 5 new slides (targeted PowerShell loop), not all 73.
+- **Reveal-filtered arc count is unchanged today (9).** The new arc's earliest beat is 09-23
+  (future), so `revealedTimeline` hides it and the hardcoded count test still reads 9 and passes.
+  Thresholds now: 10 after 08-20, 11 after 09-02, 12 after 09-13, **13 after 09-23**. Chicken count
+  stays 27 (no new character; reused Ládùn and Halima). Left the count test at 9 on purpose.
+- **LEFT:** push to `main` + Vercel redeploy so the staged `arc-sweetbeak2` PNG URLs go live before
+  the cron reaches it. The reveal-by-in-story-date question is still open (site Big Stories reveal
+  09-23…09-30 while the IG drip may run ahead). Untracked `social/assets/*` + `make-brand-assets.ps1`
+  from a prior session were left alone (not part of this cycle).
+
+---
+
 ## Session — 2026-08-08 (Season 2, Ep 1: "After the Fence Line" — the rebuild)
 
 Ran one full `story.md` cycle ("execute story.md"). Season 1 (The Fence Line) is done: the
