@@ -75,6 +75,18 @@ this cycle built the RESUME-marked **Ep 4**: the recurring comic villain's escal
 - Gates re-run after the re-date: `tsc` 0, `vitest` 31/31 (arc count still 9 today; all Season 2
   dates are future), `next build` 0. Untracked `social/assets/*` + `make-brand-assets.ps1` from a
   prior session were left alone (not part of this cycle).
+- **IG hit Instagram's app request limit, then cron switched to daily (owner).** The 07:20 UTC
+  scheduler run tried to post `arc-sweetbeak2` but the Graph API returned code 4 / subcode 2207051
+  ("Application request limit reached / action is blocked"), a transient app-level throttle after
+  Eps 1-3 drained recently. It did **not** publish and the manifest stayed `staged` (the workflow's
+  `git diff --quiet` guard means no post → no manifest change → no duplicate risk). **Did not manually
+  retry** (would extend the block). Then switched `.github/workflows/ig-schedule.yml` cron from
+  `0 6,18 * * *` (every 12h, the backlog cadence) to `0 6 * * *` (once daily, 06:00 UTC / 2 AM ET) to
+  stay under the limit. **Consequence to remember: dropping the 18:00 slot removed today's retry, so
+  the next auto-attempt for `arc-sweetbeak2` is 08-15 06:00 UTC.** A workflow-file change pushed fine
+  on the feature branch (the gh-auth git creds carry `workflow` scope here), then `main` moved via the
+  usual `gh api` ref PATCH. GitHub reads the cron from the workflow on `main`, so the daily cadence is
+  live.
 
 ---
 
