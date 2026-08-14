@@ -189,6 +189,18 @@ const arcs = [
       ["The dawn belongs to everyone", "No rematch. Baba made Fẹ́mi his apprentice, so two birds wake Kisi now and the sun is never late. But he can wake the farm, not light it. When the sun sets, the coops go dark. Help us: Solar & Light, kisi.africa/support."],
     ],
   },
+  {
+    slug: "sweetbeak2",
+    title: "Sweet Beak Strikes Again",
+    theme: "green", // the schemer's comeback: dramatic intrigue on the green field
+    slides: [
+      ["The next target", "Cleared, but not one feather sorry. Sweet Beak wanted a bigger prize. Not one minister this time. She would turn the whole flock sour, coop against coop."],
+      ["'Why should Three get shade?'", "Her weapon was envy. Coop Three came back new: many perches, a shade wing. 'Lovely for them,' she sighed at every waiting coop. 'And what about us?'"],
+      ["The grievance meeting", "She called the waiting coops together, all fairness and concern, and waited for an angry crowd she could aim like a slingshot at the housing programme."],
+      ["Iron Feathers stands up", "Then Halima rose. The Opposition could have pounced. Instead: 'We do not fight over Cindy's Law. Coop Three is the promise. Every coop gets one.'"],
+      ["The rally she never meant to hold", "The crowd took it up: build ours next! Her grievance meeting became a Better Housing rally, and she had called it herself. Help us build the next coop."],
+    ],
+  },
 ];
 
 function smart(s) {
