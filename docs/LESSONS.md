@@ -49,10 +49,32 @@ this cycle built the RESUME-marked **Ep 4**: the recurring comic villain's escal
   (future), so `revealedTimeline` hides it and the hardcoded count test still reads 9 and passes.
   Thresholds now: 10 after 08-20, 11 after 09-02, 12 after 09-13, **13 after 09-23**. Chicken count
   stays 27 (no new character; reused Ládùn and Halima). Left the count test at 9 on purpose.
-- **LEFT:** push to `main` + Vercel redeploy so the staged `arc-sweetbeak2` PNG URLs go live before
-  the cron reaches it. The reveal-by-in-story-date question is still open (site Big Stories reveal
-  09-23…09-30 while the IG drip may run ahead). Untracked `social/assets/*` + `make-brand-assets.ps1`
-  from a prior session were left alone (not part of this cycle).
+- **WENT LIVE + IG QUEUED (owner: "push it to main and redeploy and queue them for our IG").**
+  Merged `origin/main` (3 cron [skip ci] commits) into the feature branch, resolved the manifest to
+  "ours" (identical posted statuses + `arc-sweetbeak2` staged; net source drift zero), pushed the
+  feature branch, then moved `main` with `gh api -X PATCH .../git/refs/heads/main -f sha=<sha>` (the
+  method that works here; direct `git push` to main hangs). CI green on main; Vercel redeployed and
+  both staged PNGs return HTTP 200. `arc-sweetbeak2` is the only `staged` post, so the 12h cron posts
+  it next (~06:00 UTC 08-14).
+- **CADENCE FIX (owner: "pull the website reveal forward").** The site reveals each beat by in-story
+  date at build time, but the IG cron posts each arc as one full carousel at its slot, so IG had run
+  ~6 weeks ahead of the site (Season 2 was dated 08-20…09-30). **Two hard constraints shaped the
+  fix:** (1) the rebuild must follow Cindy's death, and the Fence Line finale is 08-16, so Season 2
+  cannot legitimately reveal before 08-17 (today was 08-14) without depicting the new coop before the
+  loss; (2) Ep4 cannot be pulled forward alone or the sequel reveals before its setup (Eps 1-3 were
+  all still hidden too). So re-dated **all four** Season 2 arcs into a tight, ordered, non-overlapping
+  block **08-17…08-24** (rebuild 17-18, sweetbeak 19-20, dawn 21-22, sweetbeak2 23-24). The site now
+  catches up to IG within ~10 days instead of 6 weeks. **Lesson: continuity is the floor on how far a
+  reveal can be pulled forward; you cannot reveal a consequence before its cause, and you cannot
+  reveal a sequel before its setup, so re-date whole seasons, not single arcs.**
+- **Two content-integrity facts confirmed while doing this:** the within-arc date check
+  (`content.test.ts:172`, `[...dates].sort()===dates`) allows **non-decreasing** dates, so multiple
+  beats can share a day; and `/republic/stories` orders arcs by each arc's **latest** beat date
+  descending (`page.tsx:20`), so re-dated arc blocks must have ascending maxima and not overlap to
+  keep newest-first order correct.
+- Gates re-run after the re-date: `tsc` 0, `vitest` 31/31 (arc count still 9 today; all Season 2
+  dates are future), `next build` 0. Untracked `social/assets/*` + `make-brand-assets.ps1` from a
+  prior session were left alone (not part of this cycle).
 
 ---
 

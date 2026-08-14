@@ -701,7 +701,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "after-first-plank",
     chickenIds: ["emeka-drainmaster", "adedoyin-mama-decree"],
-    date: "2026-08-20",
+    date: "2026-08-17",
     arcId: "after-the-fence-line",
     world: "fiction",
     type: "custom",
@@ -719,7 +719,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "after-built-to-law",
     chickenIds: ["dr-amara-featherwell", "amina-daybreak"],
-    date: "2026-08-23",
+    date: "2026-08-17",
     arcId: "after-the-fence-line",
     world: "fiction",
     type: "custom",
@@ -738,7 +738,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "after-home",
     chickenIds: ["sisi-ngozi", "pete-okpara", "chi-chi"],
-    date: "2026-08-27",
+    date: "2026-08-18",
     arcId: "after-the-fence-line",
     world: "fiction",
     type: "social",
@@ -756,7 +756,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "after-plaque",
     chickenIds: ["adedoyin-mama-decree", "cindy"],
-    date: "2026-08-30",
+    date: "2026-08-18",
     arcId: "after-the-fence-line",
     world: "fiction",
     type: "custom",
@@ -780,7 +780,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "sweetbeak-arrives",
     chickenIds: ["ladun-sweet-beak"],
-    date: "2026-09-02",
+    date: "2026-08-19",
     arcId: "the-sweet-beak",
     world: "fiction",
     type: "custom",
@@ -798,7 +798,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "sweetbeak-whisper",
     chickenIds: ["ladun-sweet-beak", "musa-grainkeeper"],
-    date: "2026-09-04",
+    date: "2026-08-19",
     arcId: "the-sweet-beak",
     world: "fiction",
     type: "controversy",
@@ -815,7 +815,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "sweetbeak-spreads",
     chickenIds: ["ladun-sweet-beak", "musa-grainkeeper"],
-    date: "2026-09-06",
+    date: "2026-08-20",
     arcId: "the-sweet-beak",
     world: "fiction",
     type: "controversy",
@@ -832,7 +832,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "sweetbeak-traced",
     chickenIds: ["kola-quill", "ladun-sweet-beak"],
-    date: "2026-09-08",
+    date: "2026-08-20",
     arcId: "the-sweet-beak",
     world: "fiction",
     type: "custom",
@@ -849,7 +849,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "sweetbeak-exposed",
     chickenIds: ["kola-quill", "ladun-sweet-beak", "musa-grainkeeper"],
-    date: "2026-09-10",
+    date: "2026-08-20",
     arcId: "the-sweet-beak",
     world: "fiction",
     type: "reconciliation",
@@ -873,7 +873,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "dawn-challenge",
     chickenIds: ["baba-segun", "small-femi"],
-    date: "2026-09-13",
+    date: "2026-08-21",
     arcId: "the-dawn-duel",
     world: "fiction",
     type: "custom",
@@ -892,7 +892,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "dawn-training",
     chickenIds: ["small-femi", "baba-segun"],
-    date: "2026-09-16",
+    date: "2026-08-21",
     arcId: "the-dawn-duel",
     world: "fiction",
     type: "sports",
@@ -910,7 +910,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "dawn-duel",
     chickenIds: ["baba-segun", "small-femi"],
-    date: "2026-09-18",
+    date: "2026-08-22",
     arcId: "the-dawn-duel",
     world: "fiction",
     type: "sports",
@@ -927,7 +927,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "dawn-apprentice",
     chickenIds: ["baba-segun", "small-femi"],
-    date: "2026-09-20",
+    date: "2026-08-22",
     arcId: "the-dawn-duel",
     world: "fiction",
     type: "reconciliation",
@@ -953,7 +953,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "sweetbeak2-target",
     chickenIds: ["ladun-sweet-beak"],
-    date: "2026-09-23",
+    date: "2026-08-23",
     arcId: "the-sweet-beak-returns",
     world: "fiction",
     type: "custom",
@@ -969,7 +969,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "sweetbeak2-envy",
     chickenIds: ["ladun-sweet-beak"],
-    date: "2026-09-25",
+    date: "2026-08-23",
     arcId: "the-sweet-beak-returns",
     world: "fiction",
     type: "controversy",
@@ -988,7 +988,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "sweetbeak2-meeting",
     chickenIds: ["ladun-sweet-beak"],
-    date: "2026-09-27",
+    date: "2026-08-24",
     arcId: "the-sweet-beak-returns",
     world: "fiction",
     type: "controversy",
@@ -1004,7 +1004,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "sweetbeak2-halima",
     chickenIds: ["halima-iron-feathers", "ladun-sweet-beak"],
-    date: "2026-09-29",
+    date: "2026-08-24",
     arcId: "the-sweet-beak-returns",
     world: "fiction",
     type: "custom",
@@ -1022,7 +1022,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "sweetbeak2-rally",
     chickenIds: ["ladun-sweet-beak", "halima-iron-feathers", "adedoyin-mama-decree"],
-    date: "2026-09-30",
+    date: "2026-08-24",
     arcId: "the-sweet-beak-returns",
     world: "fiction",
     type: "custom",

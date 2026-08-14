@@ -232,8 +232,8 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   promise, and every coop gets one"), the crowd flips to chanting "build ours next," and her
   grievance meeting becomes the biggest **Better Housing** rally the Republic has held. She slinks
   off eyeing her next target (still recurring). GREEN, 5 slides (`arc-sweetbeak2-1..5`), routes to
-  Better Housing / support. Live in `timeline.ts` (`arcId: the-sweet-beak-returns`, 09-23…09-30),
-  ARC_META, caption, staged. **Showrunner REVISE→SHIP** (President was tagged in the finale but
+  Better Housing / support. Live in `timeline.ts` (`arcId: the-sweet-beak-returns`, **re-dated
+  08-23…08-24**, see the cadence fix below), ARC_META, caption, staged. **Showrunner REVISE→SHIP** (President was tagged in the finale but
   absent; added a one-line decree cameo echoing the rebuild plaque, plus an irony clause that she
   roosts in the very Coop Three she stokes envy against; retagged the finale `reconciliation`→
   `custom`). Art director PASS on all 5. Note: Halima is played **straight/principled** here, not
@@ -259,8 +259,21 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   hashtags; end on a sell.
   **When adding a character, bump `content.test.ts` chicken count (now 27).** When an arc's
   earliest beat is in the future, the reveal-filtered arc-count test stays at its current value
-  until that date; it is 9 today and becomes 10 after 08-20, 11 after 09-02, 12 after 09-13, and
-  **13 after 09-23** (Sweet Beak Strikes Again).
+  until that date. **After the 2026-08-14 cadence fix (owner asked to pull the website reveal
+  forward), Season 2 was compressed to reveal right after the Fence Line finale (08-16):** it is
+  9 today and becomes 10 after 08-17 (rebuild), 11 after 08-19 (sweetbeak), 12 after 08-21 (dawn),
+  and 13 after 08-23 (sweetbeak2). Bump `arcs.length` in `content.test.ts` as each date passes on a
+  real (non-`[skip ci]`) CI run.
+
+- **Cadence fix (2026-08-14): why Season 2 can't reveal "today."** The website reveals each beat by
+  its in-story date at build time (`revealedTimeline`, `lib/content.ts`), and the IG cron posts each
+  arc as one full carousel at its 12h slot, so IG runs ahead of the site. Owner asked to close the
+  gap. Hard floor: the rebuild must follow Cindy's death, and the Fence Line finale is dated 08-16,
+  so Season 2 cannot reveal before 08-17 (today was 08-14). Also, Ep4 cannot be pulled forward alone
+  or the sequel would show before Eps 1-3 (all four were still hidden). Fix applied: re-dated all
+  four Season 2 arcs into a tight, ordered, non-overlapping block **08-17…08-24** (rebuild 17-18,
+  sweetbeak 19-20, dawn 21-22, sweetbeak2 23-24), so the site catches up to IG within ~10 days
+  instead of 6 weeks. The arc-count test still reads 9 today (all dates future) and passes.
 - **Standing engines of drama:** the punctual-breakfast crusade; the President vs Halima
   rivalry (and their secret friendship); the feed budget and the National Feed Budget;
   nesting-box expansion; coop security and the Bantu Protocol; solar-light schedules;
