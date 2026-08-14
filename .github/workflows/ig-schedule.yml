@@ -6,14 +6,14 @@ name: Instagram scheduler
 # and commits the manifest back so the next run does not repeat it. Images must already be
 # deployed (they live under site/public/ and ship with the site), which they are.
 #
-# Cadence: every 12 hours, at 06:00 and 18:00 UTC. 06:00 UTC = 02:00 America/New_York while
-# EDT is in effect (2 AM Eastern, the standing daily slot). GitHub cron is fixed UTC and does
-# not follow daylight saving. Once the backlog is drained, change the cron to `0 6 * * *`
-# for the daily-only 2 AM cadence.
+# Cadence: once daily, at 06:00 UTC. 06:00 UTC = 02:00 America/New_York while EDT is in effect
+# (2 AM Eastern, the standing daily slot). GitHub cron is fixed UTC and does not follow daylight
+# saving. This was switched from the every-12h backlog cadence (`0 6,18 * * *`) to daily-only on
+# 2026-08-14 once the season backlog was clear and to stay under Instagram's app request limit.
 
 on:
   schedule:
-    - cron: "0 6,18 * * *"
+    - cron: "0 6 * * *"
   workflow_dispatch: {}   # lets you post the next arc on demand from the Actions tab
 
 permissions:
