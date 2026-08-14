@@ -205,6 +205,15 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "comedy that ends with two roosters waking the farm, and a reminder that " +
       "waking the coops is not the same as lighting them.",
   },
+  "the-sweet-beak-returns": {
+    title: "Sweet Beak Strikes Again",
+    summary:
+      "The schemer overreaches. Cleared but unashamed, Ládùn trades whispers " +
+      "for envy and tries to turn coop against coop over the new Cindy's Law " +
+      "housing. Then Halima refuses to play politics with it, the grievance " +
+      "meeting becomes a Better Housing rally, and Sweet Beak accidentally " +
+      "raises money for the very thing she meant to spoil.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {

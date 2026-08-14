@@ -943,4 +943,101 @@ export const timelineEvents: TimelineEvent[] = [
       "it, and when the sun goes down the coops still go dark. Help us change " +
       "that. This is the Solar & Light campaign, at kisi.africa/support.",
   },
+
+  /* ------------------------------------ ARC: Sweet Beak Strikes Again (Ládùn)
+     Villain rollout #2, escalation. The comic schemer overreaches: cleared but
+     unashamed, she trades a whisper for envy and tries to turn coop against
+     coop over the new Cindy's Law housing. Halima refuses to play politics with
+     it, and the grievance meeting flips into a Better Housing rally. Dated
+     after the Dawn Duel so it reveals in sequence. Routes to Better Housing. */
+  {
+    id: "sweetbeak2-target",
+    chickenIds: ["ladun-sweet-beak"],
+    date: "2026-09-23",
+    arcId: "the-sweet-beak-returns",
+    world: "fiction",
+    type: "custom",
+    title: "The next target",
+    body:
+      "Sweet Beak came out of the grain business cleared, but not one feather " +
+      "sorry. If anything, getting caught only made her hungrier. One small " +
+      "minister, she decided, had been thinking too small. This time she would " +
+      "not go after a single bird at all. She would go after the whole flock's " +
+      "good mood, and set coop against coop, because a Republic busy squabbling " +
+      "with itself never notices who is quietly climbing.",
+  },
+  {
+    id: "sweetbeak2-envy",
+    chickenIds: ["ladun-sweet-beak"],
+    date: "2026-09-25",
+    arcId: "the-sweet-beak-returns",
+    world: "fiction",
+    type: "controversy",
+    title: "Why should Three get the shade?",
+    body:
+      "Her weapon this time was envy, which is even older than the fear of " +
+      "missing grain. Coop Three had come back from the rebuild brand new: many " +
+      "perches, wide vents, and a shade wing for the hot afternoons. So Sweet " +
+      "Beak went from roost to roost and sighed about it. 'Lovely for them,' " +
+      "she would say, warmly, at every coop still waiting its turn. 'And what " +
+      "about us? Are we not birds too?' Never mind that Sweet Beak roosted in " +
+      "Coop Three herself, under the coolest shade wing on the farm. Envy is a " +
+      "poor bookkeeper. She never once asked for a fight. She only asked, " +
+      "sweetly, until the waiting coops began to feel hard done by.",
+  },
+  {
+    id: "sweetbeak2-meeting",
+    chickenIds: ["ladun-sweet-beak"],
+    date: "2026-09-27",
+    arcId: "the-sweet-beak-returns",
+    world: "fiction",
+    type: "controversy",
+    title: "The grievance meeting",
+    body:
+      "By the end of the week she had gathered enough grumbling to try " +
+      "something bold. She called the waiting coops together under the mango " +
+      "tree, all fairness and concern, and billed it as a meeting about " +
+      "sharing. What she really wanted was an angry crowd she could aim like a " +
+      "slingshot at the whole housing programme. And for one dangerous moment, " +
+      "looking out at all those ruffled feathers, she was sure she had one.",
+  },
+  {
+    id: "sweetbeak2-halima",
+    chickenIds: ["halima-iron-feathers", "ladun-sweet-beak"],
+    date: "2026-09-29",
+    arcId: "the-sweet-beak-returns",
+    world: "fiction",
+    type: "custom",
+    title: "Iron Feathers stands up",
+    body:
+      "Then Halima Iron Feathers, Leader of the Opposition, rose to speak, and " +
+      "Sweet Beak's heart lifted, because surely the President's fiercest rival " +
+      "would tear the government's shiny coop to pieces. Halima did the exact " +
+      "opposite. 'I fight the President on the feed budget and the breakfast " +
+      "hour, and I will fight her again next week,' she said. 'But we do not " +
+      "fight over Cindy's Law. Coop Three is not the problem. It is the " +
+      "promise. My whole job is to make sure every coop gets the same one.' " +
+      "The crowd went very quiet, and then it began to nod.",
+  },
+  {
+    id: "sweetbeak2-rally",
+    chickenIds: ["ladun-sweet-beak", "halima-iron-feathers", "adedoyin-mama-decree"],
+    date: "2026-09-30",
+    arcId: "the-sweet-beak-returns",
+    world: "fiction",
+    type: "custom",
+    title: "The rally she never meant to hold",
+    body:
+      "After that, the meeting got completely away from her. Instead of " +
+      "resenting Coop Three, the waiting coops started chanting for their own " +
+      "rebuild: build ours next, build ours next. Sweet Beak's grievance " +
+      "meeting had turned, right in front of her, into the biggest Better " +
+      "Housing rally the Republic had ever held, and she had organised it " +
+      "herself. The President came by to see about the noise, looked out at all " +
+      "those singing coops, and said only what she had said at the new plaque: " +
+      "'One coop is done. We have many.' Sweet Beak slipped off before the last " +
+      "verse, already eyeing her next target. But the flock is right: one coop " +
+      "is done, and there are many still waiting, and every one of them costs " +
+      "real grain. Help us build the next one, at kisi.africa/support.",
+  },
 ];
