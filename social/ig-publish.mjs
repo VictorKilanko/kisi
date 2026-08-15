@@ -73,10 +73,17 @@ async function graphGet(path, fields) {
 }
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// Deliberate spacing between Graph write calls. Publishing one carousel is a burst of ~15-20
+// requests (a container per slide, status polls, the parent, the publish); firing them back to
+// back is what trips Meta's app rate limit (code 4). Pausing between calls flattens the burst
+// without changing the total work. Tunable via IG_PACE_MS; default 1500ms.
+const PACE_MS = Number(process.env.IG_PACE_MS) || 1500;
+const pace = () => sleep(PACE_MS);
+
 // Dedupe identity for a post: the leading ~160 normalized chars of its caption. Every arc's
 // caption opens with a unique headline and first sentence (the fixed hashtags live at the
 // tail and do not discriminate), so this is collision-safe across distinct arcs while staying
-// stable — we post the caption verbatim, so the live copy normalizes to the same key.
+// stable. We post the caption verbatim, so the live copy normalizes to the same key.
 const captionKey = (caption) =>
   (caption || "").replace(/\s+/g, " ").trim().toLowerCase().slice(0, 160);
 
@@ -117,8 +124,11 @@ async function fetchLiveMediaKeys() {
   return keys;
 }
 
-// A container must be FINISHED before it can be published (matters for carousels).
+// A container must be FINISHED before it can be published (matters for carousels). Wait a
+// beat before the first poll so the image usually processes in one check instead of several
+// (fewer status GETs is itself less rate-limit pressure), then poll every 3s.
 async function waitReady(creationId, tries = 12) {
+  await sleep(2000);
   for (let i = 0; i < tries; i++) {
     const { status_code } = await graphGet(creationId, "status_code");
     if (status_code === "FINISHED") return;
@@ -136,6 +146,7 @@ async function publishSingle(post) {
     caption: post.caption || "",
   });
   await waitReady(container.id);
+  await pace(); // breathe before the publish call
   const published = await graphPost(`${IG_ID}/media_publish`, { creation_id: container.id });
   return published.id;
 }
@@ -146,6 +157,7 @@ async function publishCarousel(post) {
     const child = await graphPost(`${IG_ID}/media`, { image_url: url, is_carousel_item: "true" });
     await waitReady(child.id);
     childIds.push(child.id);
+    await pace(); // space out each slide's container instead of firing them in a tight loop
   }
   const parent = await graphPost(`${IG_ID}/media`, {
     media_type: "CAROUSEL",
@@ -153,6 +165,7 @@ async function publishCarousel(post) {
     caption: post.caption || "",
   });
   await waitReady(parent.id);
+  await pace(); // breathe before the publish call
   const published = await graphPost(`${IG_ID}/media_publish`, { creation_id: parent.id });
   return published.id;
 }
