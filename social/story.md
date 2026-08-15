@@ -239,31 +239,57 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   `custom`). Art director PASS on all 5. Note: Halima is played **straight/principled** here, not
   turned heel; this deepens audience love for her as setup for the eventual rollout #3.
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 4 are built
-  and queued (rebuild → sweetbeak → dawn → sweetbeak2, in that cron order after `arc-cabinet`). A
-  plain "execute" should build **Season 2, Ep 5**. Two Sweet Beak arcs have now run, so vary the
-  engine. Best next threads, in priority order:
-  1. **A standing-engine palate cleanser (CREAM).** After two schemer arcs, run a lighter,
-     warmer beat: the punctual-breakfast crusade, a sports rivalry (Túndé Quickfoot vs Flash
-     Adaora), Kola Quill's next scoop, or a Mama Gold / senior-hen beat. End on a sell (shop for
-     an egg/warm arc; Solar/Better Housing if light or coops appear).
-  2. **Seed Halima's heel turn (villain rollout #3, the big one).** Ep 4 just gave Halima a
-     principled hero beat, good setup. A follow-up could show the audience loving her, then a
-     later arc flirts with recasting her as the antagonist before paying off the secret
-     crate-sisters friendship with the President. Still needs a beat or two more of setup.
-  3. **Sweet Beak's next target (only if a fresh victim/angle appears)** or **Eseosa in exile
-     (careful).**
-  Whatever is chosen: one arc per cycle; **alternate green/cream** against the last new arc
-  (last built = `arc-sweetbeak2` GREEN, so the next new arc defaults to CREAM); a comic arc can
-  carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3 standing
-  hashtags; end on a sell.
-  **When adding a character, bump `content.test.ts` chicken count (now 27).** When an arc's
-  earliest beat is in the future, the reveal-filtered arc-count test stays at its current value
-  until that date. **After the 2026-08-14 cadence fix (owner asked to pull the website reveal
-  forward), Season 2 was compressed to reveal right after the Fence Line finale (08-16):** it is
-  9 today and becomes 10 after 08-17 (rebuild), 11 after 08-19 (sweetbeak), 12 after 08-21 (dawn),
-  and 13 after 08-23 (sweetbeak2). Bump `arcs.length` in `content.test.ts` as each date passes on a
-  real (non-`[skip ci]`) CI run.
+- **SEASON 2 Eps 5 to 7: warm-batch palate cleanser — BUILT AND QUEUED (2026-08-15).** After two
+  Sweet Beak schemer arcs, the owner asked for three lighter arcs. Built as a batch, one showrunner
+  audit and one art-director audit across all three; both cleared (showrunner: Ep 5 REVISE→SHIP,
+  Eps 6-7 SHIP; art director PASS on all 14 slides). Reveal-dated 08-25…08-30 (a tight block after
+  sweetbeak2's 08-24) and staged in cron order breakfast → sprint → elders. Alternation kept:
+  sweetbeak2 GREEN → **breakfast CREAM → sprint GREEN → elders CREAM**.
+  - **Ep 5 "The Breakfast Bell"** (`the-breakfast-bell`, slug `breakfast`, CREAM, 5 beats, → shop).
+    Halima Iron Feathers' three-season crusade for a set breakfast hour. **Showrunner caught the one
+    real trap:** the President's canon is Executive Order No. 1, the "Punctual Breakfast Order"
+    (she is literally "Mama Decree"), so the arc could not treat punctual breakfast as new. Reframed:
+    Order No. 1 set breakfast at "seven, not seven-ish," but a clockless farm could never keep it,
+    so Halima's fight is to make the President's own order *real*. Young Small Fẹ́mi pegs the bell to
+    the second dawn crow (Dawn Duel callback), and the President rings the first bell beside her
+    crate-sister rival with a decree line in her canon voice. **Lesson: check a founding character's
+    signature achievement before building a story on that same theme.**
+  - **Ep 6 "Chi-Chi's First Race"** (`chi-chi-first-race`, slug `sprint`, GREEN, 5 beats, → shop).
+    Pays off the chi-chi-first-egg ending (she joined Flash's junior squad). She comes SECOND but
+    earns a bigger cheer than the winner, repeating her motto "I did my best." Túndé and Flash stay
+    "officially retired, unofficially eternal" as coaches (no rivalry-revival continuity break) and
+    race an impromptu exhibition. Egg-as-race-fuel sell.
+  - **Ep 7 "The Elders' Bench"** (`the-elders-bench`, slug `elders`, CREAM, 4 beats, → support).
+    Mama Gold's Law made physical: a shaded elders' bench for retired layers; Mama Gold presides
+    ("wages, not charity"), Sisi Ngozi reads the roll, Sadé sets it to song. Senior-hen care sell.
+  - **Cross-cutting fix shipped this cycle:** `generate-arcs.mjs` `page()` now routes the final-slide
+    footer by an arc `sell` field (`sell:"shop"` → kisi.africa/shop; default → /support), so
+    shop-routed arcs no longer show /support under an "order eggs" CTA. No new characters (chicken
+    count stays 27).
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 7 are built
+  and queued (rebuild → sweetbeak → dawn → sweetbeak2 → breakfast → sprint → elders, in that cron
+  order after `arc-cabinet`). A plain "execute" should build **Season 2, Ep 8**. Three warm arcs
+  have now run, so it is a good moment to advance a serialized thread. Best next threads, in
+  priority order:
+  1. **Seed Halima's heel turn (villain rollout #3, the big one).** Eps 4 and 5 both gave Halima
+     strong principled beats (the housing rally; making Order No. 1 real), so audience love is well
+     built. A follow-up can start to flirt with recasting her before paying off the secret
+     crate-sisters friendship with the President.
+  2. **Sweet Beak's next target** (she has been "eyeing her next target" twice now; a fresh
+     victim/angle would land) or **Eseosa in exile (careful, dignified)**.
+  3. **Another standing-engine beat** (Kola Quill's next scoop; the National Feed Budget; nesting-box
+     expansion; a Coop League/sports beat).
+  Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream**
+  against the last new arc (last built = `arc-elders` CREAM, so the next new arc defaults to GREEN);
+  a comic arc can carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3
+  standing hashtags; end on a sell.
+  **When adding a character, bump `content.test.ts` chicken count (now 27).** The reveal-filtered
+  arc-count test stays at its current value until an arc's earliest beat date passes. It is **9
+  today (2026-08-15)** and steps up as each date lands: 10 after 08-17 (rebuild), 11 after 08-19
+  (sweetbeak), 12 after 08-21 (dawn), 13 after 08-23 (sweetbeak2), **14 after 08-25 (breakfast), 15
+  after 08-27 (sprint), 16 after 08-29 (elders)**. Bump `arcs.length` in `content.test.ts` as each
+  date passes on a real (non-`[skip ci]`) CI run.
 
 - **Cadence fix (2026-08-14): why Season 2 can't reveal "today."** The website reveals each beat by
   its in-story date at build time (`revealedTimeline`, `lib/content.ts`), and the IG cron posts each

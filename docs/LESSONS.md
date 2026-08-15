@@ -6,6 +6,65 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-15 (IG dedupe fix + Season 2 Eps 5 to 7: the warm batch)
+
+Two pieces of work. First, fixed a live Instagram bug the owner spotted; then ran a three-arc
+`story.md` batch.
+
+### Instagram: three duplicate posts, root-caused and fixed
+- **Symptom:** the @kisi.africa grid had `arc-sweetbeak2` ("Sweet Beak Strikes Again" / "The next
+  target") live **three times**. **Root cause:** the carousel publish hit Meta's app request limit
+  (code 4) partway through on three separate runs (08-14 07:20, 08-14 12:39 dispatch, 08-15 06:37);
+  the post went live server-side each time, but `ig-publish.mjs` caught the thrown error, left the
+  arc `staged`, and committed nothing, so the next daily cron republished it. The manifest still said
+  `staged` while it was live 3x. Confirmed from the Actions logs.
+- **Fix (`social/ig-publish.mjs`):** a real dedupe guard. Before posting it reads what is already
+  live on the account (`fetchLiveMediaKeys`, caption-key = leading ~160 normalized chars) and
+  skips/marks-posted any arc already up; on a publish error it re-checks the live account and marks
+  posted if it actually went through; the live read retries with backoff so the guard survives the
+  rate limit that caused the incident. Then marked `arc-sweetbeak2` posted so the cron stops. Also
+  spaced out the Graph calls (`IG_PACE_MS` default 1500ms between calls + a 2s pre-poll in
+  `waitReady`) to reduce how often the throttle is hit at all. **Standing rule saved
+  ([[kisi-no-duplicate-ig-posts]]): never post duplicates; the publisher must dedupe against the
+  live account, never trust the manifest alone.** Owner deletes the 2 extra live copies by hand
+  (destructive, theirs to do). Direct `git push origin HEAD:main` worked fine this session (no hang),
+  unlike older sessions.
+
+### Season 2 Eps 5 to 7 — a three-arc warm batch (owner asked for three; picked a warm palate cleanser)
+- Built as one batch with a single showrunner audit and single art-director audit across all three.
+  **Ep 5 "The Breakfast Bell"** (CREAM, → shop), **Ep 6 "Chi-Chi's First Race"** (GREEN, → shop),
+  **Ep 7 "The Elders' Bench"** (CREAM, → support). Alternation vs prior `arc-sweetbeak2` GREEN kept:
+  cream → green → cream. Reveal-dated 08-25…08-30, staged in cron order breakfast → sprint → elders.
+- **The one real showrunner catch (worth carrying forward): check a founding character's signature
+  before building on that theme.** Ep 5's first draft treated a set breakfast hour as a novelty, but
+  President Adédoyin's canon is Executive Order No. 1, the "Punctual Breakfast Order" (she is "Mama
+  Decree," slogan "A nation that eats late, lays late"). Reframed the arc so Order No. 1 already
+  exists but a clockless farm cannot keep it, and Halima's crusade is to make the President's own
+  order *real* (pegged to the two-rooster dawn crow from Ep 3). REVISE→SHIP; the reframe made the arc
+  stronger. Ep 6 keeps the Túndé/Flash rivalry "retired but eternal" (they coach, then race an
+  exhibition) so no continuity break; Chi-Chi comes second and earns the bigger cheer, paying off
+  her "I did my best" motto. Ep 7 treats Mama Gold's Law as already-passed and makes it physical.
+- **Shipped a footer-routing fix** the showrunner flagged as pre-existing: `generate-arcs.mjs`
+  `page()` hardcoded the final-slide footer to `/support` for every arc, so shop arcs showed
+  `/support` under an "order eggs" CTA. Added an arc `sell` field (`sell:"shop"` → kisi.africa/shop,
+  default → /support); set it on `breakfast` + `sprint`. Existing arcs unchanged (only re-rendered
+  the 14 new slides via a targeted PowerShell loop, not all 87).
+- **No new characters** (reused Halima, Musa, President, Small Fẹ́mi, Baba, Chi-Chi, Flash, Túndé,
+  Mama Gold, Sisi Ngozi, Sadé), so chicken count stays **27**. Tagging discipline held: every id in
+  a beat's `chickenIds` is named in that beat (added `baba-segun` to the rooster-clock beat where he
+  is load-bearing).
+- **Manifest synced clean:** local == origin/main (18 posts, all posted, no cron drift), so staging
+  appended the 3 new arcs as `staged` → 21 posts. Filled the 3 captions from `captions.md` + the
+  17-tag block via a UTF-8 Node script (handles the Yoruba names). `finalRoute` left at the
+  `/republic/stories` default by convention; the real sell lives in the caption + final slide.
+- **Gates (actual, local, Node v24.18.1):** cleared stale `.next`; `tsc --noEmit` 0; `npm run lint`
+  0 errors (2 old warnings); `vitest` **31/31**; `npm run build` exit 0, all routes. **Arc-count test
+  stays 9 today** (all three new arcs future-dated, hidden by `revealedTimeline`); new thresholds: 14
+  after 08-25, 15 after 08-27, 16 after 08-29 (bump `content.test.ts` as each date passes on a real
+  CI run).
+
+---
+
 ## Session — 2026-08-13 (Season 2, Ep 4: "Sweet Beak Strikes Again")
 
 Ran one full `story.md` cycle ("execute /social/story.md"). Season 2 Eps 1 to 3 have all
