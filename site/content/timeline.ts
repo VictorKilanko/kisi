@@ -1040,4 +1040,278 @@ export const timelineEvents: TimelineEvent[] = [
       "is done, and there are many still waiting, and every one of them costs " +
       "real grain. Help us build the next one, at kisi.africa/support.",
   },
+
+  // ARC: The Breakfast Bell (Season 2, Ep 5)
+  {
+    id: "breakfast-question",
+    chickenIds: ["halima-iron-feathers"],
+    date: "2026-08-25",
+    arcId: "the-breakfast-bell",
+    world: "fiction",
+    type: "custom",
+    title: "Seven, or seven-ish?",
+    body:
+      "Executive Order No. 1, the very first thing President Adédoyin ever " +
+      "signed, set breakfast at seven, 'not seven-ish.' It is half the reason " +
+      "they call her Mama Decree. There was only ever one problem: a farm " +
+      "keeps no clock. With no way to say when seven had actually come, the " +
+      "grain still arrived when it arrived, and every morning the flock woke " +
+      "hungry and waited on a promise. Halima Iron Feathers, Leader of the " +
+      "Opposition, had spent three feed budgets on a single demand: make the " +
+      "President's own order real. 'I fight her on plenty,' she said, 'but " +
+      "not on this. Order No. 1 is right. It is simply not kept yet. You do " +
+      "not leave a hungry flock waiting on a good idea.'",
+  },
+  {
+    id: "breakfast-defence",
+    chickenIds: ["musa-grainkeeper"],
+    date: "2026-08-25",
+    arcId: "the-breakfast-bell",
+    world: "fiction",
+    type: "custom",
+    title: "The minister's defence",
+    body:
+      "Musa the Grainkeeper, who took Feed and Agriculture in the full " +
+      "cabinet, was loyal to Order No. 1 and said so. He also said seven " +
+      "o'clock was a great deal easier to sign than to serve. 'I feed the " +
+      "whole flock by hand, coop by coop,' he told the Assembly, 'and some " +
+      "mornings the grain is ready by seven, and some mornings it is not in " +
+      "a hurry.' He was honest to a fault, as ever, and he had a point. The " +
+      "order was only ever as good as the bird keeping the time, and on a " +
+      "farm with no clock, nobody could even agree when seven had come.",
+  },
+  {
+    id: "breakfast-bell-idea",
+    chickenIds: ["halima-iron-feathers"],
+    date: "2026-08-25",
+    arcId: "the-breakfast-bell",
+    world: "fiction",
+    type: "custom",
+    title: "A bell with no ringer",
+    body:
+      "Halima's answer was plain, the way her answers usually are. Hang a " +
+      "bell by the feed store, ring it at seven sharp, and serve the instant " +
+      "it rings. Give Order No. 1 a sound the whole farm could hear. The " +
+      "Assembly liked the bell at once, and then it hit the wall every good " +
+      "idea hits: what clock does a farm keep? Sunrise wandered with the " +
+      "season. The old birds argued for 'after the dew,' the young ones for " +
+      "'when I wake up,' and for a whole week the Republic's oldest law hung " +
+      "on the one question nobody could answer, which was simply when seven " +
+      "was.",
+  },
+  {
+    id: "breakfast-rooster-clock",
+    chickenIds: ["small-femi", "baba-segun"],
+    date: "2026-08-26",
+    arcId: "the-breakfast-bell",
+    world: "fiction",
+    type: "custom",
+    title: "The rooster clock",
+    body:
+      "The answer came from the smallest voice in the room. Small Fẹ́mi, the " +
+      "young cockerel who now shares the dawn crow with Vice President Baba " +
+      "Ṣẹ́gun, put up a wing. 'Two of us crow the sun up on the dot now,' he " +
+      "said. 'Baba calls the first light, I call the second, and the second " +
+      "crow lands near enough to seven that no hen can argue. Peg the bell to " +
+      "my crow, and Order No. 1 keeps itself, because a rooster is never " +
+      "late.' The room went quiet, then delighted. The farm had owned a " +
+      "perfect clock all along. It simply had feathers, and a very good " +
+      "opinion of itself.",
+  },
+  {
+    id: "breakfast-first-crow",
+    chickenIds: ["adedoyin-mama-decree", "halima-iron-feathers"],
+    date: "2026-08-26",
+    arcId: "the-breakfast-bell",
+    world: "fiction",
+    type: "custom",
+    title: "Order No. 1, kept at last",
+    body:
+      "So it was settled, and settled sweetly. On the first morning of the " +
+      "new hour the President came down to the feed store to ring the very " +
+      "first bell herself, and she rang it standing beside Halima, her " +
+      "fiercest rival and oldest crate-sister, who had fought three seasons " +
+      "to make the order real. Mama Decree read one new line aloud twice, " +
+      "once for the record and once for the hard of hearing: 'Order No. 1 " +
+      "said seven. Now the farm can finally keep it.' The bell has rung at " +
+      "second crow every single day since, and no bird wakes to an empty " +
+      "trough. A hen who eats well and on time lays a better egg. That last " +
+      "part is not a saying. It is the whole business. Taste it for yourself, " +
+      "and order a crate at kisi.africa/shop.",
+  },
+
+  // ARC: Chi-Chi's First Race (Season 2, Ep 6)
+  {
+    id: "race-lineup",
+    chickenIds: ["chi-chi"],
+    date: "2026-08-27",
+    arcId: "chi-chi-first-race",
+    world: "fiction",
+    type: "sports",
+    title: "The quiet one lines up",
+    body:
+      "Everyone knew Chi-Chi had joined the Solar Queens' junior sprint " +
+      "squad, because everyone knows everything at Kisi, and because she was " +
+      "the worst-kept secret in the Republic. What no one had seen yet was " +
+      "Chi-Chi race. Today they would. The sweetheart of the nation, the shy " +
+      "pullet who once hid behind the water tank for two days over a " +
+      "headline, walked to the starting line for her first real race with her " +
+      "legs visibly shaking. She did not look up. She looked, as she always " +
+      "has, at the older birds, and copied exactly what a runner is meant to " +
+      "do.",
+  },
+  {
+    id: "race-coaches",
+    chickenIds: ["flash-adaora", "tunde-quickfoot"],
+    date: "2026-08-27",
+    arcId: "chi-chi-first-race",
+    world: "fiction",
+    type: "sports",
+    title: "Two coaches, one chick",
+    body:
+      "She had the two loudest coaches on the farm, and they could not have " +
+      "been more different. Flash Adaora, who wins gracefully and loses " +
+      "terribly, knelt down and told her the truest thing she knows: 'The " +
+      "quiet ones have the best starts. Nothing to prove, everything to run " +
+      "for.' Minister Quickfoot, Flash's retired-but-eternal rival, arrived " +
+      "with a drum, a ribbon, and a three-minute speech delivered, as ever, " +
+      "in the third person. 'When Quickfoot was a chick,' he told her, " +
+      "'Quickfoot also started small. Observe Quickfoot now.' Between the two " +
+      "of them the shy chick got " +
+      "exactly the send-off she needed: one steady wing on her shoulder, and " +
+      "one very large distraction to hide behind.",
+  },
+  {
+    id: "race-whistle",
+    chickenIds: ["chi-chi"],
+    date: "2026-08-27",
+    arcId: "chi-chi-first-race",
+    world: "fiction",
+    type: "sports",
+    title: "The whistle",
+    body:
+      "Then the whole flock went quiet, which almost never happens, and the " +
+      "whistle blew. Chi-Chi's start was clean, low, and faster than anyone " +
+      "expected, exactly as Flash had promised. For half the track she was in " +
+      "front. Then a bigger chick from Coop Four found another gear at the " +
+      "bend and pulled ahead, and for three long strides it looked as though " +
+      "the story would be a short and disappointing one. Chi-Chi did not " +
+      "fold. She put her small head down and ran the last stretch harder than " +
+      "she had ever run anything in her careful, watchful life.",
+  },
+  {
+    id: "race-secondplace",
+    chickenIds: ["chi-chi"],
+    date: "2026-08-28",
+    arcId: "chi-chi-first-race",
+    world: "fiction",
+    type: "sports",
+    title: "I did my best",
+    body:
+      "She did not win. She crossed second, a wing's length back, breathing " +
+      "so hard she could barely stand, and when the Coop Times pushed a " +
+      "microphone at her she said the same four words she said on the morning " +
+      "of her first egg: 'I did my best.' The cheer that went up was not a " +
+      "runner-up's cheer. It was bigger than the winner's. The Republic had " +
+      "watched its shyest citizen line up frightened and finish flat out, and " +
+      "decided, as one flock, that a second place run like that is its own " +
+      "kind of first. She hid behind the water tank afterward, out of habit, " +
+      "and the whole farm politely pretended not to know where she was.",
+  },
+  {
+    id: "race-exhibition",
+    chickenIds: ["flash-adaora", "tunde-quickfoot"],
+    date: "2026-08-28",
+    arcId: "chi-chi-first-race",
+    world: "fiction",
+    type: "sports",
+    title: "The rivalry that never retires",
+    body:
+      "There was a warm bit of chaos to finish. Watching Chi-Chi empty the " +
+      "tank on that last stretch stirred something in the two old champions, " +
+      "and before anyone could stop them, Flash Adaora and Minister Quickfoot " +
+      "were toeing the line themselves, 'just to demonstrate form for the " +
+      "juniors.' They raced. It was gloriously undignified. Nobody agrees who " +
+      "won, both have claimed it in writing, and their rivalry, declared " +
+      "officially retired and unofficially eternal, remains exactly that. A " +
+      "champion runs on more than pride, though. Flash swears by farm-fresh " +
+      "eggs as race fuel, and so does the minister. Fuel your own champion, " +
+      "and order a crate at kisi.africa/shop.",
+  },
+
+  // ARC: The Elders' Bench (Season 2, Ep 7)
+  {
+    id: "elders-law-kept",
+    chickenIds: ["mama-gold"],
+    date: "2026-08-29",
+    arcId: "the-elders-bench",
+    world: "fiction",
+    type: "custom",
+    title: "A law kept",
+    body:
+      "Mama Gold's Law, the Senior Hen Retirement Protection Act, has been on " +
+      "the books a while now: shade, first place at the trough, and freedom " +
+      "from sudden committee membership for every hen who has done her laying " +
+      "years. A law is a fine thing on paper. This week the Republic made it " +
+      "a thing you could sit on. Under the old mango tree the flock built a " +
+      "proper elders' bench, a long shaded seat in the coolest spot on the " +
+      "farm, set aside for the retired layers by right, the way Mama Gold has " +
+      "always held the shady end of Coop One: by right of sitting there " +
+      "first.",
+  },
+  {
+    id: "elders-preside",
+    chickenIds: ["mama-gold"],
+    date: "2026-08-29",
+    arcId: "the-elders-bench",
+    world: "fiction",
+    type: "custom",
+    title: "The National Grandmother presides",
+    body:
+      "There was only ever going to be one bird to open it. Mama Gold, the " +
+      "National Grandmother, four hundred recorded eggs and counting, took " +
+      "the low branch seat she takes every Sunday and looked out at the hens " +
+      "gathered around the new bench. 'Four hundred eggs buys you this " +
+      "shade,' she told them, in the dry way that makes the whole Republic " +
+      "lean in. 'It is not charity. It is wages. Sit down. You have earned " +
+      "the sitting.' Then she did what she does best, and began to tell the " +
+      "week's history, starting, as her stories always do, 'in the time " +
+      "before the water tank.'",
+  },
+  {
+    id: "elders-roll",
+    chickenIds: ["sisi-ngozi", "sade-griot"],
+    date: "2026-08-30",
+    arcId: "the-elders-bench",
+    world: "fiction",
+    type: "social",
+    title: "Every name, out loud",
+    body:
+      "Sisi Ngozi, who can organise anything in an afternoon, read the roll " +
+      "of the retired hens one by one, and Sadé the Griot, Minister of " +
+      "Culture, would not let a single name pass as merely a name. She set " +
+      "each one to song, the way she sets everything to song, until the " +
+      "reading of a list became a slow, warm anthem under the tree. Birds who " +
+      "had fed the nation quietly for years, egg after egg, breakfast after " +
+      "breakfast, with nobody counting, heard the whole Republic stop and " +
+      "count them at last, and say, out loud and in tune, thank you.",
+  },
+  {
+    id: "elders-thanks",
+    chickenIds: ["mama-gold"],
+    date: "2026-08-30",
+    arcId: "the-elders-bench",
+    world: "fiction",
+    type: "custom",
+    title: "Thank you, elders",
+    body:
+      "It was not a goodbye, and Mama Gold made sure everyone understood " +
+      "that. 'No hen here is finished,' she said, from the bench that is now " +
+      "hers and every elder's. 'We are not retiring. We are delegating.' The " +
+      "shade is real, the bench is real, and keeping them, the cool spot cool " +
+      "and the trough full for the layers who gave the Republic every " +
+      "breakfast it has ever eaten, costs real grain, season after season. " +
+      "The birds who fed us first should not be fed last. Help us look after " +
+      "them, at kisi.africa/support.",
+  },
 ];

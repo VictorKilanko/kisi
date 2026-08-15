@@ -214,6 +214,31 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "meeting becomes a Better Housing rally, and Sweet Beak accidentally " +
       "raises money for the very thing she meant to spoil.",
   },
+  "the-breakfast-bell": {
+    title: "The Breakfast Bell",
+    summary:
+      "The President's Executive Order No. 1 set breakfast at seven, but a " +
+      "clockless farm could never keep it, so Halima Iron Feathers crusades " +
+      "to make the order real. The snag is the clock, until the smallest " +
+      "voice pegs a bell to the dawn crow. Now Kisi eats on time, and a " +
+      "well-fed hen lays a better egg.",
+  },
+  "chi-chi-first-race": {
+    title: "Chi-Chi's First Race",
+    summary:
+      "The Republic's shy sweetheart lines up for her first real race, " +
+      "coached by Flash Adaora and her retired-but-eternal rival Minister " +
+      "Quickfoot. Chi-Chi comes second and earns a cheer bigger than the " +
+      "winner's, and two old champions cannot resist one more run.",
+  },
+  "the-elders-bench": {
+    title: "The Elders' Bench",
+    summary:
+      "Mama Gold's Law made real. The flock builds a shaded bench for the " +
+      "retired layers by right, the National Grandmother presides ('wages, " +
+      "not charity'), and every name is read out and set to song. A thank " +
+      "you to the hens who gave the Republic every breakfast it has eaten.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {
