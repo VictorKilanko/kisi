@@ -201,6 +201,41 @@ const arcs = [
       ["The rally she never meant to hold", "The crowd took it up: build ours next! Her grievance meeting became a Better Housing rally, and she had called it herself. Help us build the next coop."],
     ],
   },
+  {
+    slug: "breakfast",
+    title: "The Breakfast Bell",
+    sell: "shop",
+    slides: [
+      ["Seven, or seven-ish?", "Order No. 1 set breakfast at 'seven, not seven-ish.' But a farm keeps no clock, so seven never quite came. The flock woke hungry and waited. Halima meant to fix that."],
+      ["The minister's defence", "Musa the Grainkeeper backed the order, not the ease of it. 'Some mornings the grain is ready by seven,' he said, honest as ever. 'And some mornings it is not in a hurry.'"],
+      ["A bell with no ringer", "Ring a bell at seven sharp, said Halima, and give Order No. 1 a sound. Fine, but what clock does a farm keep? For a week nobody could agree when seven had come."],
+      ["The rooster clock", "Then Small Fẹ́mi spoke up. Two roosters crow the dawn on the dot now, the second near enough to seven. Peg the bell to it, he said. The farm had a clock all along."],
+      ["Order No. 1, kept", "The President rang the first bell beside her old rival Halima. 'Order No. 1 said seven. Now the farm keeps it.' A well-fed hen lays a better egg. Order a crate."],
+    ],
+  },
+  {
+    slug: "sprint",
+    title: "Chi-Chi's First Race",
+    theme: "green", // a big race: high-stakes drama on the green field
+    sell: "shop",
+    slides: [
+      ["The quiet one lines up", "Chi-Chi trained with the junior squad in secret, and everyone knew. Today the shy sweetheart of the Republic lined up for her first real race, legs shaking."],
+      ["Two coaches, one chick", "Flash Adaora, who hates losing, told her, 'The quiet ones have the best starts.' Minister Quickfoot, her retired rival, brought a drum and a speech about himself."],
+      ["The whistle", "The whole flock went quiet. Chi-Chi's start was clean and fast, but a bigger chick pulled ahead at the bend. For three long strides, it looked over."],
+      ["'I did my best'", "She came second, a wing's length back, and said the four words the Republic loves: 'I did my best.' The cheer was louder than any winner's."],
+      ["The rivalry never retires", "Watching her run, Flash and Quickfoot forgot they were retired and raced on the spot. Nobody agrees who won. Fuel a champion: order farm-fresh eggs."],
+    ],
+  },
+  {
+    slug: "elders",
+    title: "The Elders' Bench",
+    slides: [
+      ["A law kept", "Mama Gold's Law promised every retired hen shade, first place at the trough, and no surprise committees. This week the Republic built the bench to prove it."],
+      ["The National Grandmother", "Under the mango tree, Mama Gold took her seat. 'Four hundred eggs buys you this shade,' she said. 'It is not charity. It is wages. Sit. You have earned it.'"],
+      ["Every name, out loud", "Sisi Ngozi read the roll of retired hens, and Sadé the Griot set each name to song. Birds who fed the nation for years heard it stop and say thank you."],
+      ["Thank you, elders", "'No hen here is finished,' says Mama Gold. 'We are delegating.' Help us keep the shade cool and the trough full for the layers who fed us first: kisi.africa/support."],
+    ],
+  },
 ];
 
 function smart(s) {
@@ -219,9 +254,17 @@ function headlineClass(title) {
   return "xxs";
 }
 
-function page({ arcTitle, part, total, title, body, isFinal, theme }) {
+// Each arc lands its final slide on a sell. Default is Support (laying/light/housing
+// appeals); arcs that sell eggs set sell:"shop" so the footer URL matches the CTA in
+// the copy instead of always reading /support.
+const SELL_FOOT = {
+  shop: `<span>Farm-fresh eggs from the Republic</span><span class="site">kisi.africa/shop</span>`,
+  support: `<span>Keep the flock laying, lit &amp; housed</span><span class="site">kisi.africa/support</span>`,
+};
+
+function page({ arcTitle, part, total, title, body, isFinal, theme, sell }) {
   const foot = isFinal
-    ? `<span>Keep the flock laying, lit &amp; housed</span><span class="site">kisi.africa/support</span>`
+    ? SELL_FOOT[sell] ?? SELL_FOOT.support
     : `<span>The story continues at</span><span class="site">kisi.africa/republic/stories</span>`;
   const ledeClass = body.length > 170 ? "lede sm" : "lede";
   // Each arc runs on the cream newspaper field by default; theme:"green" puts the
@@ -272,6 +315,7 @@ for (const arc of arcs) {
       body,
       isFinal: part === total,
       theme: arc.theme, // "green" | undefined(=cream newspaper)
+      sell: arc.sell, // "shop" | undefined(=support)
     });
     const file = join(postsDir, `arc-${arc.slug}-${part}.html`);
     writeFileSync(file, html, "utf8");
