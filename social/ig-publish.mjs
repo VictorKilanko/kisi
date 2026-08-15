@@ -7,8 +7,11 @@
  * media container (a carousel = one child container per slide + a parent) and publishes it.
  *
  * SAFETY: dry-run by default. It prints exactly what WOULD post and does nothing to the
- * live account unless you pass --publish. It never re-posts anything already marked
- * "posted" in the manifest, and it prints the live IG history so you can avoid duplicates.
+ * live account unless you pass --publish. Before posting it reads what is ALREADY live on
+ * @kisi.africa and skips any arc whose headline is already up (the manifest alone is not
+ * trusted: a publish can succeed on Instagram while the script sees a rate-limit error and
+ * never records it). If a publish throws, it re-checks the live account and marks the arc
+ * posted if it actually went through, so the next run cannot repost it.
  *
  * Secrets come from social/.env (gitignored). Always run with --env-file:
  *
@@ -69,6 +72,50 @@ async function graphGet(path, fields) {
   return json;
 }
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Dedupe identity for a post: the leading ~160 normalized chars of its caption. Every arc's
+// caption opens with a unique headline and first sentence (the fixed hashtags live at the
+// tail and do not discriminate), so this is collision-safe across distinct arcs while staying
+// stable — we post the caption verbatim, so the live copy normalizes to the same key.
+const captionKey = (caption) =>
+  (caption || "").replace(/\s+/g, " ").trim().toLowerCase().slice(0, 160);
+
+// GET Graph JSON with a small retry/backoff. The live-media read is the dedupe guard, and the
+// most likely reason it fails is Meta's app rate limit (code 4) — the very condition that
+// caused the duplicates — so it must not give up on the first transient error.
+async function graphGetJson(url, tries = 3) {
+  let lastErr;
+  for (let i = 0; i < tries; i++) {
+    try {
+      const res = await fetch(url);
+      const json = await res.json();
+      if (res.ok && !json.error) return json;
+      lastErr = new Error(JSON.stringify(json.error || json));
+    } catch (e) {
+      lastErr = e;
+    }
+    if (i < tries - 1) await sleep(2000 * (i + 1)); // 2s, 4s
+  }
+  throw lastErr;
+}
+
+// Everything currently live on the IG account, as a set of caption keys. Follows paging so
+// it stays correct as the account grows past one page.
+async function fetchLiveMediaKeys() {
+  const keys = new Set();
+  let url =
+    `${GRAPH}/${IG_ID}/media?` +
+    new URLSearchParams({ fields: "id,caption", limit: "100", access_token: TOKEN });
+  for (let page = 0; page < 5 && url; page++) {
+    const json = await graphGetJson(url);
+    for (const m of json.data || []) {
+      const k = captionKey(m.caption || "");
+      if (k) keys.add(k);
+    }
+    url = json.paging?.next || null;
+  }
+  return keys;
+}
 
 // A container must be FINISHED before it can be published (matters for carousels).
 async function waitReady(creationId, tries = 12) {
@@ -143,12 +190,39 @@ if (only) targets = targets.filter((p) => p.name === only);
 if (has("--next")) targets = targets.filter((p) => p.caption).slice(0, 1);
 if (!targets.length) { console.log("Nothing to publish (queue empty, all posted, or filter matched nothing)."); process.exit(0); }
 
+// Duplicate guard: fetch what is ALREADY live on @kisi.africa and match each staged arc
+// by the first line of its caption (the headline). This is the real dedupe — the manifest
+// alone cannot be trusted, because a publish can succeed server-side while the script sees
+// an error (e.g. Meta's app rate limit mid-carousel) and never marks it posted. That is
+// exactly how arc-sweetbeak2 posted three times.
+let liveKeys = null;
+try {
+  liveKeys = await fetchLiveMediaKeys();
+} catch (e) {
+  console.warn(`  ! could not read live IG media for dedupe (${e.message}).`);
+  console.warn(`    Proceeding WITHOUT the live guard — a post that is already live could repeat.`);
+}
+
 console.log(DRY ? "DRY RUN — nothing will be posted. Add --publish to go live.\n" : "PUBLISHING to @kisi.africa...\n");
 for (const post of targets) {
   if (!post.caption) {
     console.warn(`  ! ${post.name}: caption MISSING — fill it in the manifest before publishing. Skipping.`);
     continue;
   }
+  const key = captionKey(post.caption);
+
+  // Already live on the account? Never repost. Reconcile the manifest so the queue moves on.
+  if (liveKeys && key && liveKeys.has(key)) {
+    console.log(`  already live on IG — ${post.name}: marking posted (dedupe), not reposting.`);
+    if (!DRY && post.status !== "posted") {
+      post.status = "posted";
+      post.dedupedAt = new Date().toISOString();
+      post.note = "already live on IG; marked posted by the dedupe guard";
+      writeFileSync(manifestPath, JSON.stringify(man, null, 2) + "\n", "utf8");
+    }
+    continue;
+  }
+
   console.log(`  ${DRY ? "would post" : "posting"}: ${post.name} (${post.type}, ${post.slides.length} slide[s])`);
   post.slides.forEach((u, i) => console.log(`      slide ${i + 1}: ${u}`));
   console.log(`      caption: ${post.caption.split("\n")[0].slice(0, 80)}...`);
@@ -159,9 +233,32 @@ for (const post of targets) {
     post.mediaId = mediaId;
     post.postedAt = new Date().toISOString();
     writeFileSync(manifestPath, JSON.stringify(man, null, 2) + "\n", "utf8");
+    if (key) liveKeys?.add(key);
     console.log(`      -> posted, media id ${mediaId}`);
   } catch (e) {
-    console.error(`      x FAILED: ${e.message}`);
+    // The publish threw — but it may still have gone live (this is exactly how the
+    // rate-limit duplicates happened). Re-check the live account before giving up, so we
+    // do not leave it staged for the next run to repost.
+    let recovered = false;
+    if (key) {
+      try {
+        const keysNow = await fetchLiveMediaKeys();
+        if (keysNow.has(key)) {
+          post.status = "posted";
+          post.postedAt = new Date().toISOString();
+          post.note = `publish threw but the post is live; reconciled: ${e.message.slice(0, 140)}`;
+          writeFileSync(manifestPath, JSON.stringify(man, null, 2) + "\n", "utf8");
+          console.warn(`      ! publish errored but the post IS live on IG — marked posted (reconciled).`);
+          recovered = true;
+        }
+      } catch {
+        /* the live re-check itself failed (likely the same rate limit); fall through */
+      }
+    }
+    if (!recovered) {
+      console.error(`      x FAILED: ${e.message}`);
+      console.error(`        left staged; the next run re-checks the live account before reposting.`);
+    }
   }
 }
 console.log(DRY ? "\nDry run complete." : "\nDone.");
