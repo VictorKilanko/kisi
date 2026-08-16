@@ -303,8 +303,10 @@
       ],
       "finalRoute": "https://www.kisi.africa/republic/stories",
       "caption": "THE BREAKFAST BELL. Executive Order No. 1, the very first thing President Adédoyin ever signed, set breakfast at \"seven, not seven-ish.\" It is half the reason they call her Mama Decree. The trouble was, a farm keeps no clock, so seven never quite came, the grain arrived when it arrived, and every morning the flock woke hungry and waited on a promise. Halima Iron Feathers, Leader of the Opposition, had spent three feed budgets on one demand: make the President's own order real. \"I fight her on plenty,\" she said, \"but not on this. Order No. 1 is right. It is simply not kept yet.\" Musa the Grainkeeper, honest as ever, backed the order and warned that seven o'clock is easier to sign than to serve. The bell was easy to agree on; the clock was not, until the smallest voice in the room, young Small Fẹ́mi, who shares the dawn crow now, had it: peg the bell to the second crow, near enough to seven that no hen can argue, and Order No. 1 keeps itself, because a rooster is never late. So the President rang the first bell herself, beside her oldest crate-sister and fiercest rival. \"Order No. 1 said seven,\" she read out twice. \"Now the farm can finally keep it.\" A hen who eats well and on time lays a better egg. That is not a saying. It is the whole business. Swipe through all 5. 🥚 Taste it: order a crate at kisi.africa/shop.\n\n#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #kisiafrica #runbychickens #taco\r\n#PoultryFarm #PoultryNigeria #NigerianAgriculture #Agribusiness #FarmLife #Chickens\r\n#Naija #SouthwestNigeria #FarmStories #EggFarm #MadeInNigeria",
-      "status": "staged",
-      "scheduledFor": null
+      "status": "posted",
+      "scheduledFor": null,
+      "postedAt": "2026-08-16T06:40:37.283Z",
+      "note": "publish threw but the post is live; reconciled: {\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":false,\"code\":4,\"error_subcode\":2207051,\"error_user_tit"
     },
     {
       "name": "arc-sprint",
