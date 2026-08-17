@@ -320,8 +320,10 @@
       ],
       "finalRoute": "https://www.kisi.africa/republic/stories",
       "caption": "CHI-CHI'S FIRST RACE. Everyone knew the Republic's shy sweetheart had joined the Solar Queens' junior sprint squad, because everyone knows everything at Kisi. What no one had seen was Chi-Chi race. Today they would. She walked to the line for her first real race with her legs shaking, and looked, as she always has, at the older birds, to copy exactly what a runner is meant to do. She had two coaches: Flash Adaora, who wins gracefully and loses terribly, who knelt and told her \"the quiet ones have the best starts,\" and Minister Quickfoot, Flash's retired-but-eternal rival, who brought a drum and a speech mostly about himself. The whistle blew. Chi-Chi led for half the track, a bigger chick pulled ahead at the bend, and she put her small head down and ran the last stretch harder than she has ever run anything. She came second, a wing's length back, and said the four words the Republic loves: \"I did my best.\" The cheer was louder than the winner's. Then the two old champions, stirred by all that heart, raced each other on the spot, gloriously, and nobody agrees who won. A champion runs on more than pride. Swipe through all 5. 🏃 Fuel yours: order farm-fresh eggs at kisi.africa/shop.\n\n#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #kisiafrica #runbychickens #taco\r\n#PoultryFarm #PoultryNigeria #NigerianAgriculture #Agribusiness #FarmLife #Chickens\r\n#Naija #SouthwestNigeria #FarmStories #EggFarm #MadeInNigeria",
-      "status": "staged",
-      "scheduledFor": null
+      "status": "posted",
+      "scheduledFor": null,
+      "postedAt": "2026-08-17T06:56:32.832Z",
+      "note": "publish threw but the post is live; reconciled: {\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":false,\"code\":4,\"error_subcode\":2207051,\"error_user_tit"
     },
     {
       "name": "arc-elders",
