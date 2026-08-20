@@ -35,6 +35,7 @@ build/
 .vercel/
 .turbo/
 *.tsbuildinfo
+next-env.d.ts
 
 # --- Test & coverage ---
 coverage/

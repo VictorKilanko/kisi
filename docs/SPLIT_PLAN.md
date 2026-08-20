@@ -31,6 +31,9 @@ share ONE cast so canon never drifts.
 - Keep `docs/LESSONS.md` + `docs/PROGRESS.md` updated per session; update THIS file per step.
 - "Chicken Republic" is trademarked: never use it. IG: 3 hashtags, 6-year-old reading level.
 - Tooling: `corepack pnpm ...` (pnpm is not on PATH). Gates per package via `--filter`.
+  For the root `turbo` scripts (`pnpm run build/test/typecheck`), turbo must find a `pnpm`
+  binary: a shim is installed at `~/bin` via `corepack enable --install-directory "$HOME/bin" pnpm`;
+  run turbo as `PATH="$HOME/bin:$PATH" pnpm run build`. Vercel has pnpm on PATH already.
 
 ## Structure
 
@@ -56,12 +59,13 @@ social/          IG factory (repoint off site/content paths)                    
 - [x] fix brittle date-gated arc test
 - [x] verify: canon 18 tests + africa 13 api tests + africa build green
 
-### Phase 2 — Scaffold farm + kids + brand  ⏳ IN PROGRESS
-- [ ] packages/brand: tokens.css (colors) + fonts.ts + package.json
-- [ ] apps/farm scaffold: Next app, consumes canon+brand, home shell, Vercel-ready
-- [ ] apps/kids scaffold: Next app, brighter kids theme, single home page
-- [ ] (optional) point apps/africa globals at shared brand tokens if it builds clean
-- [ ] verify: all three apps build; typecheck green
+### Phase 2 — Scaffold farm + kids + brand  ✅ DONE
+- [x] packages/brand: tokens.css + base.css + package.json + README (fonts stay per-app)
+- [x] apps/farm scaffold: Next app, consumes canon+brand, home shell (hero + laying
+      hens from canon + 3 business lines), Header/Footer, lib/site.ts, Vercel-ready
+- [x] apps/kids scaffold: Next app, brighter kids theme layered on brand, single home page
+- [x] apps/africa now consumes @kisi/brand tokens (single source of truth for brand, verified)
+- [x] verify: turbo build 3 apps, typecheck 4, test canon 18 + africa 13 — all green
 - [ ] commit + update this file
 
 ### Phase 3 — Build kisifarm fully
@@ -93,5 +97,8 @@ social/          IG factory (repoint off site/content paths)                    
 
 ## Resume point
 
-**2026-08-20:** Phases 0+1 done and committed (not pushed). Starting Phase 2 (brand + farm +
-kids scaffold). `/about` + `/visit` confirmed for kisifarm.
+**2026-08-20:** Phases 0+1+2 done and committed (not pushed). Monorepo + shared canon +
+shared brand + all three apps build. Next up: **Phase 3 — build kisifarm fully** (move
+commerce into apps/farm: /eggs, /chicks, /support + terms, /about, /visit, reuse OrderForm /
+SupportCheckout / payments (locked) / mail / APIs; character-driven marketing from canon;
+kisi.africa commerce stays live in parallel). `/about` + `/visit` confirmed for kisifarm.

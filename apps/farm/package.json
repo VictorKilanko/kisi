@@ -1,5 +1,5 @@
 {
-  "name": "@kisi/africa",
+  "name": "@kisi/farm",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,34 +9,25 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "test": "vitest run",
-    "test:e2e": "playwright test"
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@kisi/brand": "workspace:*",
     "@kisi/canon": "workspace:*",
-    "@react-three/drei": "^10.7.7",
-    "@react-three/fiber": "^9.6.1",
-    "motion": "^12.42.2",
     "next": "16.2.10",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "three": "^0.185.1",
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@playwright/test": "^1.61.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@types/three": "^0.185.1",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
     "prettier": "^3.9.5",
     "tailwindcss": "^4",
-    "typescript": "^5",
-    "vitest": "^4.1.10"
+    "typescript": "^5"
   }
 }

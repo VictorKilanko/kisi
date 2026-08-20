@@ -1,0 +1,69 @@
+/*
+ * @kisi/brand — shared base styles.
+ * Import after tokens.css. Covers the surface/text roles, reduced-motion
+ * safety, the accessible focus ring, the skip link, and two small shared
+ * flourishes (.kicker, .gazette-rule). Apps add their own layers on top.
+ */
+:root {
+  --surface: var(--color-kisi-cream-100);
+  --text-body: var(--color-kisi-charcoal-900);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--surface);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessible focus ring, consistent everywhere */
+:focus-visible {
+  outline: 3px solid var(--color-kisi-gold-500);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--color-kisi-green-900);
+  color: var(--color-kisi-cream-100);
+  padding: 0.6rem 1rem;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* Small-caps kicker used across the universe */
+.kicker {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Official Republic document flourish */
+.gazette-rule {
+  border-top: 3px double var(--color-kisi-gold-500);
+}

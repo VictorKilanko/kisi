@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "@kisi/brand/tokens.css";
+@import "@kisi/brand/base.css";
+
+/*
+ * Kids layer: brighter accents on top of the shared Kisi palette. The base
+ * greens/creams stay (one family), these add the playful pops for a young
+ * audience.
+ */
+@theme {
+  --color-kids-sky: #2f9bd6;
+  --color-kids-sun: #ffc234;
+  --color-kids-berry: #e0568a;
+  --color-kids-leaf: #58b368;
+}
+
+:root {
+  /* A cleaner, brighter surface for kids. */
+  --surface: #fffdf6;
+}

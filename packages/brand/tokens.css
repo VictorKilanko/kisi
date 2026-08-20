@@ -1,0 +1,33 @@
+/*
+ * @kisi/brand — design tokens (the shared palette + type scale)
+ * Source of truth: docs/BRAND_SYSTEM.md
+ *
+ * Every Kisi property imports this after `@import "tailwindcss"` so the whole
+ * universe draws from one palette. Colour roles: green = the working farm,
+ * gold/indigo = Republic life, earth = placeholder/demo.
+ *
+ * Fonts are loaded per app via next/font/google, which must expose the CSS
+ * variables --font-fraunces and --font-inter (see @kisi/brand/README.md).
+ */
+@theme {
+  /* Core palette */
+  --color-kisi-green-900: #14331f;
+  --color-kisi-green-700: #1f5130;
+  --color-kisi-green-500: #2e7d46;
+  --color-kisi-earth-700: #8a3e1f;
+  --color-kisi-earth-500: #c05621;
+  --color-kisi-gold-500: #d9a02b;
+  --color-kisi-gold-300: #f0c75e;
+  /* Text-safe gold for light backgrounds (gold-500 fails contrast as text) */
+  --color-kisi-gold-700: #8a6410;
+  --color-kisi-cream-100: #faf5e9;
+  --color-kisi-cream-200: #f1e8d4;
+  --color-kisi-charcoal-900: #23231f;
+  --color-kisi-charcoal-600: #55534b;
+  --color-kisi-indigo-800: #23305e;
+  --color-kisi-indigo-900: #1a2447;
+
+  /* Typography */
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
