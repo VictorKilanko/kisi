@@ -44,13 +44,13 @@ export default function Home() {
       <div className="mt-14 flex flex-wrap justify-center gap-4 text-sm font-semibold">
         <a
           href={AFRICA_URL}
-          className="rounded-full bg-kids-sky px-6 py-3 text-white hover:opacity-90"
+          className="rounded-full bg-kids-sky px-6 py-3 font-bold text-kisi-charcoal-900 hover:opacity-90"
         >
           Visit the Republic
         </a>
         <a
           href={FARM_URL}
-          className="rounded-full bg-kids-leaf px-6 py-3 text-white hover:opacity-90"
+          className="rounded-full bg-kids-leaf px-6 py-3 font-bold text-kisi-charcoal-900 hover:opacity-90"
         >
           Visit the Farm
         </a>

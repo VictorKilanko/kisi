@@ -44,7 +44,7 @@ export default function SupportPage() {
       <section className="mt-10">
         <SectionHeading
           kicker="Our biggest needs right now"
-          title="Two campaigns, $25,000 each"
+          title="Our two biggest campaigns"
           lede="Everything below helps. These two come first: they change daily life for every bird on the farm."
         />
         <div className="grid gap-6 md:grid-cols-2">
@@ -71,15 +71,14 @@ export default function SupportPage() {
                 {c.name}
               </h3>
               <p className="mt-2 text-sm text-kisi-charcoal-600">{c.funds}</p>
-              <div className="mt-4 flex items-baseline gap-2">
-                <span className="font-display text-3xl font-black text-kisi-green-900">
-                  $25,000
+              <div className="mt-4">
+                <span className="kicker inline-block rounded-full bg-kisi-cream-200 px-3 py-1 text-kisi-earth-700">
+                  Goal set at launch
                 </span>
-                <span className="text-sm text-kisi-charcoal-600">goal</span>
               </div>
-              <p className="mt-1 text-xs italic text-kisi-charcoal-600">
-                Progress will be reported from the farm&apos;s real records once
-                the programme opens. We publish no invented figures.
+              <p className="mt-2 text-xs italic text-kisi-charcoal-600">
+                The goal and progress will be reported from the farm&apos;s real
+                records once the programme opens. We publish no invented figures.
               </p>
               <div className="mt-auto pt-4">
                 <Link

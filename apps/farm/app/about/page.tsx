@@ -127,7 +127,7 @@ export default function AboutPage() {
           </h2>
           <p className="mt-2 text-sm text-kisi-cream-100/85">
             Keep the flock laying, lit, and housed. Our two biggest campaigns
-            are Solar &amp; Light and Better Housing, a $25,000 goal each.
+            are Solar &amp; Light and Better Housing.
           </p>
         </Link>
         <Link

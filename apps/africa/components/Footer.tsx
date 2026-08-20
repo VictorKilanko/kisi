@@ -18,14 +18,14 @@ const FOOTER_LINKS = [
     ],
   },
   {
-    // Commerce lives on kisifarm now; these link out to the farm shop.
-    heading: "The Farm Shop",
+    // kisi.africa keeps its own About and Visit; the shop links out to kisifarm.
+    heading: "The Farm",
     links: [
+      { href: "/about", label: "About Kisi" },
+      { href: "/visit", label: "Visit & Contact" },
       { href: `${FARM_URL}/eggs`, label: "Order Eggs" },
       { href: `${FARM_URL}/chicks`, label: "Day-old Chicks" },
       { href: `${FARM_URL}/support`, label: "Support the Chickens" },
-      { href: `${FARM_URL}/about`, label: "About the Farm" },
-      { href: `${FARM_URL}/visit`, label: "Visit & Contact" },
       { href: KIDS_URL, label: "Kisi Kids" },
     ],
   },

@@ -9,8 +9,9 @@ import type { NextConfig } from "next";
  * Commerce moved to kisifarm. To avoid any window where a buyer hits a dead end,
  * kisi.africa keeps serving its own shop/support pages until the farm site is
  * live, then this flips: set NEXT_PUBLIC_COMMERCE_ON_FARM=true (with the farm
- * deployed) and the transactional routes 301 to the farm. Default is off, so
- * nothing redirects until the owner is ready.
+ * deployed) and the transactional routes 308-redirect to the farm. Default is
+ * off, so nothing redirects until the owner is ready. The entertainment site
+ * keeps its own /about and /visit (they are not redirected).
  */
 const COMMERCE_ON_FARM = process.env.NEXT_PUBLIC_COMMERCE_ON_FARM === "true";
 const FARM_URL = (
@@ -26,13 +27,13 @@ const nextConfig: NextConfig = {
     const to = (path: string) => `${FARM_URL}${path}`;
     // Permanent (308) redirects, so search engines move the commerce URLs to the
     // farm. The old egg-production page maps onto the farm's /eggs.
+    // /about and /visit stay on kisi.africa (owner decision): the entertainment
+    // brand keeps its own about and contact pages.
     return [
       { source: "/shop", destination: to("/eggs"), permanent: true },
       { source: "/eggs", destination: to("/eggs"), permanent: true },
       { source: "/support", destination: to("/support"), permanent: true },
       { source: "/support/terms", destination: to("/support/terms"), permanent: true },
-      { source: "/about", destination: to("/about"), permanent: true },
-      { source: "/visit", destination: to("/visit"), permanent: true },
     ];
   },
 

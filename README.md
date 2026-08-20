@@ -9,10 +9,13 @@
 
 **Status: Phase 2 (core website) complete — awaiting owner review before
 Phase 3 (interactive 3D world).** All work is on the
-`feature/kisi-poultry-republic` branch. The Next.js application lives in
-`site/` (53 statically generated pages, passing production build); this repo
-also contains the project documentation in `docs/` and a preserved,
-unrelated legacy site (below).
+`feature/kisi-poultry-republic` branch. The repo is a **pnpm monorepo**: the
+kisi.africa app lives in **`apps/africa/`** (formerly `site/`), alongside
+`apps/farm` (kisifarm) and `apps/kids` (kisikids), with the shared cast in
+`packages/canon` and design tokens in `packages/brand`. See **`docs/MONOREPO.md`**
+for structure and deploy, and `docs/SPLIT_PLAN.md` for the current state. This repo
+also contains the project documentation in `docs/` and a preserved, unrelated legacy
+site (below).
 
 ## What this project is
 
@@ -53,14 +56,15 @@ fallback) · Vercel via GitHub planned for hosting.
 ### Local development
 
 ```bash
-cd site
-npm install
-npm run dev     # dev server
-npm run lint    # ESLint
-npm run build   # production build (also typechecks + validates content)
+corepack pnpm install                       # install the whole workspace
+corepack pnpm --filter @kisi/africa dev      # dev server for kisi.africa
+corepack pnpm --filter @kisi/africa lint     # ESLint
+corepack pnpm --filter @kisi/africa build    # production build (typechecks + validates content)
 ```
 
-Requires Node.js 20.9+ (Node 22 LTS recommended).
+Swap `@kisi/africa` for `@kisi/farm` or `@kisi/kids` to run the other apps. pnpm is
+invoked via `corepack` because it is not installed globally here. Requires Node.js
+20.9+ (Node 22 LTS recommended). See `docs/MONOREPO.md` for workspace-wide commands.
 
 ## Important content rules
 

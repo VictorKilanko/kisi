@@ -91,11 +91,23 @@ social/          IG factory (repoint off site/content paths)                    
       new path; turbo typecheck 4 / test 44 / build 3 all green; commit
 
 ### Phase 5 — Gates, docs, handoff  ⏳ IN PROGRESS
-- [x] workspace gates green (typecheck 4, test 44, build 3)
+- [x] workspace gates green (lint 3, typecheck 4, test 44, build 3)
 - [x] docs/PROGRESS.md, docs/LESSONS.md updated; docs/MONOREPO.md written (structure +
       local dev + full Vercel deploy guide answering the subdomain question)
-- [ ] expert subagent audit of full diff (running); address findings
+- [x] expert subagent audit of full diff; findings addressed:
+      - H1 farm mobile nav (added hamburger menu)
+      - H2 removed the invented "$25,000 goal" (owner: no number yet)
+      - M1 fixed stale site-> apps/africa refs in VERCEL_SETUP.md + README.md
+      - M3 added farm sitemap/robots/icon/opengraph-image
+      - Q2 (owner) kept africa's own /about + /visit (dropped from redirect list)
+      - L1 301->308 wording, L2 stale comments, L3 kids CTA contrast (dark text)
 - [ ] push (ONLY after owner changes kisi.africa Vercel Root Directory site -> apps/africa)
+
+### Phase 6 (follow-ups, after the redirect flip is confirmed live) — not started
+- [ ] delete africa's now-shadowed commerce (shop/eggs/support pages + the duplicated
+      components/lib/payments/mail/api) once COMMERCE_ON_FARM is live, removing the
+      copy-drift the audit flagged (M2). Or extract a shared @kisi/commerce package.
+- [ ] farm /visit contact form is a disabled preview (L5); wire a real contact route.
 
 ## Owner actions outstanding (for deploy, not blocking local build)
 

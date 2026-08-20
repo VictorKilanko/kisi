@@ -41,11 +41,13 @@ before moving on. Total time: about an hour, most of it waiting for DNS.
 
 On the configuration screen, before deploying:
 
-> **Root Directory** → click **Edit** → choose **`site`**
+> **Root Directory** → click **Edit** → choose **`apps/africa`**
 
-**This is the single most common way this deploy fails.** The Next.js app lives in
-`site/`, not at the repository root. If you skip this, Vercel finds no application and
-the build fails with something like "No Next.js version detected."
+**This is the single most common way this deploy fails.** The repo is now a monorepo
+and the kisi.africa app lives in **`apps/africa/`** (it used to be `site/`), not at the
+repository root. If you skip this, Vercel finds no application and the build fails with
+something like "No Next.js version detected." For the farm and kids projects use
+`apps/farm` and `apps/kids`. See **`docs/MONOREPO.md`** for the full three-project setup.
 
 Leave Framework Preset (Next.js), Build Command, and Output Directory on their
 defaults — they're correct once Root Directory is right.
@@ -209,7 +211,7 @@ Copy-paste reference. Only the first four matter for launch.
 | `PAYSTACK_SECRET_KEY` | Sponsorships (later) | `sk_test_…` |
 | `PAYMENTS_TEST_AMOUNT_NGN` | Sandbox testing | `1000` |
 
-**Payments are locked off in code** (`site/lib/payments/index.ts`) and no environment
+**Payments are locked off in code** (`apps/farm/lib/payments/index.ts`) and no environment
 variable can unlock them. Taking real money requires a deliberate reviewed code change
 after the sponsorship wording is finalised. That's intentional.
 
@@ -217,8 +219,9 @@ after the sponsorship wording is finalised. That's intentional.
 
 ## 8. When something breaks
 
-**"No Next.js version detected"** — Root Directory isn't set to `site`. Settings →
-General → Root Directory → `site` → redeploy.
+**"No Next.js version detected"** — Root Directory isn't set to `apps/africa` (or
+`apps/farm` / `apps/kids` for those projects). Settings → General → Root Directory →
+`apps/africa` → redeploy.
 
 **Build fails** — open the failed deployment and read the log; it names the file and
 line. Note that GitHub Actions also runs lint, typecheck, tests and a build on every
@@ -236,7 +239,7 @@ mistyped. Check at https://dnschecker.org. Wait up to 48 hours before assuming i
 ## 9. Keeping it safe
 
 - **Never commit API keys.** They belong in Vercel's environment variables only.
-  `site/.env.example` shows the shape with no real values, which is why it's safe to
+  `apps/africa/.env.example` (and `apps/farm/.env.example`) show the shape with no real values, which is why it's safe to
   commit.
 - **Revoke the GitHub tokens** shared during setup, at
   https://github.com/settings/personal-access-tokens

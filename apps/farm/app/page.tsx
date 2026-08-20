@@ -3,9 +3,8 @@ import { chickens } from "@kisi/canon";
 import { AFRICA_URL } from "@/lib/site";
 
 /**
- * kisifarm home (Phase 2 scaffold). A real, on-brand shell: hero, the hens
- * behind the eggs pulled from the shared canon, and the three business lines.
- * The commerce pages (/eggs, /chicks, /support) are built in Phase 3.
+ * kisifarm home. Hero, the laying hens pulled live from the shared canon, and
+ * the three business lines (eggs, day-old chicks, support).
  */
 const layingHens = chickens.filter((c) => c.layingStatus === "laying").slice(0, 3);
 
