@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PlaceholderNotice } from "@/components/Disclaimer";
 
 export const metadata: Metadata = {

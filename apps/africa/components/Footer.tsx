@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { TacoMark } from "@/components/Logo";
+import { FARM_URL, KIDS_URL } from "@/lib/site";
+
+const isExternal = (href: string) => href.startsWith("http");
 
 const FOOTER_LINKS = [
   {
@@ -15,13 +18,15 @@ const FOOTER_LINKS = [
     ],
   },
   {
-    heading: "The Farm",
+    // Commerce lives on kisifarm now; these link out to the farm shop.
+    heading: "The Farm Shop",
     links: [
-      { href: "/about", label: "About Kisi" },
-      { href: "/eggs", label: "Egg Life" },
-      { href: "/shop", label: "Order Eggs" },
-      { href: "/visit", label: "Visit & Contact" },
-      { href: "/support", label: "Support the Chickens" },
+      { href: `${FARM_URL}/eggs`, label: "Order Eggs" },
+      { href: `${FARM_URL}/chicks`, label: "Day-old Chicks" },
+      { href: `${FARM_URL}/support`, label: "Support the Chickens" },
+      { href: `${FARM_URL}/about`, label: "About the Farm" },
+      { href: `${FARM_URL}/visit`, label: "Visit & Contact" },
+      { href: KIDS_URL, label: "Kisi Kids" },
     ],
   },
   {
@@ -29,7 +34,7 @@ const FOOTER_LINKS = [
     links: [
       { href: "/legal/privacy", label: "Privacy Policy" },
       { href: "/legal/terms", label: "Terms of Use" },
-      { href: "/support/terms", label: "Support Terms" },
+      { href: `${FARM_URL}/support/terms`, label: "Support Terms" },
     ],
   },
 ];
@@ -53,13 +58,21 @@ export function Footer() {
           <nav key={col.heading} aria-label={col.heading}>
             <p className="kicker text-kisi-gold-300">{col.heading}</p>
             <ul className="mt-3 space-y-2 text-sm">
-              {col.links.map((l) => (
-                <li key={l.href}>
-                  <Link href={l.href} className="hover:text-kisi-gold-300">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
+              {col.links.map((l) =>
+                isExternal(l.href) ? (
+                  <li key={l.href}>
+                    <a href={l.href} className="hover:text-kisi-gold-300">
+                      {l.label}
+                    </a>
+                  </li>
+                ) : (
+                  <li key={l.href}>
+                    <Link href={l.href} className="hover:text-kisi-gold-300">
+                      {l.label}
+                    </Link>
+                  </li>
+                ),
+              )}
             </ul>
           </nav>
         ))}

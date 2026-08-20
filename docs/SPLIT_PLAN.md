@@ -79,11 +79,16 @@ social/          IG factory (repoint off site/content paths)                    
 - [x] farm .env.example added; api.test.ts brought over (13 tests)
 - [x] verify: farm typecheck + lint(0) + 13 tests + build (14 routes) all green; commit
 
-### Phase 4 — De-commerce kisi.africa
-- [ ] 301 redirects in apps/africa/next.config.ts: /shop /eggs /support* -> kisifarm
-- [ ] nav/footer link out to kisifarm + kisikids
-- [ ] repoint social/ scripts (canon import + apps/africa/public/s/)
-- [ ] verify; commit
+### Phase 4 — De-commerce kisi.africa  ✅ DONE
+- [x] env-gated 308 redirects in apps/africa/next.config.ts (/shop /eggs /support
+      /support/terms /about /visit -> farm), OFF by default via NEXT_PUBLIC_COMMERCE_ON_FARM;
+      flip to "true" once the farm is deployed so there is no dead-end window
+- [x] footer links out to the farm shop (eggs/chicks/support/about/visit) + Kisi Kids;
+      africa lib/site.ts gained FARM_URL/KIDS_URL
+- [x] repointed social/ scripts: stage-to-public.mjs + ig-publish.mjs publicRoot
+      site -> apps/africa (generate-arcs has arcs inline, no canon import needed)
+- [x] verify: redirects compiled into routes-manifest (6, 308); social --list resolves the
+      new path; turbo typecheck 4 / test 44 / build 3 all green; commit
 
 ### Phase 5 — Gates, docs, handoff
 - [ ] corepack pnpm -r lint / typecheck / test / build all green
@@ -97,11 +102,15 @@ social/          IG factory (repoint off site/content paths)                    
 - Create Vercel projects for farm (Root `apps/farm`) and kids (Root `apps/kids`); set
   `NEXT_PUBLIC_SITE_URL` per project; attach `farm.`/`kids.kisi.africa`.
 - Copy env vars (mail/Resend `FARM_INBOX`, Paystack TEST keys, Upstash) into the farm project.
+- **Deploy the farm FIRST**, then on the kisi.africa project set `NEXT_PUBLIC_COMMERCE_ON_FARM=true`
+  and redeploy, so africa's /shop /eggs /support etc. 301 to the live farm (no dead-end window).
+  The footer's farm/kids links go live with the same push, so deploying farm/kids first avoids 404s.
 
 ## Resume point
 
-**2026-08-20:** Phases 0+1+2+3 done and committed (not pushed). kisifarm is fully built
-(eggs, day-old chicks, support, about, visit, legal; payments sandbox-locked; 13 api tests).
-kisi.africa commerce still live in parallel. Next up: **Phase 4 — de-commerce kisi.africa**
-(301 redirects /shop /eggs /support* -> farm; nav/footer link out to farm+kids; repoint
-social/ scripts off the old site/content paths). Then Phase 5 (gates, docs, expert audit, push).
+**2026-08-20:** Phases 0-4 done and committed (not pushed). Monorepo + shared canon + shared
+brand + kisifarm fully built + kisikids scaffold + kisi.africa de-commerced (env-gated redirects
+OFF by default, footer links out, social scripts repointed). Whole workspace green (typecheck 4,
+test 44, build 3). Next up: **Phase 5 — final gates, docs (MONOREPO.md, PROGRESS/LESSONS),
+expert subagent audit of the full diff, then push** (only after the owner changes the kisi.africa
+Vercel Root Directory site -> apps/africa; then deploy farm/kids and flip COMMERCE_ON_FARM).

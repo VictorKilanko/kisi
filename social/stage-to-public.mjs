@@ -3,8 +3,8 @@
  * for the (deferred) Instagram scheduler.
  *
  * The Instagram Graph API cannot upload a local file: every image must be at a public
- * HTTPS URL. Anything under site/public/ is served by Vercel at the site root, so this
- * copies the chosen PNGs into  site/public/s/<token>/  and prints their live URLs.
+ * HTTPS URL. Anything under apps/africa/public/ is served by Vercel at the site root, so
+ * this copies the chosen PNGs into  apps/africa/public/s/<token>/  and prints their live URLs.
  *
  * "Secret" here means unguessable-by-strangers (a random token folder), not secret from
  * anyone who can read this repo. If the GitHub repo is public, the staged files are in it.
@@ -31,7 +31,7 @@ import { randomBytes } from "node:crypto";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const imagesDir = join(here, "images");
-const publicRoot = join(here, "..", "site", "public", "s");
+const publicRoot = join(here, "..", "apps", "africa", "public", "s");
 const tokenFile = join(here, ".stage-token");
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://kisi.africa").replace(/\/$/, "");
 

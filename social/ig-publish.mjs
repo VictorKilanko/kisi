@@ -25,7 +25,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const here = dirname(fileURLToPath(import.meta.url));
-const publicRoot = join(here, "..", "site", "public", "s");
+const publicRoot = join(here, "..", "apps", "africa", "public", "s");
 
 const TOKEN = process.env.IG_PAGE_TOKEN || process.env.IG_ACCESS_TOKEN;
 const IG_ID = process.env.IG_BUSINESS_ACCOUNT_ID;
