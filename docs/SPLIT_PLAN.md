@@ -90,10 +90,11 @@ social/          IG factory (repoint off site/content paths)                    
 - [x] verify: redirects compiled into routes-manifest (6, 308); social --list resolves the
       new path; turbo typecheck 4 / test 44 / build 3 all green; commit
 
-### Phase 5 — Gates, docs, handoff
-- [ ] corepack pnpm -r lint / typecheck / test / build all green
-- [ ] docs/PROGRESS.md, docs/LESSONS.md, docs/MONOREPO.md (per-app Vercel Root Directory)
-- [ ] expert subagent audits full diff
+### Phase 5 — Gates, docs, handoff  ⏳ IN PROGRESS
+- [x] workspace gates green (typecheck 4, test 44, build 3)
+- [x] docs/PROGRESS.md, docs/LESSONS.md updated; docs/MONOREPO.md written (structure +
+      local dev + full Vercel deploy guide answering the subdomain question)
+- [ ] expert subagent audit of full diff (running); address findings
 - [ ] push (ONLY after owner changes kisi.africa Vercel Root Directory site -> apps/africa)
 
 ## Owner actions outstanding (for deploy, not blocking local build)

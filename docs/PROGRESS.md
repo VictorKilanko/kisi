@@ -6,7 +6,7 @@ Read this file at the start of every session, after the project brief.
 
 | Item | State |
 |---|---|
-| Current phase | **Three-brand split in progress (2026-08-20).** Repo is now a pnpm+turbo **monorepo**: the app is `apps/africa` (kisi.africa), the cast lives in `packages/canon`. Foundation (Phases 0+1) committed locally, **not yet pushed** (see the critical Vercel blocker in [[LESSONS]]). Next: scaffold `apps/farm` + `apps/kids`, then build kisifarm. See `docs/LESSONS.md` for the full plan. |
+| Current phase | **Three-brand split built (2026-08-20), not yet pushed.** pnpm+turbo **monorepo**: `apps/africa` (kisi.africa, de-commerced), `apps/farm` (kisifarm, fully built), `apps/kids` (scaffold), cast in `packages/canon`, tokens in `packages/brand`. Phases 0-4 committed locally. Remaining: expert audit + push, **gated on the owner changing the kisi.africa Vercel Root Directory `site` -> `apps/africa`**. See `docs/SPLIT_PLAN.md` (live checklist) + `docs/MONOREPO.md` (Vercel guide). |
 | Active branch | `feature/kisi-poultry-republic` == `main` == `origin` (all at the same commit; 0 unpushed as of 2026-07-31) |
 | Node / gates | **Node v24.18.1.** pnpm is not installed; use **`corepack pnpm ...`**. Gates run per-package via filters, e.g. `corepack pnpm --filter @kisi/africa build`. As of 2026-08-20: canon typecheck + 18 tests, africa typecheck + 13 api tests + build (85 pages) all green. See [[farm-node-not-installed]] (build fetches Google Fonts; OneDrive holds dir handles) |
 | PWA | **Installable PWA (2026-07-31):** `app/manifest.ts`, `public/sw.js` (offline), Taco-face icons, `/offline`. See [[LESSONS]] |

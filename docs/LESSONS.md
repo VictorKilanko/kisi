@@ -59,11 +59,30 @@ kisi.africa project **Root Directory from `site` to `apps/africa`** in the Verce
 push until that is done (or the owner is standing by to do it right after). `social/` scripts also
 still point at the old `site/content` paths and are temporarily broken until repointed in Phase 4.
 
+### Phases 2-4 (same day, all committed, still not pushed)
+- **Phase 2** (`4e02f29`): `packages/brand` (@kisi/brand) = shared tokens.css + base.css;
+  africa now consumes them (single source of truth for colour). Scaffolded `apps/farm`
+  (real business shell, pulls laying hens from canon) and `apps/kids` (brighter theme on the
+  shared brand, "hatching soon"). Sibling URLs are env-overridable (subdomain-ready).
+- **Phase 3** (`6dbb5fb`): kisifarm built fully. /eggs (order + milestones + census), /chicks
+  (hatchery, honest placeholder), /support + /support/terms, /about, /visit, legal. Reused
+  OrderForm/SupportCheckout/NewsletterForm/Cards/Badges/ChickenPortrait/Disclaimer,
+  lib/payments (LOCKED, sandbox), lib/mail, lib/rateLimit, and the api routes; 13 api tests.
+- **Phase 4** (`40e8813`): de-commerced kisi.africa. Env-gated 308 redirects
+  (NEXT_PUBLIC_COMMERCE_ON_FARM, OFF by default) for /shop /eggs /support* /about /visit ->
+  farm. Footer links out to the farm shop + Kisi Kids. Repointed social/ scripts publicRoot
+  site -> apps/africa.
+- **Lessons this stretch:** Tailwind v4 resolves bare-specifier CSS imports from a workspace
+  package (so @kisi/brand tokens work); Next 16 emits built CSS under `.next/static/chunks/`
+  (grep there, not `static/css/`); turbo needs a `pnpm` binary on PATH (shim at `~/bin`);
+  next/font loaders must stay in each app (not a shared package). Whole workspace: typecheck 4,
+  test 44, build 3, all green.
+
 ### Left to do
-- Phase 2: scaffold `apps/farm` + `apps/kids`, extract `packages/brand` (shared tokens).
-- Phase 3: build kisifarm fully (eggs, day-old chicks/hatchery, support, about, visit).
-- Phase 4: de-commerce kisi.africa (301s), repoint `social/` scripts.
-- Phase 5: workspace-wide gates, docs, expert audit, push (after the Vercel Root Directory change).
+- Phase 5: `docs/MONOREPO.md` written (structure + full Vercel deploy guide); expert subagent
+  audit of the full diff in progress; then push. Push is gated on the owner changing the
+  kisi.africa Vercel Root Directory `site` -> `apps/africa`; then deploy farm/kids and flip
+  COMMERCE_ON_FARM. See `docs/SPLIT_PLAN.md` for the live checklist.
 
 ---
 
