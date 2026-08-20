@@ -101,7 +101,9 @@ social/          IG factory (repoint off site/content paths)                    
       - M3 added farm sitemap/robots/icon/opengraph-image
       - Q2 (owner) kept africa's own /about + /visit (dropped from redirect list)
       - L1 301->308 wording, L2 stale comments, L3 kids CTA contrast (dark text)
-- [ ] push (ONLY after owner changes kisi.africa Vercel Root Directory site -> apps/africa)
+- [x] **PUSHED LIVE 2026-08-20** (`516c2cf` on main). Owner changed the kisi.africa Vercel
+      Root Directory to apps/africa; merged origin/main's IG-cron commits cleanly (manifest
+      preserved, 21/21 posted); pushed feature branch + main. Production deploys from apps/africa.
 
 ### Phase 6 (follow-ups, after the redirect flip is confirmed live) — not started
 - [ ] delete africa's now-shadowed commerce (shop/eggs/support pages + the duplicated
@@ -121,7 +123,15 @@ social/          IG factory (repoint off site/content paths)                    
 
 ## Resume point
 
-**2026-08-20:** Phases 0-4 done and committed (not pushed). Monorepo + shared canon + shared
+**2026-08-20 (LIVE):** All phases done and **pushed to main (`516c2cf`)**; kisi.africa
+production deploys from `apps/africa` (commerce flag off, so it still self-serves the shop).
+Remaining owner steps, when ready: create Vercel projects for farm (`apps/farm`) and kids
+(`apps/kids`) with the subdomains + env vars, then set `NEXT_PUBLIC_COMMERCE_ON_FARM=true`
+on kisi.africa to flip the shop to the farm. Phase 6 follow-ups (delete africa's shadowed
+commerce; real farm /visit contact route) still open. Also check the IG-cron GitHub Action
+still points at the new `apps/africa/public/s` path.
+
+**Earlier 2026-08-20:** Phases 0-4 done and committed (not pushed). Monorepo + shared canon + shared
 brand + kisifarm fully built + kisikids scaffold + kisi.africa de-commerced (env-gated redirects
 OFF by default, footer links out, social scripts repointed). Whole workspace green (typecheck 4,
 test 44, build 3). Next up: **Phase 5 — final gates, docs (MONOREPO.md, PROGRESS/LESSONS),
