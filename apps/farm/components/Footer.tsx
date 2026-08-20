@@ -1,3 +1,4 @@
+import { NewsletterForm } from "@/components/NewsletterForm";
 import { AFRICA_URL, KIDS_URL } from "@/lib/site";
 
 /** kisifarm footer, with the links out to the rest of the Kisi universe. */
@@ -28,11 +29,11 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <p className="kicker text-kisi-charcoal-600">The farm</p>
-          <ul className="mt-2 space-y-1">
-            <li>Eggs and day-old chicks</li>
-            <li>Southwestern Nigeria</li>
-          </ul>
+          <p className="kicker text-kisi-charcoal-600">Farm news</p>
+          <p className="mt-2 text-kisi-charcoal-600">
+            Egg availability and farm updates, now and then. No spam.
+          </p>
+          <NewsletterForm />
         </div>
       </div>
       <div className="border-t border-kisi-green-700/10 px-4 py-4 text-center text-xs text-kisi-charcoal-600">

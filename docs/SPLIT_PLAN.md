@@ -68,13 +68,16 @@ social/          IG factory (repoint off site/content paths)                    
 - [x] verify: turbo build 3 apps, typecheck 4, test canon 18 + africa 13 — all green
 - [ ] commit + update this file
 
-### Phase 3 — Build kisifarm fully
-- [ ] move commerce into apps/farm: /eggs (order), /chicks (day-old + hatchery),
-      /support + /support/terms, /about (real farm), /visit, legal
-- [ ] reuse OrderForm, SupportCheckout, NewsletterForm, lib/payments (locked), lib/mail, APIs
-- [ ] character-driven marketing pulling portraits/names from @kisi/canon
-- [ ] kisi.africa commerce still live in parallel (no redirect yet)
-- [ ] verify build + sandbox flows; commit
+### Phase 3 — Build kisifarm fully  ✅ DONE
+- [x] commerce in apps/farm: /eggs (order + milestones + census), /chicks (day-old +
+      hatchery, honest placeholder), /support + /support/terms, /about, /visit, legal/*
+- [x] reused OrderForm, SupportCheckout, NewsletterForm (in footer), Cards/Badges/
+      ChickenPortrait/Disclaimer, lib/payments (LOCKED, sandbox), lib/mail, lib/rateLimit,
+      and the orders/support(checkout+webhook)/newsletter API routes
+- [x] character-driven marketing: farm home + /eggs pull laying hens/milestones from @kisi/canon
+- [x] kisi.africa commerce still live in parallel (redirect is Phase 4)
+- [x] farm .env.example added; api.test.ts brought over (13 tests)
+- [x] verify: farm typecheck + lint(0) + 13 tests + build (14 routes) all green; commit
 
 ### Phase 4 — De-commerce kisi.africa
 - [ ] 301 redirects in apps/africa/next.config.ts: /shop /eggs /support* -> kisifarm
@@ -97,8 +100,8 @@ social/          IG factory (repoint off site/content paths)                    
 
 ## Resume point
 
-**2026-08-20:** Phases 0+1+2 done and committed (not pushed). Monorepo + shared canon +
-shared brand + all three apps build. Next up: **Phase 3 — build kisifarm fully** (move
-commerce into apps/farm: /eggs, /chicks, /support + terms, /about, /visit, reuse OrderForm /
-SupportCheckout / payments (locked) / mail / APIs; character-driven marketing from canon;
-kisi.africa commerce stays live in parallel). `/about` + `/visit` confirmed for kisifarm.
+**2026-08-20:** Phases 0+1+2+3 done and committed (not pushed). kisifarm is fully built
+(eggs, day-old chicks, support, about, visit, legal; payments sandbox-locked; 13 api tests).
+kisi.africa commerce still live in parallel. Next up: **Phase 4 — de-commerce kisi.africa**
+(301 redirects /shop /eggs /support* -> farm; nav/footer link out to farm+kids; repoint
+social/ scripts off the old site/content paths). Then Phase 5 (gates, docs, expert audit, push).
