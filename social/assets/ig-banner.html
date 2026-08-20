@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --green: #1f5130;
+    --green-deep: #16371f;
+    --gold: #d9a02b;
+    --gold-soft: #f0c14b;
+    --cream: #faf5e9;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  /* Instagram landscape / link-in-bio banner, 1.91:1 */
+  .banner {
+    position: relative;
+    width: 1080px;
+    height: 566px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    padding: 0 88px;
+    background: radial-gradient(120% 140% at 18% 10%, #245c37 0%, var(--green) 52%, var(--green-deep) 100%);
+    color: var(--cream);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* faint feather-comb motif, top-right */
+  .banner::after {
+    content: "";
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, rgba(240,193,75,0.14), rgba(240,193,75,0) 70%);
+  }
+
+  .crest {
+    width: 240px; height: 240px;
+    flex: none;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--gold-soft), 0 18px 40px rgba(0,0,0,0.28);
+  }
+
+  .copy { position: relative; z-index: 1; }
+
+  .kicker {
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    margin: 0 0 18px;
+  }
+
+  .wordmark {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 104px;
+    line-height: 0.98;
+    letter-spacing: -1px;
+    margin: 0;
+  }
+
+  .tagline {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 34px;
+    line-height: 1.25;
+    margin: 22px 0 0;
+    color: #fff;
+  }
+
+  .foot {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gold-soft);
+  }
+  .foot .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <img class="crest" src="taco.svg" alt="Taco, mascot of Kisi Farm">
+    <div class="copy">
+      <p class="kicker">A farm run by its chickens</p>
+      <h1 class="wordmark">Kisi Farm</h1>
+      <p class="tagline">Where every chicken has a story.</p>
+      <div class="foot"><span>kisi.africa</span><span class="dot"></span><span>Southwest Nigeria</span></div>
+    </div>
+  </div>
+</body>
+</html>
