@@ -4,6 +4,24 @@ import { FARM_URL, KIDS_URL } from "@/lib/site";
 
 const isExternal = (href: string) => href.startsWith("http");
 
+// Until the farm site is deployed and commerce flips to it, keep the footer's
+// shop links internal (kisi.africa still serves its own shop). Once the owner
+// sets NEXT_PUBLIC_COMMERCE_ON_FARM=true, the same links point out to the farm.
+const COMMERCE_ON_FARM = process.env.NEXT_PUBLIC_COMMERCE_ON_FARM === "true";
+
+const shopLinks = COMMERCE_ON_FARM
+  ? [
+      { href: `${FARM_URL}/eggs`, label: "Order Eggs" },
+      { href: `${FARM_URL}/chicks`, label: "Day-old Chicks" },
+      { href: `${FARM_URL}/support`, label: "Support the Chickens" },
+      { href: KIDS_URL, label: "Kisi Kids" },
+    ]
+  : [
+      { href: "/shop", label: "Order Eggs" },
+      { href: "/eggs", label: "Egg Life" },
+      { href: "/support", label: "Support the Chickens" },
+    ];
+
 const FOOTER_LINKS = [
   {
     heading: "The Republic",
@@ -18,15 +36,13 @@ const FOOTER_LINKS = [
     ],
   },
   {
-    // kisi.africa keeps its own About and Visit; the shop links out to kisifarm.
+    // kisi.africa keeps its own About and Visit; the shop links switch to the
+    // farm once it is live (see shopLinks above).
     heading: "The Farm",
     links: [
       { href: "/about", label: "About Kisi" },
       { href: "/visit", label: "Visit & Contact" },
-      { href: `${FARM_URL}/eggs`, label: "Order Eggs" },
-      { href: `${FARM_URL}/chicks`, label: "Day-old Chicks" },
-      { href: `${FARM_URL}/support`, label: "Support the Chickens" },
-      { href: KIDS_URL, label: "Kisi Kids" },
+      ...shopLinks,
     ],
   },
   {
@@ -34,7 +50,10 @@ const FOOTER_LINKS = [
     links: [
       { href: "/legal/privacy", label: "Privacy Policy" },
       { href: "/legal/terms", label: "Terms of Use" },
-      { href: `${FARM_URL}/support/terms`, label: "Support Terms" },
+      {
+        href: COMMERCE_ON_FARM ? `${FARM_URL}/support/terms` : "/support/terms",
+        label: "Support Terms",
+      },
     ],
   },
 ];
