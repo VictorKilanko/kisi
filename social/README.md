@@ -93,7 +93,7 @@ medallion), `t-times` (Coop Times newspaper for news and arcs).
 
 # The cast (the ensemble)
 
-The characters below already exist in the site content (`site/content/chickens.ts`). This
+The characters below already exist in the site content (`packages/canon/src/data/chickens.ts`). This
 is the roster to draw on for cast-intro posts and story arcs. We do **not** need to post
 all of them at once; we introduce them as the stories call for them.
 
@@ -150,7 +150,7 @@ arcs to keep new faces coming.
 - **Recurring · The Coop Times single posts:** gossip, quotes, "spotted at the fence"
   cliffhangers between arcs.
 
-Existing written arcs to adapt (in `site/content/timeline.ts`): Chi-Chi's first egg, the
+Existing written arcs to adapt (in `packages/canon/src/data/timeline.ts`): Chi-Chi's first egg, the
 grain affair, Mama Gold's retirement, the perch championship, flu season, **the drain**,
 the full cabinet, and **the nesting box election** (already built as posts 08 to 12).
 

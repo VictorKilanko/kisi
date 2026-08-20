@@ -18,7 +18,7 @@ in the Meta app dashboard and update `social/.env`.
    no "publish at 9am Tuesday" field. So "scheduling" = running `ig-publish.mjs` at the
    chosen time, driven by a cron or the `/schedule` skill.
 2. **Images must be at public HTTPS URLs.** The API fetches each image over the internet;
-   it cannot take a local file. So the staged PNGs in `site/public/s/<token>/` must be
+   it cannot take a local file. So the staged PNGs in `apps/africa/public/s/<token>/` must be
    **committed and deployed** (Vercel) before publishing, or the API gets a 404.
 
 ## The operating loop
@@ -26,7 +26,7 @@ in the Meta app dashboard and update `social/.env`.
 ```
 stage      node social/stage-to-public.mjs <arc-slug>      # copies PNGs, writes manifest
 caption    fill each manifest post's "caption" from social/captions.md
-deploy     commit site/public/s/** and deploy, so the image URLs are LIVE
+deploy     commit apps/africa/public/s/** and deploy, so the image URLs are LIVE
 inspect    node --env-file=social/.env social/ig-publish.mjs --list      # account + history + manifest
 dry run    node --env-file=social/.env social/ig-publish.mjs --only <name>   # shows what WOULD post
 publish    node --env-file=social/.env social/ig-publish.mjs --only <name> --publish

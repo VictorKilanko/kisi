@@ -127,9 +127,12 @@ social/          IG factory (repoint off site/content paths)                    
 production deploys from `apps/africa` (commerce flag off, so it still self-serves the shop).
 Remaining owner steps, when ready: create Vercel projects for farm (`apps/farm`) and kids
 (`apps/kids`) with the subdomains + env vars, then set `NEXT_PUBLIC_COMMERCE_ON_FARM=true`
-on kisi.africa to flip the shop to the farm. Phase 6 follow-ups (delete africa's shadowed
-commerce; real farm /visit contact route) still open. Also check the IG-cron GitHub Action
-still points at the new `apps/africa/public/s` path.
+on kisi.africa to flip the shop to the farm. Fixed the GitHub Actions workflows for the monorepo: ig-schedule.yml now commits
+`apps/africa/public/s` (was `site/public/s`, which would have silently re-posted arcs), and
+ci.yml runs the pnpm/turbo workspace gates (was npm in `site/`). Social docs (story.md,
+README.md, IG_SETUP.md) repointed `site/content` -> `packages/canon/src/data`. Phase 6
+follow-ups still open: delete africa's shadowed commerce after the redirect flip; real farm
+/visit contact route.
 
 **Earlier 2026-08-20:** Phases 0-4 done and committed (not pushed). Monorepo + shared canon + shared
 brand + kisifarm fully built + kisikids scaffold + kisi.africa de-commerced (env-gated redirects

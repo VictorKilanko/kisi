@@ -40,7 +40,7 @@ Write like a top screenwriter breaking a story, not like a bot filling a templat
 1. **Choose the shape.** Decide the piece: a multi-slide **arc** (the main unit, 2 to 5
    beats), a **cast intro** (a single new face), or a **Coop Times** news beat (a single
    reported item between arcs). Most cycles produce one arc.
-2. **Cast from the bible.** Open `site/content/chickens.ts` and cast real characters. Keep
+2. **Cast from the bible.** Open `packages/canon/src/data/chickens.ts` and cast real characters. Keep
    everyone in voice: the President decrees, Halima is iron and dry, the Chief Justice
    rules in proverbs, Kola Quill gossips in headlines, Dr. Featherwell is calm and factual.
    If the story needs a genuinely new character, add them properly to `chickens.ts` in the
@@ -75,17 +75,17 @@ voice, drama quality, house style, and the funnel rule.
 Write the approved content into the real data model so it renders on the live routes.
 Match each file's existing TypeScript shape exactly; run the gates after (Stage 6a).
 
-- **Arcs** → `site/content/timeline.ts` → renders at **/republic/stories** (the "Big
+- **Arcs** → `packages/canon/src/data/timeline.ts` → renders at **/republic/stories** (the "Big
   Stories"). **Give these more juice than the slides.** The website bodies are decoupled from
   the Instagram slide copy on purpose: write each beat as a richer, warmer, 3 to 6 sentence
   passage in conversational English with real flow, while the slides stay tight. Still clear
   enough for a 6-year-old, just fuller. The Fence Line arc is the reference for length and
   voice. The nav item for these is **Farm Stories** (top-level), and /flock links straight
   in, so this page carries real traffic; make it worth the click.
-- **Social beats, friendships, events** → `site/content/social.ts` → **/republic/social**.
-- **Reported news, gossip, quotes** → `site/content/articles.ts` → **/news** (and
+- **Social beats, friendships, events** → `packages/canon/src/data/social.ts` → **/republic/social**.
+- **Reported news, gossip, quotes** → `packages/canon/src/data/articles.ts` → **/news** (and
   `/news/[slug]`).
-- **New or changed characters** → `site/content/chickens.ts` → **/flock** and
+- **New or changed characters** → `packages/canon/src/data/chickens.ts` → **/flock** and
   **/flock/[slug]**. Cross-link characters, ministries, and events where natural.
 - Keep the tone identical to what is already in those files. Add, don't rewrite history.
 
@@ -120,7 +120,7 @@ final slide sells.
 ## Stage 6 — STAGE TO THE PUBLIC PATH
 
 1. Run `node social/stage-to-public.mjs <arc-slug> [more names...]` (or `--all`). This
-   copies the approved PNGs into `site/public/s/<token>/`, groups multi-slide arcs into one
+   copies the approved PNGs into `apps/africa/public/s/<token>/`, groups multi-slide arcs into one
    carousel, and writes `manifest.json` with the live URLs, target route, and a caption
    slot. The token folder is unguessable on the web but still lives in the repo; that is
    fine for scheduled marketing images.

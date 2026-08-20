@@ -2,9 +2,9 @@ name: Instagram scheduler
 
 # Posts the next queued Kisi arc to Instagram on a schedule. The Instagram Graph API has
 # no native scheduling, so this cron IS the schedule: each run publishes exactly one
-# oldest-staged arc from site/public/s/<token>/manifest.json (via `ig-publish.mjs --next`)
-# and commits the manifest back so the next run does not repeat it. Images must already be
-# deployed (they live under site/public/ and ship with the site), which they are.
+# oldest-staged arc from apps/africa/public/s/<token>/manifest.json (via `ig-publish.mjs
+# --next`) and commits the manifest back so the next run does not repeat it. Images must
+# already be deployed (they live under apps/africa/public/ and ship with the site).
 #
 # Cadence: once daily, at 06:00 UTC. 06:00 UTC = 02:00 America/New_York while EDT is in effect
 # (2 AM Eastern, the standing daily slot). GitHub cron is fixed UTC and does not follow daylight
@@ -44,12 +44,12 @@ jobs:
 
       - name: Record the post (commit updated manifest)
         run: |
-          if git diff --quiet -- site/public/s; then
+          if git diff --quiet -- apps/africa/public/s; then
             echo "Queue empty or nothing published; no manifest change."
           else
             git config user.name "kisi-bot"
             git config user.email "actions@users.noreply.github.com"
-            git add site/public/s
+            git add apps/africa/public/s
             git commit -m "chore(social): mark next arc posted [skip ci]"
             git push origin HEAD:main
           fi

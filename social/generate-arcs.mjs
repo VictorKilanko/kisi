@@ -1,6 +1,6 @@
 /**
  * Generates one Instagram slide (HTML) per story-arc beat, in the Coop Times
- * style, into posts/arc-<slug>-<n>.html. Content mirrors site/content/timeline.ts.
+ * style, into posts/arc-<slug>-<n>.html. Content mirrors packages/canon/src/data/timeline.ts.
  * Numbering ("Part N of M") is on-card because these are multi-slide carousels.
  * The final slide of every arc routes to Support (the standing funnel rule).
  *
