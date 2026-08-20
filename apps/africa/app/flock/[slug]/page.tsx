@@ -13,7 +13,7 @@ import {
   getTeam,
   milestonesForChicken,
   timelineForChicken,
-} from "@/lib/content";
+} from "@kisi/canon";
 
 export function generateStaticParams() {
   return chickens.map((c) => ({ slug: c.id }));

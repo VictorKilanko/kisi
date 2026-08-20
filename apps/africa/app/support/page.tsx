@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
 import { PlaceholderNotice } from "@/components/Disclaimer";
 import { SupportCheckout } from "@/components/SupportCheckout";
-import { supportTiers } from "@/lib/content";
+import { supportTiers } from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "Support the Chickens",

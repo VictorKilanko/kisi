@@ -16,7 +16,7 @@ import {
   getChicken,
   leagueTable,
   ministries,
-} from "@/lib/content";
+} from "@kisi/canon";
 
 export default function Home() {
   const president = getChicken("adedoyin-mama-decree");

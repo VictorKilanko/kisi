@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
 import { PlaceholderNotice } from "@/components/Disclaimer";
-import { farmStats } from "@/lib/content";
+import { farmStats } from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "About Kisi Farm",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
 import { Poll } from "@/components/Poll";
-import { bills, findChicken, parties } from "@/lib/content";
+import { bills, findChicken, parties } from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "The Coop Assembly",

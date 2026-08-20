@@ -3,8 +3,8 @@ import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
 import { WantedPoster } from "@/components/WantedPoster";
-import { monitorLizard } from "@/content/wanted";
-import { getChicken } from "@/lib/content";
+import { monitorLizard } from "@kisi/canon";
+import { getChicken } from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "Most Wanted, The Monitor Lizard",

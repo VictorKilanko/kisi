@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { findChicken, getSupportTier } from "@/lib/content";
+import { findChicken, getSupportTier } from "@kisi/canon";
 import { getPayments } from "@/lib/payments";
 import { clientKey, rateLimit } from "@/lib/rateLimit";
 

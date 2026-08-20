@@ -1,4 +1,4 @@
-import type { TimelineEvent } from "@/lib/schemas";
+import type { TimelineEvent } from "../schemas";
 
 /**
  * Timeline events across the Republic.

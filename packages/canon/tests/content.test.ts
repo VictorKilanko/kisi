@@ -11,14 +11,14 @@ import {
   storyArcs,
   supportTiers,
   timelineEvents,
-} from "@/lib/content";
-import { ChickenSchema, FarmStatSchema, PartySchema } from "@/lib/schemas";
+} from "../src/content";
+import { ChickenSchema, FarmStatSchema, PartySchema } from "../src/schemas";
 
 /**
- * Content integrity tests. Importing @/lib/content already executes the
- * build-time validation (schemas + referential checks) — these tests make
- * the same guarantees explicit and add schema-rejection cases that can't
- * be exercised by valid content alone.
+ * Content integrity tests. Importing the canon loader already runs its
+ * build-time validation (schemas plus referential checks). These tests make
+ * the same guarantees explicit and add schema-rejection cases that valid
+ * content alone cannot exercise.
  */
 
 describe("content loads and validates", () => {
@@ -159,9 +159,11 @@ describe("derived data", () => {
 
   it("story arcs all have metadata and ordered events", () => {
     const arcs = storyArcs();
-    // chi-chi-first-egg, grain-affair, mama-gold-retirement, perch-championship,
-    // flu-season, the-drain, the-full-cabinet, the-nesting-box-election
-    expect(arcs.length).toBe(9);
+    // storyArcs() only returns arcs whose events have already been revealed by
+    // the date gate, so the count grows as the story unfolds. Assert a floor
+    // (the Season 1 core plus early standing arcs) and the specific arcs below,
+    // rather than an exact count that breaks with the passage of time.
+    expect(arcs.length).toBeGreaterThanOrEqual(9);
     expect(arcs.map((a) => a.id)).toContain("the-drain");
     expect(arcs.map((a) => a.id)).toContain("the-full-cabinet");
     expect(arcs.map((a) => a.id)).toContain("the-nesting-box-election");

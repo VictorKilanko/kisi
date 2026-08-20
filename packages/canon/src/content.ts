@@ -20,29 +20,29 @@ import {
   type Party,
   type Team,
   type TimelineEvent,
-} from "@/lib/schemas";
-import { articles as rawArticles } from "@/content/articles";
-import { chickens as rawChickens } from "@/content/chickens";
-import { eggCensus, eggMilestones as rawMilestones } from "@/content/eggs";
-import { farmStats as rawStats, mascot } from "@/content/farm";
+} from "./schemas";
+import { articles as rawArticles } from "./data/articles";
+import { chickens as rawChickens } from "./data/chickens";
+import { eggCensus, eggMilestones as rawMilestones } from "./data/eggs";
+import { farmStats as rawStats, mascot } from "./data/farm";
 import {
   bills as rawBills,
   executiveOrders as rawOrders,
   presidentialDiary,
-} from "@/content/government";
-import { ministries as rawMinistries } from "@/content/ministries";
-import { parties as rawParties } from "@/content/parties";
-import { socialEvents as rawSocial } from "@/content/social";
-import { tribes as rawTribes } from "@/content/tribes";
-import { supportTiers as rawTiers } from "@/content/support";
+} from "./data/government";
+import { ministries as rawMinistries } from "./data/ministries";
+import { parties as rawParties } from "./data/parties";
+import { socialEvents as rawSocial } from "./data/social";
+import { tribes as rawTribes } from "./data/tribes";
+import { supportTiers as rawTiers } from "./data/support";
 import {
   fixtures,
   matches as rawMatches,
   perchChampionship,
   teams as rawTeams,
   topScorers,
-} from "@/content/sports";
-import { timelineEvents as rawTimeline } from "@/content/timeline";
+} from "./data/sports";
+import { timelineEvents as rawTimeline } from "./data/timeline";
 
 /**
  * Content loading + validation.

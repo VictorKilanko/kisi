@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ChickenCard, SectionHeading, formatDate } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
 import { Poll } from "@/components/Poll";
-import { executiveOrders, getChicken, presidentialDiary } from "@/lib/content";
+import { executiveOrders, getChicken, presidentialDiary } from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "The Presidency",

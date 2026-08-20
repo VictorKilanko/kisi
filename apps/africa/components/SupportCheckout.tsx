@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { SupportTier } from "@/lib/schemas";
+import type { SupportTier } from "@kisi/canon";
 
 type State =
   | { status: "idle" }

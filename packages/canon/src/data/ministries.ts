@@ -1,4 +1,4 @@
-import type { Ministry } from "@/lib/schemas";
+import type { Ministry } from "../schemas";
 
 /**
  * the fictional cabinet ministries of the Republic of Kisi.

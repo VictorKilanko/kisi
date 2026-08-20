@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArticleCard, formatDate } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
-import { articles, findChicken, getArticle, getMinistry } from "@/lib/content";
+import { articles, findChicken, getArticle, getMinistry } from "@kisi/canon";
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.id }));

@@ -1,4 +1,4 @@
-import type { SocialEvent } from "@/lib/schemas";
+import type { SocialEvent } from "../schemas";
 
 /**
  * the Republic's social calendar. The tone borrows the

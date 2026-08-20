@@ -1,4 +1,4 @@
-import type { ChickenStatus, Tribe } from "@/lib/schemas";
+import type { ChickenStatus, Tribe } from "@kisi/canon";
 
 /** Citizen status badges used across the flock directory and profiles. */
 

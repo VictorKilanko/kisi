@@ -1,4 +1,4 @@
-import type { SupportTier } from "@/lib/schemas";
+import type { SupportTier } from "../schemas";
 
 /**
  * planned support tiers.

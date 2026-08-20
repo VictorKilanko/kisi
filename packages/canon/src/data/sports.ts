@@ -1,4 +1,4 @@
-import type { Match, Team } from "@/lib/schemas";
+import type { Match, Team } from "../schemas";
 
 /** the fictional Coop Premier League and championships. */
 export const teams: Team[] = [

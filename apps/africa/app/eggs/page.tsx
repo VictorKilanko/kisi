@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { MilestoneCard, SectionHeading } from "@/components/Cards";
-import { eggCensus, eggMilestones } from "@/lib/content";
+import { eggCensus, eggMilestones } from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "Egg Life",

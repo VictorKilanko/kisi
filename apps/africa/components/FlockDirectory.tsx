@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { ChickenCard } from "@/components/Cards";
-import type { Chicken } from "@/lib/schemas";
+import type { Chicken } from "@kisi/canon";
 
 const BRANCH_LABELS: Record<string, string> = {
   all: "All roles",

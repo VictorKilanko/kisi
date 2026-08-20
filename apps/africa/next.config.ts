@@ -11,6 +11,9 @@ import type { NextConfig } from "next";
  * is a Vercel environment variable rather than a code change.
  */
 const nextConfig: NextConfig = {
+  // Shared workspace packages are consumed as TypeScript source, so Next must
+  // transpile them rather than expect a pre-built dist.
+  transpilePackages: ["@kisi/canon"],
   async headers() {
     return [
       {

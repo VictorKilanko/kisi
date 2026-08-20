@@ -1,4 +1,4 @@
-import type { Chicken } from "@/lib/schemas";
+import type { Chicken } from "@kisi/canon";
 
 /**
  * Procedural SVG portrait, an original, license-free stand-in until real

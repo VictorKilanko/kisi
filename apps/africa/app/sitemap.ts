@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { articles, chickens, ministries } from "@/lib/content";
+import { articles, chickens, ministries } from "@kisi/canon";
 import { SITE_URL as BASE } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {

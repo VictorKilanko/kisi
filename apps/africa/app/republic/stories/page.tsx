@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading, Timeline } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
-import { findChicken, storyArcs } from "@/lib/content";
+import { findChicken, storyArcs } from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "Story Arcs",

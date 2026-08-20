@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MascotPortrait } from "@/components/MascotPortrait";
-import { mascot } from "@/lib/content";
+import { mascot } from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "Taco, the Mascot",

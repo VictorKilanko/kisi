@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
 import { FlockDirectory } from "@/components/FlockDirectory";
-import { chickens, chickensOfTribe, tribes } from "@/lib/content";
+import { chickens, chickensOfTribe, tribes } from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "Meet the Flock",

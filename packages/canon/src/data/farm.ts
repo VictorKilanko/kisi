@@ -1,4 +1,4 @@
-import type { FarmStat } from "@/lib/schemas";
+import type { FarmStat } from "../schemas";
 
 /**
  * REAL-FARM CONTENT AREA.

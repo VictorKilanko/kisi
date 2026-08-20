@@ -1,4 +1,4 @@
-import type { Party } from "@/lib/schemas";
+import type { Party } from "../schemas";
 
 /**
  * entirely fictional political parties of the Republic of

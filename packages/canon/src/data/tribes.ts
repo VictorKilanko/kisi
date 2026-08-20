@@ -1,4 +1,4 @@
-import type { Tribe } from "@/lib/schemas";
+import type { Tribe } from "../schemas";
 
 /**
  * The two founding lines of the Republic of Kisi.

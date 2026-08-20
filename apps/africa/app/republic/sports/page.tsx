@@ -9,7 +9,7 @@ import {
   matches,
   perchChampionship,
   topScorers,
-} from "@/lib/content";
+} from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "Sports",

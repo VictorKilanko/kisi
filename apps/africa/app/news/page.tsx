@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleCard } from "@/components/Cards";
-import { articles } from "@/lib/content";
+import { articles } from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "The Coop Times",

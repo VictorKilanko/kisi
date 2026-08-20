@@ -1,4 +1,4 @@
-import type { Chicken } from "@/lib/schemas";
+import type { Chicken } from "../schemas";
 
 /**
  * The citizens of the Republic of Kisi.

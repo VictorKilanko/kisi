@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
-import { getChicken, ministries, ministerOf } from "@/lib/content";
+import { getChicken, ministries, ministerOf } from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "Government & Cabinet",

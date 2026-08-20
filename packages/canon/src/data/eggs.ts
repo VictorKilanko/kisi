@@ -1,4 +1,4 @@
-import type { EggMilestone } from "@/lib/schemas";
+import type { EggMilestone } from "../schemas";
 
 /**
  * Egg milestones recorded at Kisi.

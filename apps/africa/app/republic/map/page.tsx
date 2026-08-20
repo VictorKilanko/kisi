@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { MapExperience } from "@/components/map/MapExperience";
-import { getChicken } from "@/lib/content";
+import { getChicken } from "@kisi/canon";
 import { MAP_HOTSPOTS, type EnrichedHotspot } from "@/lib/mapData";
 
 export const metadata: Metadata = {

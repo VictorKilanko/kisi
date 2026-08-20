@@ -1,4 +1,4 @@
-import type { Bill, ExecutiveOrder } from "@/lib/schemas";
+import type { Bill, ExecutiveOrder } from "../schemas";
 
 /** fictional legislation of the Coop Assembly. */
 export const bills: Bill[] = [

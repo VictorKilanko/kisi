@@ -1,4 +1,4 @@
-import type { Article } from "@/lib/schemas";
+import type { Article } from "../schemas";
 
 /**
  * The Coop Times, the newspaper of the Republic of Kisi.

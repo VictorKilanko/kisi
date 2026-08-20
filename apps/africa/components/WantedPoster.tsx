@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MonitorLizard } from "@/components/MonitorLizard";
-import { monitorLizard } from "@/content/wanted";
+import { monitorLizard } from "@kisi/canon";
 
 /**
  * The Most Wanted poster. `full` renders the complete notice (the dedicated

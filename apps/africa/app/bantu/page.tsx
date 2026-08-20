@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
 import { WantedPoster } from "@/components/WantedPoster";
 import { WellWishesForm } from "@/components/WellWishesForm";
-import { getChicken } from "@/lib/content";
+import { getChicken } from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "Bantu, Night Watchman of Coop Two",

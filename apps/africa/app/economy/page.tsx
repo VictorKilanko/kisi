@@ -8,7 +8,7 @@ import {
   eggMilestones,
   getMinistry,
   ministerOf,
-} from "@/lib/content";
+} from "@kisi/canon";
 
 export const metadata: Metadata = {
   title: "The Economy, Eggs, the Hatchery & the Feed Budget",
