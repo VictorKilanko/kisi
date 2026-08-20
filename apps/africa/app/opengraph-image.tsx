@@ -102,7 +102,7 @@ export default async function Image() {
 
         {font ? (
           <div style={{ display: "flex", marginTop: "44px", fontSize: "26px", color: GREEN }}>
-            kisi.africa | Order farm-fresh eggs
+            kisi.africa | Meet the Republic of Kisi
           </div>
         ) : null}
       </div>

@@ -9,13 +9,14 @@ import {
   getMinistry,
   ministerOf,
 } from "@kisi/canon";
+import { FARM_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The Economy, Eggs, the Hatchery & the Feed Budget",
   description:
     "The economy of the Republic of Kisi runs on one thing: good eggs, laid by " +
-    "named hens and counted honestly. Order a crate, ask about day-old chicks, " +
-    "and meet the ministers who keep the feed budget straight.",
+    "named hens and counted honestly. The National Egg Census, the hatchery, and " +
+    "the ministers who keep the feed budget straight.",
 };
 
 // The economic cabinet, the ministries that run the nation's business.
@@ -42,12 +43,12 @@ export default function EconomyPage() {
           kitchen was laid by a hen with a name, a page, and, frankly, opinions.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <Link
-            href="/shop"
+          <a
+            href={`${FARM_URL}/eggs`}
             className="rounded-full bg-kisi-gold-500 px-6 py-3 font-semibold text-kisi-charcoal-900 hover:bg-kisi-gold-300"
           >
-            Order our eggs
-          </Link>
+            Buy eggs at Kisi Farm &rarr;
+          </a>
           <Link
             href="/eggs"
             className="rounded-full border border-kisi-cream-100/40 px-6 py-3 font-semibold hover:bg-kisi-cream-100/10"
@@ -112,11 +113,12 @@ export default function EconomyPage() {
         </div>
       </section>
 
-      {/* THE SALES FLOOR, eggs + hatchery */}
+      {/* WHERE TO BUY, eggs + hatchery, both at Kisi Farm */}
       <section className="mt-16">
         <SectionHeading
           kicker="Open for business"
           title="What the Republic sells"
+          lede="The eggs and chicks are real, and they are sold at Kisi Farm, the working farm behind all of this."
         />
         <div className="grid gap-6 lg:grid-cols-2">
           {/* Eggs */}
@@ -125,18 +127,18 @@ export default function EconomyPage() {
               Farm-fresh eggs
             </h3>
             <p className="mt-3 flex-1 text-kisi-charcoal-600">
-              Collected by hand every morning and packed the same day. Order a
-              crate and we&apos;ll confirm the price and delivery for your area
-              before you pay a naira. You can even read about the hen who laid
-              them.
+              Collected by hand every morning and packed the same day. You can
+              read about the hen who laid them here, then order a crate over at
+              Kisi Farm, where price and delivery are confirmed before you pay a
+              naira.
             </p>
             <div className="mt-6">
-              <Link
-                href="/shop"
+              <a
+                href={`${FARM_URL}/eggs`}
                 className="inline-block rounded-full bg-kisi-green-700 px-6 py-3 font-semibold text-kisi-cream-100 hover:bg-kisi-green-900"
               >
-                Order eggs →
-              </Link>
+                Order eggs at Kisi Farm &rarr;
+              </a>
             </div>
           </div>
 
@@ -149,25 +151,24 @@ export default function EconomyPage() {
               The Hatchery
             </h3>
             <p className="mt-3 flex-1 text-kisi-charcoal-600">
-              How the Republic grows its citizens, and how a new keeper starts
-              a flock. Day-old chicks and point-of-lay pullets are the next arm
-              of the economy. Tell us what you&apos;re looking for and we&apos;ll
-              tell you honestly what&apos;s available and when.
+              How the Republic grows its citizens, and how a new keeper starts a
+              flock. Day-old chicks and point-of-lay pullets are the next arm of
+              the economy, raised on the same farm as the layers.
             </p>
             <div className="mt-4">
               <PlaceholderNotice>
                 <strong>Hatchery ordering opens as the flock grows.</strong> No
-                chick numbers or prices are posted yet, we quote each enquiry
-                directly rather than publish a figure that isn&apos;t real.
+                chick numbers or prices are posted yet, Kisi Farm quotes each
+                enquiry directly rather than publish a figure that isn&apos;t real.
               </PlaceholderNotice>
             </div>
             <div className="mt-6">
-              <Link
-                href="/visit"
+              <a
+                href={`${FARM_URL}/chicks`}
                 className="inline-block rounded-full border border-kisi-green-700 px-6 py-3 font-semibold text-kisi-green-700 hover:bg-white"
               >
-                Ask about chicks →
-              </Link>
+                Day-old chicks at Kisi Farm &rarr;
+              </a>
             </div>
           </div>
         </div>
@@ -243,15 +244,15 @@ export default function EconomyPage() {
         <p className="mt-3 max-w-2xl text-kisi-cream-100/85">
           Buying eggs keeps the Republic solvent. If you&apos;d like to do more,
           feed, clean water, veterinary care, or a comfortable retirement for a
-          senior hen, there&apos;s a straight-talking way to help, with no
+          senior hen, Kisi Farm has a straight-talking way to help, with no
           confusion about where the money goes.
         </p>
-        <Link
-          href="/support"
+        <a
+          href={`${FARM_URL}/support`}
           className="mt-6 inline-block rounded-full bg-kisi-gold-500 px-6 py-3 font-semibold text-kisi-charcoal-900 hover:bg-kisi-gold-300"
         >
-          Back the farm →
-        </Link>
+          Support the flock at Kisi Farm &rarr;
+        </a>
       </section>
     </div>
   );

@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     template: "%s · Kisi",
   },
   description:
-    "Kisi is a working poultry farm in southwestern Nigeria, run by the " +
-    "chickens themselves. Order farm-fresh eggs, follow the Republic's " +
-    "politics, sport and news, and meet a flock of unforgettable citizens.",
+    "Kisi Africa is a living world of chicken characters and the Republic they " +
+    "run. Meet the flock, follow the politics, sport and news, and step into a " +
+    "nation of hens with names, opinions, and strong feelings about breakfast.",
   openGraph: {
     siteName: "Kisi, The Republic of Kisi",
     type: "website",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kisi, Where Every Chicken Has a Story",
     description:
-      "A working poultry farm in southwestern Nigeria, run by the chickens " +
-      "themselves. Order farm-fresh eggs and meet the Republic.",
+      "A living world of chicken characters and the Republic they run. Meet " +
+      "the flock and step into the Republic of Kisi.",
   },
   appleWebApp: {
     capable: true,

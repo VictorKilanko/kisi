@@ -1,147 +1,142 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
-import { PlaceholderNotice } from "@/components/Disclaimer";
-import { farmStats } from "@kisi/canon";
+import { ChickenPortrait } from "@/components/ChickenPortrait";
+import { chickens } from "@kisi/canon";
+import { FARM_URL, KIDS_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About Kisi Farm",
+  title: "About Kisi Africa",
   description:
-    "The real poultry farm behind the Republic, our story, our welfare " +
-    "commitment, and how we run the farm in southwestern Nigeria.",
+    "Kisi Africa is a living world of chicken characters and the Republic they " +
+    "run. Meet the flock, follow the stories, and step into a nation of hens " +
+    "with names, opinions, and very strong feelings about breakfast.",
 };
+
+const faces = chickens.slice(0, 6);
+
+const entryPoints = [
+  {
+    href: "/flock",
+    title: "Meet the Chickens",
+    blurb: "The whole cast, one profile at a time. Names, personalities, friends, rivals, and the stories that made them.",
+  },
+  {
+    href: "/republic",
+    title: "Enter the Republic",
+    blurb: "The constitution (the queue), the cabinet, the free press, and the President who insists breakfast is at seven, not seven-ish.",
+  },
+  {
+    href: "/republic/stories",
+    title: "Read the Big Stories",
+    blurb: "The serials people come back for. First eggs, elections, rivalries, reconciliations, told beat by beat.",
+  },
+];
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="font-display mt-3 text-4xl font-black text-kisi-green-900">
-        About Kisi Farm
+      <p className="kicker text-kisi-gold-700">About</p>
+      <h1 className="font-display mt-2 text-4xl font-black text-kisi-green-900 sm:text-5xl">
+        This is Kisi Africa.
       </h1>
-      <p className="mt-3 max-w-2xl text-kisi-charcoal-600">
-        This page is the factual heart of the website. Everything here is
-        either verified information from the farm, or a clearly marked
-        placeholder waiting for it, never an invention.
+      <p className="mt-4 max-w-2xl text-lg text-kisi-charcoal-900">
+        Kisi Africa is a living world of chicken characters, and the Republic
+        they run. Every hen and rooster here has a name, a personality, a
+        history, and an opinion. Together they have built themselves a whole
+        nation: a President, a Coop Assembly, a free press, a sports league, and
+        a national philosophy that fits on one line.
+      </p>
+      <p className="mt-4 max-w-2xl font-display text-xl font-bold italic text-kisi-green-700">
+        Every chicken has a story.
       </p>
 
-      {/* Story */}
-      <section className="mt-12 max-w-3xl">
-        <SectionHeading kicker="Our Story" title="A real farm in southwestern Nigeria" />
+      {/* the faces */}
+      <div className="mt-8 flex flex-wrap gap-4" aria-hidden="true">
+        {faces.map((c) => (
+          <ChickenPortrait key={c.id} chicken={c} size={84} />
+        ))}
+      </div>
+
+      {/* what it is */}
+      <section className="mt-14 max-w-3xl">
+        <SectionHeading kicker="What this is" title="A soap opera with feathers" />
         <div className="space-y-4 text-kisi-charcoal-900">
           <p>
-            Kisi is a working poultry farm in southwestern Nigeria, currently
-            focused on raising laying hens with care, good feed, clean water,
-            and honest management. The chickens you meet across this website
-            as &ldquo;citizens of the Republic&rdquo; are (or will be, once
-            our records and photographs are published) the real birds that
-            live here.
+            Think of it as an ongoing story you can drop into any time. The
+            drama is real (well, real to the chickens): elections are won and
+            lost, an outspoken opposition leader keeps being annoyingly correct,
+            a shy young hen lays her first egg while the whole nation holds its
+            breath, and somebody is always, always upset about the breakfast
+            schedule.
           </p>
           <p>
-            We built this website on one belief: farm animals are
-            individuals. Giving our hens names, stories, and a gloriously
-            self-important government of their own is our way of inviting you
-            to care about them the way we do, and of showing, honestly, how a
-            small Nigerian farm works.
+            It is warm, it is funny, and it is meant to be returned to. New
+            stories land as the Republic goes about its business. Follow a
+            favourite chicken, take a side in the politics, or just come for the
+            gossip in The Coop Times.
           </p>
-        </div>
-        <div className="mt-6">
-          <PlaceholderNotice>
-            <strong>Awaiting farm records:</strong> the founding story,
-            mission and vision in the owner&apos;s words, and team
-            introductions will appear here once supplied. Tracked in the
-            project&apos;s content checklist, nothing will be invented in
-            the meantime.
-          </PlaceholderNotice>
+          <p className="text-sm text-kisi-charcoal-600">
+            Kisi is rooted in a real working farm in southwestern Nigeria. The
+            birds are real; the Republic is how we tell their story. If you want
+            the eggs, that is where Kisi Farm comes in.
+          </p>
         </div>
       </section>
 
-      {/* Farm facts */}
-      <section className="mt-16">
-        <SectionHeading
-          kicker="Farm Facts"
-          title="The operation, honestly documented"
-          lede="Where a figure hasn't been verified by the farm yet, we say so plainly."
-        />
-        <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {farmStats.map((s) => (
-            <div key={s.id} className="rounded-2xl border border-kisi-green-900/10 bg-white p-5">
-              <dt className="kicker text-kisi-charcoal-600">{s.label}</dt>
-              {s.isPlaceholder ? (
-                <dd className="mt-2 text-sm italic text-kisi-earth-700">
-                  Awaiting farm records
-                </dd>
-              ) : (
-                <dd className="mt-2 font-semibold text-kisi-green-900">
-                  {s.value}
-                  {s.source && (
-                    <span className="mt-1 block text-xs font-normal text-kisi-charcoal-600">
-                      Source: {s.source}
-                    </span>
-                  )}
-                </dd>
-              )}
-            </div>
+      {/* explore the universe */}
+      <section className="mt-14 rounded-3xl bg-kisi-green-900 p-8 text-kisi-cream-100">
+        <h2 className="font-display text-2xl font-bold">The wider Kisi world</h2>
+        <p className="mt-3 max-w-2xl text-kisi-cream-100/85">
+          Kisi Africa is the story. Two sister places carry it further: one
+          where you can actually buy what the flock produces, and one built just
+          for the youngest visitors.
+        </p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <a
+            href={FARM_URL}
+            className="rounded-2xl bg-kisi-cream-100 p-5 text-kisi-green-900 transition-shadow hover:shadow-lg"
+          >
+            <p className="font-display text-xl font-bold">Kisi Farm &rarr;</p>
+            <p className="mt-1 text-sm text-kisi-charcoal-600">
+              The real farm shop. Order farm-fresh eggs and day-old chicks, laid
+              and raised by the hens you just met.
+            </p>
+          </a>
+          <a
+            href={KIDS_URL}
+            className="rounded-2xl bg-kisi-gold-300 p-5 text-kisi-charcoal-900 transition-shadow hover:shadow-lg"
+          >
+            <p className="font-display text-xl font-bold">Kisi Kids &rarr;</p>
+            <p className="mt-1 text-sm text-kisi-charcoal-900/80">
+              Stories, songs and gentle lessons with the chickens of Kisi, made
+              for young viewers.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      {/* start here */}
+      <section className="mt-14">
+        <SectionHeading kicker="Start here" title="Three ways in" />
+        <ul className="grid gap-6 sm:grid-cols-3">
+          {entryPoints.map((e) => (
+            <li key={e.href}>
+              <Link
+                href={e.href}
+                className="block h-full rounded-2xl border border-kisi-green-900/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <h3 className="font-display text-xl font-bold text-kisi-green-900">
+                  {e.title}
+                </h3>
+                <p className="mt-2 text-sm text-kisi-charcoal-600">{e.blurb}</p>
+                <span className="mt-3 inline-block text-sm font-semibold text-kisi-green-700">
+                  Go &rarr;
+                </span>
+              </Link>
+            </li>
           ))}
-        </dl>
-      </section>
-
-      {/* Welfare commitment */}
-      <section className="mt-16 rounded-3xl bg-kisi-green-900 p-8 text-kisi-cream-100">
-        <h2 className="font-display text-2xl font-bold">Our welfare commitment</h2>
-        <div className="mt-4 grid gap-6 text-sm text-kisi-cream-100/85 md:grid-cols-2">
-          <ul className="list-inside list-disc space-y-2">
-            <li>Birds are individuals, not inventory, every featured hen has a name.</li>
-            <li>Clean water and quality feed come before production targets.</li>
-            <li>Natural laying cycles are respected; laying breaks are normal.</li>
-            <li>Senior hens keep their place on the farm as they slow down.</li>
-          </ul>
-          <ul className="list-inside list-disc space-y-2">
-            <li>Illness is treated promptly and privately, and reported with dignity.</li>
-            <li>Biosecurity protects the flock, visits are managed carefully.</li>
-            <li>We never fabricate certifications, numbers, or claims.</li>
-            <li>Where practice details aren&apos;t published yet, we say &ldquo;awaiting records,&rdquo; not guesses.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Pointers */}
-      <section className="mt-16 grid gap-6 md:grid-cols-3">
-        <Link
-          href="/shop"
-          className="rounded-2xl border border-kisi-green-900/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-        >
-          <h2 className="font-display text-xl font-bold text-kisi-green-900">
-            Order our eggs →
-          </h2>
-          <p className="mt-2 text-sm text-kisi-charcoal-600">
-            Collected by hand every morning and packed the same day. Tell us
-            what you need and we&apos;ll confirm price and delivery for your
-            area.
-          </p>
-        </Link>
-        <Link
-          href="/support"
-          className="rounded-2xl bg-kisi-green-900 p-6 text-kisi-cream-100 shadow-sm transition-shadow hover:shadow-md"
-        >
-          <h2 className="font-display text-xl font-bold text-kisi-gold-300">
-            Support the Chickens →
-          </h2>
-          <p className="mt-2 text-sm text-kisi-cream-100/85">
-            Keep the flock laying, lit, and housed. Our two biggest campaigns
-            are Solar &amp; Light and Better Housing, a $25,000 goal each.
-          </p>
-        </Link>
-        <Link
-          href="/visit"
-          className="rounded-2xl border border-kisi-green-900/10 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-        >
-          <h2 className="font-display text-xl font-bold text-kisi-green-900">
-            Get in touch →
-          </h2>
-          <p className="mt-2 text-sm text-kisi-charcoal-600">
-            Questions, partnerships, media, schools, or future visits, the
-            contact page routes them all.
-          </p>
-        </Link>
+        </ul>
       </section>
     </div>
   );

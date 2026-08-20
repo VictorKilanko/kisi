@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { StatusBadge } from "@/components/Badges";
 import { ArticleCard, MilestoneCard, Timeline, SectionHeading } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
+import { FARM_URL } from "@/lib/site";
 import {
   articlesForChicken,
   chickens,
@@ -304,15 +305,15 @@ export default async function ChickenProfile({
               </h2>
               <p className="mt-2 text-sm text-kisi-cream-100/85">
                 Sponsorship helps fund feed, veterinary care, and clean water
-                for the real birds at Kisi. Coming in a later phase, the
-                Republic is drafting the paperwork properly first.
+                for the real birds at Kisi. You can sponsor a named hen over at
+                Kisi Farm.
               </p>
-              <Link
-                href="/support"
+              <a
+                href={`${FARM_URL}/support`}
                 className="mt-4 inline-block rounded-full bg-kisi-gold-500 px-5 py-2 text-sm font-semibold text-kisi-charcoal-900 hover:bg-kisi-gold-300"
               >
-                Learn about support
-              </Link>
+                Sponsor at Kisi Farm &rarr;
+              </a>
             </section>
           )}
         </aside>

@@ -7,11 +7,11 @@ import type { MetadataRoute } from "next";
  */
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Kisi Farm, The Republic of Kisi",
+    name: "Kisi, The Republic of Kisi",
     short_name: "Kisi",
     description:
-      "A working poultry farm in southwestern Nigeria, run by the chickens " +
-      "themselves. Order farm-fresh eggs and follow the Republic.",
+      "A living world of chicken characters and the Republic they run. Meet " +
+      "the flock, follow the stories, and step into the Republic of Kisi.",
     id: "/",
     start_url: "/",
     scope: "/",
@@ -19,7 +19,7 @@ export default function manifest(): MetadataRoute.Manifest {
     orientation: "portrait",
     background_color: "#faf5e9",
     theme_color: "#1f5130",
-    categories: ["food", "shopping", "entertainment"],
+    categories: ["entertainment", "news"],
     icons: [
       { src: "/icon-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
       { src: "/icon-512.png", sizes: "512x512", type: "image/png", purpose: "any" },
@@ -31,9 +31,9 @@ export default function manifest(): MetadataRoute.Manifest {
       },
     ],
     shortcuts: [
-      { name: "Order our eggs", short_name: "Order", url: "/shop" },
-      { name: "Support the chickens", short_name: "Support", url: "/support" },
       { name: "Meet the flock", short_name: "Flock", url: "/flock" },
+      { name: "Read the stories", short_name: "Stories", url: "/republic/stories" },
+      { name: "Enter the Republic", short_name: "Republic", url: "/republic" },
     ],
   };
 }

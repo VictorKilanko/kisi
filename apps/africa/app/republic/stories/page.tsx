@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SectionHeading, Timeline } from "@/components/Cards";
 import { ChickenPortrait } from "@/components/ChickenPortrait";
 import { findChicken, storyArcs } from "@kisi/canon";
+import { FARM_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Story Arcs",
@@ -60,28 +61,29 @@ export default function StoriesPage() {
         })}
       </div>
 
-      {/* Funnel: every story leads back to the two ways to keep it going */}
+      {/* Funnel: every story leads back to the real farm behind it */}
       <section className="mt-16 rounded-3xl bg-kisi-green-900 p-8 text-center text-kisi-cream-100">
         <h2 className="font-display text-2xl font-bold">
           Every story here runs on real feed.
         </h2>
         <p className="mx-auto mt-2 max-w-xl text-kisi-cream-100/85">
-          The Republic is a working farm. You can keep the flock laying,
-          lit, and housed, and take home the eggs while you are at it.
+          The Republic grows on a real working farm. Over at Kisi Farm you can
+          keep the flock laying, lit, and housed, and take home the eggs while
+          you are at it.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <Link
-            href="/shop"
+          <a
+            href={`${FARM_URL}/eggs`}
             className="rounded-full bg-kisi-gold-500 px-6 py-3 font-semibold text-kisi-charcoal-900 hover:bg-kisi-gold-300"
           >
-            Order Our Eggs
-          </Link>
-          <Link
-            href="/support"
+            Order Eggs at Kisi Farm
+          </a>
+          <a
+            href={`${FARM_URL}/support`}
             className="rounded-full bg-kisi-cream-100 px-6 py-3 font-semibold text-kisi-green-900 hover:bg-white"
           >
-            Support the Chickens
-          </Link>
+            Support the Flock
+          </a>
         </div>
       </section>
     </div>

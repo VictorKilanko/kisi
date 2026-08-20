@@ -15,7 +15,7 @@ const INSTITUTIONS = [
     href: "/economy",
     title: "The Economy",
     blurb:
-      "Eggs and the hatchery, the business the whole Republic runs on. Order a crate; meet the ministers who keep the feed budget straight.",
+      "Eggs and the hatchery, the business the whole Republic runs on. The National Egg Census, and the ministers who keep the feed budget straight.",
   },
   {
     href: "/republic/presidency",

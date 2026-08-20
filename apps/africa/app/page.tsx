@@ -8,6 +8,7 @@ import {
 import { ChickenPortrait } from "@/components/ChickenPortrait";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { WantedPoster } from "@/components/WantedPoster";
+import { FARM_URL, KIDS_URL } from "@/lib/site";
 import {
   articles,
   chickens,
@@ -35,7 +36,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:py-24 lg:grid-cols-2">
           <div>
             <p className="kicker text-kisi-gold-300">
-              A poultry farm, run by the chickens
+              A nation run by chickens
             </p>
             <h1 className="font-display mt-3 text-4xl font-black leading-tight sm:text-6xl">
               Where Every Chicken
@@ -43,37 +44,31 @@ export default function Home() {
               Has a <em className="text-kisi-gold-300">Story</em>
             </h1>
             <p className="mt-5 max-w-xl text-kisi-cream-100/85">
-              Kisi is a working poultry farm in southwestern Nigeria, and the
-              chickens run the place. They have a President, a Coop Assembly, a
-              free press, a sports league, and very strong opinions about
-              breakfast. So the eggs are counted honestly, every bird is in fine
-              feather, and everything around here is <em>clucking
-              eggxellent</em>. Welcome to the Republic of Kisi.
+              Welcome to the Republic of Kisi, a nation of hens and roosters who
+              looked at the alternatives and decided to run the place
+              themselves. They have a President, a Coop Assembly, a free press, a
+              sports league, and very strong opinions about breakfast. Every
+              chicken has a name, a story, and an opinion, and it is all{" "}
+              <em>clucking eggxellent</em>.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/shop"
-                className="rounded-full bg-kisi-gold-500 px-6 py-3 font-semibold text-kisi-charcoal-900 hover:bg-kisi-gold-300"
-              >
-                Order Our Eggs
-              </Link>
-              <Link
-                href="/support"
-                className="rounded-full bg-kisi-cream-100 px-6 py-3 font-semibold text-kisi-green-900 hover:bg-white"
-              >
-                Support the Chickens
-              </Link>
-              <Link
                 href="/flock"
-                className="rounded-full border border-kisi-cream-100/40 px-6 py-3 font-semibold hover:bg-kisi-cream-100/10"
+                className="rounded-full bg-kisi-gold-500 px-6 py-3 font-semibold text-kisi-charcoal-900 hover:bg-kisi-gold-300"
               >
                 Meet the Chickens
               </Link>
               <Link
                 href="/republic"
-                className="rounded-full border border-kisi-gold-300/60 px-6 py-3 font-semibold text-kisi-gold-300 hover:bg-kisi-gold-300/10"
+                className="rounded-full bg-kisi-cream-100 px-6 py-3 font-semibold text-kisi-green-900 hover:bg-white"
               >
                 Enter the Republic
+              </Link>
+              <Link
+                href="/republic/stories"
+                className="rounded-full border border-kisi-cream-100/40 px-6 py-3 font-semibold hover:bg-kisi-cream-100/10"
+              >
+                Read the Stories
               </Link>
             </div>
           </div>
@@ -336,39 +331,44 @@ export default function Home() {
         </p>
       </section>
 
-      {/* THE REAL FARM */}
+      {/* THE WIDER UNIVERSE */}
       <section className="bg-kisi-green-900 py-16 text-kisi-cream-100">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display mt-3 text-3xl font-bold sm:text-4xl">
-            A working farm you can buy from
+          <p className="kicker text-kisi-gold-300">The wider Kisi world</p>
+          <h2 className="font-display mt-2 text-3xl font-bold sm:text-4xl">
+            Two more places to explore
           </h2>
           <p className="mt-4 max-w-2xl text-kisi-cream-100/85">
-            The stories are the fun part, but the eggs are the point. Kisi is a
-            poultry farm in southwestern Nigeria: the hens are real, their care
-            is real, and so are the eggs, which you can order and eat, having
-            first read about the bird who laid them. That whole business, eggs,
-            hatchery, feed budget and all, is the Republic&apos;s economy.
+            The Republic is the story. It grows on a real working farm in
+            southwestern Nigeria, where the same hens you read about lay the eggs
+            you can actually buy. And the littlest visitors get a world of their
+            own.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/shop"
-              className="rounded-full bg-kisi-gold-500 px-6 py-3 font-semibold text-kisi-charcoal-900 hover:bg-kisi-gold-300"
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <a
+              href={FARM_URL}
+              className="rounded-2xl bg-kisi-cream-100 p-6 text-kisi-green-900 transition-shadow hover:shadow-lg"
             >
-              Order our eggs
-            </Link>
-            <Link
-              href="/economy"
-              className="rounded-full bg-kisi-cream-100 px-6 py-3 font-semibold text-kisi-green-900 hover:bg-kisi-cream-200"
+              <p className="font-display text-2xl font-bold">Kisi Farm &rarr;</p>
+              <p className="mt-1 text-sm text-kisi-charcoal-600">
+                Order farm-fresh eggs and day-old chicks from the real flock.
+              </p>
+            </a>
+            <a
+              href={KIDS_URL}
+              className="rounded-2xl bg-kisi-gold-300 p-6 text-kisi-charcoal-900 transition-shadow hover:shadow-lg"
             >
-              Explore the economy
-            </Link>
-            <Link
-              href="/about"
-              className="rounded-full border border-kisi-cream-100/40 px-6 py-3 font-semibold hover:bg-kisi-cream-100/10"
-            >
-              About Kisi Farm
-            </Link>
+              <p className="font-display text-2xl font-bold">Kisi Kids &rarr;</p>
+              <p className="mt-1 text-sm text-kisi-charcoal-900/80">
+                Stories, songs and gentle lessons for young viewers.
+              </p>
+            </a>
           </div>
+          <p className="mt-6">
+            <Link href="/about" className="font-semibold text-kisi-gold-300 hover:underline">
+              About Kisi Africa &rarr;
+            </Link>
+          </p>
         </div>
       </section>
 

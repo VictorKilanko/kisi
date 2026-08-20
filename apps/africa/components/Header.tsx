@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/Logo";
+import { FARM_URL, KIDS_URL } from "@/lib/site";
 
 const NAV = [
   { href: "/flock", label: "Meet the Chickens" },
@@ -28,10 +29,7 @@ const NAV = [
     label: "Economy",
     children: [
       { href: "/economy", label: "The Economy" },
-      { href: "/shop", label: "The Egg Shop" },
-      { href: "/eggs", label: "Egg Production" },
-      { href: "/economy#hatchery", label: "The Hatchery" },
-      { href: "/support", label: "Back the Farm" },
+      { href: "/eggs", label: "Egg Life" },
     ],
   },
   { href: "/republic/sports", label: "Sports" },
@@ -43,11 +41,11 @@ const NAV = [
     ],
   },
   {
-    label: "The Farm",
+    label: "About",
     children: [
-      { href: "/about", label: "About Kisi" },
+      { href: "/about", label: "About Kisi Africa" },
       { href: "/mascot", label: "The Mascot" },
-      { href: "/visit", label: "Visit & Contact" },
+      { href: "/visit", label: "Contact" },
     ],
   },
 ] as const;
@@ -121,13 +119,19 @@ export function Header() {
                 </li>
               ),
             )}
-            <li>
-              <Link
-                href="/shop"
-                className="ml-2 rounded-full bg-kisi-green-700 px-4 py-2 text-sm font-semibold text-kisi-cream-100 hover:bg-kisi-green-900"
+            <li className="ml-2 flex items-center gap-2">
+              <a
+                href={FARM_URL}
+                className="rounded-full bg-kisi-green-700 px-4 py-2 text-sm font-semibold text-kisi-cream-100 hover:bg-kisi-green-900"
               >
-                Order Eggs
-              </Link>
+                Kisi Farm
+              </a>
+              <a
+                href={KIDS_URL}
+                className="rounded-full border border-kisi-green-700/40 px-4 py-2 text-sm font-semibold text-kisi-green-700 hover:bg-kisi-cream-200"
+              >
+                Kisi Kids
+              </a>
             </li>
           </ul>
         </nav>
@@ -197,14 +201,21 @@ export function Header() {
                 </li>
               ),
             )}
-            <li className="pt-2">
-              <Link
-                href="/shop"
+            <li className="grid grid-cols-2 gap-2 pt-2">
+              <a
+                href={FARM_URL}
                 onClick={closeMenu}
                 className="block rounded-full bg-kisi-green-700 px-4 py-2 text-center font-semibold text-kisi-cream-100"
               >
-                Order Eggs
-              </Link>
+                Kisi Farm
+              </a>
+              <a
+                href={KIDS_URL}
+                onClick={closeMenu}
+                className="block rounded-full border border-kisi-green-700/40 px-4 py-2 text-center font-semibold text-kisi-green-700"
+              >
+                Kisi Kids
+              </a>
             </li>
           </ul>
         </nav>
