@@ -6,6 +6,67 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-20 (the three-brand split: monorepo + shared canon)
+
+Big structural pivot approved by the owner: grow Kisi into a Disney-style universe with three
+properties sharing one cast. **kisi.africa** stays the entertainment brand (the Republic run by
+chickens, adults/young adults, no commerce). **kisifarm** becomes the real business (eggs +
+day-old chicks). **kisikids** becomes the kids channel (education + merch, Blippi model,
+greenfield). The chickens are the IP engine; the other two monetize the emotional equity.
+
+### Decisions (owner, via plan-mode questions)
+- **Topology = monorepo**, three deployable apps + a shared canon package, in ONE repo. This
+  overrode the owner's first phrasing ("separate repos") once the drift risk was clear: three
+  copies of a 27-chicken cast WILL diverge. The `packages/canon` boundary keeps a future true-split
+  a clean one-time extraction if ever wanted.
+- **Domains = build subdomain-ready** (`farm.kisi.africa`, `kids.kisi.africa`); the canonical
+  origin is already a single env var, so swapping to standalone domains later is a Vercel change,
+  not code.
+- **Scope this engagement = foundation, then kisifarm.** kisikids scaffold only.
+- **Commerce transition = keep live, then redirect.** kisi.africa keeps selling until kisifarm is
+  ready, then `/shop /eggs /support` 301 to the farm.
+
+### What shipped (Phases 0 + 1, committed, NOT yet pushed)
+- **Phase 0** (`c75eda3`): repo is now a **pnpm + turborepo workspace**. The Next app moved
+  `site/` -> `apps/africa/` (git kept 199 renames). Package renamed `site` -> `@kisi/africa`.
+  Dropped npm's `package-lock.json` for a workspace `pnpm-lock.yaml`.
+- **Phase 1** (`d70c3c3`): extracted **`@kisi/canon`** = the single source of truth (schemas +
+  27 chickens + timeline + every derived accessor). Raw data sits in `packages/canon/src/data/`
+  (not `content/`, to avoid a `content.ts` vs `content/` clash). Every app import of
+  `@/lib/content`, `@/lib/schemas`, `@/content/wanted` now points at `@kisi/canon`; added it to
+  Next `transpilePackages` and as a `workspace:*` dep. Canon is consumed as TS source (no build
+  step), which is why `transpilePackages` is required.
+
+### Lessons / gotchas
+- **pnpm is not installed and can't be shimmed** (Program Files is admin-locked, `corepack enable`
+  EPERM). Use **`corepack pnpm ...`** for every pnpm command in this environment.
+- **OneDrive holds directory handles.** `mv site apps/africa` failed with "Device or resource
+  busy"; moving the *contents* then `rmdir` worked. Expect this on any folder rename here.
+- **`.npmrc` sets `node-linker=hoisted`** so `node_modules` stays flat (no symlink virtual store),
+  which suits a OneDrive-synced Windows path and matches what npm gave the app before.
+- **Fixed a brittle test:** `storyArcs()` is date-gated so its length grows with real time; the old
+  `toBe(9)` now fails on any date past the early arcs. Changed to a floor (`>= 9`) plus the known
+  core-arc membership checks. This was pre-existing, not caused by the move.
+- **canon tsconfig needs `lib: ES2022`** (the league-table test uses `Array.at`).
+
+### Verified
+Canon: typecheck + 18 tests. Africa: typecheck + 13 api tests + full production build (85 pages,
+canon transpiled from source). All green.
+
+### CRITICAL blocker before any push
+Pushing the restructure will **break the live Vercel deploy** until the owner changes the
+kisi.africa project **Root Directory from `site` to `apps/africa`** in the Vercel dashboard. Do not
+push until that is done (or the owner is standing by to do it right after). `social/` scripts also
+still point at the old `site/content` paths and are temporarily broken until repointed in Phase 4.
+
+### Left to do
+- Phase 2: scaffold `apps/farm` + `apps/kids`, extract `packages/brand` (shared tokens).
+- Phase 3: build kisifarm fully (eggs, day-old chicks/hatchery, support, about, visit).
+- Phase 4: de-commerce kisi.africa (301s), repoint `social/` scripts.
+- Phase 5: workspace-wide gates, docs, expert audit, push (after the Vercel Root Directory change).
+
+---
+
 ## Session — 2026-08-15 (IG dedupe fix + Season 2 Eps 5 to 7: the warm batch)
 
 Two pieces of work. First, fixed a live Instagram bug the owner spotted; then ran a three-arc
