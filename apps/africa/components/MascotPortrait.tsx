@@ -1,5 +1,5 @@
 /**
- * Taco, the Republic's mascot. An original procedural portrait, license-free.
+ * Dede, the Republic's mascot. An original procedural portrait, license-free.
  * A small gold star marks her national-figure status.
  */
 export function MascotPortrait({ size = 220 }: { size?: number }) {
@@ -14,7 +14,7 @@ export function MascotPortrait({ size = 220 }: { size?: number }) {
       width={size}
       height={size}
       role="img"
-      aria-label="Illustrated portrait of Taco, the mascot of the Republic of Kisi"
+      aria-label="Illustrated portrait of Dede, the mascot of the Republic of Kisi"
       className="rounded-2xl"
     >
       <rect width="120" height="120" rx="16" fill={bg} />

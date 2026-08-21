@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 /**
  * Web app manifest, served by Next at /manifest.webmanifest. Makes Kisi
- * installable to a phone home screen as a standalone app. Icons are Taco's
+ * installable to a phone home screen as a standalone app. Icons are Dede's
  * face (the farm logo); the maskable icon is the green full-bleed version.
  */
 export default function manifest(): MetadataRoute.Manifest {

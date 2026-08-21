@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 /**
- * Social share card for kisifarm: Taco's face (the shared mascot) on an
+ * Social share card for kisifarm: Dede's face (the shared mascot) on an
  * eggshell field, with the farm tagline and the egg call to action.
  *
  * Dynamic on purpose: the font is fetched at render time, so a font or network

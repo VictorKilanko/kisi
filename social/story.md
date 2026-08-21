@@ -18,7 +18,7 @@ Meta access token exists (see `social/IG_SETUP.md`).
 ## Before you start
 
 1. Read `CLAUDE.md`, `docs/PROGRESS.md`, and `social/README.md`. Obey the house rules:
-   one name (Kisi Farm / kisi.africa), Taco's headshot as the logo mark, **no em-dashes or
+   one name (Kisi Farm / kisi.africa), Dede's headshot as the logo mark, **no em-dashes or
    other AI-writing tells**, warmth and dignity, no cruelty or death for shock, and the
    **funnel rule** (every arc ends on a sell).
 2. Confirm the toolchain: `node -v` (needs Node; prefix PATH if the memory note says so)

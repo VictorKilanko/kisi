@@ -1256,7 +1256,7 @@ export const chickens: Chicken[] = [
     shortBio:
       "The teacher every chick remembers. Tadé runs Foraging 101, pairs the " +
       "young with the wise, and has walked more nervous chicks to their first " +
-      "meal than anyone but Taco.",
+      "meal than anyone but Dede.",
     bio: [
       "Tadé found his calling by accident, when a lost chick followed him for " +
         "a whole afternoon and he could not bring himself to shake it off. He " +

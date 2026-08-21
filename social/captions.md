@@ -17,7 +17,7 @@ day or two, or release them together as one carousel titled "The Nesting Box Ele
 ## 01 · Welcome to Kisi Farm
 Welcome to Kisi Farm: a working poultry farm in southwestern Nigeria, run by the chickens
 themselves. They hold the offices. They keep the records. They run the whole place like
-their own little republic. Taco greets you first, so come in. This is where every chicken
+their own little republic. Dede greets you first, so come in. This is where every chicken
 has a story, and we are just getting started. Follow along. 🐔🇳🇬
 
 ## 02 · Where every chicken has a story
@@ -26,10 +26,10 @@ Republic. None of them is inventory, and every one of them is worth meeting. Ove
 coming weeks we will introduce the leaders, the news, and the stories from Kisi Farm.
 Who do you want to meet first? 👇
 
-## 03 · Meet Taco, the mascot
-Meet Taco. No office. All heart. Outranks everybody anyway. She is first to the gate,
-first to every gathering, and first to welcome a face she has never seen. Her whole
-philosophy: "You don't need a title to show up first." Say hello to Taco below. 🧡
+## 03 · Meet Dede, the mascot
+Meet Dede. No office. All heart. Outranks everybody anyway. He is first to the gate,
+first to every gathering, and first to welcome a face he has never seen. His whole
+philosophy: "You don't need a title to show up first." Say hello to Dede below. 🧡
 
 ## 04 · President Adédoyin "Mama Decree"
 Meet the First Citizen: President Adédoyin, known to all as Mama Decree. She rose from an
@@ -303,7 +303,7 @@ season after season. The birds who fed us first should not be fed last. Swipe th
 ## Reusable hashtag block
 
 ```
-#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #kisiafrica #runbychickens #taco
+#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #kisiafrica #runbychickens #dede
 #PoultryFarm #PoultryNigeria #NigerianAgriculture #Agribusiness #FarmLife #Chickens
 #Naija #SouthwestNigeria #FarmStories #EggFarm #MadeInNigeria
 ```

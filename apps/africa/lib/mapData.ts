@@ -288,10 +288,10 @@ export const MAP_HOTSPOTS: MapHotspot[] = [
     x: 84,
     y: 64,
     description:
-      "Home of Taco, the Republic's mascot: no office, a morning greeting for " +
+      "Home of Dede, the Republic's mascot: no office, a morning greeting for " +
       "every visitor, and time for every new chick. Holds no title and " +
       "outranks everybody anyway.",
-    links: [{ href: "/mascot", label: "Meet Taco" }],
+    links: [{ href: "/mascot", label: "Meet Dede" }],
     residentIds: [],
   },
   {

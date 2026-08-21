@@ -6,6 +6,45 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-20 (kisi.africa repositioned + mascot renamed Taco -> Dede)
+
+After the three sites went live, two changes to kisi.africa.
+
+### kisi.africa repositioned as the pure universe front door
+kisi.africa is now the entertainment brand only: a world of chicken characters and the
+Republic they run. "Order Eggs"/"Support" removed from the surface; Header/Footer/home/
+economy/stories/profiles point buying + sponsoring OUT to Kisi Farm; /shop + /support 308 to
+the farm permanently; /eggs kept as Republic egg lore; /about rewritten as "About Kisi
+Africa" (the newcomer pitch, one light real-farm nod, Explore Kisi Farm/Kids buttons);
+metadata/OG/manifest/sitemap re-pitched; `NEXT_PUBLIC_COMMERCE_ON_FARM` retired. Expert audit
+came back clean. Pushed live (`cce8c30`).
+
+### MASCOT RENAMED: Taco (she/her) -> Dede (he/him)
+Owner decision 2026-08-20. Changed everywhere user-facing:
+- **Canon** (`packages/canon/src/data/farm.ts`): the `mascot` object, name + all pronouns
+  (she/her -> he/him). Also `chickens.ts` (one bio referenced "Taco"). The website pulls the
+  mascot from canon, so most of the site updated automatically.
+- **Website**: `/mascot` page hardcoded strings, `MascotPortrait`, `lib/mapData.ts` (map
+  hotspot + "Meet Dede" link), `manifest.ts` + both `opengraph-image.tsx` comments, and the
+  logo component **`TacoMark` -> `DedeMark`** (`Logo.tsx` + `Footer.tsx`).
+- **IG/social**: the reusable hashtag **`#taco` -> `#dede`** (`captions.md`), the mascot
+  intro caption (name + he/him), the "Meet Dede" slide HTML (`posts/03-meet-taco.html`),
+  and `README.md` + `story.md` name references.
+- **Kept as-is (internal, not user-facing):** the asset filenames `assets/taco.svg` and
+  `taco-*.png` (the mark itself, referenced as the crest by ~100 historical post HTMLs whose
+  alt text is "Kisi Farm", not "Taco"). Renaming them + re-rendering the `03-meet-taco.png`
+  slide with the "Dede." text is an optional low-priority follow-up.
+
+### Header polish (owner feedback)
+The kisi.africa header buttons/nav wrapped and were unevenly spaced. Fix: moved the Kisi
+Farm / Kisi Kids CTA buttons out of the nav `<ul>` into their own group (so the row is
+logo | nav | buttons under `justify-between`), and added `whitespace-nowrap` to every nav
+item and button so text never wraps. Tightened nav gap to `gap-0.5`, button padding `px-5`.
+
+Verified: canon 18 tests, africa typecheck + lint(0) + build all green.
+
+---
+
 ## Session — 2026-08-20 (the three-brand split: monorepo + shared canon)
 
 Big structural pivot approved by the owner: grow Kisi into a Disney-style universe with three

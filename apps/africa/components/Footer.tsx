@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TacoMark } from "@/components/Logo";
+import { DedeMark } from "@/components/Logo";
 import { FARM_URL, KIDS_URL } from "@/lib/site";
 
 const isExternal = (href: string) => href.startsWith("http");
@@ -42,7 +42,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2.5">
-            <TacoMark size={40} title="Kisi" />
+            <DedeMark size={40} title="Kisi" />
             <p className="font-display text-2xl font-black tracking-tight">KISI</p>
           </div>
           <p className="mt-3 text-sm text-kisi-cream-100/80">

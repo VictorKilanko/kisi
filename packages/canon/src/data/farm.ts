@@ -60,11 +60,11 @@ export const farmStats: FarmStat[] = [
   },
 ];
 
-/** The Republic's mascot: Taco. She/her. */
+/** The Republic's mascot: Dede. He/him. */
 export const mascot = {
-  name: "Taco",
+  name: "Dede",
   title: "Mascot of the Republic of Kisi",
-  tagline: "No office, all heart. Taco greets you first.",
+  tagline: "No office, all heart. Dede greets you first.",
   facts: [
     { label: "Office", value: "None. Outranks everybody anyway." },
     { label: "Tribe", value: "Both, by belonging to neither" },
@@ -73,22 +73,22 @@ export const mascot = {
   intro:
     "Every great republic has a beloved national figure who holds no office, " +
     "answers no questions, and outranks everybody. At Kisi, that figure is " +
-    "Taco. She is first to every gathering, first to the gate, and first to " +
-    "welcome a face she has never seen before.",
+    "Dede. He is first to every gathering, first to the gate, and first to " +
+    "welcome a face he has never seen before.",
   bio: [
-    "Nobody appointed Taco. She simply turned up one morning at the front of " +
+    "Nobody appointed Dede. He simply turned up one morning at the front of " +
       "every gathering and has been there ever since. When the flock lines up " +
-      "for the dawn chorus, Taco is at the end of the row. When a hatch-day is " +
-      "celebrated, she is already there. When a nervous new chick arrives, she " +
+      "for the dawn chorus, Dede is at the end of the row. When a hatch-day is " +
+      "celebrated, he is already there. When a nervous new chick arrives, he " +
       "walks it to the feed line personally.",
-    "Taco belongs to no tribe, which is exactly why both claim her. The " +
-      "Isa-Brown say she has the patience of a good layer; the Noiler say she " +
-      "has the nerve of a range bird. Taco lets both be right and eats at " +
+    "Dede belongs to no tribe, which is exactly why both claim him. The " +
+      "Isa-Brown say he has the patience of a good layer; the Noiler say he " +
+      "has the nerve of a range bird. Dede lets both be right and eats at " +
       "whichever trough is closest.",
-    "Her morning round is the Republic's most reliable clock. Chicks are told " +
+    "His morning round is the Republic's most reliable clock. Chicks are told " +
       "that if they are kind, brave, and finish their feed, they too might grow " +
       "up to greet the whole nation by name. Very few things at Kisi are " +
-      "non-negotiable. Taco's morning welcome to every visitor is one of them.",
+      "non-negotiable. Dede's morning welcome to every visitor is one of them.",
   ],
   duties: [
     "Greeting every visitor at the gate, whether or not the visitor asked.",
@@ -99,6 +99,6 @@ export const mascot = {
   ],
   quote: {
     text: "You don't need a title to show up first.",
-    context: "Taco's whole philosophy, as interpreted by the flock",
+    context: "Dede's whole philosophy, as interpreted by the flock",
   },
 };

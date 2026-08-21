@@ -4,9 +4,9 @@ import { MascotPortrait } from "@/components/MascotPortrait";
 import { mascot } from "@kisi/canon";
 
 export const metadata: Metadata = {
-  title: "Taco, the Mascot",
+  title: "Dede, the Mascot",
   description:
-    "Meet Taco, the mascot of the Republic of Kisi. No office, a warm " +
+    "Meet Dede, the mascot of the Republic of Kisi. No office, a warm " +
     "welcome for every visitor, and time for every new chick.",
 };
 
@@ -39,12 +39,12 @@ export default function MascotPage() {
       </p>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-[2fr_1fr]">
-        <section aria-labelledby="taco-story">
+        <section aria-labelledby="dede-story">
           <h2
-            id="taco-story"
+            id="dede-story"
             className="font-display text-2xl font-bold text-kisi-green-900"
           >
-            The story of Taco
+            The story of Dede
           </h2>
           <div className="prose-kisi mt-4 space-y-4 text-kisi-charcoal-900">
             {mascot.bio.map((p, i) => (
@@ -65,7 +65,7 @@ export default function MascotPage() {
         <aside>
           <section className="rounded-2xl border border-kisi-green-900/10 bg-kisi-cream-200 p-6">
             <h2 className="kicker text-kisi-gold-700">
-              Taco&rsquo;s self-appointed duties
+              Dede&rsquo;s self-appointed duties
             </h2>
             <ul className="mt-3 space-y-2.5 text-sm text-kisi-charcoal-900">
               {mascot.duties.map((d, i) => (
@@ -81,7 +81,7 @@ export default function MascotPage() {
 
           <div className="mt-6 rounded-2xl border border-kisi-green-900/10 bg-white p-6 text-sm text-kisi-charcoal-600">
             <p>
-              Taco belongs to the whole flock. Meet the citizens Taco greets
+              Dede belongs to the whole flock. Meet the citizens Dede greets
               every morning.
             </p>
             <Link

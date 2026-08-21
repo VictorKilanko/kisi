@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 /**
- * Social share card for kisi.africa: Taco's face (the farm logo) on an
+ * Social share card for kisi.africa: Dede's face (the farm logo) on an
  * eggshell field, with the tagline and the egg-order call to action.
  *
  * Dynamic on purpose: the font is fetched at render time, so a font or network

@@ -13,7 +13,7 @@ Every image is a **1080 x 1080 PNG** in `images/`, built from the same look as t
   it is a farm. Use those. The chickens running the place "like a little republic" is the
   *premise we narrate*, not a second brand name. Do not put "The Republic of Kisi" on a
   post as if it were the farm's name.
-- **Logo: Taco's headshot.** The old crest is **retired**. Every post uses `assets/taco.svg`
+- **Logo: Dede's headshot.** The old crest is **retired**. Every post uses `assets/taco.svg`
   as the logo mark.
 - **Numbering is for multi-slide posts only.** A single standalone post has no number. A
   story arc told across several slides numbers them so followers can order them, e.g.
@@ -35,7 +35,7 @@ Every image is a **1080 x 1080 PNG** in `images/`, built from the same look as t
 |---|---|---|---|
 | 01 | Welcome to Kisi Farm | Standalone | no |
 | 02 | Where every chicken has a story | Standalone | no |
-| 03 | Meet Taco, the official mascot | Standalone | no |
+| 03 | Meet Dede, the official mascot | Standalone | no |
 | 04 | President Adédoyin "Mama Decree" | Cast intro | no |
 | 05 | Halima "Iron Feathers" | Cast intro | no |
 | 06 | Chief Justice Yèyé Àlàbá | Cast intro | no |
@@ -98,7 +98,7 @@ is the roster to draw on for cast-intro posts and story arcs. We do **not** need
 all of them at once; we introduce them as the stories call for them.
 
 **The leads**
-- **Taco** · the mascot and our host/narrator. No office, greets everyone first. The
+- **Dede** · the mascot and our host/narrator. No office, greets everyone first. The
   audience's way into the world. *(introduced: post 03)*
 - **President Adédoyin "Mama Decree"** · the hero. Rose from an ordinary nest to the top
   on "Forward with Feed"; crusades on punctual breakfast. *(introduced: post 04)*

@@ -100,11 +100,11 @@ export function LogoMark({
 }
 
 /**
- * Taco's face, used as the wordmark lockup for now, to push the mascot's
+ * Dede's face, used as the wordmark lockup for now, to push the mascot's
  * face out. A compact profile head in the seal badge; reads down to favicon
  * size. The crest LogoMark above is unchanged and still carries the flag seal.
  */
-export function TacoMark({
+export function DedeMark({
   size = 40,
   title,
   className,
@@ -162,7 +162,7 @@ export function Logo({
 }) {
   return (
     <span className={`flex items-center gap-2.5 ${className}`}>
-      <TacoMark size={size} />
+      <DedeMark size={size} />
       {showWordmark && (
         <span className="flex flex-col leading-none">
           <span className="font-display text-xl font-black tracking-tight text-kisi-green-900">
