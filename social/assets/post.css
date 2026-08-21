@@ -142,7 +142,7 @@ html, body { margin: 0; padding: 0; }
 .t-state .rule { background: var(--gold); }
 .t-state .foot { color: var(--gold-soft); }
 .t-state .pull { color: #fff; }
-/* Taco's seal ring is green, so on the green field it needs a crisp edge */
+/* Dede's seal ring is green, so on the green field it needs a crisp edge */
 .t-state .crest { border-radius: 50%; box-shadow: 0 0 0 3px var(--gold-soft); }
 
 /* =========================================================
@@ -201,5 +201,5 @@ html, body { margin: 0; padding: 0; }
 .t-times.green .rule { background: var(--gold); }
 .t-times.green .foot { color: var(--gold-soft); }
 .t-times.green .byline { color: var(--cream); }
-/* Taco's seal ring is green, so give the crest a crisp edge on the green field */
+/* Dede's seal ring is green, so give the crest a crisp edge on the green field */
 .t-times.green .crest { border-radius: 50%; box-shadow: 0 0 0 3px var(--gold-soft); }
