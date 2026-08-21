@@ -17,7 +17,7 @@ const FARM_URL = (
 
 const nextConfig: NextConfig = {
   // The shared canon is consumed as TypeScript source.
-  transpilePackages: ["@kisi/canon"],
+  transpilePackages: ["@kisi/canon", "@kisi/ui"],
 
   async redirects() {
     const to = (path: string) => `${FARM_URL}${path}`;

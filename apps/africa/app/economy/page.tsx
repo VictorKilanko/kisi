@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MilestoneCard, SectionHeading } from "@/components/Cards";
-import { ChickenPortrait } from "@/components/ChickenPortrait";
+import { ChickenPortrait } from "@kisi/ui";
 import { PlaceholderNotice } from "@/components/Disclaimer";
 import {
   eggCensus,

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArticleCard } from "@/components/Cards";
-import { ChickenPortrait } from "@/components/ChickenPortrait";
+import { ChickenPortrait } from "@kisi/ui";
 import { articlesForMinistry, getMinistry, ministries, ministerOf } from "@kisi/canon";
 
 export function generateStaticParams() {

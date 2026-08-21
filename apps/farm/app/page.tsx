@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { chickens } from "@kisi/canon";
+import { ChickenPortrait } from "@kisi/ui";
 import { AFRICA_URL } from "@/lib/site";
 
 /**
@@ -77,15 +78,8 @@ export default function Home() {
               key={hen.id}
               className="overflow-hidden rounded-2xl border border-kisi-green-700/15 bg-kisi-cream-100"
             >
-              <div
-                className="flex h-32 items-center justify-center"
-                style={{ background: hen.colors.bg }}
-              >
-                <span
-                  className="inline-block h-16 w-16 rounded-full ring-4 ring-white/40"
-                  style={{ background: hen.colors.body }}
-                  aria-hidden
-                />
+              <div className="flex justify-center bg-kisi-cream-200 p-4">
+                <ChickenPortrait chicken={hen} size={128} />
               </div>
               <div className="p-5">
                 <p className="font-display text-lg font-bold text-kisi-green-900">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { StatusBadge } from "@/components/Badges";
 import { ArticleCard, MilestoneCard, Timeline, SectionHeading } from "@/components/Cards";
-import { ChickenPortrait } from "@/components/ChickenPortrait";
+import { ChickenPortrait } from "@kisi/ui";
 import { FARM_URL } from "@/lib/site";
 import {
   articlesForChicken,

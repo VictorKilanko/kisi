@@ -16,6 +16,7 @@
   "dependencies": {
     "@kisi/brand": "workspace:*",
     "@kisi/canon": "workspace:*",
+    "@kisi/ui": "workspace:*",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
     "motion": "^12.42.2",

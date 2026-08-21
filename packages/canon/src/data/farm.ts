@@ -60,9 +60,11 @@ export const farmStats: FarmStat[] = [
   },
 ];
 
-/** The Republic's mascot: Dede. He/him. */
+/** The Republic's mascot: Dede (say "Day-day"). He/him. */
 export const mascot = {
   name: "Dede",
+  /** How to say it, shown on the site so visitors get it right. */
+  pronunciation: "Day-day",
   title: "Mascot of the Republic of Kisi",
   tagline: "No office, all heart. Dede greets you first.",
   facts: [

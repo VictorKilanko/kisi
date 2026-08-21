@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
-import { ChickenPortrait } from "@/components/ChickenPortrait";
+import { ChickenPortrait } from "@kisi/ui";
 import { chickens } from "@kisi/canon";
 import { FARM_URL, KIDS_URL } from "@/lib/site";
 

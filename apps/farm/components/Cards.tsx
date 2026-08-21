@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChickenPortrait } from "@/components/ChickenPortrait";
+import { ChickenPortrait } from "@kisi/ui";
 import { StatusBadge, TribeBadge } from "@/components/Badges";
 import type { Article, Chicken, EggMilestone, TimelineEvent } from "@kisi/canon";
 import { findChicken } from "@kisi/canon";

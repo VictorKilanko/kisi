@@ -5,7 +5,7 @@ import {
   MilestoneCard,
   SectionHeading,
 } from "@/components/Cards";
-import { ChickenPortrait } from "@/components/ChickenPortrait";
+import { ChickenPortrait } from "@kisi/ui";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { WantedPoster } from "@/components/WantedPoster";
 import { FARM_URL, KIDS_URL } from "@/lib/site";

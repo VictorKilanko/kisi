@@ -23,6 +23,9 @@ importers:
       '@kisi/canon':
         specifier: workspace:*
         version: link:../../packages/canon
+      '@kisi/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       '@react-three/drei':
         specifier: ^10.7.7
         version: 10.7.8(@react-three/fiber@9.7.0(@types/react@19.2.18)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(three@0.185.1))(@types/react@19.2.18)(@types/three@0.185.4)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(three@0.185.1)
@@ -93,6 +96,9 @@ importers:
       '@kisi/canon':
         specifier: workspace:*
         version: link:../../packages/canon
+      '@kisi/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       next:
         specifier: 16.2.10
         version: 16.2.10(@babel/core@7.29.7)(@playwright/test@1.62.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -145,6 +151,9 @@ importers:
       '@kisi/canon':
         specifier: workspace:*
         version: link:../../packages/canon
+      '@kisi/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       next:
         specifier: 16.2.10
         version: 16.2.10(@babel/core@7.29.7)(@playwright/test@1.62.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -197,6 +206,22 @@ importers:
       vitest:
         specifier: ^4.1.10
         version: 4.1.11(@types/node@20.19.43)(vite@8.2.2(@types/node@20.19.43)(jiti@2.7.0))
+
+  packages/ui:
+    dependencies:
+      '@kisi/canon':
+        specifier: workspace:*
+        version: link:../canon
+      react:
+        specifier: ^19
+        version: 19.2.4
+    devDependencies:
+      '@types/react':
+        specifier: ^19
+        version: 19.2.18
+      typescript:
+        specifier: ^5
+        version: 5.9.3
 
 packages:
 

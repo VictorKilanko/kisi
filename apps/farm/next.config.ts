@@ -7,7 +7,7 @@ import type { NextConfig } from "next";
  */
 const nextConfig: NextConfig = {
   // The shared canon is consumed as TypeScript source.
-  transpilePackages: ["@kisi/canon"],
+  transpilePackages: ["@kisi/canon", "@kisi/ui"],
 };
 
 export default nextConfig;

@@ -20,6 +20,9 @@ export default function MascotPage() {
           <h1 className="font-display mt-1 text-5xl font-black text-kisi-green-900">
             {mascot.name}
           </h1>
+          <p className="mt-1 text-sm font-medium text-kisi-charcoal-600">
+            pronounced <span className="text-kisi-green-700">&ldquo;{mascot.pronunciation}&rdquo;</span>
+          </p>
           <p className="mt-3 text-lg italic text-kisi-charcoal-600">
             {mascot.tagline}
           </p>
