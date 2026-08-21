@@ -30,10 +30,15 @@ Owner decision 2026-08-20. Changed everywhere user-facing:
 - **IG/social**: the reusable hashtag **`#taco` -> `#dede`** (`captions.md`), the mascot
   intro caption (name + he/him), the "Meet Dede" slide HTML (`posts/03-meet-taco.html`),
   and `README.md` + `story.md` name references.
-- **Kept as-is (internal, not user-facing):** the asset filenames `assets/taco.svg` and
-  `taco-*.png` (the mark itself, referenced as the crest by ~100 historical post HTMLs whose
-  alt text is "Kisi Farm", not "Taco"). Renaming them + re-rendering the `03-meet-taco.png`
-  slide with the "Dede." text is an optional low-priority follow-up.
+- **Asset rename + IG repost DONE (2026-08-21):** renamed `assets/taco.svg` + `taco-*.png` ->
+  `dede.*` (all ~100 post-HTML/template/script refs updated); renamed + re-rendered the intro
+  slide `03-meet-taco.html` -> `03-meet-dede.html` -> `images/03-meet-dede.png` (fixed body
+  pronouns she->he, framed as "mascot of the Republic of Kisi"); staged, deployed, and
+  **reposted to IG @kisi.africa** via `ig-publish --next --publish` (owner deleted the old Taco
+  slide first). The publish threw mid-call but the reconcile guard confirmed it live and marked
+  it posted (anti-duplicate logic working). To repost a single slide: render with headless
+  Chrome `--screenshot` on the one HTML, then stage -> commit -> push -> wait for Vercel ->
+  poll the image URL for 200 -> `ig-publish --next --publish` (IG needs a public image URL).
 
 ### Header polish (owner feedback)
 The kisi.africa header buttons/nav wrapped and were unevenly spaced. Fix: moved the Kisi
