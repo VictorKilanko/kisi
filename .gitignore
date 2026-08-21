@@ -51,3 +51,7 @@ Thumbs.db
 Desktop.ini
 *.swp
 ~$*         # Word/Excel lock files (e.g. ~$nking_kisi.docx)
+
+# R history files (stray)
+.Rhistory
+*.Rhistory
