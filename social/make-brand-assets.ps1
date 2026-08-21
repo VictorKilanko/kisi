@@ -54,9 +54,9 @@ function Resize($srcName, $outName, $size) {
 
 # Transparent square logo at full size, then crisp downscales.
 # Capture == window size in headless Chrome, so window must be the exact target.
-Shot "logo.html" "taco-1024.png" "1024,1024" $true
-Resize "taco-1024.png" "taco-512.png" 512
-Resize "taco-1024.png" "taco-256.png" 256
+Shot "logo.html" "dede-1024.png" "1024,1024" $true
+Resize "dede-1024.png" "dede-512.png" 512
+Resize "dede-1024.png" "dede-256.png" 256
 
 # Instagram landscape / link-in-bio banner (1.91:1, opaque green field).
 Shot "ig-banner.html" "ig-banner.png" "1080,566" $false

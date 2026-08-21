@@ -13,7 +13,7 @@ Every image is a **1080 x 1080 PNG** in `images/`, built from the same look as t
   it is a farm. Use those. The chickens running the place "like a little republic" is the
   *premise we narrate*, not a second brand name. Do not put "The Republic of Kisi" on a
   post as if it were the farm's name.
-- **Logo: Dede's headshot.** The old crest is **retired**. Every post uses `assets/taco.svg`
+- **Logo: Dede's headshot.** The old crest is **retired**. Every post uses `assets/dede.svg`
   as the logo mark.
 - **Numbering is for multi-slide posts only.** A single standalone post has no number. A
   story arc told across several slides numbers them so followers can order them, e.g.

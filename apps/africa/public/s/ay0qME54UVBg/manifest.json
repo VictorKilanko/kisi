@@ -1,6 +1,6 @@
 {
   "base": "https://www.kisi.africa/s/ay0qME54UVBg",
-  "updated": "2026-08-15T14:28:21.399Z",
+  "updated": "2026-08-21T11:29:52.999Z",
   "posts": [
     {
       "name": "arc-chichi",
@@ -340,6 +340,17 @@
       "scheduledFor": null,
       "postedAt": "2026-08-18T06:43:21.818Z",
       "note": "publish threw but the post is live; reconciled: {\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":false,\"code\":4,\"error_subcode\":2207051,\"error_user_tit"
+    },
+    {
+      "name": "03-meet-dede",
+      "type": "single",
+      "slides": [
+        "https://www.kisi.africa/s/ay0qME54UVBg/03-meet-dede.png"
+      ],
+      "finalRoute": "https://kisi.africa/republic/social",
+      "caption": "Meet Dede. No office. All heart. Outranks everybody anyway. He is first to the gate, first to every gathering, and first to welcome a face he has never seen. His whole philosophy: \"You don't need a title to show up first.\" Say hello to Dede below. 🧡\n\n#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #kisiafrica #runbychickens #dede #PoultryFarm #PoultryNigeria #NigerianAgriculture #Agribusiness #FarmLife #Chickens #Naija #SouthwestNigeria #FarmStories #EggFarm #MadeInNigeria",
+      "status": "staged",
+      "scheduledFor": null
     }
   ]
 }

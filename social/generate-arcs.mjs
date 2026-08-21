@@ -280,7 +280,7 @@ function page({ arcTitle, part, total, title, body, isFinal, theme, sell }) {
 <div class="post t-times${themeClass}">
   <div class="masthead">
     <div class="brand">
-      <img class="crest" src="../assets/taco.svg" alt="Kisi Farm">
+      <img class="crest" src="../assets/dede.svg" alt="Kisi Farm">
       <div class="wordmark"><b style="font-size:42px;letter-spacing:0.5px;">The Coop Times</b><small>Dispatches from Kisi Farm</small></div>
     </div>
   </div>
