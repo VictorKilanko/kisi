@@ -349,8 +349,10 @@
       ],
       "finalRoute": "https://kisi.africa/republic/social",
       "caption": "Meet Dede. No office. All heart. Outranks everybody anyway. He is first to the gate, first to every gathering, and first to welcome a face he has never seen. His whole philosophy: \"You don't need a title to show up first.\" Say hello to Dede below. 🧡\n\n#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #kisiafrica #runbychickens #dede #PoultryFarm #PoultryNigeria #NigerianAgriculture #Agribusiness #FarmLife #Chickens #Naija #SouthwestNigeria #FarmStories #EggFarm #MadeInNigeria",
-      "status": "staged",
-      "scheduledFor": null
+      "status": "posted",
+      "scheduledFor": null,
+      "postedAt": "2026-08-21T11:33:17.560Z",
+      "note": "publish threw but the post is live; reconciled: {\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":false,\"code\":4,\"error_subcode\":2207051,\"error_user_tit"
     }
   ]
 }
