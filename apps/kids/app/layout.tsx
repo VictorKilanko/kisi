@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import { SITE_URL } from "@/lib/site";
+import { KidHeader } from "@/components/KidHeader";
+import { KidFooter } from "@/components/KidFooter";
 import "./globals.css";
 
 const fraunces = Fraunces({ variable: "--font-fraunces", subsets: ["latin"] });
@@ -32,9 +34,11 @@ export default function RootLayout({
         <a href="#main" className="skip-link">
           Skip to content
         </a>
+        <KidHeader />
         <main id="main" className="flex-1">
           {children}
         </main>
+        <KidFooter />
       </body>
     </html>
   );

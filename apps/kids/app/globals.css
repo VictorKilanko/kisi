@@ -18,3 +18,24 @@
   /* A cleaner, brighter surface for kids. */
   --surface: #fffdf6;
 }
+
+/*
+ * Printables: when a child prints a printable page, print only the sheet.
+ * Everything marked .no-print (buttons, nav, footer) is hidden; the header and
+ * footer are hidden too so the coluring/activity sheet fills the page.
+ */
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  .printable-sheet {
+    border: none !important;
+    box-shadow: none !important;
+    max-width: 100% !important;
+  }
+  body {
+    background: #ffffff !important;
+  }
+}

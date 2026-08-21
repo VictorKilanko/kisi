@@ -256,7 +256,7 @@ export const chickens: Chicken[] = [
       "She has recently, very quietly, joined the Solar Queens' junior " +
         "sprint squad. She has not told anyone. Everyone knows.",
     ],
-    friends: ["quiet-grace", "flash-adaora"],
+    friends: ["quiet-grace", "flash-adaora", "zizi"],
     rivals: [],
     family: [
       {
@@ -1545,6 +1545,54 @@ export const chickens: Chicken[] = [
     ],
     achievements: [],
     colors: { body: "#e0a53a", comb: "#c0392b", accent: "#7a4a12", bg: "#f6e2a8" },
+    sponsorable: true,
+  },
+  // Dede's niece and co-host of Kisi Kids: the curious young explorer.
+  {
+    id: "zizi",
+    name: "Zizi",
+    sex: "hen",
+    tribe: "isa-brown",
+    ageNote: "Chick",
+    status: "active",
+    layingStatus: "not-yet",
+    branch: "none",
+    personality: ["curious", "outgoing", "friendly", "playful"],
+    favoriteFood: "Whatever she has not tried yet",
+    shortBio:
+      "Dede's young niece and the flock's biggest question-asker. Bright, " +
+      "bold, and endlessly curious, she is the one who says 'but why?' and " +
+      "then runs off to find out, usually with her uncle hurrying behind.",
+    bio: [
+      "Zizi is Dede's niece, and where her uncle is calm, she is a cheerful " +
+        "gust of wind. Dede greets every visitor first; Zizi greets them " +
+        "second, louder, and with four questions ready. She is the youngest " +
+        "voice in the flock and never once the quietest.",
+      "She and Uncle Dede have a corner of the farm every chick knows: it is " +
+        "where the stories get told, the old songs get sung, and the big " +
+        "questions get answered. Zizi asks the questions the little ones are " +
+        "too shy to ask, then makes sure everybody understands the answer. If " +
+        "you have ever wanted to know why, ask Zizi. She will not only tell " +
+        "you, she will take you to see.",
+    ],
+    friends: ["chi-chi"],
+    rivals: [],
+    family: [
+      {
+        relation: "Uncle",
+        note: "Dede, the Republic's beloved mascot. She follows him everywhere and out-talks him everywhere.",
+      },
+    ],
+    quotes: [
+      {
+        text: "But why is it like that? Come on, let's go and find out.",
+        context: "Zizi, roughly forty times a day",
+      },
+    ],
+    achievements: [
+      "Asked the question the whole coop was quietly wondering, out loud, at last",
+    ],
+    colors: { body: "#e0a13a", comb: "#e0568a", accent: "#2f9bd6", bg: "#faf5e9" },
     sponsorable: true,
   },
 ];

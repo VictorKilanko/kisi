@@ -6,6 +6,37 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-21 (Kisi Kids: built the website; added Zizi to canon)
+
+Built out **Kisi Kids** (`apps/kids`) as a real site, not a scaffold. Owner call: long-term the
+brand is **video-first** (Blippi/Cocomelon on YouTube, AI-produced), but the video tools are not in
+hand, so we **build the website now** and write the video plans in parallel, keeping the two aligned
+(same characters, same content, a story on the site becomes a video script later).
+
+**Hosts: Dede (uncle, "Day-day") + Zizi (his young niece).** Added **Zizi** to the shared canon
+(`packages/canon`, id `zizi`, fun/curious/outgoing/friendly, friend of chi-chi — symmetric),
+cast now **28**; test floor bumped 27 -> 28.
+
+**Site:** home + five pillars, each a reusable typed template (`apps/kids/content/*.ts`):
+`/stories` (illustrated read-along fables), `/heroes` (factual hero profiles), `/words`
+(Yoruba/Swahili word-of-the-day), `/songs` (lyrics; audio later), `/printables` (print-friendly
+SVG activity sheets via `window.print()`). Characters/scenes are deterministic SVG (`@kisi/ui`
+ChickenPortrait + `KidScene`), so the art never drifts; commissioned/AI art drops into
+`kisikids/assets/` later.
+
+**The `kisikids/` folder** (repo root) is the plan/video brain: `KIDS_PLAN.md` (runbook + resume
+marker), `BIBLE.md` (Dede + Zizi voices/look + the two hard rules), `PIPELINE.md` (AI video runbook),
+`curriculum/`, `scripts/TEMPLATE.md`, `assets/`.
+
+**Hard rule learned/enforced: everything Kisi Kids teaches must be REAL.** Ran an accuracy audit
+(web-sourced) before push — Wangari Maathai facts (Kenya, 1940-2011, Green Belt Movement, first
+African woman to win the Nobel Peace Prize, 2004), the Yoruba/Swahili words, and the tortoise fable's
+provenance all verified CLEAN. Applied one polish: the fable's origin note now names Igbo alongside
+Yoruba (the "All of You" sky-feast version is most famously Igbo via Achebe). Chickens are fictional
+hosts; the history/heroes/languages/fables are not.
+
+Gates: kids lint 0 / typecheck 0 / build all routes; canon 28 + integrity; full workspace build 3/3.
+
 ## Session — 2026-08-21 (content: Season 2 Eps 8-9, first batch under the brand split)
 
 Ran the story factory (`social/story.md`) end to end for the first time since the three-site
