@@ -133,7 +133,7 @@ const arcs = [
       ["The ruling", "The next day the whole Republic came. Chief Justice Yèyé Àlàbá did not rush. 'A bird is gone, and no ruling brings her back. But we can still be just.'"],
       ["Two truths", "'The coop failed Eseosa. And Eseosa failed Cindy. Both are true. We will fix the first. We must answer the second.'"],
       ["The sentence", "Eseosa would leave the flock. Not harmed, but rehomed far away, where she can do no more damage. The Republic calls it exile."],
-      ["And a promise", "'We will build coops where this cannot happen. That is Cindy's justice too.' Court rose. Help us keep the promise at kisi.africa/support."],
+      ["And a promise", "'We will build coops where this cannot happen. That is Cindy's justice too.' Court rose. Help us keep the promise at farm.kisi.africa/support."],
     ],
   },
   {
@@ -186,7 +186,7 @@ const arcs = [
       ["Who owns the dawn?", "Small Fẹ́mi, the boy who went out the far side the night of the drain, wants to be a coop guard. A guard is up before dawn anyway. So, quietly, he told VP Baba Ṣẹ́gun he would call the morning this year."],
       ["The training camp", "Fẹ́mi was already walking the fence at first light, so he added the crow to his rounds. Baba trained not at all: slept in, took a dust bath, still beat him to the warm-up twice. 'The dawn is a calling,' he said."],
       ["The duel at first light", "The whole flock gathered in the dark to watch. The grey came. Both roosters crowed at the very same instant, so exactly together that not even the Chief Justice could call it. Best dawn in years."],
-      ["The dawn belongs to everyone", "No rematch. Baba made Fẹ́mi his apprentice, so two birds wake Kisi now and the sun is never late. But he can wake the farm, not light it. When the sun sets, the coops go dark. Help us: Solar & Light, kisi.africa/support."],
+      ["The dawn belongs to everyone", "No rematch. Baba made Fẹ́mi his apprentice, so two birds wake Kisi now and the sun is never late. But he can wake the farm, not light it. When the sun sets, the coops go dark. Help us: Solar & Light, farm.kisi.africa/support."],
     ],
   },
   {
@@ -233,7 +233,29 @@ const arcs = [
       ["A law kept", "Mama Gold's Law promised every retired hen shade, first place at the trough, and no surprise committees. This week the Republic built the bench to prove it."],
       ["The National Grandmother", "Under the mango tree, Mama Gold took her seat. 'Four hundred eggs buys you this shade,' she said. 'It is not charity. It is wages. Sit. You have earned it.'"],
       ["Every name, out loud", "Sisi Ngozi read the roll of retired hens, and Sadé the Griot set each name to song. Birds who fed the nation for years heard it stop and say thank you."],
-      ["Thank you, elders", "'No hen here is finished,' says Mama Gold. 'We are delegating.' Help us keep the shade cool and the trough full for the layers who fed us first: kisi.africa/support."],
+      ["Thank you, elders", "'No hen here is finished,' says Mama Gold. 'We are delegating.' Help us keep the shade cool and the trough full for the layers who fed us first: farm.kisi.africa/support."],
+    ],
+  },
+  {
+    slug: "second-chair",
+    title: "The Second Chair",
+    theme: "green", // a quiet, serious turn: dramatic intrigue on the green field
+    slides: [
+      ["The cheer that stayed", "Weeks after Halima made the President's breakfast order real, the flock still cheers her name. For the first time in her life, the second chair feels a size too small."],
+      ["The sweetest poison", "Sweet Beak found her at the dust bath. 'You do the work. She gets the credit. Why always second, Iron Feathers?' Halima sent her off. But the question stayed."],
+      ["A moment too long", "At dusk, alone, Halima stood by the President's empty first chair a moment too long. Only Kola Quill saw. He printed nothing, but he can feel what that old bond is becoming."],
+      ["Iron, still", "By morning she took the second chair, iron as ever. But a small new wish had started: one day, the first chair. Back the flock at farm.kisi.africa/support."],
+    ],
+  },
+  {
+    slug: "kickoff",
+    title: "The League Kicks Off",
+    sell: "shop",
+    slides: [
+      ["A new season", "The Coop Premier League opened under a clear sky. Minister Túndé Quickfoot declared it open with a speech mostly about himself, then, generously, about the birds."],
+      ["The champions' burden", "Flash Adaora's Solar Queens came in as champions, so everyone wants to beat them. Flash said only, 'Good. Chase us. It keeps the legs honest,' and ran smooth as water."],
+      ["The smallest debut", "On the junior sheet, one name in careful letters: Chi-Chi. She lined up for her first league race, legs shaking, watched the older birds, and ran her small heart out."],
+      ["Fuel a champion", "She came third and grinned like she'd won. Every runner ran on one thing: a good breakfast. A champion runs on more than pride. Order eggs at farm.kisi.africa/eggs."],
     ],
   },
 ];
@@ -258,8 +280,8 @@ function headlineClass(title) {
 // appeals); arcs that sell eggs set sell:"shop" so the footer URL matches the CTA in
 // the copy instead of always reading /support.
 const SELL_FOOT = {
-  shop: `<span>Farm-fresh eggs from the Republic</span><span class="site">kisi.africa/shop</span>`,
-  support: `<span>Keep the flock laying, lit &amp; housed</span><span class="site">kisi.africa/support</span>`,
+  shop: `<span>Farm-fresh eggs from the flock</span><span class="site">farm.kisi.africa/eggs</span>`,
+  support: `<span>Keep the flock laying, lit &amp; housed</span><span class="site">farm.kisi.africa/support</span>`,
 };
 
 function page({ arcTitle, part, total, title, body, isFinal, theme, sell }) {

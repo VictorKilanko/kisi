@@ -239,6 +239,23 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "not charity'), and every name is read out and set to song. A thank " +
       "you to the hens who gave the Republic every breakfast it has eaten.",
   },
+  "the-second-chair": {
+    title: "The Second Chair",
+    summary:
+      "After the flock cheers her for making the President's breakfast order " +
+      "real, Halima Iron Feathers feels the Leader of the Opposition's chair " +
+      "grow a size too small. Sweet Beak plants the question, and one dusk by " +
+      "the empty first chair, a small new wish begins. Only Kola Quill sees, " +
+      "and only he knows how far back these two really go.",
+  },
+  "the-league-kicks-off": {
+    title: "The League Kicks Off",
+    summary:
+      "A new Coop Premier League season opens with a Túndé Quickfoot speech " +
+      "mostly about Túndé, the champion Solar Queens daring everyone to chase " +
+      "them, and the smallest debut of all: Chi-Chi's first league race, third " +
+      "place, and the loudest cheer on the field.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {

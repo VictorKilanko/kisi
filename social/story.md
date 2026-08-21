@@ -18,9 +18,29 @@ Meta access token exists (see `social/IG_SETUP.md`).
 ## Before you start
 
 1. Read `CLAUDE.md`, `docs/PROGRESS.md`, and `social/README.md`. Obey the house rules:
-   one name (Kisi Farm / kisi.africa), Dede's headshot as the logo mark, **no em-dashes or
+   the slide wordmark reads **"Kisi"** (kisi.africa is the entertainment universe now, see
+   the brand split below), **Dede's** headshot (he/him) as the logo mark, **no em-dashes or
    other AI-writing tells**, warmth and dignity, no cruelty or death for shock, and the
-   **funnel rule** (every arc ends on a sell).
+   **funnel rule** (every arc ends on a sell, now pointing to **Kisi Farm**).
+
+## The brand split (read this, it shapes every story)
+
+Kisi is now three sites sharing **one canon** (`packages/canon`):
+
+- **Kisi Africa** (`kisi.africa`) — the entertainment universe: the chicken characters, the
+  Republic, the stories. **This is the home of everything you write here.** The IG account
+  `@kisi.africa` is this brand. No shop on it; it is pure story.
+- **Kisi Farm** (`farm.kisi.africa`) — the real business (eggs, day-old chicks, sponsorship).
+  **This is where every sell now points.** Order eggs at `farm.kisi.africa/eggs`; back the
+  flock at `farm.kisi.africa/support`.
+- **Kisi Kids** (`kids.kisi.africa`) — the kids channel (softer, educational).
+
+**You author the stories and characters into the shared canon, for Kisi Africa.** Because the
+canon is shared, **Kisi Kids and Kisi Farm can tap into the same characters and events**:
+Kids can retell a beat gently for children, and the Farm can use a hen's name and story to
+market the real eggs she lays. Write every character so it works for all three: a real
+personality with a Kisi-Africa story, a farm role, and nothing that could not be softened for
+a child. The mascot is **Dede** (he/him). The three standing hashtags include **`#dede`**.
 2. Confirm the toolchain: `node -v` (needs Node; prefix PATH if the memory note says so)
    and that Chrome or Edge is present for `render.ps1`.
 3. Work on branch `feature/kisi-poultry-republic`. Commit in small logical units.
@@ -52,10 +72,12 @@ Write like a top screenwriter breaking a story, not like a bot filling a templat
    anything that overflows). Draw drama from politics, sport, the egg economy, feed, water,
    coops, solar, or social life. Respect open threads (the villain rollout: monitor lizard
    first, then a scheming insider hen, then Halima's later heel turn).
-4. **Land the sell (funnel rule).** The final beat routes to `kisi.africa/support` or
-   `kisi.africa/shop`. If the arc touches light, power, coops, or housing, name the
-   **Solar & Light** or **Better Housing** campaign ($25,000 each). Cast intros route to
-   meeting the flock.
+4. **Land the sell (funnel rule).** The final beat routes to **Kisi Farm**:
+   `farm.kisi.africa/eggs` (order eggs) or `farm.kisi.africa/support` (back the flock). If the
+   arc touches light, power, coops, or housing, name the **Solar & Light** or **Better
+   Housing** campaign (name the campaign, not a dollar figure, the owner set none yet). Cast
+   intros route to meeting the flock on kisi.africa. The slide generator's footer already
+   points at Kisi Farm (`SELL_FOOT` in `generate-arcs.mjs`); keep caption sells consistent.
 
 Do not fabricate real farm facts (certifications, numbers, vet outcomes). Story is
 fiction about the chickens; farm claims must be real or clearly placeholder.
@@ -267,29 +289,44 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
     shop-routed arcs no longer show /support under an "order eggs" CTA. No new characters (chicken
     count stays 27).
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 7 are built
-  and queued (rebuild → sweetbeak → dawn → sweetbeak2 → breakfast → sprint → elders, in that cron
-  order after `arc-cabinet`). A plain "execute" should build **Season 2, Ep 8**. Three warm arcs
-  have now run, so it is a good moment to advance a serialized thread. Best next threads, in
-  priority order:
-  1. **Seed Halima's heel turn (villain rollout #3, the big one).** Eps 4 and 5 both gave Halima
-     strong principled beats (the housing rally; making Order No. 1 real), so audience love is well
-     built. A follow-up can start to flirt with recasting her before paying off the secret
-     crate-sisters friendship with the President.
-  2. **Sweet Beak's next target** (she has been "eyeing her next target" twice now; a fresh
-     victim/angle would land) or **Eseosa in exile (careful, dignified)**.
+- **SEASON 2 Eps 8-9: brand-split batch — BUILT AND QUEUED (2026-08-21).** First batch after the
+  three-site split; both sell to **Kisi Farm** (farm.kisi.africa), the slide wordmark is **"Kisi"**,
+  mascot is **Dede**. Showrunner REVISE→SHIP (fixed a real continuity bug: the crate-sisters origin
+  is PUBLIC canon, so Kola cannot "alone know" it, he alone senses what the bond is *becoming*; also
+  moved Túndé's boast off Flash's rain race onto his own 100m record; "plaque"→"credit"). Art
+  director PASS on all 8. Alternation held: elders CREAM → **second-chair GREEN → kickoff CREAM**.
+  Also migrated ALL historical funnel URLs in timeline/generate-arcs/captions to farm.kisi.africa.
+  - **Ep 8 "The Second Chair"** (`the-second-chair`, slug `second-chair`, GREEN, 4 beats, → support).
+    **Seeds Halima's heel turn (villain rollout #3).** After the flock cheers her for the breakfast
+    bell, the second chair feels too small; Sweet Beak plants the poison; a dusk by the empty first
+    chair opens a crack; Kola senses the crate-sisters bond turning to a fault line. A SEED, not a
+    spend, keeps her sympathetic. Dated 08-31…09-03.
+  - **Ep 9 "The League Kicks Off"** (`the-league-kicks-off`, slug `kickoff`, CREAM, 4 beats, → eggs).
+    Warm sport beat: Túndé opens the Coop League, Flash dares rivals to chase, and Chi-Chi races her
+    first league fixture (pays off her Ep 6 junior-squad thread), comes third, loudest cheer. Dated
+    09-05…09-08. No new characters (count stays 27).
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 9 are built
+  and queued. A plain "execute" should build **Season 2, Ep 10**. Halima's heel turn is now SEEDED
+  (Ep 8), so the priority thread is to **advance** it. Best next threads, in priority order:
+  1. **Deepen Halima's heel turn (rollout #3, the big one).** The seed is planted; a follow-up can
+     let the wish grow into a first real bend of principle (a moment she puts her advantage ahead of
+     the flock), still short of the full turn, building toward paying off the secret crate-sisters
+     friendship with the President.
+  2. **Sweet Beak's next target** (she has been "eyeing her next target" repeatedly) or **Eseosa in
+     exile (careful, dignified)**.
   3. **Another standing-engine beat** (Kola Quill's next scoop; the National Feed Budget; nesting-box
-     expansion; a Coop League/sports beat).
+     expansion; a fresh Coop League/sports beat off the new season).
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream**
-  against the last new arc (last built = `arc-elders` CREAM, so the next new arc defaults to GREEN);
+  against the last new arc (last built = `arc-kickoff` CREAM, so the next new arc defaults to GREEN);
   a comic arc can carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3
   standing hashtags; end on a sell.
-  **When adding a character, bump `content.test.ts` chicken count (now 27).** The reveal-filtered
-  arc-count test stays at its current value until an arc's earliest beat date passes. It is **9
-  today (2026-08-15)** and steps up as each date lands: 10 after 08-17 (rebuild), 11 after 08-19
-  (sweetbeak), 12 after 08-21 (dawn), 13 after 08-23 (sweetbeak2), **14 after 08-25 (breakfast), 15
-  after 08-27 (sprint), 16 after 08-29 (elders)**. Bump `arcs.length` in `content.test.ts` as each
-  date passes on a real (non-`[skip ci]`) CI run.
+  **When adding a character, bump the chicken-count test in
+  `packages/canon/tests/content.test.ts` (now 27).** The arc-count assertion is now a **floor**
+  (`toBeGreaterThanOrEqual`), not an exact count, so it no longer needs bumping as each in-story
+  date passes. NOTE (monorepo split): content + canon now live in **`packages/canon/src/data/*`**;
+  the loader/ARC_META is **`packages/canon/src/content.ts`** (was `site/lib/content.ts`); the app
+  is `apps/africa`. Staged IG images go to `apps/africa/public/s/`.
 
 - **Cadence fix (2026-08-14): why Season 2 can't reveal "today."** The website reveals each beat by
   its in-story date at build time (`revealedTimeline`, `lib/content.ts`), and the IG cron posts each
@@ -305,5 +342,6 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   nesting-box expansion; coop security and the Bantu Protocol; solar-light schedules;
   perch and sprint rivalries; senior-hen retirement and Mama Gold's Law; Kola Quill's
   next scoop.
-- **Every arc must end on a sell.** Solar & Light and Better Housing are the two $25,000
-  campaigns; reach for them whenever light, power, coops, or housing appear.
+- **Every arc must end on a sell, pointing to Kisi Farm** (`farm.kisi.africa`). Solar & Light
+  and Better Housing are the two campaigns (no dollar figure); reach for them whenever light,
+  power, coops, or housing appear. Egg/breakfast/sport arcs sell eggs at `farm.kisi.africa/eggs`.

@@ -863,7 +863,7 @@ export const timelineEvents: TimelineEvent[] = [
       "the moment with a gracious smile and, everyone noticed, was already " +
       "eyeing her next target on the way out. The grain, meanwhile, was never " +
       "lost. It went where good grain goes: into the best eggs in the country. " +
-      "Order a crate at kisi.africa/shop.",
+      "Order a crate at farm.kisi.africa/eggs.",
   },
 
   /* ------------------------------------ ARC: The Dawn Duel
@@ -941,7 +941,7 @@ export const timelineEvents: TimelineEvent[] = [
       "same serious young bird sleeps a little easier. But here is the honest " +
       "part Baba will tell you himself: he can wake the farm, he cannot light " +
       "it, and when the sun goes down the coops still go dark. Help us change " +
-      "that. This is the Solar & Light campaign, at kisi.africa/support.",
+      "that. This is the Solar & Light campaign, at farm.kisi.africa/support.",
   },
 
   /* ------------------------------------ ARC: Sweet Beak Strikes Again (Ládùn)
@@ -1038,7 +1038,7 @@ export const timelineEvents: TimelineEvent[] = [
       "'One coop is done. We have many.' Sweet Beak slipped off before the last " +
       "verse, already eyeing her next target. But the flock is right: one coop " +
       "is done, and there are many still waiting, and every one of them costs " +
-      "real grain. Help us build the next one, at kisi.africa/support.",
+      "real grain. Help us build the next one, at farm.kisi.africa/support.",
   },
 
   // ARC: The Breakfast Bell (Season 2, Ep 5)
@@ -1137,7 +1137,7 @@ export const timelineEvents: TimelineEvent[] = [
       "second crow every single day since, and no bird wakes to an empty " +
       "trough. A hen who eats well and on time lays a better egg. That last " +
       "part is not a saying. It is the whole business. Taste it for yourself, " +
-      "and order a crate at kisi.africa/shop.",
+      "and order a crate at farm.kisi.africa/eggs.",
   },
 
   // ARC: Chi-Chi's First Race (Season 2, Ep 6)
@@ -1236,7 +1236,7 @@ export const timelineEvents: TimelineEvent[] = [
       "officially retired and unofficially eternal, remains exactly that. A " +
       "champion runs on more than pride, though. Flash swears by farm-fresh " +
       "eggs as race fuel, and so does the minister. Fuel your own champion, " +
-      "and order a crate at kisi.africa/shop.",
+      "and order a crate at farm.kisi.africa/eggs.",
   },
 
   // ARC: The Elders' Bench (Season 2, Ep 7)
@@ -1312,6 +1312,161 @@ export const timelineEvents: TimelineEvent[] = [
       "and the trough full for the layers who gave the Republic every " +
       "breakfast it has ever eaten, costs real grain, season after season. " +
       "The birds who fed us first should not be fed last. Help us look after " +
-      "them, at kisi.africa/support.",
+      "them, at farm.kisi.africa/support.",
+  },
+
+  // ARC: The Second Chair (Season 2, Ep 8) — seeds Halima's heel turn (rollout #3)
+  {
+    id: "second-chair-cheer",
+    chickenIds: ["halima-iron-feathers"],
+    date: "2026-08-31",
+    arcId: "the-second-chair",
+    world: "fiction",
+    type: "custom",
+    title: "The cheer that stayed",
+    body:
+      "Weeks ago, Halima Iron Feathers did something the Republic had never " +
+      "seen her do: she made the President's own breakfast order come true, " +
+      "and the whole flock cheered her for it. The cheer should have faded by " +
+      "now. It has not. At the trough, at the dust bath, birds still catch " +
+      "her eye and dip their heads the way they only ever did for one hen. " +
+      "Halima has sat in the second chair, the Leader of the Opposition's " +
+      "chair, her whole life, and been proud of it. This is the first morning " +
+      "it has ever felt a size too small.",
+  },
+  {
+    id: "second-chair-poison",
+    chickenIds: ["halima-iron-feathers", "ladun-sweet-beak"],
+    date: "2026-09-01",
+    arcId: "the-second-chair",
+    world: "fiction",
+    type: "custom",
+    title: "The sweetest poison",
+    body:
+      "Sweet Beak can smell a small doubt from three coops away, and she came " +
+      "to the dust bath wearing her warmest smile. 'You did all the work on " +
+      "that breakfast bell,' she cooed, settling in beside Halima. 'You fought " +
+      "for it three feed budgets running. And who stood up and rang it? Who " +
+      "gets the credit? Why are you always the second chair, Iron Feathers, " +
+      "when you do the first-chair work?' Halima did not raise her voice. She " +
+      "never does. She said one dry line, 'I know exactly what you are, and it " +
+      "will not work,' and sent her off. But Sweet Beak did not need it to " +
+      "work today. She only needed the question to stay. It stayed.",
+  },
+  {
+    id: "second-chair-dusk",
+    chickenIds: ["halima-iron-feathers", "kola-quill"],
+    date: "2026-09-02",
+    arcId: "the-second-chair",
+    world: "fiction",
+    type: "custom",
+    title: "A moment too long",
+    body:
+      "That evening, when the coops had gone quiet and the President had long " +
+      "since gone to roost, Halima walked the length of the empty assembly " +
+      "ground. She stopped by the first chair, the President's chair, the one " +
+      "she has spent a lifetime arguing against from the seat beside it. She " +
+      "looked at it a moment too long. Only Kola Quill, working late on a " +
+      "headline, saw her do it, and he printed nothing, because some things " +
+      "are not yet news. Everyone in the Republic knows the old fact, the two " +
+      "of them deploy it in debates: the President and the Leader of the " +
+      "Opposition came out of the same chick crate, on the same morning, years " +
+      "ago. What Kola alone can feel, and would not print, is what that old " +
+      "bond is quietly becoming, not a friendship any more, and not yet a " +
+      "rivalry, but a fault line, and whatever is starting here runs along it.",
+  },
+  {
+    id: "second-chair-iron",
+    chickenIds: ["halima-iron-feathers", "adedoyin-mama-decree"],
+    date: "2026-09-03",
+    arcId: "the-second-chair",
+    world: "fiction",
+    type: "custom",
+    title: "Iron, still",
+    body:
+      "By morning it was as if nothing had happened. Halima took the second " +
+      "chair, opened the feed budget to the first disputed line, and fought " +
+      "the President over it the way she has fought her over everything, " +
+      "fiercely, dryly, and to the last grain. The Republic watched its most " +
+      "loyal opposition do its job, and loved her for it, and saw nothing " +
+      "else. It did not see the small new wish that had started somewhere " +
+      "behind her iron, quiet as a draught under a door: one day, perhaps, the " +
+      "first chair. A Republic this size holds together on trust, and trust " +
+      "has to be fed and housed and cared for, season after season. Help us " +
+      "keep it strong. Back the flock at farm.kisi.africa/support.",
+  },
+
+  // ARC: The League Kicks Off (Season 2, Ep 9) — warm sport beat, pays off Chi-Chi's squad thread
+  {
+    id: "league-open",
+    chickenIds: ["tunde-quickfoot"],
+    date: "2026-09-05",
+    arcId: "the-league-kicks-off",
+    world: "fiction",
+    type: "sports",
+    title: "A new season",
+    body:
+      "The Coop Premier League opened under a clear, high sky, and Túndé " +
+      "Quickfoot, Minister of Sports and Recreation, declared it open in the " +
+      "only way he knows how: with a speech. It was a long speech. It was, " +
+      "for the first two feed breaks, mostly about Túndé, his knees, his glory " +
+      "days, and the hundred-metre record that gets faster every time he tells " +
+      "it. Then, generously, and to real cheering, it became about the birds. " +
+      "'Run honest,' he finished. 'Win kind. Lose worse than anybody, so the " +
+      "winning means something.' Then he blew the whistle and pretended the " +
+      "tear in his eye was dust.",
+  },
+  {
+    id: "league-champions",
+    chickenIds: ["flash-adaora"],
+    date: "2026-09-06",
+    arcId: "the-league-kicks-off",
+    world: "fiction",
+    type: "sports",
+    title: "The champions' burden",
+    body:
+      "Flash Adaora's Solar Queens came into the new season as reigning " +
+      "champions, which in the Coop League means every other team has spent " +
+      "the off-season learning your habits. Flash was asked, at the line, " +
+      "whether the pressure worried her. She looked down the track at all the " +
+      "birds who had come to beat her and said only, 'Good. Chase us. It keeps " +
+      "the legs honest.' Then she ran the opening leg so smoothly that even " +
+      "the birds chasing her cheered, which annoyed their coaches enormously.",
+  },
+  {
+    id: "league-debut",
+    chickenIds: ["chi-chi", "flash-adaora"],
+    date: "2026-09-07",
+    arcId: "the-league-kicks-off",
+    world: "fiction",
+    type: "sports",
+    title: "The smallest debut",
+    body:
+      "Halfway down the junior team sheet, in careful, over-large letters, was " +
+      "one name the whole Republic had been quietly waiting for: Chi-Chi. The " +
+      "shy sweetheart of the flock, who joined Flash's junior sprint squad " +
+      "after her first egg, lined up for her first real league fixture with " +
+      "her legs shaking exactly the way they shook at her very first race. She " +
+      "did what she has always done. She looked at the older birds to see " +
+      "precisely what a runner is meant to do, copied it as best she could, " +
+      "put her small head down, and ran her whole heart out.",
+  },
+  {
+    id: "league-fuel",
+    chickenIds: ["chi-chi"],
+    date: "2026-09-08",
+    arcId: "the-league-kicks-off",
+    world: "fiction",
+    type: "sports",
+    title: "Fuel a champion",
+    body:
+      "She came third, a wing's length off second, and grinned as though she " +
+      "had won the whole thing, because to Chi-Chi she had: she had finished, " +
+      "and she had done her best, which are the only two things she has ever " +
+      "asked of herself. The cheer for third was, once again, louder than the " +
+      "cheer for first. Every bird on that field, champion and rookie alike, " +
+      "ran on exactly one thing underneath all the heart: a good breakfast, " +
+      "laid that morning by a hen with a name. A champion runs on more than " +
+      "pride. Fuel your own, and order farm-fresh eggs at farm.kisi.africa/eggs.",
   },
 ];

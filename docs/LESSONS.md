@@ -6,6 +6,35 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-21 (content: Season 2 Eps 8-9, first batch under the brand split)
+
+Ran the story factory (`social/story.md`) end to end for the first time since the three-site
+split. Updated `story.md` itself for the split first: the sell now points to **Kisi Farm**
+(`farm.kisi.africa`, not kisi.africa/support|shop), the slide wordmark is **"Kisi"**, mascot is
+**Dede**, and a new "brand split" section explains that stories/characters are authored into the
+shared canon for Kisi Africa, and Kisi Kids + Kisi Farm tap into the same cast. Also migrated the
+generator's `SELL_FOOT` and **all historical funnel URLs** (timeline/generate-arcs/captions) to
+`farm.kisi.africa`.
+
+Then wrote and queued two arcs (canon timeline + ARC_META + slides + captions + staged):
+- **Ep 8 "The Second Chair"** (GREEN, 4) — seeds Halima's heel turn (rollout #3): the flock's cheer
+  makes the second chair feel small, Sweet Beak plants the poison, Kola senses the crate-sisters
+  bond becoming a fault line. → farm.kisi.africa/support.
+- **Ep 9 "The League Kicks Off"** (CREAM, 4) — Chi-Chi's first league race, third place, loudest
+  cheer; pays off her Ep 6 junior-squad thread. → farm.kisi.africa/eggs.
+
+Audits: art director PASS on all 8 slides; showrunner **REVISE→SHIP**. The showrunner caught a real
+continuity bug worth remembering: **the crate-sisters origin (President + Halima off the same chick
+crate) is PUBLIC canon** ("a fact both deploy in debates"), so a story must not make it "the thing
+only Kola knows" — what Kola alone can sense is what the bond is *becoming*. It also caught that a
+"race in the rain" is **Flash Adaora's** signature moment, not Túndé's (his is the 100m record), and
+an invented "plaque" prop. Lesson: check whose signature beat you are borrowing, and whether a
+"secret" is actually public in the bible. Verified: canon 18 tests, africa typecheck + build green.
+Rendering gotcha: launching headless Chrome for many slides in quick succession fails on profile
+lock; give each a unique `--user-data-dir` and a short sleep.
+
+---
+
 ## Session — 2026-08-20 (kisi.africa repositioned + mascot renamed Taco -> Dede)
 
 After the three sites went live, two changes to kisi.africa.
