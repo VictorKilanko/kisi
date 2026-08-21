@@ -123,6 +123,16 @@ social/          IG factory (repoint off site/content paths)                    
 
 ## Resume point
 
+**2026-08-20 (repositioning, audited clean):** kisi.africa repositioned as the pure
+"universe" front door: /about rewritten as "About Kisi Africa", "Order Eggs"/"Support"
+removed from the surface, Header/Footer/home/economy/stories/profiles now point buying +
+sponsoring OUT to Kisi Farm, /shop + /support 308 to the farm permanently, /eggs kept as
+Republic egg lore, metadata/OG/manifest/sitemap re-pitched, `NEXT_PUBLIC_COMMERCE_ON_FARM`
+retired. Expert audit: clean. Phase 6 cleanup (delete the now-dead /support + /shop page
+files, SupportCheckout, /api/support) still open and low-risk. The IG-slide "final slide
+sells" funnel now points at Kisi Farm, not kisi.africa/support (update social/story.md next
+content session).
+
 **2026-08-20 (LIVE):** All phases done and **pushed to main (`516c2cf`)**; kisi.africa
 production deploys from `apps/africa` (commerce flag off, so it still self-serves the shop).
 Remaining owner steps, when ready: create Vercel projects for farm (`apps/farm`) and kids
