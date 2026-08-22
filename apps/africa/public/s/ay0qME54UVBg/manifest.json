@@ -365,8 +365,10 @@
       ],
       "finalRoute": "https://kisi.africa/republic/stories",
       "caption": "THE SECOND CHAIR. Weeks ago, Halima Iron Feathers made the President's own breakfast order come true, and the whole flock cheered her for it, harder than they ever had. The cheer has not faded. And for the first time in a lifetime spent proud of the Leader of the Opposition's chair, the second chair feels a size too small. Sweet Beak, who can smell a small doubt from three coops away, came to the dust bath with her warmest smile and the sweetest poison: \"You do the first-chair work. She gets the credit. Why are you always second?\" Halima sent her off with one dry line. But the question stayed. That dusk, alone, Halima stood by the President's empty first chair one moment too long, and only Kola Quill saw. He printed nothing, because some things are not yet news, but in his margin he wrote the one line he would not print. Everyone knows the old fact, the two of them deploy it in debates: they came out of the same chick crate, the same morning, years ago. What Kola alone can feel is what that bond is quietly becoming. By morning she was iron again, fighting the feed budget line by line, and the Republic loved her for it. It did not see the small new wish behind her eyes: one day, the first chair. Swipe through all 4. 🪑 A Republic holds on trust, and trust must be fed, housed, and cared for. Back the flock at farm.kisi.africa/support.\n\n#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #kisiafrica #runbychickens #dede #PoultryFarm #PoultryNigeria #NigerianAgriculture #Agribusiness #FarmLife #Chickens #Naija #SouthwestNigeria #FarmStories #EggFarm #MadeInNigeria",
-      "status": "staged",
-      "scheduledFor": null
+      "status": "posted",
+      "scheduledFor": null,
+      "postedAt": "2026-08-22T06:40:24.823Z",
+      "note": "publish threw but the post is live; reconciled: {\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":false,\"code\":4,\"error_subcode\":2207051,\"error_user_tit"
     },
     {
       "name": "arc-kickoff",
