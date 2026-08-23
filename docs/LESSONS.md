@@ -6,6 +6,61 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-23 (Farm Records: spreadsheet overhaul + new records.kisi.africa app)
+
+Two pieces of work, both about the **real farm ledger**.
+
+**1. Spreadsheet (`records/Farm Intelligence System_v2.xlsx`).** B-004 (100 ISA Brown)
+arrived **16 Aug 2026** — marked **ACTIVE** in the Flock Register. Rebuilt **Sep-Dec 2026**
+monthly sheets with a **full per-batch layout (40 cols)**: per-batch count/age/eggs/feed for
+B-001..B-004, with Total Birds / Total Eggs / Production % / Total Feed / Eggs Unsold /
+Receivable auto-calculated (grey columns), grouped colour bands, frozen header + date column,
+monthly totals + avg-production rows. Added a **Batch Fed** column to Feed Intelligence and 11
+new field definitions to the Data Dictionary. Backed up first
+(`records/Farm Intelligence System_v2_BACKUP_2026-08-23.xlsx`). Owner chose full per-batch
+width + **manual** age entry.
+
+**Lesson: the `.xlsx` files are git-ignored** (`.gitignore` line 24: `*.xlsx`). The workbook
+lives on disk / OneDrive only — it is **not** in git history. Always back up in-place before
+editing; git will not save it for us.
+
+**2. New app `apps/records` -> `records.kisi.africa`** (Phase 1 MVP). A logged-in web app so
+farmers record daily data instead of opening the spreadsheet. **Next.js 16 + React 19 +
+Tailwind 4 + `@kisi/brand`; Supabase** for Postgres + auth + **per-farm Row Level Security**.
+Built: email login, per-batch **daily-log form** with live totals/production%/receivable, edit
+any day, month-to-date summary + history. Data model mirrors the spreadsheet
+(`apps/records/supabase/schema.sql` seeds Kisi + B-001..B-004). Strategy: **Kisi first, expand
+to other farmers later** — pilot auto-attaches every signup to Kisi via a DB trigger; multi-farm
+is an onboarding change, not a security rewrite (isolation already enforced in the DB).
+
+**Lessons:**
+- Next.js 16 renamed the `middleware` file convention to **`proxy`** (`proxy.ts`, export
+  `proxy`). Heed the build's deprecation notice.
+- The app **boots without Supabase env** (shows a setup screen) so `pnpm dev` always renders.
+- Records are stored in **Supabase (hosted Postgres in the cloud)**, per farm — not in the repo.
+  Printable CSV: Supabase dashboard exports any table/query to CSV today; an in-app CSV/Excel
+  export button is Phase 2 (`docs/RECORDS_APP.md`).
+
+Gates (records app): typecheck 0 / lint 0 / **10 unit tests** / production build all routes.
+**Not committed or pushed** — lives in the working tree; commit in logical units after the
+standing expert-audit-before-push step.
+
+**Next steps (Farm Records):**
+- [ ] **Commit `apps/records` + docs** in logical units (after expert audit), then decide on push.
+- [ ] **Stand up Supabase** to run it live: create project, run `apps/records/supabase/schema.sql`,
+      set `.env.local` from `.env.example`, disable email confirmation for the pilot, then
+      `corepack pnpm --filter @kisi/records dev`.
+- [ ] Once live, log in and **screenshot the full daily-log + dashboard** for the owner.
+- [ ] **Phase 2:** in-app **CSV / Excel export** (printable), feed-purchase screen (type/qty/price/
+      date/batch), monthly report view, edit the flock register in-app.
+- [ ] **Phase 3 (expand to other farmers):** replace the pilot "everyone joins Kisi" DB trigger with
+      an invite/onboarding flow; owner vs worker roles.
+- [ ] **Phase 4:** offline/PWA entry for poor connectivity; WhatsApp/SMS daily reminder;
+      Yoruba / Nigerian Pidgin.
+- [ ] Add a **Vercel project** for `records.kisi.africa` (set `NEXT_PUBLIC_SITE_URL` + Supabase env).
+- [ ] Optionally migrate **Aug 2026** spreadsheet tab to the new per-batch layout (left as historical
+      for now to protect entered data).
+
 ## Session — 2026-08-21 (Kisi Kids: built the website; added Zizi to canon)
 
 Built out **Kisi Kids** (`apps/kids`) as a real site, not a scaffold. Owner call: long-term the

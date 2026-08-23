@@ -6,6 +6,25 @@ session) can jump back in. Detail lives in `PLAN.md`, `LESSONS.md`, and
 
 ---
 
+## ⏩ Latest work — 2026-08-23 (Farm Records)
+
+Newest thread, separate from the Vercel task below.
+
+- **Spreadsheet:** `records/Farm Intelligence System_v2.xlsx` — B-004 now active,
+  Sep-Dec rebuilt with full per-batch tracking. Backup alongside it. **Note: `.xlsx`
+  is git-ignored**, so this lives on disk/OneDrive only, not in git.
+- **New app `apps/records` -> `records.kisi.africa`** (Phase 1 MVP, Supabase +
+  Next.js 16). Daily-log app to replace the spreadsheet. **In the working tree,
+  not committed.** Gates all pass (typecheck/lint/10 tests/build).
+- **To run it live:** create a free Supabase project, run
+  `apps/records/supabase/schema.sql`, copy `.env.example` -> `.env.local` with the
+  two Supabase keys, then `corepack pnpm --filter @kisi/records dev` (port 3003).
+  Full guide: `apps/records/README.md`. Roadmap: `docs/RECORDS_APP.md`.
+- **Next session could:** commit apps/records (after expert audit), then Phase 2 =
+  feed-purchase screen + in-app CSV/Excel export + monthly report.
+
+---
+
 ## Where things stand
 
 - **The brand pivot is done and pushed.** New crest logo + favicon, the Republic
