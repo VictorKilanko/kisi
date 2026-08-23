@@ -381,8 +381,10 @@
       ],
       "finalRoute": "https://kisi.africa/republic/stories",
       "caption": "THE LEAGUE KICKS OFF. A new Coop Premier League season opened under a clear, high sky, and Minister Túndé Quickfoot declared it open the only way he knows how: with a speech. A long one. For the first two feed breaks it was mostly about Túndé, his knees, his glory days, and the hundred-metre record that gets faster every time he tells it. Then, generously, it became about the birds: \"Run honest. Win kind. Lose worse than anybody, so the winning means something.\" Flash Adaora's Solar Queens came in as reigning champions, which means everyone has spent the off-season learning their habits. Asked if the pressure worried her, Flash looked down the track at all the birds who came to beat her and said only, \"Good. Chase us. It keeps the legs honest.\" And halfway down the junior sheet, in careful over-large letters, was the name the whole Republic had been waiting for: Chi-Chi. The shy sweetheart lined up for her first league race with her legs shaking, watched the older birds to copy exactly what a runner does, and ran her whole small heart out. She came third and grinned like she'd won, because to Chi-Chi she had: she finished, and she did her best. The cheer for third was louder than the cheer for first. Every runner out there ran on one thing under all the heart: a good breakfast, laid that morning by a hen with a name. Swipe through all 4. 🏃 A champion runs on more than pride. Fuel yours: order farm-fresh eggs at farm.kisi.africa/eggs.\n\n#KisiFarm #RepublicOfKisi #WhereEveryChickenHasAStory #kisiafrica #runbychickens #dede #PoultryFarm #PoultryNigeria #NigerianAgriculture #Agribusiness #FarmLife #Chickens #Naija #SouthwestNigeria #FarmStories #EggFarm #MadeInNigeria",
-      "status": "staged",
-      "scheduledFor": null
+      "status": "posted",
+      "scheduledFor": null,
+      "postedAt": "2026-08-23T06:42:06.253Z",
+      "note": "publish threw but the post is live; reconciled: {\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":false,\"code\":4,\"error_subcode\":2207051,\"error_user_tit"
     }
   ]
 }
