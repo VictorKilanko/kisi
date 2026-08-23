@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "@kisi/brand/tokens.css";
+@import "@kisi/brand/base.css";
+
+/* Records app is a tool: a calm, dense, mobile-first surface. */
+:root {
+  --surface: var(--color-kisi-cream-100);
+}
+
+body {
+  background: var(--surface);
+}
+
+/* Larger, thumb-friendly form controls for on-farm phone use. */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.field > label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-kisi-charcoal-600);
+}
+.input {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #d8ceb8;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--color-kisi-charcoal-900);
+}
+.input:focus-visible {
+  border-color: var(--color-kisi-green-500);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  background: var(--color-kisi-green-700);
+  color: var(--color-kisi-cream-100);
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background: var(--color-kisi-green-900);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--color-kisi-green-700);
+  border: 1px solid #d8ceb8;
+}
+.card {
+  background: #fff;
+  border: 1px solid #ece2cc;
+  border-radius: 14px;
+}
