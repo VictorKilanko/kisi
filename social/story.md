@@ -306,19 +306,40 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
     first league fixture (pays off her Ep 6 junior-squad thread), comes third, loudest cheer. Dated
     09-05…09-08. No new characters (count stays 27).
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 9 are built
-  and queued. A plain "execute" should build **Season 2, Ep 10**. Halima's heel turn is now SEEDED
-  (Ep 8), so the priority thread is to **advance** it. Best next threads, in priority order:
-  1. **Deepen Halima's heel turn (rollout #3, the big one).** The seed is planted; a follow-up can
-     let the wish grow into a first real bend of principle (a moment she puts her advantage ahead of
-     the flock), still short of the full turn, building toward paying off the secret crate-sisters
-     friendship with the President.
+- **SEASON 2 Ep 10: "The True Count" — BUILT AND QUEUED (2026-08-27).** Villain rollout #3 advances:
+  Halima's **first real bend of principle**, off the Ep 8 seed. As the Republic's honest auditor she
+  recounts the National Egg Census and catches a true, honest error (a senior hen on a well-earned
+  laying break still tallied as laying, so the President's proud new record is inflated). **Sweet
+  Beak** whispers her toward an ambush ("save the true number for Census Day, in front of everyone"),
+  and for the first time in her life the auditor holds a true number back on purpose. At the fence,
+  the President (crate origin PUBLIC, friendship the open secret) tells Halima she is the only one
+  who would ever correct her plainly, at the exact moment Halima is carrying the betraying number.
+  On Census Day she does **not** spring the trap, but she does **not** give her famous one-word
+  verdict either: she rises, opens her beak, and for the first time says nothing and lets the wrong
+  number stand. Only Kola catches the swallowed word and feels the fault line take its first real
+  step. Still short of the full turn; sets up the crate-sister reckoning. GREEN, 4 slides
+  (`arc-truecount-1..4`), routes to **support**. Live in `timeline.ts` (`arcId: the-true-count`,
+  09-10…09-13), ARC_META, caption (2188 chars), staged into `manifest.json` as `arc-truecount`
+  (status `staged`). **Showrunner REVISE→SHIP** (three real fixes: the crate fact is PUBLIC canon so
+  it cannot be re-secreted, only the friendship is the open secret; the double-counted-clutch error
+  duplicated her canonical Wet Season Recount win, so switched to the laying-break mechanic; and the
+  Census Day payoff was told-not-shown, so dramatized the withheld one-word verdict, which also pays
+  off the beat-1 "single word" setup; plus a polish making the President's fence lines aphoristic in
+  her Mama Decree cadence). Art director PASS on all 4. No new character (count stays 28).
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 10 are built
+  and queued. A plain "execute" should build **Season 2, Ep 11**. Halima's heel turn has now taken
+  its **first real bend** (Ep 10). Best next threads, in priority order:
+  1. **Halima's heel turn (rollout #3) — the consequence beat.** She has bent once (held a true
+     number back). A follow-up can make the withheld count come out at a cost, force the crate-sister
+     confrontation with the President, and either deepen the fall or begin the turn back. This is the
+     spine; keep escalating it.
   2. **Sweet Beak's next target** (she has been "eyeing her next target" repeatedly) or **Eseosa in
      exile (careful, dignified)**.
   3. **Another standing-engine beat** (Kola Quill's next scoop; the National Feed Budget; nesting-box
      expansion; a fresh Coop League/sports beat off the new season).
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream**
-  against the last new arc (last built = `arc-kickoff` CREAM, so the next new arc defaults to GREEN);
+  against the last new arc (last built = `arc-truecount` GREEN, so the next new arc defaults to CREAM);
   a comic arc can carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3
   standing hashtags; end on a sell.
   **When adding a character, bump the chicken-count test in

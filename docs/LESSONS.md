@@ -6,6 +6,52 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-27 (content: Season 2 Ep 10 "The True Count" — Halima's first bend)
+
+Ran one full `social/story.md` cycle. The RESUME marker named **Ep 10: deepen Halima's heel turn
+(rollout #3)**. Built **"The True Count"** (`arcId: the-true-count`), GREEN, 4 beats, → support.
+Halima, the Republic's honest auditor, catches a true Egg Census error that would embarrass the
+President; Sweet Beak whispers her toward an ambush; for the first time in her life she holds a true
+number back on purpose, and on Census Day she rises for her famous one-word verdict and says nothing.
+Her first real **bend of principle**, still short of the full turn, building toward the crate-sister
+reckoning. Live in `timeline.ts` (09-10…09-13), `content.ts` ARC_META, 4 slides
+(`arc-truecount-1..4`), caption (2188 chars), staged into `manifest.json` as `arc-truecount`.
+
+**Showrunner REVISE→SHIP — three catches worth carrying forward:**
+- **Do not re-secret a public canon fact.** The draft called the crate-sistership something they
+  "secretly are," but the crate origin is PUBLIC ("a fact both deploy in debates"); the *friendship*
+  is the open secret. Reworded. Same class of bug the 08-21 session hit. When a "secret" involves the
+  President + Halima, check whether the bible already made it public.
+- **Do not reuse a character's signature beat as a throwaway device.** The first error mechanic (a
+  clutch counted twice) is the exact mechanic of Halima's canonical Wet Season Recount win, so it
+  would read as a rerun and cheapen the turn. Switched to a fresh, "small and honest" mechanic (a hen
+  on a laying break still tallied as laying).
+- **Show the bend, do not narrate it.** The Census Day payoff was told ("a true number sat unspoken
+  in her chest"). Dramatized it: she rises to give her ritual one-word verdict and, for the first
+  time, closes her beak and says nothing while the false record stands, Kola catching the swallowed
+  word. This also paid off the beat-1 "single word, by morning" setup. Plus a polish making the
+  President's fence lines aphoristic in her Mama Decree cadence.
+
+**Render gotcha (new, worth remembering):** headless Chrome `--screenshot` needs a real Windows file
+URI. A Git Bash `file:///$(pwd)/...` path (`/c/Users/...`) silently loads an error page and every
+slide comes out **byte-identical** (same md5). Tell: identical md5 across different-content slides.
+Fix: `url="file:///$(cygpath -m "$abs")"` (cygpath -m gives `C:/Users/...`, no sed backslash fight),
+unique `--user-data-dir` per slide + cleanup to dodge the profile lock. Verify with `md5sum` after.
+
+**Manifest sync mattered again.** Local feature-branch manifest had `arc-second-chair`/`arc-kickoff`
+as `staged`, but `origin/main` had them `posted` (cron drained them). Overwrote the local manifest
+from `git show origin/main:...manifest.json` **before** staging, so only `arc-truecount` was appended
+as `staged` (24→25 posts) and no posted status reverted. IG caption cap is **2,200 chars**; first
+build came out 2205, trimmed two phrases in `captions.md` to 2188 and regenerated.
+
+**Gates (actual, local, Node v24.18.1):** cleared `apps/africa/.next` first; canon typecheck 0,
+africa typecheck 0, africa lint 0, canon tests **18/18**, africa production build all routes. Arc
+reveal-dated future (09-10+) vs today 08-27, so it is hidden on the live site until its dates arrive
+(matches the IG drip); arc-count test is a **floor** (`>=9`) now, no bump; chicken count stays 28.
+**Committed to `feature/kisi-poultry-republic`; NOT pushed to main / not deployed / not queued to IG
+live** — that go-live step (main ref-move + Vercel deploy + the daily IG cron) is outward-facing and
+left for owner go-ahead, per the expert-audit-before-push rule.
+
 ## Session — 2026-08-23 (Farm Records: spreadsheet overhaul + new records.kisi.africa app)
 
 Two pieces of work, both about the **real farm ledger**.

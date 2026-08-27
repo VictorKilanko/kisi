@@ -258,6 +258,17 @@ const arcs = [
       ["Fuel a champion", "She came third and grinned like she'd won. Every runner ran on one thing: a good breakfast. A champion runs on more than pride. Order eggs at farm.kisi.africa/eggs."],
     ],
   },
+  {
+    slug: "truecount",
+    title: "The True Count",
+    theme: "green", // Halima's first bend of principle: dramatic intrigue on the green field
+    slides: [
+      ["The number that didn't agree", "Halima recounts the Egg Census by hand every month. This time it didn't match the Bureau's: a hen on a laying break, still tallied as laying. The proud new record is not quite real."],
+      ["The sweetest advice", "Sweet Beak found her early. 'Don't waste a true number. Save it for Census Day, in front of everyone.' Halima refused. Then she did what she never does: she kept it back."],
+      ["At the fence", "At dusk the President said, 'If I were wrong, you'd tell me plainly. That is why I sleep.' Halima held the very number that proved her wrong, planning an ambush. Her iron bent."],
+      ["The count she kept", "The false record was read aloud, and the flock waited for Halima's one-word verdict. She rose, opened her beak, and said nothing. Only Kola caught the swallowed word. Back the flock at farm.kisi.africa/support."],
+    ],
+  },
 ];
 
 function smart(s) {
