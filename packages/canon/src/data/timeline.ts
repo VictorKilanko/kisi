@@ -1469,4 +1469,95 @@ export const timelineEvents: TimelineEvent[] = [
       "laid that morning by a hen with a name. A champion runs on more than " +
       "pride. Fuel your own, and order farm-fresh eggs at farm.kisi.africa/eggs.",
   },
+
+  // ARC: The True Count (Season 2, Ep 10) — deepens Halima's heel turn (rollout #3):
+  // her first real bend of principle. Advances the "second-chair" seed. Still short of
+  // the full turn; sets up the eventual crate-sister reckoning with the President.
+  {
+    id: "true-count-error",
+    chickenIds: ["halima-iron-feathers"],
+    date: "2026-09-10",
+    arcId: "the-true-count",
+    world: "fiction",
+    type: "custom",
+    title: "The number that did not agree",
+    body:
+      "Every month, Halima Iron Feathers counts the National Egg Census again " +
+      "herself, by hand, because she has never once trusted a total she did " +
+      "not check. The whole Republic teases her for it. This month the teasing " +
+      "should stop, because her count did not agree with the Bureau's. A senior " +
+      "hen had gone on a well-earned laying break weeks ago, and the Bureau was " +
+      "still tallying her as though she laid every morning, so the proud new egg " +
+      "record, the one the President keeps mentioning, is not quite real. It is " +
+      "a small mistake and an honest one. Old Halima knew exactly what to do " +
+      "with a number like this: say it plainly, in a single word, by morning, " +
+      "the way she always has.",
+  },
+  {
+    id: "true-count-whisper",
+    chickenIds: ["halima-iron-feathers", "ladun-sweet-beak"],
+    date: "2026-09-11",
+    arcId: "the-true-count",
+    world: "fiction",
+    type: "custom",
+    title: "The sweetest advice",
+    body:
+      "Sweet Beak has a nose for a hen holding something back, and she found " +
+      "Halima at the dust bath before the sun was properly up. 'A true number " +
+      "is the most powerful thing in the Republic,' she purred, 'and you are " +
+      "about to waste yours on a quiet Tuesday. Do not report it, Iron " +
+      "Feathers. Save it. Announce it on Census Day, in front of the whole " +
+      "flock, and let them all see who really guards the count.' Halima told " +
+      "her, dryly, that she was not interested. But she did not report the " +
+      "number that morning. She, who has never sat on a count in her life, kept " +
+      "it in her chest, and told herself it was only for a day.",
+  },
+  {
+    id: "true-count-fence",
+    chickenIds: ["halima-iron-feathers", "adedoyin-mama-decree"],
+    date: "2026-09-12",
+    arcId: "the-true-count",
+    world: "fiction",
+    type: "custom",
+    title: "At the fence, as always",
+    body:
+      "That evening, at the fence line where the two fiercest rivals in the " +
+      "Republic scratch side by side the way only two birds out of the same " +
+      "crate can, the Republic's worst-kept secret, the President was in a soft " +
+      "mood. 'Flattery is a fox in a hen's voice,' she said, not looking up. 'I " +
+      "cannot hear a word of it. But if I were ever wrong, truly wrong, you " +
+      "would tell me to my face. Plainly. The way you always have. A leader who " +
+      "cannot be corrected is already falling. You are the reason I sleep.' " +
+      "Halima said nothing. In her " +
+      "chest sat the one true number that proved the President wrong, and a " +
+      "plan, for the very first time in her life, not to tell her plainly at " +
+      "all, but to spring it in front of everyone. She had never once felt the " +
+      "shape of her own iron bend before. She felt it bend now.",
+  },
+  {
+    id: "true-count-kept",
+    chickenIds: ["halima-iron-feathers", "kola-quill"],
+    date: "2026-09-13",
+    arcId: "the-true-count",
+    world: "fiction",
+    type: "custom",
+    title: "The count she kept",
+    body:
+      "By Census Day, Halima had made her choice, and it surprised even her. " +
+      "When the roll was called and the Bureau read the new record aloud, the " +
+      "whole Assembly turned to the second chair, because everyone knows what " +
+      "happens next: Halima rises, and in a single dry word she puts the number " +
+      "right. She rose. She opened her beak. And for the first time in her " +
+      "whole life she closed it again and said nothing, and let the wrong " +
+      "number stand. She did not spring Sweet Beak's trap, and she did not do " +
+      "the plain, one-word thing either. A true number sat unspoken in her " +
+      "chest, kept back not by mistake but on purpose, and the keeping felt " +
+      "heavier than any recount she had ever demanded. Only Kola Quill, who " +
+      "watches her the way other birds watch the weather, caught the word she " +
+      "swallowed, and he understood that the fault line he first felt by the " +
+      "empty first chair had just taken its first real step. A Republic this " +
+      "size stands on one thing: trust, honestly kept and honestly counted. " +
+      "Help us keep it fed, housed, and strong. Back the flock at " +
+      "farm.kisi.africa/support.",
+  },
 ];

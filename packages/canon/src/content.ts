@@ -256,6 +256,16 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "them, and the smallest debut of all: Chi-Chi's first league race, third " +
       "place, and the loudest cheer on the field.",
   },
+  "the-true-count": {
+    title: "The True Count",
+    summary:
+      "Halima Iron Feathers, the Republic's honest auditor, catches a true " +
+      "error in the Egg Census that would embarrass the President. Sweet Beak " +
+      "whispers her toward an ambush, and for the first time in her life the " +
+      "auditor holds a true number back on purpose. She stops short of the " +
+      "trap, but her one clean thing, plainness, has quietly bent, and Kola " +
+      "Quill feels the fault line take its first real step.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {
