@@ -1560,4 +1560,109 @@ export const timelineEvents: TimelineEvent[] = [
       "Help us keep it fed, housed, and strong. Back the flock at " +
       "farm.kisi.africa/support.",
   },
+
+  // ARC: The Kept Number (Season 2, Ep 11) — the consequence beat of Halima's heel
+  // turn (rollout #3). The record she withheld in Ep 10 goes public; the President
+  // stakes her word on it. Halima neither springs Sweet Beak's ambush nor stays
+  // silent: she corrects the count and takes the blame herself, shielding the
+  // President at the cost of her own spotless name. Deepens the fall (her iron is
+  // now publicly dented) and begins the turn back (mercy over ambush). The crate-
+  // sister crack quiets but does not close; the reckoning is still ahead.
+  {
+    id: "kept-number-gate",
+    chickenIds: ["halima-iron-feathers", "adedoyin-mama-decree"],
+    date: "2026-09-15",
+    arcId: "the-kept-number",
+    world: "fiction",
+    type: "custom",
+    title: "A word given at the gate",
+    body:
+      "The proud new egg record was only ever a number in a ledger until this " +
+      "week, when the President stood at the gate and gave her word on it out " +
+      "loud. Buyers had come to see the famous Kisi hens, and she told them, " +
+      "chest high, exactly how many eggs the Republic had laid, the record " +
+      "everyone keeps repeating. It is the kind of moment a leader lives for. " +
+      "Halima Iron Feathers stood at the back and said nothing, because in her " +
+      "chest sat the one true number that made the proud figure a little too " +
+      "big. Until this morning her silence had cost nobody anything. Now the " +
+      "President had staked her good name on a count that was not quite real, " +
+      "and Halima felt the whole thing turn heavy, the way a small lie does the " +
+      "moment someone repeats it to a stranger. And the President did not stop " +
+      "at the gate. Proud of the figure, she set a day to raise it before the " +
+      "whole Republic, a feast to mark the record, so the number Halima knew " +
+      "was wrong was about to be sung to the entire flock.",
+  },
+  {
+    id: "kept-number-voices",
+    chickenIds: ["halima-iron-feathers", "ladun-sweet-beak", "kola-quill"],
+    date: "2026-09-16",
+    arcId: "the-kept-number",
+    world: "fiction",
+    type: "custom",
+    title: "Two voices, one long night",
+    body:
+      "Sweet Beak had waited all season for a morning like this. 'She said it " +
+      "at the gate, in front of buyers,' she breathed, delighted. 'Spring your " +
+      "true number at her own feast now and you do not just correct her, you " +
+      "break her. Nobody will ever put you in the second chair again.' Halima sent " +
+      "her off, as always. But that same evening Kola Quill, the one bird who " +
+      "had caught the word she swallowed, found her by the roost and said only, " +
+      "quietly, 'I know what you are carrying. I have printed nothing. I am " +
+      "waiting to see what you do with it.' Between the schemer who wanted blood " +
+      "and the newsman who wanted the truth, Halima Iron Feathers, who has " +
+      "slept soundly through drought and trial and flood, did not sleep at all.",
+  },
+  {
+    id: "kept-number-confession",
+    chickenIds: ["halima-iron-feathers", "adedoyin-mama-decree", "ladun-sweet-beak"],
+    date: "2026-09-17",
+    arcId: "the-kept-number",
+    world: "fiction",
+    type: "custom",
+    title: "The count comes out",
+    body:
+      "The day the President had set arrived, and she called the whole Republic " +
+      "together to raise her record where every bird could hear it: a small " +
+      "feast, a proud figure, her good name upon it. The herald read the number " +
+      "aloud. Halima rose from the second chair. For one long breath the " +
+      "Republic held two futures at once: the ambush Sweet Beak had planted, or " +
+      "the silence she had kept at the last count. She took neither. 'This " +
+      "count came to you late,' she said, plain as ever, 'and the lateness is " +
+      "mine, not the President's. One hen is on her well-earned rest and still " +
+      "tallied as laying. Here is the true number.' She read it out, smaller " +
+      "than the one the flock had come to cheer, and she laid the blame for the " +
+      "delay squarely on her own feathers, in front of everyone. She corrected " +
+      "the President and shielded her in the very same breath, and the price " +
+      "was her own good name: the one bird in Kisi who had never once been " +
+      "late, never once held anything back, had just told the whole Republic " +
+      "that this time she had. Sweet Beak came for blood and got a confession " +
+      "of loyalty instead, and left the feast furious.",
+  },
+  {
+    id: "kept-number-fence",
+    chickenIds: ["halima-iron-feathers", "adedoyin-mama-decree", "kola-quill"],
+    date: "2026-09-18",
+    arcId: "the-kept-number",
+    world: "fiction",
+    type: "custom",
+    title: "At the fence, after",
+    body:
+      "That evening Halima went to the fence line half expecting to scratch " +
+      "alone. But the President came, the way she always has, and for a while " +
+      "the two fiercest rivals in the Republic dug side by side in the old " +
+      "crate-sister silence. 'A leader is only ever as strong as the one bird " +
+      "who will correct her,' the President said at last, not looking up. 'You " +
+      "could have broken me at the gate. You had the number to do it. You took " +
+      "the blame onto your own feathers instead. I will not forget which you " +
+      "chose.' Halima said only that the count had been late, which was true, " +
+      "and left out the rest, which was also true. Neither of them said aloud " +
+      "that something between them had changed, that the auditor had come " +
+      "within one word of ambush and they both knew it. But it had changed, " +
+      "and Kola Quill, watching the fault line he first felt by the empty first " +
+      "chair, pecked into his patch of soft earth, in the shorthand only he " +
+      "reads, that the crack had not closed, only quieted. A Republic this " +
+      "size is only as good as its " +
+      "count, honestly kept and honestly told. We count every egg by hand at " +
+      "Kisi. Order farm-fresh eggs, honestly counted, at farm.kisi.africa/eggs.",
+  },
 ];

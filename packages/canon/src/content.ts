@@ -266,6 +266,18 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "trap, but her one clean thing, plainness, has quietly bent, and Kola " +
       "Quill feels the fault line take its first real step.",
   },
+  "the-kept-number": {
+    title: "The Kept Number",
+    summary:
+      "The record Halima withheld goes public: the President stakes her word " +
+      "on it at the gate, then sets a feast to raise it before the whole " +
+      "flock. There the auditor neither springs Sweet Beak's ambush nor stays " +
+      "silent. She corrects the count and takes the blame for the delay " +
+      "herself, shielding the President at the cost of her " +
+      "own spotless name. Sweet Beak came for blood and got a confession of " +
+      "loyalty, and at the fence the crate-sister crack quiets but does not " +
+      "close.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {

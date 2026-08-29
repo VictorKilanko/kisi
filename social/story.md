@@ -327,19 +327,43 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   off the beat-1 "single word" setup; plus a polish making the President's fence lines aphoristic in
   her Mama Decree cadence). Art director PASS on all 4. No new character (count stays 28).
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 10 are built
-  and queued. A plain "execute" should build **Season 2, Ep 11**. Halima's heel turn has now taken
-  its **first real bend** (Ep 10). Best next threads, in priority order:
-  1. **Halima's heel turn (rollout #3) — the consequence beat.** She has bent once (held a true
-     number back). A follow-up can make the withheld count come out at a cost, force the crate-sister
-     confrontation with the President, and either deepen the fall or begin the turn back. This is the
-     spine; keep escalating it.
-  2. **Sweet Beak's next target** (she has been "eyeing her next target" repeatedly) or **Eseosa in
+- **SEASON 2 Ep 11: "The Kept Number" — BUILT AND QUEUED (2026-08-29).** Villain rollout #3, the
+  consequence beat off Ep 10. The record Halima withheld goes public: the President stakes her word on
+  the inflated egg count at the gate before buyers, then sets a **feast** to raise it before the whole
+  flock. **Sweet Beak** urges the ambush ("spring it at her own feast, break her"); **Kola Quill**, who
+  caught the swallowed word last time, quietly signals he knows and is waiting. Cornered between the
+  schemer who wants blood and the newsman who wants truth, Halima at the feast takes **neither** the
+  ambush nor silence: she corrects the count and **takes the blame for the delay onto her own feathers**
+  ("the lateness is mine, not the President's"), shielding the President at the cost of her own spotless
+  never-late record. Sweet Beak came for blood and got a confession of loyalty, and left furious. At the
+  fence the President honours the choice in her decree cadence ("a leader is only as strong as the one
+  bird who will correct her... I will not forget which you chose"); the crate-sister crack quiets but
+  does not close. This **deepens the fall** (her iron is now publicly dented, by her own choice) **and
+  begins the turn back** (mercy over ambush); the full heel turn / reckoning is still ahead. CREAM, 4
+  slides (`arc-kept-1..4`), routes to **eggs** (farm.kisi.africa/eggs). Live in `timeline.ts`
+  (`arcId: the-kept-number`, 09-15…09-18), ARC_META `the-kept-number`, caption, staged into
+  `manifest.json` as `arc-kept` (status `staged`). **Showrunner REVISE→SHIP** (real continuity catch:
+  the first draft played a **second Census Day** four days after Ep 10's, but the Census is canonically
+  *monthly*, so the public correction was moved to a new occasion, the President's record **feast**;
+  also fixed Sweet Beak still naming "Census Day," restored Kola's soft-earth shorthand, and gave the
+  President's fence line her decree cadence). Art director PASS on all 4. No new character (count stays
+  28). **Lesson: check a recurring event's canonical cadence (the monthly Census) before restaging it.**
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 11 are built
+  and queued. A plain "execute" should build **Season 2, Ep 12**. Halima's heel turn has now bent
+  **twice**: she held a true number back (Ep 10), then confessed the lateness at her own cost (Ep 11),
+  still short of the full turn. Best next threads, in priority order:
+  1. **Halima's heel turn (rollout #3) — the reckoning.** She has bent and paid for it once. A follow-up
+     can force the open **crate-sister confrontation** with the President over what nearly happened, let
+     Sweet Beak press the crack she failed to open, and either tip Halima toward the real heel turn or
+     start the redemption. This is the spine; keep escalating it. (The Ep 11 fence scene planted "I will
+     not forget which you chose" and Kola's still-open crack, so the next beat has a running start.)
+  2. **Sweet Beak's next target** (she left Ep 11 "furious" and is still recurring) or **Eseosa in
      exile (careful, dignified)**.
   3. **Another standing-engine beat** (Kola Quill's next scoop; the National Feed Budget; nesting-box
      expansion; a fresh Coop League/sports beat off the new season).
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream**
-  against the last new arc (last built = `arc-truecount` GREEN, so the next new arc defaults to CREAM);
+  against the last new arc (last built = `arc-kept` CREAM, so the next new arc defaults to GREEN);
   a comic arc can carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3
   standing hashtags; end on a sell.
   **When adding a character, bump the chicken-count test in

@@ -269,6 +269,17 @@ const arcs = [
       ["The count she kept", "The false record was read aloud, and the flock waited for Halima's one-word verdict. She rose, opened her beak, and said nothing. Only Kola caught the swallowed word. Back the flock at farm.kisi.africa/support."],
     ],
   },
+  {
+    slug: "kept",
+    title: "The Kept Number",
+    sell: "shop", // the record is public; the sell is the honest egg count
+    slides: [
+      ["The record goes public", "Proud of the new egg record, the President staked her word on it before the buyers at the gate. Halima still held the true count, and felt her silence turn expensive."],
+      ["Two voices", "Sweet Beak purred, 'Spring it now. Break her.' Kola Quill said nothing, but let Halima see he knew, and was waiting. She carried the number alone, and did not sleep."],
+      ["The count comes out", "At the feast the President called to raise her record, Halima rose. The flock braced for an ambush. Instead: 'The count came late. That lateness is mine, not hers.' She put the number right and took the blame herself."],
+      ["At the fence, after", "The President came to the fence, as always. 'You could have broken me. You took the blame instead.' Neither said the bond had changed. It had. We count every egg by hand. Order yours at farm.kisi.africa/eggs."],
+    ],
+  },
 ];
 
 function smart(s) {

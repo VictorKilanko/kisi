@@ -6,6 +6,41 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-29 (content: Season 2 Ep 11 "The Kept Number" — Halima's second bend)
+
+Ran one full `social/story.md` cycle. The RESUME marker named **Ep 11: the consequence beat of
+Halima's heel turn (rollout #3)**. Built **"The Kept Number"** (`arcId: the-kept-number`), CREAM,
+4 beats, → eggs. The record she withheld in Ep 10 goes public: the President stakes her word on the
+inflated count at the gate, then sets a feast to raise it before the flock. Sweet Beak urges the
+ambush; Kola quietly signals he knows and is waiting. At the feast Halima takes neither the ambush
+nor silence: she corrects the count and **takes the blame for the delay onto her own feathers**,
+shielding the President at the cost of her spotless never-late record. Sweet Beak came for blood and
+got a confession of loyalty. At the fence the President honours the choice ("I will not forget which
+you chose"); the crate-sister crack quiets but does not close. **Deepens the fall** (iron publicly
+dented by her own choice) **and begins the turn back** (mercy over ambush); full turn still ahead.
+Live in `timeline.ts` (09-15…09-18), `content.ts` ARC_META, 4 slides (`arc-kept-1..4`), caption
+(2876 chars), staged into `manifest.json` as `arc-kept`.
+
+**Showrunner REVISE→SHIP — the catch worth carrying forward:**
+- **Check a recurring event's canonical cadence before restaging it.** The draft played a **second
+  Census Day** four days after Ep 10's Census Day, but the National Egg Census is canonically
+  *monthly* (Halima's standing recount demand, "part of the Republic's calendar, like rain"). Two in
+  one week broke the calendar and duplicated Ep 10's staging. Fix: moved the public correction to a
+  new occasion, the President's record **feast**, which also sharpened the reversal (the ambush now
+  detonates on her own celebration stage). Follow-on fixes from the same catch: Sweet Beak still
+  named "Census Day" (repointed to "her own feast"); restored Kola's soft-earth shorthand over "wrote
+  in his notebook"; gave the President's fence line her Mama Decree cadence. Same family as the Ep 5
+  lesson (check a founder's signature achievement before building on that theme) and the Ep 10
+  "don't reuse a signature beat" catch: **verify calendar/canon before reusing a fixed set-piece.**
+
+**Gates (all four ran, all pass):** `corepack pnpm` typecheck (6/6), test (canon 18 + apps),
+lint (4/4), build (4/4). No new character (chicken count stays 28). Note: `render.ps1` re-screenshots
+**every** post, so `git status` shows ~100 unrelated PNGs as modified; `git restore` those and commit
+only the arc's files + content + docs to keep the diff focused. Also: these hand-formatted data files
+(`timeline.ts`, `content.ts`, `generate-arcs.mjs`) already fail `prettier --check` at HEAD; the
+enforced gate is eslint `lint`, so do **not** run `prettier --write` on them (it produces a noisy
+whole-file reformat inconsistent with the repo).
+
 ## Session — 2026-08-27 (content: Season 2 Ep 10 "The True Count" — Halima's first bend)
 
 Ran one full `social/story.md` cycle. The RESUME marker named **Ep 10: deepen Halima's heel turn
