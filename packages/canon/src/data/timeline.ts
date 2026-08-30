@@ -1665,4 +1665,103 @@ export const timelineEvents: TimelineEvent[] = [
       "count, honestly kept and honestly told. We count every egg by hand at " +
       "Kisi. Order farm-fresh eggs, honestly counted, at farm.kisi.africa/eggs.",
   },
+
+  // ARC: The Reason I Sleep (Season 2, Ep 12) — the reckoning beat of Halima's heel
+  // turn (rollout #3). Sweet Beak, denied at the feast, tells the President the part
+  // Halima hid (the "lateness" was a planned ambush). The seed takes because it is
+  // true; the fence goes cold; Halima's small wish for the first chair grows teeth.
+  // Advances the turn (crack -> fault) without resolving the open break, which the
+  // finale pays off. Title is the ironic callback to the President's Ep 10 fence line
+  // ("you are the reason I sleep," true-count-fence). GREEN, routes to support.
+  {
+    id: "reason-sleep-whisper",
+    chickenIds: ["ladun-sweet-beak", "adedoyin-mama-decree"],
+    date: "2026-09-20",
+    arcId: "the-reason-i-sleep",
+    world: "fiction",
+    type: "custom",
+    title: "The whisper that was true",
+    body:
+      "Sweet Beak had never felt so cheated in her life. She had handed Halima " +
+      "a perfect ambush and then watched the old auditor turn it into a rally " +
+      "of loyalty, in front of everyone. So she went, sweet as syrup, to the " +
+      "one bird who could make it hurt: the President herself. 'You should know " +
+      "what really happened at your feast,' she purred. 'Your auditor did not " +
+      "report late by accident. She planned to spring that number on you in " +
+      "front of the whole flock, to break you, and lost her nerve only at the " +
+      "last step.' The President laughed her off, because Sweet Beak lies the " +
+      "way other birds breathe. But the laugh was a beat too short, because one " +
+      "small piece of it was true, and the President knew it: Halima Iron " +
+      "Feathers, who has never been late for anything in her life, had been " +
+      "late with that count.",
+  },
+  {
+    id: "reason-sleep-fence",
+    chickenIds: ["adedoyin-mama-decree", "halima-iron-feathers"],
+    date: "2026-09-21",
+    arcId: "the-reason-i-sleep",
+    world: "fiction",
+    type: "custom",
+    title: "Three words at the fence",
+    body:
+      "That evening at the fence the President did not accuse. She is far too " +
+      "wise to hand a schemer's word that kind of weight. She only asked, " +
+      "lightly, scratching at the same patch of earth the two of them have " +
+      "shared since the crate: 'You were late with the count this month. You " +
+      "have never been late for anything. Tell me why.' It was the smallest " +
+      "question in the world, and any other month Halima would have answered it " +
+      "plainly, because plainly is the only way she knows. But the true answer " +
+      "was that she had held the number back on purpose, half of it to ambush " +
+      "the very bird now asking, and that answer she could not say. So she said " +
+      "the thing she had said before, the true and incomplete thing: 'It came " +
+      "late.' Three words. And in the space where the rest of the answer should " +
+      "have been, the President heard, for the first time in two lifetimes, her " +
+      "crate-sister keeping something from her.",
+  },
+  {
+    id: "reason-sleep-cold",
+    chickenIds: ["adedoyin-mama-decree", "halima-iron-feathers", "kola-quill"],
+    date: "2026-09-22",
+    arcId: "the-reason-i-sleep",
+    world: "fiction",
+    type: "custom",
+    title: "The fence with one bird",
+    body:
+      "The next dusk, the President did not come to the fence. Halima scratched " +
+      "at their patch alone, telling herself the President was only busy, the " +
+      "way you tell yourself a thing you already know is not true. The evening " +
+      "after, she did not come again. Two of the fiercest rivals in the " +
+      "Republic had dug side by side at that fence through drought and trial " +
+      "and flood, and everyone always knew the secret underneath the shouting " +
+      "was that they loved each other like sisters, which they are. Now the " +
+      "fence had one bird at it. Kola Quill, who has watched that fault line " +
+      "since it was only a crack by an empty chair, printed not a word of it; " +
+      "some cracks a newsman simply sits with. And somewhere across the yard, " +
+      "Sweet Beak, who could never turn one coop against another, hummed to " +
+      "herself, because she had finally split the two that could not be split.",
+  },
+  {
+    id: "reason-sleep-step",
+    chickenIds: ["halima-iron-feathers", "kola-quill"],
+    date: "2026-09-23",
+    arcId: "the-reason-i-sleep",
+    world: "fiction",
+    type: "custom",
+    title: "The wish grows teeth",
+    body:
+      "Here is what breaks a good bird: not being called a villain, but being " +
+      "doubted after she paid everything to do right. Halima had spent her " +
+      "spotless name to shield the President at the feast, and it had bought " +
+      "her a cold fence and a suspicious silence. So on the third morning she " +
+      "did not go to the fence at all. She took the second chair, iron in her " +
+      "face, and for the first time she looked at the empty first chair not " +
+      "with a small, shy wish, but with a plan. If they would call her " +
+      "ambitious after she had been loyal, then let them call her ambitious. " +
+      "The wish had teeth now. Kola watched her cross the yard and understood " +
+      "that the crack he had followed so long was no longer a crack. It was a " +
+      "fault, and the ground had begun, quietly, to move. A Republic is held " +
+      "together by the birds who trust one another; when the strongest bond " +
+      "bends, the whole floor tilts. Help us keep this flock fed, housed, and " +
+      "whole. Back the Republic at farm.kisi.africa/support.",
+  },
 ];

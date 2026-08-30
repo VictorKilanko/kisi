@@ -6,6 +6,44 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-08-30 (content: Season 2 Ep 12 "The Reason I Sleep" — the reckoning)
+
+Ran one `social/story.md` cycle (the second this run; user said "continue when the showrunner
+passes"). RESUME named **Ep 12: the reckoning of Halima's heel turn (rollout #3)**. Built **"The
+Reason I Sleep"** (`arcId: the-reason-i-sleep`), GREEN, 4 beats, → support. Sweet Beak, cheated of her
+feast ambush, tells the President the part Halima hid (the lateness was a planned trap). The President
+laughs off the liar, but one piece is true (Halima is never late, and this month she was). At the
+fence she asks plainly why; Halima cannot say the real answer, so she repeats "It came late," and the
+President hears her crate-sister keep something back. The fence goes cold; Halima's Ep 8 wish for the
+first chair hardens into a plan; Kola watches the crack become a fault. Open break left for the
+finale. Title is the ironic callback to the President's Ep 10 line "you are the reason I sleep." Live
+in `timeline.ts` (09-20…09-23), ARC_META, 4 slides (`arc-reason-1..4`), caption (2907 chars), staged
+as `arc-reason`.
+
+**Showrunner SHIP on the first pass (empty fix list)** — worth noting *why* it cleared clean after
+two REVISE arcs in a row:
+- **Seed suspicion with a true fact, not with a liar's credibility.** The risk was the President
+  believing a known schemer (Sweet Beak). Handled by making the accusation independently TRUE (Halima
+  really was late, she really did plan the ambush) so the doubt is confirmed by Halima's own hesitation,
+  not by trusting the liar. The President stays wise and dignified ("far too wise to hand a schemer's
+  word that kind of weight"). Reusable pattern for any "villain poisons a relationship" beat.
+- **Turn a character's signature strength into the prison.** Halima's whole identity is plainness;
+  the beat lands because plainness is the one thing she cannot use here (the plain answer exposes the
+  abandoned ambush), so "It came late" becomes a tragic evasion. Escalation from *doing* a thing to
+  *being unable to be herself*.
+- **Advance without detonating.** Wish → plan, crack → fault, but no declared break and no move
+  against the President yet; finale runway preserved. Alternated GREEN off Ep 11's cream.
+
+Showrunner's one optional note: a **code comment** mis-attributed the "reason I sleep" callback to
+Ep 11; it is Ep 10 (`true-count-fence`). Corrected. (Lesson: when a title is a callback, cite the
+exact source beat in the arc comment so future editors can trace it.)
+
+**Gates (all four ran, all pass):** `corepack pnpm` typecheck 6/6, test (canon 18 + apps), lint 4/4,
+build 4/4 (all apps compiled). No new character (count stays 28). Same render/commit hygiene as the
+Ep 11 session: `render.ps1` re-screenshots every post, so `git restore` the ~100 spurious PNG diffs
+and commit only the arc's files + content + docs; do not `prettier --write` the hand-formatted data
+files (they fail `--check` at HEAD by design; eslint `lint` is the enforced gate).
+
 ## Session — 2026-08-29 (content: Season 2 Ep 11 "The Kept Number" — Halima's second bend)
 
 Ran one full `social/story.md` cycle. The RESUME marker named **Ep 11: the consequence beat of

@@ -270,6 +270,17 @@ const arcs = [
     ],
   },
   {
+    slug: "reason",
+    title: "The Reason I Sleep",
+    theme: "green", // the reckoning: the crate-sister bond goes cold, dramatic intrigue
+    slides: [
+      ["The whisper that was true", "Cheated of her ambush, Sweet Beak told the President: 'Your auditor planned to break you at the feast.' The President laughed it off. But Halima is never late. This month she was."],
+      ["Three words at the fence", "The President didn't accuse. She only asked, 'You're never late. Why were you?' Halima could not say the true answer, the ambush. 'It came late,' was all she gave. And the President heard her sister keeping something back."],
+      ["The fence with one bird", "Next dusk the President didn't come. Halima scratched their patch alone, and again the night after. Two rivals who loved each other like sisters, and the fence now held one. Across the yard, Sweet Beak hummed: she'd split the unsplittable pair."],
+      ["The wish grows teeth", "What breaks a good bird isn't being called a villain. It's being doubted after she gave everything to do right. On the third morning Halima skipped the fence, took her chair, and eyed the empty first one with a plan, not a wish. The crack is a fault now. Back the flock at farm.kisi.africa/support."],
+    ],
+  },
+  {
     slug: "kept",
     title: "The Kept Number",
     sell: "shop", // the record is public; the sell is the honest egg count

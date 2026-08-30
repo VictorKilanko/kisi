@@ -278,6 +278,18 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "loyalty, and at the fence the crate-sister crack quiets but does not " +
       "close.",
   },
+  "the-reason-i-sleep": {
+    title: "The Reason I Sleep",
+    summary:
+      "Denied her ambush, Sweet Beak tells the President the part Halima hid: " +
+      "the lateness was a planned trap. The President laughs it off, but one " +
+      "piece is true, and at the fence she asks plainly why her auditor was " +
+      "late. Halima cannot say the real answer, so she says nothing of it, and " +
+      "the President hears her crate-sister keep something back. The fence goes " +
+      "cold. Stung that her sacrifice bought suspicion, Halima's small wish for " +
+      "the first chair grows teeth, and Kola Quill watches the crack become a " +
+      "fault.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {

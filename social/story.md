@@ -349,21 +349,44 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   President's fence line her decree cadence). Art director PASS on all 4. No new character (count stays
   28). **Lesson: check a recurring event's canonical cadence (the monthly Census) before restaging it.**
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 11 are built
-  and queued. A plain "execute" should build **Season 2, Ep 12**. Halima's heel turn has now bent
-  **twice**: she held a true number back (Ep 10), then confessed the lateness at her own cost (Ep 11),
-  still short of the full turn. Best next threads, in priority order:
-  1. **Halima's heel turn (rollout #3) — the reckoning.** She has bent and paid for it once. A follow-up
-     can force the open **crate-sister confrontation** with the President over what nearly happened, let
-     Sweet Beak press the crack she failed to open, and either tip Halima toward the real heel turn or
-     start the redemption. This is the spine; keep escalating it. (The Ep 11 fence scene planted "I will
-     not forget which you chose" and Kola's still-open crack, so the next beat has a running start.)
-  2. **Sweet Beak's next target** (she left Ep 11 "furious" and is still recurring) or **Eseosa in
-     exile (careful, dignified)**.
-  3. **Another standing-engine beat** (Kola Quill's next scoop; the National Feed Budget; nesting-box
-     expansion; a fresh Coop League/sports beat off the new season).
+- **SEASON 2 Ep 12: "The Reason I Sleep" — BUILT AND QUEUED (2026-08-30).** Villain rollout #3, the
+  **reckoning** beat off Ep 11. Sweet Beak, cheated of her feast ambush, tells the President the part
+  Halima hid: the "lateness" was a planned trap. The President laughs her off (Sweet Beak lies for
+  sport), but one piece is true, Halima is never late, and this month she was. At the fence the
+  President does **not** accuse (she is too wise to weight a schemer's word); she only asks plainly why
+  Halima was late. Halima cannot say the true answer (she held the count back on purpose, half to
+  ambush the very bird asking), so she repeats the true-but-incomplete "It came late," and the
+  President hears her crate-sister keep something back for the first time in two lifetimes. The fence
+  goes **cold**: the President stops coming, Halima waits at their patch alone. Stung that her
+  sacrifice bought suspicion, her Ep 8 wish for the first chair hardens from a shy wish into a **plan**
+  ("if they would call her ambitious after she had been loyal, then let them"); Kola watches the crack
+  become a **fault**. The open break/confrontation is deliberately left for the finale. Title is the
+  **ironic callback** to the President's Ep 10 fence line ("you are the reason I sleep"). GREEN, 4
+  slides (`arc-reason-1..4`), routes to **support**. Live in `timeline.ts` (`arcId: the-reason-i-sleep`,
+  09-20…09-23), ARC_META, caption (2907 chars), staged into `manifest.json` as `arc-reason` (status
+  `staged`). **Showrunner SHIP (empty fix list)** on first pass; praised the "accusation is TRUE, and
+  Halima's own hesitation confirms it" handling that keeps the President from trusting a known liar,
+  and the tragic use of Halima's plainness ("It came late") as her prison. Applied its one optional
+  note (corrected a code comment: the "reason I sleep" line is Ep 10, not Ep 11). Art director PASS on
+  all 4 (slide 4 is the fullest of the set, watch it if copy grows). No new character (count stays 28).
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 12 are built
+  and queued. A plain "execute" should build **Season 2, Ep 13**. Halima's heel turn has now bent
+  **three times and hardened**: held a true number back (Ep 10), confessed the lateness at her own cost
+  (Ep 11), and after that sacrifice bought suspicion the wish for the first chair grew teeth and the
+  fence went cold (Ep 12). She is closer to the turn than ever but has **not** yet moved against the
+  President; the open crate-sister break is the finale still to come. Best next threads, in priority order:
+  1. **Halima's heel turn (rollout #3) — the open break / the move.** Ep 12 ended with the wish become a
+     plan and a cold, silent fence. The next beat can make her **act** on the plan (declare for the first
+     chair, or coldly withhold her honesty from the President), force the open confrontation the cold
+     silence has been deferring, and bring the crate-sisters to a real reckoning, then decide: full heel
+     turn, or the beginning of the turn back. This is the spine; it is nearly at its peak, so land it with
+     weight. Sweet Beak (who "hummed" at splitting them) is the accelerant to reuse.
+  2. **A deliberate tonal-reset / warm arc** if the owner wants to breathe between reckoning beats
+     (a Coop League fixture, a Kola scoop, an elders/egg beat) before the finale.
+  3. **Sweet Beak's next target** or **Eseosa in exile (careful, dignified)**.
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream**
-  against the last new arc (last built = `arc-kept` CREAM, so the next new arc defaults to GREEN);
+  against the last new arc (last built = `arc-reason` GREEN, so the next new arc defaults to CREAM);
   a comic arc can carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3
   standing hashtags; end on a sell.
   **When adding a character, bump the chicken-count test in
