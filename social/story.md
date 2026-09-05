@@ -430,21 +430,41 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   site in step with the IG drip, date each arc to its post day and re-date the whole causal tail, never a
   single arc (you cannot reveal a sequel before its setup).**
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 15 are built and
-  queued; the site now reveals each arc in step with its IG post day. Halima's heel turn (rollout #3) is
-  **complete** (Eps 10-13, bond tempered not reset) and Eps 14-15 were the **warm reset**. A plain "execute"
-  should build **Season 2, Ep 16** — best next threads, in priority order:
-  1. **Sweet Beak's next target** (she left Ep 13 "eyeing her next"): a fresh comic-villain arc that does
-     NOT reuse the Halima/President spine. This is the natural next escalation now the reckoning has settled.
-  2. **Another warm/standing-engine beat** (Coop League fixture, a Kola scoop, elders/egg, solar/housing) if
-     the owner wants to keep the lighter register a little longer.
-  3. **The long game:** the tempered crate-sisters bond can be tested again, but only after real in-story
-     time; a too-soon rematch cheapens the Ep 13 payoff.
+- **SEASON 2 Ep 16: "The Scoop That Wasn't" — BUILT AND QUEUED (2026-09-05).** Sweet Beak's next target,
+  and her first scheme since Kola Quill's "SHE TOLD BOTH" front page (Ep 13) humiliated her. Fresh angle:
+  she goes after the **newsman himself**, forging a leaked "Perchgate" memo (the Feather Gala budget
+  supposedly spent on gold perches for the cabinet) and planting it so Kola prints it and is ruined when it
+  proves false. But Kola does what made him: he **checks**, the fake comes apart against the real ledger in
+  a hand he knows, and instead of her scandal he prints the true story of how someone tried to weaponize the
+  press. Editorial: "A paper that checks is not a paper you can use." Her plot to break his credibility makes
+  it unbreakable; she slips off eyeing her next target (still recurring). GREEN, 4 beats, dated **09-11**
+  (its IG post day), routes to **support** (a free honest press tied to an honest farm). Live in `timeline.ts`
+  (`arcId: the-scoop-that-wasnt`), `content.ts` ARC_META, 4 slides (`arc-scoop-1..4`), caption (2142),
+  staged. **Showrunner SHIP (no required fixes)**; applied its two optional strengtheners (a near-miss where
+  Kola almost runs the false story before his habit pulls him back, for real middle tension; and naming
+  "Kisi Farm" explicitly at the sell). Art director PASS on all 4 (slide 3 is near the size-class limit,
+  watch it if copy grows). No new character (count stays 28). **Craft note:** deliberately distinct from
+  Ep 13 (there she was caught bragging passively; here she actively attacks the press and Kola is the active
+  protagonist who chooses not to print) — the way to reuse a recurring villain without repeating the beat is
+  to flip who acts and what the theme is.
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 16 are built and
+  queued; the site reveals each arc in step with its IG post day (run so far ends at market-day 09-10,
+  scoop 09-11). Halima's heel turn (rollout #3) is **complete** (Eps 10-13), Eps 14-15 were the **warm
+  reset**, and Ep 16 was **Sweet Beak's next scheme** (vs the press). A plain "execute" should build
+  **Season 2, Ep 17** — best next threads, in priority order:
+  1. **A warm/standing-engine beat** (Coop League fixture with Túndé/Flash/Chi-Chi, an elders/egg beat, a
+     Mama Gold or Dr. Featherwell story, a solar/housing beat) — after a schemer arc, vary the register.
+  2. **Sweet Beak's next target again** only if escalated meaningfully (she is now 0-for-4; a smart move is
+     to have a scheme nearly *work* for once, or to give her a rival who out-schemes her), OR **Eseosa in
+     exile** (careful, dignified).
+  3. **The long game:** the tempered crate-sisters bond (Halima/President) can be tested again, but only
+     after real in-story time; a too-soon rematch cheapens the Ep 13 payoff.
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream** against the
-  last new arc (last built = `arc-marketday` CREAM, so the next new arc defaults to GREEN); a comic arc can
-  carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3 standing hashtags; end on
-  a sell; **date the new arc to the day it will post to IG** (continue the 09-11, 09-12… run) so the site
-  stays in step; and **assert the manifest caption is < 2,200 chars** (story text ~1,900 max) before staging.
+  last new arc (last built = `arc-scoop` GREEN, so the next new arc defaults to CREAM); a comic arc can carry
+  green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3 standing hashtags; end on a sell;
+  **date the new arc to the day it will post to IG** (continue the run at 09-12) so the site stays in step;
+  and **assert the manifest caption is < 2,200 chars** (story text ~1,900 max) before staging.
   **When adding a character, bump the chicken-count test in
   `packages/canon/tests/content.test.ts` (now 27).** The arc-count assertion is now a **floor**
   (`toBeGreaterThanOrEqual`), not an exact count, so it no longer needs bumping as each in-story

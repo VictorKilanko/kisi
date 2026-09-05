@@ -78,6 +78,17 @@ green (typecheck 6/6, lint 4/4, test canon 18 / records 10 / africa 13 / farm 13
 order (= cron post order) is now kept → reason → first-chair → longest-night → market-day, so the cron drains
 one per day 09-06…09-10 and the site reveals each the same day.
 
+**Then Ep 16 "The Scoop That Wasn't" — Sweet Beak's next target (GREEN, → support, dated 09-11).** She goes
+after Kola Quill's credibility (revenge for Ep 13's "SHE TOLD BOTH"), forging a "Perchgate" memo so he prints
+a falsehood; Kola checks, the fake collapses, and he prints the true story instead ("A paper that checks is
+not a paper you can use"). Showrunner **SHIP** first pass (applied its two optional notes: a near-miss so the
+middle carries real danger, and naming Kisi Farm at the sell); art director PASS on all 4. **Craft lesson for
+reusing a recurring villain without repeating the beat:** flip who acts and what the theme is — Ep 13 was
+"villain caught bragging" (Kola passive-exposes her); Ep 16 is "villain weaponizes the press" (Kola the active
+protagonist choosing not to print). Caption again over on first fill (2,406 → trimmed 2,142). Gates green
+(typecheck 6/6, lint 4/4, test 18/10/13/13, build 4/4). Queue is now 6 staged (…market-day → scoop), draining
+one/day 09-06…09-11.
+
 ## Session — 2026-08-30 (content: Season 2 Ep 12 "The Reason I Sleep" — the reckoning)
 
 Ran one `social/story.md` cycle (the second this run; user said "continue when the showrunner
