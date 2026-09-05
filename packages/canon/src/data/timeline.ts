@@ -1400,7 +1400,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "league-open",
     chickenIds: ["tunde-quickfoot"],
-    date: "2026-09-05",
+    date: "2026-09-04",
     arcId: "the-league-kicks-off",
     world: "fiction",
     type: "sports",
@@ -1419,7 +1419,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "league-champions",
     chickenIds: ["flash-adaora"],
-    date: "2026-09-06",
+    date: "2026-09-04",
     arcId: "the-league-kicks-off",
     world: "fiction",
     type: "sports",
@@ -1436,7 +1436,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "league-debut",
     chickenIds: ["chi-chi", "flash-adaora"],
-    date: "2026-09-07",
+    date: "2026-09-04",
     arcId: "the-league-kicks-off",
     world: "fiction",
     type: "sports",
@@ -1454,7 +1454,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "league-fuel",
     chickenIds: ["chi-chi"],
-    date: "2026-09-08",
+    date: "2026-09-04",
     arcId: "the-league-kicks-off",
     world: "fiction",
     type: "sports",
@@ -1476,7 +1476,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "true-count-error",
     chickenIds: ["halima-iron-feathers"],
-    date: "2026-09-10",
+    date: "2026-09-05",
     arcId: "the-true-count",
     world: "fiction",
     type: "custom",
@@ -1496,7 +1496,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "true-count-whisper",
     chickenIds: ["halima-iron-feathers", "ladun-sweet-beak"],
-    date: "2026-09-11",
+    date: "2026-09-05",
     arcId: "the-true-count",
     world: "fiction",
     type: "custom",
@@ -1515,7 +1515,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "true-count-fence",
     chickenIds: ["halima-iron-feathers", "adedoyin-mama-decree"],
-    date: "2026-09-12",
+    date: "2026-09-05",
     arcId: "the-true-count",
     world: "fiction",
     type: "custom",
@@ -1537,7 +1537,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "true-count-kept",
     chickenIds: ["halima-iron-feathers", "kola-quill"],
-    date: "2026-09-13",
+    date: "2026-09-05",
     arcId: "the-true-count",
     world: "fiction",
     type: "custom",
@@ -1571,7 +1571,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "kept-number-gate",
     chickenIds: ["halima-iron-feathers", "adedoyin-mama-decree"],
-    date: "2026-09-15",
+    date: "2026-09-06",
     arcId: "the-kept-number",
     world: "fiction",
     type: "custom",
@@ -1595,7 +1595,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "kept-number-voices",
     chickenIds: ["halima-iron-feathers", "ladun-sweet-beak", "kola-quill"],
-    date: "2026-09-16",
+    date: "2026-09-06",
     arcId: "the-kept-number",
     world: "fiction",
     type: "custom",
@@ -1615,7 +1615,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "kept-number-confession",
     chickenIds: ["halima-iron-feathers", "adedoyin-mama-decree", "ladun-sweet-beak"],
-    date: "2026-09-17",
+    date: "2026-09-06",
     arcId: "the-kept-number",
     world: "fiction",
     type: "custom",
@@ -1641,7 +1641,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "kept-number-fence",
     chickenIds: ["halima-iron-feathers", "adedoyin-mama-decree", "kola-quill"],
-    date: "2026-09-18",
+    date: "2026-09-06",
     arcId: "the-kept-number",
     world: "fiction",
     type: "custom",
@@ -1676,7 +1676,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "reason-sleep-whisper",
     chickenIds: ["ladun-sweet-beak", "adedoyin-mama-decree"],
-    date: "2026-09-20",
+    date: "2026-09-07",
     arcId: "the-reason-i-sleep",
     world: "fiction",
     type: "custom",
@@ -1698,7 +1698,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "reason-sleep-fence",
     chickenIds: ["adedoyin-mama-decree", "halima-iron-feathers"],
-    date: "2026-09-21",
+    date: "2026-09-07",
     arcId: "the-reason-i-sleep",
     world: "fiction",
     type: "custom",
@@ -1721,7 +1721,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "reason-sleep-cold",
     chickenIds: ["adedoyin-mama-decree", "halima-iron-feathers", "kola-quill"],
-    date: "2026-09-22",
+    date: "2026-09-07",
     arcId: "the-reason-i-sleep",
     world: "fiction",
     type: "custom",
@@ -1743,7 +1743,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "reason-sleep-step",
     chickenIds: ["halima-iron-feathers", "kola-quill"],
-    date: "2026-09-23",
+    date: "2026-09-07",
     arcId: "the-reason-i-sleep",
     world: "fiction",
     type: "custom",
@@ -1781,7 +1781,7 @@ export const timelineEvents: TimelineEvent[] = [
       "adedoyin-mama-decree",
       "ladun-sweet-beak",
     ],
-    date: "2026-09-25",
+    date: "2026-09-08",
     arcId: "the-first-chair",
     world: "fiction",
     type: "custom",
@@ -1803,7 +1803,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "first-chair-fence",
     chickenIds: ["adedoyin-mama-decree", "halima-iron-feathers"],
-    date: "2026-09-26",
+    date: "2026-09-08",
     arcId: "the-first-chair",
     world: "fiction",
     type: "custom",
@@ -1831,7 +1831,7 @@ export const timelineEvents: TimelineEvent[] = [
   {
     id: "first-chair-both",
     chickenIds: ["ladun-sweet-beak", "kola-quill"],
-    date: "2026-09-27",
+    date: "2026-09-08",
     arcId: "the-first-chair",
     world: "fiction",
     type: "custom",
@@ -1860,7 +1860,7 @@ export const timelineEvents: TimelineEvent[] = [
       "adedoyin-mama-decree",
       "ladun-sweet-beak",
     ],
-    date: "2026-09-28",
+    date: "2026-09-08",
     arcId: "the-first-chair",
     world: "fiction",
     type: "custom",
@@ -1886,5 +1886,178 @@ export const timelineEvents: TimelineEvent[] = [
       "on trust that is counted honestly and kept honestly, the same way we " +
       "count every egg by hand at Kisi. Order farm-fresh eggs, honestly " +
       "counted, at farm.kisi.africa/eggs.",
+  },
+
+  // ARC: The Longest Night (Season 2, Ep 14) — a warm tonal reset after four
+  // reckoning-heavy episodes. A dry-season solar/light story with no villain: the
+  // panels drink less sun through the pre-rain haze, the coops face a dark night, and
+  // the flock gets through it by keeping each other company. Pays off Small Fẹ́mi (the
+  // Drain survivor who wants to be a coop guard) and Amina Daybreak (solar minister).
+  // GREEN (alternates off arc-firstchair CREAM), routes to the Solar & Light campaign.
+  // Single in-story date 09-09 = the day its IG carousel posts (site reveals in step).
+  {
+    id: "longest-night-budget",
+    chickenIds: ["amina-daybreak"],
+    date: "2026-09-09",
+    arcId: "the-longest-night",
+    world: "fiction",
+    type: "custom",
+    title: "The light runs thin",
+    body:
+      "Every dry season, before the rains wash the air clean, a haze of dust " +
+      "settles over Kisi and the solar panels drink less sun than they should. " +
+      "Amina Daybreak, who charts the day's light the way Musa charts the " +
+      "grain, did the arithmetic and did not soften it: on the longest, " +
+      "darkest night of the year, the coop lights would run out a full two " +
+      "hours before dawn. She said it plainly, with a chart, because Amina " +
+      "believes a true dark is safer than a pretend light. But the older birds " +
+      "remembered the last time the coops went dark, and a quiet unease moved " +
+      "through the flock like a draught under a door.",
+  },
+  {
+    id: "longest-night-femi",
+    chickenIds: ["small-femi", "baba-segun"],
+    date: "2026-09-09",
+    arcId: "the-longest-night",
+    world: "fiction",
+    type: "custom",
+    title: "The volunteer",
+    body:
+      "Before the unease could harden into fear, a small voice spoke from the " +
+      "back. Small Fẹ́mi, the last of the twelve out of Coop Two on the night of " +
+      "the Drain, the young cockerel who has been walking the fence line on " +
+      "Saturdays where he thinks nobody can see him, offered to keep watch " +
+      "through the dark hours. 'I would rather sit in a true dark than pretend " +
+      "it isn't there,' he said, and this time nobody laughed. Vice President " +
+      "Baba Ṣẹ́gun, who has crowed up every dawn at Kisi for as long as anyone " +
+      "can remember, and who these mornings shares that dawn with this very " +
+      "cockerel, did not hesitate. The bird he already trusts with the " +
+      "morning, he decided, he could trust with the dark. 'Then you will not " +
+      "sit alone,' he said. 'I will crow the watches, and you will walk them.'",
+  },
+  {
+    id: "longest-night-held",
+    chickenIds: ["amina-daybreak", "small-femi", "baba-segun"],
+    date: "2026-09-09",
+    arcId: "the-longest-night",
+    world: "fiction",
+    type: "custom",
+    title: "How a flock holds a night",
+    body:
+      "And so the longest night was not faced by one bird but by all of them, " +
+      "each doing the small thing they could. Amina Daybreak rationed the last " +
+      "of the panel's charge to the youngest coops, where the chicks sleep, and " +
+      "let the grown birds roost in the dark the way their grandmothers did. " +
+      "Baba Ṣẹ́gun crowed softly at each turn of the night, so every coop knew " +
+      "the hour and knew it was not alone. And Small Fẹ́mi walked the fence " +
+      "line, slow and watchful, no longer pretending nobody could see him, " +
+      "because tonight the whole Republic was glad that somebody did. Nothing " +
+      "came out of the dark. That was the point. A flock that keeps each other " +
+      "company does not have to be afraid of a night.",
+  },
+  {
+    id: "longest-night-dawn",
+    chickenIds: ["amina-daybreak", "baba-segun"],
+    date: "2026-09-09",
+    arcId: "the-longest-night",
+    world: "fiction",
+    type: "custom",
+    title: "The sun, a colleague",
+    body:
+      "When the first grey light came, Baba Ṣẹ́gun crowed it up the way he has " +
+      "ten thousand times, and it had never once sounded so welcome. Small " +
+      "Fẹ́mi finally slept. But Amina Daybreak was already back at her charts, " +
+      "because the night had proved a plain thing: Kisi's coops still go dark " +
+      "when the light runs thin, and courage is a fine thing to lean on but a " +
+      "poor thing to plan around. 'The sun is free,' she said, the way she " +
+      "always does. 'The panel was not, and we do not yet have enough of " +
+      "them.' A few more panels, and no bird at Kisi would ever have to be " +
+      "brave in the dark again. That is a thing worth building. Back the " +
+      "Solar & Light campaign at farm.kisi.africa/support.",
+  },
+
+  // ARC: Market Day (Season 2, Ep 15) — the second warm reset of the batch, and the
+  // funnel made literal: the real farm's eggs go to real buyers, told through the
+  // flock's pride. No drama; the President is a warm light cameo, not a plot. Ties off
+  // the honest-count theme (Eps 10-13) positively without re-litigating it. CREAM
+  // (alternates off arc-longest-night GREEN), routes to eggs. Single in-story date
+  // 09-10 = its IG post day.
+  {
+    id: "market-day-crates",
+    chickenIds: ["mama-gold", "chi-chi"],
+    date: "2026-09-10",
+    arcId: "market-day",
+    world: "fiction",
+    type: "custom",
+    title: "The crates go to town",
+    body:
+      "On market morning the whole farm woke early, not for a decree and not " +
+      "for a scandal, but for something simpler and rarer at Kisi: pride in a " +
+      "plain day's work. The first big crates of eggs were packed at the gate " +
+      "to go into town, to real buyers who had asked for the famous Kisi hens " +
+      "by name. Mama Gold, the National Grandmother, came to preside, and " +
+      "young Chi-Chi, and every working hen whose mornings fill those crates, " +
+      "stood and watched the eggs leave the farm. There is a particular quiet that comes over a " +
+      "flock when the thing they made with their own bodies goes out into the " +
+      "world. It is not a small thing to feed people you will never meet.",
+  },
+  {
+    id: "market-day-goldblessing",
+    chickenIds: ["mama-gold"],
+    date: "2026-09-10",
+    arcId: "market-day",
+    world: "fiction",
+    type: "custom",
+    title: "Counted honest, sold honest",
+    body:
+      "Mama Gold, who is delegating and not retiring, and who has a law named " +
+      "after her, presided over the loading the way she presides over " +
+      "everything now: slowly, and with her whole heart. Every egg in the crate " +
+      "had been counted by hand and counted true, she reminded the younger " +
+      "hens, the way this Republic has counted everything since the season it " +
+      "learned what an honest number is worth. 'A market only comes back,' she " +
+      "said, 'to a farm that does not lie to it.' The buyers pay for the egg, " +
+      "but they return for the honesty. Mama Gold has sold eggs for more " +
+      "seasons than most of the flock has been alive, and that is very nearly " +
+      "the whole of what she knows.",
+  },
+  {
+    id: "market-day-chichi",
+    chickenIds: ["chi-chi"],
+    date: "2026-09-10",
+    arcId: "market-day",
+    world: "fiction",
+    type: "custom",
+    title: "Chi-Chi's first crate",
+    body:
+      "For Chi-Chi it was a first. She came to Kisi motherless at three weeks " +
+      "old, smaller than the forecast allowed, and a whole nation once waited " +
+      "on her first egg. Now her eggs, plain and brown and ordinary, went into " +
+      "a market crate for the very first time. For one small moment she " +
+      "wondered whether plain brown eggs like hers were really good enough to " +
+      "travel beside the National Grandmother's. Then the crate closed over " +
+      "them, all of them together, with no way to tell whose was whose, and she " +
+      "said the only thing Chi-Chi ever says when she has given something " +
+      "everything she has. 'I did my best.' She always does, and lately her " +
+      "best fills a corner of the crate all on its own.",
+  },
+  {
+    id: "market-day-sell",
+    chickenIds: ["adedoyin-mama-decree", "kola-quill"],
+    date: "2026-09-10",
+    arcId: "market-day",
+    world: "fiction",
+    type: "custom",
+    title: "What leaves Kisi",
+    body:
+      "The President came to see the crates off, and for once she made no " +
+      "decree. She only said, in the plain voice she keeps under the " +
+      "ceremonial one, 'Everything else we argue about. This we agree on: good " +
+      "eggs, counted true, sent out with our name on them.' Kola Quill, who has " +
+      "broken every scandal in the Republic, printed the gentlest headline he " +
+      "has run all year, three words that needed no investigation: THE EGGS " +
+      "ARE GOOD. That is the whole business, underneath the Republic and the " +
+      "drama and the news: farm-fresh eggs from the flock, counted by hand, " +
+      "honest as the morning. Order yours at farm.kisi.africa/eggs.",
   },
 ];

@@ -305,6 +305,32 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "why two crate-sisters could not share a fence. The bond comes back " +
       "tempered, not reset.",
   },
+  "the-longest-night": {
+    title: "The Longest Night",
+    summary:
+      "A warm dry-season story with no villain. The pre-rain haze starves the " +
+      "solar panels, and Amina Daybreak's charts warn that the coop lights " +
+      "will fail hours before dawn on the longest night of the year. Rather " +
+      "than fear the dark, the flock holds the night together: Amina rations " +
+      "the last charge to the youngest coops, Vice President Baba Ṣẹ́gun crows " +
+      "the watches, and young Small Fẹ́mi, the Drain survivor who wants to be a " +
+      "coop guard, walks the fence at last where everyone is glad to see him. " +
+      "Nothing comes out of the dark; that is the point. At dawn Amina makes " +
+      "the honest case for more panels, so no bird ever has to be brave in the " +
+      "dark again.",
+  },
+  "market-day": {
+    title: "Market Day",
+    summary:
+      "The funnel made literal, and a proud plain day after a hard season. " +
+      "The first big crates of eggs leave Kisi for real buyers in town, and " +
+      "the working hens watch their morning's work go out into the world. " +
+      "Mama Gold presides over the loading and reminds the young hens that a " +
+      "market only comes back to a farm that counts true and does not lie to " +
+      "it. Chi-Chi's eggs join a market crate for the first time. The " +
+      "President sees the crates off with no decree, only a plain word, and " +
+      "Kola Quill prints the gentlest headline of his year: the eggs are good.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {
