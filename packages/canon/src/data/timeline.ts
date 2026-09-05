@@ -1764,4 +1764,127 @@ export const timelineEvents: TimelineEvent[] = [
       "bends, the whole floor tilts. Help us keep this flock fed, housed, and " +
       "whole. Back the Republic at farm.kisi.africa/support.",
   },
+
+  // ARC: The First Chair (Season 2, Ep 13) — the FINALE of Halima's heel turn
+  // (villain rollout #3): the open break the cold silence kept deferring. Halima
+  // acts on the plan from "The Reason I Sleep" and moves against the President for
+  // real; the reckoning finally happens at the fence; Sweet Beak overplays and Kola
+  // Quill exposes her as the engineer of the whole rift; and at the peak of her
+  // power Halima makes her OWN moral choice to withdraw, so the bond comes back
+  // tempered (not reset). This pays off the crate-sisters friendship the rollout was
+  // always about, and hands Sweet Beak her biggest comeuppance yet (still recurring,
+  // not exiled). CREAM (alternates off arc-reason GREEN), routes to eggs.
+  {
+    id: "first-chair-move",
+    chickenIds: [
+      "halima-iron-feathers",
+      "adedoyin-mama-decree",
+      "ladun-sweet-beak",
+    ],
+    date: "2026-09-25",
+    arcId: "the-first-chair",
+    world: "fiction",
+    type: "custom",
+    title: "The move at last",
+    body:
+      "For as long as the Republic could remember, the Leader of the " +
+      "Opposition had challenged the President the way rain challenges a roof: " +
+      "hard, honest, and expected. Every session Halima Iron Feathers stood and " +
+      "took the government apart, and every dusk she and her crate-sister " +
+      "settled it at the fence. But this morning the Assembly felt wrong before " +
+      "a single word was spoken, because Halima rose with a coldness nobody had " +
+      "ever seen in her and moved, formally, for the first chair itself. Not as " +
+      "loyal opposition testing a leader, the way she had for four seasons. As a " +
+      "bird who meant it. The floor went so quiet you could hear the corn " +
+      "settle. High in the gallery, Sweet Beak could barely keep her feathers " +
+      "still, because the two that could not be split had just split in front " +
+      "of everyone, and she was the one who had done it.",
+  },
+  {
+    id: "first-chair-fence",
+    chickenIds: ["adedoyin-mama-decree", "halima-iron-feathers"],
+    date: "2026-09-26",
+    arcId: "the-first-chair",
+    world: "fiction",
+    type: "custom",
+    title: "The fence, at last",
+    body:
+      "That evening, for the first time since the count came late, the " +
+      "President came back to the fence. Halima did not look up from her patch. " +
+      "She expected a decree, or a fight, or the cold silence handed back to her " +
+      "with interest. Instead Adédoyin folded herself down into the earth " +
+      "beside her, the way she had since they were chicks sharing one crate, and " +
+      "said the plainest thing either of them had managed in weeks. 'You have " +
+      "shouted at me across that floor for four seasons and I never doubted you " +
+      "once. Then I doubted you over a single late number, and I was wrong to, " +
+      "and it cost us this.' Halima's iron held for exactly as long as it took " +
+      "the President to add, quietly, 'I did not stop coming because I was " +
+      "angry. I stopped because I did not know what to say to a sister I had " +
+      "hurt.' Then, in the old proverb cadence she keeps for the things she " +
+      "means most, 'Ọwọ́ ọ̀tún ń wẹ òsì, òsì ń wẹ ọ̀tún. The right hand washes " +
+      "the left, and the left washes the right. For four seasons you have been " +
+      "the hand that kept mine honest. I forgot that no hand stays clean " +
+      "alone.' And there, at last, the thing the cold silence had been " +
+      "deferring came up out of the ground between them: not the politics, but " +
+      "the plain hurt underneath it, which had been there the whole time.",
+  },
+  {
+    id: "first-chair-both",
+    chickenIds: ["ladun-sweet-beak", "kola-quill"],
+    date: "2026-09-27",
+    arcId: "the-first-chair",
+    world: "fiction",
+    type: "custom",
+    title: "She told both",
+    body:
+      "Sweet Beak, meanwhile, could not leave a good thing alone. Certain the " +
+      "split was permanent now, she went crowing around the yard before the " +
+      "challenge had even been heard. To one coop, sweet as syrup, she confided " +
+      "that she had 'only ever wanted what was best for poor dear Halima'; to " +
+      "the next she sighed that she had 'warned Her Excellency in time, purely " +
+      "out of love for the Republic,' collecting credit from both sides of a " +
+      "rift she had dug with two beaks. She forgot that one bird is always " +
+      "listening. " +
+      "Kola Quill had watched this fault line since it was a hairline crack by " +
+      "an empty chair, and had printed not a word of it, because some cracks a " +
+      "newsman simply sits with. But a schemer bragging out loud is not a crack. " +
+      "It is a story. The next Coop Times led with three words in the largest " +
+      "type the paper owned, 'SHE TOLD BOTH,' and the whole Republic, reading " +
+      "over its breakfast, finally understood who had really been at the fence " +
+      "all along.",
+  },
+  {
+    id: "first-chair-tempered",
+    chickenIds: [
+      "halima-iron-feathers",
+      "adedoyin-mama-decree",
+      "ladun-sweet-beak",
+    ],
+    date: "2026-09-28",
+    arcId: "the-first-chair",
+    world: "fiction",
+    type: "custom",
+    title: "Iron, tempered",
+    body:
+      "By the time the Assembly gathered to hear the challenge, the whole flock " +
+      "knew Sweet Beak had played both sisters for sport. It would have been the " +
+      "easiest thing in the world for Halima to press on now, wounded and " +
+      "vindicated, and take the first chair to a house that pitied her. " +
+      "Everyone expected it. When she rose, she let herself look at that chair " +
+      "one last time, and the old wish with teeth looked back at her: it was " +
+      "right there, one word away, and the plain truth is that a part of her " +
+      "still wanted it. For one long breath not even Halima knew which word she " +
+      "would say. Then, iron in her face, she withdrew the motion in a single " +
+      "line: 'I will not let a schemer be the reason two crate-sisters could " +
+      "not share a fence.' She did not do it because Sweet " +
+      "Beak had been caught. She did it because the President had come back and " +
+      "told her the plain truth, and plainness is the only currency Halima has " +
+      "ever accepted. The bond did not snap back as though nothing had happened. " +
+      "It came back tempered, the way iron comes back from the fire, harder and " +
+      "a little scarred, which is stronger than new. Sweet Beak slipped off " +
+      "toward the far coops, already eyeing her next target. And a Republic runs " +
+      "on trust that is counted honestly and kept honestly, the same way we " +
+      "count every egg by hand at Kisi. Order farm-fresh eggs, honestly " +
+      "counted, at farm.kisi.africa/eggs.",
+  },
 ];

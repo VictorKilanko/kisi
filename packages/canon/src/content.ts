@@ -290,6 +290,21 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "the first chair grows teeth, and Kola Quill watches the crack become a " +
       "fault.",
   },
+  "the-first-chair": {
+    title: "The First Chair",
+    summary:
+      "The finale of Halima's long turn. She finally acts on the plan: cold " +
+      "and personal, she moves against the President for the first chair " +
+      "itself, and the two that could not be split split in front of the whole " +
+      "Assembly. That evening the President comes back to the fence, not to " +
+      "fight but to say the plain thing, and the reckoning the cold silence " +
+      "kept deferring finally happens. Sweet Beak overplays, brags to both " +
+      "coops of engineering the rift, and Kola Quill exposes her on the front " +
+      "page. At the peak of her power, wounded and vindicated, Halima makes " +
+      "her own choice and withdraws the motion, refusing to let a schemer be " +
+      "why two crate-sisters could not share a fence. The bond comes back " +
+      "tempered, not reset.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {
