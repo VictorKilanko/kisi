@@ -291,6 +291,17 @@ const arcs = [
       ["At the fence, after", "The President came to the fence, as always. 'You could have broken me. You took the blame instead.' Neither said the bond had changed. It had. We count every egg by hand. Order yours at farm.kisi.africa/eggs."],
     ],
   },
+  {
+    slug: "firstchair",
+    title: "The First Chair",
+    sell: "shop", // finale resolves the egg-count spine; sells honest eggs
+    slides: [
+      ["The move at last", "For four seasons Halima fought the President as loyal opposition, then made peace at the fence each dusk. This morning she rose cold as iron and moved for the first chair itself, and meant it. In the gallery Sweet Beak could barely sit still: the two that could not be split had split, in front of everyone."],
+      ["The fence, at last", "That dusk the President came back. She didn't fight. She folded down beside her crate-sister: 'I doubted you over one late number, and I was wrong, and it cost us this. The right hand washes the left, the left washes the right. I forgot no hand stays clean alone.'"],
+      ["She told both", "Sure the split was permanent, Sweet Beak crowed too soon, taking credit from one coop for 'wanting what's best for poor dear Halima' and from the next for 'warning Her Excellency in time.' One bird was listening. Kola Quill's front page ran three words: SHE TOLD BOTH."],
+      ["Iron, tempered", "The first chair was one word away, and part of Halima still wanted it. For one breath, even she didn't know. Then she withdrew: 'I won't let a schemer split two crate-sisters.' The bond came back tempered, like iron from fire. We count every egg by hand. Order yours at farm.kisi.africa/eggs."],
+    ],
+  },
 ];
 
 function smart(s) {
