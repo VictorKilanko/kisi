@@ -324,6 +324,17 @@ const arcs = [
       ["What leaves Kisi", "The President came to see the crates off and made no decree, only: 'Everything else we argue about. This we agree on: good eggs, counted true, sent with our name on them.' Kola Quill printed his gentlest headline of the year: THE EGGS ARE GOOD. Order farm-fresh eggs at farm.kisi.africa/eggs."],
     ],
   },
+  {
+    slug: "scoop",
+    title: "The Scoop That Wasn't",
+    theme: "green", // Sweet Beak vs the press: dramatic intrigue on the green field
+    slides: [
+      ["The next target", "Sweet Beak never forgot the front page: 'SHE TOLD BOTH,' read by the whole Republic over breakfast. You cannot out-whisper a printed word, so she picked a new target, the newsman himself. Make the flock stop trusting Kola Quill, and they'd stop trusting the bird who caught her."],
+      ["The perfect tip", "She scratched out a fake leaked memo all night: the Feather Gala money, it claimed, was secretly spent on gold perches for the cabinet. She left it where Kola would find it. 'You didn't hear it from me.' The biggest scandal of the season, if it were true. His old heart jumped."],
+      ["The minutes nobody reads", "'Too good' has never fooled Kola Quill. He nearly ran it, headline drafted, press warming. Then his old habit stopped him: he checks. The memo fell apart against the real ledger, and the scratch-marks were in a sweet, looping hand he already knew. 'The minutes nobody reads are the story everybody needs.'"],
+      ["The story he printed", "So Kola printed a story, just not hers. Not 'Perchgate' (no gate, no gold), but the true one: how a bird tried to turn the paper into a weapon, and how the paper checked and refused. His editorial, one line: 'A paper that checks is not a paper you can use.' A free flock needs an honest paper. Back the Republic at farm.kisi.africa/support."],
+    ],
+  },
 ];
 
 function smart(s) {
