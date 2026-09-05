@@ -302,6 +302,28 @@ const arcs = [
       ["Iron, tempered", "The first chair was one word away, and part of Halima still wanted it. For one breath, even she didn't know. Then she withdrew: 'I won't let a schemer split two crate-sisters.' The bond came back tempered, like iron from fire. We count every egg by hand. Order yours at farm.kisi.africa/eggs."],
     ],
   },
+  {
+    slug: "longestnight",
+    title: "The Longest Night",
+    theme: "green", // warm reset, on the green field for variety
+    slides: [
+      ["The light runs thin", "Dry-season haze settles over Kisi and the solar panels drink less sun. Amina Daybreak did the arithmetic and didn't soften it: on the longest night of the year, the coop lights would fail two hours before dawn. The older birds remembered the last dark."],
+      ["The volunteer", "Small Fẹ́mi, last of the twelve out of Coop Two on the night of the Drain, offered to keep watch through the dark hours. 'I'd rather sit in a true dark than pretend it isn't there.' Baba Ṣẹ́gun, who shares the dawn crow with him: 'You won't sit alone. I'll crow the watches, you walk them.'"],
+      ["How a flock holds a night", "No one bird faced it; all of them did. Amina saved the last charge for the youngest coops. Baba crowed each turn of the night so no coop felt alone. Small Fẹ́mi walked the fence, and tonight the whole Republic was glad somebody did. Nothing came out of the dark. That was the point."],
+      ["The sun, a colleague", "At first light Baba crowed it up, and it had never sounded so welcome. But the night proved a plain thing: Kisi's coops still go dark when the light runs thin. 'The sun is free,' said Amina. 'The panels were not, and we don't have enough.' Back the Solar & Light campaign at farm.kisi.africa/support."],
+    ],
+  },
+  {
+    slug: "marketday",
+    title: "Market Day",
+    sell: "shop", // the funnel made literal: real eggs to real buyers
+    slides: [
+      ["The crates go to town", "Market morning, and the whole farm woke early, not for a decree or a scandal but for pride in a plain day's work. The first big crates of eggs were packed for real buyers in town who asked for the famous Kisi hens by name. The working hens watched the eggs leave the farm."],
+      ["Counted honest, sold honest", "Mama Gold presided over the loading the way she does everything now: slowly, with her whole heart. Every egg was counted by hand and counted true. 'A market only comes back,' she said, 'to a farm that does not lie to it.' The buyers pay for the egg and return for the honesty."],
+      ["Chi-Chi's first crate", "For Chi-Chi it was a first. She came to Kisi motherless at three weeks old, and a whole nation once waited on her first egg. Now her eggs went to market for the very first time. She wondered if plain brown eggs like hers were good enough. Then the crate closed over them all together. 'I did my best.'"],
+      ["What leaves Kisi", "The President came to see the crates off and made no decree, only: 'Everything else we argue about. This we agree on: good eggs, counted true, sent with our name on them.' Kola Quill printed his gentlest headline of the year: THE EGGS ARE GOOD. Order farm-fresh eggs at farm.kisi.africa/eggs."],
+    ],
+  },
 ];
 
 function smart(s) {
