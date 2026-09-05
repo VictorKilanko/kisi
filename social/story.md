@@ -397,24 +397,54 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   the withdrawal is an active victory not a foregone one; recast Sweet Beak's brags into her syrupy
   self-exculpating voice). Art director PASS on all 4. No new character (count stays 28).
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 13 are built and
-  queued. Halima's heel turn (rollout #3) has now **completed its arc**: she bent three times (Eps 10-12),
-  moved openly against the President (Ep 13), and then chose loyalty over the chair — the bond survives,
-  **tempered, not reset**. Sweet Beak is exposed but unrepentant and still recurring. That spine is spent
-  for now; do **not** re-detonate it immediately. A plain "execute" should build **Season 2, Ep 14** —
-  best next threads, in priority order:
-  1. **A warm tonal-reset arc** after four straight reckoning-heavy episodes (Eps 10-13). Reach for a
-     standing engine of drama that is not the crate-sisters: a Coop League fixture (Chi-Chi's thread,
-     Túndé/Flash), a Kola Quill scoop, an elders/egg beat (Mama Gold's Law), a solar/housing beat. Let
-     the audience breathe and let the tempered friendship settle before the next big storm.
-  2. **Sweet Beak's next target** (she left Ep 13 "eyeing her next," so a fresh comic-villain arc that
-     does NOT reuse Halima/President), or **Eseosa in exile** (careful, dignified).
-  3. **The long game:** the tempered crate-sisters bond can be tested again later, but give it real
-     in-story time; a too-soon rematch cheapens the Ep 13 payoff.
-  Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream**
-  against the last new arc (last built = `arc-firstchair` CREAM, so the next new arc defaults to GREEN);
-  a comic arc can carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3
-  standing hashtags; end on a sell.
+- **SEASON 2 Eps 14-15: the warm-reset batch — BUILT AND QUEUED (2026-09-05).** After the four
+  reckoning-heavy heel-turn episodes (Eps 10-13), the owner asked for more episodes; built two warm arcs
+  as a batch (one showrunner audit, one art-director audit across both). Both cleared (showrunner: Ep 14
+  REVISE→SHIP, Ep 15 SHIP; art director PASS on all 8). Alternation held: firstchair CREAM →
+  **longest-night GREEN → market-day CREAM**. No new characters (count stays 28).
+  - **Ep 14 "The Longest Night"** (`the-longest-night`, slug `longestnight`, GREEN, 4 beats, → **support**
+    / Solar & Light). A dry-season solar/light story with **no villain**: the pre-rain haze starves the
+    panels, the coops face a dark night, and the flock holds it together (Amina Daybreak rations the last
+    charge, VP Baba Ṣẹ́gun crows the watches, young Small Fẹ́mi keeps the fence). Nothing comes out of the
+    dark, by design; the Drain is a warm memory, not a reopened threat. **Showrunner catch:** Baba and
+    Small Fẹ́mi are already established mentor/apprentice who **share the dawn crow** (`the-dawn-duel`), so
+    the draft's "Baba's respect newly won" + "finish growing first" (which is Sergeant Danladi's line, not
+    Baba's) cross-wired the roosters; rewrote Baba's turn to honour the existing bond. **Lesson: before
+    staging two recurring characters together, check whether the bible already gives them a relationship.**
+  - **Ep 15 "Market Day"** (`market-day`, slug `marketday`, CREAM, 4 beats, → **eggs**). The funnel made
+    literal: the first big crates of eggs leave Kisi for real buyers, told through the flock's pride. Mama
+    Gold presides ("a market only comes back to a farm that does not lie to it"), tying off the honest-count
+    theme positively **without re-litigating it**; Chi-Chi's eggs go to market for the first time; the
+    President gives a warm plain cameo (no decree) and Kola prints "THE EGGS ARE GOOD". Showrunner SHIP first
+    pass; applied both optional polishes (Mama Gold clearly presiding since she's on a laying break; a
+    micro want-and-payoff for Chi-Chi's doubt about her plain brown eggs).
+
+- **Website reveal pulled in step with IG (2026-09-05).** Owner asked whether the stories were live on the
+  site. They were deployed but **date-gated**: `revealedTimeline` (`packages/canon/src/content.ts`) shows a
+  beat only once `date <= today`, and Eps 10-13 were dated 09-10…09-28 while already posting to IG, so the
+  site lagged (True Count was on IG since Aug 27 but hidden on the site until 09-10). Fix: **collapsed each
+  tail arc to a single in-story date equal to the day its IG carousel posts** (kickoff 09-04, true-count
+  09-05, kept 09-06, reason 09-07, first-chair 09-08, longest-night 09-09, market-day 09-10), so the site
+  reveals each arc the same day IG posts it and the daily cron's manifest commit re-triggers the Vercel
+  rebuild. **Lesson: the website reveal is build-time date-gated, so "deployed" ≠ "visible"; to keep the
+  site in step with the IG drip, date each arc to its post day and re-date the whole causal tail, never a
+  single arc (you cannot reveal a sequel before its setup).**
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 15 are built and
+  queued; the site now reveals each arc in step with its IG post day. Halima's heel turn (rollout #3) is
+  **complete** (Eps 10-13, bond tempered not reset) and Eps 14-15 were the **warm reset**. A plain "execute"
+  should build **Season 2, Ep 16** — best next threads, in priority order:
+  1. **Sweet Beak's next target** (she left Ep 13 "eyeing her next"): a fresh comic-villain arc that does
+     NOT reuse the Halima/President spine. This is the natural next escalation now the reckoning has settled.
+  2. **Another warm/standing-engine beat** (Coop League fixture, a Kola scoop, elders/egg, solar/housing) if
+     the owner wants to keep the lighter register a little longer.
+  3. **The long game:** the tempered crate-sisters bond can be tested again, but only after real in-story
+     time; a too-soon rematch cheapens the Ep 13 payoff.
+  Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream** against the
+  last new arc (last built = `arc-marketday` CREAM, so the next new arc defaults to GREEN); a comic arc can
+  carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3 standing hashtags; end on
+  a sell; **date the new arc to the day it will post to IG** (continue the 09-11, 09-12… run) so the site
+  stays in step; and **assert the manifest caption is < 2,200 chars** (story text ~1,900 max) before staging.
   **When adding a character, bump the chicken-count test in
   `packages/canon/tests/content.test.ts` (now 27).** The arc-count assertion is now a **floor**
   (`toBeGreaterThanOrEqual`), not an exact count, so it no longer needs bumping as each in-story

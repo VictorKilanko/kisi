@@ -53,6 +53,31 @@ the daily cron drain** (one/day). **Left to do: the go-live** (commit → push f
 over three days). Render/commit hygiene held: rendered only the 4 new slides (no ~100-PNG spurious diff);
 did not `prettier --write` the hand-formatted data files.
 
+**Then, same session, the owner asked for more episodes and whether the stories were live on the site.**
+Two more things shipped:
+
+**Website reveal was date-gated, not visible.** `revealedTimeline` (`packages/canon/src/content.ts`) filters
+to `date <= today` at **build time**, so Eps 10-13 (dated 09-10…09-28) were deployed but hidden while already
+posting to IG. True Count had been on IG since Aug 27 but hidden on the site until 09-10. Fix: **collapsed
+each tail arc to a single in-story date = the day its IG carousel posts** (kickoff 09-04, true-count 09-05,
+kept 09-06, reason 09-07, first-chair 09-08, then the new longest-night 09-09, market-day 09-10). Now the site
+reveals each arc the day IG posts it, and the daily cron's manifest commit re-triggers the Vercel rebuild so
+the reveal actually happens (Vercel builds on every push; `[skip ci]` only skips GitHub Actions, not Vercel).
+**Lesson: "deployed" ≠ "visible" here; re-date the whole causal tail (never one arc — can't reveal a sequel
+before its setup), and set each arc's date to its IG post day to keep site and IG in step.**
+
+**Season 2 Eps 14-15 — warm-reset batch (GREEN "The Longest Night" → support/Solar; CREAM "Market Day" →
+eggs).** No new characters (count stays 28). One showrunner + one art-director audit across both; showrunner
+Ep 14 REVISE→SHIP, Ep 15 SHIP; art director PASS on all 8. **Showrunner catch worth carrying:** Baba Ṣẹ́gun
+and Small Fẹ́mi are already canon mentor/apprentice who share the dawn crow (`the-dawn-duel`), so a draft that
+made Baba's respect "newly won" and put Sergeant Danladi's "finish growing first" line in Baba's mouth
+cross-wired the two roosters; rewrote to honour the existing bond. Same family as prior catches: **check the
+bible for an existing relationship before staging two recurring characters together.** Captions again ran over
+the 2,200 cap on first fill (longest-night 2,355, market-day 2,380); trimmed to 2,151 / 2,195. Gates re-run
+green (typecheck 6/6, lint 4/4, test canon 18 / records 10 / africa 13 / farm 13, build all 4 apps). Staged
+order (= cron post order) is now kept → reason → first-chair → longest-night → market-day, so the cron drains
+one per day 09-06…09-10 and the site reveals each the same day.
+
 ## Session — 2026-08-30 (content: Season 2 Ep 12 "The Reason I Sleep" — the reckoning)
 
 Ran one `social/story.md` cycle (the second this run; user said "continue when the showrunner
