@@ -6,6 +6,53 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-09-05 (content: S2 Ep 13 "The First Chair" finale + fixed the stalled IG queue)
+
+Two pieces: ran one `social/story.md` cycle (RESUME named **Ep 13**, the finale of Halima's heel turn),
+and diagnosed/fixed why Instagram had gone silent for ~a week (owner flagged it mid-cycle).
+
+**Content — "The First Chair" (`arcId: the-first-chair`), CREAM, 4 beats, → eggs.** The finale of
+villain rollout #3. Halima finally moves against the President for the first chair itself (the open break
+Ep 12 deferred); the President comes to the fence and says the plain thing in her proverb register; Sweet
+Beak overplays and brags to both coops, and Kola Quill exposes her ("SHE TOLD BOTH"); at the peak of her
+power Halima withdraws by her **own** moral choice, and the crate-sisters bond comes back **tempered, not
+reset** (payoff of "Iron Feathers"). Live in `timeline.ts` (09-25…09-28, future-dated so it reveals after
+Ep 12), `content.ts` ARC_META, 4 slides (`arc-firstchair-1..4`), caption, staged as `arc-firstchair`.
+No new character (count stays 28). **Showrunner REVISE→SHIP** — three good catches: (1) the President's
+biggest emotional scene lacked her Mama Decree register, so added a Yoruba proverb line
+("Ọwọ́ ọ̀tún ń wẹ òsì… no hand stays clean alone"); (2) the private fence reconciliation in beat 2 pre-empted
+beat 4's suspense, so added an **in-the-moment flicker of temptation** as Halima rises (the chair "one word
+away… part of her still wanted it") so the withdrawal is an active victory; (3) Sweet Beak's brags read
+flat, so recast into her syrupy self-exculpating voice. Art director PASS on all 4 (slide 2's Yoruba proverb
+is deliberately English-only on the slide; the accented line lives in the website body + caption, per the
+"slides tight, website richer" rule). Gates all green: **typecheck 6/6, lint 4/4, test (canon 18 / records
+10 / africa 13 / farm 13), build all 4 apps compiled.**
+
+**IG stall — root-caused two separate blockers (both now fixed in the tree, go-live pending push):**
+1. **Empty queue on `main`.** The daily cron (`ig-schedule.yml`, 06:00 UTC) reads **`main` only**. Its
+   queue was fully drained: 25 posts, all `posted`, last = `arc-truecount`, drained **2026-08-27 17:24 UTC**
+   (~8 days silent). Eps 11 (`arc-kept`) and 12 (`arc-reason`) were committed/staged **only on
+   `feature/kisi-poultry-republic`** (commits `db6662b`, `c4ba099` confirmed **not on main**), so the cron
+   never saw them. Tell: every scheduler run "succeeds" but in **9-19s** (nothing to post); a real carousel
+   publish takes ~1m (the 08-27 run was 1m5s). **Lesson: a green scheduler run is NOT proof of a post; check
+   run duration and the `main` manifest's staged count. Staged-on-feature ≠ queued; only `main` posts.**
+2. **Captions over Instagram's 2,200-char cap.** `ig-publish.mjs` posts the caption **verbatim, no
+   truncation**. The recent long-form captions were **arc-kept 2,876** and **arc-reason 2,907** (incl. the
+   232-char hashtag block) — both over 2,200, so even once on `main` the Graph API would **reject** them and
+   the post silently never goes out. Trimmed all three staged captions under cap (kept 2,158 / reason 2,184 /
+   firstchair 2,191); story text ~1,900 max is the safe zone (arc-truecount 1,954 story is the reference).
+   Added the hard rule to `story.md` Stage 4. **Lesson: assert manifest caption length < 2,200 every cycle.**
+
+Manifest hygiene (the recurring one, and it mattered again): the local feature manifest had `arc-truecount`
+as `staged` while `main` had it `posted` (drift). **Synced the manifest from `git show origin/main:…` before
+staging** so the 25 posted statuses were preserved and only kept/reason/firstchair are `staged`; without
+this the cron would have **re-posted True Count** ([[kisi-no-duplicate-ig-posts]]). Staged order (= cron post
+order): `arc-kept` → `arc-reason` → `arc-firstchair`. Owner chose **finish Ep 13, then push all 3, and let
+the daily cron drain** (one/day). **Left to do: the go-live** (commit → push feature → move `main` ref via
+`gh api` PATCH → verify Vercel deploy + image URLs return 200 → daily cron drains kept, reason, firstchair
+over three days). Render/commit hygiene held: rendered only the 4 new slides (no ~100-PNG spurious diff);
+did not `prettier --write` the hand-formatted data files.
+
 ## Session — 2026-08-30 (content: Season 2 Ep 12 "The Reason I Sleep" — the reckoning)
 
 Ran one `social/story.md` cycle (the second this run; user said "continue when the showrunner

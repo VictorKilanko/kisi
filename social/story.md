@@ -126,6 +126,13 @@ The image pipeline is data-driven and already built. Do not hand-build HTML.
 4. Write the caption. Add a `## <name>` section to `social/captions.md` matching the image
    filename, in the established voice, ending on the same sell as the final slide, followed
    by the reusable hashtag block. The handle is **@kisi.africa**.
+   **Hard limit: the caption Instagram actually posts (story text + the ~232-char hashtag
+   block) must be under 2,200 characters, or the Graph API rejects it and the post silently
+   never goes out.** `ig-publish.mjs` posts the caption verbatim, no truncation. So keep the
+   story text at roughly **1,900 chars or less** (arc-truecount = 1,954 story / 2,188 total is
+   the reference). After filling the manifest caption, assert its length is < 2,200. This
+   caught nothing for months because the recent long-form captions (kept 2,876, reason 2,907)
+   were staged but never reached the cron; they were trimmed on 2026-09-05.
 
 ## Stage 5 — AUDIT #2 (the art director)
 
@@ -370,23 +377,42 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   note (corrected a code comment: the "reason I sleep" line is Ep 10, not Ep 11). Art director PASS on
   all 4 (slide 4 is the fullest of the set, watch it if copy grows). No new character (count stays 28).
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 12 are built
-  and queued. A plain "execute" should build **Season 2, Ep 13**. Halima's heel turn has now bent
-  **three times and hardened**: held a true number back (Ep 10), confessed the lateness at her own cost
-  (Ep 11), and after that sacrifice bought suspicion the wish for the first chair grew teeth and the
-  fence went cold (Ep 12). She is closer to the turn than ever but has **not** yet moved against the
-  President; the open crate-sister break is the finale still to come. Best next threads, in priority order:
-  1. **Halima's heel turn (rollout #3) — the open break / the move.** Ep 12 ended with the wish become a
-     plan and a cold, silent fence. The next beat can make her **act** on the plan (declare for the first
-     chair, or coldly withhold her honesty from the President), force the open confrontation the cold
-     silence has been deferring, and bring the crate-sisters to a real reckoning, then decide: full heel
-     turn, or the beginning of the turn back. This is the spine; it is nearly at its peak, so land it with
-     weight. Sweet Beak (who "hummed" at splitting them) is the accelerant to reuse.
-  2. **A deliberate tonal-reset / warm arc** if the owner wants to breathe between reckoning beats
-     (a Coop League fixture, a Kola scoop, an elders/egg beat) before the finale.
-  3. **Sweet Beak's next target** or **Eseosa in exile (careful, dignified)**.
+- **SEASON 2 Ep 13: "The First Chair" — BUILT AND QUEUED (2026-09-05).** Villain rollout #3, the
+  **finale** of Halima's heel turn, and it pays off the crate-sisters friendship the rollout was always
+  about. Halima finally **acts** on the Ep 12 plan: cold and personal, she rises in the Assembly and
+  moves for the President's first chair itself, not as loyal opposition but meaning it, and the two that
+  could not be split split in public (Sweet Beak thrilled in the gallery). That evening the President
+  comes back to the fence, not to fight but to say the plain thing (a proverb-cadence line in her Mama
+  Decree register, "Ọwọ́ ọ̀tún ń wẹ òsì… no hand stays clean alone"), and the deferred reckoning finally
+  happens. **Sweet Beak overplays**, brags to both coops of engineering the rift, and **Kola Quill exposes
+  her** on the front page ("SHE TOLD BOTH"). At the peak of her power, wounded and vindicated, Halima
+  makes her **own** moral choice and withdraws the motion ("I will not let a schemer be the reason two
+  crate-sisters could not share a fence") — not because Sweet Beak was caught, but because the President
+  came back and told her the plain truth. The bond comes back **tempered, not reset** (payoff of the
+  "Iron Feathers" name: iron from fire). Sweet Beak slinks off, still recurring. CREAM (alternates off
+  arc-reason GREEN), 4 slides (`arc-firstchair-1..4`), routes to **eggs**. Live in `timeline.ts`
+  (`arcId: the-first-chair`, 09-25…09-28), `content.ts` ARC_META, caption (2191 chars), staged into
+  `manifest.json` as `arc-firstchair`. **Showrunner REVISE→SHIP** (three fixes: gave the President her
+  aphoristic register in the fence scene; added an in-the-moment flicker of temptation as Halima rises so
+  the withdrawal is an active victory not a foregone one; recast Sweet Beak's brags into her syrupy
+  self-exculpating voice). Art director PASS on all 4. No new character (count stays 28).
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 13 are built and
+  queued. Halima's heel turn (rollout #3) has now **completed its arc**: she bent three times (Eps 10-12),
+  moved openly against the President (Ep 13), and then chose loyalty over the chair — the bond survives,
+  **tempered, not reset**. Sweet Beak is exposed but unrepentant and still recurring. That spine is spent
+  for now; do **not** re-detonate it immediately. A plain "execute" should build **Season 2, Ep 14** —
+  best next threads, in priority order:
+  1. **A warm tonal-reset arc** after four straight reckoning-heavy episodes (Eps 10-13). Reach for a
+     standing engine of drama that is not the crate-sisters: a Coop League fixture (Chi-Chi's thread,
+     Túndé/Flash), a Kola Quill scoop, an elders/egg beat (Mama Gold's Law), a solar/housing beat. Let
+     the audience breathe and let the tempered friendship settle before the next big storm.
+  2. **Sweet Beak's next target** (she left Ep 13 "eyeing her next," so a fresh comic-villain arc that
+     does NOT reuse Halima/President), or **Eseosa in exile** (careful, dignified).
+  3. **The long game:** the tempered crate-sisters bond can be tested again later, but give it real
+     in-story time; a too-soon rematch cheapens the Ep 13 payoff.
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream**
-  against the last new arc (last built = `arc-reason` GREEN, so the next new arc defaults to CREAM);
+  against the last new arc (last built = `arc-firstchair` CREAM, so the next new arc defaults to GREEN);
   a comic arc can carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3
   standing hashtags; end on a sell.
   **When adding a character, bump the chicken-count test in
