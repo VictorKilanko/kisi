@@ -331,6 +331,21 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "President sees the crates off with no decree, only a plain word, and " +
       "Kola Quill prints the gentlest headline of his year: the eggs are good.",
   },
+  "the-scoop-that-wasnt": {
+    title: "The Scoop That Wasn't",
+    summary:
+      "Sweet Beak's next target, and revenge for the front page that caught " +
+      "her. Unable to out-argue Kola Quill, she sets out to destroy his " +
+      "credibility instead: she forges a leaked memo claiming the Feather Gala " +
+      "budget was spent on gold perches for the cabinet, and plants it where " +
+      "the newsman will find it, betting he prints it and is ruined when it " +
+      "proves false. But Kola does the plain, unglamorous thing that made him " +
+      "and checks. The fake comes apart against the real ledger, in a hand he " +
+      "knows, and instead of the scandal she wrote he prints the true story: " +
+      "how someone tried to turn the paper into a weapon, and how the paper " +
+      "checked and refused. Her plot to break his credibility makes it " +
+      "unbreakable, and she slips off eyeing her next target.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {

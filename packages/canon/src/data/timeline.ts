@@ -2060,4 +2060,105 @@ export const timelineEvents: TimelineEvent[] = [
       "drama and the news: farm-fresh eggs from the flock, counted by hand, " +
       "honest as the morning. Order yours at farm.kisi.africa/eggs.",
   },
+
+  // ARC: The Scoop That Wasn't (Season 2, Ep 16) — Sweet Beak's next target, and her
+  // first scheme since Kola Quill's "SHE TOLD BOTH" front page (Ep 13) humiliated her.
+  // Fresh angle: she goes after the NEWSMAN himself, planting a forged scoop so he
+  // prints something false and the Republic stops trusting the press. Comic
+  // schemer-vs-scrupulous-journalist duel; Kola verifies (his whole identity), refuses
+  // the bait, and prints the true story instead. Distinct from Ep 13: there she was
+  // caught bragging passively; here she actively attacks the press and the theme is
+  // verification / a free honest paper, with Kola as active protagonist. Comeuppance,
+  // not exile (still recurring). GREEN (alternates off market-day CREAM), single date
+  // 09-11 = its IG post day, routes to support.
+  {
+    id: "scoop-revenge",
+    chickenIds: ["ladun-sweet-beak", "kola-quill"],
+    date: "2026-09-11",
+    arcId: "the-scoop-that-wasnt",
+    world: "fiction",
+    type: "custom",
+    title: "The newsman's turn to be the target",
+    body:
+      "Sweet Beak had not forgotten the front page. 'SHE TOLD BOTH,' in the " +
+      "largest type The Coop Times owned, read by the whole Republic over its " +
+      "breakfast, and every bird had known exactly who. For once in her life " +
+      "she had not schemed her way out of it, because you cannot out-whisper a " +
+      "printed word. So she did what Sweet Beak always does when she is beaten: " +
+      "she found a new target, and this time it was the newsman himself. If she " +
+      "could not out-argue Kola Quill, she would make the whole flock stop " +
+      "believing him. Get the paper to print one thing that turned out false, " +
+      "she reasoned, and nobody would ever trust the bird who caught her again. " +
+      "It was, she told herself happily, the cleverest thing she had ever " +
+      "thought of.",
+  },
+  {
+    id: "scoop-tip",
+    chickenIds: ["ladun-sweet-beak", "kola-quill"],
+    date: "2026-09-11",
+    arcId: "the-scoop-that-wasnt",
+    world: "fiction",
+    type: "custom",
+    title: "The perfect tip",
+    body:
+      "The bait had to be irresistible, so she made it enormous. All night she " +
+      "scratched out a fake memo in an official-looking hand, a 'leaked' note " +
+      "claiming the money set aside for the Feather Gala had quietly been spent " +
+      "on gold perches for the cabinet, the fanciest roosts in the land, paid " +
+      "for out of everyone's feed. Then she left it where Kola would find it, " +
+      "and murmured, sweet as syrup, that she really shouldn't say, but he " +
+      "hadn't heard it from her. It was the biggest scandal of the season, if " +
+      "it were true. Kola's old heart gave the little jump it has given before " +
+      "every front page of his life. Gold perches, public feed, a cabinet " +
+      "caught with its beak in the tin. It would sell every copy in the " +
+      "Republic. It was, in short, exactly too good.",
+  },
+  {
+    id: "scoop-check",
+    chickenIds: ["kola-quill", "ladun-sweet-beak"],
+    date: "2026-09-11",
+    arcId: "the-scoop-that-wasnt",
+    world: "fiction",
+    type: "custom",
+    title: "The minutes nobody reads",
+    body:
+      "And here is the part Sweet Beak never counted on: he very nearly ran " +
+      "it. He drafted the headline that same night, big and black, and the " +
+      "press was warming for the morning edition. Then, at the very last, the " +
+      "old habit that has never once let him down made him stop and do the " +
+      "unglamorous thing before the ink was dry: he checked. He read the " +
+      "minutes nobody reads, weighed the leaked memo against the real gala " +
+      "ledger line by line, and the fake came apart in " +
+      "his wing. There was no such spend, no such order, no gold anything; the " +
+      "Feather Gala had been paid for in grain and goodwill, as it always is. " +
+      "And the scratch-marks on the memo were in a hand he had seen before, " +
+      "sweet and looping and a little too pleased with itself. He did not even " +
+      "have to leave his patch of soft earth to know whose beak had made them. " +
+      "'The minutes nobody reads,' he said to nobody, 'are the story everybody " +
+      "needs.'",
+  },
+  {
+    id: "scoop-printed",
+    chickenIds: ["kola-quill", "ladun-sweet-beak"],
+    date: "2026-09-11",
+    arcId: "the-scoop-that-wasnt",
+    world: "fiction",
+    type: "custom",
+    title: "The story he actually printed",
+    body:
+      "So Kola printed a story the next morning, just not the one Sweet Beak " +
+      "had written for him. Not 'Perchgate,' because there was no gate and no " +
+      "gold, but the true one: how a bird had tried to turn the Republic's own " +
+      "newspaper into a weapon, forging a scandal to make an honest paper lie, " +
+      "and how the paper had done the plain, unglamorous thing and checked. He " +
+      "did not even need to be cruel about who; the whole flock could guess. " +
+      "His editorial was one line, in the terse style his readers wait for: " +
+      "'A paper that checks is not a paper you can use.' Her plot to break his " +
+      "credibility had instead made it unbreakable, printed and permanent. " +
+      "Sweet Beak read it over her breakfast like everybody else, sighed, and " +
+      "began, quietly, to think about her next target. A Republic stays free " +
+      "only as long as its paper stays honest, the same way Kisi Farm lives " +
+      "or dies by whether you can trust its scales. Help us keep this flock " +
+      "fed, housed, and honest. Back the Republic at farm.kisi.africa/support.",
+  },
 ];
