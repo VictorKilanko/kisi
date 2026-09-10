@@ -90,4 +90,10 @@ export const eggCensus: {
     total: 5120,
     note: "A record month as the flock grew and the young layers found their rhythm. The opposition demanded a recount. The recount agreed. The opposition found that suspicious.",
   },
+  {
+    period: "2026-08",
+    label: "August 2026",
+    total: 5350,
+    note: "The steady hens held the line and the harvest crept higher again. The Minister of Egg Affairs called it proof of good governance. The hens called it Tuesday, and Wednesday, and every other morning too.",
+  },
 ];
