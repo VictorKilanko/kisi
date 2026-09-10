@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
 import { ChickenPortrait } from "@kisi/ui";
 import { chickens } from "@kisi/canon";
-import { FARM_URL, KIDS_URL } from "@/lib/site";
+import { FARM_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Kisi Africa",
@@ -19,17 +19,20 @@ const entryPoints = [
   {
     href: "/flock",
     title: "Meet the Chickens",
-    blurb: "The whole cast, one profile at a time. Names, personalities, friends, rivals, and the stories that made them.",
+    blurb:
+      "The whole cast, one profile at a time. Names, personalities, friends, rivals, and the stories that made them.",
   },
   {
     href: "/republic",
     title: "Enter the Republic",
-    blurb: "The constitution (the queue), the cabinet, the free press, and the President who insists breakfast is at seven, not seven-ish.",
+    blurb:
+      "The constitution (the queue), the cabinet, the free press, and the President who insists breakfast is at seven, not seven-ish.",
   },
   {
     href: "/republic/stories",
     title: "Read the Big Stories",
-    blurb: "The serials people come back for. First eggs, elections, rivalries, reconciliations, told beat by beat.",
+    blurb:
+      "The serials people come back for. First eggs, elections, rivalries, reconciliations, told beat by beat.",
   },
 ];
 
@@ -60,7 +63,10 @@ export default function AboutPage() {
 
       {/* what it is */}
       <section className="mt-14 max-w-3xl">
-        <SectionHeading kicker="What this is" title="A soap opera with feathers" />
+        <SectionHeading
+          kicker="What this is"
+          title="A soap opera with feathers"
+        />
         <div className="space-y-4 text-kisi-charcoal-900">
           <p>
             Think of it as an ongoing story you can drop into any time. The
@@ -86,31 +92,22 @@ export default function AboutPage() {
 
       {/* explore the universe */}
       <section className="mt-14 rounded-3xl bg-kisi-green-900 p-8 text-kisi-cream-100">
-        <h2 className="font-display text-2xl font-bold">The wider Kisi world</h2>
+        <h2 className="font-display text-2xl font-bold">
+          The wider Kisi world
+        </h2>
         <p className="mt-3 max-w-2xl text-kisi-cream-100/85">
-          Kisi Africa is the story. Two sister places carry it further: one
-          where you can actually buy what the flock produces, and one built just
-          for the youngest visitors.
+          Kisi Africa is the story. A sister place carries it further: the real
+          farm shop, where you can actually buy what the flock produces.
         </p>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        <div className="mt-6">
           <a
             href={FARM_URL}
-            className="rounded-2xl bg-kisi-cream-100 p-5 text-kisi-green-900 transition-shadow hover:shadow-lg"
+            className="block rounded-2xl bg-kisi-cream-100 p-5 text-kisi-green-900 transition-shadow hover:shadow-lg sm:max-w-md"
           >
             <p className="font-display text-xl font-bold">Kisi Farm &rarr;</p>
             <p className="mt-1 text-sm text-kisi-charcoal-600">
               The real farm shop. Order farm-fresh eggs and day-old chicks, laid
               and raised by the hens you just met.
-            </p>
-          </a>
-          <a
-            href={KIDS_URL}
-            className="rounded-2xl bg-kisi-gold-300 p-5 text-kisi-charcoal-900 transition-shadow hover:shadow-lg"
-          >
-            <p className="font-display text-xl font-bold">Kisi Kids &rarr;</p>
-            <p className="mt-1 text-sm text-kisi-charcoal-900/80">
-              Stories, songs and gentle lessons with the chickens of Kisi, made
-              for young viewers.
             </p>
           </a>
         </div>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { DedeMark } from "@/components/Logo";
-import { FARM_URL, KIDS_URL } from "@/lib/site";
+import { FARM_URL } from "@/lib/site";
 
 const isExternal = (href: string) => href.startsWith("http");
 
@@ -18,11 +18,10 @@ const FOOTER_LINKS = [
     ],
   },
   {
-    // The wider universe: buying and the kids channel live on their own sites.
+    // The wider universe: buying the real eggs lives on its own site.
     heading: "Explore Kisi",
     links: [
       { href: FARM_URL, label: "Kisi Farm (order eggs)" },
-      { href: KIDS_URL, label: "Kisi Kids" },
       { href: "/about", label: "About Kisi Africa" },
       { href: "/visit", label: "Contact" },
     ],
@@ -43,7 +42,9 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-2.5">
             <DedeMark size={40} title="Kisi" />
-            <p className="font-display text-2xl font-black tracking-tight">KISI</p>
+            <p className="font-display text-2xl font-black tracking-tight">
+              KISI
+            </p>
           </div>
           <p className="mt-3 text-sm text-kisi-cream-100/80">
             Where every chicken has a story. A nation of hens and roosters who

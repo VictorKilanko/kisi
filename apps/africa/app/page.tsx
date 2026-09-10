@@ -8,7 +8,7 @@ import {
 import { ChickenPortrait } from "@kisi/ui";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { WantedPoster } from "@/components/WantedPoster";
-import { FARM_URL, KIDS_URL } from "@/lib/site";
+import { FARM_URL } from "@/lib/site";
 import {
   articles,
   chickens,
@@ -46,8 +46,8 @@ export default function Home() {
             <p className="mt-5 max-w-xl text-kisi-cream-100/85">
               Welcome to the Republic of Kisi, a nation of hens and roosters who
               looked at the alternatives and decided to run the place
-              themselves. They have a President, a Coop Assembly, a free press, a
-              sports league, and very strong opinions about breakfast. Every
+              themselves. They have a President, a Coop Assembly, a free press,
+              a sports league, and very strong opinions about breakfast. Every
               chicken has a name, a story, and an opinion, and it is all{" "}
               <em>clucking eggxellent</em>.
             </p>
@@ -112,8 +112,8 @@ export default function Home() {
                 “Visitor, you are welcome. You will find here a nation of
                 industry and dignity, where the eggs are counted honestly, the
                 queue is straight, and breakfast is at seven,{" "}
-                <em>not seven-ish</em>. Walk among us. Learn our stories. And
-                if the opposition offers you her figures, take them; they are,
+                <em>not seven-ish</em>. Walk among us. Learn our stories. And if
+                the opposition offers you her figures, take them; they are,
                 irritatingly, correct.”
               </p>
               <footer className="mt-2 text-sm font-semibold text-kisi-green-700">
@@ -138,7 +138,10 @@ export default function Home() {
           ))}
         </div>
         <p className="mt-6">
-          <Link href="/eggs" className="font-semibold text-kisi-green-700 hover:underline">
+          <Link
+            href="/eggs"
+            className="font-semibold text-kisi-green-700 hover:underline"
+          >
             All egg milestones →
           </Link>
         </p>
@@ -162,19 +165,24 @@ export default function Home() {
               <p className="text-sm text-kisi-charcoal-600">
                 eggs recorded · {census.label}
               </p>
-              <p className="mt-3 text-sm text-kisi-charcoal-600">{census.note}</p>
-              <p className="mt-3">
+              <p className="mt-3 text-sm text-kisi-charcoal-600">
+                {census.note}
               </p>
+              <p className="mt-3"></p>
             </div>
             {/* Cabinet strip */}
             <div className="rounded-2xl bg-white p-6 shadow-sm">
               <p className="kicker text-kisi-gold-700">The Cabinet</p>
               <ul className="mt-3 space-y-3">
                 {cabinet.map((m) => {
-                  const minister = m.ministerId ? getChicken(m.ministerId) : undefined;
+                  const minister = m.ministerId
+                    ? getChicken(m.ministerId)
+                    : undefined;
                   return (
                     <li key={m.id} className="flex items-center gap-3">
-                      {minister && <ChickenPortrait chicken={minister} size={40} />}
+                      {minister && (
+                        <ChickenPortrait chicken={minister} size={40} />
+                      )}
                       <div>
                         <Link
                           href={`/republic/government/${m.id}`}
@@ -183,7 +191,9 @@ export default function Home() {
                           {m.shortName}
                         </Link>
                         <p className="text-xs text-kisi-charcoal-600">
-                          {minister ? minister.name : m.actingNote ?? "Vacant"}
+                          {minister
+                            ? minister.name
+                            : (m.actingNote ?? "Vacant")}
                         </p>
                       </div>
                     </li>
@@ -206,17 +216,28 @@ export default function Home() {
                 </caption>
                 <thead>
                   <tr className="text-left text-xs text-kisi-charcoal-600">
-                    <th scope="col" className="py-1">Team</th>
-                    <th scope="col" className="py-1 text-right">P</th>
-                    <th scope="col" className="py-1 text-right">Pts</th>
+                    <th scope="col" className="py-1">
+                      Team
+                    </th>
+                    <th scope="col" className="py-1 text-right">
+                      P
+                    </th>
+                    <th scope="col" className="py-1 text-right">
+                      Pts
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {table.map((row) => (
-                    <tr key={row.team.id} className="border-t border-kisi-cream-200">
+                    <tr
+                      key={row.team.id}
+                      className="border-t border-kisi-cream-200"
+                    >
                       <td className="py-1.5 font-medium">{row.team.name}</td>
                       <td className="py-1.5 text-right">{row.played}</td>
-                      <td className="py-1.5 text-right font-bold">{row.points}</td>
+                      <td className="py-1.5 text-right font-bold">
+                        {row.points}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -278,11 +299,11 @@ export default function Home() {
               Walk the Republic
             </h2>
             <p className="mt-3 max-w-xl text-kisi-cream-100/85">
-              Explore the farm in interactive 3D, from the foot-bath at the
-              gate to the Presidential Coop, the Assembly, the sports field,
-              and the drainage channel the Ministry of Security would rather
-              you didn&apos;t linger by. Every building opens its own story. A
-              fast 2D map is built in for slower connections.
+              Explore the farm in interactive 3D, from the foot-bath at the gate
+              to the Presidential Coop, the Assembly, the sports field, and the
+              drainage channel the Ministry of Security would rather you
+              didn&apos;t linger by. Every building opens its own story. A fast
+              2D map is built in for slower connections.
             </p>
             <Link
               href="/republic/map"
@@ -308,7 +329,15 @@ export default function Home() {
             <rect x="21" y="24" width="15" height="11" fill="#23305e" rx="2" />
             <rect x="64" y="10" width="18" height="12" fill="#7fae6b" rx="2" />
             <circle cx="46" cy="20" r="7" fill="#3f6b35" />
-            <rect x="80" y="3" width="16" height="8" fill="#d9a02b" opacity="0.4" rx="2" />
+            <rect
+              x="80"
+              y="3"
+              width="16"
+              height="8"
+              fill="#d9a02b"
+              opacity="0.4"
+              rx="2"
+            />
           </svg>
         </div>
       </section>
@@ -325,7 +354,10 @@ export default function Home() {
           ))}
         </div>
         <p className="mt-6">
-          <Link href="/news" className="font-semibold text-kisi-green-700 hover:underline">
+          <Link
+            href="/news"
+            className="font-semibold text-kisi-green-700 hover:underline"
+          >
             Read the paper →
           </Link>
         </p>
@@ -336,36 +368,31 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4">
           <p className="kicker text-kisi-gold-300">The wider Kisi world</p>
           <h2 className="font-display mt-2 text-3xl font-bold sm:text-4xl">
-            Two more places to explore
+            The Republic grows on a real farm
           </h2>
           <p className="mt-4 max-w-2xl text-kisi-cream-100/85">
             The Republic is the story. It grows on a real working farm in
-            southwestern Nigeria, where the same hens you read about lay the eggs
-            you can actually buy. And the littlest visitors get a world of their
-            own.
+            southwestern Nigeria, where the same hens you read about lay the
+            eggs you can actually buy.
           </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <div className="mt-8">
             <a
               href={FARM_URL}
-              className="rounded-2xl bg-kisi-cream-100 p-6 text-kisi-green-900 transition-shadow hover:shadow-lg"
+              className="block rounded-2xl bg-kisi-cream-100 p-6 text-kisi-green-900 transition-shadow hover:shadow-lg sm:max-w-md"
             >
-              <p className="font-display text-2xl font-bold">Kisi Farm &rarr;</p>
+              <p className="font-display text-2xl font-bold">
+                Kisi Farm &rarr;
+              </p>
               <p className="mt-1 text-sm text-kisi-charcoal-600">
                 Order farm-fresh eggs and day-old chicks from the real flock.
               </p>
             </a>
-            <a
-              href={KIDS_URL}
-              className="rounded-2xl bg-kisi-gold-300 p-6 text-kisi-charcoal-900 transition-shadow hover:shadow-lg"
-            >
-              <p className="font-display text-2xl font-bold">Kisi Kids &rarr;</p>
-              <p className="mt-1 text-sm text-kisi-charcoal-900/80">
-                Stories, songs and gentle lessons for young viewers.
-              </p>
-            </a>
           </div>
           <p className="mt-6">
-            <Link href="/about" className="font-semibold text-kisi-gold-300 hover:underline">
+            <Link
+              href="/about"
+              className="font-semibold text-kisi-gold-300 hover:underline"
+            >
               About Kisi Africa &rarr;
             </Link>
           </p>
@@ -387,8 +414,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-6xl px-4">
-      </div>
+      <div className="mx-auto max-w-6xl px-4"></div>
     </>
   );
 }
