@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { Logo } from "@/components/Logo";
 import { AFRICA_URL } from "@/lib/site";
 
 /**
@@ -23,16 +24,15 @@ export function Header() {
   return (
     <header className="border-b border-kisi-green-700/15 bg-kisi-cream-100">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
-        <Link
-          href="/"
-          onClick={close}
-          className="font-display text-xl font-bold text-kisi-green-900"
-        >
-          Kisi Farm
+        <Link href="/" onClick={close} aria-label="Kisi Farm, home">
+          <Logo size={40} />
         </Link>
 
         {/* Desktop nav */}
-        <nav aria-label="Primary" className="hidden items-center gap-5 text-sm font-medium md:flex">
+        <nav
+          aria-label="Primary"
+          className="hidden items-center gap-5 text-sm font-medium md:flex"
+        >
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -69,7 +69,11 @@ export function Header() {
             strokeWidth="2"
             strokeLinecap="round"
           >
-            {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+            {open ? (
+              <path d="M6 6l12 12M18 6L6 18" />
+            ) : (
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            )}
           </svg>
         </button>
       </div>

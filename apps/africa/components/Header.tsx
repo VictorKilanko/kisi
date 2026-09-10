@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/Logo";
-import { FARM_URL, KIDS_URL } from "@/lib/site";
+import { FARM_URL } from "@/lib/site";
 
 const NAV = [
   { href: "/flock", label: "Meet the Chickens" },
@@ -91,7 +91,9 @@ export function Header() {
                   </button>
                   <ul
                     className={`absolute left-0 top-full z-50 min-w-52 rounded-lg border border-kisi-green-900/10 bg-kisi-cream-100 p-1 shadow-lg transition-opacity group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100 ${
-                      openMenu === item.label ? "visible opacity-100" : "invisible opacity-0"
+                      openMenu === item.label
+                        ? "visible opacity-100"
+                        : "invisible opacity-0"
                     }`}
                   >
                     {item.children.map((c) => (
@@ -125,19 +127,13 @@ export function Header() {
           </ul>
         </nav>
 
-        {/* Desktop calls to action */}
+        {/* Desktop call to action */}
         <div className="hidden items-center gap-2 lg:flex">
           <a
             href={FARM_URL}
-            className="whitespace-nowrap rounded-full bg-kisi-green-700 px-5 py-2 text-sm font-semibold text-kisi-cream-100 hover:bg-kisi-green-900"
+            className="heartbeat inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-kisi-green-700 px-5 py-2 text-sm font-semibold text-kisi-cream-100 shadow-md transition-colors hover:bg-kisi-green-900"
           >
-            Kisi Farm
-          </a>
-          <a
-            href={KIDS_URL}
-            className="whitespace-nowrap rounded-full border border-kisi-green-700/40 px-5 py-2 text-sm font-semibold text-kisi-green-700 hover:bg-kisi-cream-200"
-          >
-            Kisi Kids
+            <span aria-hidden="true">🥚</span> Shop Kisi Farm
           </a>
         </div>
 
@@ -150,7 +146,16 @@ export function Header() {
           onClick={() => setOpen((v) => !v)}
         >
           <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
-          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          >
             {open ? (
               <path d="M6 6l12 12M18 6L6 18" />
             ) : (
@@ -162,7 +167,11 @@ export function Header() {
 
       {/* Mobile nav */}
       {open && (
-        <nav id="mobile-nav" aria-label="Mobile navigation" className="border-t border-kisi-green-900/10 bg-kisi-cream-100 lg:hidden">
+        <nav
+          id="mobile-nav"
+          aria-label="Mobile navigation"
+          className="border-t border-kisi-green-900/10 bg-kisi-cream-100 lg:hidden"
+        >
           <ul className="mx-auto max-w-6xl space-y-1 px-4 py-3">
             {/* Stories front and centre on phones */}
             <li className="pb-2">
@@ -206,20 +215,13 @@ export function Header() {
                 </li>
               ),
             )}
-            <li className="grid grid-cols-2 gap-2 pt-2">
+            <li className="pt-2">
               <a
                 href={FARM_URL}
                 onClick={closeMenu}
-                className="block rounded-full bg-kisi-green-700 px-4 py-2 text-center font-semibold text-kisi-cream-100"
+                className="heartbeat flex items-center justify-center gap-2 rounded-full bg-kisi-green-700 px-4 py-3 text-center font-semibold text-kisi-cream-100 shadow-md"
               >
-                Kisi Farm
-              </a>
-              <a
-                href={KIDS_URL}
-                onClick={closeMenu}
-                className="block rounded-full border border-kisi-green-700/40 px-4 py-2 text-center font-semibold text-kisi-green-700"
-              >
-                Kisi Kids
+                <span aria-hidden="true">🥚</span> Shop Kisi Farm
               </a>
             </li>
           </ul>

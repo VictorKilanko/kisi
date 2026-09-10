@@ -6,6 +6,32 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-09-10 (site: pulled Kisi Kids off the public sites, made the farm CTA a heartbeat, added a logo to farm header)
+
+Owner decision: **Kisi Kids is not launching yet**, so remove every link and button that points to it from
+the public sites, while **leaving `kids.kisi.africa` itself untouched** (the app still exists, just unlinked).
+
+**What changed:**
+1. **Kisi Kids unlinked everywhere it was visible.** Removed the Kids CTA from the `apps/africa` header
+   (desktop + mobile), the "Explore Kisi" footer column, the home page "wider Kisi world" section, and the
+   about page; also removed the Kids link from the `apps/farm` footer. Reworked the home + about copy that
+   promised "two more places / a world for the youngest visitors" down to the one real destination, the farm
+   shop. Left the `KIDS_URL` export in both `lib/site.ts` files (renders nothing now; trivial to re-link when
+   Kids launches) and `apps/kids` fully intact.
+2. **Farm CTA now beats.** Added a shared `.heartbeat` utility + `kisi-heartbeat` keyframes to
+   `packages/brand/base.css` (double-thump pulse with a gold ring ripple; the existing reduced-motion block
+   already neutralises it, and it pauses on hover/focus). Relabeled the header button "Shop Kisi Farm" with an
+   egg glyph so it reads as a clear action, not just a place name.
+3. **Farm site got a logo.** `apps/farm` header was a plain text link; added `apps/farm/components/Logo.tsx`
+   (the same Dede seal mark the Republic uses) and dropped it into the header so both properties read as one
+   brand. **Lesson: the farm app had no Logo component at all; the mark lives only in `apps/africa`. If we
+   touch it again, promote the mark into `packages/ui` instead of copying a third time.**
+
+Gates: **lint 4/4, typecheck 6/6, build all 4 apps.** Touched files are prettier-clean (repo has ~76
+pre-existing prettier warnings in unrelated payments/test files, left alone).
+
+---
+
 ## Session — 2026-09-05 (content: S2 Ep 13 "The First Chair" finale + fixed the stalled IG queue)
 
 Two pieces: ran one `social/story.md` cycle (RESUME named **Ep 13**, the finale of Halima's heel turn),

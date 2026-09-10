@@ -67,3 +67,40 @@ body {
 .gazette-rule {
   border-top: 3px double var(--color-kisi-gold-500);
 }
+
+/*
+ * Heartbeat pulse for a primary call to action. A double thump like a
+ * real pulse, then rest, with a gold ring that ripples out on each beat.
+ * The reduced-motion block above stops it for visitors who ask for calm.
+ */
+@keyframes kisi-heartbeat {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(217, 160, 43, 0.55);
+  }
+  8% {
+    transform: scale(1.07);
+  }
+  16% {
+    transform: scale(1);
+  }
+  24% {
+    transform: scale(1.07);
+  }
+  38% {
+    transform: scale(1);
+    box-shadow: 0 0 0 14px rgba(217, 160, 43, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(217, 160, 43, 0);
+  }
+}
+.heartbeat {
+  animation: kisi-heartbeat 2.4s ease-in-out infinite;
+  will-change: transform;
+}
+.heartbeat:hover,
+.heartbeat:focus-visible {
+  animation-play-state: paused;
+}
