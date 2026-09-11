@@ -13,6 +13,8 @@ const BodySchema = z.object({
   email: z.email().max(254),
   /** Honeypot, humans never see or fill this field; bots often do. */
   company: z.string().max(200).optional(),
+  /** Which form sent this, so the honest reply can match. */
+  source: z.enum(["newsletter", "build-the-farm"]).optional(),
 });
 
 export async function POST(req: Request) {
@@ -23,7 +25,10 @@ export async function POST(req: Request) {
   if (!limited.allowed) {
     return Response.json(
       { error: "rate-limited", retryAfterSeconds: limited.retryAfterSeconds },
-      { status: 429, headers: { "Retry-After": String(limited.retryAfterSeconds) } },
+      {
+        status: 429,
+        headers: { "Retry-After": String(limited.retryAfterSeconds) },
+      },
     );
   }
 
@@ -42,11 +47,13 @@ export async function POST(req: Request) {
 
   // Deliberately not persisted: no provider is configured and we won't
   // hold personal data we can't yet serve. The email is discarded.
-  return Response.json({
-    ok: true,
-    stored: false,
-    note:
-      "The Coop Times newsletter isn't live yet, your address was NOT " +
-      "stored. Check back after launch.",
-  });
+  const note =
+    body.source === "build-the-farm"
+      ? "Thank you. Naming isn't open yet and your address was NOT stored, " +
+        "the waitlist starts collecting once a provider is connected. Check " +
+        "back soon."
+      : "The Coop Times newsletter isn't live yet, your address was NOT " +
+        "stored. Check back after launch.";
+
+  return Response.json({ ok: true, stored: false, note });
 }

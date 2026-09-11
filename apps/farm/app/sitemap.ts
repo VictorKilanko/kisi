@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/eggs",
     "/chicks",
+    "/build-the-farm",
     "/support",
     "/support/terms",
     "/about",
