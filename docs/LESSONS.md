@@ -33,7 +33,7 @@ no checkout) and asked to design first, then push.
   to discard the churn, re-apply only the intended edits, then `prettier --write` **only the touched files**.
   Do NOT run the global format before a feature commit.
 - Expert audit (standing rule) ran before push: verdict SAFE TO PUSH; applied its two should-fixes
-  (softened an "every naira" overclaim; made the hero total derive from `CAMPAIGN_TOTAL_USD_MIN` computed
+  (softened an "every naira" overclaim; made the hero total derive from `CAMPAIGN_TOTAL_USD` computed
   from the build goals, one source of truth) + two nits (goal label contrast → `kisi-earth-700`, icon stroke
   → token via `currentColor`).
 

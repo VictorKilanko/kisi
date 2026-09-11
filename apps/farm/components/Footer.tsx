@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { AFRICA_URL } from "@/lib/site";
 
@@ -16,8 +17,21 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <p className="kicker text-kisi-charcoal-600">The Kisi universe</p>
+          <p className="kicker text-kisi-charcoal-600">Support &amp; explore</p>
           <ul className="mt-2 space-y-1">
+            <li>
+              <Link href="/support" className="hover:text-kisi-green-700">
+                Support the chickens
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/build-the-farm"
+                className="hover:text-kisi-green-700"
+              >
+                Build the Farm (put your name on it)
+              </Link>
+            </li>
             <li>
               <a href={AFRICA_URL} className="hover:text-kisi-green-700">
                 Kisi, the Republic run by chickens
