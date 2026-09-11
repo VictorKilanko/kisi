@@ -4,7 +4,8 @@ import { SectionHeading } from "@/components/Cards";
 import { CampaignInterestForm } from "@/components/CampaignInterestForm";
 import {
   builds,
-  CAMPAIGN_TOTAL_USD_MIN,
+  CAMPAIGN_TOTAL_IS_FLOOR,
+  CAMPAIGN_TOTAL_USD,
   cornerstone,
   namingTiers,
   whatYouGet,
@@ -66,12 +67,13 @@ export default function BuildTheFarmPage() {
             <p className="mt-5 max-w-xl text-lg text-kisi-charcoal-600">
               We are raising{" "}
               <strong className="text-kisi-charcoal-900">
-                over ${CAMPAIGN_TOTAL_USD_MIN.toLocaleString("en-US")}
+                {CAMPAIGN_TOTAL_IS_FLOOR ? "over " : ""}$
+                {CAMPAIGN_TOTAL_USD.toLocaleString("en-US")}
               </strong>{" "}
-              to build four things that change daily life for every bird at
-              Kisi: a hatchery, a feed mill, a solar system, and a cold room.
-              You cannot receive a Nigerian egg in the post. You can put your
-              name on the place it comes from.
+              for four builds that change daily life for every bird at Kisi: a
+              hatchery, a feed mill, solar, and a cold room. We can&apos;t post
+              you a Nigerian egg. We can put your name on the place it comes
+              from.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -120,7 +122,7 @@ export default function BuildTheFarmPage() {
         <SectionHeading
           kicker="The four builds"
           title="Four things, one farm"
-          lede="Back the one you care about. Each build has its own goal, and each is named the same way: the money goes to a working farm, your name goes on what it pays for."
+          lede="Back the one you care about. The money goes to a working farm; your name goes on what it pays for."
         />
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {builds.map((b) => (
@@ -233,10 +235,10 @@ export default function BuildTheFarmPage() {
               We cannot post you an egg. We can give you a place in the story.
             </h2>
             <p className="mt-4 text-kisi-charcoal-600">
-              Most of the people who love Kisi live far from the farm, in
-              London, Atlanta, Toronto, Lagos on a screen. So the reward is not
-              a parcel. It is your name, living on a real Nigerian farm and
-              inside the Republic the whole world is watching.
+              Most people who love Kisi live far from the farm, in London,
+              Atlanta, Toronto, Lagos on a screen. So the reward isn&apos;t a
+              parcel. It&apos;s your name, on a real Nigerian farm and inside
+              the Republic the world is watching.
             </p>
           </div>
           <div className="grid gap-4 md:col-span-7 sm:grid-cols-2">

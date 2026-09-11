@@ -2,9 +2,8 @@
  * "Build the Farm" capital campaign data.
  *
  * Honesty rules (see docs/CONTENT_CHECKLIST.md):
- *  - Build goals that the owner has confirmed are real figures and are shown.
- *    The feed mill goal is not set yet, so it is `null` and renders as
- *    "goal set by the farm" rather than an invented number.
+ *  - Build goals are the owner's confirmed real figures. A goal left `null`
+ *    renders as "goal set by farm" rather than an invented number.
  *  - We publish NO "raised so far" figures until the campaign is open and the
  *    numbers come from real records. There are no progress bars here.
  *  - Naming amounts are `null` (owner's call) and render as "set at launch".
@@ -26,27 +25,25 @@ export const builds: Build[] = [
     name: "The Hatchery",
     goalUSD: 100_000,
     blurb:
-      "Our own chicks, hatched on the farm. No more buying day-olds we did " +
-      "not raise. It means healthier birds, a bigger flock, and eggs we can " +
-      "trace from the very first day.",
+      "Our own chicks, hatched here instead of bought in. Healthier birds, a " +
+      "bigger flock, and eggs we can trace from day one.",
   },
   {
     id: "feed-mill",
     name: "The Feed Mill",
-    goalUSD: null,
+    goalUSD: 10_000,
     blurb:
-      "Feed is the biggest cost on any poultry farm. Milling our own means " +
-      "better, fresher nutrition, birds that lay well, and prices we control " +
-      "instead of chasing the market every month.",
+      "Feed is a poultry farm's biggest cost. Milling our own means fresher " +
+      "nutrition, better laying, and prices we control instead of chasing " +
+      "the market.",
   },
   {
     id: "solar",
     name: "The Solar System",
     goalUSD: 50_000,
     blurb:
-      "Nigeria's grid comes and goes. Solar power keeps the lights steady, " +
-      "the lay cycles regular, and the nights safe, without burning diesel " +
-      "and money every week.",
+      "Nigeria's grid comes and goes. Solar keeps the lights steady, lay " +
+      "cycles regular, and nights safe, without burning diesel every week.",
   },
   {
     id: "cold-room",
@@ -54,20 +51,23 @@ export const builds: Build[] = [
     goalUSD: 100_000,
     blurb:
       "In the heat, eggs spoil fast and prices crash at harvest. A cold room " +
-      "means we sell when the price is right, waste less, and reach more " +
+      "lets us sell when the price is right, waste less, and reach more " +
       "customers with fresh eggs.",
   },
 ];
 
 /**
- * The published minimum total, derived from the builds with a confirmed goal.
- * The feed mill goal is still unset, so the site says "over" this figure. One
- * source of truth: change a build's goalUSD and the hero total follows.
+ * The campaign total, summed from the build goals. One source of truth: change
+ * a build's goalUSD and the hero total follows. If any goal is still `null` the
+ * page shows "over" this figure; when all are set it is the exact total.
  */
-export const CAMPAIGN_TOTAL_USD_MIN = builds.reduce(
+export const CAMPAIGN_TOTAL_USD = builds.reduce(
   (sum, b) => sum + (b.goalUSD ?? 0),
   0,
 );
+
+/** True while any build goal is unset, so the total is a floor ("over $X"). */
+export const CAMPAIGN_TOTAL_IS_FLOOR = builds.some((b) => b.goalUSD === null);
 
 export type NamingTier = {
   id: string;
