@@ -19,9 +19,8 @@ To open it for real money, the owner must supply:
       $100k, Farm House $110k, Solar $60k, Feed Mill $30k = **$400,000** total.
       All in `apps/farm/app/build-the-farm/campaign.ts`; the hero total derives
       from them.
-- [ ] 🟡 **Farm House description.** The blurb is a reasonable placeholder
-      (team quarters / a base to run the farm). Confirm what the farm house is
-      actually for so the copy is exact.
+- [x] ✅ **Farm House confirmed (owner, 2026-09-11):** a permanent house on the
+      farm. The current card copy is correct.
 - [ ] 🔴 **Naming amounts** for Name a Hen / Solar Light / Farm Street / Poultry
       House (and the currency shown to a diaspora audience). They render "Set at
       launch" until set.
