@@ -40,7 +40,6 @@ const NAV = [
       { href: "/most-wanted", label: "Most Wanted" },
     ],
   },
-  { href: `${FARM_URL}/support`, label: "Support the Chickens" },
   {
     label: "About",
     children: [
@@ -109,15 +108,6 @@ export function Header() {
                       </li>
                     ))}
                   </ul>
-                </li>
-              ) : item.href.startsWith("http") ? (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    className="whitespace-nowrap rounded px-2.5 py-2 text-sm font-semibold text-kisi-green-700 hover:bg-kisi-cream-200"
-                  >
-                    {item.label}
-                  </a>
                 </li>
               ) : (
                 <li key={item.href}>
@@ -212,16 +202,6 @@ export function Header() {
                       </li>
                     ))}
                   </ul>
-                </li>
-              ) : item.href.startsWith("http") ? (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    onClick={closeMenu}
-                    className="block rounded px-2 py-2 font-semibold text-kisi-green-700 hover:bg-kisi-cream-200"
-                  >
-                    {item.label}
-                  </a>
                 </li>
               ) : (
                 <li key={item.href}>
