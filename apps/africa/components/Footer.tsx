@@ -22,6 +22,10 @@ const FOOTER_LINKS = [
     heading: "Explore Kisi",
     links: [
       { href: FARM_URL, label: "Kisi Farm (order eggs)" },
+      {
+        href: `${FARM_URL}/build-the-farm`,
+        label: "Build the Farm (put your name on it)",
+      },
       { href: "/about", label: "About Kisi Africa" },
       { href: "/visit", label: "Contact" },
     ],

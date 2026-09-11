@@ -375,16 +375,28 @@ export default function Home() {
             southwestern Nigeria, where the same hens you read about lay the
             eggs you can actually buy.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <a
               href={FARM_URL}
-              className="block rounded-2xl bg-kisi-cream-100 p-6 text-kisi-green-900 transition-shadow hover:shadow-lg sm:max-w-md"
+              className="block rounded-2xl bg-kisi-cream-100 p-6 text-kisi-green-900 transition-shadow hover:shadow-lg"
             >
               <p className="font-display text-2xl font-bold">
                 Kisi Farm &rarr;
               </p>
               <p className="mt-1 text-sm text-kisi-charcoal-600">
                 Order farm-fresh eggs and day-old chicks from the real flock.
+              </p>
+            </a>
+            <a
+              href={`${FARM_URL}/build-the-farm`}
+              className="block rounded-2xl bg-kisi-gold-300 p-6 text-kisi-indigo-900 transition-shadow hover:shadow-lg"
+            >
+              <p className="font-display text-2xl font-bold">
+                Build the Farm &rarr;
+              </p>
+              <p className="mt-1 text-sm text-kisi-indigo-900/80">
+                Put your name on it. Name a hen, a street, or a whole poultry
+                house as Kisi builds a hatchery, feed mill, solar and cold room.
               </p>
             </a>
           </div>
