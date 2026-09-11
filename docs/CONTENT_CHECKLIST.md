@@ -10,13 +10,18 @@ credible · 🟢 nice to have.
 ## Needs owner input
 
 ### Build the Farm capital campaign (added 2026-09-11)
+
 The campaign page (`/build-the-farm`) is live but deliberately **not charging**:
 no invented figures, and a "register interest" form that stores nothing yet.
 To open it for real money, the owner must supply:
-- [ ] 🔴 **Feed mill budget (USD).** The other three are set (hatchery $100k,
-      solar $50k, cold room $100k); the feed mill goal is `null` and renders
-      "goal set by farm" until provided. Set `goalUSD` in
-      `apps/farm/app/build-the-farm/campaign.ts`.
+
+- [x] ✅ **Build goals set (owner, 2026-09-11).** Hatchery $100k, Cold Room
+      $100k, Farm House $110k, Solar $60k, Feed Mill $30k = **$400,000** total.
+      All in `apps/farm/app/build-the-farm/campaign.ts`; the hero total derives
+      from them.
+- [ ] 🟡 **Farm House description.** The blurb is a reasonable placeholder
+      (team quarters / a base to run the farm). Confirm what the farm house is
+      actually for so the copy is exact.
 - [ ] 🔴 **Naming amounts** for Name a Hen / Solar Light / Farm Street / Poultry
       House (and the currency shown to a diaspora audience). They render "Set at
       launch" until set.
@@ -33,12 +38,14 @@ To open it for real money, the owner must supply:
       confirm that is where founding-naming conversations should land.
 
 ### Social media kit (added 2026-07-31)
+
 - [x] ✅ **Instagram @handle confirmed: `@kisi.africa`** (owner set 2026-08-01). Set at
       the top of `social/captions.md`.
 - [ ] 🟢 Real bird photographs to replace the drawn portrait medallions in the
       leader posts (posts 04 to 06) when available.
 
 ### Shop — egg orders (added 2026-07-18)
+
 - [ ] 🔴 **Where do egg order enquiries go?** `/api/orders` currently validates
       and discards — no inbox, no store. The Shop is not usable until this is
       answered. An email address or a form provider is enough to start.
@@ -48,6 +55,7 @@ To open it for real money, the owner must supply:
       option.
 
 ### The Bantu memorial (added 2026-07-18)
+
 - [ ] 🔴 **Where do well-wishes go?** `/api/wellwishes` also validates and
       discards. Decide between a private inbox and a moderated public wall.
 - [ ] 🟡 Bantu's real details — hatch/arrival date, personality notes, and a
@@ -58,12 +66,14 @@ To open it for real money, the owner must supply:
       track it?).
 
 ### Security (act immediately)
+
 - [ ] 🔴 **Revoke/rotate the GitHub personal access token** currently stored in
       plaintext in the local project instruction file. It has been exposed and
       must be treated as compromised. Store any replacement in a credential
       manager or environment variable, never in a committed file.
 
 ### Farm identity & facts (About page, footer, SEO)
+
 - [x] Business/brand name: **"Kisi"** — confirmed by owner (2026-07-17).
 - [ ] 🔴 Legal registration status (CAC registration? legal form? business
       number?) — still pending; needed only to finalize the support-page
@@ -88,6 +98,7 @@ To open it for real money, the owner must supply:
 - [ ] 🔴 Any certifications — **none will be claimed until documented**
 
 ### Real chicken data (Meet the Flock)
+
 - [ ] 🔴 Real names for chickens the owner wants featured (the initial 10–12
       characters are labeled DEMO CONTENT throughout)
 - [ ] 🔴 Photographs of individual chickens (portrait-style; guidance will be
@@ -99,10 +110,12 @@ To open it for real money, the owner must supply:
 - [ ] 🟡 Any true backstories (rescues, recoveries, favorites)
 
 ### Mascot (Section 7.11)
+
 - [ ] 🟡 Mascot species, name, photos, backstory, role — entire mascot section
       is placeholder until provided
 
 ### Support / sponsorship page (legal — blocks Phase 4 going live)
+
 - [ ] 🔴 Legal status of payments: the business is presumably **not** a
       registered charity, so nothing may be called a "donation" with charitable
       or tax-deductible implications. Owner to confirm registration status so
@@ -121,6 +134,7 @@ To open it for real money, the owner must supply:
       storing nothing until one exists)
 
 ### Media
+
 - [ ] 🔴 Farm photography: poultry houses, feed storage, water tanks, solar
       panels (if present), paths, trees, workers (with consent), eggs, general
       farm life. Phone photos are fine to start.
@@ -128,6 +142,7 @@ To open it for real money, the owner must supply:
 - [ ] 🟢 Any drone/aerial imagery
 
 ### Publishing & channels
+
 - [ ] 🟡 Install Node.js 22 LTS on the development machine (none was present;
       Phase 2 used a temporary portable copy that will not survive cleanup)
 - [ ] 🔴 Domain name (e.g. kisifarm.com / kisifarm.ng / republicofkisi.com) —
@@ -139,6 +154,7 @@ To open it for real money, the owner must supply:
 - [ ] 🟢 Newsletter provider preference (or accept default recommendation)
 
 ### Creative approvals
+
 - [ ] 🟡 Primary tagline sign-off: proposed **"Where Every Chicken Has a
       Story"** (per brief)
 - [ ] 🟡 Approval of brand direction in `docs/BRAND_SYSTEM.md` (colors, type,
