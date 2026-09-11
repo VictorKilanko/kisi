@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap");
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #faf5e9; font-family: "Inter", system-ui, sans-serif; color: #23231f; -webkit-font-smoothing: antialiased; }
+    .display { font-family: "Fraunces", Georgia, serif; }
+    .kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    a { color: #8a6410; text-decoration: none; }
+    a:hover { color: #8a3e1f; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #faf5e9;">
+
+  <!-- Farm header -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 80px; border-bottom: 1px solid rgba(20,51,31,0.10);">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div style="width: 34px; height: 34px; border-radius: 9px; background: #14331f; display: flex; align-items: center; justify-content: center;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c0-5 3-9 6-9s6 4 6 9"/><path d="M12 11c0-3 2-6 5-6-.5 3-2 5-5 6z"/><circle cx="9.5" cy="8" r="1"/></svg>
+      </div>
+      <div style="display: flex; flex-direction: column; line-height: 1.05;">
+        <span class="display" style="font-weight: 900; font-size: 18px; color: #14331f;">Kisi Farm</span>
+        <span style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #55534b;">The real farm</span>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 30px; font-size: 14px; font-weight: 500; color: #23231f;">
+      <span>The Farm</span>
+      <span>Our Eggs</span>
+      <span>Welfare</span>
+      <span style="color: #14331f; font-weight: 700;">Build the Farm</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; color: #23305e; font-size: 13px;">Back to the Republic
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#23305e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="padding: 72px 80px 64px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; align-items: center;">
+    <div style="grid-column: span 7;">
+      <span class="kicker" style="color: #8a6410;">Build the Farm · A Kisi capital campaign</span>
+      <h1 class="display" style="font-weight: 900; font-size: 68px; line-height: 1.02; margin: 16px 0 0; color: #14331f; letter-spacing: -0.02em; text-wrap: balance;">Put your name<br>on the farm.</h1>
+      <p style="font-size: 19px; line-height: 1.55; color: #55534b; margin: 22px 0 0; max-width: 540px;">We are raising <strong style="color: #23231f;">over $250,000</strong> to build four things that change daily life for every bird at Kisi: a hatchery, a feed mill, a solar system, and a cold room. You cannot receive a Nigerian egg in the post. You can put your name on the place it comes from.</p>
+      <div style="display: flex; gap: 14px; margin-top: 30px;">
+        <span style="display: inline-flex; align-items: center; gap: 9px; background: #14331f; color: #faf5e9; font-weight: 600; font-size: 15px; padding: 15px 26px; border-radius: 999px;">Choose what to name
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </span>
+        <span style="display: inline-flex; align-items: center; background: transparent; color: #14331f; font-weight: 600; font-size: 15px; padding: 15px 24px; border-radius: 999px; border: 1.5px solid rgba(20,51,31,0.25);">See the three builds</span>
+      </div>
+    </div>
+
+    <!-- Overall thermometer card -->
+    <div style="grid-column: span 5;">
+      <div style="background: #ffffff; border: 1px solid rgba(20,51,31,0.10); border-radius: 24px; padding: 30px; box-shadow: 0 20px 50px -30px rgba(20,51,31,0.45);">
+        <div style="display: flex; align-items: baseline; justify-content: space-between;">
+          <span class="kicker" style="color: #8a6410;">Raised so far</span>
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #c05621; background: #f1e8d4; padding: 4px 10px; border-radius: 999px;">Sample figure</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 10px; margin-top: 12px;">
+          <span class="display" style="font-weight: 900; font-size: 46px; color: #14331f; line-height: 1;">$52,000</span>
+          <span style="font-size: 16px; color: #55534b;">of the goal</span>
+        </div>
+        <div style="height: 14px; border-radius: 999px; background: #f1e8d4; margin-top: 18px; overflow: hidden;">
+          <div style="width: 16%; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #2e7d46, #d9a02b);"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 12px; font-size: 13px; color: #55534b;">
+          <span><strong style="color: #23231f;">318</strong> names on the farm</span>
+          <span><strong style="color: #23231f;">four</strong> builds</span>
+        </div>
+        <div style="height: 1px; background: rgba(20,51,31,0.10); margin: 20px 0;"></div>
+        <p style="font-size: 12.5px; line-height: 1.5; color: #55534b; margin: 0;">Numbers shown are a design placeholder. When the campaign opens, the total updates from the farm's real records. <strong style="color: #23231f;">We publish no invented figures.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE THREE BUILDS -->
+  <div style="padding: 20px 80px 8px;">
+    <span class="kicker" style="color: #8a6410;">The three builds</span>
+    <h2 class="display" style="font-weight: 900; font-size: 38px; color: #14331f; margin: 10px 0 6px;">Four things, one farm</h2>
+    <p style="font-size: 16px; color: #55534b; margin: 0; max-width: 620px;">Back the one you care about. Each build has its own goal, and each is named the same way: the money goes to a working farm, your name goes on what it pays for.</p>
+  </div>
+
+  <div style="padding: 28px 80px 64px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px;">
+
+    <!-- Hatchery -->
+    <div style="background: #ffffff; border: 1px solid rgba(20,51,31,0.10); border-radius: 22px; padding: 28px; display: flex; flex-direction: column;">
+      <div style="width: 48px; height: 48px; border-radius: 13px; background: #14331f; display: flex; align-items: center; justify-content: center;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.5 3 5 6.5 5 9.5A5 5 0 0 1 7 12.5C7 9.5 8.5 6 12 3z"/><path d="M9.5 14.5l1.5 1.5 3-3"/></svg>
+      </div>
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 18px;">
+        <h3 class="display" style="font-weight: 900; font-size: 24px; color: #14331f; margin: 0;">The Hatchery</h3>
+        <span class="display" style="font-weight: 900; font-size: 22px; color: #2e7d46;">$100k</span>
+      </div>
+      <p style="font-size: 14px; line-height: 1.55; color: #55534b; margin: 12px 0 0;">Our own chicks, hatched on the farm. No more buying day-olds we did not raise. It means healthier birds, a bigger flock, and eggs we can trace from the first day.</p>
+      <div style="height: 10px; border-radius: 999px; background: #f1e8d4; margin-top: 20px; overflow: hidden;">
+        <div style="width: 22%; height: 100%; background: #2e7d46; border-radius: 999px;"></div>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #55534b; margin-top: 8px;"><span>$22,000 raised</span><span>sample</span></div>
+      <div style="margin-top: auto; padding-top: 20px;">
+        <span style="display: block; text-align: center; background: #14331f; color: #faf5e9; font-weight: 600; font-size: 14px; padding: 12px; border-radius: 999px;">Name the Hatchery</span>
+      </div>
+    </div>
+
+    <!-- Solar -->
+    <div style="background: #ffffff; border: 1px solid rgba(20,51,31,0.10); border-radius: 22px; padding: 28px; display: flex; flex-direction: column;">
+      <div style="width: 48px; height: 48px; border-radius: 13px; background: #14331f; display: flex; align-items: center; justify-content: center;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+      </div>
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 18px;">
+        <h3 class="display" style="font-weight: 900; font-size: 24px; color: #14331f; margin: 0;">The Solar System</h3>
+        <span class="display" style="font-weight: 900; font-size: 22px; color: #2e7d46;">$50k</span>
+      </div>
+      <p style="font-size: 14px; line-height: 1.55; color: #55534b; margin: 12px 0 0;">Nigeria's grid comes and goes. Solar power keeps the lights steady, the lay cycles regular, and the nights safe, without burning diesel and money every week.</p>
+      <div style="height: 10px; border-radius: 999px; background: #f1e8d4; margin-top: 20px; overflow: hidden;">
+        <div style="width: 30%; height: 100%; background: #2e7d46; border-radius: 999px;"></div>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #55534b; margin-top: 8px;"><span>$15,000 raised</span><span>sample</span></div>
+      <div style="margin-top: auto; padding-top: 20px;">
+        <span style="display: block; text-align: center; background: #14331f; color: #faf5e9; font-weight: 600; font-size: 14px; padding: 12px; border-radius: 999px;">Name a Solar Array</span>
+      </div>
+    </div>
+
+    <!-- Cold room -->
+    <div style="background: #ffffff; border: 1px solid rgba(20,51,31,0.10); border-radius: 22px; padding: 28px; display: flex; flex-direction: column;">
+      <div style="width: 48px; height: 48px; border-radius: 13px; background: #14331f; display: flex; align-items: center; justify-content: center;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4 7l16 10M20 7L4 17"/><path d="M12 2l-2.5 2.5M12 2l2.5 2.5M12 22l-2.5-2.5M12 22l2.5-2.5"/></svg>
+      </div>
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 18px;">
+        <h3 class="display" style="font-weight: 900; font-size: 24px; color: #14331f; margin: 0;">The Cold Room</h3>
+        <span class="display" style="font-weight: 900; font-size: 22px; color: #2e7d46;">$100k</span>
+      </div>
+      <p style="font-size: 14px; line-height: 1.55; color: #55534b; margin: 12px 0 0;">In the heat, eggs spoil fast and prices crash at harvest. A cold room means we sell when the price is right, waste less, and reach more customers with fresh eggs.</p>
+      <div style="height: 10px; border-radius: 999px; background: #f1e8d4; margin-top: 20px; overflow: hidden;">
+        <div style="width: 4%; height: 100%; background: #2e7d46; border-radius: 999px;"></div>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #55534b; margin-top: 8px;"><span>$4,200 raised</span><span>sample</span></div>
+      <div style="margin-top: auto; padding-top: 20px;">
+        <span style="display: block; text-align: center; background: #14331f; color: #faf5e9; font-weight: 600; font-size: 14px; padding: 12px; border-radius: 999px;">Name the Cold Room</span>
+      </div>
+    </div>
+
+    <!-- Feed mill -->
+    <div style="background: #ffffff; border: 1px solid rgba(20,51,31,0.10); border-radius: 22px; padding: 28px; display: flex; flex-direction: column;">
+      <div style="width: 48px; height: 48px; border-radius: 13px; background: #14331f; display: flex; align-items: center; justify-content: center;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-1.5 6H7.5L6 3z"/><path d="M7.5 9l-1 5.5a3.5 3.5 0 0 0 3.5 4h4a3.5 3.5 0 0 0 3.5-4L16.5 9"/><path d="M10 13h4"/></svg>
+      </div>
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 18px;">
+        <h3 class="display" style="font-weight: 900; font-size: 24px; color: #14331f; margin: 0;">The Feed Mill</h3>
+        <span class="display" style="font-weight: 900; font-size: 16px; color: #2e7d46;">goal set by farm</span>
+      </div>
+      <p style="font-size: 14px; line-height: 1.55; color: #55534b; margin: 12px 0 0;">Feed is the biggest cost on any poultry farm. Milling our own means better, fresher nutrition, birds that lay well, and prices we control instead of chasing the market every month.</p>
+      <div style="height: 10px; border-radius: 999px; background: #f1e8d4; margin-top: 20px; overflow: hidden;">
+        <div style="width: 11%; height: 100%; background: #2e7d46; border-radius: 999px;"></div>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #55534b; margin-top: 8px;"><span>naming open</span><span>sample</span></div>
+      <div style="margin-top: auto; padding-top: 20px;">
+        <span style="display: block; text-align: center; background: #14331f; color: #faf5e9; font-weight: 600; font-size: 14px; padding: 12px; border-radius: 999px;">Name the Feed Mill</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAMING LADDER -->
+  <div style="background: #14331f; padding: 64px 80px;">
+    <span class="kicker" style="color: #f0c75e;">Ways to put your name on it</span>
+    <h2 class="display" style="font-weight: 900; font-size: 38px; color: #faf5e9; margin: 10px 0 6px;">From a single hen to the whole hatchery</h2>
+    <p style="font-size: 16px; color: rgba(250,245,233,0.75); margin: 0 0 34px; max-width: 640px;">Every gift names something real in the Republic of Kisi. The bigger the gift, the bigger the landmark, and the longer your name lives on the map. Amounts are set by the farm at launch.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;">
+
+      <!-- tier 1 -->
+      <div style="background: rgba(250,245,233,0.06); border: 1px solid rgba(240,199,94,0.22); border-radius: 18px; padding: 24px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c0-5 3-8 6-8s6 3 6 8"/><path d="M12 12c0-3 2-5 5-5-.5 3-2 5-5 5z"/><circle cx="9.5" cy="9" r="1"/></svg>
+          <span class="kicker" style="color: #f0c75e;">Entry</span>
+        </div>
+        <h3 class="display" style="font-weight: 900; font-size: 21px; color: #faf5e9; margin: 14px 0 0;">Name a Hen</h3>
+        <p style="font-size: 13.5px; line-height: 1.5; color: rgba(250,245,233,0.72); margin: 8px 0 0;">One of the Republic's hens carries your name in her profile and in every story update she appears in.</p>
+        <p class="display" style="font-weight: 900; font-size: 18px; color: #f0c75e; margin: 16px 0 0;">[ amount set by farm ]</p>
+      </div>
+
+      <!-- tier 2 -->
+      <div style="background: rgba(250,245,233,0.06); border: 1px solid rgba(240,199,94,0.22); border-radius: 18px; padding: 24px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+          <span class="kicker" style="color: #f0c75e;">Supporter</span>
+        </div>
+        <h3 class="display" style="font-weight: 900; font-size: 21px; color: #faf5e9; margin: 14px 0 0;">Name a Solar Light</h3>
+        <p style="font-size: 13.5px; line-height: 1.5; color: rgba(250,245,233,0.72); margin: 8px 0 0;">Light one corner of a coop. Your name sits beside the lamp that keeps the birds safe after dark.</p>
+        <p class="display" style="font-weight: 900; font-size: 18px; color: #f0c75e; margin: 16px 0 0;">[ amount set by farm ]</p>
+      </div>
+
+      <!-- tier 3 -->
+      <div style="background: rgba(250,245,233,0.06); border: 1px solid rgba(240,199,94,0.22); border-radius: 18px; padding: 24px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>
+          <span class="kicker" style="color: #f0c75e;">Landmark</span>
+        </div>
+        <h3 class="display" style="font-weight: 900; font-size: 21px; color: #faf5e9; margin: 14px 0 0;">Name a Farm Street</h3>
+        <p style="font-size: 13.5px; line-height: 1.5; color: rgba(250,245,233,0.72); margin: 8px 0 0;">A street in the Republic bears your name on the map, where the chickens live, walk, and make the news.</p>
+        <p class="display" style="font-weight: 900; font-size: 18px; color: #f0c75e; margin: 16px 0 0;">[ amount set by farm ]</p>
+      </div>
+
+      <!-- tier 4 -->
+      <div style="background: rgba(250,245,233,0.06); border: 1px solid rgba(240,199,94,0.22); border-radius: 18px; padding: 24px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l9-6 9 6v11"/><path d="M3 21h18M9 21v-6h6v6"/></svg>
+          <span class="kicker" style="color: #f0c75e;">Founder</span>
+        </div>
+        <h3 class="display" style="font-weight: 900; font-size: 21px; color: #faf5e9; margin: 14px 0 0;">Name a Poultry House</h3>
+        <p style="font-size: 13.5px; line-height: 1.5; color: rgba(250,245,233,0.72); margin: 8px 0 0;">A whole house of birds named for you or your family, with a founding plaque and its own page on the farm.</p>
+        <p class="display" style="font-weight: 900; font-size: 18px; color: #f0c75e; margin: 16px 0 0;">[ amount set by farm ]</p>
+      </div>
+
+      <!-- tier 5 (span 2) -->
+      <div style="grid-column: span 2; background: linear-gradient(120deg, #23305e, #1a2447); border: 1px solid rgba(240,199,94,0.4); border-radius: 18px; padding: 26px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M6 4h12v6a6 6 0 0 1-12 0z"/><path d="M6 6H4v2a3 3 0 0 0 2 2M18 6h2v2a3 3 0 0 1-2 2"/></svg>
+            <span class="kicker" style="color: #f0c75e;">Cornerstone · Major gift</span>
+          </div>
+          <h3 class="display" style="font-weight: 900; font-size: 24px; color: #faf5e9; margin: 12px 0 0;">Name the Hatchery, Feed Mill, Cold Room or Solar Array</h3>
+          <p style="font-size: 14px; line-height: 1.5; color: rgba(250,245,233,0.8); margin: 8px 0 0; max-width: 460px;">The four big builds carry one founding name each, cast on a permanent plaque at the farm and on the site. This is a conversation, not a checkout. Tell us who you are.</p>
+        </div>
+        <span style="flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px; background: #f0c75e; color: #1a2447; font-weight: 700; font-size: 14px; padding: 13px 22px; border-radius: 999px;">Talk to the farm
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1a2447" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT YOU GET (diaspora) -->
+  <div style="padding: 64px 80px; display: grid; grid-template-columns: repeat(12, minmax(0,1fr)); gap: 40px; align-items: center;">
+    <div style="grid-column: span 5;">
+      <span class="kicker" style="color: #8a6410;">For our people abroad</span>
+      <h2 class="display" style="font-weight: 900; font-size: 36px; color: #14331f; margin: 10px 0 0; line-height: 1.08;">We cannot post you an egg. We can give you a place in the story.</h2>
+      <p style="font-size: 16px; line-height: 1.55; color: #55534b; margin: 18px 0 0;">Most of the people who love Kisi live far from the farm, in London, Atlanta, Toronto, Lagos on a screen. So the reward is not a parcel. It is your name, living on a real Nigerian farm and inside the Republic the whole world is watching.</p>
+    </div>
+    <div style="grid-column: span 7; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px;">
+      <div style="background: #ffffff; border: 1px solid rgba(20,51,31,0.10); border-radius: 18px; padding: 22px;">
+        <h4 class="display" style="font-weight: 900; font-size: 17px; color: #14331f; margin: 0;">Your name on the map</h4>
+        <p style="font-size: 13.5px; line-height: 1.5; color: #55534b; margin: 8px 0 0;">On the hen, the street, the house or the build you chose, visible to every visitor.</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid rgba(20,51,31,0.10); border-radius: 18px; padding: 22px;">
+        <h4 class="display" style="font-weight: 900; font-size: 17px; color: #14331f; margin: 0;">Story updates</h4>
+        <p style="font-size: 13.5px; line-height: 1.5; color: #55534b; margin: 8px 0 0;">When your hen lays, campaigns, or makes headlines, you hear about it first.</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid rgba(20,51,31,0.10); border-radius: 18px; padding: 22px;">
+        <h4 class="display" style="font-weight: 900; font-size: 17px; color: #14331f; margin: 0;">A founding certificate</h4>
+        <p style="font-size: 13.5px; line-height: 1.5; color: #55534b; margin: 8px 0 0;">A digital certificate of the thing you named, dated and signed from the farm.</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid rgba(20,51,31,0.10); border-radius: 18px; padding: 22px;">
+        <h4 class="display" style="font-weight: 900; font-size: 17px; color: #14331f; margin: 0;">A real farm, funded</h4>
+        <p style="font-size: 13.5px; line-height: 1.5; color: #55534b; margin: 8px 0 0;">Every naira goes to the build, reported back from the farm's real records.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLAIN WORDS (legal) -->
+  <div style="padding: 8px 80px 20px;">
+    <div style="border-left: 4px solid #d9a02b; background: #f1e8d4; border-radius: 8px; padding: 26px 30px;">
+      <h3 class="display" style="font-weight: 900; font-size: 20px; color: #23231f; margin: 0;">Plain words about the money</h3>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px 40px; margin-top: 16px;">
+        <p style="font-size: 13.5px; line-height: 1.55; color: #55534b; margin: 6px 0;">These are <strong style="color:#23231f;">naming sponsorships to a working, for-profit farm</strong>. They are not charitable donations and they are <strong style="color:#23231f;">not tax-deductible</strong>.</p>
+        <p style="font-size: 13.5px; line-height: 1.55; color: #55534b; margin: 6px 0;"><strong style="color:#23231f;">Naming is honorary, not ownership.</strong> You do not own the hen, the house, or the land. She stays a resident of Kisi Farm.</p>
+        <p style="font-size: 13.5px; line-height: 1.55; color: #55534b; margin: 6px 0;">Payment happens on <strong style="color:#23231f;">Flutterwave's secure hosted checkout</strong>. Card details never touch this site and are never stored by us.</p>
+        <p style="font-size: 13.5px; line-height: 1.55; color: #55534b; margin: 6px 0;">Full terms, refunds and privacy are on the support terms page. Amounts and goals are set by the farm before launch.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA + bridge -->
+  <div style="padding: 40px 80px 72px;">
+    <div style="background: #ffffff; border: 1px solid rgba(20,51,31,0.10); border-radius: 26px; padding: 44px; text-align: center;">
+      <h2 class="display" style="font-weight: 900; font-size: 40px; color: #14331f; margin: 0; line-height: 1.05;">Pick a name. Build a farm.</h2>
+      <p style="font-size: 16px; color: #55534b; margin: 14px auto 0; max-width: 520px;">Start small with a hen, or step up to a landmark. Every name gets Kisi one build closer.</p>
+      <div style="display: flex; gap: 14px; justify-content: center; margin-top: 26px;">
+        <span style="display: inline-flex; align-items: center; gap: 9px; background: #14331f; color: #faf5e9; font-weight: 600; font-size: 15px; padding: 15px 28px; border-radius: 999px;">Choose what to name
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </span>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 28px; font-size: 14px; color: #23305e;">
+      <span>New to Kisi? Meet the chickens first at</span>
+      <strong>kisi.africa</strong>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#23305e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

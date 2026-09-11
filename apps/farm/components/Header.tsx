@@ -12,6 +12,7 @@ import { AFRICA_URL } from "@/lib/site";
 const nav = [
   { href: "/eggs", label: "Eggs" },
   { href: "/chicks", label: "Day-old Chicks" },
+  { href: "/build-the-farm", label: "Build the Farm" },
   { href: "/support", label: "Support" },
   { href: "/about", label: "About the Farm" },
   { href: "/visit", label: "Visit" },

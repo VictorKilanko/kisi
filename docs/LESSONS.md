@@ -6,6 +6,43 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-09-11 (built the "Build the Farm" naming-rights capital campaign, live but not-yet-charging)
+
+Owner wants to raise money for four capital builds and let backers **name things** after
+themselves. Diaspora audience, so no physical rewards (no pre-buy eggs); naming rights only.
+Provider chosen: **Flutterwave**. Owner picked "live, not yet charging" (register-interest email,
+no checkout) and asked to design first, then push.
+
+**What changed (all on `feature/kisi-poultry-republic`):**
+1. **`farm.kisi.africa/build-the-farm`** — new campaign page. Four builds (hatchery $100k, feed mill
+   *unset*, solar $50k, cold room $100k), a naming ladder (hen → solar light → street → poultry house →
+   cornerstone major gift), a diaspora "we can't post you an egg" section, honest legal band, and a
+   "register interest" form. **No invented figures**: an "Opening soon / we publish no invented figures"
+   card replaces any fake progress bar. New `campaign.ts` data; `CampaignInterestForm` posts to
+   `/api/newsletter` with `source: "build-the-farm"` (route now returns a campaign-specific "NOT stored"
+   note). Added to farm nav + sitemap.
+2. **kisi.africa handoff** — a "Build the Farm →" card beside the existing farm card on the home page
+   "wider Kisi world" section (Republic gold/indigo → farm), plus a footer link. Entertainment advertises;
+   the farm page converts.
+3. Design mockup first via the design canvas (`design/build-the-farm/*.dc.html`); the 2.5MB seeded output
+   is gitignored, sources kept.
+
+**Lessons / gotchas:**
+- **`pnpm run format` reflows the WHOLE repo.** The root `format` script is `prettier --write "**/*"`, and
+  the committed code was not prettier-clean, so running it churned ~140 unrelated files. Fix: `git checkout -- .`
+  to discard the churn, re-apply only the intended edits, then `prettier --write` **only the touched files**.
+  Do NOT run the global format before a feature commit.
+- Expert audit (standing rule) ran before push: verdict SAFE TO PUSH; applied its two should-fixes
+  (softened an "every naira" overclaim; made the hero total derive from `CAMPAIGN_TOTAL_USD_MIN` computed
+  from the build goals, one source of truth) + two nits (goal label contrast → `kisi-earth-700`, icon stroke
+  → token via `currentColor`).
+
+**Left for the owner (see CONTENT_CHECKLIST):** feed mill budget, naming amounts + currency, confirmed legal
+entity, Flutterwave keys (+ a Flutterwave adapter; only Paystack exists), and a real waitlist store so
+"register interest" actually collects. Until then the page stays not-charging and stores nothing.
+
+---
+
 ## Session — 2026-09-10 (site: pulled Kisi Kids off the public sites, made the farm CTA a heartbeat, added a logo to farm header)
 
 Owner decision: **Kisi Kids is not launching yet**, so remove every link and button that points to it from
