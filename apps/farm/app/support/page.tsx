@@ -59,8 +59,8 @@ export default function SupportPage() {
           </h2>
           <p className="mt-2 text-sm text-kisi-cream-100/85">
             Put your name on it. Name a hen, a farm street, or a whole poultry
-            house as Kisi builds a hatchery, feed mill, solar system and cold
-            room.
+            house as Kisi builds a hatchery, feed mill, solar system, cold room
+            and farm house.
           </p>
           <div className="mt-auto pt-5">
             <Link

@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   title: "Build the Farm",
   description:
     "Put your name on a real Nigerian farm. Kisi is building a hatchery, a " +
-    "feed mill, solar power and a cold room, and every gift names something " +
-    "real in the Republic of Kisi.",
+    "feed mill, solar power, a cold room and a farm house, and every gift " +
+    "names something real in the Republic of Kisi.",
 };
 
 const goalLabel = (goalUSD: number | null) =>
@@ -47,6 +47,13 @@ const BUILD_ICON: Record<string, React.ReactNode> = {
       <path d="M12 2l-2.5 2.5M12 2l2.5 2.5M12 22l-2.5-2.5M12 22l2.5-2.5" />
     </>
   ),
+  "farm-house": (
+    <>
+      <path d="M3 11l9-7 9 7" />
+      <path d="M5 10v10h14V10" />
+      <path d="M10 20v-6h4v6" />
+    </>
+  ),
 };
 
 export default function BuildTheFarmPage() {
@@ -70,10 +77,10 @@ export default function BuildTheFarmPage() {
                 {CAMPAIGN_TOTAL_IS_FLOOR ? "over " : ""}$
                 {CAMPAIGN_TOTAL_USD.toLocaleString("en-US")}
               </strong>{" "}
-              for four builds that change daily life for every bird at Kisi: a
-              hatchery, a feed mill, solar, and a cold room. We can&apos;t post
-              you a Nigerian egg. We can put your name on the place it comes
-              from.
+              for five builds that change daily life for every bird at Kisi: a
+              hatchery, a feed mill, solar, a cold room, and a farm house. We
+              can&apos;t post you a Nigerian egg. We can put your name on the
+              place it comes from.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -86,7 +93,7 @@ export default function BuildTheFarmPage() {
                 href="#builds"
                 className="rounded-full border border-kisi-green-900/25 px-6 py-3.5 font-semibold text-kisi-green-900 hover:border-kisi-green-900/50"
               >
-                See the four builds
+                See the five builds
               </Link>
             </div>
           </div>
@@ -114,17 +121,17 @@ export default function BuildTheFarmPage() {
         </div>
       </section>
 
-      {/* THE FOUR BUILDS */}
+      {/* THE FIVE BUILDS */}
       <section
         id="builds"
         className="mx-auto max-w-6xl scroll-mt-20 px-4 py-12"
       >
         <SectionHeading
-          kicker="The four builds"
-          title="Four things, one farm"
+          kicker="The five builds"
+          title="Five things, one farm"
           lede="Back the one you care about. The money goes to a working farm; your name goes on what it pays for."
         />
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {builds.map((b) => (
             <div
               key={b.id}
