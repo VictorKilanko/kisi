@@ -24,72 +24,52 @@ export default function SupportPage() {
         Support the Chickens
       </h1>
       <p className="mt-3 max-w-2xl text-kisi-charcoal-600">
-        Real birds, real feed, real care. Support Kisi&apos;s flock through
-        the categories below, each one names plainly what your payment is
-        and what it funds.
+        Real birds, real feed, real care. There are two ways to help the
+        chickens of Kisi: keep the flock going day to day, or help build the
+        farm&apos;s future and put your name on it.
       </p>
 
-      <div className="mt-6 max-w-2xl">
-        <PlaceholderNotice>
-          <strong>Not accepting payments yet.</strong> The full checkout is
-          built and tested in sandbox mode, but it stays closed until the
-          business&apos;s legal registration status is confirmed and the
-          wording review is complete. Until then, buttons below will tell
-          you, honestly, that the programme hasn&apos;t opened. Amounts
-          are also still to be set by the farm.
-        </PlaceholderNotice>
-      </div>
-
-      {/* Priority appeals: the two biggest needs */}
-      <section className="mt-10">
-        <SectionHeading
-          kicker="Our biggest needs right now"
-          title="Our two biggest campaigns"
-          lede="Everything below helps. These two come first: they change daily life for every bird on the farm."
-        />
-        <div className="grid gap-6 md:grid-cols-2">
-          {[
-            {
-              name: "Solar & Light",
-              funds:
-                "Solar power and reliable lighting: steady lay cycles, safe nights, and a coop that runs when the grid does not.",
-              href: "#solar",
-            },
-            {
-              name: "Better Housing",
-              funds:
-                "Stronger coops, more nesting boxes, real ventilation for the heat, and repairs that hold through the rainy season.",
-              href: "#housing",
-            },
-          ].map((c) => (
-            <div
-              key={c.name}
-              className="flex flex-col rounded-3xl border border-kisi-gold-500/40 bg-white p-6 shadow-sm"
+      {/* Two ways to help */}
+      <section className="mt-8 grid gap-6 md:grid-cols-2">
+        {/* Everyday care */}
+        <div className="flex flex-col rounded-3xl border border-kisi-green-900/10 bg-white p-7 shadow-sm">
+          <p className="kicker text-kisi-gold-700">Everyday care</p>
+          <h2 className="font-display mt-1 text-2xl font-bold text-kisi-green-900">
+            Keep the flock going
+          </h2>
+          <p className="mt-2 text-sm text-kisi-charcoal-600">
+            Feed, clean water, veterinary care, better housing, or sponsor a
+            named hen and follow her life. Small, steady support for the
+            birds&apos; daily life.
+          </p>
+          <div className="mt-auto pt-5">
+            <Link
+              href="#ways"
+              className="inline-block rounded-full bg-kisi-green-900 px-5 py-2.5 font-semibold text-kisi-cream-100 hover:bg-kisi-green-700"
             >
-              <p className="kicker text-kisi-earth-700">Priority appeal</p>
-              <h3 className="font-display mt-1 text-2xl font-bold text-kisi-green-900">
-                {c.name}
-              </h3>
-              <p className="mt-2 text-sm text-kisi-charcoal-600">{c.funds}</p>
-              <div className="mt-4">
-                <span className="kicker inline-block rounded-full bg-kisi-cream-200 px-3 py-1 text-kisi-earth-700">
-                  Goal set at launch
-                </span>
-              </div>
-              <p className="mt-2 text-xs italic text-kisi-charcoal-600">
-                The goal and progress will be reported from the farm&apos;s real
-                records once the programme opens. We publish no invented figures.
-              </p>
-              <div className="mt-auto pt-4">
-                <Link
-                  href={c.href}
-                  className="inline-block rounded-full bg-kisi-green-900 px-5 py-2.5 font-semibold text-kisi-cream-100 hover:bg-kisi-green-700"
-                >
-                  Support {c.name}
-                </Link>
-              </div>
-            </div>
-          ))}
+              See the ways to give &rarr;
+            </Link>
+          </div>
+        </div>
+        {/* Build the Farm capital campaign */}
+        <div className="flex flex-col rounded-3xl border border-kisi-gold-300/40 bg-kisi-indigo-800 p-7 text-kisi-cream-100 shadow-sm">
+          <p className="kicker text-kisi-gold-300">The capital campaign</p>
+          <h2 className="font-display mt-1 text-2xl font-bold">
+            Build the Farm
+          </h2>
+          <p className="mt-2 text-sm text-kisi-cream-100/85">
+            Put your name on it. Name a hen, a farm street, or a whole poultry
+            house as Kisi builds a hatchery, feed mill, solar system and cold
+            room.
+          </p>
+          <div className="mt-auto pt-5">
+            <Link
+              href="/build-the-farm"
+              className="inline-block rounded-full bg-kisi-gold-300 px-5 py-2.5 font-semibold text-kisi-indigo-900 hover:bg-kisi-gold-500"
+            >
+              Explore the campaign &rarr;
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -100,19 +80,19 @@ export default function SupportPage() {
         </h2>
         <ul className="mt-3 list-inside list-disc space-y-1.5">
           <li>
-            These are <strong>farm support payments and sponsorships</strong>{" "}
-            to a working farm, <strong>not</strong> charitable donations,
-            and <strong>not tax-deductible</strong>.
+            These are <strong>farm support payments and sponsorships</strong> to
+            a working farm, <strong>not</strong> charitable donations, and{" "}
+            <strong>not tax-deductible</strong>.
           </li>
           <li>
             <strong>Sponsoring a chicken is not ownership.</strong> Your
-            sponsorship funds a named bird&apos;s care and story updates;
-            she remains a resident of Kisi Farm.
+            sponsorship funds a named bird&apos;s care and story updates; she
+            remains a resident of Kisi Farm.
           </li>
           <li>
-            Payment happens on our provider&apos;s <strong>secure hosted
-            checkout</strong>. Card details never touch this website and
-            are never stored by us.
+            Payment happens on our provider&apos;s{" "}
+            <strong>secure hosted checkout</strong>. Card details never touch
+            this website and are never stored by us.
           </li>
           <li>
             Full terms, refunds, and privacy:{" "}
@@ -124,25 +104,41 @@ export default function SupportPage() {
         </ul>
       </section>
 
-      {/* Tiers */}
-      <section className="mt-12">
+      {/* Keep the flock going: everyday tiers */}
+      <section id="ways" className="mt-16 scroll-mt-20">
         <SectionHeading
-          kicker="The Programme"
-          title="Ways to support"
-          lede="Amounts will be set by the farm at launch. Every tier states its kind and destination."
+          kicker="Keep the flock going"
+          title="Everyday ways to support"
+          lede="Small, steady help for the birds' daily life. Amounts will be set by the farm at launch; every tier states its kind and destination."
         />
+        <div className="mb-6 max-w-2xl">
+          <PlaceholderNotice>
+            <strong>Not accepting payments yet.</strong> The checkout is built
+            and tested in sandbox mode, but stays closed until the
+            business&apos;s legal registration is confirmed and the wording
+            review is complete. Until then the buttons below say so honestly,
+            and amounts are still to be set by the farm.
+          </PlaceholderNotice>
+        </div>
         <ul className="grid gap-6 md:grid-cols-2">
           {supportTiers.map((t) => (
-            <li key={t.id} id={t.id} className="flex scroll-mt-24 flex-col rounded-2xl border border-kisi-green-900/10 bg-white p-6 shadow-sm">
+            <li
+              key={t.id}
+              id={t.id}
+              className="flex scroll-mt-24 flex-col rounded-2xl border border-kisi-green-900/10 bg-white p-6 shadow-sm"
+            >
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <h3 className="font-display text-xl font-bold text-kisi-green-900">
                   {t.name}
                 </h3>
                 <span className="kicker rounded-full bg-kisi-cream-200 px-3 py-1 text-kisi-charcoal-600">
-                  {KIND_LABEL[t.kind]} · {t.cadence === "monthly" ? "monthly" : "one-time"}
+                  {KIND_LABEL[t.kind]} ·{" "}
+                  {t.cadence === "monthly" ? "monthly" : "one-time"}
                 </span>
               </div>
-              <p className="mt-2 text-sm text-kisi-charcoal-600">{t.whatItFunds}</p>
+              <p className="mt-2 text-sm text-kisi-charcoal-600">
+                {t.whatItFunds}
+              </p>
               {t.note && (
                 <p className="mt-2 rounded-lg bg-kisi-cream-200 px-3 py-2 text-xs text-kisi-charcoal-600">
                   {t.note}
@@ -171,17 +167,22 @@ export default function SupportPage() {
           <div>
             <p>
               When the programme opens, this section will report what came in
-              and what it funded, feed bought, vet visits covered, repairs
-              made, using the farm&apos;s real records.
+              and what it funded, feed bought, vet visits covered, repairs made,
+              using the farm&apos;s real records.
             </p>
             <p className="mt-3">
               Until those records exist, it stays empty on purpose.{" "}
-              <strong>We publish no invented figures.</strong> An empty
-              honest box beats a full fake one.
+              <strong>We publish no invented figures.</strong> An empty honest
+              box beats a full fake one.
             </p>
           </div>
           <dl className="grid grid-cols-2 gap-4">
-            {["Support received", "Feed funded", "Vet care funded", "Water & housing"].map((label) => (
+            {[
+              "Support received",
+              "Feed funded",
+              "Vet care funded",
+              "Water & housing",
+            ].map((label) => (
               <div key={label} className="rounded-xl bg-kisi-cream-100/10 p-4">
                 <dt className="kicker text-kisi-gold-300">{label}</dt>
                 <dd className="mt-1 text-sm italic text-kisi-cream-100/70">
