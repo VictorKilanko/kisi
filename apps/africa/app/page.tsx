@@ -70,6 +70,12 @@ export default function Home() {
               >
                 Read the Stories
               </Link>
+              <a
+                href={`${FARM_URL}/support`}
+                className="rounded-full border border-kisi-cream-100/40 px-6 py-3 font-semibold hover:bg-kisi-cream-100/10"
+              >
+                Support the Chickens
+              </a>
             </div>
           </div>
           <div className="hidden justify-center lg:flex" aria-hidden="true">
