@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap");
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f1e8d4; font-family: "Inter", system-ui, sans-serif; color: #23231f; -webkit-font-smoothing: antialiased; }
+    .display { font-family: "Fraunces", Georgia, serif; }
+    .kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    a { color: #23305e; text-decoration: none; }
+    a:hover { color: #1a2447; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #f1e8d4;">
+
+  <!-- Persistent bridge strip (always on kisi.africa) -->
+  <div style="background: #1a2447; padding: 11px 80px; display: flex; align-items: center; justify-content: center; gap: 12px;">
+    <span style="width: 7px; height: 7px; border-radius: 999px; background: #2e7d46; box-shadow: 0 0 0 4px rgba(46,125,70,0.3);"></span>
+    <span style="font-size: 13.5px; color: #faf5e9;">The Republic of Kisi is a <strong style="color:#f0c75e;">real farm in Nigeria</strong>, and we are building it live.</span>
+    <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: #f0c75e;">Help build the farm
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+    </span>
+  </div>
+
+  <!-- kisi.africa header -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 80px; background: #faf5e9; border-bottom: 1px solid rgba(20,51,31,0.08);">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div style="width: 34px; height: 34px; border-radius: 9px; background: #23305e; display: flex; align-items: center; justify-content: center;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c0-5 3-9 6-9s6 4 6 9"/><path d="M12 11c0-3 2-6 5-6-.5 3-2 5-5 6z"/><circle cx="9.5" cy="8" r="1"/></svg>
+      </div>
+      <div style="display: flex; flex-direction: column; line-height: 1.05;">
+        <span class="display" style="font-weight: 900; font-size: 18px; color: #23305e;">The Republic of Kisi</span>
+        <span style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a6410;">Where every chicken has a story</span>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 26px; font-size: 14px; font-weight: 500; color: #23231f;">
+      <span>Meet the Chickens</span><span>Farm Stories</span><span>Politics</span><span>Sports</span><span>Media</span>
+    </div>
+  </div>
+
+  <!-- Story body fragment -->
+  <div style="max-width: 760px; margin: 0 auto; padding: 56px 40px 0;">
+    <span class="kicker" style="color: #8a6410;">Farm Stories · Arc 41</span>
+    <h1 class="display" style="font-weight: 900; font-size: 44px; line-height: 1.06; color: #23305e; margin: 12px 0 0; letter-spacing: -0.01em;">The night the eggs nearly spoiled</h1>
+    <p style="font-size: 15px; color: #55534b; margin: 14px 0 0;">By the desk of The Coop Times · Part 5 of 5</p>
+    <div style="height: 1px; background: rgba(20,51,31,0.12); margin: 26px 0;"></div>
+    <p style="font-size: 18px; line-height: 1.7; color: #23231f; margin: 0;">By morning the crates were stacked to the roof and the sun was already hot. Mama Gold looked at the eggs, then at the President, and said the thing everyone was thinking: we need somewhere cold to keep them, or we lose the week's work by Friday.</p>
+    <p style="font-size: 18px; line-height: 1.7; color: #23231f; margin: 18px 0 0;">The Cabinet argued until noon. But the truth did not need a vote. This part of the story is not a story at all.</p>
+  </div>
+
+  <!-- IN-STORY CAMPAIGN CTA (the handoff) -->
+  <div style="max-width: 760px; margin: 40px auto 0; padding: 0 40px;">
+    <div style="border-radius: 24px; overflow: hidden; border: 1px solid rgba(20,51,31,0.12); box-shadow: 0 24px 60px -34px rgba(20,51,31,0.5);">
+      <div style="background: #14331f; padding: 34px 36px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="width: 7px; height: 7px; border-radius: 999px; background: #f0c75e;"></span>
+          <span class="kicker" style="color: #f0c75e;">This part is real</span>
+        </div>
+        <h2 class="display" style="font-weight: 900; font-size: 30px; color: #faf5e9; margin: 14px 0 0; line-height: 1.1;">Kisi really is building a cold room.</h2>
+        <p style="font-size: 15.5px; line-height: 1.55; color: rgba(250,245,233,0.82); margin: 12px 0 0; max-width: 520px;">The eggs, the heat, the waste, all real. You can put your name on the cold room that fixes it, or on any of the four builds. No egg in the post. Your name on the farm.</p>
+
+        <!-- mini thermometer -->
+        <div style="background: rgba(250,245,233,0.08); border-radius: 16px; padding: 20px; margin-top: 24px;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between;">
+            <span style="font-size: 14px; color: rgba(250,245,233,0.8);"><strong class="display" style="font-size: 22px; color: #f0c75e;">$52,000</strong> raised · four builds</span>
+            <span style="font-size: 12px; color: rgba(250,245,233,0.6);">sample figure</span>
+          </div>
+          <div style="height: 10px; border-radius: 999px; background: rgba(250,245,233,0.14); margin-top: 12px; overflow: hidden;">
+            <div style="width: 16%; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #2e7d46, #d9a02b);"></div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 16px; margin-top: 24px;">
+          <span style="display: inline-flex; align-items: center; gap: 9px; background: #f0c75e; color: #14331f; font-weight: 700; font-size: 15px; padding: 14px 26px; border-radius: 999px;">Build the farm
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#14331f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+          </span>
+          <span style="font-size: 13px; color: rgba(250,245,233,0.65);">Takes you to farm.kisi.africa</span>
+        </div>
+      </div>
+    </div>
+    <p style="text-align: center; font-size: 13px; color: #55534b; margin: 16px 0 0;">Story continues below · the same card appears at the end of every arc that touches a real build</p>
+  </div>
+
+  <!-- Footer badge widget -->
+  <div style="margin-top: 56px; background: #faf5e9; border-top: 1px solid rgba(20,51,31,0.1); padding: 34px 80px;">
+    <div style="max-width: 760px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div style="width: 46px; height: 46px; border-radius: 12px; background: #14331f; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l9-6 9 6v11"/><path d="M3 21h18M9 21v-6h6v6"/></svg>
+        </div>
+        <div>
+          <p style="font-size: 14px; font-weight: 700; color: #14331f; margin: 0;">Build the Farm campaign</p>
+          <p style="font-size: 13px; color: #55534b; margin: 3px 0 0;">Persistent badge in the kisi.africa footer, on every page</p>
+        </div>
+      </div>
+      <span style="display: inline-flex; align-items: center; gap: 8px; background: #14331f; color: #faf5e9; font-weight: 600; font-size: 14px; padding: 12px 22px; border-radius: 999px; flex-shrink: 0;">Put your name on it
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f0c75e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

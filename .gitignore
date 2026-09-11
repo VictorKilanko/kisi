@@ -55,3 +55,6 @@ Desktop.ini
 # R history files (stray)
 .Rhistory
 *.Rhistory
+
+# --- Design canvas seeded output (2.5MB payload; keep the .dc.html sources) ---
+design/**/build-the-farm.html

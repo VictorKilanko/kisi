@@ -9,6 +9,29 @@ credible · 🟢 nice to have.
 
 ## Needs owner input
 
+### Build the Farm capital campaign (added 2026-09-11)
+The campaign page (`/build-the-farm`) is live but deliberately **not charging**:
+no invented figures, and a "register interest" form that stores nothing yet.
+To open it for real money, the owner must supply:
+- [ ] 🔴 **Feed mill budget (USD).** The other three are set (hatchery $100k,
+      solar $50k, cold room $100k); the feed mill goal is `null` and renders
+      "goal set by farm" until provided. Set `goalUSD` in
+      `apps/farm/app/build-the-farm/campaign.ts`.
+- [ ] 🔴 **Naming amounts** for Name a Hen / Solar Light / Farm Street / Poultry
+      House (and the currency shown to a diaspora audience). They render "Set at
+      launch" until set.
+- [ ] 🔴 **Confirmed legal entity / registration status.** Payments stay closed
+      until this is confirmed; the wording is already "sponsorship to a
+      for-profit farm, not charitable, not tax-deductible".
+- [ ] 🔴 **Flutterwave account + keys** (provider chosen). Needed to wire the
+      hosted checkout; start in sandbox. No Flutterwave adapter exists yet (the
+      payments lib currently has a Paystack adapter only).
+- [ ] 🔴 **Where does "Register interest" go?** `/api/newsletter` validates and
+      discards — the waitlist collects nothing until a provider (e.g. Mailchimp
+      or Supabase) is connected behind that endpoint.
+- [ ] 🟡 **Cornerstone (major-gift) contact route.** Currently links to `/visit`;
+      confirm that is where founding-naming conversations should land.
+
 ### Social media kit (added 2026-07-31)
 - [x] ✅ **Instagram @handle confirmed: `@kisi.africa`** (owner set 2026-08-01). Set at
       the top of `social/captions.md`.
