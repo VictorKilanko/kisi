@@ -317,7 +317,17 @@ export default function BuildTheFarmPage() {
           </div>
         </div>
 
-        <p className="mt-8 text-center text-sm text-kisi-indigo-800">
+        <p className="mt-8 text-center text-sm text-kisi-charcoal-600">
+          Prefer to fund feed, vet care, or sponsor a single hen?{" "}
+          <Link
+            href="/support#ways"
+            className="font-semibold text-kisi-green-700 underline"
+          >
+            See everyday ways to support
+          </Link>
+          .
+        </p>
+        <p className="mt-2 text-center text-sm text-kisi-indigo-800">
           New to Kisi? Meet the chickens first at{" "}
           <a href="https://kisi.africa" className="font-semibold underline">
             kisi.africa
