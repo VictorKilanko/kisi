@@ -346,6 +346,21 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "checked and refused. Her plot to break his credibility makes it " +
       "unbreakable, and she slips off eyeing her next target.",
   },
+  "the-quiet-round": {
+    title: "The Quiet Round",
+    summary:
+      "The Republic's calmest ministry finally gets its story. Dr. Amara " +
+      "Featherwell's success is invisible by design: nothing goes wrong, so " +
+      "the flock jokes the Calm One has the easiest job in Kisi, forgetting " +
+      "that the reason nothing goes wrong is the plain dawn round she walks " +
+      "before it can. This week a new hen arrives thin and silent, standing " +
+      "apart, the way another frail rescue once did, but before the minister " +
+      "can reach her someone is already there. Quiet Grace, the case file " +
+      "nobody expected to thrive, has grown into the ministry's first " +
+      "responder, opening a corner of her wing for every frightened new " +
+      "arrival. The rescued has become the rescuer, and 'welfare first, and " +
+      "the rest follows' stands up and walks.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {

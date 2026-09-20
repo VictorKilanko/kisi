@@ -2161,4 +2161,96 @@ export const timelineEvents: TimelineEvent[] = [
       "or dies by whether you can trust its scales. Help us keep this flock " +
       "fed, housed, and honest. Back the Republic at farm.kisi.africa/support.",
   },
+
+  // ARC: The Quiet Round (Season 2, Ep 17) — a warm palate cleanser after three
+  // schemer arcs in the Sweet Beak run. First arc led by Dr. Amara "The Calm One"
+  // Featherwell, Minister of Health, whose success is invisible by design: nothing
+  // goes wrong, so the flock jokes she has the easiest job in Kisi. The turn honours
+  // deep canon: Quiet Grace, the frail rescue hen Featherwell once saved (a "case
+  // file" given weeks to live), has quietly become the ministry's first responder,
+  // opening a corner of her wing to every frightened new arrival before trouble finds
+  // them. The rescued became the rescuer; "welfare first, and the rest follows" made
+  // flesh. No new character (a nameless new arrival, like the chicks, count stays 28).
+  // CREAM (alternates off scoop GREEN), single date 09-12 = its IG post day, → support.
+  {
+    id: "quiet-ministry",
+    chickenIds: ["dr-amara-featherwell"],
+    date: "2026-09-12",
+    arcId: "the-quiet-round",
+    world: "fiction",
+    type: "custom",
+    title: "The quietest ministry in Kisi",
+    body:
+      "In a Republic of loud offices, Dr. Amara's is the quietest. No decrees " +
+      "go out from Health, no scandals come in, and the Featherwell Bulletin " +
+      "still runs its short sentences and its zero exclamation marks. Some " +
+      "birds joke that the Calm One has the easiest job in the whole Republic, " +
+      "because look, nothing ever goes wrong. She lets them joke. She knows a " +
+      "thing they have the luxury of forgetting: the reason nothing goes wrong " +
+      "is that somebody looks before it can. So every dawn, before the first " +
+      "argument of the day has even warmed up, she walks. Coop by coop, perch " +
+      "by perch, she does the plain unglamorous round that keeps the panic that " +
+      "never comes from ever coming.",
+  },
+  {
+    id: "quiet-arrival",
+    chickenIds: ["quiet-grace", "dr-amara-featherwell"],
+    date: "2026-09-12",
+    arcId: "the-quiet-round",
+    world: "fiction",
+    type: "arrival",
+    title: "The new hen who stood apart",
+    body:
+      "A new hen had come to Kisi that week, and she was having the hard first " +
+      "days. She stood a wing's width from the flock, left a little of her " +
+      "feed, and said nothing at all, the way frightened birds do when the " +
+      "world has not yet been kind to them. It was exactly, Dr. Amara thought " +
+      "as she came round the corner, how another hen had once stood, years ago, " +
+      "thin and half-feathered and forecast 'weeks.' But before the minister " +
+      "could reach the newcomer this morning, she saw that someone was already " +
+      "there. Quiet Grace had settled down beside the stranger and opened a " +
+      "corner of her wing, the same corner she keeps open for every frightened " +
+      "new arrival, and was simply, patiently, sitting with her until the world " +
+      "felt smaller.",
+  },
+  {
+    id: "quiet-caseturned",
+    chickenIds: ["dr-amara-featherwell", "quiet-grace"],
+    date: "2026-09-12",
+    arcId: "the-quiet-round",
+    world: "fiction",
+    type: "friendship",
+    title: "The case file, grown up",
+    body:
+      "Dr. Amara stopped, and for once did not reach for her notes. She did " +
+      "not need them. She has kept Grace's file since the first month, the one " +
+      "whose lines still read, in order, 'eating a little,' 'standing,' " +
+      "'perching, low bar,' and finally 'moved her wing for the new chick.' " +
+      "That last line is framed in the ministry, and here it was again, living " +
+      "and breathing in front of her: the frail case file nobody expected to " +
+      "thrive had grown into the first thing that finds a frightened bird " +
+      "before trouble does. 'Welfare first,' the minister has said all her " +
+      "career, 'and the rest follows.' She watched Grace's wing over the " +
+      "trembling newcomer and thought, this is the rest, following. By the end " +
+      "of the week the new hen was eating with the others, and the Republic " +
+      "never knew it had almost had a hard one.",
+  },
+  {
+    id: "quiet-sell",
+    chickenIds: ["dr-amara-featherwell", "quiet-grace"],
+    date: "2026-09-12",
+    arcId: "the-quiet-round",
+    world: "fiction",
+    type: "custom",
+    title: "Why Kisi sleeps easy",
+    body:
+      "The calm you feel at Kisi is the easiest thing in the world to mistake " +
+      "for luck. It is not luck. It is clean water and room to stand, a minister " +
+      "who walks the round before the trouble grows loud, and a hen who keeps a " +
+      "corner of her wing open for whoever needs it next. None of that makes a " +
+      "headline, which is precisely why it works, and precisely why it is easy " +
+      "to forget it costs anything. It costs real feed, real shelter, and real " +
+      "care, every quiet day. Help us keep the whole flock well, the loud birds " +
+      "and the quiet ones alike. Back the Republic at farm.kisi.africa/support.",
+  },
 ];
