@@ -377,6 +377,24 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "clap, walks her off, and the Republic learns to play the day it is " +
       "given, not the day it wanted.",
   },
+  "the-settler-of-perches": {
+    title: "The Settler of Perches",
+    summary:
+      "The annual Best Perch dispute comes back to the Supreme Pecking " +
+      "Council, and this year the shade is crowded, because everyone " +
+      "remembers the season the perch quarrel went too far. Two hens claim " +
+      "the one high rail with the evening sun, and both are right. Chief " +
+      "Justice Yèyé Àlàbá, who has settled this case every year in proverbs " +
+      "by a formula she has never disclosed, does not hurry: she feeds the " +
+      "court first, then rules the old rail on rotation as ever, but leans " +
+      "this year on what has changed. Since Cindy's Law rebuilt the coop " +
+      "with many good perches, a bird turned off one has a fine one to go " +
+      "to, so the quarrel is smaller than it used to be. 'A perch you must " +
+      "fight for is a perch there are too few of.' The Republic that once " +
+      "lost a bird to a crowded roost now settles the same dispute with a " +
+      "proverb and a spare rail, which is what Better Housing really buys: " +
+      "peace, fewer fights, and room to roost.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {

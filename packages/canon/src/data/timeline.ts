@@ -2354,4 +2354,101 @@ export const timelineEvents: TimelineEvent[] = [
       "good eggs through all of them. Order farm-fresh eggs from the flock at " +
       "farm.kisi.africa/eggs.",
   },
+
+  // ARC: The Settler of Perches (Season 2, Ep 19) — a CREAM political/justice beat to
+  // alternate off windfinal GREEN and add weight after two warm arcs. First arc led by
+  // Chief Justice Yèyé Àlàbá "The Settler of Perches" (rules in proverbs, sole arbiter of
+  // the annual Best Perch dispute, closes "Court is risen. Go and share something.").
+  // Real stakes handled with dignity: the perch quarrel is the same kind of conflict that
+  // once turned fatal (Cindy, Season 1), so this year the court is full and holding its
+  // breath. The turn is hopeful: Cindy's Law (Better Housing) built MORE good perches, so
+  // the quarrel is smaller than it used to be, settled now by a proverb and a second rail
+  // instead of a fight. Cindy referenced only via her Law (dignified, off-page, owner's
+  // ground rules). No new character (claimants are nameless like the chicks; count stays
+  // 28). Single date 09-14 (its IG post day, in the past today so it reveals on deploy),
+  // routes to support / Better Housing.
+  {
+    id: "perch-docket",
+    chickenIds: ["yeye-alaba"],
+    date: "2026-09-14",
+    arcId: "the-settler-of-perches",
+    world: "fiction",
+    type: "custom",
+    title: "The docket nobody envies",
+    body:
+      "Every dry season brings the same case back to the Supreme Pecking " +
+      "Council: who gets the high rail, the good one, with the last of the " +
+      "evening sun. Chief Justice Yèyé Àlàbá has settled it every year of " +
+      "her life by a rotation formula she has never once disclosed and no " +
+      "bird has ever beaten, partly because it is fair and partly because " +
+      "beating it would require understanding it. This year the shade under " +
+      "the mango tree was fuller than usual for so small a matter. Nobody " +
+      "said why out loud. Everybody was thinking of the season the perch " +
+      "quarrel went further than a quarrel should ever go, and the good " +
+      "bird the Republic did not get to keep.",
+  },
+  {
+    id: "perch-two-hens",
+    chickenIds: ["yeye-alaba"],
+    date: "2026-09-14",
+    arcId: "the-settler-of-perches",
+    world: "fiction",
+    type: "custom",
+    title: "Two hens, one rail",
+    body:
+      "Two hens stood before her, and the maddening thing was that both were " +
+      "right. One had seniority and a bad wing that wanted the warm rail. " +
+      "The other had held the spot honestly for a season and did not see " +
+      "why waiting her turn meant giving it up. In a lesser court it was " +
+      "exactly the shape of trouble. Yèyé Àlàbá did not hurry. First she " +
+      "ruled the whole court into the shade to wait out the afternoon feed, " +
+      "on her oldest principle: 'No bird is reasonable while hungry.' Only " +
+      "when every crop was full did she open her beak, because she could " +
+      "feel the room remembering, and she had no intention of letting it " +
+      "remember the wrong lesson.",
+  },
+  {
+    id: "perch-ruling",
+    chickenIds: ["yeye-alaba"],
+    date: "2026-09-14",
+    arcId: "the-settler-of-perches",
+    world: "fiction",
+    type: "custom",
+    title: "The proverb and the second rail",
+    body:
+      "She ruled the way she always rules, in a proverb, rotating the old " +
+      "high rail between them by her undisclosed formula so neither won and " +
+      "neither lost. But this year she added something new, and leaned on " +
+      "it. The worst dry season, she reminded the court, taught the Republic " +
+      "to stop treating one good perch as the only prize worth having. Since " +
+      "Cindy's Law, the rebuilt coop has many good rails, high, dry, and out " +
+      "of the crush, so a bird turned off one this evening has a fine one to " +
+      "go to tonight. 'A perch you must fight for,' she said, 'is a perch " +
+      "there are too few of. We did not only settle this quarrel. We built " +
+      "it smaller.' The older hen had come with her feathers half up, ready " +
+      "for the old fight. Then she looked across at the new high rail " +
+      "catching the last of the evening sun, warm and empty and waiting for " +
+      "her, and something in her shoulders let go. The Chief Justice sent " +
+      "both hens up, one to the old rail on rotation, one to the new one, " +
+      "and for the first time in memory neither of them argued.",
+  },
+  {
+    id: "perch-sell",
+    chickenIds: ["yeye-alaba"],
+    date: "2026-09-14",
+    arcId: "the-settler-of-perches",
+    world: "fiction",
+    type: "custom",
+    title: "Court is risen",
+    body:
+      "'Court is risen,' the Chief Justice closed, the way she closes every " +
+      "session. 'Go and share something.' And the flock did, up into a coop " +
+      "with room enough that sharing did not cost anybody the warm spot. " +
+      "This is the quiet dividend nobody puts on a poster: a Republic that " +
+      "once lost a bird to a crowded roost now settles the very same quarrel " +
+      "with a proverb and a spare rail. That is what Better Housing actually " +
+      "buys, not luxury, but peace, fewer fights, and room to roost. Help us " +
+      "build the next coop to Cindy's Law. Back the Better Housing campaign " +
+      "at farm.kisi.africa/support.",
+  },
 ];
