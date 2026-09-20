@@ -6,6 +6,35 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-09-20 (cont.) — S2 Eps 20-21 warm/culture batch
+
+Owner asked for "more stories," so built a two-arc batch (one showrunner + one art-director
+audit across both). **Ep 20 "The Far Side's First Watch"** (GREEN, → Better Housing): young
+Small Fẹ́mi (Drain survivor) earns a probationary place on Sergeant Danladi's second shift; the
+job is who comes back for the one who froze, counting by name (Okpara's rule), a true answer
+over a kind one; harmless night scare (a branch, drain barred); Bantu oblique/dignified.
+**Ep 21 "The New Verse"** (CREAM, → eggs): Sadé the Griot writes a new Songbook verse and, when
+the flock argues tempo, writes one that changes tempo so everyone is in it (VP Baba Ṣẹ́gun's dawn
+note opens it); honours the working hens. Showrunner: Ep 21 SHIP, Ep 20 REVISE→SHIP; art director
+PASS on all 8. No new character (28). Gates green (canon 18/18; africa typecheck + lint + build).
+Staged after settlerofperches; cron order settlerofperches → firstwatch → newverse.
+
+**Lessons this batch:**
+- **A security/coop arc needs a named campaign in the sell.** Ep 20 is literally about sound coops
+  and a barred drain, but the first draft's sell said only "keep the coops safe" and routed to
+  generic support. The showrunner flagged it: arcs touching coops/housing must name **Better
+  Housing** (or Solar & Light for light/power), same as a housing arc. Name the campaign, not a
+  dollar figure (owner set none in the brand-split era). Check the sell against this rule before
+  the showrunner does.
+- **Slide bodies drift long on first draft.** Both arcs came in at 270-293 chars/slide (the size
+  class overflows past ~267; the art director fails it). Had to trim all 8 to ~250-266. Draft
+  slides tight from the start (~250) to save a trim pass.
+- Batch mechanics held: sync manifest from origin/main before staging (cron had marked windfinal
+  posted today), merge origin/main into the branch before the go-live so main fast-forwards, and
+  the manifest auto-merges "posted-wins" cleanly.
+
+---
+
 ## Session — 2026-09-20 (cont.) — S2 Ep 19 "The Settler of Perches" + go-live is now owner-run
 
 Same session, after Eps 17-18 shipped. Owner asked for the go-live one-liner each cycle and a

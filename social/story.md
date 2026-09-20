@@ -516,19 +516,37 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   queued; the site reveals each arc in step with its IG post day (run so far ends at windfinal 09-13,
   settlerofperches 09-14). Recent register: Ep 16 Sweet Beak vs press, Ep 17 warm welfare (Featherwell/
   Grace), Ep 18 comic sport (Flash learns to lose), Ep 19 political/justice (Yèyé Àlàbá, Better Housing).
-  A plain "execute" should build **Season 2, Ep 20** — best next threads, in priority order:
-  1. **A warm/standing-engine beat** to vary off Ep 19's weight: a Coop League fixture, a Mama Gold / senior-
-     hen beat, an egg-economy or feed beat, a solar beat. GREEN by alternation.
-  2. **Sweet Beak's next target** only if escalated meaningfully (she is 0-for-4; a scheme that nearly
-     *works*, or a rival who out-schemes her), OR **Eseosa in exile** (careful, dignified).
+  A plain "execute" should build **Season 2, Ep 22** — best next threads, in priority order:
+  1. **Vary the register** — Eps 17-21 have been mostly warm/standing-engine (welfare, sport, justice,
+     security, culture). Ep 22 can carry more edge: **Sweet Beak's next target** (she is 0-for-4; a scheme
+     that nearly *works* for once, or a rival who out-schemes her), or a **politics/economy** beat (feed
+     budget, National Egg Census) with real stakes. GREEN by alternation.
+  2. **Eseosa in exile** (careful, dignified) if a heavier beat is wanted.
   3. **The long game:** the tempered crate-sisters bond (Halima/President), only after real in-story time.
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream** against the
-  last new arc (last built = `arc-settlerofperches` CREAM, so the next new arc defaults to GREEN); keep the
+  last new arc (last built = `arc-newverse` CREAM, so the next new arc defaults to GREEN); keep the
   6-year-old clarity rule; add the 3 standing hashtags; end on a sell; **date the new arc to the day it will
-  post to IG** (continue the run at 09-15) so the site stays in step; and **assert the manifest caption is
-  < 2,200 chars** (story text ~1,900 max) before staging. **Remember to sync the manifest from origin/main
-  before staging** (the cron marks arcs posted on main) and **merge origin/main into the branch before the
-  go-live** so the `main` fast-forward works. Owner-run go-live: hand over the one-line paste ([[kisi-golive-oneliner-handoff]]).
+  post to IG** (continue the run at 09-17) so the site stays in step; **keep slide bodies at roughly 250-265
+  chars** (270+ overflows the size class; the art director will fail it) and **assert the manifest caption is
+  < 2,200 chars** (story text ~1,900 max) before staging. **Sync the manifest from origin/main before
+  staging** (the cron marks arcs posted on main) and **merge origin/main into the branch before the go-live**
+  so the `main` fast-forward works. Owner-run go-live: hand over the one-line paste
+  ([[kisi-golive-oneliner-handoff]]), and give the owner a per-session story summary.
+
+- **SEASON 2 Eps 20-21: warm/culture batch — BUILT AND QUEUED (2026-09-20).** Owner asked for "more
+  stories," so a two-arc batch (one showrunner + one art-director audit across both). **Ep 20 "The Far Side's
+  First Watch"** (`the-far-sides-first-watch`, slug `firstwatch`, GREEN, 4 beats, dated 09-15, → Better
+  Housing): young Small Fẹ́mi (Drain survivor) earns a probationary place on Sergeant Danladi's second shift;
+  the job is about who comes back for the one who froze, counts by name (Okpara's rule), and gives a true
+  answer over a kind one; harmless night scare (a branch). Bantu oblique/dignified. **Showrunner REVISE→SHIP**
+  (the arc is literally about sound coops + a barred drain, so it must name the **Better Housing** campaign;
+  added it to the sell). **Ep 21 "The New Verse"** (`the-new-verse`, slug `newverse`, CREAM, 4 beats, dated
+  09-16, → eggs): Sadé the Griot writes a new Songbook verse; the flock argues tempo, VP Baba Ṣẹ́gun wants his
+  dawn note, she writes a verse that changes tempo so everyone is in it; honours the working hens.
+  **Showrunner SHIP** first pass. Art director PASS on all 8. No new character (count stays 28). Both staged
+  after `arc-settlerofperches`; cron order settlerofperches → firstwatch → newverse. **Lesson: a security/
+  coop arc must name Better Housing (or Solar & Light) in the sell, same as a housing arc; check the sell
+  against the standing campaign rule before the showrunner does.**
   **When adding a character, bump the chicken-count test in
   `packages/canon/tests/content.test.ts` (now 27).** The arc-count assertion is now a **floor**
   (`toBeGreaterThanOrEqual`), not an exact count, so it no longer needs bumping as each in-story
