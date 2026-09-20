@@ -369,6 +369,28 @@ const arcs = [
       ["Court is risen", "'Court is risen,' she closed. 'Go and share something.' A Republic that once lost a bird to a crowded roost now settles that quarrel with a proverb and a spare rail. That's what Better Housing buys: room to roost. Back it at farm.kisi.africa/support."],
     ],
   },
+  {
+    slug: "firstwatch",
+    title: "The Far Side's First Watch",
+    theme: "green", // coming-of-age security beat: real stakes on the green field
+    slides: [
+      ["The Saturday nobody sees", "Every Saturday young Small Fẹ́mi walks the fence 'where nobody can see him,' and everybody can. He wants to be a coop guard; Danladi keeps saying: finish growing first. But the Sergeant does the dusk whistle every night, and he'd seen the boy out in the cold."],
+      ["One night, on trial", "So one evening Danladi let him onto the second shift, once. Not because he'd grown, but because the job was never about size. It's about who comes back for the one who froze. His task: call the roll by name. 'A number can be wrong quietly. A name cannot.'"],
+      ["A true answer, not a kind one", "Then it came, as it always does on a first watch: a noise past the barred drain, and the old fear stood up. Small Fẹ́mi didn't panic and didn't hide it. He looked. 'A branch on the wire. Drain still barred. All present.' A true answer over a kind one. The whole job."],
+      ["The whistle, for one night", "Danladi made him a watcher and handed him the dusk whistle he's never let another bird carry. Two guards walk the fence now, both birds who once came back for someone. Sound coops, barred drains: that's Better Housing. Back it at farm.kisi.africa/support."],
+    ],
+  },
+  {
+    slug: "newverse",
+    title: "The New Verse",
+    sell: "shop", // culture beat, honours the working hens; routes to eggs
+    slides: [
+      ["The Songbook needs a page", "So much has happened lately, a coop rebuilt, crates gone to market, that Sadé the Griot decided the Songbook needed a new verse. 'A nation that sings together has already agreed on something.' She called the flock to the mango tree. That's where the trouble started."],
+      ["Everyone wants their line", "The trouble was tempo. VP Baba Ṣẹ́gun wanted it slow and grand on his dawn note. The young wanted it fast. The elders, slow enough to remember. Baba and Sadé argued like old friends: fondly, loudly, forever. 'Forget the argument,' she said. 'Remember the song.'"],
+      ["The verse that changes tempo", "Then she did what only a griot can: instead of choosing a tempo, she wrote one that moves. Slow and grand to open, on Baba's dawn note. Quick for the young. Wide and easy for the elders. Everyone in it, nobody made to lose. That dusk the whole flock sang it together."],
+      ["What the song is about", "And the verse? The plainest thing in the Republic: the working hens who rise every morning and lay. No decree runs without them, and no song either. 'The singing is free,' said Sadé. 'The grain is not.' Order farm-fresh eggs at farm.kisi.africa/eggs."],
+    ],
+  },
 ];
 
 function smart(s) {
