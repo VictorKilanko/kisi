@@ -2253,4 +2253,105 @@ export const timelineEvents: TimelineEvent[] = [
       "care, every quiet day. Help us keep the whole flock well, the loud birds " +
       "and the quiet ones alike. Back the Republic at farm.kisi.africa/support.",
   },
+
+  // ARC: The Wind Final (Season 2, Ep 18) — a GREEN comic sport beat to alternate off
+  // quietround CREAM and vary register after a warm welfare arc. The Coop Premier League
+  // final: Flash Adaora's champion Solar Queens vs Harmattan FC, the side that blames the
+  // wind for everything (canon: "the wind, which is their answer to everything"). Played
+  // on the fiercest harmattan of the year, so the rolling ball will not sit still and raw
+  // speed is useless. Harmattan finally stop blaming the wind and play WITH it. The arc
+  // engine is Flash's one canonical flaw, "gracious in victory, terrible at losing": she
+  // has never been tested in defeat, and here she loses her first big one and must learn to
+  // lose well. Minister Túndé Quickfoot, who lost his own 100m record to her and learned to
+  // clap (rivalry "officially retired, unofficially eternal"), walks her off; his oriki is
+  // literally "one leg ahead of the wind." Gentle/bird-safe (chicken football is a
+  // rolling-ball pecking game by league law). No new character (count stays 28). Single
+  // date 09-13 (its IG post day, in the past today so it reveals on deploy), routes to eggs.
+  {
+    id: "wind-final-set",
+    chickenIds: ["flash-adaora"],
+    date: "2026-09-13",
+    arcId: "the-wind-final",
+    world: "fiction",
+    type: "sports",
+    title: "The final nobody expected",
+    body:
+      "The Coop Premier League final was set, and half of it made perfect " +
+      "sense. Flash Adaora's Solar Queens had rolled through the season the " +
+      "way Flash does everything, at full speed and apologising to nobody. " +
+      "The other half made the whole Republic laugh: their opponents were " +
+      "Harmattan FC, the side whose answer to every defeat all season had " +
+      "been the wind, and who had somehow, grumbling the entire way, arrived " +
+      "in a final. Nobody gave them a feather's chance. Flash least of all. " +
+      "She is gracious in victory and, though no reporter had ever needed the " +
+      "second half of the sentence, terrible at losing, mostly because she " +
+      "had never once had to find out.",
+  },
+  {
+    id: "wind-final-day",
+    chickenIds: ["flash-adaora"],
+    date: "2026-09-13",
+    arcId: "the-wind-final",
+    world: "fiction",
+    type: "sports",
+    title: "The day the wind came to play",
+    body:
+      "Then the morning of the final arrived on the fiercest harmattan wind " +
+      "in living memory, and everything Flash was best at stopped mattering. " +
+      "You can be the fastest bird alive and it will not help you one bit " +
+      "when the ball itself refuses to sit still. Every time the Queens set " +
+      "up a run, a gust took the ball somewhere it had no business going, and " +
+      "the harder Flash sprinted the more the wind seemed to laugh. Across " +
+      "the pitch, Harmattan FC did something they had not done all season: " +
+      "they stopped complaining about the wind. They looked up into it, and " +
+      "they grinned, because for the first time in their grumbling lives it " +
+      "was blowing on their side of the argument.",
+  },
+  {
+    id: "wind-final-turn",
+    chickenIds: ["flash-adaora", "tunde-quickfoot"],
+    date: "2026-09-13",
+    arcId: "the-wind-final",
+    world: "fiction",
+    type: "sports",
+    title: "Arriving with the wind",
+    body:
+      "Harmattan FC did the one thing the champions could not: instead of " +
+      "fighting the wind, they played with it, letting the gusts carry the " +
+      "rolling ball exactly where their legs could not, arriving with the " +
+      "wind at last the way their motto had always promised. The winning goal " +
+      "told the whole story: a hopeful little nudge from the Harmattan " +
+      "captain that should have trickled harmlessly wide, caught mid-roll by " +
+      "one enormous gust and carried the long way round a helpless goalkeeper, " +
+      "as though the wind itself had strolled onto the pitch and decided the " +
+      "match. They won their first title in a storm of dust and disbelief. " +
+      "And Flash Adaora had to " +
+      "do the hardest thing she had ever attempted, harder than any record: " +
+      "lose, and lose well. It was Minister Quickfoot who came for her, the " +
+      "old rival who once lost his own 100-metre record to this very hen and " +
+      "learned, in a week of quiet dusk practice, how to clap for the bird " +
+      "who beat him. His oriki, he reminded her, is 'one leg ahead of the " +
+      "wind.' 'Nobody,' he said gently, walking her off the pitch, 'is one " +
+      "leg ahead of the wind today. Not even you. Especially not me.'",
+  },
+  {
+    id: "wind-final-sell",
+    chickenIds: ["flash-adaora"],
+    date: "2026-09-13",
+    arcId: "the-wind-final",
+    world: "fiction",
+    type: "sports",
+    title: "The question the wind asked",
+    body:
+      "So Flash Adaora walked to the middle of the pitch while the dust was " +
+      "still settling and congratulated Harmattan FC one bird at a time, " +
+      "which cost her more than any race she has ever run. 'Records are just " +
+      "questions,' she told The Coop Times afterward, chin up, feathers " +
+      "wrecked, 'and today the wind asked one back. I am still working on the " +
+      "answer.' The whole Republic took the lesson home: you play the day you " +
+      "are given, not the day you wanted. A farm is exactly the same. Some " +
+      "mornings come windy and some come kind, and the good hens send out " +
+      "good eggs through all of them. Order farm-fresh eggs from the flock at " +
+      "farm.kisi.africa/eggs.",
+  },
 ];

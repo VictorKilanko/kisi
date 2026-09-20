@@ -361,6 +361,22 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "arrival. The rescued has become the rescuer, and 'welfare first, and " +
       "the rest follows' stands up and walks.",
   },
+  "the-wind-final": {
+    title: "The Wind Final",
+    summary:
+      "The Coop Premier League final, and the champion's first real test in " +
+      "defeat. Flash Adaora's unbeaten Solar Queens meet Harmattan FC, the " +
+      "side whose answer to every loss all season has been the wind, on the " +
+      "fiercest harmattan in living memory. When the ball will not sit still, " +
+      "raw speed is useless: the harder Flash sprints the more the wind " +
+      "laughs. Harmattan finally stop blaming the wind and play with it, " +
+      "arriving with it the way their motto always promised, and take their " +
+      "first title. Flash, gracious in victory but never once tested in " +
+      "defeat, has to learn the hardest thing she knows: to lose well. " +
+      "Minister Quickfoot, who lost his own record to her and learned to " +
+      "clap, walks her off, and the Republic learns to play the day it is " +
+      "given, not the day it wanted.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {
