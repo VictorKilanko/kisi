@@ -335,6 +335,17 @@ const arcs = [
       ["The story he printed", "So Kola printed a story, just not hers. Not 'Perchgate' (no gate, no gold), but the true one: how a bird tried to turn the paper into a weapon, and how the paper checked and refused. His editorial, one line: 'A paper that checks is not a paper you can use.' A free flock needs an honest paper. Back the Republic at farm.kisi.africa/support."],
     ],
   },
+  {
+    slug: "quietround",
+    title: "The Quiet Round",
+    // CREAM (alternates off scoop GREEN); warm palate cleanser led by the Health Minister
+    slides: [
+      ["The quietest ministry", "The flock jokes the Calm One has the easiest job in Kisi: nothing ever goes wrong at Health, no decrees, no scandals. Dr. Amara lets them joke. Nothing goes wrong because somebody looks before it can, so every dawn she walks her round."],
+      ["The new hen who stood apart", "A new hen came this week and had the hard first days: standing a wing's width from the flock, leaving her feed, saying nothing. Exactly how another frail hen once stood, years ago. But before Dr. Amara could reach her, someone was already there."],
+      ["The case file, grown up", "Quiet Grace, the rescue once given 'weeks,' had opened a corner of her wing for the frightened stranger, the same corner she keeps for every new arrival. The case file nobody expected to thrive is now the first thing that finds a scared bird before trouble does."],
+      ["Why Kisi sleeps easy", "'Welfare first,' says the Calm One, 'and the rest follows.' The calm you feel here isn't luck: it's clean water, room to stand, a minister who looks, and a wing kept open. That quiet care costs real feed. Back the Republic at farm.kisi.africa/support."],
+    ],
+  },
 ];
 
 function smart(s) {
