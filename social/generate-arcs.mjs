@@ -346,6 +346,18 @@ const arcs = [
       ["Why Kisi sleeps easy", "'Welfare first,' says the Calm One, 'and the rest follows.' The calm you feel here isn't luck: it's clean water, room to stand, a minister who looks, and a wing kept open. That quiet care costs real feed. Back the Republic at farm.kisi.africa/support."],
     ],
   },
+  {
+    slug: "windfinal",
+    title: "The Wind Final",
+    theme: "green", // comic sport beat: dramatic intrigue on the green field
+    sell: "shop", // routes the final-slide footer to farm.kisi.africa/eggs
+    slides: [
+      ["The final nobody expected", "The Coop Premier League final: Flash Adaora's unbeaten Solar Queens against Harmattan FC, the side whose answer to every defeat all season was the wind. Nobody gave them a chance. Flash least of all. She wins so well and so often that no one had ever seen her lose."],
+      ["The day the wind came to play", "The final came on the fiercest harmattan in memory, and everything Flash is best at stopped mattering. You can be the fastest bird alive; it won't help when the ball won't sit still. The harder she sprinted, the more the wind laughed. Harmattan, for once, grinned."],
+      ["Arriving with the wind", "Harmattan did the one thing the champions couldn't: they stopped fighting the wind and played with it, letting the gusts carry the ball where their legs couldn't. First title, in a storm of dust. And Flash had to try the hardest thing she knows: lose, and lose well."],
+      ["The question the wind asked", "Quickfoot, who lost his record to her and learned to clap, walked her off: 'Nobody's one leg ahead of the wind today.' Flash congratulated every rival, chin up: 'The wind asked a question back.' You play the day you're given. Order farm eggs at farm.kisi.africa/eggs."],
+    ],
+  },
 ];
 
 function smart(s) {
