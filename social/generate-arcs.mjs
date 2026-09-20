@@ -358,6 +358,17 @@ const arcs = [
       ["The question the wind asked", "Quickfoot, who lost his record to her and learned to clap, walked her off: 'Nobody's one leg ahead of the wind today.' Flash congratulated every rival, chin up: 'The wind asked a question back.' You play the day you're given. Order farm eggs at farm.kisi.africa/eggs."],
     ],
   },
+  {
+    slug: "settlerofperches",
+    title: "The Settler of Perches",
+    // CREAM (alternates off windfinal GREEN); a justice beat with real weight
+    slides: [
+      ["The docket nobody envies", "Every dry season the same case returns to the Supreme Pecking Council: who gets the high rail with the evening sun. This year the shade was crowded for so small a matter. Nobody said why. Everyone remembered the season a perch quarrel went too far."],
+      ["Two hens, one rail", "Both hens were right: one older, with a bad wing, who wanted the warm rail; one who'd held it honestly all season. Chief Justice Yèyé Àlàbá did not hurry. First she fed the whole court: 'No bird is reasonable while hungry.' She could feel the room remembering."],
+      ["The proverb and the second rail", "She rotated the old rail so neither won nor lost, then leaned on what changed: since Cindy's Law, the coop has many good rails, not one. 'A perch you must fight for is a perch there are too few of. We didn't just settle this. We built it smaller.'"],
+      ["Court is risen", "'Court is risen,' she closed. 'Go and share something.' A Republic that once lost a bird to a crowded roost now settles that quarrel with a proverb and a spare rail. That's what Better Housing buys: room to roost. Back it at farm.kisi.africa/support."],
+    ],
+  },
 ];
 
 function smart(s) {
