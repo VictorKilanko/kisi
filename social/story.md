@@ -448,23 +448,45 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   protagonist who chooses not to print) — the way to reuse a recurring villain without repeating the beat is
   to flip who acts and what the theme is.
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 16 are built and
-  queued; the site reveals each arc in step with its IG post day (run so far ends at market-day 09-10,
-  scoop 09-11). Halima's heel turn (rollout #3) is **complete** (Eps 10-13), Eps 14-15 were the **warm
-  reset**, and Ep 16 was **Sweet Beak's next scheme** (vs the press). A plain "execute" should build
-  **Season 2, Ep 17** — best next threads, in priority order:
+- **SEASON 2 Ep 17: "The Quiet Round" — BUILT AND QUEUED (2026-09-20).** A warm palate-cleanser after
+  three schemer arcs (the Sweet Beak run). **First arc led by Dr. Amara "The Calm One" Featherwell**,
+  Minister of Health, whose success is invisible by design: nothing goes wrong, so the flock jokes she has
+  the easiest job in Kisi. The turn honours deep canon: **Quiet Grace**, the frail rescue hen Featherwell
+  once saved (a "case file" once forecast "weeks"), has quietly become the ministry's first responder,
+  opening a corner of her wing to every frightened new arrival before trouble finds them. The rescued
+  became the rescuer; "welfare first, and the rest follows" made flesh. CREAM (alternates off `arc-scoop`
+  GREEN), 4 beats, single date **09-12** (its IG post day; in the past today, so it reveals on deploy),
+  routes to **support** (welfare/vet care: clean water, room, a minister who looks). Live in `timeline.ts`
+  (`arcId: the-quiet-round`, event ids `quiet-ministry`/`quiet-arrival`/`quiet-caseturned`/`quiet-sell`),
+  `content.ts` ARC_META, 4 slides (`arc-quietround-1..4`), caption (2194 chars), staged as `arc-quietround`
+  (the only `staged` post). **Showrunner SHIP (no required fixes)**; applied its one optional note (sharper
+  slide-1 hook, leading with the flock's joke). Art director PASS on all 4. No new character (the newcomer
+  is nameless like the chicks; count stays 28). **Craft note:** the way to give a "quiet" character an arc
+  is to make the *absence of drama* the subject (the worker whose success is invisible), then pay it off
+  with an existing relationship from the bible rather than a new threat.
+  **Go-live status:** committed to `feature/kisi-poultry-republic` and pushed; the `main` ref-move (which
+  triggers the Vercel deploy + the daily IG cron) was **blocked by the harness "merge without review"
+  guard** and awaits the owner. When cleared: move `main` to the feature HEAD (`gh api PATCH` refs/heads/
+  main), verify the 4 image URLs return 200, and the daily cron (06:00 UTC) posts `arc-quietround` next.
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 17 are built and
+  queued; the site reveals each arc in step with its IG post day (run so far ends at scoop 09-11,
+  quietround 09-12). Halima's heel turn (rollout #3) is **complete** (Eps 10-13), Eps 14-15 were the **warm
+  reset**, Ep 16 was **Sweet Beak's next scheme** (vs the press), and Ep 17 was a **warm Featherwell/Grace
+  welfare beat**. A plain "execute" should build **Season 2, Ep 18** — best next threads, in priority order:
   1. **A warm/standing-engine beat** (Coop League fixture with Túndé/Flash/Chi-Chi, an elders/egg beat, a
-     Mama Gold or Dr. Featherwell story, a solar/housing beat) — after a schemer arc, vary the register.
+     Mama Gold or a solar/housing beat) — Ep 17 was already warm, so a sport or league beat varies it;
+     avoid a second consecutive vet/welfare register.
   2. **Sweet Beak's next target again** only if escalated meaningfully (she is now 0-for-4; a smart move is
      to have a scheme nearly *work* for once, or to give her a rival who out-schemes her), OR **Eseosa in
      exile** (careful, dignified).
   3. **The long game:** the tempered crate-sisters bond (Halima/President) can be tested again, but only
      after real in-story time; a too-soon rematch cheapens the Ep 13 payoff.
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream** against the
-  last new arc (last built = `arc-scoop` GREEN, so the next new arc defaults to CREAM); a comic arc can carry
-  green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3 standing hashtags; end on a sell;
-  **date the new arc to the day it will post to IG** (continue the run at 09-12) so the site stays in step;
-  and **assert the manifest caption is < 2,200 chars** (story text ~1,900 max) before staging.
+  last new arc (last built = `arc-quietround` CREAM, so the next new arc defaults to GREEN); a comic arc can
+  carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3 standing hashtags; end on
+  a sell; **date the new arc to the day it will post to IG** (continue the run at 09-13) so the site stays in
+  step; and **assert the manifest caption is < 2,200 chars** (story text ~1,900 max) before staging.
   **When adding a character, bump the chicken-count test in
   `packages/canon/tests/content.test.ts` (now 27).** The arc-count assertion is now a **floor**
   (`toBeGreaterThanOrEqual`), not an exact count, so it no longer needs bumping as each in-story

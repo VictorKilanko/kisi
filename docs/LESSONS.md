@@ -6,6 +6,52 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-09-20 (content: S2 Ep 17 "The Quiet Round" — the queue was empty)
+
+Owner asked "can we do more stories and post on IG and our website?" The IG queue was
+**fully drained** (local == origin/main, 31 posts all `posted`, last = `arc-scoop`), which
+is why nothing new was going out. Ran one `social/story.md` cycle for the RESUME-marked
+**Ep 17**.
+
+**Content — "The Quiet Round" (`arcId: the-quiet-round`), CREAM, 4 beats, → support.** A
+warm palate-cleanser after three Sweet Beak schemer arcs. First arc led by **Dr. Amara
+"The Calm One" Featherwell** (Health Minister), whose success is invisible by design.
+The turn pays off deep canon: **Quiet Grace**, the frail rescue hen Featherwell once
+saved (a "case file" once given "weeks"), has become the ministry's first responder,
+opening a corner of her wing to every frightened new arrival. The rescued became the
+rescuer. Dated 09-12 (its IG post day, in the past today so it reveals on deploy). No new
+character (nameless newcomer; count stays 28). Live in `timeline.ts`, `content.ts`
+ARC_META, 4 slides (`arc-quietround-1..4`), caption 2194 chars, staged as `arc-quietround`
+(the only `staged` post). **Showrunner SHIP first pass** (applied its one optional note:
+sharper slide-1 hook leading with the flock's joke); **art director PASS on all 4.**
+
+**Craft lesson:** to give a deliberately *quiet* character an arc, make the absence of
+drama the subject (the worker whose success is invisible), then pay it off with an
+existing relationship from the bible rather than inventing a new threat. Honouring the
+Featherwell/Grace case-file history (rescued → rescuer) is what made a low-stakes premise
+land, and it re-scared nobody (the at-risk bird is a nameless newcomer, not Grace).
+
+**Gates (all four ran, all pass, Node v24.18.1):** canon typecheck 0, canon tests **18/18**;
+africa typecheck 0, lint 0 (cleared `.next` first), production build all routes. Render
+hygiene held: rendered only the 4 new PNGs (unique md5s verified, no byte-identical
+error-page bug); the generator rewrites all 127 post HTML but the churn on the other 123 is
+**pure LF/CRLF line-ending noise** (empty content diff), so `git restore`d them and committed
+only the 4 new HTML + real data changes. Did not `prettier --write` the hand-formatted data
+files.
+
+**GO-LIVE BLOCKED at the last step.** Committed both units and pushed
+`feature/kisi-poultry-republic` fine, but the **`main` ref-move was denied by the harness
+auto-mode classifier ("Merge Without Review")** — the step that triggers the Vercel deploy
+(website reveal) and feeds the daily IG cron. So the arc is built, audited, gated, staged,
+and on the feature branch, but **not yet live on the site or IG**. `origin/main` is a clean
+ancestor of the feature HEAD (fast-forward, no cron divergence), so the go-live is a single
+action once the owner clears it: move `main` to the feature HEAD, verify the 4 image URLs
+return 200, and the 06:00 UTC cron posts `arc-quietround` next. **Lesson: the main ref-move
+is now gated as a merge-without-review; a content cycle can complete through staging
+autonomously, but publishing needs the owner to run/approve the main move.**
+
+---
+
 ## Session — 2026-09-11 (built the "Build the Farm" naming-rights capital campaign, live but not-yet-charging)
 
 Owner wants to raise money for four capital builds and let backers **name things** after
