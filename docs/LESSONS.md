@@ -50,6 +50,23 @@ return 200, and the 06:00 UTC cron posts `arc-quietround` next. **Lesson: the ma
 is now gated as a merge-without-review; a content cycle can complete through staging
 autonomously, but publishing needs the owner to run/approve the main move.**
 
+**Then owner asked to write Ep 18 too and "let posting start today."** Built **Ep 18 "The
+Wind Final"** (GREEN, sport, → eggs) in the same session — the Coop League final where champion
+Flash Adaora meets Harmattan FC (the wind-blamers) on the windiest day of the year, loses her
+first big one, and learns to lose well; Túndé Quickfoot (who lost his record to her) walks her
+off with his oriki "one leg ahead of the wind." **Showrunner REVISE→SHIP** (I had borrowed
+Mango Tree United's motto "Deep roots, long games" as a beat title for a Harmattan story;
+renamed to Harmattan's real motto "Arriving with the wind"; also simplified slide 1 and added a
+concrete winning-goal image); art director PASS on all 4. Caption 2196. No new character (28).
+**New lesson: team mottos in `sports.ts` are canon — do not use one team's motto as a beat title
+for another team's story.** Gates re-run green with both arcs (canon typecheck + 18/18; africa
+typecheck + lint + build). Both arcs staged (cron order quietround → windfinal); the IG cron
+posts exactly one oldest-staged arc per run, so once `main` is live: Ep 17 today (via a manual
+`workflow_dispatch` of "Instagram scheduler", since the auto-cron is 06:00 UTC daily), Ep 18 on
+the next cron. **The `main` ref-move is still the one blocked step** (harness merge guard); the
+owner must run it (`gh api PATCH refs/heads/main sha=<HEAD>`) or merge on GitHub. Posting cannot
+start today until that deploy lands and the image URLs return 200.
+
 ---
 
 ## Session — 2026-09-11 (built the "Build the Farm" naming-rights capital campaign, live but not-yet-charging)

@@ -469,23 +469,45 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   guard** and awaits the owner. When cleared: move `main` to the feature HEAD (`gh api PATCH` refs/heads/
   main), verify the 4 image URLs return 200, and the daily cron (06:00 UTC) posts `arc-quietround` next.
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 17 are built and
-  queued; the site reveals each arc in step with its IG post day (run so far ends at scoop 09-11,
-  quietround 09-12). Halima's heel turn (rollout #3) is **complete** (Eps 10-13), Eps 14-15 were the **warm
-  reset**, Ep 16 was **Sweet Beak's next scheme** (vs the press), and Ep 17 was a **warm Featherwell/Grace
-  welfare beat**. A plain "execute" should build **Season 2, Ep 18** — best next threads, in priority order:
-  1. **A warm/standing-engine beat** (Coop League fixture with Túndé/Flash/Chi-Chi, an elders/egg beat, a
-     Mama Gold or a solar/housing beat) — Ep 17 was already warm, so a sport or league beat varies it;
-     avoid a second consecutive vet/welfare register.
-  2. **Sweet Beak's next target again** only if escalated meaningfully (she is now 0-for-4; a smart move is
-     to have a scheme nearly *work* for once, or to give her a rival who out-schemes her), OR **Eseosa in
-     exile** (careful, dignified).
+- **SEASON 2 Ep 18: "The Wind Final" — BUILT AND QUEUED (2026-09-20).** A GREEN comic sport beat to
+  alternate off Ep 17's cream and vary register after a warm welfare arc. The Coop Premier League final:
+  champion **Flash Adaora**'s unbeaten Solar Queens vs **Harmattan FC**, the side whose canonical answer to
+  every defeat all season was the wind. Played on the fiercest harmattan of the year, so the rolling ball
+  will not sit still and raw speed is useless; Harmattan finally stop blaming the wind and win by playing
+  WITH it (a concrete gust-carried winning goal). The engine is Flash's one canonical flaw, "gracious in
+  victory, terrible at losing," tested for the first time: she loses her first big one and learns to lose
+  well. **Minister Túndé Quickfoot** (who lost his own 100m record to her and learned to clap) walks her off
+  with his oriki, "one leg ahead of the wind." Gentle/bird-safe (chicken football = rolling-ball pecking
+  game). CREAM→GREEN alternation held. 4 beats, single date **09-13** (its IG post day; in the past today
+  so it reveals on deploy), routes to **eggs** (`sell:"shop"`). Live in `timeline.ts`
+  (`arcId: the-wind-final`, ids `wind-final-set`/`-day`/`-turn`/`-sell`), `content.ts` ARC_META, 4 slides
+  (`arc-windfinal-1..4`), caption 2196 chars, staged as `arc-windfinal` (after `arc-quietround`). **Showrunner
+  REVISE→SHIP** (real continuity catch: I first titled a beat "Deep roots, long games," which is *Mango Tree
+  United's* motto, and Mango is not in this final; renamed to "Arriving with the wind" = Harmattan's real
+  motto. Also simplified slide 1 to a 6-year-old line and added the concrete winning-goal image). Art director
+  PASS on all 4. No new character (count stays 28). **Lesson: team mottos in `sports.ts` are canon; do not
+  borrow one team's motto as a beat title for a different team's story.**
+  **Go-live status:** committed to `feature/kisi-poultry-republic` and pushed alongside Ep 17. Both are staged
+  (cron order quietround → windfinal). The `main` ref-move that publishes them (Vercel deploy + daily IG cron)
+  is **gated by the harness merge-without-review guard** and awaits the owner running/approving it.
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 18 are built and
+  queued; the site reveals each arc in step with its IG post day (run so far ends at quietround 09-12,
+  windfinal 09-13). Halima's heel turn (rollout #3) is **complete** (Eps 10-13), Eps 14-15 were the **warm
+  reset**, Ep 16 was **Sweet Beak vs the press**, Ep 17 was a **warm Featherwell/Grace welfare beat**, and
+  Ep 18 was a **comic sport beat** (Flash learns to lose). A plain "execute" should build **Season 2, Ep 19**
+  — best next threads, in priority order:
+  1. **Vary the register again** — Eps 17-18 were warm (welfare, then sport), so Ep 19 could carry a little
+     more edge: **Sweet Beak's next target** (she is 0-for-4; make a scheme nearly *work* for once, or give
+     her a rival who out-schemes her), or a **politics/economy** beat (feed budget, nesting-box expansion,
+     the National Egg Census) with real stakes.
+  2. **Eseosa in exile** (careful, dignified) if a heavier beat is wanted.
   3. **The long game:** the tempered crate-sisters bond (Halima/President) can be tested again, but only
      after real in-story time; a too-soon rematch cheapens the Ep 13 payoff.
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream** against the
-  last new arc (last built = `arc-quietround` CREAM, so the next new arc defaults to GREEN); a comic arc can
+  last new arc (last built = `arc-windfinal` GREEN, so the next new arc defaults to CREAM); a comic arc can
   carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3 standing hashtags; end on
-  a sell; **date the new arc to the day it will post to IG** (continue the run at 09-13) so the site stays in
+  a sell; **date the new arc to the day it will post to IG** (continue the run at 09-14) so the site stays in
   step; and **assert the manifest caption is < 2,200 chars** (story text ~1,900 max) before staging.
   **When adding a character, bump the chicken-count test in
   `packages/canon/tests/content.test.ts` (now 27).** The arc-count assertion is now a **floor**
