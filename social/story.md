@@ -491,24 +491,44 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   (cron order quietround → windfinal). The `main` ref-move that publishes them (Vercel deploy + daily IG cron)
   is **gated by the harness merge-without-review guard** and awaits the owner running/approving it.
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 18 are built and
-  queued; the site reveals each arc in step with its IG post day (run so far ends at quietround 09-12,
-  windfinal 09-13). Halima's heel turn (rollout #3) is **complete** (Eps 10-13), Eps 14-15 were the **warm
-  reset**, Ep 16 was **Sweet Beak vs the press**, Ep 17 was a **warm Featherwell/Grace welfare beat**, and
-  Ep 18 was a **comic sport beat** (Flash learns to lose). A plain "execute" should build **Season 2, Ep 19**
-  — best next threads, in priority order:
-  1. **Vary the register again** — Eps 17-18 were warm (welfare, then sport), so Ep 19 could carry a little
-     more edge: **Sweet Beak's next target** (she is 0-for-4; make a scheme nearly *work* for once, or give
-     her a rival who out-schemes her), or a **politics/economy** beat (feed budget, nesting-box expansion,
-     the National Egg Census) with real stakes.
-  2. **Eseosa in exile** (careful, dignified) if a heavier beat is wanted.
-  3. **The long game:** the tempered crate-sisters bond (Halima/President) can be tested again, but only
-     after real in-story time; a too-soon rematch cheapens the Ep 13 payoff.
+- **SEASON 2 Ep 19: "The Settler of Perches" — BUILT AND QUEUED (2026-09-20).** A CREAM political/justice
+  beat to alternate off windfinal GREEN and add weight after two warm arcs. First arc led by **Chief Justice
+  Yèyé Àlàbá "The Settler of Perches"** (rules in proverbs, sole arbiter of the annual Best Perch dispute,
+  closes "Court is risen. Go and share something."). The annual Best Perch dispute returns; two nameless
+  hens both have a fair claim. Real stakes handled with dignity: the perch quarrel is the same conflict that
+  once turned fatal (Cindy, Season 1), so the court is full and remembering. The hopeful turn: since **Cindy's
+  Law** (Better Housing) rebuilt the coop with many good perches, the quarrel is smaller than it used to be,
+  settled by a proverb and a spare rail. Cindy referenced ONLY via her Law (dignified, off-page). 4 beats,
+  single date **09-14** (its IG post day; in the past today so it reveals on deploy), routes to **support**
+  (Better Housing). Live in `timeline.ts` (`arcId: the-settler-of-perches`, ids `perch-docket`/`-two-hens`/
+  `-ruling`/`-sell`), `content.ts` ARC_META, 4 slides (`arc-settlerofperches-1..4`), caption 2150, staged as
+  `arc-settlerofperches` (after `arc-windfinal`). **Showrunner SHIP** first pass (praised the exact Cindy/
+  Eseosa-trial continuity; applied its 2 optional polishes: slide-2 reading level, a felt image at the
+  resolution). Art director PASS on all 4 (Yoruba accents render clean). No new character (count stays 28).
+  **Lesson: a "quiet"/elder character earns an arc when the *absence of drama* is the subject; here the
+  Republic's growth (Cindy's Law) is what defuses the old fatal quarrel, which lets the loss carry weight
+  without being re-litigated.**
+  **Go-live status:** committed to `feature/kisi-poultry-republic`, merged `origin/main` (the cron's
+  quietround-posted commit) back in so the branch fast-forwards, pushed. The `main` ref-move (Vercel deploy +
+  IG cron) is owner-run (harness merge guard). See [[kisi-golive-oneliner-handoff]].
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 19 are built and
+  queued; the site reveals each arc in step with its IG post day (run so far ends at windfinal 09-13,
+  settlerofperches 09-14). Recent register: Ep 16 Sweet Beak vs press, Ep 17 warm welfare (Featherwell/
+  Grace), Ep 18 comic sport (Flash learns to lose), Ep 19 political/justice (Yèyé Àlàbá, Better Housing).
+  A plain "execute" should build **Season 2, Ep 20** — best next threads, in priority order:
+  1. **A warm/standing-engine beat** to vary off Ep 19's weight: a Coop League fixture, a Mama Gold / senior-
+     hen beat, an egg-economy or feed beat, a solar beat. GREEN by alternation.
+  2. **Sweet Beak's next target** only if escalated meaningfully (she is 0-for-4; a scheme that nearly
+     *works*, or a rival who out-schemes her), OR **Eseosa in exile** (careful, dignified).
+  3. **The long game:** the tempered crate-sisters bond (Halima/President), only after real in-story time.
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream** against the
-  last new arc (last built = `arc-windfinal` GREEN, so the next new arc defaults to CREAM); a comic arc can
-  carry green as "dramatic intrigue"; keep the 6-year-old clarity rule; add the 3 standing hashtags; end on
-  a sell; **date the new arc to the day it will post to IG** (continue the run at 09-14) so the site stays in
-  step; and **assert the manifest caption is < 2,200 chars** (story text ~1,900 max) before staging.
+  last new arc (last built = `arc-settlerofperches` CREAM, so the next new arc defaults to GREEN); keep the
+  6-year-old clarity rule; add the 3 standing hashtags; end on a sell; **date the new arc to the day it will
+  post to IG** (continue the run at 09-15) so the site stays in step; and **assert the manifest caption is
+  < 2,200 chars** (story text ~1,900 max) before staging. **Remember to sync the manifest from origin/main
+  before staging** (the cron marks arcs posted on main) and **merge origin/main into the branch before the
+  go-live** so the `main` fast-forward works. Owner-run go-live: hand over the one-line paste ([[kisi-golive-oneliner-handoff]]).
   **When adding a character, bump the chicken-count test in
   `packages/canon/tests/content.test.ts` (now 27).** The arc-count assertion is now a **floor**
   (`toBeGreaterThanOrEqual`), not an exact count, so it no longer needs bumping as each in-story
