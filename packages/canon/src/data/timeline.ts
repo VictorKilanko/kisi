@@ -2451,4 +2451,195 @@ export const timelineEvents: TimelineEvent[] = [
       "build the next coop to Cindy's Law. Back the Better Housing campaign " +
       "at farm.kisi.africa/support.",
   },
+
+  // ARC: The Far Side's First Watch (Season 2, Ep 20) — a GREEN coming-of-age security
+  // beat, alternating off settlerofperches CREAM. Lead: young Small Fẹ́mi "The Far Side"
+  // (canon: Drain survivor, last of the twelve out of Coop Two because he went back for a
+  // chick who froze; wants to be a coop guard; Sergeant Danladi told him to "finish growing
+  // first"; already walks the fence on Saturdays "where nobody can see him"). Mentor:
+  // Sergeant Danladi "Second Shift" (does the dusk whistle every night, never missed one,
+  // quietly carries Bantu's loss). Both are birds who came back for someone. The job is not
+  // about size; it is about a true answer over a kind one (Fẹ́mi's canon quote) and counting
+  // by name (Pete Okpara's canon rule). Bantu referenced with dignity (memorial, off-page).
+  // Gentle: the night's scare is harmless (a branch, drain still barred), no predator on-page.
+  // No new character (count stays 28). Single date 09-15 (past today, reveals on deploy),
+  // routes to support.
+  {
+    id: "watch-saturday",
+    chickenIds: ["small-femi", "sergeant-danladi"],
+    date: "2026-09-15",
+    arcId: "the-far-sides-first-watch",
+    world: "fiction",
+    type: "custom",
+    title: "The Saturday nobody was supposed to see",
+    body:
+      "Every Saturday, Small Fẹ́mi walks the fence line at a distance, where " +
+      "he is certain nobody can see him, and everybody can. He has announced, " +
+      "more than once and to anyone slow enough to be caught, that he intends " +
+      "to be a coop guard. Sergeant Danladi keeps telling him the same thing, " +
+      "finish growing first, in the flat voice of a bird who says it to end " +
+      "the conversation. But Danladi does the dusk whistle every night of his " +
+      "life and has never once missed it, and a bird who watches that closely " +
+      "notices things. He had noticed that the smallest of the twelve who " +
+      "came out of Coop Two, the one who went back for the chick that froze, " +
+      "was out on that fence in the cold every single Saturday, learning it " +
+      "by heart, asking nobody's permission.",
+  },
+  {
+    id: "watch-trial",
+    chickenIds: ["sergeant-danladi", "small-femi"],
+    date: "2026-09-15",
+    arcId: "the-far-sides-first-watch",
+    world: "fiction",
+    type: "custom",
+    title: "One night, on trial",
+    body:
+      "So one evening Danladi did a thing he does not do. He let the boy come " +
+      "onto the second shift, once, on trial. Not because Small Fẹ́mi had " +
+      "finished growing, which he had not, but because Danladi had learned a " +
+      "long time ago, at a water tank, on a night he does not discuss, that " +
+      "the job was never about size. It is about who comes back for the one " +
+      "who froze. He gave the boy a single task, the one Minister Okpara " +
+      "built the whole ministry on: the roll at the coop doors, out loud, by " +
+      "name. 'A number can be wrong quietly,' Danladi said, the way he had " +
+      "heard it said. 'A name cannot. Count them by name.'",
+  },
+  {
+    id: "watch-noise",
+    chickenIds: ["small-femi", "sergeant-danladi"],
+    date: "2026-09-15",
+    arcId: "the-far-sides-first-watch",
+    world: "fiction",
+    type: "custom",
+    title: "A true answer, not a kind one",
+    body:
+      "It came, of course, the way it always comes to a first watch: a noise " +
+      "in the dark, out past the barred drain, and the whole old fear stood " +
+      "up in Small Fẹ́mi's chest at once, because he of all birds knows what " +
+      "once came up that channel. A lesser guard would have raised the coop " +
+      "in a panic, or, worse, said nothing and hoped. Small Fẹ́mi did neither. " +
+      "He went and looked, the way he had looked from the far side of Coop " +
+      "Two, and came back and gave the report exactly as it was: a fallen " +
+      "branch on the wire, nothing more, the drain still barred, all present. " +
+      "'I would rather give a true answer,' he said, a little out of breath, " +
+      "'than a kind one.' Danladi, who has spent his life on that fence, " +
+      "looked at the boy a long moment. That was the whole job, and the child " +
+      "had just done it.",
+  },
+  {
+    id: "watch-whistle",
+    chickenIds: ["sergeant-danladi", "small-femi"],
+    date: "2026-09-15",
+    arcId: "the-far-sides-first-watch",
+    world: "fiction",
+    type: "custom",
+    title: "The whistle, held for one night",
+    body:
+      "Danladi made him a probationary watcher, second shift, and gave no " +
+      "speech, because he is not a bird who makes speeches. He simply handed " +
+      "Small Fẹ́mi the dusk whistle, the one Danladi has never once let " +
+      "another bird carry, and told him to sound it tonight, and to be early. " +
+      "Two guards walk that fence now, one old and one still growing, and " +
+      "both of them are birds who once came back for someone. This is the " +
+      "quiet work that lets a whole flock sleep: a watched fence, a barred " +
+      "drain, a coop built sound, and a roll called by name at the door. It " +
+      "costs real feed and real building, every single night. That is what " +
+      "the Better Housing campaign pays for: coops built sound and drains " +
+      "barred, so the birds who guard them have less to fear. Back the Better " +
+      "Housing campaign at farm.kisi.africa/support.",
+  },
+
+  // ARC: The New Verse (Season 2, Ep 21) — a CREAM culture/community beat, alternating off
+  // femi GREEN. Lead: Sadé "The Griot" Ogúnlèsì (Minister of Culture, keeper of the Kisi
+  // Songbook; canon: "A nation that sings together has already agreed on something" and
+  // "Forget the argument. Remember the song."; sets Mama Gold's histories to music).
+  // Co-lead: VP Baba Ṣẹ́gun "The Dawn Himself" (canon: the Songbook's first page is his
+  // 4:45 a.m. arrangement by unbreakable tradition; he and Sadé "argue about tempo the way
+  // old friends argue, fondly and forever"). Warm ensemble comedy: the flock argues tempo,
+  // and the griot writes a verse that changes tempo so everyone is in it. Sell tie: the new
+  // verse honours the working hens who rise and lay every morning; the song is free, the
+  // eggs are not. No new character (count stays 28). Single date 09-16 (past today, reveals
+  // on deploy), routes to eggs.
+  {
+    id: "verse-needed",
+    chickenIds: ["sade-griot"],
+    date: "2026-09-16",
+    arcId: "the-new-verse",
+    world: "fiction",
+    type: "custom",
+    title: "The Songbook needs a page",
+    body:
+      "Sadé the Griot, who keeps the Kisi Songbook and has never once let a " +
+      "story die for want of a singer, decided the Republic needed a new " +
+      "verse. The old book ended a while ago and life had gone right on " +
+      "happening without asking the book's permission: a coop rebuilt to " +
+      "Cindy's Law, the first big crates gone to market, a fence walked by " +
+      "two guards now instead of one. 'A nation that sings together,' she " +
+      "reminded anyone who would listen, and everyone always listens to " +
+      "Sadé, 'has already agreed on something. And lately we have a great " +
+      "deal worth agreeing on.' So she called the flock to the mango tree to " +
+      "write the newest verse of the Republic together, which is where the " +
+      "trouble started, because everyone had opinions.",
+  },
+  {
+    id: "verse-tempo",
+    chickenIds: ["baba-segun", "sade-griot"],
+    date: "2026-09-16",
+    arcId: "the-new-verse",
+    world: "fiction",
+    type: "custom",
+    title: "Everyone wants their line",
+    body:
+      "The trouble, as ever, was tempo. Vice President Baba Ṣẹ́gun, The Dawn " +
+      "Himself, whose 4:45 a.m. arrangement is by unbreakable tradition the " +
+      "Songbook's very first page, insisted the new verse open slow and " +
+      "grand, at the pace of a rooster calling up the sun. The young birds " +
+      "wanted it fast enough to run to. The elders wanted it slow enough to " +
+      "actually remember. Baba and Sadé argued about it the way the two old " +
+      "friends argue about everything, which is to say fondly, loudly, and " +
+      "forever. The whole mango tree took sides. It was, briefly, the least " +
+      "harmonious a song has ever made anyone. 'Forget the argument,' Sadé " +
+      "said at last, in the voice that can silence the Assembly with one " +
+      "note. 'Remember the song.'",
+  },
+  {
+    id: "verse-written",
+    chickenIds: ["sade-griot", "baba-segun"],
+    date: "2026-09-16",
+    arcId: "the-new-verse",
+    world: "fiction",
+    type: "custom",
+    title: "The verse that changes tempo",
+    body:
+      "Then she did what only a griot can do: instead of choosing a tempo, " +
+      "she wrote one that moves. The verse opens exactly where the tradition " +
+      "says it must, slow and grand on Baba's dawn note, so The Dawn Himself " +
+      "got his opening and beamed like the sunrise he challenges. Then it " +
+      "quickens for the young birds' line, and eases again, wide and " +
+      "unhurried, for the elders to carry home. Everyone is in it, and no " +
+      "one had to lose to be there. That dusk the whole flock sang the new " +
+      "verse together under the mango tree, from the Vice President down to " +
+      "the smallest chick on Grace's side, and for the length of one song " +
+      "the entire Republic agreed on something, which around here is its own " +
+      "kind of miracle.",
+  },
+  {
+    id: "verse-sell",
+    chickenIds: ["sade-griot"],
+    date: "2026-09-16",
+    arcId: "the-new-verse",
+    world: "fiction",
+    type: "custom",
+    title: "What the song is about",
+    body:
+      "And what is the new verse about, when you get past the dawn note and " +
+      "the arguing? The plainest thing in the Republic, and the one that " +
+      "holds up all the rest: the working hens who get up every single " +
+      "morning, in the windy weeks and the kind ones, and lay. No decree " +
+      "runs without them. No song does either. 'The singing is free,' Sadé " +
+      "said, tucking the new page into the Songbook where it belongs. 'The " +
+      "grain that keeps the singers going is not.' If you would like to keep " +
+      "this flock in full voice, the best thing you can do is buy what they " +
+      "make. Order farm-fresh eggs from the flock at farm.kisi.africa/eggs.",
+  },
 ];

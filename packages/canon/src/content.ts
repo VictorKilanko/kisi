@@ -395,6 +395,42 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "proverb and a spare rail, which is what Better Housing really buys: " +
       "peace, fewer fights, and room to roost.",
   },
+  "the-far-sides-first-watch": {
+    title: "The Far Side's First Watch",
+    summary:
+      "Young Small Fẹ́mi, the Drain survivor who went back for the chick that " +
+      "froze, wants to be a coop guard, and Sergeant Danladi keeps telling " +
+      "him to finish growing first. But Danladi, who does the dusk whistle " +
+      "every night and has never missed one, has noticed the boy walking the " +
+      "fence alone every Saturday, and one evening he lets him onto the " +
+      "second shift on trial. The job is not about size, it is about who " +
+      "comes back for the one who froze, who counts the flock by name, and " +
+      "who gives a true answer over a kind one. When a noise comes out of " +
+      "the dark past the barred drain, Small Fẹ́mi does not panic and does " +
+      "not hide it: he looks, and reports it exactly, a branch on the wire, " +
+      "the drain still barred, all present. Danladi makes him a probationary " +
+      "watcher and hands him the dusk whistle for one night. Two guards walk " +
+      "the fence now, one old and one still growing, both birds who once " +
+      "came back for someone.",
+  },
+  "the-new-verse": {
+    title: "The New Verse",
+    summary:
+      "So much has happened to the Republic lately, a coop rebuilt to " +
+      "Cindy's Law, the first crates gone to market, a fence walked by two " +
+      "guards, that Sadé the Griot decides the Kisi Songbook needs a new " +
+      "verse, and calls the flock to the mango tree to write it together. " +
+      "The trouble, as ever, is tempo: Vice President Baba Ṣẹ́gun wants it " +
+      "slow and grand on his dawn note, the young want it fast, the elders " +
+      "want it slow enough to remember, and the two old friends argue about " +
+      "it fondly and forever. Then the griot does what only a griot can: " +
+      "instead of choosing a tempo she writes one that moves, opening on " +
+      "Baba's dawn note, quickening for the young, easing for the elders, so " +
+      "everyone is in it and no one has to lose to be there. The whole flock " +
+      "sings it together at dusk, and for the length of one song the Republic " +
+      "agrees on something. What the verse is about is the plainest thing of " +
+      "all: the working hens who rise every morning and lay.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {
