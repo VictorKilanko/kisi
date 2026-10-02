@@ -53,9 +53,26 @@ that marker at the end of every cycle (mark the arc built/queued, set the next o
 
 ---
 
+## Stage 0 — PITCH THE TOPICS FIRST (owner rule, 2026-10-02)
+
+Before writing, **pitch the candidate story topics to the owner and get a pick.** Pull
+the shape from the RESUME marker and the open threads, give each option a one-line
+logline, recommend one, and wait for the choice. Do not write a full arc unsolicited;
+"execute" means "start the cycle," and the cycle now starts with the pitch.
+
 ## Stage 1 — WRITE (the writers' room)
 
 Write like a top screenwriter breaking a story, not like a bot filling a template.
+
+**FLOW IS A HARD RULE (owner, 2026-10-02).** The owner read the stories and found most of
+them flowed badly, "like they are AI-written and not human." Every story, the richer
+website body AND the tight IG slide copy, must **read as if a human screenwriter wrote it**.
+Kill these tells: a run of same-length sentences; every beat opening the same way; narrator
+scaffolding as a crutch ("then she did what only a griot can do," "it was, briefly, the
+most X"); tidy symmetrical clause pairs; telling a feeling instead of showing a moment; the
+"not just X, it's Y" cadence; em-dashes and the other signposts in [[no-ai-writing-signposts]].
+Vary sentence length and rhythm. Let a line land short. Read every beat out loud in your
+head before you keep it. This is checked again in Stage 2.5.
 
 1. **Choose the shape.** Decide the piece: a multi-slide **arc** (the main unit, 2 to 5
    beats), a **cast intro** (a single new face), or a **Coop Times** news beat (a single
@@ -91,6 +108,17 @@ voice, drama quality, house style, and the funnel rule.
 - **SHIP:** proceed.
 - **REVISE:** apply every fix, then re-run the showrunner until SHIP.
 - **BLOCK:** the premise breaks continuity or a character. Rework the story, do not force it.
+
+## Stage 2.5 — AUDIT FLOW & HUMAN VOICE (owner rule, 2026-10-02)
+
+A separate read, focused only on one question: **does this sound like a human wrote it, and
+does it flow?** The showrunner checks continuity, voice, and the funnel; this pass checks
+rhythm and clarity. Run it on both the website bodies and the slide copy. Either do it with a
+dedicated subagent (a `general-purpose` or `fork` agent briefed as a tough line editor) or as
+a deliberate out-loud read against the tells listed in Stage 1. Fix every stiff line, every
+repeated sentence shape, every bit of narrator scaffolding, and re-read until it flows.
+**Do not finalize the post design or stage anything for the website/IG until this passes.**
+This stage is non-optional; the owner added it because the earlier batches read robotic.
 
 ## Stage 3 — PUBLISH TO THE WEBSITE
 

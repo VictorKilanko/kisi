@@ -431,6 +431,30 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "agrees on something. What the verse is about is the plainest thing of " +
       "all: the working hens who rise every morning and lay.",
   },
+  "the-honourable-thief": {
+    title: "The Honourable Thief",
+    summary:
+      "Ládùn 'Sweet Beak' still wants a ministry. Four schemes have ended " +
+      "with the whole Republic laughing at her, and she has worked out why: " +
+      "she keeps asking a flock that likes to see things to believe a rumour. " +
+      "So this time she goes hunting for proof, and sets her sights on Tadé " +
+      "the Foraging Master, Minister of Youth and Chick Development. Every " +
+      "evening Tadé gathers the chicks' leftovers so none is wasted and " +
+      "carries them off past the water tank, and Ládùn twists that gentle " +
+      "habit into a crime: she brings witnesses to a real, hidden store of " +
+      "grain that is plainly his. For once the flock does not laugh. It goes " +
+      "quiet, and so do the chicks, watching their teacher accused of taking " +
+      "more than his share. The one who puts it right is the smallest chick " +
+      "in his class, not a newspaper and not a court: that pile is the " +
+      "lean-week store, the food Tadé saves all season so no chick goes " +
+      "hungry before the rains. What looked like theft was his gift to the " +
+      "chicks the whole time. Tadé is cleared, but no one feels like " +
+      "cheering, because for one afternoon the Republic believed the worst of " +
+      "the bird who feeds its children, and shame like that does not brush " +
+      "off. Ládùn slips off into the long grass, uncaught and unashamed, a " +
+      "little more dangerous for having learned that proof travels further " +
+      "than a whisper.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {

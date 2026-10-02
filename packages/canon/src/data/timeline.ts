@@ -2642,4 +2642,96 @@ export const timelineEvents: TimelineEvent[] = [
       "this flock in full voice, the best thing you can do is buy what they " +
       "make. Order farm-fresh eggs from the flock at farm.kisi.africa/eggs.",
   },
+  {
+    id: "thief-question",
+    chickenIds: ["ladun-sweet-beak", "tade-foraging"],
+    date: "2026-09-17",
+    arcId: "the-honourable-thief",
+    world: "fiction",
+    type: "custom",
+    title: "A sweet little question",
+    body:
+      "Ládùn still wanted a ministry. Four schemes had ended with the whole " +
+      "Republic laughing at her, and she had finally worked out why: her " +
+      "plans were clever enough, but she kept asking a flock that liked to " +
+      "see things to swallow a rumour instead. So this time she went hunting " +
+      "for something they could see with their own eyes, and she found it in " +
+      "Tadé, the Foraging Master, Minister of Youth and Chick Development, " +
+      "whose seat she had decided would suit her nicely. Every evening Tadé " +
+      "did the same quiet thing. He gathered up whatever the chicks had left, " +
+      "so none of it went to waste, and carried it off toward the range where " +
+      "the grown birds rarely go. Anyone who knew him saw a teacher feeding " +
+      "his class. Ládùn saw her chance. 'Where does all that feed go?' she " +
+      "wondered aloud one afternoon, sweet as morning and just loud enough, " +
+      "and the way she wondered it, the doubt felt like your own idea.",
+  },
+  {
+    id: "thief-proof",
+    chickenIds: ["ladun-sweet-beak", "tade-foraging"],
+    date: "2026-09-17",
+    arcId: "the-honourable-thief",
+    world: "fiction",
+    type: "custom",
+    title: "This time, she brought proof",
+    body:
+      "This time Ládùn did not spread a rumour at all. She brought witnesses. " +
+      "She led two of the most respected hens in the Republic out past the " +
+      "water tank and showed them, waiting exactly where she had promised, a " +
+      "real store of grain and good scraps, gathered and hidden and plainly " +
+      "Tadé's. The grain was really there, and it was really his, and nobody " +
+      "could pretend otherwise. For the first time in her scheming life, the " +
+      "flock did not laugh. It went quiet, which is worse. Even the chicks " +
+      "went quiet, the ones who line up every morning to be taught that " +
+      "nothing good should ever be wasted, and now watched their own teacher " +
+      "stand accused of keeping more than his share. Ládùn had never been " +
+      "closer to a seat.",
+  },
+  {
+    id: "thief-cache",
+    chickenIds: ["tade-foraging", "ronke-owambe"],
+    date: "2026-09-17",
+    arcId: "the-honourable-thief",
+    world: "fiction",
+    type: "custom",
+    title: "What the store was for",
+    body:
+      "The one who put it right was the smallest chick in Tadé's class. She " +
+      "did not make a speech. She tugged a grown hen's wing and said it " +
+      "plain: 'That is not stealing. That is the lean-week store.' The pile " +
+      "behind the water tank was the spot Tadé had been quietly filling all " +
+      "season, so that when the hard weeks before the rains arrived, no chick " +
+      "would go to roost hungry. In class he teaches you to find the good " +
+      "spot before your instructor does, and then he teaches you the harder " +
+      "half of it: once you have found the good spot, save some for the " +
+      "hungry days. Rọ́nkẹ́, who runs the Reconciliation Bench on the belief " +
+      "that it is one flock and many feathers, stepped up beside him, because " +
+      "she had helped carry half that grain out there herself. The store had " +
+      "never been taken from a single bird. It was Tadé's gift to the chicks, " +
+      "the way it always had been, and Ládùn's best scheme yet fell apart on " +
+      "the truth, the one thing she had not planned for.",
+  },
+  {
+    id: "thief-sell",
+    chickenIds: ["tade-foraging", "ladun-sweet-beak"],
+    date: "2026-09-17",
+    arcId: "the-honourable-thief",
+    world: "fiction",
+    type: "custom",
+    title: "What it cost",
+    body:
+      "Tadé was cleared before the sun went down. No one felt like cheering. " +
+      "For one whole afternoon the Republic had let " +
+      "itself believe the worst of the bird who feeds its children, and shame " +
+      "like that does not brush off like dust. He forgave it the way he " +
+      "forgives a wrong answer in class, gently and without a speech, and " +
+      "then he said the one hard thing he said all day: a store you can build " +
+      "back in a week, but trust takes a good deal longer. Ládùn slipped away " +
+      "through the long grass. No one had caught her, and she was not sorry " +
+      "one bit, and she left more dangerous than she came, because she had " +
+      "learned the thing she will use again: proof travels further than a " +
+      "whisper. The lean-week store " +
+      "still stands behind the water tank. Keeping the youngest birds fed " +
+      "through the hard weeks takes real grain, so if you would like to help " +
+      "keep it full, back the flock at farm.kisi.africa/support.",
+  },
 ];

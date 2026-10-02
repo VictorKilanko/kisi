@@ -391,6 +391,17 @@ const arcs = [
       ["What the song is about", "And the verse? The plainest thing in the Republic: the working hens who rise every morning and lay. No decree runs without them, and no song either. 'The singing is free,' said Sadé. 'The grain is not.' Order farm-fresh eggs at farm.kisi.africa/eggs."],
     ],
   },
+  {
+    slug: "thief",
+    title: "The Honourable Thief",
+    theme: "green", // Sweet Beak #5: a frame that nearly works; real stakes on the green field
+    slides: [
+      ["A sweet little question", "Ládùn wanted a ministry. After four schemes the flock laughed off, she stopped whispering and went for proof. She watched Tadé carry the chicks' leftovers past the water tank, as he does so none is wasted. 'Where does all that feed go?' she asked, sweetly."],
+      ["This time, she brought proof", "This time she brought witnesses. Ládùn walked two respected hens to a store of grain hidden past the water tank, plainly Tadé's. The flock did not laugh. It went quiet. So did the chicks, watching their teacher accused of taking more than his share."],
+      ["What the store was for", "The smallest chick in class said it plain: 'That is not stealing. It is the lean-week store.' It is where Tadé saves food so no chick goes hungry before the rains. Find the good spot, he teaches, then save some. The proof of theft was proof of his kindness."],
+      ["What it cost", "Tadé was cleared by sundown, and no one felt like cheering. For one day the flock believed the worst of the bird who feeds its chicks. He forgave them: a store rebuilds fast, trust does not. Keep the youngest fed. Back the flock at farm.kisi.africa/support."],
+    ],
+  },
 ];
 
 function smart(s) {

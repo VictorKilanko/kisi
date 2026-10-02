@@ -1577,3 +1577,27 @@ Lessons from this pass:
 - Never write the private local path (`C:\Users\victo\...`) into any committed file.
 - Never commit secrets or `.env` files.
 - Re-read `CLAUDE.md` and `docs/PROGRESS.md` at the start of each session.
+
+## Session 2026-09-25 — Character mask reference sheets
+
+- Built `characters/` for the stage-play mask makers: one 1600x1200 PNG per
+  character (Dede, Zizi, Kola Quill, President Adédoyin, VP Baba Ṣẹ́gun, Halima).
+- Each sheet = face-on head + official site portrait + exact palette (hex) +
+  feature/comb/sex notes. Consistency guaranteed by reusing the site's own
+  ChickenPortrait SVG geometry and the real `packages/canon` colour records; Dede
+  uses his actual `social/assets/dede.svg` avatar and points to `dede_costume.png`.
+- Pipeline mirrors the social brand assets: `node characters/build.mjs` then
+  `pwsh characters/render.ps1` (headless Chrome, no installs). Regenerate if a
+  character's palette changes on the site.
+
+## Session 2026-10-02 — Flow standing order + pitch-first
+
+- Owner read the stories and said most "have bad flow, like they are AI-written and
+  not human." Standing order added: every story (website body AND IG slide copy) must
+  flow well and read human-written. Encoded in `social/story.md` (Stage 1 flow rule +
+  new Stage 2.5 flow/clarity audit) and memory `no-ai-writing-signposts`.
+- New cycle rule: pitch the candidate topics to the owner and get a pick BEFORE
+  writing (Stage 0). "Execute" starts with the pitch, not a finished arc.
+- Flow tells to kill: runs of same-length sentences; every beat opening the same way;
+  narrator scaffolding as a crutch; tidy symmetrical clause pairs; telling a feeling
+  instead of showing it. Vary rhythm; let lines land short; read out loud.
