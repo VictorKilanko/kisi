@@ -540,21 +540,42 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   quietround-posted commit) back in so the branch fast-forwards, pushed. The `main` ref-move (Vercel deploy +
   IG cron) is owner-run (harness merge guard). See [[kisi-golive-oneliner-handoff]].
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 19 are built and
-  queued; the site reveals each arc in step with its IG post day (run so far ends at windfinal 09-13,
-  settlerofperches 09-14). Recent register: Ep 16 Sweet Beak vs press, Ep 17 warm welfare (Featherwell/
-  Grace), Ep 18 comic sport (Flash learns to lose), Ep 19 political/justice (Yèyé Àlàbá, Better Housing).
-  A plain "execute" should build **Season 2, Ep 22** — best next threads, in priority order:
-  1. **Vary the register** — Eps 17-21 have been mostly warm/standing-engine (welfare, sport, justice,
-     security, culture). Ep 22 can carry more edge: **Sweet Beak's next target** (she is 0-for-4; a scheme
-     that nearly *works* for once, or a rival who out-schemes her), or a **politics/economy** beat (feed
-     budget, National Egg Census) with real stakes. GREEN by alternation.
+- **SEASON 2 Ep 22: "The Honourable Thief" — BUILT AND QUEUED (2026-10-02).** Villain rollout #2 escalation,
+  the owner-picked "Sweet Beak nearly wins." Ládùn (0-for-4) stops whispering and brings **real proof**: she
+  twists **Tadé the Foraging Master**'s honest habit (gathering the chicks' leftovers so none is wasted,
+  stashing a lean-week food store past the water tank) into a hoarding frame and targets his Youth & Chick
+  ministry seat. For the first time the flock does not laugh; it goes quiet. The turn comes from **the smallest
+  chick in his class** (quoted child line, not Kola, deliberately breaking the Ep 2/13/16 "Kola exposes her"
+  pattern), with **Rọ́nkẹ́** confirming: the "theft" was the lean-week store all along. The cost: the flock's
+  shame at doubting the bird who feeds its chicks, and Sweet Beak slips off "uncaught and unashamed," having
+  learned proof travels further than a whisper (recurring, scarier). GREEN, 4 beats, dated **09-17**, routes to
+  **support**. Live in `timeline.ts` (`arcId: the-honourable-thief`, ids thief-question/proof/cache/sell),
+  `content.ts` ARC_META, 4 slides (`arc-thief-1..4`), caption 1,922 story / 2,156 total, staged as `arc-thief`
+  (cron order firstwatch → newverse → thief). **Owner added a FLOW standing order this cycle** (stories must read
+  human; see Stage 0/1/2.5 above and [[no-ai-writing-signposts]]): ran the normal **showrunner (REVISE→fixed)**
+  plus a dedicated **flow/human-voice line-editor audit (NEEDS WORK→fixed→READS HUMAN)**, then art director PASS
+  on all 4. Showrunner continuity catch: preserve Tadé's canonical exam line ("find the good spot before your
+  instructor does"); flow catches: killed the negation-reveal/twin-fragment/tidy-pair cadences and replaced the
+  narrated turn with a quoted child line. No new character (count stays 28). Gates: typecheck/lint/tests/build all
+  green. **Lesson: the flow audit is now a required stage; the quickest human-voice fix is to let a character
+  SHOW the turn (a quoted line) instead of the narrator announcing it.**
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 22 are built and
+  queued; the site reveals each arc in step with its IG post day (run so far ends at firstwatch 09-15,
+  newverse 09-16, thief 09-17). Recent register: Ep 18 comic sport, Ep 19 political/justice, Eps 20-21
+  warm/culture, Ep 22 edge (Sweet Beak's frame that nearly works). **OWNER STANDING ORDERS (do these every
+  cycle):** (a) **pitch the candidate topics and get a pick BEFORE writing** (Stage 0); (b) stories must
+  **flow and read human-written** (Stage 1), and run the **dedicated flow/human-voice audit** (Stage 2.5)
+  alongside the showrunner and art director, revising until it READS HUMAN.
+  A plain "execute" should pitch, then build **Season 2, Ep 23** — best next threads, in priority order:
+  1. **Vary the register** — after the Ep 22 edge, a warmer or standing-engine beat (egg economy, feed
+     budget, a friendship, a social/culture event). CREAM by alternation.
   2. **Eseosa in exile** (careful, dignified) if a heavier beat is wanted.
   3. **The long game:** the tempered crate-sisters bond (Halima/President), only after real in-story time.
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream** against the
-  last new arc (last built = `arc-newverse` CREAM, so the next new arc defaults to GREEN); keep the
+  last new arc (last built = `arc-thief` GREEN, so the next new arc defaults to CREAM); keep the
   6-year-old clarity rule; add the 3 standing hashtags; end on a sell; **date the new arc to the day it will
-  post to IG** (continue the run at 09-17) so the site stays in step; **keep slide bodies at roughly 250-265
+  post to IG** (continue the run at 09-18) so the site stays in step; **keep slide bodies at roughly 250-265
   chars** (270+ overflows the size class; the art director will fail it) and **assert the manifest caption is
   < 2,200 chars** (story text ~1,900 max) before staging. **Sync the manifest from origin/main before
   staging** (the cron marks arcs posted on main) and **merge origin/main into the branch before the go-live**

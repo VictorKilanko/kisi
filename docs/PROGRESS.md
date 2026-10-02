@@ -217,3 +217,23 @@ begins.
 5. Keep `index.html` (legacy Agric City masterplan) untouched and
    unreferenced — it is a separate historical artifact (owner decision,
    2026-07-17).
+
+## Session 2026-10-02 — S2 Ep 22 "The Honourable Thief" + flow standing order
+
+- Owner pointed at `social/story.md` and asked to pitch topics before writing, and
+  added a STANDING ORDER: stories must flow and read human-written (not AI). Encoded
+  in story.md (Stage 0 pitch-first, Stage 1 flow rule, Stage 2.5 flow/human-voice
+  audit) and memory `no-ai-writing-signposts`.
+- Pitched 4 Ep 22 options; owner picked "Sweet Beak nearly wins." Built S2 Ep 22
+  "The Honourable Thief" (arcId the-honourable-thief): Ládùn brings real proof and
+  frames Tadé the Foraging Master for hoarding his lean-week food store; undone by
+  the smallest chick in his class; cost = the flock's shame; she slips off recurring.
+  GREEN, 4 beats, dated 09-17, routes to support.
+- Audits: showrunner REVISE→fixed; dedicated flow line-editor NEEDS WORK→fixed→READS
+  HUMAN; art director PASS on all 4 slides. No new character (count stays 28).
+- Published to timeline.ts/content.ts, rendered 4 slides, caption 2,156 total (<2,200),
+  staged as arc-thief (cron order firstwatch → newverse → thief). Merged origin/main
+  (settlerofperches now posted by cron) and reconciled the manifest to the union.
+- Gates: typecheck ✓, lint ✓, tests ✓ (18+13+13), production build ✓.
+- Go-live (Vercel deploy + daily IG cron) is owner-run via the main ref-move; AI cannot
+  move main (harness guard). RESUME set to Ep 23 (CREAM by alternation, date run 09-18).
