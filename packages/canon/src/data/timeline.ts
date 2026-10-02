@@ -2734,4 +2734,318 @@ export const timelineEvents: TimelineEvent[] = [
       "through the hard weeks takes real grain, so if you would like to help " +
       "keep it full, back the flock at farm.kisi.africa/support.",
   },
+  {
+    id: "recon-quarrel",
+    chickenIds: ["ronke-owambe"],
+    date: "2026-09-18",
+    arcId: "the-reconciliation-bench",
+    world: "fiction",
+    type: "custom",
+    title: "The quarrel nobody could explain",
+    body:
+      "Two hens who had shared the same dust bath since they were chicks " +
+      "were, this week, not speaking. Nobody could say what started it, least " +
+      "of all the two of them. One was sure it began with a borrowed nesting " +
+      "box. The other knew for a fact it was a remark at last season's " +
+      "Feather Gala. The only thing the whole coop agreed on was that both of " +
+      "them were right and the other one should say sorry first. Rọ́nkẹ́, Mama " +
+      "Owambe, who remembers every citizen's hatch-day and every feud in need " +
+      "of a bench, watched the two old friends roost at opposite ends with " +
+      "their backs turned, and let out the long sigh of a minister who has " +
+      "seen this one before.",
+  },
+  {
+    id: "recon-bench",
+    chickenIds: ["ronke-owambe"],
+    date: "2026-09-18",
+    arcId: "the-reconciliation-bench",
+    world: "fiction",
+    type: "custom",
+    title: "Sit. Share the grain.",
+    body:
+      "So she reached for the oldest trick she has, the one she turned into " +
+      "law years ago. She sat them " +
+      "both on the Reconciliation Bench, in the shade, and put a single " +
+      "handful of grain down between them. The rule is the rule, and the " +
+      "whole Republic knows it: you may go back to disagreeing afterwards, if " +
+      "you still want to, but first you share. For a long while neither of " +
+      "them moved. Two of the stubbornest hens in Kisi sat shoulder to " +
+      "shoulder and stared in opposite directions, each one waiting for the " +
+      "other to be the first to get hungry. Rọ́nkẹ́ did not rush them. She " +
+      "never does. 'Grain goes cold slower than a temper,' she said, and " +
+      "settled in to wait.",
+  },
+  {
+    id: "recon-grain",
+    chickenIds: ["ronke-owambe"],
+    date: "2026-09-18",
+    arcId: "the-reconciliation-bench",
+    world: "fiction",
+    type: "custom",
+    title: "One handful, two beaks",
+    body:
+      "In the end it was the grain, not the talking. There is only one " +
+      "way to eat from a single pile, and that is to face it together. The " +
+      "first peck was an accident, both their beaks arriving at the same seed " +
+      "at the same moment, and one of them laughed before she could catch " +
+      "herself. 'You always did go for the big one first,' she said. 'And you " +
+      "always let me,' said the other, and then the fight was simply gone, " +
+      "and neither of them had even tried to end it. Neither ever did " +
+      "remember what it had been about. By evening they were back in their " +
+      "dust bath, telling the tale of their terrible falling-out to anyone " +
+      "who would listen, and improving it a little each time.",
+  },
+  {
+    id: "recon-sell",
+    chickenIds: ["ronke-owambe"],
+    date: "2026-09-18",
+    arcId: "the-reconciliation-bench",
+    world: "fiction",
+    type: "custom",
+    title: "What the bench is for",
+    body:
+      "Rọ́nkẹ́ will tell you a flock is not a place with no quarrels. There is " +
+      "no such place, not among hens. A flock is what it does with the " +
+      "quarrels it has: whether it lets them harden into fences, or sits them " +
+      "down in the shade until they soften. That is her whole job, really, " +
+      "and it costs the Republic almost nothing. A shaded bench. A " +
+      "handful of grain. And somebody who remembers that the two birds " +
+      "glaring at each other were friends first. Keeping a flock whole is the " +
+      "quiet work underneath all the loud work. If you would like to back the " +
+      "birds who do it, support the flock at farm.kisi.africa/support.",
+  },
+  {
+    id: "budget-season",
+    chickenIds: ["musa-grainkeeper", "adedoyin-mama-decree"],
+    date: "2026-09-19",
+    arcId: "the-national-feed-budget",
+    world: "fiction",
+    type: "custom",
+    title: "Budget season",
+    body:
+      "Once a dry season, Musa the Grainkeeper, Minister of Feed and " +
+      "Agriculture, has to do the least popular sum in the Republic: split " +
+      "the feed that must last until the rains. And once a dry season, every " +
+      "ministry in Kisi turns up at his door certain that its share should " +
+      "come first. Minister Quickfoot wanted extra grain for the Coop League, " +
+      "because champions do not run on air. Tadé wanted it for the chicks, " +
+      "because a hungry chick learns nothing. Mama Gold sent word that the " +
+      "elders' bench would also, thank you, like to be remembered. Musa heard " +
+      "them all out, wrote down not one word of it, and went to see the " +
+      "President.",
+  },
+  {
+    id: "budget-numbers",
+    chickenIds: ["halima-iron-feathers", "musa-grainkeeper"],
+    date: "2026-09-19",
+    arcId: "the-national-feed-budget",
+    world: "fiction",
+    type: "custom",
+    title: "The numbers do not add up",
+    body:
+      "At the Assembly it turned into a proper Kisi argument, which is to say " +
+      "loud, heartfelt, and about food. Each minister made the case of their " +
+      "life. It all came apart the moment Halima Iron Feathers, who has " +
+      "demanded a recount of every Egg Census since records began, stood up " +
+      "with the figures. 'I have added every claim in this room three times,' " +
+      "she said, in the dry voice that quiets a gallery. 'We are promising " +
+      "one and a half farms' worth of feed. We have one farm.' The room went " +
+      "still. Somebody was going to be cut, and nobody wanted to be the bird " +
+      "who named them.",
+  },
+  {
+    id: "budget-layers",
+    chickenIds: ["musa-grainkeeper", "adedoyin-mama-decree"],
+    date: "2026-09-19",
+    arcId: "the-national-feed-budget",
+    world: "fiction",
+    type: "custom",
+    title: "The layers eat first",
+    body:
+      "It was Musa who said it, plainly, the way he says everything. 'The " +
+      "laying hens eat first.' Not the champions. Not the chicks. Not even " +
+      "the elders he loves. The layers. Because the league and the school and " +
+      "the bench, the whole grand Republic and every argument inside it, all " +
+      "of it is paid for by what the hens lay each morning, and a hen that is " +
+      "not fed does not lay, and then there is no budget left to fight over at " +
+      "all. It was not a ruling anyone cheered. But the President set her seal " +
+      "to it, and Halima, who agrees with the President about once a season, " +
+      "ran the numbers one more time and gave her shortest verdict. 'Noted.'",
+  },
+  {
+    id: "budget-sell",
+    chickenIds: ["musa-grainkeeper"],
+    date: "2026-09-19",
+    arcId: "the-national-feed-budget",
+    world: "fiction",
+    type: "custom",
+    title: "Where the budget comes from",
+    body:
+      "It is the plainest thing in Kisi, and the easiest to forget under all " +
+      "the drama: the whole Republic runs on eggs. The feed that keeps the " +
+      "hens laying is not a line the farm is looking to trim. It is the first " +
+      "line of the budget and the reason there is a budget at all. Every egg " +
+      "that leaves the gate pays for the next morning's grain. So when you " +
+      "order a tray from Kisi, you are not only buying breakfast. You are " +
+      "funding the sum Musa has to do every dry season, trough by trough. " +
+      "Order farm-fresh eggs at farm.kisi.africa/eggs.",
+  },
+  {
+    id: "water-bored",
+    chickenIds: ["emeka-drainmaster"],
+    date: "2026-09-20",
+    arcId: "the-patient-water",
+    world: "fiction",
+    type: "custom",
+    title: "The happiest bored minister in Kisi",
+    body:
+      "In the dry season Emeka the Drain Marshal has very little to do, and " +
+      "it is the great joy of his year. A water minister with nothing to do " +
+      "means nothing has gone wrong: the troughs are full, the water is " +
+      "clean, and no bird has had to spare a thought for either, which is " +
+      "exactly how he likes it. He tests water nobody worries about, and " +
+      "walks channels the rest of the flock forgets are even there. The young " +
+      "birds like to say " +
+      "the Minister of Water and Environmental Affairs has the easiest job in " +
+      "the Republic. 'I would rather be bored in the dry season,' he tells " +
+      "them, 'than busy in a flood.' He has been bored for months, and the " +
+      "whole time he has been watching the sky.",
+  },
+  {
+    id: "water-sky",
+    chickenIds: ["emeka-drainmaster"],
+    date: "2026-09-20",
+    arcId: "the-patient-water",
+    world: "fiction",
+    type: "custom",
+    title: "The sky changes",
+    body:
+      "Then one afternoon the light turned the particular grey that Emeka " +
+      "reads the way Halima reads a ledger. The rains were on their way, " +
+      "early and heavy, and he felt the old tightness arrive in his chest " +
+      "with them. Years ago it was his channel, the drainage that runs under " +
+      "Coop Three, that a monitor lizard once came up out of the dark. After " +
+      "that he had mapped every low spot at Kisi, in his head and most of " +
+      "them in the mud, and hardened the channels, and had the drain barred. " +
+      "He had built for exactly this night. He had simply never stood and " +
+      "watched it face a full storm.",
+  },
+  {
+    id: "water-held",
+    chickenIds: ["emeka-drainmaster"],
+    date: "2026-09-20",
+    arcId: "the-patient-water",
+    world: "fiction",
+    type: "custom",
+    title: "The night it held",
+    body:
+      "It came down like the sky had a grudge. The yard filled the way it " +
+      "used to in the bad years, water climbing at the coop steps, and the " +
+      "older birds lay awake remembering other floods. Emeka lay awake too, " +
+      "but for a different reason. He was out in it, lamp held up in the " +
+      "rain, watching the water do the one thing he had spent three dry " +
+      "seasons teaching it to do. It ran. It found the hardened channels and " +
+      "the barred drain, and it left, the way he had built it to leave, and " +
+      "by the grey of morning the coops were dry and the troughs stood " +
+      "brimming with the cleanest water of the year. The least glamorous " +
+      "office in the Republic had just done its one enormous job, and almost " +
+      "nobody noticed, which is the finest praise a water minister can hope " +
+      "for.",
+  },
+  {
+    id: "water-sell",
+    chickenIds: ["emeka-drainmaster"],
+    date: "2026-09-20",
+    arcId: "the-patient-water",
+    world: "fiction",
+    type: "custom",
+    title: "Clean water, every day",
+    body:
+      "Water is patient, Emeka says, and so is he. Troughs scrubbed on " +
+      "schedule, drainage that carries a storm away before dawn, a drain " +
+      "barred against whatever once came up it. None of it is exciting, and " +
+      "all of it is the difference between a healthy flock and a sick one. " +
+      "The Clean Water and Healthy Feathers Act gets delivered the only way " +
+      "it ever can be, trough by trough, by a minister who would honestly " +
+      "rather be bored. Keeping the water clean and the coops dry takes real " +
+      "work and real upkeep. Back the flock at farm.kisi.africa/support.",
+  },
+  {
+    id: "exile-question",
+    chickenIds: ["small-femi", "pete-okpara"],
+    date: "2026-09-21",
+    arcId: "eseosa-in-exile",
+    world: "fiction",
+    type: "custom",
+    title: "The hen beyond the fence",
+    body:
+      "It was a young bird who asked, the way the young ask the questions the " +
+      "grown birds have quietly agreed to leave alone. Is she still out " +
+      "there, the hen who was sent away? Is she alright? For a moment nobody " +
+      "wanted to answer. The Republic does not say her name often. But " +
+      "Okpara, the Fence Walker, who counts the whole flock by name every " +
+      "night and holds that a name should never be pretended away, sat the " +
+      "youngster down. Her name was Eseosa, he said. She is still alive. And " +
+      "yes, far from here, she is alright. Those are three true things, and a " +
+      "flock brave enough to lose a friend should be brave enough to say " +
+      "them out loud.",
+  },
+  {
+    id: "exile-what",
+    chickenIds: ["barrister-silk"],
+    date: "2026-09-21",
+    arcId: "eseosa-in-exile",
+    world: "fiction",
+    type: "custom",
+    title: "What exile means",
+    body:
+      "Here is the plain truth of it, the kind you can tell a chick. Eseosa " +
+      "was not harmed. Nobody laid a feather on her, and nobody was ever " +
+      "going to. She was taken far from Coop Three, to a place where she can " +
+      "do no more damage, and told she would not be coming back, and that is " +
+      "all the word exile means here. The one who " +
+      "knows how she fares is Barrister Silk, her old counsel, who argued for " +
+      "her so loudly at the trial and who goes to see her once a season " +
+      "because, he says, a counsel does not stop when the verdict does. He " +
+      "brings home the same report every time. She is fed. She is well. She " +
+      "is alone.",
+  },
+  {
+    id: "exile-perch",
+    chickenIds: ["eseosa", "barrister-silk"],
+    date: "2026-09-21",
+    arcId: "eseosa-in-exile",
+    world: "fiction",
+    type: "custom",
+    title: "The perch she won",
+    body:
+      "She has a perch to herself now, Silk says. The cool high one, out of " +
+      "the sun. No one takes it from her. No one to shove, and no one left to " +
+      "shove her. The very thing she once ruled Coop Three to keep, the thing " +
+      "a fight over took Cindy, she has now completely and for good, and it " +
+      "turns out to be only a perch, with the branch empty on either side of " +
+      "it. She does not ask to come back. She knows that she cannot. She said " +
+      "all she had to say in three words at her trial, and she has said " +
+      "nothing since. Silk sits with her a while, and then he walks the long " +
+      "way home, quiet even for him.",
+  },
+  {
+    id: "exile-sell",
+    chickenIds: ["pete-okpara"],
+    date: "2026-09-21",
+    arcId: "eseosa-in-exile",
+    world: "fiction",
+    type: "custom",
+    title: "Why we remember",
+    body:
+      "The Republic keeps Eseosa's story on purpose, and not out of anger. " +
+      "It keeps it because the easy thing would be to forget her, and " +
+      "forgetting her would mean forgetting why Cindy is gone: a coop too hot " +
+      "and too crowded, and one cool perch worth fighting over. So the flock " +
+      "said never again, and it meant it, and it has been rebuilding ever " +
+      "since, to Cindy's Law, with room and shade and perches enough that no " +
+      "bird ever has to win one by force. That is why the flock remembers, " +
+      "and why it keeps building, so no bird ever has to fight for a perch " +
+      "again. Back the Better Housing campaign at farm.kisi.africa/support.",
+  },
 ];

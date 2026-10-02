@@ -402,6 +402,51 @@ const arcs = [
       ["What it cost", "Tadé was cleared by sundown, and no one felt like cheering. For one day the flock believed the worst of the bird who feeds its chicks. He forgave them: a store rebuilds fast, trust does not. Keep the youngest fed. Back the flock at farm.kisi.africa/support."],
     ],
   },
+  {
+    slug: "recon",
+    title: "The Reconciliation Bench",
+    theme: "cream", // warm social beat, alternates off arc-thief green
+    slides: [
+      ["The quarrel nobody could explain", "Two hens who shared a dust bath since they were chicks stopped speaking, and neither could say why. One blamed a borrowed nesting box, the other a remark at the Feather Gala. The whole coop took sides. Rọ́nkẹ́, Mama Owambe, had seen this feud a hundred times."],
+      ["Sit. Share the grain.", "She sat them on the Reconciliation Bench, one handful of grain between them. The rule: disagree again later if you must, but first you share. Two of Kisi's stubbornest hens sat shoulder to shoulder, staring opposite ways. Rọ́nkẹ́ waited. She always does."],
+      ["One handful, two beaks", "In the end it was the grain, not the talking. There is only one way to eat from a single pile: together. Their beaks hit the same seed, and one laughed before she could stop. 'You always went for the big one first.' 'And you always let me.' And the fight was gone."],
+      ["What the bench is for", "A flock is not a place with no quarrels. It is what you do with them: harden them into fences, or sit them in the shade till they soften. A bench, a handful of grain, someone who remembers they were friends first. Back the flock at farm.kisi.africa/support."],
+    ],
+  },
+  {
+    slug: "feedbudget",
+    title: "The National Feed Budget",
+    theme: "green",
+    sell: "shop", // feed -> eggs
+    slides: [
+      ["Budget season", "Once a dry season, Musa the Grainkeeper must split the feed until the rains, and every ministry wants its share first. Sports wants grain for the league, Tadé for the chicks, the elders for their bench. Musa listened, then went to the President."],
+      ["The numbers do not add up", "It became a proper Kisi argument: loud, heartfelt, about food. Then Halima Iron Feathers rose with the figures. 'I added every claim three times. We are promising one and a half farms' worth of feed. We have one farm.' The room went quiet. Someone had to be cut."],
+      ["The layers eat first", "Musa said it plainly: 'The laying hens eat first.' Not the champions, not the chicks, not even the elders he loves. The league, the school, the bench, all of it is paid for by what the hens lay. A hen not fed does not lay. Halima checked the numbers. 'Noted.'"],
+      ["Where the budget comes from", "The plainest thing in Kisi: the whole Republic runs on eggs. The feed that keeps the hens laying is the first line of the budget, not the one to trim. Every egg that leaves the gate pays for tomorrow's grain. Order farm-fresh eggs at farm.kisi.africa/eggs."],
+    ],
+  },
+  {
+    slug: "patientwater",
+    title: "The Patient Water",
+    theme: "cream",
+    slides: [
+      ["The happiest bored minister", "In the dry season Emeka the Drain Marshal has little to do, and it is the joy of his year. A bored water minister means nothing has gone wrong: troughs full, water clean. 'I would rather be bored in the dry season,' he says, 'than busy in a flood.'"],
+      ["The sky changes", "Then the light turned the grey that Emeka reads like a ledger: rains, early and heavy. Years ago a monitor lizard came up his channel, so he hardened every channel and had the drain barred. He built for this night, but had never watched it face a full storm."],
+      ["The night it held", "It came down like the sky had a grudge. The yard filled like the bad years, and the old birds did not sleep. Emeka was out in it, lamp held up in the rain, watching the water find the hardened channels and the barred drain and leave. By dawn the coops were dry."],
+      ["Clean water, every day", "Water is patient, Emeka says, and so is he. Scrubbed troughs, drainage that clears a storm by dawn, a drain barred against what once came up it. Not exciting, but the gap between a healthy flock and a sick one. Back the flock at farm.kisi.africa/support."],
+    ],
+  },
+  {
+    slug: "exile",
+    title: "Eseosa in Exile",
+    theme: "green",
+    slides: [
+      ["The hen beyond the fence", "A young bird asked what the grown ones avoid: is she still out there, the hen who was sent away? Is she alright? Okpara, who counts the flock by name and will not pretend a name away, answered. 'Her name was Eseosa. She is alive. Far from here, she is alright.'"],
+      ["What exile means", "Plain enough for a chick: Eseosa was not harmed. She was taken far from Coop Three, where she can do no more damage, and told she could not come back. That is all exile means. Barrister Silk visits once a season. The report is always the same: fed, well, alone."],
+      ["The perch she won", "She has the cool high perch to herself now. No one for her to shove, and no one to shove her. The thing a fight over once took Cindy, she has completely, and it is only a perch, the branch empty on either side. She does not ask to come back. She knows she cannot."],
+      ["Why we remember", "The Republic keeps her story not from anger but so it never forgets why Cindy is gone: a hot, crowded coop, one perch worth fighting for. It builds to Cindy's Law now, perches enough for all. Back Better Housing at farm.kisi.africa/support."],
+    ],
+  },
 ];
 
 function smart(s) {

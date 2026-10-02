@@ -1601,3 +1601,15 @@ Lessons from this pass:
 - Flow tells to kill: runs of same-length sentences; every beat opening the same way;
   narrator scaffolding as a crutch; tidy symmetrical clause pairs; telling a feeling
   instead of showing it. Vary rhythm; let lines land short; read out loud.
+
+## Session 2026-10-02 (cont.) — four-arc batch Eps 23-26
+
+- A batch still gets ONE showrunner + ONE flow + ONE art-director audit across all arcs.
+- Dede is the mascot and is NOT a flock record in chickens.ts, so a timeline arc cannot
+  reference him as a chickenId. Check the bible before casting a lead.
+- Precision: Security (Okpara) physically bars the drain on Emeka's survey; write "had the
+  drain barred," not "barred the drain," when crediting Emeka.
+- Sensitive arcs (Eseosa in exile): write them to NOT redeem-and-return the villain, keep
+  the loss (Cindy) off-page and un-re-litigated, and let the showrunner gate hard (it holds
+  the Fence Line ground rules).
+- Slide bodies drifted to ~270-310 on first draft; budget ~250-260 and measure before render.

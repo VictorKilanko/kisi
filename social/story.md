@@ -560,22 +560,50 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
   green. **Lesson: the flow audit is now a required stage; the quickest human-voice fix is to let a character
   SHOW the turn (a quoted line) instead of the narrator announcing it.**
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 22 are built and
-  queued; the site reveals each arc in step with its IG post day (run so far ends at firstwatch 09-15,
-  newverse 09-16, thief 09-17). Recent register: Ep 18 comic sport, Ep 19 political/justice, Eps 20-21
-  warm/culture, Ep 22 edge (Sweet Beak's frame that nearly works). **OWNER STANDING ORDERS (do these every
-  cycle):** (a) **pitch the candidate topics and get a pick BEFORE writing** (Stage 0); (b) stories must
-  **flow and read human-written** (Stage 1), and run the **dedicated flow/human-voice audit** (Stage 2.5)
+- **SEASON 2 Eps 23 to 26: four-arc batch — BUILT AND QUEUED (2026-10-02).** Owner said "execute Ep 23-26,
+  feel free to time and queue them on IG," so a four-arc batch with the slate pitched up front (no blocking
+  vote) and one showrunner + one flow + one art-director audit across all four. Alternation held off
+  `arc-thief` GREEN: recon CREAM → feedbudget GREEN → patientwater CREAM → exile GREEN. Dated 09-18…09-21.
+  No new characters (count stays 28).
+  - **Ep 23 "The Reconciliation Bench"** (`the-reconciliation-bench`, slug `recon`, CREAM, 4 beats, → support).
+    Rọ́nkẹ́ Mama Owambe (Social Affairs) benches two nameless old-friend hens who quarrel over a trifle; one
+    handful of grain, shared, ends it. Pays off her canon ("Sit. Share the grain," "one flock, many feathers").
+  - **Ep 24 "The National Feed Budget"** (`the-national-feed-budget`, slug `feedbudget`, GREEN, 4 beats, → eggs,
+    `sell:"shop"`). Budget season; every ministry wants its feed; Halima (Leader of the Opposition, forensic
+    auditor) shows the claims exceed the feed; Musa (Minister of Feed & Agriculture) rules the layers eat first.
+    Satire with real stakes; showrunner called it the strongest of the batch.
+  - **Ep 25 "The Patient Water"** (`the-patient-water`, slug `patientwater`, CREAM, 4 beats, → support). First
+    arc led by Emeka the Drain Marshal (Water & Environment). Dry-season boredom, first big storm, his hardened
+    drainage holds. Fresh engine (water). **Precision fix:** canon credits Security (Okpara) with physically
+    barring the drain on Emeka's survey, so the copy reads "had the drain barred," not "barred the drain."
+  - **Ep 26 "Eseosa in Exile"** (`eseosa-in-exile`, slug `exile`, GREEN, 4 beats, → Better Housing / support).
+    SENSITIVE. A dignified check-in on the Season 1 villain: not harmed, rehomed far from Coop Three, cannot
+    return, "fed, well, alone," the perch she won is hollow. Does NOT redeem-and-return her; centers Cindy and
+    Cindy's Law. **Showrunner cleared every Fence Line ground rule and triggered no BLOCK condition.**
+  - **Audits:** showrunner 4 SHIP (0 REVISE, 0 BLOCK); flow audit found Feed Budget + Patient Water READS HUMAN
+    first pass, Reconciliation Bench + Eseosa NEEDS WORK (stacked narrator scaffolds + one near-broken Eseosa
+    line) → all fixed; art director 14/16 PASS then 16/16 after fixing two copy defects (patientwater-2 dropped
+    word, exile-3 duplicated phrase). Gates: typecheck/lint/tests/build all green.
+  - **IG timing:** the whole pending queue is now scheduled daily at 06:00 UTC in cron order: firstwatch 10-03,
+    newverse 10-04, thief 10-05, recon 10-06, feedbudget 10-07, patientwater 10-08, exile 10-09 (advisory
+    `scheduledFor`; the live cron still posts next-in-order).
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 26 are built and
+  queued; the site reveals each arc in step with its IG post day (new run: recon 09-18, feedbudget 09-19,
+  patientwater 09-20, exile 09-21). Recent register: Ep 22 edge (Sweet Beak frame), Ep 23 warm social, Ep 24
+  politics/economy, Ep 25 warm water, Ep 26 heavy/dignified (Eseosa in exile). **OWNER STANDING ORDERS (do
+  these every cycle):** (a) **pitch the candidate topics and get a pick BEFORE writing** (Stage 0); (b) stories
+  must **flow and read human-written** (Stage 1), and run the **dedicated flow/human-voice audit** (Stage 2.5)
   alongside the showrunner and art director, revising until it READS HUMAN.
-  A plain "execute" should pitch, then build **Season 2, Ep 23** — best next threads, in priority order:
-  1. **Vary the register** — after the Ep 22 edge, a warmer or standing-engine beat (egg economy, feed
-     budget, a friendship, a social/culture event). CREAM by alternation.
-  2. **Eseosa in exile** (careful, dignified) if a heavier beat is wanted.
+  A plain "execute" should pitch, then build **Season 2, Ep 27** — best next threads, in priority order:
+  1. **Vary the register** — after the heavy Eseosa closer, go warm/light (sport, a friendship, a hatch-day,
+     an egg-economy win). GREEN by alternation.
+  2. **A Sweet Beak return** (she is recurring, still 0-for-5) or a fresh antagonist if edge is wanted.
   3. **The long game:** the tempered crate-sisters bond (Halima/President), only after real in-story time.
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream** against the
-  last new arc (last built = `arc-thief` GREEN, so the next new arc defaults to CREAM); keep the
+  last new arc (last built = `arc-exile` GREEN, so the next new arc defaults to CREAM); keep the
   6-year-old clarity rule; add the 3 standing hashtags; end on a sell; **date the new arc to the day it will
-  post to IG** (continue the run at 09-18) so the site stays in step; **keep slide bodies at roughly 250-265
+  post to IG** (continue the run at 09-22) so the site stays in step; **keep slide bodies at roughly 250-265
   chars** (270+ overflows the size class; the art director will fail it) and **assert the manifest caption is
   < 2,200 chars** (story text ~1,900 max) before staging. **Sync the manifest from origin/main before
   staging** (the cron marks arcs posted on main) and **merge origin/main into the branch before the go-live**

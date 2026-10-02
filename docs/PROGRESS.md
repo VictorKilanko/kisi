@@ -237,3 +237,19 @@ begins.
 - Gates: typecheck ✓, lint ✓, tests ✓ (18+13+13), production build ✓.
 - Go-live (Vercel deploy + daily IG cron) is owner-run via the main ref-move; AI cannot
   move main (harness guard). RESUME set to Ep 23 (CREAM by alternation, date run 09-18).
+
+## Session 2026-10-02 (cont.) — S2 Eps 23-26 four-arc batch
+
+- Owner: "execute Ep 23-26, feel free to time and queue them on IG." Pitched the slate
+  up front, then built four arcs (no blocking vote), alternating off arc-thief GREEN:
+  - Ep 23 "The Reconciliation Bench" (recon, CREAM, support) — Rọ́nkẹ́'s bench.
+  - Ep 24 "The National Feed Budget" (feedbudget, GREEN, eggs) — layers eat first.
+  - Ep 25 "The Patient Water" (patientwater, CREAM, support) — Emeka, first arc.
+  - Ep 26 "Eseosa in Exile" (exile, GREEN, Better Housing) — SENSITIVE, dignified.
+- Audits: showrunner 4 SHIP (Eseosa cleared all Fence Line ground rules, no BLOCK);
+  flow audit (Feed/Water read human first pass; Recon/Exile fixed); art director
+  16/16 PASS after fixing two copy defects. Gates: typecheck/lint/tests/build green.
+- Staged all four; captions filled (all <2,200). Whole pending IG queue scheduled daily
+  06:00 UTC: firstwatch 10-03 … exile 10-09 (advisory; cron posts next-in-order).
+- No new characters (count stays 28). RESUME set to Ep 27 (CREAM by alternation, 09-22).
+- Go-live is owner-run (main ref-move; harness guard).

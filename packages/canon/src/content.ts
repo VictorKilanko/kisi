@@ -455,6 +455,79 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "little more dangerous for having learned that proof travels further " +
       "than a whisper.",
   },
+  "the-reconciliation-bench": {
+    title: "The Reconciliation Bench",
+    summary:
+      "Two hens who have shared a dust bath since they were chicks fall out, " +
+      "and neither can say why: one blames a borrowed nesting box, the other " +
+      "a remark at the Feather Gala, and the whole coop takes sides. Rọ́nkẹ́, " +
+      "Mama Owambe, Minister of Social Affairs, does what she made national " +
+      "policy years ago: she sits them both on the Reconciliation Bench in " +
+      "the shade with a single handful of grain between them, because the " +
+      "rule is that you may go back to disagreeing afterwards, but first you " +
+      "share. The two stubbornest hens in Kisi sit shoulder to shoulder " +
+      "staring opposite ways until hunger wins, their beaks meet at the same " +
+      "seed, and one laughs before she can stop herself. The quarrel " +
+      "dissolves the moment they share the pile, and neither of them ever " +
+      "does remember what it was about. A flock, Rọ́nkẹ́ will tell you, is not a place with no " +
+      "quarrels; it is what you do with the ones you have.",
+  },
+  "the-national-feed-budget": {
+    title: "The National Feed Budget",
+    summary:
+      "Once a dry season, Musa the Grainkeeper, Minister of Feed and " +
+      "Agriculture, must split the feed that has to last until the rains, and " +
+      "every ministry arrives certain its share should come first: the Coop " +
+      "League, the chicks, the elders' bench. It becomes a proper Kisi " +
+      "argument until Halima Iron Feathers rises with the figures and shows " +
+      "that the claims add up to one and a half farms' worth of feed when " +
+      "there is only one farm. Musa settles it with a plain, unglamorous " +
+      "ruling that nobody cheers: the laying hens eat first, because the " +
+      "league and the school and the bench and the whole Republic are all " +
+      "paid for by what the hens lay, and a hen that is not fed does not lay. " +
+      "The President sets her seal to it, Halima runs the numbers once more " +
+      "and gives her shortest verdict, and the Republic is reminded that it " +
+      "runs, under all the drama, on eggs.",
+  },
+  "the-patient-water": {
+    title: "The Patient Water",
+    summary:
+      "In the dry season Emeka the Drain Marshal, Minister of Water and " +
+      "Environmental Affairs, has almost nothing to do, and it is the joy of " +
+      "his year, because a bored water minister means nothing has gone wrong: " +
+      "full troughs, clean water, no bird sparing either a thought. Then the " +
+      "light turns the grey he reads like a ledger, the rains come early and " +
+      "heavy, and the old tightness returns, because years ago it was his " +
+      "channel a monitor lizard came up, and after that he hardened every " +
+      "channel and had the drain barred and built for exactly such a night " +
+      "without ever watching it face a full storm. The storm comes down like " +
+      "the sky has a grudge, the yard fills the way it did in the bad years, " +
+      "and Emeka stands out in it with a lamp while the water finds his " +
+      "hardened channels and the barred drain and leaves, so that by morning " +
+      "the coops are dry and the troughs brim with the cleanest water of the " +
+      "year. The least glamorous office in the Republic does its one enormous " +
+      "job, and almost nobody notices, which is the only thanks a water " +
+      "minister ever wants.",
+  },
+  "eseosa-in-exile": {
+    title: "Eseosa in Exile",
+    summary:
+      "A young bird asks the question the grown ones leave alone: is she " +
+      "still out there, the hen who was sent away, and is she alright? " +
+      "Okpara the Fence Walker, who counts the flock by name and will not " +
+      "pretend a name away, answers plainly: her name was Eseosa, she is " +
+      "alive, and far from here she is alright. Exile, told plainly enough " +
+      "for a chick, means she was not harmed and never was going to be; she " +
+      "was rehomed far from Coop Three where she can do no more damage and " +
+      "told she cannot come back. Barrister Silk, her old counsel, visits " +
+      "once a season and brings the same report: fed, well, alone. She has " +
+      "the cool high perch to herself now, the very thing a fight over once " +
+      "took Cindy, and it turns out to be only a perch with the branch empty " +
+      "on either side; she does not ask to return, and knows she cannot. The " +
+      "Republic keeps her story not out of anger but so it never forgets why " +
+      "Cindy is gone, and keeps building to Cindy's Law so no bird ever has " +
+      "to win a perch by force again.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {
