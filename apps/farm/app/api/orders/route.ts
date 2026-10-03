@@ -4,22 +4,37 @@ import { clientKey, rateLimit } from "@/lib/rateLimit";
 
 /**
  * POST /api/orders
- * Egg order enquiries from the Shop, the farm's actual sales channel.
+ * Order enquiries for every farm product line, the farm's actual sales
+ * channel: eggs, chicken meat, and day-old chicks.
  *
  * This takes an enquiry, not a payment. The farm confirms availability,
- * price, and delivery for the customer's area before any money changes
- * hands, no card details are collected here or anywhere on this site.
+ * price, and delivery (and, for meat, the production day the customer picked)
+ * before any money changes hands. No card details are collected here or
+ * anywhere on this site.
  *
  * Delivery goes to FARM_INBOX via lib/mail. If mail is unconfigured the
  * response says so plainly rather than implying the order was received:
  * a silently dropped order is a lost customer.
  */
 
+const PRODUCT_LABELS = {
+  eggs: "Egg",
+  meat: "Chicken meat",
+  chicks: "Day-old chick",
+} as const;
+
 const BodySchema = z.object({
+  /** Which line this enquiry is for; defaults to eggs for older clients. */
+  product: z.enum(["eggs", "meat", "chicks"]).optional().default("eggs"),
   name: z.string().min(1).max(80),
   contact: z.string().min(1).max(120),
   area: z.string().min(1).max(120),
-  crates: z.string().min(1).max(40),
+  /** How many (birds / chicks); free text so "not sure yet" is allowed. */
+  quantity: z.string().max(60).optional(),
+  /** Legacy egg field, still sent by the eggs form. */
+  crates: z.string().max(40).optional(),
+  /** Requested production / delivery day (meat), from the date picker. */
+  date: z.string().max(40).optional(),
   notes: z.string().max(1000).optional(),
   /** Honeypot, humans never see or fill this field; bots often do. */
   company: z.string().max(200).optional(),
@@ -49,6 +64,8 @@ export async function POST(req: Request) {
     return Response.json({ ok: true, stored: false });
   }
 
+  const label = PRODUCT_LABELS[body.product];
+
   const mailer = getMailer();
   if (!mailer.configured) {
     return Response.json(
@@ -58,8 +75,8 @@ export async function POST(req: Request) {
         error: "mail-unconfigured",
         note:
           "Our order inbox isn't connected yet, so this enquiry wasn't " +
-          "delivered. Please reach us through the contact page and we'll " +
-          "sort your eggs out directly.",
+          "delivered. Please message us on WhatsApp or use the contact " +
+          "page and we'll sort your order out directly.",
       },
       { status: 503 },
     );
@@ -67,13 +84,16 @@ export async function POST(req: Request) {
 
   try {
     await mailer.send({
-      subject: `Egg order enquiry, ${body.name} (${body.area})`,
+      subject: `${label} order enquiry, ${body.name} (${body.area})`,
       replyTo: body.contact.includes("@") ? body.contact : undefined,
       body: formatSubmission({
+        Product: label,
         Name: body.name,
         Contact: body.contact,
         Area: body.area,
+        Quantity: body.quantity,
         Crates: body.crates,
+        "Requested day": body.date,
         Notes: body.notes,
       }),
     });
@@ -85,8 +105,8 @@ export async function POST(req: Request) {
         delivered: false,
         error: "delivery-failed",
         note:
-          "Something went wrong sending your enquiry. Please try the " +
-          "contact page so your order doesn't get lost.",
+          "Something went wrong sending your enquiry. Please message us on " +
+          "WhatsApp or use the contact page so your order doesn't get lost.",
       },
       { status: 502 },
     );
