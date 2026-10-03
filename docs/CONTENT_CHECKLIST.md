@@ -9,6 +9,34 @@ credible · 🟢 nice to have.
 
 ## Needs owner input
 
+### Selling meat + WhatsApp + sales reps (added 2026-10-03)
+
+The home hero now sells eggs, chicken meat and day-old chicks; there is a new
+`/meat` page with a day-booking form, a `/sell` sales-rep sign-up, and WhatsApp
+order buttons wired throughout. To make all of it fully live:
+
+- [ ] 🔴 **WhatsApp number.** Every "Order on WhatsApp" button is hidden until
+      `NEXT_PUBLIC_WHATSAPP_NUMBER` is set (digits only, full international form,
+      e.g. `2348012345678`). Add it in the Vercel project settings **and then
+      redeploy** (it's a `NEXT_PUBLIC_*` var, baked in at build time, so the
+      buttons only appear after a fresh deploy). Until then orders fall back to
+      the email enquiry form / contact page.
+- [ ] 🔴 **FARM_INBOX + RESEND_API_KEY.** Meat/egg/chick orders (`/api/orders`)
+      and rep applications (`/api/reps`) email the farm. Without these the forms
+      honestly return 503 and send people to WhatsApp / contact. (Same keys the
+      egg form already needed.)
+- [ ] 🟡 **Meat prices, breeds and weights.** The `/meat` page says "set per
+      order, we quote you when you book" and posts no numbers. Supply a price
+      list (or a range) when ready.
+- [ ] 🟡 **Meat production / delivery schedule.** The day picker currently
+      allows any date from tomorrow. If you only process on certain days (e.g.
+      Saturdays), tell me and I'll restrict the calendar to those days.
+- [ ] 🟡 **Sales-rep terms.** The `/sell` page promises "no fee to start" and
+      that supply/pricing are discussed before selling. Confirm commission /
+      margin / supply terms so we can add a short "how it works" section.
+- [ ] 🟢 **Pickup vs delivery for meat.** Copy currently says "pickup or
+      delivery"; confirm which areas you deliver to.
+
 ### Build the Farm capital campaign (added 2026-09-11)
 
 The campaign page (`/build-the-farm`) is live but deliberately **not charging**:

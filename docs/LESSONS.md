@@ -1613,3 +1613,43 @@ Lessons from this pass:
   the loss (Cindy) off-page and un-re-litigated, and let the showrunner gate hard (it holds
   the Fence Line ground rules).
 - Slide bodies drifted to ~270-310 on first draft; budget ~250-260 and measure before render.
+
+## Session 2026-10-03 — Sell meat + WhatsApp + sales reps + shop cleanup
+
+Owner pivot: the farm site (`apps/farm` -> farm.kisi.africa) is now first and
+foremost a shop for **eggs, day-old chicks, and chicken meat**, and the owner
+wants to build the meat market. Five asks, all built on branch
+`feature/kisi-poultry-republic`:
+
+1. **Chicken meat on the hero + new `/meat` page.** Hero rewritten to sell all
+   three lines; new `Order chicken meat` CTA. `/meat` has market-building copy,
+   honest "prices set per order" placeholder (no invented weights/prices).
+2. **Delivery "calendar" = a native `<input type="date">` in the meat order
+   form** (min = tomorrow). The owner chose "buyer picks any day". This is the
+   buildable MVP of "book a day"; no third-party booking tool. To restrict to
+   real production days later, gate the date input. A true synced calendar
+   (Cal.com / Google) can slot in behind the same form later.
+3. **WhatsApp buttons** across eggs/meat/chicks/reps. Driven by
+   `NEXT_PUBLIC_WHATSAPP_NUMBER` (digits only); buttons **render nothing when
+   unset** so we never link a made-up number. `whatsappLink()` in `lib/site.ts`,
+   `<WhatsAppButton>` component. Owner opted to add the real number in Vercel.
+4. **Shop cleanup.** Nav is now products-first (Eggs · Chicken Meat · Day-old
+   Chicks · Sell With Us · About · Visit). Home product trio = eggs/meat/chicks
+   (Support moved out of the trio, still in footer). Footer has a single "Shop"
+   column.
+5. **Sales reps: new `/sell` page + `RepSignupForm` + `/api/reps`.** Same honest
+   mail pattern as orders (503 when `FARM_INBOX`/Resend unset).
+
+Engineering notes / gotchas:
+- `/api/orders` was generalised to be product-aware (`product: eggs|meat|chicks`,
+  optional `quantity`/`date`), **backward compatible** with the old egg form and
+  its tests (legacy `crates` still accepted).
+- `OrderForm` now takes a `product` prop and renders per-product fields + an
+  inline WhatsApp fallback. One component serves all three lines.
+- Gates (apps/farm): typecheck clean, eslint clean, **vitest 17/17**, next build
+  OK (routes /meat, /sell, /api/reps present). `react/no-unescaped-entities`
+  bit me on apostrophes in JSX text ("We're", "you'd") — escape with `&apos;`.
+- `pnpm format:check` flags ~520 files repo-wide (pre-existing, incl. untouched
+  config + lib). Repo is NOT prettier-enforced; did NOT run `--write` (would be
+  a huge unrelated diff). ESLint is the real gate.
+- Visually verified home / meat / sell in the browser against the dev server.
