@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { chickens } from "@kisi/canon";
 import { ChickenPortrait } from "@kisi/ui";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { AFRICA_URL } from "@/lib/site";
 
 /**
  * kisifarm home. Hero, the laying hens pulled live from the shared canon, and
- * the three business lines (eggs, day-old chicks, support).
+ * the three things the farm sells: eggs, day-old chicks, and chicken meat.
  */
 const layingHens = chickens.filter((c) => c.layingStatus === "laying").slice(0, 3);
 
@@ -17,16 +18,16 @@ const lines = [
     cta: "Order eggs",
   },
   {
+    href: "/meat",
+    title: "Chicken meat",
+    body: "Farm chicken raised here and processed to order. Pick your day and we prepare it fresh.",
+    cta: "Order chicken",
+  },
+  {
     href: "/chicks",
     title: "Day-old chicks",
     body: "Healthy day-old chicks and point-of-lay pullets as the hatchery grows. Ask about availability.",
     cta: "Ask about chicks",
-  },
-  {
-    href: "/support",
-    title: "Support the flock",
-    body: "Back feed, clean water, solar light and better housing. Sponsorship, not charity.",
-    cta: "See how",
   },
 ];
 
@@ -37,12 +38,12 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 py-20">
           <p className="kicker text-kisi-gold-300">Kisi Farm · Southwestern Nigeria</p>
           <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold leading-tight md:text-6xl">
-            Farm-fresh eggs from hens with names.
+            Fresh eggs and farm chicken, from hens with names.
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-kisi-cream-200">
-            Kisi Farm is a working poultry farm. Every egg we sell was laid by a
-            real hen you can meet. Order eggs and day-old chicks, straight from
-            the flock.
+            Kisi Farm is a working poultry farm in southwestern Nigeria. We sell
+            farm-fresh eggs, chicken meat raised and processed to order, and
+            day-old chicks, straight from the flock to you.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
@@ -52,11 +53,12 @@ export default function Home() {
               Order eggs
             </Link>
             <Link
-              href="/chicks"
+              href="/meat"
               className="rounded-full border border-kisi-cream-200/40 px-6 py-3 font-semibold text-kisi-cream-100 hover:border-kisi-cream-100"
             >
-              Day-old chicks
+              Order chicken meat
             </Link>
+            <WhatsAppButton message="Hi Kisi Farm, I'd like to place an order." />
           </div>
         </div>
       </section>

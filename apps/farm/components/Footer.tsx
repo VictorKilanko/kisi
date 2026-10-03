@@ -12,24 +12,37 @@ export function Footer() {
             Kisi Farm
           </p>
           <p className="mt-2 text-kisi-charcoal-600">
-            Farm-fresh eggs and day-old chicks from a working poultry farm in
-            southwestern Nigeria. Every egg was laid by a hen with a name.
+            Farm-fresh eggs, chicken meat and day-old chicks from a working
+            poultry farm in southwestern Nigeria. Every egg was laid by a hen
+            with a name.
           </p>
         </div>
         <div>
-          <p className="kicker text-kisi-charcoal-600">Support &amp; explore</p>
+          <p className="kicker text-kisi-charcoal-600">Shop</p>
           <ul className="mt-2 space-y-1">
             <li>
-              <Link href="/support" className="hover:text-kisi-green-700">
-                Support the chickens
+              <Link href="/eggs" className="hover:text-kisi-green-700">
+                Order eggs
               </Link>
             </li>
             <li>
-              <Link
-                href="/build-the-farm"
-                className="hover:text-kisi-green-700"
-              >
-                Build the Farm (put your name on it)
+              <Link href="/meat" className="hover:text-kisi-green-700">
+                Order chicken meat
+              </Link>
+            </li>
+            <li>
+              <Link href="/chicks" className="hover:text-kisi-green-700">
+                Day-old chicks
+              </Link>
+            </li>
+            <li>
+              <Link href="/sell" className="hover:text-kisi-green-700">
+                Sell with us
+              </Link>
+            </li>
+            <li className="pt-2">
+              <Link href="/support" className="hover:text-kisi-green-700">
+                Support the chickens
               </Link>
             </li>
             <li>
