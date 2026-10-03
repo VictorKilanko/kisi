@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it } from "vitest";
 import { POST as checkout } from "@/app/api/support/checkout/route";
 import { POST as newsletter } from "@/app/api/newsletter/route";
 import { POST as orders } from "@/app/api/orders/route";
+import { POST as reps } from "@/app/api/reps/route";
 import { getPayments } from "@/lib/payments";
 import { rateLimit } from "@/lib/rateLimit";
 
@@ -140,6 +141,73 @@ describe("POST /api/orders", () => {
       req("/api/orders", { name: "No contact details" }, "203.0.113.31"),
     );
     expect(res.status).toBe(400);
+  });
+
+  it("accepts a meat order with a chosen day (503 only because mail is off)", async () => {
+    const res = await orders(
+      req(
+        "/api/orders",
+        {
+          product: "meat",
+          name: "A Customer",
+          contact: "customer@example.com",
+          area: "Ibadan",
+          quantity: "5 birds",
+          date: "2026-10-10",
+        },
+        "203.0.113.32",
+      ),
+    );
+    // Valid shape, so the only failure is the honest unconfigured-mail 503.
+    expect(res.status).toBe(503);
+    const json = (await res.json()) as { error: string };
+    expect(json.error).toBe("mail-unconfigured");
+  });
+});
+
+describe("POST /api/reps", () => {
+  it("refuses honestly (503) when no mail provider is configured", async () => {
+    const res = await reps(
+      req(
+        "/api/reps",
+        {
+          name: "A Rep",
+          contact: "rep@example.com",
+          area: "Lagos",
+          products: "eggs and meat",
+        },
+        "203.0.113.40",
+      ),
+    );
+    expect(res.status).toBe(503);
+    const json = (await res.json()) as { ok: boolean; error: string };
+    expect(json.ok).toBe(false);
+    expect(json.error).toBe("mail-unconfigured");
+  });
+
+  it("rejects incomplete applications with 400", async () => {
+    const res = await reps(
+      req("/api/reps", { name: "No contact" }, "203.0.113.41"),
+    );
+    expect(res.status).toBe(400);
+  });
+
+  it("pretends success on honeypot hits without delivering", async () => {
+    const res = await reps(
+      req(
+        "/api/reps",
+        {
+          name: "Bot",
+          contact: "bot@spam.com",
+          area: "Nowhere",
+          company: "Spam Inc",
+        },
+        "203.0.113.42",
+      ),
+    );
+    expect(res.status).toBe(200);
+    const json = (await res.json()) as { ok: boolean };
+    expect(json.ok).toBe(true);
   });
 });
 

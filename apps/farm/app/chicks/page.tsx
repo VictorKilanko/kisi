@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { OrderForm } from "@/components/OrderForm";
+import { SectionHeading } from "@/components/Cards";
 import { PlaceholderNotice } from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
@@ -60,13 +61,12 @@ export default function ChicksPage() {
         </PlaceholderNotice>
       </div>
 
-      <div className="mt-8">
-        <Link
-          href="/visit"
-          className="inline-block rounded-full bg-kisi-green-700 px-6 py-3 text-sm font-semibold text-kisi-cream-100 hover:bg-kisi-green-900"
-        >
-          Ask about chicks &rarr;
-        </Link>
+      <div className="mt-12 max-w-2xl">
+        <SectionHeading
+          kicker="Register your interest"
+          title="Tell us what you're after"
+        />
+        <OrderForm product="chicks" />
       </div>
     </div>
   );
