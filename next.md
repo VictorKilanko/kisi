@@ -1,9 +1,28 @@
 # next.md — Farm shop: pick up here
 
-Checkpoint: **2026-10-03**. The 5 asks below are **built and verified** on branch
-`feature/kisi-poultry-republic` (app: `apps/farm` -> farm.kisi.africa), but NOT
-committed, NOT pushed, and NOT live yet. Full detail in `docs/LESSONS.md`
-(session 2026-10-03) and `docs/CONTENT_CHECKLIST.md`.
+Checkpoint: **2026-10-03**. The 5 asks below are **built, verified, and SHIPPED**:
+merged to `main` via PR #1 (merge commit `a3f7bae`) and deploying on Vercel to
+farm.kisi.africa. Full detail in `docs/LESSONS.md` (session 2026-10-03) and
+`docs/CONTENT_CHECKLIST.md`.
+
+---
+
+## ⚠️ STILL NEEDED FROM THE OWNER (site is live but not fully switched on)
+
+Set these in the **Vercel project → Settings → Environment Variables**, then
+redeploy. Until they're set the site is live and honest, but WhatsApp buttons
+stay hidden and order/rep forms point people to the contact page.
+
+- [x] ✅ **WhatsApp number** — owner gave +234 813 314 9331 (2026-10-04). Wired
+      as the default in `lib/site.ts`, so the "Order on WhatsApp" buttons work
+      everywhere once the next deploy lands. `NEXT_PUBLIC_WHATSAPP_NUMBER` still
+      overrides it if the number ever changes.
+- [ ] 🔴 **Order inbox** → `FARM_INBOX` (where orders should land) +
+      `RESEND_API_KEY` (from resend.com). This makes meat/egg/chick orders and
+      sales-rep sign-ups actually reach you by email.
+- [ ] 🟡 **Meat prices / breeds / weights**, **production days**, and
+      **sales-rep terms** — send these and we'll add the "how it works" copy to
+      `/meat` and `/sell`. (More detail in the lists below.)
 
 ---
 
@@ -44,15 +63,11 @@ Gates passed: typecheck · eslint · tests 17/17 · production build.
 
 ---
 
-## TO DO to ship the code
+## Ship the code — DONE ✅
 
-- [ ] Commit the work to `feature/kisi-poultry-republic` (small logical commits)
-      — Claude can do this on request, after an expert design/dev subagent audit
-      of the diff (standing rule).
-- [ ] Push the branch.
-- [ ] **Go live** (only the owner can move `main`). In the Claude Code prompt:
-      `!gh pr create --repo VictorKilanko/kisi --base main --head feature/kisi-poultry-republic --fill`
-      then merge the PR (or merge the branch in GitHub). Vercel deploys `main`.
+- [x] Audited the diff (design/dev/brand subagent); fixed the one flagged claim.
+- [x] Committed to `feature/kisi-poultry-republic` (6 logical commits) + pushed.
+- [x] Opened PR #1 and merged to `main` (`a3f7bae`) → Vercel deploying.
 
 ---
 
