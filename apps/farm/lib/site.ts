@@ -22,13 +22,13 @@ export const KIDS_URL = clean(
 );
 
 /**
- * Farm WhatsApp number, digits only, in full international form
- * (e.g. 2348012345678). Empty until NEXT_PUBLIC_WHATSAPP_NUMBER is set, so
- * the "Order on WhatsApp" buttons simply don't render rather than linking to
- * a made-up number. Set it in the Vercel project settings to switch them on.
+ * Farm WhatsApp number, digits only, in full international form. This is the
+ * farm's real, public order line (+234 813 314 9331). Overridable with
+ * NEXT_PUBLIC_WHATSAPP_NUMBER (e.g. to swap numbers without a code change); set
+ * that to an empty string to hide the "Order on WhatsApp" buttons entirely.
  */
 export const WHATSAPP_NUMBER = (
-  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? ""
+  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "2348133149331"
 ).replace(/\D/g, "");
 
 /**
