@@ -68,7 +68,7 @@ export default function MeatPage() {
         <aside className="rounded-3xl bg-kisi-cream-200 p-6">
           <FarmPhoto
             src="/photos/poultry-house-2.jpg"
-            alt="Birds growing on fresh litter inside a poultry house at Kisi Farm"
+            alt="Birds growing on fresh wood-shaving litter inside a poultry house at Kisi Farm"
             caption="Inside one of our poultry houses at Kisi"
             className="mb-6"
             sizes="(max-width: 1024px) 100vw, 40vw"

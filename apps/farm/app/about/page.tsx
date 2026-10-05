@@ -8,7 +8,7 @@ import { farmStats } from "@kisi/canon";
 const galleryPhotos = [
   {
     src: "/photos/poultry-house-1.jpg",
-    alt: "Inside a poultry house at Kisi Farm, birds on fresh litter",
+    alt: "Inside a poultry house at Kisi Farm, birds on fresh wood-shaving litter",
     caption: "The flock at home",
   },
   {

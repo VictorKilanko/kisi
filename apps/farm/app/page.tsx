@@ -38,7 +38,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-kisi-green-900 text-kisi-cream-100">
         <Image
           src="/photos/poultry-house-1.jpg"
-          alt="Inside a poultry house at Kisi Farm: birds on fresh litter with feeders and drinkers"
+          alt="Inside a poultry house at Kisi Farm: birds on fresh wood-shaving litter with feeders and drinkers"
           fill
           priority
           sizes="100vw"
