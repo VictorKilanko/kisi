@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { chickens } from "@kisi/canon";
 import { ChickenPortrait } from "@kisi/ui";
@@ -34,8 +35,24 @@ const lines = [
 export default function Home() {
   return (
     <>
-      <section className="bg-kisi-green-900 text-kisi-cream-100">
-        <div className="mx-auto max-w-6xl px-4 py-20">
+      <section className="relative overflow-hidden bg-kisi-green-900 text-kisi-cream-100">
+        <Image
+          src="/photos/poultry-house-1.jpg"
+          alt="Inside a poultry house at Kisi Farm: birds on fresh litter with feeders and drinkers"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        {/* Deep-green wash so the cream text stays readable and the photo reads
+            as part of the brand rather than a pasted-in snapshot. Darker on the
+            right on small screens (text goes full-width there), lighter on
+            desktop so the photo can breathe beside the text. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-r from-kisi-green-900 via-kisi-green-900/95 to-kisi-green-900/70 md:via-kisi-green-900/90 md:to-kisi-green-900/50"
+        />
+        <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
           <p className="kicker text-kisi-gold-300">Kisi Farm · Southwestern Nigeria</p>
           <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold leading-tight md:text-6xl">
             Fresh eggs and farm chicken, from hens with names.
