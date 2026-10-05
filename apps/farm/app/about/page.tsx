@@ -1,8 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
+import { FarmPhoto } from "@/components/FarmPhoto";
 import { PlaceholderNotice } from "@/components/Disclaimer";
 import { farmStats } from "@kisi/canon";
+
+const galleryPhotos = [
+  {
+    src: "/photos/poultry-house-1.jpg",
+    alt: "Inside a poultry house at Kisi Farm, birds on fresh litter",
+    caption: "The flock at home",
+  },
+  {
+    src: "/photos/poultry-house-2.jpg",
+    alt: "Birds feeding and roaming on clean litter inside a Kisi Farm poultry house",
+    caption: "Clean water and feed first",
+  },
+  {
+    src: "/photos/poultry-house-3.jpg",
+    alt: "A wider view across a poultry house full of birds at Kisi Farm",
+    caption: "Room to roam and grow",
+  },
+];
 
 export const metadata: Metadata = {
   title: "About Kisi Farm",
@@ -82,6 +101,37 @@ export default function AboutPage() {
             </div>
           ))}
         </dl>
+      </section>
+
+      {/* Inside the farm gallery */}
+      <section className="mt-16">
+        <SectionHeading
+          kicker="Inside the Farm"
+          title="Real birds, real housing"
+          lede="A few honest looks inside the farm. These are the birds your support keeps fed, watered and housed, tap any photo to help."
+        />
+        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {galleryPhotos.map((p) => (
+            <li key={p.src}>
+              <FarmPhoto
+                src={p.src}
+                alt={p.alt}
+                caption={p.caption}
+                href="/support"
+                linkLabel="Support the chickens"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </li>
+          ))}
+        </ul>
+        <div className="mt-6">
+          <Link
+            href="/support"
+            className="inline-block rounded-full bg-kisi-green-700 px-6 py-3 text-sm font-semibold text-kisi-cream-100 hover:bg-kisi-green-900"
+          >
+            Support the chickens &rarr;
+          </Link>
+        </div>
       </section>
 
       {/* Welfare commitment */}

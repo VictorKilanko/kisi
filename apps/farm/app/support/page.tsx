@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
 import { PlaceholderNotice } from "@/components/Disclaimer";
 import { SupportCheckout } from "@/components/SupportCheckout";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { supportTiers } from "@kisi/canon";
 
 export const metadata: Metadata = {
@@ -28,6 +29,15 @@ export default function SupportPage() {
         chickens of Kisi: keep the flock going day to day, or help build the
         farm&apos;s future and put your name on it.
       </p>
+      <div className="mt-6">
+        <WhatsAppButton message="Hi Kisi Farm, I'd like to support the chickens. Please tell me how.">
+          Talk to us on WhatsApp
+        </WhatsAppButton>
+        <p className="mt-2 text-xs text-kisi-charcoal-600">
+          Online giving opens after our legal review. In the meantime, message
+          us and we&apos;ll tell you how to help right now.
+        </p>
+      </div>
 
       {/* Two ways to help */}
       <section className="mt-8 grid gap-6 md:grid-cols-2">
