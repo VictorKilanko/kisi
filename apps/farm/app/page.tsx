@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { chickens } from "@kisi/canon";
 import { ChickenPortrait } from "@kisi/ui";
+import { HeroMedia } from "@/components/HeroMedia";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { AFRICA_URL } from "@/lib/site";
 
@@ -36,14 +36,7 @@ export default function Home() {
   return (
     <>
       <section className="relative overflow-hidden bg-kisi-green-900 text-kisi-cream-100">
-        <Image
-          src="/photos/poultry-house-1.jpg"
-          alt="Inside a poultry house at Kisi Farm: birds on fresh wood-shaving litter with feeders and drinkers"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <HeroMedia />
         {/* Deep-green wash so the cream text stays readable and the photo reads
             as part of the brand rather than a pasted-in snapshot. Darker on the
             right on small screens (text goes full-width there), lighter on
