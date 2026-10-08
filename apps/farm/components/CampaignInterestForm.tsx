@@ -9,11 +9,13 @@ type State =
   | { status: "error"; message: string };
 
 /**
- * "Register interest" capture for the Build the Farm campaign. Honest by
- * design, exactly like NewsletterForm: no mailing-list provider is connected
- * yet, so the endpoint stores nothing and the success message says so. When a
- * provider is wired in (behind the same /api/newsletter endpoint) this starts
- * building a real waitlist with no change here.
+ * "Register interest" capture for the Build the Farm naming campaign.
+ *
+ * Posts to /api/support/pledge with kind "naming", so interest reaches the
+ * farm's support inbox (the address lives server-side in the route, never
+ * here) exactly like a donation pledge or finance enquiry. Honest by design:
+ * if mail isn't configured yet the endpoint returns 503 and we say so and
+ * point to WhatsApp, rather than pretending it was received.
  */
 export function CampaignInterestForm() {
   const [state, setState] = useState<State>({ status: "idle" });
@@ -25,35 +27,32 @@ export function CampaignInterestForm() {
     setState({ status: "sending" });
 
     try {
-      const res = await fetch("/api/newsletter", {
+      const res = await fetch("/api/support/pledge", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          kind: "naming",
+          name: String(data.get("name") ?? ""),
           email: String(data.get("email") ?? ""),
+          fund: String(data.get("build") ?? ""),
           company: String(data.get("company") ?? ""),
-          source: "build-the-farm",
         }),
       });
-      const json = (await res.json()) as {
-        ok?: boolean;
-        note?: string;
-        error?: string;
-      };
+      const json = (await res.json()) as { ok?: boolean; note?: string };
 
       if (res.ok && json.ok) {
         form.reset();
         setState({
           status: "done",
-          note: json.note ?? "Noted, we'll be in touch when naming opens.",
+          note: json.note ?? "Noted. We'll be in touch when naming opens.",
         });
         return;
       }
       setState({
         status: "error",
         message:
-          json.error === "rate-limited"
-            ? "Too many attempts, please wait a minute."
-            : "That email didn't look right. Try again?",
+          json.note ??
+          "That didn't go through. Please try again, or message us on WhatsApp.",
       });
     } catch {
       setState({
@@ -65,8 +64,19 @@ export function CampaignInterestForm() {
 
   return (
     <form onSubmit={onSubmit} aria-label="Register interest in Build the Farm">
-      <div className="flex max-w-md flex-col gap-3 sm:flex-row">
-        <label className="flex-1">
+      <div className="mx-auto grid max-w-md gap-3 sm:grid-cols-2">
+        <label className="sm:col-span-2">
+          <span className="sr-only">Your name</span>
+          <input
+            type="text"
+            name="name"
+            required
+            maxLength={80}
+            placeholder="Your name"
+            className="w-full rounded-full border border-kisi-green-900/20 bg-white px-5 py-3 text-sm text-kisi-charcoal-900"
+          />
+        </label>
+        <label className="sm:col-span-2">
           <span className="sr-only">Email address</span>
           <input
             type="email"
@@ -74,6 +84,16 @@ export function CampaignInterestForm() {
             required
             maxLength={254}
             placeholder="your@email.com"
+            className="w-full rounded-full border border-kisi-green-900/20 bg-white px-5 py-3 text-sm text-kisi-charcoal-900"
+          />
+        </label>
+        <label className="sm:col-span-2">
+          <span className="sr-only">Which build interests you (optional)</span>
+          <input
+            type="text"
+            name="build"
+            maxLength={120}
+            placeholder="Which build interests you? (optional)"
             className="w-full rounded-full border border-kisi-green-900/20 bg-white px-5 py-3 text-sm text-kisi-charcoal-900"
           />
         </label>
@@ -92,24 +112,25 @@ export function CampaignInterestForm() {
         <button
           type="submit"
           disabled={state.status === "sending"}
-          className="rounded-full bg-kisi-green-900 px-6 py-3 text-sm font-semibold text-kisi-cream-100 hover:bg-kisi-green-700 disabled:opacity-60"
+          className="rounded-full bg-kisi-green-900 px-6 py-3 text-sm font-semibold text-kisi-cream-100 hover:bg-kisi-green-700 disabled:opacity-60 sm:col-span-2"
         >
           {state.status === "sending" ? "Sending…" : "Register my interest"}
         </button>
       </div>
       <p
         aria-live="polite"
-        className="mt-2 min-h-5 text-xs text-kisi-charcoal-600"
+        className="mt-3 min-h-5 text-sm text-kisi-charcoal-600"
       >
-        {state.status === "done" && <span>{state.note}</span>}
+        {state.status === "done" && (
+          <span className="font-medium text-kisi-green-700">{state.note}</span>
+        )}
         {state.status === "error" && (
           <span className="text-kisi-earth-700">{state.message}</span>
         )}
         {state.status === "idle" && (
           <span className="opacity-70">
             Naming isn&apos;t open for payment yet. Register and you&apos;ll be
-            first to hear, your address isn&apos;t stored until the list goes
-            live.
+            first to hear.
           </span>
         )}
       </p>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionHeading } from "@/components/Cards";
 import { CampaignInterestForm } from "@/components/CampaignInterestForm";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import {
   builds,
   CAMPAIGN_TOTAL_IS_FLOOR,
@@ -14,9 +15,8 @@ import {
 export const metadata: Metadata = {
   title: "Build the Farm",
   description:
-    "Put your name on a real Nigerian farm. Kisi is building a hatchery, a " +
-    "feed mill, solar power, a cold room and a farm house, and every gift " +
-    "names something real in the Republic of Kisi.",
+    "Put your name on a real Nigerian farm. Kisi is building a hatchery and a " +
+    "farm house, and every gift names something real in the Republic of Kisi.",
 };
 
 const goalLabel = (goalUSD: number | null) =>
@@ -27,25 +27,6 @@ const goalLabel = (goalUSD: number | null) =>
 const BUILD_ICON: Record<string, React.ReactNode> = {
   hatchery: (
     <path d="M12 3c3.5 3 5 6.5 5 9.5A5 5 0 0 1 7 12.5C7 9.5 8.5 6 12 3zM9.5 14.5l1.5 1.5 3-3" />
-  ),
-  "feed-mill": (
-    <>
-      <path d="M6 3h12l-1.5 6H7.5L6 3z" />
-      <path d="M7.5 9l-1 5.5a3.5 3.5 0 0 0 3.5 4h4a3.5 3.5 0 0 0 3.5-4L16.5 9" />
-      <path d="M10 13h4" />
-    </>
-  ),
-  solar: (
-    <>
-      <circle cx="12" cy="12" r="4" />
-      <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
-    </>
-  ),
-  "cold-room": (
-    <>
-      <path d="M12 2v20M4 7l16 10M20 7L4 17" />
-      <path d="M12 2l-2.5 2.5M12 2l2.5 2.5M12 22l-2.5-2.5M12 22l2.5-2.5" />
-    </>
   ),
   "farm-house": (
     <>
@@ -77,10 +58,10 @@ export default function BuildTheFarmPage() {
                 {CAMPAIGN_TOTAL_IS_FLOOR ? "over " : ""}$
                 {CAMPAIGN_TOTAL_USD.toLocaleString("en-US")}
               </strong>{" "}
-              for five builds that change daily life for every bird at Kisi: a
-              hatchery, a feed mill, solar, a cold room, and a farm house. We
-              can&apos;t post you a Nigerian egg. We can put your name on the
-              place it comes from.
+              for two landmark builds that grow the farm for good: a hatchery
+              that breeds our own strong birds, and a farm house to run the
+              place as Kisi grows. We can&apos;t post you a Nigerian egg. We can
+              put your name on the place it comes from.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -89,11 +70,14 @@ export default function BuildTheFarmPage() {
               >
                 Register your interest
               </Link>
+              <WhatsAppButton message="Hi Kisi Farm, I'm interested in Build the Farm (naming a build). Please tell me more.">
+                Chat on WhatsApp
+              </WhatsAppButton>
               <Link
                 href="#builds"
                 className="rounded-full border border-kisi-green-900/25 px-6 py-3.5 font-semibold text-kisi-green-900 hover:border-kisi-green-900/50"
               >
-                See the five builds
+                See the builds
               </Link>
             </div>
           </div>
@@ -127,11 +111,11 @@ export default function BuildTheFarmPage() {
         className="mx-auto max-w-6xl scroll-mt-20 px-4 py-12"
       >
         <SectionHeading
-          kicker="The five builds"
-          title="Five things, one farm"
-          lede="Back the one you care about. The money goes to a working farm; your name goes on what it pays for."
+          kicker="The builds"
+          title="Two landmark builds"
+          lede="The big, one-time builds that grow the farm for good. The money goes to a working farm; your name goes on what it pays for. For the everyday running costs, see the farm funds on the Support page."
         />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2">
           {builds.map((b) => (
             <div
               key={b.id}
@@ -317,22 +301,28 @@ export default function BuildTheFarmPage() {
             Be first to put your name on it
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-kisi-charcoal-600">
-            Naming opens once amounts and the farm&apos;s payment setup are
-            confirmed. Leave your email and you&apos;ll be first to hear, from a
-            single hen to a whole build.
+            Tell us your name and email and we&apos;ll be in touch, from naming
+            a single hen to a whole build. Prefer to talk? Message us on
+            WhatsApp and we&apos;ll pick it up from there.
           </p>
           <div className="mt-6 flex justify-center">
             <CampaignInterestForm />
           </div>
+          <div className="mt-6 flex justify-center">
+            <WhatsAppButton message="Hi Kisi Farm, I'm interested in Build the Farm. Please tell me how to take part.">
+              Talk to us on WhatsApp
+            </WhatsAppButton>
+          </div>
         </div>
 
         <p className="mt-8 text-center text-sm text-kisi-charcoal-600">
-          Prefer to back a single farm fund, housing, vet care, cold storage?{" "}
+          Want to give now instead of naming a build? Back one of the five farm
+          funds, housing, vet care, cold storage and more.{" "}
           <Link
             href="/support#funds"
             className="font-semibold text-kisi-green-700 underline"
           >
-            See the five farm funds
+            See the farm funds
           </Link>
           .
         </p>

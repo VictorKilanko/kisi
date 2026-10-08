@@ -198,7 +198,8 @@ export default function SupportPage() {
         </div>
 
         <p className="mt-8 text-center text-sm text-kisi-charcoal-600">
-          Prefer to put your name on a whole build?{" "}
+          Want to name something bigger? The hatchery and the farm house can
+          carry your name.{" "}
           <Link
             href="/build-the-farm"
             className="font-semibold text-kisi-green-700 underline"
