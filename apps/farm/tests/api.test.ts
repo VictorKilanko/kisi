@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it } from "vitest";
 import { POST as checkout } from "@/app/api/support/checkout/route";
 import { POST as newsletter } from "@/app/api/newsletter/route";
 import { POST as orders } from "@/app/api/orders/route";
+import { POST as pledge } from "@/app/api/support/pledge/route";
 import { POST as reps } from "@/app/api/reps/route";
 import { getPayments } from "@/lib/payments";
 import { rateLimit } from "@/lib/rateLimit";
@@ -58,13 +59,19 @@ describe("payments live-lock", () => {
 
 describe("POST /api/support/checkout", () => {
   it("rejects malformed bodies with 400", async () => {
-    const res = await checkout(req("/api/support/checkout", { email: "not-an-email" }, "203.0.113.10"));
+    const res = await checkout(
+      req("/api/support/checkout", { email: "not-an-email" }, "203.0.113.10"),
+    );
     expect(res.status).toBe(400);
   });
 
   it("rejects unknown tiers with 400", async () => {
     const res = await checkout(
-      req("/api/support/checkout", { tierId: "yacht-fund", email: "a@b.com" }, "203.0.113.11"),
+      req(
+        "/api/support/checkout",
+        { tierId: "yacht-fund", email: "a@b.com" },
+        "203.0.113.11",
+      ),
     );
     expect(res.status).toBe(400);
   });
@@ -82,7 +89,11 @@ describe("POST /api/support/checkout", () => {
 
   it("returns an honest 503 when payments are not configured", async () => {
     const res = await checkout(
-      req("/api/support/checkout", { tierId: "feed", email: "a@b.com" }, "203.0.113.13"),
+      req(
+        "/api/support/checkout",
+        { tierId: "feed", email: "a@b.com" },
+        "203.0.113.13",
+      ),
     );
     expect(res.status).toBe(503);
     const json = (await res.json()) as { error: string };
@@ -92,7 +103,9 @@ describe("POST /api/support/checkout", () => {
 
 describe("POST /api/newsletter", () => {
   it("accepts a valid email but honestly stores nothing", async () => {
-    const res = await newsletter(req("/api/newsletter", { email: "a@b.com" }, "203.0.113.20"));
+    const res = await newsletter(
+      req("/api/newsletter", { email: "a@b.com" }, "203.0.113.20"),
+    );
     expect(res.status).toBe(200);
     const json = (await res.json()) as { ok: boolean; stored: boolean };
     expect(json.ok).toBe(true);
@@ -100,13 +113,19 @@ describe("POST /api/newsletter", () => {
   });
 
   it("rejects invalid emails", async () => {
-    const res = await newsletter(req("/api/newsletter", { email: "nope" }, "203.0.113.21"));
+    const res = await newsletter(
+      req("/api/newsletter", { email: "nope" }, "203.0.113.21"),
+    );
     expect(res.status).toBe(400);
   });
 
   it("pretends success on honeypot hits without storing", async () => {
     const res = await newsletter(
-      req("/api/newsletter", { email: "bot@spam.com", company: "Spam Inc" }, "203.0.113.22"),
+      req(
+        "/api/newsletter",
+        { email: "bot@spam.com", company: "Spam Inc" },
+        "203.0.113.22",
+      ),
     );
     expect(res.status).toBe(200);
     const json = (await res.json()) as { ok: boolean; note?: string };
@@ -211,11 +230,76 @@ describe("POST /api/reps", () => {
   });
 });
 
+describe("POST /api/support/pledge", () => {
+  it("refuses honestly (503) when no mail provider is configured", async () => {
+    const res = await pledge(
+      req(
+        "/api/support/pledge",
+        {
+          kind: "donation",
+          name: "A Supporter",
+          email: "supporter@example.com",
+          fund: "Cold Storage",
+        },
+        "203.0.113.50",
+      ),
+    );
+    // An undelivered pledge must never look like a delivered one.
+    expect(res.status).toBe(503);
+    const json = (await res.json()) as { ok: boolean; error: string };
+    expect(json.ok).toBe(false);
+    expect(json.error).toBe("mail-unconfigured");
+  });
+
+  it("rejects an unknown kind with 400", async () => {
+    const res = await pledge(
+      req(
+        "/api/support/pledge",
+        { kind: "bribe", name: "X", email: "x@y.com" },
+        "203.0.113.51",
+      ),
+    );
+    expect(res.status).toBe(400);
+  });
+
+  it("rejects a pledge with no email with 400", async () => {
+    const res = await pledge(
+      req(
+        "/api/support/pledge",
+        { kind: "donation", name: "No Email" },
+        "203.0.113.52",
+      ),
+    );
+    expect(res.status).toBe(400);
+  });
+
+  it("pretends success on honeypot hits without delivering", async () => {
+    const res = await pledge(
+      req(
+        "/api/support/pledge",
+        {
+          kind: "finance",
+          name: "Bot",
+          email: "bot@spam.com",
+          company: "Spam Inc",
+        },
+        "203.0.113.53",
+      ),
+    );
+    expect(res.status).toBe(200);
+    const json = (await res.json()) as { ok: boolean; delivered: boolean };
+    expect(json.ok).toBe(true);
+    expect(json.delivered).toBe(false);
+  });
+});
+
 describe("rate limiter", () => {
   it("blocks after the limit within a window", async () => {
     const key = "test:203.0.113.99";
     for (let i = 0; i < 5; i++) {
-      expect((await rateLimit(key, { limit: 5, windowMs: 60_000 })).allowed).toBe(true);
+      expect(
+        (await rateLimit(key, { limit: 5, windowMs: 60_000 })).allowed,
+      ).toBe(true);
     }
     const blocked = await rateLimit(key, { limit: 5, windowMs: 60_000 });
     expect(blocked.allowed).toBe(false);

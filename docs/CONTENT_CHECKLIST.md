@@ -9,6 +9,24 @@ credible · 🟢 nice to have.
 
 ## Needs owner input
 
+### Support page: five funds + donation/finance forms (added 2026-10-08)
+
+The Support page was rebuilt around the mission and **five $20,000 funds**
+(Better Housing, Senior Hen Fund, Veterinary Care, Solar/Light/Security, Cold
+Storage). A pledge form and a debt-financing form now route enquiries to the
+farm. To switch delivery on:
+
+- [ ] 🔴 **RESEND_API_KEY** (and the inbox). Pledges and finance enquiries
+      (`/api/support/pledge`) deliver by email. Without the key the forms
+      honestly return 503 and send people to WhatsApp. The recipient defaults to
+      **victor@panafrican.city** (not shown anywhere on the site); override it
+      with `SUPPORT_INBOX` in Vercel if that ever changes. No `FARM_INBOX`
+      needed for these two forms.
+- [ ] 🟡 **Confirm the $20,000 per-fund goals** are final (shown as "$20k" on
+      each card; total "$100,000" in the hero). Change in `app/support/funds.ts`.
+- [ ] 🟢 **Card giving** stays closed until the legal/payment review is done
+      (same lock as the rest of the site). Pledges start a conversation for now.
+
 ### Selling meat + WhatsApp + sales reps (added 2026-10-03)
 
 The home hero now sells eggs, chicken meat and day-old chicks; there is a new

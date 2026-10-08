@@ -327,12 +327,12 @@ export default function BuildTheFarmPage() {
         </div>
 
         <p className="mt-8 text-center text-sm text-kisi-charcoal-600">
-          Prefer to fund feed, vet care, or sponsor a single hen?{" "}
+          Prefer to back a single farm fund, housing, vet care, cold storage?{" "}
           <Link
-            href="/support#ways"
+            href="/support#funds"
             className="font-semibold text-kisi-green-700 underline"
           >
-            See everyday ways to support
+            See the five farm funds
           </Link>
           .
         </p>
