@@ -6,6 +6,58 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-10-08 — Mobile menu fix + Support page redesign
+
+Two owner asks, both built, gated, visually verified, and (per standing rule)
+expert-audited before push.
+
+**1. kisi.africa mobile menu (`apps/africa/components/Header.tsx`).** Owner on a
+phone: the menu was too long, **didn't scroll**, showed every submenu expanded
+with no collapse, and **"Shop Kisi Farm" was buried at the bottom** (invisible
+without a scroll the menu didn't allow). Fixes:
+- Mobile `<nav>` is now `flex flex-col max-h-[calc(100dvh-4rem)]`; the `<ul>` is
+  `flex-1 overflow-y-auto overscroll-contain` so a long menu **scrolls**.
+- Dropdown groups are **tap-to-expand accordions**, collapsed by default (Set-
+  based `expanded` state, rotating chevron, `aria-expanded`/`aria-controls`).
+  No more wall of submenus.
+- **"Shop Kisi Farm" is a pinned `shrink-0` footer** inside the panel, so the
+  sales CTA (→ farm.kisi.africa) is **always visible**, scroll or not.
+- `closeMenu` resets `expanded`. Desktop nav untouched.
+
+**2. farm.kisi.africa Support page (rewritten).** Owner reframed support as a
+**mission + five $20,000 donation funds**, plus debt financing.
+- New hero: the cause — Nigeria is short of strong **parent stock** and chicken
+  **meat**; Kisi's answer is excellent care + the Republic storytelling.
+- **Five funds, $20k each** (`app/support/funds.ts`): Better Housing, The Senior
+  Hen Fund (dignified end-of-lay → humane meat processing, written with respect),
+  Veterinary Care, Solar/Light/Security, Cold Storage. Total shown: $100,000.
+- `components/SupportForms.tsx`: **FundsBoard** (cards + pledge form; "Back this
+  fund" pre-selects the fund and smooth-scrolls to the form) and
+  **FinanceEnquiryForm** (debt financing / investment). Both POST
+  `/api/support/pledge`.
+- **`/api/support/pledge`** (new): zod + rate-limit + honeypot, routes to
+  `SUPPORT_INBOX` (**default `victor@panafrican.city`**) via a new
+  `getMailer(toOverride)` arg. **The email is server-side only — never rendered
+  in any client file** (grep-verified; honest 503 until `RESEND_API_KEY` is set).
+- Framing is "donations to a working, for-profit farm, **not** tax-deductible,
+  no ownership/shares"; debt financing is the separate return-seeking path.
+- Dropped the per-tier `SupportCheckout` buttons from this page (checkout route +
+  canon tiers still exist, component now unused but kept for when card giving
+  opens). Updated build-the-farm link `/support#ways` → `/support#funds`.
+
+Gotchas / notes:
+- **Dev server can't render locally**: turbopack dev fails to resolve the Google
+  Fonts module (`@vercel/turbopack-next/internal/font/google/font`) under this
+  OneDrive checkout → every page 500s in `next dev`. **`next build` + `next
+  start` works fine** — used that to visually verify both apps in Chrome.
+- Chrome window resize won't push the viewport below the `lg` breakpoint here, so
+  the mobile layout couldn't be screenshotted; relied on build + code review for
+  the mobile menu, visual check for support (desktop).
+- Gates: typecheck · eslint clean; **farm vitest 21/21** (4 new pledge tests),
+  **africa 13/13**; `next build` OK for both apps.
+
+---
+
 ## Session — 2026-09-20 (cont.) — S2 Eps 20-21 warm/culture batch
 
 Owner asked for "more stories," so built a two-arc batch (one showrunner + one art-director

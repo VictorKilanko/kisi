@@ -25,9 +25,15 @@ export type MailStatus =
 
 const RESEND_ENDPOINT = "https://api.resend.com/emails";
 
-export function getMailer(): MailStatus {
+/**
+ * @param toOverride  Deliver to this address instead of FARM_INBOX. Lets a
+ * route send to a dedicated inbox (e.g. support and finance enquiries go to
+ * their own address) without that address ever appearing in the UI. When
+ * given, FARM_INBOX is not required, only RESEND_API_KEY.
+ */
+export function getMailer(toOverride?: string): MailStatus {
   const apiKey = process.env.RESEND_API_KEY;
-  const inbox = process.env.FARM_INBOX;
+  const inbox = toOverride ?? process.env.FARM_INBOX;
   const from = process.env.MAIL_FROM ?? "Kisi Farm <onboarding@resend.dev>";
 
   if (!apiKey) {
