@@ -53,11 +53,22 @@ const NAV = [
 export function Header() {
   const [open, setOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  // Which accordion groups are expanded on the mobile menu. All collapsed by
+  // default so the menu opens short and every item is reachable with a tap.
+  const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const pathname = usePathname();
   const closeMenu = () => {
     setOpen(false);
     setOpenMenu(null);
+    setExpanded(new Set());
   };
+  const toggleSection = (label: string) =>
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(label)) next.delete(label);
+      else next.add(label);
+      return next;
+    });
 
   return (
     <header className="sticky top-0 z-50 border-b border-kisi-green-900/10 bg-kisi-cream-100/95 backdrop-blur">
@@ -165,16 +176,17 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile nav */}
+      {/* Mobile nav: a scrollable list with a pinned Shop footer, so a long
+          menu never hides items and the sales button is always in reach. */}
       {open && (
         <nav
           id="mobile-nav"
           aria-label="Mobile navigation"
-          className="border-t border-kisi-green-900/10 bg-kisi-cream-100 lg:hidden"
+          className="flex max-h-[calc(100dvh-4rem)] flex-col border-t border-kisi-green-900/10 bg-kisi-cream-100 lg:hidden"
         >
-          <ul className="mx-auto max-w-6xl space-y-1 px-4 py-3">
+          <ul className="flex-1 space-y-1 overflow-y-auto overscroll-contain px-4 py-3">
             {/* Stories front and centre on phones */}
-            <li className="pb-2">
+            <li className="pb-1">
               <Link
                 href="/republic/stories"
                 onClick={closeMenu}
@@ -183,48 +195,95 @@ export function Header() {
                 <span aria-hidden="true">📖</span> Read the Farm Stories
               </Link>
             </li>
-            {NAV.map((item) =>
-              "children" in item ? (
-                <li key={item.label}>
-                  <span className="kicker block px-2 pt-3 text-kisi-charcoal-600">
-                    {item.label}
-                  </span>
-                  <ul>
-                    {item.children.map((c) => (
-                      <li key={c.href}>
-                        <Link
-                          href={c.href}
-                          onClick={closeMenu}
-                          className="block rounded px-4 py-2 hover:bg-kisi-cream-200"
-                        >
-                          {c.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ) : (
-                <li key={item.href}>
+            {NAV.map((item) => {
+              if ("children" in item) {
+                const isOpen = expanded.has(item.label);
+                // Slug (no spaces) so the id is valid HTML and aria-controls
+                // resolves. The panel is always rendered, hidden when closed,
+                // so the controlled element always exists.
+                const panelId = `m-${item.label
+                  .replace(/\s+/g, "-")
+                  .toLowerCase()}`;
+                return (
+                  <li
+                    key={item.label}
+                    className="border-b border-kisi-green-900/10 last:border-0"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => toggleSection(item.label)}
+                      aria-expanded={isOpen}
+                      aria-controls={panelId}
+                      className="flex w-full items-center justify-between rounded px-2 py-3 text-left font-medium text-kisi-charcoal-900 hover:bg-kisi-cream-200"
+                    >
+                      {item.label}
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className={`shrink-0 text-kisi-green-700 transition-transform duration-200 ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                      >
+                        <path d="M6 9l6 6 6-6" />
+                      </svg>
+                    </button>
+                    <ul
+                      id={panelId}
+                      className={`pb-2 pl-2 ${isOpen ? "" : "hidden"}`}
+                    >
+                      {item.children.map((c) => (
+                        <li key={c.href}>
+                          <Link
+                            href={c.href}
+                            onClick={closeMenu}
+                            className="block rounded px-4 py-2.5 text-kisi-charcoal-900 hover:bg-kisi-cream-200"
+                          >
+                            {c.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              }
+              return (
+                <li
+                  key={item.href}
+                  className="border-b border-kisi-green-900/10 last:border-0"
+                >
                   <Link
                     href={item.href}
                     onClick={closeMenu}
-                    className="block rounded px-2 py-2 font-medium hover:bg-kisi-cream-200"
+                    className={`block rounded px-2 py-3 font-medium hover:bg-kisi-cream-200 ${
+                      pathname === item.href
+                        ? "text-kisi-green-700"
+                        : "text-kisi-charcoal-900"
+                    }`}
                   >
                     {item.label}
                   </Link>
                 </li>
-              ),
-            )}
-            <li className="pt-2">
-              <a
-                href={FARM_URL}
-                onClick={closeMenu}
-                className="heartbeat flex items-center justify-center gap-2 rounded-full bg-kisi-green-700 px-4 py-3 text-center font-semibold text-kisi-cream-100 shadow-md"
-              >
-                <span aria-hidden="true">🥚</span> Shop Kisi Farm
-              </a>
-            </li>
+              );
+            })}
           </ul>
+          {/* Pinned footer: the farm shop is where sales happen, so it never
+              scrolls out of reach. */}
+          <div className="shrink-0 border-t border-kisi-green-900/10 bg-kisi-cream-100 px-4 py-3">
+            <a
+              href={FARM_URL}
+              onClick={closeMenu}
+              className="heartbeat flex items-center justify-center gap-2 rounded-full bg-kisi-green-700 px-4 py-3 text-center font-semibold text-kisi-cream-100 shadow-md"
+            >
+              <span aria-hidden="true">🥚</span> Shop Kisi Farm
+            </a>
+          </div>
         </nav>
       )}
     </header>
