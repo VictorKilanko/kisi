@@ -26,33 +26,8 @@ export const builds: Build[] = [
     goalUSD: 100_000,
     blurb:
       "Our own chicks, hatched here instead of bought in. Healthier birds, a " +
-      "bigger flock, and eggs we can trace from day one.",
-  },
-  {
-    id: "feed-mill",
-    name: "The Feed Mill",
-    goalUSD: 30_000,
-    blurb:
-      "Feed is a poultry farm's biggest cost. Milling our own means fresher " +
-      "nutrition, better laying, and prices we control instead of chasing " +
-      "the market.",
-  },
-  {
-    id: "solar",
-    name: "The Solar System",
-    goalUSD: 60_000,
-    blurb:
-      "Nigeria's grid comes and goes. Solar keeps the lights steady, lay " +
-      "cycles regular, and nights safe, without burning diesel every week.",
-  },
-  {
-    id: "cold-room",
-    name: "The Cold Room",
-    goalUSD: 100_000,
-    blurb:
-      "In the heat, eggs spoil fast and prices crash at harvest. A cold room " +
-      "lets us sell when the price is right, waste less, and reach more " +
-      "customers with fresh eggs.",
+      "bigger flock, and eggs we can trace from day one. This is how Kisi " +
+      "grows the strong parent stock Nigeria is short of.",
   },
   {
     id: "farm-house",
@@ -122,11 +97,11 @@ export const namingTiers: NamingTier[] = [
 
 export const cornerstone = {
   tier: "Cornerstone · Major gift",
-  name: "Name the Hatchery, Farm House, Cold Room, Solar Array or Feed Mill",
+  name: "Name the Hatchery or the Farm House",
   blurb:
-    "The five big builds carry one founding name each, cast on a permanent " +
-    "plaque at the farm and on the site. This is a conversation, not a " +
-    "checkout. Tell us who you are.",
+    "The two landmark builds each carry one founding name, cast on a " +
+    "permanent plaque at the farm and on the site. This is a conversation, " +
+    "not a checkout. Tell us who you are.",
 };
 
 export const whatYouGet = [

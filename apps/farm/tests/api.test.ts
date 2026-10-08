@@ -262,6 +262,25 @@ describe("POST /api/support/pledge", () => {
     expect(res.status).toBe(400);
   });
 
+  it("accepts the 'naming' kind (503 only because mail is off)", async () => {
+    const res = await pledge(
+      req(
+        "/api/support/pledge",
+        {
+          kind: "naming",
+          name: "A Namer",
+          email: "namer@example.com",
+          fund: "The Hatchery",
+        },
+        "203.0.113.54",
+      ),
+    );
+    // Valid shape, so the only failure is the honest unconfigured-mail 503.
+    expect(res.status).toBe(503);
+    const json = (await res.json()) as { error: string };
+    expect(json.error).toBe("mail-unconfigured");
+  });
+
   it("rejects a pledge with no email with 400", async () => {
     const res = await pledge(
       req(

@@ -23,10 +23,10 @@ import { clientKey, rateLimit } from "@/lib/rateLimit";
 const SUPPORT_INBOX = process.env.SUPPORT_INBOX ?? "victor@panafrican.city";
 
 const BodySchema = z.object({
-  kind: z.enum(["donation", "finance"]),
+  kind: z.enum(["donation", "finance", "naming"]),
   name: z.string().min(1).max(80),
   email: z.string().email().max(254),
-  /** Donation: the fund they want to back. Finance: free-form interest. */
+  /** Donation: the fund. Naming: the build. Finance: free-form interest. */
   fund: z.string().max(120).optional(),
   /** Amount or instrument they have in mind, free text, optional. */
   amount: z.string().max(120).optional(),
@@ -80,20 +80,34 @@ export async function POST(req: Request) {
   }
 
   const isFinance = body.kind === "finance";
+  const isNaming = body.kind === "naming";
+  const fundLabel = isNaming
+    ? "Build"
+    : isFinance
+      ? "Area of interest"
+      : "Fund";
+  const amountLabel = isFinance ? "Amount / instrument" : "Amount in mind";
+  const kindLabel = isFinance
+    ? "Debt financing / investment"
+    : isNaming
+      ? "Build the Farm naming interest"
+      : "Donation pledge";
   const subject = isFinance
     ? `Debt-financing enquiry, ${body.name}`
-    : `Donation pledge, ${body.name}${body.fund ? ` (${body.fund})` : ""}`;
+    : isNaming
+      ? `Naming interest, ${body.name}${body.fund ? ` (${body.fund})` : ""}`
+      : `Donation pledge, ${body.name}${body.fund ? ` (${body.fund})` : ""}`;
 
   try {
     await mailer.send({
       subject,
       replyTo: body.email,
       body: formatSubmission({
-        Kind: isFinance ? "Debt financing / investment" : "Donation pledge",
+        Kind: kindLabel,
         Name: body.name,
         Email: body.email,
-        [isFinance ? "Area of interest" : "Fund"]: body.fund,
-        [isFinance ? "Amount / instrument" : "Amount in mind"]: body.amount,
+        [fundLabel]: body.fund,
+        [amountLabel]: body.amount,
         Organisation: body.organisation,
         Message: body.message,
       }),
@@ -118,6 +132,8 @@ export async function POST(req: Request) {
     delivered: true,
     note: isFinance
       ? "Thank you. Your enquiry is with the farm's finance contact and we'll be in touch."
-      : "Thank you. Your pledge is with the farm and we'll reach out about the next step.",
+      : isNaming
+        ? "Thank you. Your interest is with the farm and we'll reach out about naming a build."
+        : "Thank you. Your pledge is with the farm and we'll reach out about the next step.",
   });
 }

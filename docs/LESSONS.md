@@ -6,6 +6,30 @@ Newest session at the top.
 
 ---
 
+## Session — 2026-10-08 (cont.) — Split Support vs Build the Farm, no overlap
+
+Owner's call after the Support redesign shipped: the two farm-money pages were
+overlapping (Solar and Cold storage sat in BOTH, at different prices). Fix:
+- **Build the Farm now has two builds only: The Hatchery ($100k) + The Farm
+  House ($110k).** Removed Feed Mill, Solar, Cold Room (`campaign.ts`). Total
+  auto-updates to **$210k**. Hero/section copy, metadata, cornerstone, and the
+  BUILD_ICON map all updated; the old "five builds" language is gone.
+- **No overlap now:** Solar/Light/Security and Cold Storage live only on
+  `/support` (donations, $20k each); Hatchery/Farm House only on
+  `/build-the-farm` (naming, big capital). The two pages cross-link both ways
+  with clear "give now to a fund" vs "name a big build" framing.
+- **Easy to give / send interest:** the Build the Farm "register interest" form
+  (`CampaignInterestForm`) now posts to `/api/support/pledge` with the new
+  **`kind: "naming"`** instead of the store-nothing newsletter endpoint, so
+  interest actually reaches the farm inbox (victor@panafrican.city, server-side
+  only). Added name + optional "which build" fields. Honest 503 until Resend set.
+- **WhatsApp on Build the Farm:** added `WhatsAppButton` in the hero and the
+  register section (pre-filled naming message). Number is the baked default.
+- Gates: farm typecheck · eslint · **vitest 22/22** (added a naming-kind test) ·
+  build OK. Visually verified the new two-build hero in the browser.
+
+---
+
 ## Session — 2026-10-08 — Mobile menu fix + Support page redesign
 
 Two owner asks, both built, gated, visually verified, and (per standing rule)
