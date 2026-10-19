@@ -314,7 +314,9 @@ has earned it (as the PDF advises).
    alarms enough until internet arrives?
 5. **Feed:** load cells under a hopper now, or manual scale to start?
 6. **Who is the on-the-ground records lead**, and do they already use the records app on a phone?
-7. **Chicks per batch** this house will brood (sizes heat, guard, drinker/feeder counts).
+7. **Chicks per batch**, and the **heat plate's rated chick capacity** (on its label). These
+   two numbers decide whether one plate is enough or a second heat source is needed, and they
+   size the chick guard and the drinker/feeder counts. See Appendix C.
 8. Want me to turn the chosen path into a **specific model-by-model shopping list** (US
    purchase links + the bench wiring diagram) so you can order and build the prototype?
 
@@ -486,3 +488,49 @@ is a standalone mains device controlling the heat plate.
 **Firmware:** a single Arduino/ESP32 sketch (read → compare to age-band thresholds →
 update OLED → alarm if out of band → log to SD → optional SMS). I can draft that sketch as
 the next step once you have the parts.
+
+---
+
+## Appendix C — Brooding zone & heating strategy (the house layout)
+
+**The house:** from the photos and video, a masonry building with tiled lower walls, a
+solid roof, deep wood-shaving litter, large screened/barred windows, and a **main room
+("living room") plus one or more adjoining rooms** through an internal doorway. It
+currently holds grown birds across the connected rooms.
+
+**The core rule for brooding: heat a small zone, not the whole building.** Day-old chicks
+do not roam a living room and adjoining rooms; they must stay near heat, feed and water.
+So do not try to warm all the rooms with one plate. Instead:
+
+1. **Pick one brooding room** for weeks 1–4: the most sheltered, easiest to close off and
+   keep draft-free, and easy to clean. Close off / leave empty the adjoining rooms during
+   brooding.
+2. **Confine the chicks with a chick guard ring** (a low circular surround) around the heat
+   plate, with chick feeders and drinkers right inside the ring.
+3. **Curtain the windows** of the brooding room and block drafts, so the plate is not
+   fighting open space and breeze.
+4. **Expand as they grow:** widen the ring through weeks 2–4, then open into the adjoining
+   rooms. By ~4 weeks the birds are feathered, off heat, and can use the whole house.
+
+**Does one heat plate cover it?** The right question is **capacity, not floor area.** A heat
+plate is rated for a number of chicks (they all pack under/around it), so:
+- If **batch size ≤ the plate's rated capacity**, one plate in one closed room is enough.
+- If **batch size > the plate's capacity**, add a second plate or a heat lamp.
+- Needed inputs: **chicks per batch** and the **plate's rated capacity** (on its label).
+
+**Heat source control:**
+- **Heat plate (radiant panel):** runs continuously; chicks self-regulate by moving under or
+  away; tune warmth by **adjusting the plate legs' height**. The Inkbird's main value here is
+  the **high/low alarm and an overheat safety cutoff**.
+- **Heat lamp:** the Inkbird **cycles it on/off** to hold the target air temperature; this is
+  the classic thermostat use.
+- Either way the Inkbird probe sits **at chick level**, and the node's SHT31 in the heat zone
+  logs and cross-checks the same temperature (two independent eyes on the critical number).
+
+**Redundancy (owner is remote):** keep a **backup heat source** (a simple heat lamp) in the
+brooding room. A heat failure at night kills chicks fast, so a cheap second source is worth
+it as insurance alongside the alarms.
+
+**Chick behavior is the real thermostat:** huddled under the heat = too cold; spread to the
+edges/panting = too hot; **evenly scattered = just right.** The temp sensor and (later) a
+camera confirm this remotely.
