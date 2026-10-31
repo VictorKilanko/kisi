@@ -588,22 +588,57 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
     newverse 10-04, thief 10-05, recon 10-06, feedbudget 10-07, patientwater 10-08, exile 10-09 (advisory
     `scheduledFor`; the live cron still posts next-in-order).
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 26 are built and
-  queued; the site reveals each arc in step with its IG post day (new run: recon 09-18, feedbudget 09-19,
-  patientwater 09-20, exile 09-21). Recent register: Ep 22 edge (Sweet Beak frame), Ep 23 warm social, Ep 24
-  politics/economy, Ep 25 warm water, Ep 26 heavy/dignified (Eseosa in exile). **OWNER STANDING ORDERS (do
+- **SEASON 2 Eps 27-30: warm/edge four-arc batch — BUILT AND QUEUED (2026-10-31).** Owner picked all four
+  pitched topics ("queue up some stories"), so a four-arc batch with the slate pitched up front and one
+  showrunner + one flow + one art-director audit across all four. Alternation held off `arc-exile` GREEN:
+  newclutch CREAM → sweetbeak3 GREEN → buyer CREAM → dededay GREEN. Dated to post days 10-31…11-03 so the site
+  reveals each arc in step with its IG post day (newclutch 10-31 is live today; the daily cron's manifest commit
+  re-triggers the Vercel rebuild to reveal the rest as their dates pass). No new characters (count stays 28).
+  IG schedule 10-31…11-03, cron order newclutch → sweetbeak3 → buyer → dededay (publish 1 today, queue the rest).
+  - **Ep 27 "The New Clutch"** (`the-new-clutch`, slug `newclutch`, CREAM, 4 beats, → **support**/Better
+    Housing). A dozen new chicks arrive; Quiet Grace opens her wing, Tadé walks them to first meal, Okpara
+    reads twelve new names onto the nightly roll; the warm payoff is that there is ROOM now, because the flock
+    built to Cindy's Law. Showrunner SHIP.
+  - **Ep 28 "Sweet Beak's Sixth Try"** (`the-gentlest-target`, slug `sweetbeak3`, GREEN, 4 beats, → support).
+    Villain rollout #2, reused by flipping target+mechanic (no Kola this time): Ládùn (0-for-5) targets Quiet
+    Grace, who never speaks, and tries to smear the silence; a chick answers with the truth about "the warm
+    spot" and Small Fẹ́mi confirms plainly; the whisper dies; she is now 0-for-6, still recurring. Showrunner
+    SHIP. **Craft note:** the way to beat a doubt-sower is to let the target's own people answer the loaded
+    question with warmth (show, not tell).
+  - **Ep 29 "The Buyer Who Came Back"** (`the-buyer-who-came-back`, slug `buyer`, CREAM, 4 beats, → **eggs**,
+    `sell:"shop"`). Pays off Market Day (Ep 15): the first market buyer returns wanting twice what the hens
+    laid; the farm resists padding the crate; the President refuses it in her canon voice ("the Republic has no
+    royal eggs"), Halima counts twice, Musa rules layers+chicks eat first; one honest crate + a plain date;
+    buyer orders a standing crate. **Showrunner REVISE→SHIP** (the required fix: the President was tagged in the
+    temptation beat but silent, risking the read that she proposed the shortcut; gave her the decisive refusal
+    as the turn, in her "no royal eggs" register). **Lesson: if you tag a character in a beat, give them a line
+    or action in voice, or the tag implies they endorsed what the beat describes.**
+  - **Ep 30 "Dede's Hatch-Day"** (`dedes-hatch-day`, slug `dededay`, GREEN, 4 beats, → support). Dede (the
+    mascot; canon in farm.ts, NOT a chicken id, so narrated not tagged) is first to every hatch-day but no one
+    knows his own; niece Zizi and the flock plan a surprise for the bird who is always already there; the
+    loudest welcomer gets greeted back and has nothing to say. Showrunner SHIP.
+  - **Audits:** showrunner 3 SHIP + 1 REVISE→SHIP (buyer); flow/human-voice found all four broadly human, one
+    grammar clunk (sweetbeak3 slide 1) + three body tightenings fixed; art director PASS on all 16 slides.
+    Gates: lint green, canon typecheck + africa typecheck green, canon content tests 18/18 green. (Pre-existing
+    env issues unrelated to this content: `@kisi/ui` typecheck fails on a missing `@kisi/canon` workspace link,
+    needs a clean `pnpm install`; `@kisi/farm` test fails "no tests".)
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 30 are built and
+  queued; the site reveals each arc in step with its IG post day (new run: newclutch 10-31, sweetbeak3 11-01,
+  buyer 11-02, dededay 11-03). Recent register: Ep 26 heavy (Eseosa in exile), Ep 27 warm welcome, Ep 28 edge
+  (Sweet Beak smears Grace), Ep 29 warm egg-economy, Ep 30 warm mascot celebration. **OWNER STANDING ORDERS (do
   these every cycle):** (a) **pitch the candidate topics and get a pick BEFORE writing** (Stage 0); (b) stories
   must **flow and read human-written** (Stage 1), and run the **dedicated flow/human-voice audit** (Stage 2.5)
   alongside the showrunner and art director, revising until it READS HUMAN.
-  A plain "execute" should pitch, then build **Season 2, Ep 27** — best next threads, in priority order:
-  1. **Vary the register** — after the heavy Eseosa closer, go warm/light (sport, a friendship, a hatch-day,
-     an egg-economy win). GREEN by alternation.
-  2. **A Sweet Beak return** (she is recurring, still 0-for-5) or a fresh antagonist if edge is wanted.
+  A plain "execute" should pitch, then build **Season 2, Ep 31** — best next threads, in priority order:
+  1. **Vary the register** — after two warm arcs (buyer, dededay) and one edge, consider politics/justice,
+     sport, or an edge beat. CREAM by alternation.
+  2. **A Sweet Beak return** (she is recurring, still 0-for-6) or a fresh antagonist if edge is wanted.
   3. **The long game:** the tempered crate-sisters bond (Halima/President), only after real in-story time.
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream** against the
-  last new arc (last built = `arc-exile` GREEN, so the next new arc defaults to CREAM); keep the
+  last new arc (last built = `arc-dededay` GREEN, so the next new arc defaults to CREAM); keep the
   6-year-old clarity rule; add the 3 standing hashtags; end on a sell; **date the new arc to the day it will
-  post to IG** (continue the run at 09-22) so the site stays in step; **keep slide bodies at roughly 250-265
+  post to IG** (continue the run at 11-04) so the site stays in step; **keep slide bodies at roughly 250-265
   chars** (270+ overflows the size class; the art director will fail it) and **assert the manifest caption is
   < 2,200 chars** (story text ~1,900 max) before staging. **Sync the manifest from origin/main before
   staging** (the cron marks arcs posted on main) and **merge origin/main into the branch before the go-live**

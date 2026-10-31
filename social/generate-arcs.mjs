@@ -447,6 +447,50 @@ const arcs = [
       ["Why we remember", "The Republic keeps her story not from anger but so it never forgets why Cindy is gone: a hot, crowded coop, one perch worth fighting for. It builds to Cindy's Law now, perches enough for all. Back Better Housing at farm.kisi.africa/support."],
     ],
   },
+  {
+    slug: "newclutch",
+    title: "The New Clutch",
+    // cream newspaper (default), alternates off arc-exile green; → Better Housing
+    slides: [
+      ["The crate at the gate", "A dozen new chicks arrived after the morning feed, loud for their size. Half the Republic found a reason to walk past the gate. Dede got there first, because Dede is always first. Tadé counted small heads under his breath: twelve, and not one of them quiet about it."],
+      ["Grace's side, again", "The first night frightens a chick. Quiet Grace, once too frail to perch herself, moved her wing to the left, and the smallest one slept before it could decide to be afraid. By the second night there was a queue for the spot. Tadé walked each chick to its first proper meal."],
+      ["Twelve new names", "Okpara added twelve names to the nightly roll he reads at every coop door before sleep. He won't count by number; a number can be wrong quietly, a name cannot. So twelve chicks are learning what it feels like to hear their own name said aloud and confirmed safe."],
+      ["Room to grow up", "Here is the part a farm has to earn: there is room for these twelve. A crowded coop in dry-season heat is how Kisi once lost Cindy. Now it builds to Cindy's Law, with perches enough and shade for all. Help raise the next coop at farm.kisi.africa/support."],
+    ],
+  },
+  {
+    slug: "sweetbeak3",
+    title: "Sweet Beak's Sixth Try",
+    theme: "green", // the schemer's move: dramatic intrigue on the green field
+    slides: [
+      ["Five misses, one idea", "Ládùn Sweet Beak has tried to talk her way into a ministry five times, and missed five times. This time, she decided, the trouble was her targets: she kept picking birds the flock could defend. So she picked the opposite, and landed by accident on the hardest target in Kisi. Quiet Grace."],
+      ["Smear the silence", "She found nothing bad about Grace, so she invented a question. Is it not strange, she wondered at the dust bath, a hen who never says a word? What is she hiding? Why do the nervous chicks all go to her corner? Sweet Beak never says the cruel thing. She only wonders it, sweetly."],
+      ["The warm spot", "She asked the smallest chick at Grace's side, sure it would repeat anything. What is Grace hiding? The chick thought hard. 'The warm spot,' it said. 'She saves it for whoever comes next.' Then Small Fẹ́mi looked up. 'I sleep there,' he said. 'There is nothing to find.'"],
+      ["The flock closed in", "Grace said nothing the whole time, which was the complete and correct reply. You cannot scare a flock about the hen who keeps its children warm. The whisper died, and Sweet Beak slunk off, nought for six. A flock that guards its gentlest is worth backing: farm.kisi.africa/support."],
+    ],
+  },
+  {
+    slug: "buyer",
+    title: "The Buyer Who Came Back",
+    sell: "shop", // pays off Market Day; the honest crate → eggs
+    slides: [
+      ["Twice what we sold", "The first buyer ever to take Kisi eggs to market came back, basket bigger. Last season he took one crate. Now he wanted two, standing, every week, starting today. The whole farm heard the number and stopped. Two crates was not what the hens had actually laid."],
+      ["Just this once", "Somebody said the thing somebody always says: top it up, just this once. Borrow from next week, keep the buyer happy, sort it later. It sounds like good business. Then the President settled it: 'We do not sell an egg we have not laid. The Republic has no royal eggs.'"],
+      ["One honest crate", "They did it the Kisi way. Halima counted the real eggs twice and said the true number before anyone could round up. Musa gave the rule that keeps a flock alive: layers and chicks eat first. So, one honest crate today and a plain date for the second."],
+      ["He ordered a standing crate", "He could have taken offence. Instead he took the honest crate, heard the honest date, and ordered a standing crate every week. A buyer would rather a farm that tells the truth than one that tells him yes. Chi-Chi's eggs were in it. Order Kisi eggs at farm.kisi.africa/eggs."],
+    ],
+  },
+  {
+    slug: "dededay",
+    title: "Dede's Hatch-Day",
+    theme: "green", // national celebration: ceremonial green field
+    slides: [
+      ["When is Dede's?", "Zizi asks forty questions a day, and this one stopped the yard. Her uncle Dede is first to every hatch-day in Kisi: first to the gate, first to sing, first to turn up uninvited. So when is his own? Nobody knew. He has no records. He just turned up one morning and never left."],
+      ["A secret, badly kept", "So the flock decided to give him one. Rọ́nkẹ́ picked a date from the hatch-day registry and declared it his. Sadé started a new verse. The chicks were sworn to secrecy and kept it badly. One problem remained: how do you surprise the bird who is always already there?"],
+      ["You are the reason", "Dawn, and of course there he was in the middle of the square, helping set up, sure the party was for someone else and set on greeting the guests first. Then Zizi planted herself in front of her uncle. 'Sit. For once you are not early. You are the reason. Look.'"],
+      ["Greeted back", "The bird who greets the whole nation got greeted back all at once, and for a moment the loudest welcomer in the Republic had nothing to say. Sadé sang. 'You don't need a title to show up first,' Dede says. Today the flock showed up first, for him. Back them at farm.kisi.africa/support."],
+    ],
+  },
 ];
 
 function smart(s) {
