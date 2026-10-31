@@ -528,6 +528,45 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "Cindy is gone, and keeps building to Cindy's Law so no bird ever has " +
       "to win a perch by force again.",
   },
+  "the-new-clutch": {
+    title: "The New Clutch",
+    summary:
+      "A dozen new chicks arrive at Kisi, loud out of all proportion to their " +
+      "size. Quiet Grace opens her wing, Tadé walks each one to its first " +
+      "meal, and Okpara reads twelve new names onto the nightly roll. The " +
+      "warm part, and the part a farm keeps earning: there is room for them " +
+      "now, because the flock built to Cindy's Law. A Better Housing story " +
+      "told through the youngest citizens.",
+  },
+  "the-gentlest-target": {
+    title: "Sweet Beak's Sixth Try",
+    summary:
+      "Nought for five, Ládùn Sweet Beak picks the one bird she is sure no " +
+      "one will defend, and lands by accident on the hardest target in the " +
+      "Republic: Quiet Grace, who never speaks. She cannot find a bad thing, " +
+      "so she invents a question, and a chick answers it with the truth about " +
+      "the warm spot. You cannot smear the hen who keeps the flock's children " +
+      "warm. A comic miss, and a flock closing around its gentlest.",
+  },
+  "the-buyer-who-came-back": {
+    title: "The Buyer Who Came Back",
+    summary:
+      "The first buyer ever to take Kisi eggs to market returns, basket " +
+      "bigger, and asks for twice what the hens laid. The easy thing is to " +
+      "pad the crate. Instead Halima counts the real eggs twice, Musa rules " +
+      "that layers and chicks eat first, and the farm sells one honest crate " +
+      "with a plain date for the rest. A market only comes back to a farm " +
+      "that does not lie to it.",
+  },
+  "dedes-hatch-day": {
+    title: "Dede's Hatch-Day",
+    summary:
+      "Dede is first to every hatch-day in the Republic, but nobody knows his " +
+      "own; he simply turned up one morning and never left. So his niece Zizi " +
+      "and the whole flock plan a surprise for the bird who is always already " +
+      "there, straightening the chairs. The loudest welcomer in Kisi gets " +
+      "greeted back, all at once, and for once has nothing to say.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {

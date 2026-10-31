@@ -3048,4 +3048,314 @@ export const timelineEvents: TimelineEvent[] = [
       "and why it keeps building, so no bird ever has to fight for a perch " +
       "again. Back the Better Housing campaign at farm.kisi.africa/support.",
   },
+
+  // ARC: The New Clutch (Season 2, Ep 27) — a new batch of chicks, room earned
+  {
+    id: "clutch-arrival",
+    chickenIds: ["tade-foraging"],
+    date: "2026-10-31",
+    arcId: "the-new-clutch",
+    world: "fiction",
+    type: "arrival",
+    title: "The crate at the gate",
+    body:
+      "The hatchery crate came up the path just after the morning feed, and " +
+      "by the time it reached the gate half the Republic had found a reason " +
+      "to be walking that way. Inside were the newest citizens of Kisi: a " +
+      "dozen chicks, loud out of all proportion to their size, blinking at a " +
+      "world that had turned very large and very bright all at once. Dede was " +
+      "at the gate before the lid was open, because Dede is always at the " +
+      "gate. Tadé the Foraging Master came next and did the thing he does for " +
+      "every arrival, counting small heads under his breath. Twelve, he said, " +
+      "and not one of them quiet about it.",
+  },
+  {
+    id: "clutch-grace",
+    chickenIds: ["quiet-grace", "tade-foraging"],
+    date: "2026-10-31",
+    arcId: "the-new-clutch",
+    world: "fiction",
+    type: "friendship",
+    title: "Grace's side, again",
+    body:
+      "The first night is the one that frightens a chick, and the Republic " +
+      "has a cure for it that costs nothing. Quiet Grace, who came to Kisi " +
+      "years ago too frail to perch and has never once told anyone her full " +
+      "story, moved the corner of her wing to the left the way she always " +
+      "does, and the smallest of the twelve fell asleep against it before it " +
+      "could decide to be afraid. By the second night there was a queue. The " +
+      "chicks call the spot Grace's side; the older birds call it the reason " +
+      "half of them turned out alright. Tadé walked each one to its first " +
+      "proper meal, because a chick that has eaten is a chick that believes " +
+      "it is home.",
+  },
+  {
+    id: "clutch-roll",
+    chickenIds: ["pete-okpara", "ronke-owambe"],
+    date: "2026-10-31",
+    arcId: "the-new-clutch",
+    world: "fiction",
+    type: "custom",
+    title: "Twelve new names on the roll",
+    body:
+      "On the third evening Okpara the Fence Walker added twelve names to the " +
+      "nightly roll, the list he reads aloud at the door of every coop before " +
+      "the flock sleeps. He does not count by number. A number can be wrong " +
+      "quietly, he says; a name cannot. So now the last twelve names on the " +
+      "list are new, small, and read a little slower than the rest, and " +
+      "twelve chicks are learning what it feels like to hear your own name " +
+      "said out loud and confirmed safe. Rọ́nkẹ́ Mama Owambe, who never met an " +
+      "arrival she could not turn into a party, has already set a date to " +
+      "welcome them properly. One flock, she says, many feathers, and a seat " +
+      "for every one.",
+  },
+  {
+    id: "clutch-sell",
+    chickenIds: ["quiet-grace"],
+    date: "2026-10-31",
+    arcId: "the-new-clutch",
+    world: "fiction",
+    type: "custom",
+    title: "Room to grow up",
+    body:
+      "Here is the part a farm can be proud of, and the part it has to keep " +
+      "earning. There is room for these twelve. A few seasons ago a new " +
+      "clutch meant a fuller coop, and a fuller coop in the dry-season heat " +
+      "is how the Republic once lost Cindy. Since then it has been building " +
+      "to Cindy's Law: fewer birds to a coop, perches enough that no chick " +
+      "has to fight for a cool one, wide vents, and shade. The twelve newest " +
+      "citizens will grow up in a coop with space to grow up in. That is not " +
+      "luck. It is the Better Housing campaign, coop by coop, and it is not " +
+      "finished. Help raise the next one at farm.kisi.africa/support.",
+  },
+
+  // ARC: Sweet Beak's Sixth Try (Season 2, Ep 28) — the schemer smears silence
+  {
+    id: "silence-target",
+    chickenIds: ["ladun-sweet-beak"],
+    date: "2026-11-01",
+    arcId: "the-gentlest-target",
+    world: "fiction",
+    type: "custom",
+    title: "Five misses, one new idea",
+    body:
+      "Ládùn Sweet Beak has now tried five times to talk her way into a " +
+      "ministry and failed five times, which she takes about as well as you " +
+      "would expect. This time she decided the trouble was her targets: she " +
+      "kept going after birds the flock could defend. So she looked for the " +
+      "opposite, a bird no one could possibly defend, and landed by accident " +
+      "on the hardest target in the Republic. Quiet Grace. The rescue hen who " +
+      "never speaks, who keeps a corner of her wing for every frightened new " +
+      "chick, and about whom there is not one single bad thing to say. Sweet " +
+      "Beak looked at all that goodness and thought she saw a crack: a hen " +
+      "who never talks must be hiding something.",
+  },
+  {
+    id: "silence-whisper",
+    chickenIds: ["ladun-sweet-beak"],
+    date: "2026-11-01",
+    arcId: "the-gentlest-target",
+    world: "fiction",
+    type: "controversy",
+    title: "You cannot smear what you cannot find",
+    body:
+      "She could not find a bad thing, so she did what she does best and " +
+      "invented a question instead. Is it not strange, she wondered aloud by " +
+      "the Coop Three dust bath, where all her rumours are washed and dried " +
+      "and sent out by the afternoon feed, a grown hen who never says a " +
+      "single word? What is she not telling us? Why do all the nervous ones " +
+      "end up in her corner? Sweet Beak never says the cruel thing. She only " +
+      "wonders it, so sweetly that the doubt feels like your own idea. For a " +
+      "day or two the question drifted around the yard, looking for somewhere " +
+      "to land.",
+  },
+  {
+    id: "silence-trip",
+    chickenIds: ["small-femi", "quiet-grace"],
+    date: "2026-11-01",
+    arcId: "the-gentlest-target",
+    world: "fiction",
+    type: "custom",
+    title: "The warm spot",
+    body:
+      "It landed, finally, in front of the wrong audience. Sweet Beak put her " +
+      "question to one of the smallest chicks at Grace's side, the kind of " +
+      "bird she assumed would repeat anything. What is Grace hiding, she " +
+      "asked, sweet as syrup. The chick thought about it seriously. The warm " +
+      "spot, it said. She hides the warm spot, so there is one ready for " +
+      "whoever comes next. That was not the answer the whisper needed. Then " +
+      "Small Fẹ́mi, who went back for the chick who froze on the night of the " +
+      "Drain and has preferred a true answer to a kind one ever since, looked " +
+      "up from the fence. I sleep there, he said. There is nothing to find. I " +
+      "checked.",
+  },
+  {
+    id: "silence-sell",
+    chickenIds: ["ladun-sweet-beak", "quiet-grace"],
+    date: "2026-11-01",
+    arcId: "the-gentlest-target",
+    world: "fiction",
+    type: "custom",
+    title: "The flock closed around her",
+    body:
+      "Grace said nothing the entire time, which turned out to be the " +
+      "complete and correct reply. You cannot frighten a flock about the bird " +
+      "who keeps its children warm; the whisper came back to Sweet Beak with " +
+      "nowhere to go, and she slipped off to the dust bath, nought for six " +
+      "now, already deciding the real problem was that chick. The rest of the " +
+      "Republic did the opposite of doubting Grace. It closed around her the " +
+      "way a good coop closes around its smallest, quietly and without being " +
+      "asked. A flock that looks after its gentlest is one worth looking " +
+      "after. Back the flock at farm.kisi.africa/support.",
+  },
+
+  // ARC: The Buyer Who Came Back (Season 2, Ep 29) — pays off Market Day, honest count
+  {
+    id: "buyer-return",
+    chickenIds: ["mama-gold"],
+    date: "2026-11-02",
+    arcId: "the-buyer-who-came-back",
+    world: "fiction",
+    type: "custom",
+    title: "Twice what we sold",
+    body:
+      "The first buyer who ever took Kisi eggs to market came back up the " +
+      "path this week, and this time the basket was bigger. Last season he " +
+      "bought one crate and went away pleased. Now he wanted two, standing, " +
+      "every week, starting today. The whole farm heard the number and " +
+      "stopped laying to think about it. Two crates is a " +
+      "proud week for a young farm. The only trouble is that two crates was " +
+      "not what the hens had actually laid.",
+  },
+  {
+    id: "buyer-temptation",
+    chickenIds: ["adedoyin-mama-decree", "mama-gold"],
+    date: "2026-11-02",
+    arcId: "the-buyer-who-came-back",
+    world: "fiction",
+    type: "custom",
+    title: "Just this once",
+    body:
+      "Somebody said the thing somebody always says. We could top it up, just " +
+      "this once. Borrow a few from next week, pad the crate, keep the buyer " +
+      "happy, sort it out later. It is a small lie and it sounds like good " +
+      "business, and for a moment the yard half believed it. Then the " +
+      "President settled it the way she settles things, without raising her " +
+      "voice. We do not sell an egg we have not laid, she said. The Republic " +
+      "has no royal eggs, and it will keep no padded crates. From the shady " +
+      "end of Coop One, where she presides over most things these days from a " +
+      "well-earned laying break, Mama Gold did not need to add a word.",
+  },
+  {
+    id: "buyer-truecount",
+    chickenIds: ["halima-iron-feathers", "musa-grainkeeper"],
+    date: "2026-11-02",
+    arcId: "the-buyer-who-came-back",
+    world: "fiction",
+    type: "custom",
+    title: "One honest crate",
+    body:
+      "So they did it the Kisi way instead. Halima Iron Feathers counted the " +
+      "real eggs, twice, because agreement is suspicious, and told everyone " +
+      "the true number before anyone could round it up. Musa the Grainkeeper " +
+      "reminded the yard of the rule that keeps a flock alive: the layers and " +
+      "the chicks eat first, and what is left over is what you sell, not the " +
+      "other way round. They gave the buyer one honest crate that day and a " +
+      "plain date for the second. No padding. No promise the hens could not " +
+      "keep.",
+  },
+  {
+    id: "buyer-sell",
+    chickenIds: ["mama-gold", "chi-chi"],
+    date: "2026-11-02",
+    arcId: "the-buyer-who-came-back",
+    world: "fiction",
+    type: "custom",
+    title: "He ordered a standing crate",
+    body:
+      "The buyer could have taken offence. Instead he took the honest crate, " +
+      "listened to the honest date, and ordered a standing crate every single " +
+      "week, because a man who sells on to his own customers would rather " +
+      "have a farm that tells him the truth than one that tells him yes. " +
+      "Chi-Chi's plain brown eggs went out in that crate, which she still " +
+      "cannot quite believe. A market only comes back to a farm that does not " +
+      "lie to it, said Mama Gold, satisfied. Order Kisi eggs the honest way " +
+      "at farm.kisi.africa/eggs.",
+  },
+
+  // ARC: Dede's Hatch-Day (Season 2, Ep 30) — the host finally gets greeted back
+  {
+    id: "dede-question",
+    chickenIds: ["zizi"],
+    date: "2026-11-03",
+    arcId: "dedes-hatch-day",
+    world: "fiction",
+    type: "custom",
+    title: "When is Uncle Dede's hatch-day?",
+    body:
+      "Zizi asks about forty questions a day, and this one stopped the whole " +
+      "yard. Her uncle Dede is first to every hatch-day in the Republic. " +
+      "First to the gate, first to sing, first to turn up uninvited with his " +
+      "whole heart and no sense of rhythm. He has celebrated every bird at " +
+      "Kisi at least once. So, Zizi wanted to know, when is Dede's? Nobody " +
+      "could answer. Dede has no office and no records; he simply turned up " +
+      "one morning at the front of the line and has been there ever since. " +
+      "The bird who greets the whole nation had never once been greeted back.",
+  },
+  {
+    id: "dede-secret",
+    chickenIds: ["ronke-owambe", "sade-griot", "zizi"],
+    date: "2026-11-03",
+    arcId: "dedes-hatch-day",
+    world: "fiction",
+    type: "social",
+    title: "How do you surprise the bird who is always early?",
+    body:
+      "So the flock decided to fix it, which in the Republic means a " +
+      "committee that nobody voted for and everybody joins. Rọ́nkẹ́ Mama " +
+      "Owambe, keeper of the national hatch-day registry, simply picked a " +
+      "date and declared it his. Sadé the Griot started a new verse. The " +
+      "chicks were told to keep it secret and kept it about as well as chicks " +
+      "keep anything. There was only one real problem, and it was a large " +
+      "one: Dede arrives first to everything. How do you throw a surprise " +
+      "party for the one bird in the Republic who is always already there, " +
+      "straightening the chairs?",
+  },
+  {
+    id: "dede-turn",
+    chickenIds: ["zizi"],
+    date: "2026-11-03",
+    arcId: "dedes-hatch-day",
+    world: "fiction",
+    type: "custom",
+    title: "For once, you are not early",
+    body:
+      "Dawn on the day, and of course there he was: Dede in the middle of the " +
+      "social square, helping set up, certain the party was for somebody else " +
+      "and determined to welcome the guests before they arrived. He had " +
+      "already sorted the seating. He was practising his speech for the bird " +
+      "of honour. Then Zizi planted herself in front of her uncle, small and " +
+      "immovable, and made him stop. Uncle, she said. Sit down. For " +
+      "once in your life you are not early, and you are not helping. You are " +
+      "the reason. Look. And Dede looked, and the whole flock was there, and " +
+      "it was for him.",
+  },
+  {
+    id: "dede-sell",
+    chickenIds: ["zizi", "sade-griot"],
+    date: "2026-11-03",
+    arcId: "dedes-hatch-day",
+    world: "fiction",
+    type: "social",
+    title: "Showing up first, for him",
+    body:
+      "The bird who greets the entire nation by name got greeted back, all of " +
+      "it at once, and for a moment the Republic's loudest welcomer had " +
+      "nothing to say. Sadé sang the new verse. The " +
+      "chicks gave up on the secret they had already given up on. You don't " +
+      "need a title to show up first, Dede always says, and it is the closest " +
+      "thing the Republic has to a constitution. This time the flock showed " +
+      "up first, for him. That is what a flock is for, and it is worth " +
+      "keeping together. Back the flock at farm.kisi.africa/support.",
+  },
 ];
