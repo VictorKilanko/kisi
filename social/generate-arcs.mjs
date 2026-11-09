@@ -491,6 +491,50 @@ const arcs = [
       ["Greeted back", "The bird who greets the whole nation got greeted back all at once, and for a moment the loudest welcomer in the Republic had nothing to say. Sadé sang. 'You don't need a title to show up first,' Dede says. Today the flock showed up first, for him. Back them at farm.kisi.africa/support."],
     ],
   },
+  {
+    slug: "cratesisters",
+    title: "The Crate-Sisters",
+    sell: "shop", // the honest count that lets you trust the eggs → eggs
+    slides: [
+      ["At the fence, in daylight", "For years the Republic's two fiercest rivals met at the fence only at dusk, where nobody could see. President Adédoyin and Halima arrived in the same chick crate; the friendship under the feud was the worst-kept secret in Kisi. Then Kola saw them scratching side by side in broad daylight, not hiding."],
+      ["What the first chair cost", "What changed was the hardest season of their lives. Halima came one word from taking the President's chair, meant it, then withdrew. The bond did not snap; it went in the fire and came out tempered. They still fight across the Assembly floor every day. They just stopped pretending the dusk fence was a secret."],
+      ["The number they both signed", "The proof came at the egg count the President signs before market. Once she would have signed alone and dared the opposition to argue. This time she asked Halima to check it first, in front of everyone. Halima counted twice, found it honest, and said so aloud. Both their names went on it. 'Noted.'"],
+      ["Rivals by day, honest by nature", "Kola ran it under four words, THE NUMBER THEY BOTH SIGNED, and printed no scandal, because there wasn't one. Two crate-sisters who never agree on policy and never lie to each other, holding the count so the rest of us can trust it. Eggs counted twice, signed by the one bird who'd correct the President to her face. Order at farm.kisi.africa/eggs."],
+    ],
+  },
+  {
+    slug: "firstrains",
+    title: "The First Rains",
+    theme: "green", // the storm at night: dramatic weather on the green field
+    slides: [
+      ["The sky changes", "After the long dry season the air went heavy and the first real storm built over the far fence. There was a time this meant a flooded yard and a cold, dangerous night. Emeka the Drain Marshal read the sky, checked his channels and the barred drain, and did what old Kisi could not. He told the flock to let it come."],
+      ["The night it held", "It came hard, after dark. The water found Emeka's channels and the barred drain and left, instead of pooling under the coops. The Cindy's Law coops, wide vents and raised floors, stayed dry, and the wind never reached the perches. Okpara read the roll by name over the rain, and every bird answered, dry and safe."],
+      ["A clean morning", "First light found the yard already drained, the troughs full of the cleanest water of the year, and a flock that slept through a storm that would once have been a disaster. Under the mango tree Mama Gold, who has seen every rainy season, said she could remember when the first rains were something you survived, not something you woke up grateful for."],
+      ["What a dry night is worth", "A dry night in a hard rain is not luck and not free. It is a coop a storm can't get into. A floor that drains. Vents that breathe. A channel that takes the water away. It is Better Housing, coop by coop, holding. The whole farm isn't rebuilt yet, and the next rain is coming. Help raise the next coop at farm.kisi.africa/support."],
+    ],
+  },
+  {
+    slug: "seatforsmall",
+    title: "A Seat for the Small",
+    // cream newspaper (default): a legislative beat, alternates off firstrains green
+    slides: [
+      ["Tadé moves the bill", "Tadé the Foraging Master has argued one thing longest: the young deserve a real voice, not a pat on the head. With the new clutch barely off the heat lamp, he moved the Young Chick Representation Bill, asking that one young bird get a seat where decisions are made. What does a chick know about the budget, some asked."],
+      ["A seat is a responsibility", "Halima rose against making it easy. A seat is a weight, she said, not a gift, and a bird too young to carry it is set up to fail so the rest of us feel warm. It read as cold. It was just Halima, counting the cost first. So they set the honest test: let a young bird stand and show which it would be."],
+      ["The question nobody asked", "Tadé sent Small Fẹ́mi, the Drain survivor who prefers a true answer to a kind one. He made no speech. He asked the plain question the Assembly had stepped around for weeks: the new clutch will be grown by the next dry season. Will their coop be rebuilt to Cindy's Law by then, or are we only hoping? The room went quiet."],
+      ["Heard, not humoured", "They seated him that afternoon as the first Youth Delegate: young, heard, and emphatically not humoured, with a standing right to ask the question the grown birds avoid. Every chick counts, says Tadé, and he counted this one himself. A Republic that grows its young into citizens is worth backing. farm.kisi.africa/support."],
+    ],
+  },
+  {
+    slug: "kolascoop",
+    title: "Kola's Quiet Scoop",
+    theme: "green", // a press investigation: intrigue on the green field
+    slides: [
+      ["A story that isn't a scandal", "After a long run of schemers and apology tours, Kola Quill was tired of noise. The loudest stories, he felt, were rarely the most important, and the important ones hide in the minutes nobody reads. So he asked a question his paper had never run: who keeps Kisi alive while it sleeps? Nobody had written it, because nothing goes wrong."],
+      ["A night on the fence", "He spent a night on the fence line, notebook in the soft earth. Sergeant Danladi walked the perimeter he has walked every night since the worst one, still favouring the hurt wing, counting every coop by name. At dusk Sisi Ngozi sounded the whistle for Bantu. Hour after hour, nothing happened. It was the most work he'd ever seen."],
+      ["The shift that is never news", "By morning Kola had his story, and not the one he came for. These birds are only news when they fail, and they spend every night making sure they never are. He printed it as the plainest tribute he knew, under the headline THE SHIFT THAT IS NEVER NEWS. Danladi read it once, said it was too kind, and went back on duty."],
+      ["What keeps the night quiet", "A free paper and a night watch that asks for no headline run on the same thing: trust, and one thing that is not free. The watch can walk the fence in the dark but cannot light it, and when the stored sun runs thin the coops go black at the worst hour. Back the Solar & Light campaign at farm.kisi.africa/support."],
+    ],
+  },
 ];
 
 function smart(s) {

@@ -623,27 +623,55 @@ Keep a running slate here so cycles escalate instead of resetting. Update it eac
     env issues unrelated to this content: `@kisi/ui` typecheck fails on a missing `@kisi/canon` workspace link,
     needs a clean `pnpm install`; `@kisi/farm` test fails "no tests".)
 
-- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 30 are built and
-  queued; the site reveals each arc in step with its IG post day (new run: newclutch 10-31, sweetbeak3 11-01,
-  buyer 11-02, dededay 11-03). Recent register: Ep 26 heavy (Eseosa in exile), Ep 27 warm welcome, Ep 28 edge
-  (Sweet Beak smears Grace), Ep 29 warm egg-economy, Ep 30 warm mascot celebration. **OWNER STANDING ORDERS (do
-  these every cycle):** (a) **pitch the candidate topics and get a pick BEFORE writing** (Stage 0); (b) stories
-  must **flow and read human-written** (Stage 1), and run the **dedicated flow/human-voice audit** (Stage 2.5)
-  alongside the showrunner and art director, revising until it READS HUMAN.
-  A plain "execute" should pitch, then build **Season 2, Ep 31** — best next threads, in priority order:
-  1. **Vary the register** — after two warm arcs (buyer, dededay) and one edge, consider politics/justice,
-     sport, or an edge beat. CREAM by alternation.
-  2. **A Sweet Beak return** (she is recurring, still 0-for-6) or a fresh antagonist if edge is wanted.
-  3. **The long game:** the tempered crate-sisters bond (Halima/President), only after real in-story time.
+- **SEASON 2 Eps 31-34: payoff/politics/press four-arc batch — BUILT AND QUEUED (2026-11-09).** Owner asked for
+  "more stories," picked all four pitched topics, so a four-arc batch (slate pitched up front, one showrunner +
+  one flow + one art-director audit across all four). Alternation held off `arc-dededay` GREEN: cratesisters CREAM
+  → firstrains GREEN → seatforsmall CREAM → kolascoop GREEN. Dated to post days 11-09…11-12 (cratesisters live
+  today). No new characters (count stays 28). Cron order cratesisters → firstrains → seatforsmall → kolascoop.
+  - **Ep 31 "The Crate-Sisters"** (`the-crate-sisters`, slug `cratesisters`, CREAM, 4 beats, → **eggs**). The
+    long-game PAYOFF of Halima's heel turn: the crate-sisters stop hiding the dusk-fence friendship and prove the
+    tempered bond in public, the President asking her rival-auditor to certify the egg count ("THE NUMBER THEY BOTH
+    SIGNED"). Pays off the honest-count thread positively without re-litigating it. Showrunner SHIP.
+  - **Ep 32 "The First Rains"** (`the-first-rains`, slug `firstrains`, GREEN, 4 beats, → **support**/Better
+    Housing). The dry season breaks; Emeka's hardened drains (Patient Water payoff) and the Cindy's Law coops hold
+    the night dry; Okpara reads the roll in the storm. No villain. Showrunner SHIP (applied optional canon polish:
+    Baba gives his single 4:45 crow, not an all-night one).
+  - **Ep 33 "A Seat for the Small"** (`a-seat-for-the-small`, slug `seatforsmall`, CREAM, 4 beats, → support).
+    Tadé moves the Young Chick Representation Bill; Halima makes the honest case that a seat is a weight not a gift;
+    Small Fẹ́mi (Drain survivor, prefers a true answer) asks the plain housing question nobody had and is seated as
+    the first Youth Delegate. Showrunner SHIP.
+  - **Ep 34 "Kola's Quiet Scoop"** (`kolas-quiet-scoop`, slug `kolascoop`, GREEN, 4 beats, → **support**/Solar &
+    Light). Kola, tired of Sweet Beak scandals, writes the night shift that is never news (Danladi, Sisi Ngozi, the
+    dusk whistle for Bantu); echoes his canon "Three Minutes with Quiet Grace." Showrunner SHIP.
+  - **Audits:** showrunner 4 SHIP (0 REVISE); flow found 3 of 4 human throughout, one real fix (Seat S2 stacked
+    negation-flips) + several trims applied in both files; art director PASS on all 16. Gates: lint, typecheck 6/6,
+    canon tests 18/18, production build all green. **Lesson: the metronome list ("a floor that drains, vents that
+    breathe, a channel that...") and stacked "not X, it's Y" pairs are the two tells that still slip through; break
+    them into fragments of varied length.**
+
+- **▶ RESUME HERE (what to build when pointed at this file next).** Season 2 Eps 1 to 34 are built and
+  queued; the site reveals each arc in step with its IG post day (new run: cratesisters 11-09, firstrains 11-10,
+  seatforsmall 11-11, kolascoop 11-12). Recent register: Ep 30 warm mascot, Ep 31 emotional payoff (crate-sisters),
+  Ep 32 weather/welfare, Ep 33 politics (youth seat), Ep 34 press/quiet. **OWNER STANDING ORDERS (do these every
+  cycle):** (a) **pitch the candidate topics and get a pick BEFORE writing** (Stage 0); (b) stories must **flow and
+  read human-written** (Stage 1), and run the **dedicated flow/human-voice audit** (Stage 2.5) alongside the
+  showrunner and art director, revising until it READS HUMAN.
+  A plain "execute" should pitch, then build **Season 2, Ep 35** — best next threads, in priority order:
+  1. **Vary the register** — after an emotional payoff, politics, and a press beat, consider sport, an edge
+     (Sweet Beak), or a warm social/egg beat. CREAM by alternation.
+  2. **A Sweet Beak return** (recurring, still 0-for-6) or a fresh antagonist if edge is wanted.
+  3. **Follow-through threads:** Small Fẹ́mi as first Youth Delegate (new role to use); the crate-sisters bond now
+     public; the next coop the Youth Delegate asked about (Better Housing).
   Whatever is chosen: one arc per cycle (or a batch if the owner asks); **alternate green/cream** against the
-  last new arc (last built = `arc-dededay` GREEN, so the next new arc defaults to CREAM); keep the
+  last new arc (last built = `arc-kolascoop` GREEN, so the next new arc defaults to CREAM); keep the
   6-year-old clarity rule; add the 3 standing hashtags; end on a sell; **date the new arc to the day it will
-  post to IG** (continue the run at 11-04) so the site stays in step; **keep slide bodies at roughly 250-265
+  post to IG** (continue the run at 11-13) so the site stays in step; **keep slide bodies at roughly 250-265
   chars** (270+ overflows the size class; the art director will fail it) and **assert the manifest caption is
   < 2,200 chars** (story text ~1,900 max) before staging. **Sync the manifest from origin/main before
-  staging** (the cron marks arcs posted on main) and **merge origin/main into the branch before the go-live**
-  so the `main` fast-forward works. Owner-run go-live: hand over the one-line paste
-  ([[kisi-golive-oneliner-handoff]]), and give the owner a per-session story summary.
+  staging** (the cron marks arcs posted on main) and **merge/fast-forward origin/main into the branch before the
+  go-live** so the `main` fast-forward works. Go-live (owner-approved cycles): commit in small units, push the
+  branch, fast-forward `main` via `gh api PATCH refs/heads/main`, wait for the image URLs to return 200, then
+  dispatch `ig-schedule.yml` to post the day's arc; give the owner a per-session story summary.
 
 - **SEASON 2 Eps 20-21: warm/culture batch — BUILT AND QUEUED (2026-09-20).** Owner asked for "more
   stories," so a two-arc batch (one showrunner + one art-director audit across both). **Ep 20 "The Far Side's
