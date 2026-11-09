@@ -3358,4 +3358,313 @@ export const timelineEvents: TimelineEvent[] = [
       "up first, for him. That is what a flock is for, and it is worth " +
       "keeping together. Back the flock at farm.kisi.africa/support.",
   },
+
+  // ARC: The Crate-Sisters (Season 2, Ep 31) — the long-game payoff, bond held in public
+  {
+    id: "cratesisters-daylight",
+    chickenIds: ["halima-iron-feathers", "adedoyin-mama-decree", "kola-quill"],
+    date: "2026-11-09",
+    arcId: "the-crate-sisters",
+    world: "fiction",
+    type: "friendship",
+    title: "At the fence, in daylight",
+    body:
+      "For as long as anyone could remember, the two fiercest rivals in the " +
+      "Republic met at the fence only at dusk, when the light was low and " +
+      "nobody was meant to see. President Adédoyin and Halima Iron Feathers " +
+      "arrived at Kisi in the same chick crate, a thing everyone knows and " +
+      "both of them use in debate, and the friendship underneath it was the " +
+      "Republic's worst-kept secret. Then one ordinary morning Kola Quill, " +
+      "who notices what other birds walk past, saw them scratching side by " +
+      "side at the fence in plain morning light, making no effort to hide " +
+      "it. Something had changed, and he went to find out what.",
+  },
+  {
+    id: "cratesisters-what-changed",
+    chickenIds: ["halima-iron-feathers", "adedoyin-mama-decree"],
+    date: "2026-11-09",
+    arcId: "the-crate-sisters",
+    world: "fiction",
+    type: "custom",
+    title: "What the first chair cost",
+    body:
+      "What changed was the hardest season of their lives. Not long ago " +
+      "Halima came within one word of taking the President's chair, meant it, " +
+      "and then withdrew the motion with the whole Republic watching. The " +
+      "bond did not snap; it was put in the fire and came out tempered, which " +
+      "is the only way iron is any use. Since then the two have stopped " +
+      "pretending the dusk fence was a secret. They still fight across the " +
+      "Assembly floor, loudly, daily, and mean every word, because the " +
+      "Republic is better for a real opposition. They simply no longer hide " +
+      "that the bird they fight hardest is the one they trust most.",
+  },
+  {
+    id: "cratesisters-signed",
+    chickenIds: ["adedoyin-mama-decree", "halima-iron-feathers"],
+    date: "2026-11-09",
+    arcId: "the-crate-sisters",
+    world: "fiction",
+    type: "custom",
+    title: "The number they both signed",
+    body:
+      "The proof came at the egg count the President had to put her name to " +
+      "before the market. In the old days she would have signed it alone and " +
+      "dared the opposition to argue. This time she asked Halima to check it " +
+      "first, in front of everyone, and not to catch her out. A number I have " +
+      "not been corrected on, the President said, is a number I do not fully " +
+      "trust. So Halima counted it twice, the way she counts everything, " +
+      "found it honest, and said so out loud, the rival vouching for the " +
+      "record. Then both their names went on it. Noted, said Halima, which " +
+      "from her is a standing ovation.",
+  },
+  {
+    id: "cratesisters-sell",
+    chickenIds: ["kola-quill", "adedoyin-mama-decree", "halima-iron-feathers"],
+    date: "2026-11-09",
+    arcId: "the-crate-sisters",
+    world: "fiction",
+    type: "custom",
+    title: "Rivals by day, honest by nature",
+    body:
+      "Kola ran it on the front page under four words, THE NUMBER THEY BOTH " +
+      "SIGNED, and for once printed no scandal at all, because the story was " +
+      "that there wasn't one. This is how the Republic keeps itself honest: " +
+      "two crate-sisters who will never agree on policy and will never once " +
+      "lie to each other, holding the count between them so the rest of us " +
+      "can trust it. The eggs that leave Kisi are counted twice, and signed " +
+      "by the one bird in the Republic who would correct the President to her " +
+      "face. Order them the honest way at farm.kisi.africa/eggs.",
+  },
+
+  // ARC: The First Rains (Season 2, Ep 32) — the dry season breaks, the rebuild holds
+  {
+    id: "firstrains-sky",
+    chickenIds: ["emeka-drainmaster", "amina-daybreak"],
+    date: "2026-11-10",
+    arcId: "the-first-rains",
+    world: "fiction",
+    type: "custom",
+    title: "The sky changes",
+    body:
+      "After the long dry season, the air went heavy and the first real storm " +
+      "of the year began to build over the far fence. There was a time this " +
+      "was bad news. A big rain used to mean a flooded yard, a cold wet night, " +
+      "water where water should never be, and a flock bracing for the worst. " +
+      "Emeka the Drain Marshal read the sky the way he reads a ledger, walked " +
+      "his hardened channels one more time, checked the barred drain, and did " +
+      "something the old Kisi could not have done. Amina Daybreak topped up " +
+      "the lamps and left them burning against the dark. Then Emeka told the " +
+      "flock to let it come.",
+  },
+  {
+    id: "firstrains-night",
+    chickenIds: ["emeka-drainmaster", "pete-okpara", "baba-segun"],
+    date: "2026-11-10",
+    arcId: "the-first-rains",
+    world: "fiction",
+    type: "custom",
+    title: "The night it held",
+    body:
+      "It came hard, after dark, the way the first rains always do. And the " +
+      "water did exactly what Emeka had built it to do: it found his channels " +
+      "and the barred drain and it left, instead of pooling under the coops " +
+      "looking for a way in. The coops themselves, the ones rebuilt to Cindy's " +
+      "Law with the wide vents and the raised, clean-draining floor, stayed " +
+      "dry, and the wind never reached the high perches. Okpara walked the " +
+      "line in the rain and read the roll by name at every door, and over the " +
+      "noise of the storm every bird answered, dry and accounted for. Baba " +
+      "Ṣẹ́gun gave the 4:45 crow on time, the way he always has, and by then " +
+      "the worst of it had already passed.",
+  },
+  {
+    id: "firstrains-morning",
+    chickenIds: ["emeka-drainmaster", "mama-gold"],
+    date: "2026-11-10",
+    arcId: "the-first-rains",
+    world: "fiction",
+    type: "custom",
+    title: "A clean morning",
+    body:
+      "First light came up on a yard already drained, the troughs brimming " +
+      "with the cleanest water of the whole year, and a flock that had slept " +
+      "through a storm that would once have been a disaster. The thing that " +
+      "used to mean misery now meant a good long drink and a fresh start. " +
+      "Under the mango tree Mama Gold, who has seen every rainy season the " +
+      "Republic has had, looked at the dry coops and the running channels and " +
+      "said only that she could remember when the first rains were something " +
+      "you survived, not something you woke up grateful for. Emeka said " +
+      "nothing, which for him is a victory lap.",
+  },
+  {
+    id: "firstrains-sell",
+    chickenIds: ["emeka-drainmaster"],
+    date: "2026-11-10",
+    arcId: "the-first-rains",
+    world: "fiction",
+    type: "custom",
+    title: "What a dry night is worth",
+    body:
+      "A dry night in a hard rain is not luck, and it is not free. It is a " +
+      "coop a storm cannot get into. A floor that drains instead of holding. " +
+      "Vents wide enough to breathe. A channel that takes the water off " +
+      "before it can do harm. It " +
+      "is the Better Housing work, coop by coop, meeting the first rains and " +
+      "holding. The whole farm is not rebuilt yet; some coops still brace for " +
+      "a storm the old way, and the next one is always coming. Help raise the " +
+      "next one before the next rain, and back the Better Housing campaign at " +
+      "farm.kisi.africa/support.",
+  },
+
+  // ARC: A Seat for the Small (Season 2, Ep 33) — the Young Chick Representation Bill
+  {
+    id: "seatsmall-bill",
+    chickenIds: ["tade-foraging"],
+    date: "2026-11-11",
+    arcId: "a-seat-for-the-small",
+    world: "fiction",
+    type: "custom",
+    title: "Tadé moves the bill",
+    body:
+      "Tadé the Foraging Master has argued for one thing longer than he has " +
+      "argued for anything: that the young of the Republic deserve a real " +
+      "voice, and not just a pat on the head. With the new clutch barely " +
+      "off the heat lamp, he finally moved the Young Chick Representation " +
+      "Bill in the Coop Assembly, asking that one young bird be given a seat " +
+      "where the decisions are actually made. The old guard was not sure. " +
+      "What, some asked, does a chick know about the feed budget? A fair " +
+      "question, Tadé agreed, and then asked a sharper one back. How does a " +
+      "young bird ever learn, if the first time we ask its opinion is the " +
+      "day we need its vote?",
+  },
+  {
+    id: "seatsmall-debate",
+    chickenIds: ["halima-iron-feathers", "tade-foraging"],
+    date: "2026-11-11",
+    arcId: "a-seat-for-the-small",
+    world: "fiction",
+    type: "custom",
+    title: "A seat is a responsibility",
+    body:
+      "Halima Iron Feathers, who treats every new office like a line in a " +
+      "budget, rose to make the case against making it easy. A seat is a " +
+      "weight, she said, not a gift, and a bird too young to carry it would " +
+      "be set up to fail so the rest of us could feel warm. Nobody loved her " +
+      "for saying it. Nobody could say she was wrong, either. So the Assembly " +
+      "reached the only honest test: let a young " +
+      "bird stand up, in front of everyone, and show whether a seat would be " +
+      "a kindness or a burden. Tadé agreed at once. He had already picked the " +
+      "one he would send.",
+  },
+  {
+    id: "seatsmall-question",
+    chickenIds: ["small-femi", "tade-foraging", "halima-iron-feathers"],
+    date: "2026-11-11",
+    arcId: "a-seat-for-the-small",
+    world: "fiction",
+    type: "custom",
+    title: "The question nobody had asked",
+    body:
+      "The bird Tadé sent was Small Fẹ́mi, the one who went back for the chick " +
+      "who froze on the night of the Drain, who has always preferred a true " +
+      "answer to a kind one. He did not make a speech. He asked a question, " +
+      "the plain one the whole Assembly had been stepping around for weeks. " +
+      "The new clutch will be grown by the next dry season, he said. Will " +
+      "their coop be rebuilt to Cindy's Law by then, or are we only hoping it " +
+      "will? The room went quiet, because nobody had put it that simply, and " +
+      "because everyone knew the honest answer was not yet. That is what a " +
+      "seat is for. Even Halima wrote it down.",
+  },
+  {
+    id: "seatsmall-sell",
+    chickenIds: ["tade-foraging", "small-femi"],
+    date: "2026-11-11",
+    arcId: "a-seat-for-the-small",
+    world: "fiction",
+    type: "custom",
+    title: "Heard, not humoured",
+    body:
+      "They seated him that afternoon as the Assembly's first Youth Delegate: " +
+      "young, heard, and emphatically not humoured, with a standing right to " +
+      "ask the question the grown birds are avoiding. Tadé said it was the " +
+      "proudest day of a ministry built on the idea that every chick counts, " +
+      "and that he had counted this one himself. A Republic that grows its " +
+      "young into citizens, instead of waiting until they are useful, is one " +
+      "worth building and worth backing. Help give every young bird a coop " +
+      "and a future to grow into at farm.kisi.africa/support.",
+  },
+
+  // ARC: Kola's Quiet Scoop (Season 2, Ep 34) — the night shift that is never news
+  {
+    id: "kolascoop-need",
+    chickenIds: ["kola-quill"],
+    date: "2026-11-12",
+    arcId: "kolas-quiet-scoop",
+    world: "fiction",
+    type: "custom",
+    title: "A story that isn't a scandal",
+    body:
+      "After a long run of chasing schemers and sitting through apology " +
+      "tours, Kola Quill was tired of noise. The loudest stories, he had " +
+      "started to feel, were rarely the most important ones, and the most " +
+      "important ones were usually in the minutes nobody reads. So he asked " +
+      "himself a question his paper had never once put on the front page. Who " +
+      "keeps Kisi alive while it sleeps? Nobody had ever written it, for the " +
+      "simplest and best of reasons. On the night shift, nothing goes wrong, " +
+      "and nothing wrong is not a headline. Kola decided that was the story.",
+  },
+  {
+    id: "kolascoop-night",
+    chickenIds: ["sergeant-danladi", "sisi-ngozi"],
+    date: "2026-11-12",
+    arcId: "kolas-quiet-scoop",
+    world: "fiction",
+    type: "custom",
+    title: "A night on the fence",
+    body:
+      "So he spent a night out on the fence line, notebook in the soft earth, " +
+      "and watched the Republic's quietest work get done. Sergeant Danladi " +
+      "walked the perimeter he has walked every night since the worst one, " +
+      "still favouring the wing he hurt going through the gap instead of " +
+      "around it, counting every coop by name. At dusk Sisi Ngozi kept the " +
+      "mango-tree ground and sounded the whistle for Bantu, as she does every " +
+      "evening, so the flock can say goodnight to him back. Hour after " +
+      "hour, nothing happened. It was the most work Kola had ever seen go " +
+      "into making sure nothing did.",
+  },
+  {
+    id: "kolascoop-print",
+    chickenIds: ["kola-quill", "sergeant-danladi"],
+    date: "2026-11-12",
+    arcId: "kolas-quiet-scoop",
+    world: "fiction",
+    type: "custom",
+    title: "The shift that is never news",
+    body:
+      "By morning Kola had his story, and it was not the one he went looking " +
+      "for. These birds, he realised, are only ever news when they fail, and " +
+      "they have spent every night of their lives making certain they never " +
+      "are. He printed it not as a report but as the plainest tribute he " +
+      "knew how to write, under the headline THE SHIFT THAT IS NEVER NEWS, " +
+      "and he kept his own opinions where he keeps his sentimentality, which " +
+      "is off the record. Danladi read it once, said it was too kind, and " +
+      "went back on duty. He has not missed a whistle since.",
+  },
+  {
+    id: "kolascoop-sell",
+    chickenIds: ["kola-quill", "sisi-ngozi"],
+    date: "2026-11-12",
+    arcId: "kolas-quiet-scoop",
+    world: "fiction",
+    type: "custom",
+    title: "What keeps the night quiet",
+    body:
+      "A free paper that tells the quiet truth and a night watch that asks " +
+      "for no headline run on the same thing: trust. They run on one other " +
+      "thing too, and it is not free. The watch can walk the fence in the " +
+      "dark, but it cannot light it, and when the stored sun runs thin the " +
+      "coops still go black at the worst possible hour. That is the one fight " +
+      "the night shift cannot win on courage alone. Back the Solar & Light " +
+      "campaign, so the birds who keep Kisi while it sleeps can see the fence " +
+      "they are guarding, at farm.kisi.africa/support.",
+  },
 ];

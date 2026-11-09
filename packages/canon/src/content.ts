@@ -567,6 +567,50 @@ const ARC_META: Record<string, { title: string; summary: string }> = {
       "there, straightening the chairs. The loudest welcomer in Kisi gets " +
       "greeted back, all at once, and for once has nothing to say.",
   },
+  "the-crate-sisters": {
+    title: "The Crate-Sisters",
+    summary:
+      "The long game pays off. President Adédoyin and Halima Iron Feathers, " +
+      "crate-sisters and sworn rivals, used to meet only at the dusk fence in " +
+      "secret; after the first-chair reckoning the bond came back tempered, " +
+      "not broken, and now they no longer hide it. The proof is public: the " +
+      "President asks her fiercest opponent to check the egg count in front " +
+      "of everyone, the rival vouches for the record, and both names go on " +
+      "it. Rivals by day, honest by nature.",
+  },
+  "the-first-rains": {
+    title: "The First Rains",
+    summary:
+      "The dry season breaks and the first big storm tests everything the " +
+      "Republic rebuilt. Emeka's hardened channels and the barred drain send " +
+      "the water away, the Cindy's Law coops stay dry, and Okpara reads the " +
+      "roll by name through the rain with every bird answering safe. A storm " +
+      "that would once have been a disaster becomes a clean morning and the " +
+      "best water of the year. A Better Housing story told by the weather.",
+  },
+  "a-seat-for-the-small": {
+    title: "A Seat for the Small",
+    summary:
+      "Tadé finally moves the Young Chick Representation Bill, and the " +
+      "Assembly argues whether a young bird can carry a real seat. Halima " +
+      "makes the honest case that a seat is a responsibility, not a gift, so " +
+      "they put it to the test: Small Fẹ́mi, the Drain survivor who prefers a " +
+      "true answer to a kind one, stands and asks the plain question nobody " +
+      "else had, about whether the next coop will be ready before the next " +
+      "dry season. He is seated as the first Youth Delegate: heard, not " +
+      "humoured.",
+  },
+  "kolas-quiet-scoop": {
+    title: "Kola's Quiet Scoop",
+    summary:
+      "Tired of schemers and scandals, Kola Quill chases the story his paper " +
+      "never ran: who keeps Kisi alive while it sleeps. He spends a night on " +
+      "the fence with Sergeant Danladi and Sisi Ngozi, where the Republic's " +
+      "hardest work is making sure nothing happens, and prints a tribute to " +
+      "the shift that is only ever news when it fails, and never does. The " +
+      "watch can walk the dark but cannot light it, which is the one fight it " +
+      "cannot win on courage alone.",
+  },
 };
 
 export function storyArcs(): StoryArc[] {
